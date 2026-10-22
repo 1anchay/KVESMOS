@@ -160,6 +160,8 @@ void main() {
           ),
         );
         await flushDb(tester);
+        await advanceTeaching(tester);
+        await flushDb(tester);
         await tester.runAsync(() async {
           final context = tester.element(find.byType(LessonScreen));
           for (final path in [

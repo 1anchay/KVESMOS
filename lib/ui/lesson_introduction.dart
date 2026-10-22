@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../domain/course.dart';
-import 'design.dart';
 import 'character_moment.dart';
 import '../services/learning_audio.dart';
 

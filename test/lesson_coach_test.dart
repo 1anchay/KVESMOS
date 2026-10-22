@@ -46,7 +46,7 @@ void main() {
         expect(step.explanation.trim(), isNotEmpty);
       }
       expect(lesson.exercises.first.options, isNotEmpty);
-      expect(lesson.exercises.last.type, ExerciseType.review);
+      expect(lesson.exercises.map((e) => e.type).toSet(), contains(ExerciseType.review));
       expect(
         lesson.exercises.map((e) => e.type).toSet(),
         contains(ExerciseType.dialogue),

@@ -9,9 +9,10 @@ import 'package:orbitwords/ui/lesson_coach.dart';
 void main() {
   late Lesson first;
   setUpAll(() {
-    first = Lesson.fromJson(jsonDecode(
-      File('assets/courses/demo/a1-01.json').readAsStringSync(),
-    ) as Map<String, dynamic>);
+    first = Lesson.fromJson(
+      jsonDecode(File('assets/courses/demo/a1-01.json').readAsStringSync())
+          as Map<String, dynamic>,
+    );
   });
 
   test('first lesson has authored optional hints for every activity', () {
@@ -23,7 +24,9 @@ void main() {
     }
   });
 
-  testWidgets('hints are voluntary and explain focus vocabulary', (tester) async {
+  testWidgets('hints are voluntary and explain focus vocabulary', (
+    tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
@@ -45,15 +48,21 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('the character moment changes Orbi artwork without loops', (tester) async {
+  testWidgets('the character moment changes Orbi artwork without loops', (
+    tester,
+  ) async {
     bool? correct;
     late StateSetter update;
-    await tester.pumpWidget(MaterialApp(
-      home: StatefulBuilder(builder: (context, setState) {
-        update = setState;
-        return CharacterMoment(characterId: 'orbi', correct: correct);
-      }),
-    ));
+    await tester.pumpWidget(
+      MaterialApp(
+        home: StatefulBuilder(
+          builder: (context, setState) {
+            update = setState;
+            return CharacterMoment(characterId: 'orbi', correct: correct);
+          },
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
     update(() => correct = true);
     await tester.pumpAndSettle();

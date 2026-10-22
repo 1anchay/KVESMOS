@@ -158,7 +158,7 @@ void main() {
       await flushDb(tester);
       expect(find.text('Новый формат'), findsOneWidget);
       expect(
-        find.text('Мико встречает тебя у станции. Как сказать «привет»?'),
+        find.text('Орби встречает тебя на космической станции. Что ему ответить?'),
         findsOneWidget,
       );
       expect(app.progress.xp, 10);
@@ -223,6 +223,15 @@ void main() {
           await tester.pump(const Duration(milliseconds: 250));
         }
         await tester.pumpAndSettle();
+        if (number == 1) {
+          for (var page = 0; page < 2; page++) {
+            expect(find.text('Понятно, дальше'), findsOneWidget);
+            await tester.tap(find.text('Понятно, дальше'));
+            await tester.pumpAndSettle();
+          }
+          await tester.tap(find.text('Начать практику'));
+          await flushDb(tester);
+        }
         Future<void> top() async {
           final list = tester.state<ScrollableState>(
             find.byType(Scrollable).first,

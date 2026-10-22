@@ -11,6 +11,8 @@ import '../domain/progress.dart';
 import '../services/device.dart';
 import 'design.dart';
 import 'lesson_effects.dart';
+import 'lesson_coach.dart';
+import 'character_moment.dart';
 import 'character_reactions.dart';
 import 'rewards_pages.dart';
 import '../services/learning_audio.dart';
@@ -367,10 +369,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             const SizedBox(height: 24),
             Row(
               children: [
-                if (e.character == 'orbi')
-                  const OrbitRobot(size: 66, emotion: 'thinking')
-                else
-                  CharacterPortrait(e.character, size: 66),
+                CharacterMoment(
+                  characterId: e.character,
+                  correct: result,
+                  size: 66,
+                ),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
@@ -447,7 +450,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         e.type == ExerciseType.speak) ...[
                       const SizedBox(height: 20),
                       Text(
-                        'Говорит ${CharacterVoiceProfile.forId(e.character).name}',
+                        !audio.voices.scanned
+                            ? 'Озвучка: ${CharacterVoiceProfile.forId(e.character).name}'
+                            : audio.voices.distinctVoiceCount('en-US') == 0
+                            ? 'Английский голос не установлен — можно читать текст.'
+                            : audio.voices.distinctVoiceCount('en-US') == 1
+                            ? 'Один системный голос для всех героев на этом устройстве.'
+                            : 'Озвучка: ${CharacterVoiceProfile.forId(e.character).name}',
                       ),
                       OutlinedButton.icon(
                         style: OutlinedButton.styleFrom(
@@ -477,6 +486,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 ),
               ),
             ),
+            const SizedBox(height: 12),
+            LessonCoachCard(lesson: lesson!, exercise: e),
             const SizedBox(height: 24),
             AbsorbPointer(
               absorbing: result != null || busy,
@@ -587,7 +598,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                               icon: const Icon(Icons.volume_up_outlined),
                               label: const Text('Послушать Орби'),
                             ),
-                          if (!result!) Text(e.explanation),
+                          Text(
+                            result!
+                                ? 'Почему это правильно: ${e.explanation}'
+                                : 'Разберём ошибку: ${e.explanation}',
+                          ),
                           if (!result!)
                             Text(
                               e.type == ExerciseType.pairs

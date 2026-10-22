@@ -6,24 +6,28 @@ import 'design.dart';
 class CharacterMoment extends StatelessWidget {
   final String characterId;
   final bool? correct;
+  final bool talking;
   final double size;
 
   const CharacterMoment({
     super.key,
     required this.characterId,
     this.correct,
+    this.talking = false,
     this.size = 76,
   });
 
   @override
   Widget build(BuildContext context) {
     final reduce = MediaQuery.disableAnimationsOf(context);
-    final mood = correct == true
+    final mood = talking ? 'talking' : correct == true
         ? 'success'
         : correct == false
         ? 'try-again'
         : 'thinking';
-    final symbol = correct == true
+    final symbol = talking
+        ? Icons.graphic_eq_rounded
+        : correct == true
         ? Icons.auto_awesome_rounded
         : correct == false
         ? Icons.favorite_outline_rounded
@@ -35,7 +39,9 @@ class CharacterMoment extends StatelessWidget {
     final portrait = characterId == 'orbi'
         ? OrbitRobot(
             size: size,
-            emotion: correct == true
+            emotion: talking
+                ? 'surprised'
+                : correct == true
                 ? 'wink_thumbsup'
                 : correct == false
                 ? 'thinking'
@@ -58,7 +64,15 @@ class CharacterMoment extends StatelessWidget {
                 : const Duration(milliseconds: 360),
             builder: (context, scale, child) =>
                 Transform.scale(scale: scale, child: child),
-            child: portrait,
+            child: AnimatedSwitcher(
+              duration: reduce
+                  ? Duration.zero
+                  : const Duration(milliseconds: 260),
+              child: KeyedSubtree(
+                key: ValueKey('face:$characterId:$mood'),
+                child: portrait,
+              ),
+            ),
           ),
           Positioned(
             top: 0,

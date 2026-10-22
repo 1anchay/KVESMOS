@@ -25,10 +25,18 @@ LearningRepository memoryRepository({DateTime Function()? now}) =>
 /// Locate the Flutter SDK font on developer machines and GitHub Actions.
 String materialIconsFontPath() {
   final sdkRoot = Platform.environment['FLUTTER_ROOT'];
+  const fontNames = [
+    'MaterialIcons-Regular.otf',
+    'materialicons-regular.otf',
+  ];
+  final roots = [
+    if (sdkRoot != null && sdkRoot.isNotEmpty) sdkRoot,
+    '.tools/flutter',
+  ];
   final paths = [
-    if (sdkRoot != null && sdkRoot.isNotEmpty)
-      '$sdkRoot/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
-    '.tools/flutter/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
+    for (final root in roots)
+      for (final name in fontNames)
+        '$root/bin/cache/artifacts/material_fonts/$name',
   ];
   for (final path in paths) {
     if (File(path).existsSync()) return path;

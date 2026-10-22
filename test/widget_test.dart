@@ -49,16 +49,17 @@ void main() {
     expect(find.text('Галактика\nзнаний'), findsOneWidget);
     await tester.tap(find.text('Продолжить урок'));
     await flushDb(tester);
+    await advanceTeaching(tester);
     expect(
-      find.text('Мико встречает тебя у станции. Как сказать «привет»?'),
+      find.text('Орби встречает тебя на космической станции. Что ему ответить?'),
       findsOneWidget,
     );
     await tester.scrollUntilVisible(
-      find.widgetWithText(OutlinedButton, 'Hello'),
+      find.widgetWithText(OutlinedButton, 'Hello!'),
       220,
     );
     await tester.pumpAndSettle();
-    await tester.tap(find.widgetWithText(OutlinedButton, 'Hello'));
+    await tester.tap(find.widgetWithText(OutlinedButton, 'Hello!'));
     await flushDb(tester);
     final check = find.widgetWithText(FilledButton, 'Проверить');
     await tester.scrollUntilVisible(check, 250);
@@ -66,7 +67,7 @@ void main() {
     await tester.tap(check);
     await flushDb(tester);
     expect(app.progress.xp, 10);
-    expect(find.text('Сигнал принят! +10 XP'), findsOneWidget);
+    expect(find.text('Верно! +10 XP'), findsOneWidget);
     expect(find.text(CharacterCue.correct.lines.first), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();

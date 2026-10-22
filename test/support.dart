@@ -1,6 +1,12 @@
 import 'dart:ffi';
+import 'dart:io';
+import 'package:drift/native.dart';
+import 'package:drift/drift.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sqlite3/open.dart';
+import 'package:orbitwords/data/database.dart';
+import 'package:orbitwords/data/repository.dart';
 import 'package:orbitwords/ui/lesson_introduction.dart';
 
 /// Advance each teaching card through the same buttons a student uses.
@@ -29,13 +35,6 @@ Future<void> advanceTeaching(WidgetTester tester) async {
   fail('Teaching introduction never completed');
 }
 
-
-import 'dart:io';
-import 'package:drift/native.dart';
-import 'package:drift/drift.dart';
-import 'package:sqlite3/open.dart';
-import 'package:orbitwords/data/database.dart';
-import 'package:orbitwords/data/repository.dart';
 
 void setupSqlite() {
   // Tests intentionally create isolated executors to model different devices.

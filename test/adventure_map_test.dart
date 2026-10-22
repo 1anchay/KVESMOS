@@ -83,8 +83,9 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(const ValueKey('map-lesson-a1-01')));
       await flushDb(tester);
+      await advanceTeaching(tester);
       expect(
-        find.text('Мико встречает тебя у станции. Как сказать «привет»?'),
+        find.text('Орби встречает тебя на космической станции. Что ему ответить?'),
         findsOneWidget,
       );
       router.go('/');

@@ -316,6 +316,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     if (showTeaching) {
       return LessonIntroduction(
         lesson: lesson!,
+        audio: audio,
         onStart: () async {
           if (busy) return;
           setState(() => busy = true);

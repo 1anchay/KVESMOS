@@ -232,7 +232,7 @@ void main() {
             Future.value(
               ByteData.sublistView(
                 await File(
-                  '.tools/flutter/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
+                  materialIconsFontPath(),
                 ).readAsBytes(),
               ),
             ),

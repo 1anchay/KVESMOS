@@ -15,6 +15,23 @@ void main() {
     );
   });
 
+  test('first A1 lesson teaches before asking and follows a coherent arc', () {
+    expect(first.teachingSteps, hasLength(3));
+    expect(
+      first.teachingSteps.map((step) => step.phrase),
+      ['Hello!', 'My name is Miko.', 'Goodbye!'],
+    );
+    for (final step in first.teachingSteps) {
+      expect(step.translation, isNotEmpty);
+      expect(step.explanation, isNotEmpty);
+    }
+    expect(first.exercises.first.type, ExerciseType.choice);
+    expect(first.exercises.first.prompt, contains('станции'));
+    expect(first.exercises.map((e) => e.type).toSet(), contains(ExerciseType.dialogue));
+    expect(first.exercises.map((e) => e.type).toSet(), contains(ExerciseType.listen));
+    expect(first.exercises.last.prompt, contains('Goodbye'));
+  });
+
   test('first lesson has authored optional hints for every activity', () {
     expect(first.exercises, hasLength(10));
     for (final activity in first.exercises) {

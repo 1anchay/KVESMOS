@@ -156,6 +156,7 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.text('Начать обновлённый урок'));
       await flushDb(tester);
+      await advanceTeaching(tester);
       expect(find.text('Новый формат'), findsOneWidget);
       expect(
         find.text('Орби встречает тебя на космической станции. Что ему ответить?'),
@@ -223,15 +224,8 @@ void main() {
           await tester.pump(const Duration(milliseconds: 250));
         }
         await tester.pumpAndSettle();
-        if (l.teachingSteps.isNotEmpty) {
-          for (var page = 0; page < l.teachingSteps.length - 1; page++) {
-            expect(find.text('Понятно, дальше'), findsOneWidget);
-            await tester.tap(find.text('Понятно, дальше'));
-            await tester.pumpAndSettle();
-          }
-          await tester.tap(find.text('Начать практику'));
-          await flushDb(tester);
-        }
+        await advanceTeaching(tester);
+        await flushDb(tester);
         Future<void> top() async {
           final list = tester.state<ScrollableState>(
             find.byType(Scrollable).first,
@@ -349,6 +343,8 @@ void main() {
               ),
             ),
           );
+          await flushDb(tester);
+          await advanceTeaching(tester);
           await flushDb(tester);
           await tester.scrollUntilVisible(
             find.text('Проверить'),

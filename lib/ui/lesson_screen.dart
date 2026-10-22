@@ -13,6 +13,7 @@ import 'design.dart';
 import 'lesson_effects.dart';
 import 'lesson_coach.dart';
 import 'lesson_introduction.dart';
+import 'dialogue_scene.dart';
 import 'character_moment.dart';
 import 'character_reactions.dart';
 import 'rewards_pages.dart';
@@ -460,10 +461,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                           color: turquoise.withValues(alpha: .12),
                           borderRadius: BorderRadius.circular(18),
                         ),
-                        child: Text(
-                          e.scene!,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
+                        child: DialogueScene(scene: e.scene!),
                       ),
                       const SizedBox(height: 16),
                     ],

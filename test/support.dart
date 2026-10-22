@@ -1,4 +1,35 @@
 import 'dart:ffi';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:orbitwords/ui/lesson_introduction.dart';
+
+/// Advance each teaching card through the same buttons a student uses.
+Future<void> advanceTeaching(WidgetTester tester) async {
+  for (var step = 0; step < 12; step++) {
+    if (find.byType(LessonIntroduction).evaluate().isEmpty) return;
+    final next = find.text('Понятно, дальше');
+    final target =
+        next.evaluate().isNotEmpty ? next : find.text('Начать практику');
+    expect(target, findsOneWidget);
+    await tester.scrollUntilVisible(
+      target,
+      200,
+      scrollable: find.descendant(
+        of: find.byType(LessonIntroduction),
+        matching: find.byType(Scrollable),
+      ).first,
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(target);
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 120)),
+    );
+    await tester.pumpAndSettle();
+  }
+  fail('Teaching introduction never completed');
+}
+
+
 import 'dart:io';
 import 'package:drift/native.dart';
 import 'package:drift/drift.dart';

@@ -12,6 +12,7 @@ import '../services/device.dart';
 import 'design.dart';
 import 'lesson_effects.dart';
 import 'lesson_coach.dart';
+import 'lesson_introduction.dart';
 import 'character_moment.dart';
 import 'character_reactions.dart';
 import 'rewards_pages.dart';
@@ -51,6 +52,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Map<String, String> pairs = {};
   String? activePair;
   bool busy = false, finished = false, revealedAudio = false;
+  bool showTeaching = false;
   bool? result;
   List<String> options = [];
   List<int> tokenPool = [];
@@ -82,6 +84,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       if (!mounted) return;
       lesson = material.lesson;
       session = saved;
+      showTeaching = !saved.done &&
+          saved.position == 0 &&
+          material.lesson.teachingSteps.isNotEmpty &&
+          !await app.repository.hasTeachingSeen(saved.id);
       if (saved.done) lessonResult = await _readSummary(saved.id);
       if (!mounted) return;
       prepare();
@@ -109,6 +115,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       if (!mounted) return;
       lesson = material.lesson;
       session = material.session;
+      showTeaching = false;
       lessonResult = null;
       prepare();
     } catch (_) {
@@ -305,6 +312,25 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     if (finished) return _completion(context);
+    if (showTeaching) {
+      return LessonIntroduction(
+        lesson: lesson!,
+        onStart: () async {
+          if (busy) return;
+          setState(() => busy = true);
+          try {
+            await ref.read(appProvider).repository.markTeachingSeen(session!.id);
+            if (mounted) setState(() => showTeaching = false);
+          } catch (_) {
+            if (mounted) {
+              showMessage(context, 'Не удалось сохранить начало практики.');
+            }
+          } finally {
+            if (mounted) setState(() => busy = false);
+          }
+        },
+      );
+    }
     final e = exercise;
     final reactions = ref.watch(appProvider).audio.preferences.reactions;
     final answered = session!.position + (result == true ? 1 : 0);

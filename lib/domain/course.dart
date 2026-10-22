@@ -23,7 +23,7 @@ class Exercise {
   final ExerciseType type;
   final List<String> answers, options, tokens, wordIds;
   final List<Vocabulary> pairs;
-  final String? audio;
+  final String? audio, hint;
   final String? scene, visual, introduction;
   final String character, phase;
   const Exercise({
@@ -37,6 +37,7 @@ class Exercise {
     this.wordIds = const [],
     this.pairs = const [],
     this.audio,
+    this.hint,
     this.scene,
     this.visual,
     this.introduction,
@@ -53,6 +54,7 @@ class Exercise {
     tokens: List<String>.from(j['tokens'] ?? []),
     wordIds: List<String>.from(j['wordIds'] ?? []),
     audio: j['audio'],
+    hint: j['hint'],
     scene: j['scene'],
     visual: j['visual'],
     introduction: j['introduction'],

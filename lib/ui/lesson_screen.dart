@@ -49,6 +49,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   final voice = VoiceService();
   late final LearningAudio audio;
   bool unlockedAchievement = false;
+  int consecutiveCorrect = 0;
   List<int> order = [];
   Map<String, String> pairs = {};
   String? activePair;
@@ -237,6 +238,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           (a) => !achievementsBefore.contains(a),
         );
         result = correct;
+        consecutiveCorrect = correct ? consecutiveCorrect + 1 : 0;
         if (mounted) {
           unawaited(
             audio.play(correct ? SoundEffect.correct : SoundEffect.incorrect),
@@ -384,6 +386,21 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 ),
               ),
             LessonProgress(done: answered, total: lesson!.exercises.length),
+            if (consecutiveCorrect >= 2) ...[
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  const Icon(Icons.local_fire_department_rounded, size: 22),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'Серия без ошибок: $consecutiveCorrect! Продолжай!',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                  ),
+                ],
+              ),
+            ],
             if (e.phase.isNotEmpty) ...[
               const SizedBox(height: 12),
               Wrap(
@@ -584,8 +601,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                   eventKey: '${e.id}:$result',
                                   child: Text(
                                     result!
-                                        ? 'Сигнал принят! +10 XP'
-                                        : 'Попробуем ещё раз',
+                                        ? consecutiveCorrect >= 3
+                                             ? 'Отлично! Серия $consecutiveCorrect · +10 XP'
+                                             : 'Верно! +10 XP'
+                                        : 'Ошибка — разберём её вместе',
                                     style: Theme.of(
                                       context,
                                     ).textTheme.titleMedium,

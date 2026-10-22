@@ -56,10 +56,8 @@ class CharacterMoment extends StatelessWidget {
             duration: reduce
                 ? Duration.zero
                 : const Duration(milliseconds: 360),
-            builder: (context, scale, child) => Transform.scale(
-              scale: scale,
-              child: child,
-            ),
+            builder: (context, scale, child) =>
+                Transform.scale(scale: scale, child: child),
             child: portrait,
           ),
           Positioned(

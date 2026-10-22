@@ -83,15 +83,17 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         demo: widget.demo,
       );
       final saved = material.session;
-      if (!mounted) return;
-      lesson = material.lesson;
-      session = saved;
-      showTeaching = !saved.done &&
+      // Resolve async session state before exposing the quiz to build().
+      final shouldTeach = !saved.done &&
           saved.position == 0 &&
           material.lesson.teachingSteps.isNotEmpty &&
           !await app.repository.hasTeachingSeen(saved.id);
-      if (saved.done) lessonResult = await _readSummary(saved.id);
+      final summary = saved.done ? await _readSummary(saved.id) : null;
       if (!mounted) return;
+      lesson = material.lesson;
+      session = saved;
+      showTeaching = shouldTeach;
+      lessonResult = summary;
       prepare();
       setState(() {});
     } catch (e) {
@@ -117,7 +119,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       if (!mounted) return;
       lesson = material.lesson;
       session = material.session;
-      showTeaching = false;
+      showTeaching = material.lesson.teachingSteps.isNotEmpty;
       lessonResult = null;
       prepare();
     } catch (_) {

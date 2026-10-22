@@ -142,7 +142,7 @@
       ]
     },
     {
-      "type": "choice",
+      "type": "review",
       "prompt": "Орби уходит со станции. Что скажешь на прощание?",
       "answers": [
         "Goodbye!"
@@ -182,7 +182,7 @@
       ]
     },
     {
-      "type": "choice",
+      "type": "listen",
       "prompt": "Прослушай фразу Орби и выбери, что он сказал.",
       "answers": [
         "My name is Orbi."

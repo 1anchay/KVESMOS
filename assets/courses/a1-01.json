@@ -1,0 +1,194 @@
+{
+  "id": "a1-01",
+  "title": "Первый контакт",
+  "topic": "Приветствие и знакомство",
+  "section": 0,
+  "theme": 0,
+  "order": 0,
+  "guide": "С единственным числом my name используется is.",
+  "vocabulary": [
+    {
+      "id": "en:hello",
+      "en": "hello",
+      "ru": "привет"
+    },
+    {
+      "id": "en:name",
+      "en": "name",
+      "ru": "имя"
+    },
+    {
+      "id": "en:goodbye",
+      "en": "goodbye",
+      "ru": "до свидания"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «hello»?",
+      "answers": [
+        "привет"
+      ],
+      "explanation": "hello — привет.",
+      "wordIds": [
+        "en:hello"
+      ],
+      "options": [
+        "имя",
+        "привет",
+        "до свидания",
+        "вчера"
+      ],
+      "id": "a1-01-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Привет, меня зовут Анна.",
+      "answers": [
+        "Hello, my name is Anna.",
+        "Hi, my name is Anna.",
+        "Hello, I am Anna.",
+        "Hi, I am Anna."
+      ],
+      "explanation": "С единственным числом my name используется is.",
+      "wordIds": [
+        "en:hello",
+        "en:name"
+      ],
+      "id": "a1-01-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Привет, меня зовут Анна.",
+      "answers": [
+        "Hello, my name is Anna."
+      ],
+      "explanation": "С единственным числом my name используется is.",
+      "wordIds": [
+        "en:hello",
+        "en:name"
+      ],
+      "tokens": [
+        "Hello",
+        "my",
+        "name",
+        "is",
+        "Anna"
+      ],
+      "id": "a1-01-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "My name ___ Anna.",
+      "answers": [
+        "is"
+      ],
+      "explanation": "С единственным числом my name используется is.",
+      "wordIds": [],
+      "id": "a1-01-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "Hello, my name is Anna."
+      ],
+      "explanation": "С единственным числом my name используется is.",
+      "wordIds": [
+        "en:hello",
+        "en:name"
+      ],
+      "audio": "Hello, my name is Anna.",
+      "id": "a1-01-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:hello",
+          "en": "hello",
+          "ru": "привет"
+        },
+        {
+          "id": "en:name",
+          "en": "name",
+          "ru": "имя"
+        },
+        {
+          "id": "en:goodbye",
+          "en": "goodbye",
+          "ru": "до свидания"
+        }
+      ],
+      "wordIds": [
+        "en:hello",
+        "en:name",
+        "en:goodbye"
+      ],
+      "id": "a1-01-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "Hello, my name is Anna.",
+      "answers": [
+        "Hello, my name is Anna."
+      ],
+      "explanation": "С единственным числом my name используется is.",
+      "wordIds": [
+        "en:hello",
+        "en:name"
+      ],
+      "audio": "Hello, my name is Anna.",
+      "id": "a1-01-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "My name are Anna.",
+      "answers": [
+        "Hello, my name is Anna."
+      ],
+      "explanation": "С единственным числом my name используется is.",
+      "wordIds": [
+        "en:hello",
+        "en:name"
+      ],
+      "id": "a1-01-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: привет",
+      "answers": [
+        "hello"
+      ],
+      "explanation": "hello — привет.",
+      "wordIds": [
+        "en:hello"
+      ],
+      "id": "a1-01-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Hello! What is your name?",
+      "answers": [
+        "My name is Anna."
+      ],
+      "explanation": "Подходящая реплика: My name is Anna.",
+      "wordIds": [
+        "en:name"
+      ],
+      "options": [
+        "My name is Anna.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-01-e10"
+    }
+  ]
+}

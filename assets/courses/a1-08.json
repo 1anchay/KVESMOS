@@ -1,0 +1,184 @@
+{
+  "id": "a1-08",
+  "title": "Наши близкие",
+  "topic": "Семья",
+  "section": 0,
+  "theme": 3,
+  "order": 7,
+  "guide": "My father — единственное число, поэтому нужна форма is. Перед профессией нужен a.",
+  "vocabulary": [
+    {
+      "id": "en:father",
+      "en": "father",
+      "ru": "отец"
+    },
+    {
+      "id": "en:parent",
+      "en": "parent",
+      "ru": "родитель"
+    },
+    {
+      "id": "en:family",
+      "en": "family",
+      "ru": "семья"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «father»?",
+      "answers": [
+        "отец"
+      ],
+      "explanation": "father — отец.",
+      "wordIds": [
+        "en:father"
+      ],
+      "options": [
+        "родитель",
+        "отец",
+        "семья",
+        "вчера"
+      ],
+      "id": "a1-08-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Мой отец — врач.",
+      "answers": [
+        "My father is a doctor."
+      ],
+      "explanation": "My father — единственное число, поэтому нужна форма is. Перед профессией нужен a.",
+      "wordIds": [
+        "en:father"
+      ],
+      "id": "a1-08-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Мой отец — врач.",
+      "answers": [
+        "My father is a doctor."
+      ],
+      "explanation": "My father — единственное число, поэтому нужна форма is. Перед профессией нужен a.",
+      "wordIds": [
+        "en:father"
+      ],
+      "tokens": [
+        "My",
+        "father",
+        "is",
+        "a",
+        "doctor"
+      ],
+      "id": "a1-08-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "My father ___ a doctor.",
+      "answers": [
+        "is"
+      ],
+      "explanation": "My father — единственное число, поэтому нужна форма is. Перед профессией нужен a.",
+      "wordIds": [],
+      "id": "a1-08-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "My father is a doctor."
+      ],
+      "explanation": "My father — единственное число, поэтому нужна форма is. Перед профессией нужен a.",
+      "wordIds": [
+        "en:father"
+      ],
+      "audio": "My father is a doctor.",
+      "id": "a1-08-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:father",
+          "en": "father",
+          "ru": "отец"
+        },
+        {
+          "id": "en:parent",
+          "en": "parent",
+          "ru": "родитель"
+        },
+        {
+          "id": "en:family",
+          "en": "family",
+          "ru": "семья"
+        }
+      ],
+      "wordIds": [
+        "en:father",
+        "en:parent",
+        "en:family"
+      ],
+      "id": "a1-08-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "My father is a doctor.",
+      "answers": [
+        "My father is a doctor."
+      ],
+      "explanation": "My father — единственное число, поэтому нужна форма is. Перед профессией нужен a.",
+      "wordIds": [
+        "en:father"
+      ],
+      "audio": "My father is a doctor.",
+      "id": "a1-08-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "My father are a doctor.",
+      "answers": [
+        "My father is a doctor."
+      ],
+      "explanation": "My father — единственное число, поэтому нужна форма is. Перед профессией нужен a.",
+      "wordIds": [
+        "en:father"
+      ],
+      "id": "a1-08-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: отец",
+      "answers": [
+        "father"
+      ],
+      "explanation": "father — отец.",
+      "wordIds": [
+        "en:father"
+      ],
+      "id": "a1-08-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "What does your father do?",
+      "answers": [
+        "He is a doctor."
+      ],
+      "explanation": "Подходящая реплика: He is a doctor.",
+      "wordIds": [],
+      "options": [
+        "He is a doctor.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-08-e10"
+    }
+  ]
+}

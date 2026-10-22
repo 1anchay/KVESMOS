@@ -1,0 +1,225 @@
+{
+  "id": "a1-01",
+  "title": "Первый контакт · новая практика",
+  "topic": "Приветствие и знакомство",
+  "section": 0,
+  "theme": 0,
+  "order": 0,
+  "guide": "Hello — привет. My name is… — меня зовут… Goodbye — до свидания. С my name используем is. В диалоге можно ответить Hello или Hi.",
+  "vocabulary": [
+    {
+      "id": "en:hello",
+      "en": "hello",
+      "ru": "привет"
+    },
+    {
+      "id": "en:name",
+      "en": "name",
+      "ru": "имя"
+    },
+    {
+      "id": "en:goodbye",
+      "en": "goodbye",
+      "ru": "до свидания"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Мико встречает тебя у станции. Как сказать «привет»?",
+      "answers": [
+        "Hello"
+      ],
+      "explanation": "Hello и Hi — приветствия. Goodbye используют при прощании.",
+      "options": [
+        "Hello",
+        "Goodbye",
+        "Name"
+      ],
+      "character": "miko",
+      "introduction": "Три сигнала: hello — привет, name — имя, goodbye — до свидания.",
+      "id": "a1-01-pilot1-e01",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:hello"
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Представься: «Меня зовут Мико».",
+      "answers": [
+        "My name is Miko"
+      ],
+      "explanation": "My name — моё имя. После него ставим is.",
+      "tokens": [
+        "My",
+        "name",
+        "is",
+        "Miko"
+      ],
+      "character": "miko",
+      "id": "a1-01-pilot1-e02",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:name"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Что говорит Орби?",
+      "answers": [
+        "Hello, Miko!"
+      ],
+      "explanation": "Сначала приветствие Hello, затем имя собеседника.",
+      "audio": "Hello, Miko!",
+      "options": [
+        "Hello, Miko!",
+        "Goodbye, Miko!",
+        "My name is Orbi."
+      ],
+      "id": "a1-01-pilot1-e03",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:hello"
+      ]
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедини три сигнала знакомства.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Hello — привет, name — имя, goodbye — до свидания.",
+      "character": "zig_quartz",
+      "id": "a1-01-pilot1-e04",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:hello",
+        "en:name",
+        "en:goodbye"
+      ],
+      "pairs": [
+        {
+          "id": "en:hello",
+          "en": "hello",
+          "ru": "привет"
+        },
+        {
+          "id": "en:name",
+          "en": "name",
+          "ru": "имя"
+        },
+        {
+          "id": "en:goodbye",
+          "en": "goodbye",
+          "ru": "до свидания"
+        }
+      ]
+    },
+    {
+      "type": "gap",
+      "prompt": "My name ___ Orbi.",
+      "answers": [
+        "is"
+      ],
+      "explanation": "My name — единственное число, поэтому is.",
+      "options": [
+        "is",
+        "am",
+        "are"
+      ],
+      "character": "aster",
+      "id": "a1-01-pilot1-e05",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:name"
+      ]
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Как ответить при знакомстве?",
+      "answers": [
+        "Hello, Miko!",
+        "Hi, Miko!"
+      ],
+      "explanation": "Hello и Hi — оба естественные приветствия.",
+      "scene": "Мико: Hello! My name is Miko.\nТы встречаешь его впервые.",
+      "options": [
+        "Hello, Miko!",
+        "Hi, Miko!",
+        "Goodbye, Miko!"
+      ],
+      "character": "miko",
+      "audio": "Hello! My name is Miko.",
+      "id": "a1-01-pilot1-e06",
+      "phase": "Практика",
+      "wordIds": [
+        "en:hello",
+        "en:name"
+      ]
+    },
+    {
+      "type": "correct",
+      "prompt": "Орби представился с ошибкой: I is Orbi. Помоги ему.",
+      "answers": [
+        "I am Orbi."
+      ],
+      "explanation": "С I используем am: I am Orbi. Это ещё один способ представиться.",
+      "character": "vespa",
+      "introduction": "Ещё один способ назвать себя: I am Orbi. — Я Орби.",
+      "id": "a1-01-pilot1-e07",
+      "phase": "Практика",
+      "wordIds": []
+    },
+    {
+      "type": "choice",
+      "prompt": "Гость уходит. Как попрощаться?",
+      "answers": [
+        "Goodbye!"
+      ],
+      "explanation": "Goodbye — до свидания. Hello подходит для начала встречи.",
+      "options": [
+        "Goodbye!",
+        "Hello!",
+        "My name is Miko."
+      ],
+      "character": "reyvo",
+      "id": "a1-01-pilot1-e08",
+      "phase": "Практика",
+      "wordIds": [
+        "en:goodbye"
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Попрощайся с Мико: «Пока, Мико! До встречи!»",
+      "answers": [
+        "Bye, Miko! See you!",
+        "Goodbye, Miko! See you!"
+      ],
+      "explanation": "Bye и Goodbye — прощание. See you! — До встречи!",
+      "character": "orbi",
+      "introduction": "Для дружеского прощания: See you! — До встречи!",
+      "id": "a1-01-pilot1-e09",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:goodbye"
+      ]
+    },
+    {
+      "type": "review",
+      "prompt": "Быстрый сигнал памяти: напиши по-английски «до свидания».",
+      "answers": [
+        "goodbye",
+        "bye"
+      ],
+      "explanation": "Goodbye, кратко bye. Повтори без спешки.",
+      "character": "nox",
+      "id": "a1-01-pilot1-e10",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:goodbye"
+      ]
+    }
+  ]
+}

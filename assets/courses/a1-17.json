@@ -1,0 +1,185 @@
+{
+  "id": "a1-17",
+  "title": "В дорогу",
+  "topic": "Путешествия",
+  "section": 1,
+  "theme": 8,
+  "order": 16,
+  "guide": "С I используется need. Ticket — исчисляемое существительное, здесь нужен артикль a.",
+  "vocabulary": [
+    {
+      "id": "en:ticket",
+      "en": "ticket",
+      "ru": "билет"
+    },
+    {
+      "id": "en:train",
+      "en": "train",
+      "ru": "поезд"
+    },
+    {
+      "id": "en:bus",
+      "en": "bus",
+      "ru": "автобус"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «ticket»?",
+      "answers": [
+        "билет"
+      ],
+      "explanation": "ticket — билет.",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "options": [
+        "поезд",
+        "билет",
+        "автобус",
+        "вчера"
+      ],
+      "id": "a1-17-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Мне нужен билет.",
+      "answers": [
+        "I need a ticket."
+      ],
+      "explanation": "С I используется need. Ticket — исчисляемое существительное, здесь нужен артикль a.",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "id": "a1-17-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Мне нужен билет.",
+      "answers": [
+        "I need a ticket."
+      ],
+      "explanation": "С I используется need. Ticket — исчисляемое существительное, здесь нужен артикль a.",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "tokens": [
+        "I",
+        "need",
+        "a",
+        "ticket"
+      ],
+      "id": "a1-17-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "I need ___ ticket.",
+      "answers": [
+        "a"
+      ],
+      "explanation": "С I используется need. Ticket — исчисляемое существительное, здесь нужен артикль a.",
+      "wordIds": [],
+      "id": "a1-17-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "I need a ticket."
+      ],
+      "explanation": "С I используется need. Ticket — исчисляемое существительное, здесь нужен артикль a.",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "audio": "I need a ticket.",
+      "id": "a1-17-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:ticket",
+          "en": "ticket",
+          "ru": "билет"
+        },
+        {
+          "id": "en:train",
+          "en": "train",
+          "ru": "поезд"
+        },
+        {
+          "id": "en:bus",
+          "en": "bus",
+          "ru": "автобус"
+        }
+      ],
+      "wordIds": [
+        "en:ticket",
+        "en:train",
+        "en:bus"
+      ],
+      "id": "a1-17-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "I need a ticket.",
+      "answers": [
+        "I need a ticket."
+      ],
+      "explanation": "С I используется need. Ticket — исчисляемое существительное, здесь нужен артикль a.",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "audio": "I need a ticket.",
+      "id": "a1-17-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "I needs a ticket.",
+      "answers": [
+        "I need a ticket."
+      ],
+      "explanation": "С I используется need. Ticket — исчисляемое существительное, здесь нужен артикль a.",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "id": "a1-17-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: билет",
+      "answers": [
+        "ticket"
+      ],
+      "explanation": "ticket — билет.",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "id": "a1-17-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "How can I help you?",
+      "answers": [
+        "I need a ticket."
+      ],
+      "explanation": "Подходящая реплика: I need a ticket.",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "options": [
+        "I need a ticket.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-17-e10"
+    }
+  ]
+}

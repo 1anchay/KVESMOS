@@ -1,0 +1,186 @@
+{
+  "id": "a1-19",
+  "title": "Просим о помощи",
+  "topic": "Базовые разговорные ситуации",
+  "section": 1,
+  "theme": 9,
+  "order": 18,
+  "guide": "После can используется начальная форма глагола: help.",
+  "vocabulary": [
+    {
+      "id": "en:help",
+      "en": "help",
+      "ru": "помогать"
+    },
+    {
+      "id": "en:please",
+      "en": "please",
+      "ru": "пожалуйста"
+    },
+    {
+      "id": "en:sorry",
+      "en": "sorry",
+      "ru": "извините"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «help»?",
+      "answers": [
+        "помогать"
+      ],
+      "explanation": "help — помогать.",
+      "wordIds": [
+        "en:help"
+      ],
+      "options": [
+        "пожалуйста",
+        "помогать",
+        "извините",
+        "вчера"
+      ],
+      "id": "a1-19-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Можете мне помочь?",
+      "answers": [
+        "Can you help me?",
+        "Could you help me?"
+      ],
+      "explanation": "После can используется начальная форма глагола: help.",
+      "wordIds": [
+        "en:help"
+      ],
+      "id": "a1-19-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Можете мне помочь?",
+      "answers": [
+        "Can you help me?"
+      ],
+      "explanation": "После can используется начальная форма глагола: help.",
+      "wordIds": [
+        "en:help"
+      ],
+      "tokens": [
+        "Can",
+        "you",
+        "help",
+        "me"
+      ],
+      "id": "a1-19-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "Can you ___ me?",
+      "answers": [
+        "help"
+      ],
+      "explanation": "После can используется начальная форма глагола: help.",
+      "wordIds": [
+        "en:help"
+      ],
+      "id": "a1-19-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "Can you help me?"
+      ],
+      "explanation": "После can используется начальная форма глагола: help.",
+      "wordIds": [
+        "en:help"
+      ],
+      "audio": "Can you help me?",
+      "id": "a1-19-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:help",
+          "en": "help",
+          "ru": "помогать"
+        },
+        {
+          "id": "en:please",
+          "en": "please",
+          "ru": "пожалуйста"
+        },
+        {
+          "id": "en:sorry",
+          "en": "sorry",
+          "ru": "извините"
+        }
+      ],
+      "wordIds": [
+        "en:help",
+        "en:please",
+        "en:sorry"
+      ],
+      "id": "a1-19-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "Can you help me?",
+      "answers": [
+        "Can you help me?"
+      ],
+      "explanation": "После can используется начальная форма глагола: help.",
+      "wordIds": [
+        "en:help"
+      ],
+      "audio": "Can you help me?",
+      "id": "a1-19-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "Can you helps me?",
+      "answers": [
+        "Can you help me?"
+      ],
+      "explanation": "После can используется начальная форма глагола: help.",
+      "wordIds": [
+        "en:help"
+      ],
+      "id": "a1-19-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: помогать",
+      "answers": [
+        "help"
+      ],
+      "explanation": "help — помогать.",
+      "wordIds": [
+        "en:help"
+      ],
+      "id": "a1-19-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Can you help me?",
+      "answers": [
+        "Yes, of course."
+      ],
+      "explanation": "Подходящая реплика: Yes, of course.",
+      "wordIds": [],
+      "options": [
+        "Yes, of course.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-19-e10"
+    }
+  ]
+}

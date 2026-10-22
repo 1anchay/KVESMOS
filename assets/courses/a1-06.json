@@ -1,0 +1,189 @@
+{
+  "id": "a1-06",
+  "title": "Возраст и числа",
+  "topic": "Числа",
+  "section": 0,
+  "theme": 2,
+  "order": 5,
+  "guide": "Возраст выражается с be: I am ten years old.",
+  "vocabulary": [
+    {
+      "id": "en:six",
+      "en": "six",
+      "ru": "шесть"
+    },
+    {
+      "id": "en:ten",
+      "en": "ten",
+      "ru": "десять"
+    },
+    {
+      "id": "en:twenty",
+      "en": "twenty",
+      "ru": "двадцать"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «six»?",
+      "answers": [
+        "шесть"
+      ],
+      "explanation": "six — шесть.",
+      "wordIds": [
+        "en:six"
+      ],
+      "options": [
+        "десять",
+        "шесть",
+        "двадцать",
+        "вчера"
+      ],
+      "id": "a1-06-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Мне десять лет.",
+      "answers": [
+        "I am ten years old.",
+        "I am ten."
+      ],
+      "explanation": "Возраст выражается с be: I am ten years old.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "id": "a1-06-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Мне десять лет.",
+      "answers": [
+        "I am ten years old."
+      ],
+      "explanation": "Возраст выражается с be: I am ten years old.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "tokens": [
+        "I",
+        "am",
+        "ten",
+        "years",
+        "old"
+      ],
+      "id": "a1-06-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "I am ___ years old.",
+      "answers": [
+        "ten"
+      ],
+      "explanation": "Возраст выражается с be: I am ten years old.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "id": "a1-06-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "I am ten years old."
+      ],
+      "explanation": "Возраст выражается с be: I am ten years old.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "audio": "I am ten years old.",
+      "id": "a1-06-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:six",
+          "en": "six",
+          "ru": "шесть"
+        },
+        {
+          "id": "en:ten",
+          "en": "ten",
+          "ru": "десять"
+        },
+        {
+          "id": "en:twenty",
+          "en": "twenty",
+          "ru": "двадцать"
+        }
+      ],
+      "wordIds": [
+        "en:six",
+        "en:ten",
+        "en:twenty"
+      ],
+      "id": "a1-06-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "I am ten years old.",
+      "answers": [
+        "I am ten years old."
+      ],
+      "explanation": "Возраст выражается с be: I am ten years old.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "audio": "I am ten years old.",
+      "id": "a1-06-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "I have ten years old.",
+      "answers": [
+        "I am ten years old."
+      ],
+      "explanation": "Возраст выражается с be: I am ten years old.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "id": "a1-06-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: шесть",
+      "answers": [
+        "six"
+      ],
+      "explanation": "six — шесть.",
+      "wordIds": [
+        "en:six"
+      ],
+      "id": "a1-06-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "How old are you?",
+      "answers": [
+        "I am ten years old."
+      ],
+      "explanation": "Подходящая реплика: I am ten years old.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "options": [
+        "I am ten years old.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-06-e10"
+    }
+  ]
+}

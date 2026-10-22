@@ -1,0 +1,187 @@
+{
+  "id": "a1-13",
+  "title": "Моё утро",
+  "topic": "Повседневные действия",
+  "section": 1,
+  "theme": 6,
+  "order": 12,
+  "guide": "С I глагол eat не получает -s. At home — устойчивое сочетание «дома».",
+  "vocabulary": [
+    {
+      "id": "en:eat",
+      "en": "eat",
+      "ru": "есть"
+    },
+    {
+      "id": "en:sleep",
+      "en": "sleep",
+      "ru": "спать"
+    },
+    {
+      "id": "en:read",
+      "en": "read",
+      "ru": "читать"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «eat»?",
+      "answers": [
+        "есть"
+      ],
+      "explanation": "eat — есть.",
+      "wordIds": [
+        "en:eat"
+      ],
+      "options": [
+        "спать",
+        "есть",
+        "читать",
+        "вчера"
+      ],
+      "id": "a1-13-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Я завтракаю дома.",
+      "answers": [
+        "I eat breakfast at home.",
+        "I have breakfast at home."
+      ],
+      "explanation": "С I глагол eat не получает -s. At home — устойчивое сочетание «дома».",
+      "wordIds": [
+        "en:eat"
+      ],
+      "id": "a1-13-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Я завтракаю дома.",
+      "answers": [
+        "I eat breakfast at home."
+      ],
+      "explanation": "С I глагол eat не получает -s. At home — устойчивое сочетание «дома».",
+      "wordIds": [
+        "en:eat"
+      ],
+      "tokens": [
+        "I",
+        "eat",
+        "breakfast",
+        "at",
+        "home"
+      ],
+      "id": "a1-13-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "I eat breakfast ___ home.",
+      "answers": [
+        "at"
+      ],
+      "explanation": "С I глагол eat не получает -s. At home — устойчивое сочетание «дома».",
+      "wordIds": [],
+      "id": "a1-13-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "I eat breakfast at home."
+      ],
+      "explanation": "С I глагол eat не получает -s. At home — устойчивое сочетание «дома».",
+      "wordIds": [
+        "en:eat"
+      ],
+      "audio": "I eat breakfast at home.",
+      "id": "a1-13-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:eat",
+          "en": "eat",
+          "ru": "есть"
+        },
+        {
+          "id": "en:sleep",
+          "en": "sleep",
+          "ru": "спать"
+        },
+        {
+          "id": "en:read",
+          "en": "read",
+          "ru": "читать"
+        }
+      ],
+      "wordIds": [
+        "en:eat",
+        "en:sleep",
+        "en:read"
+      ],
+      "id": "a1-13-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "I eat breakfast at home.",
+      "answers": [
+        "I eat breakfast at home."
+      ],
+      "explanation": "С I глагол eat не получает -s. At home — устойчивое сочетание «дома».",
+      "wordIds": [
+        "en:eat"
+      ],
+      "audio": "I eat breakfast at home.",
+      "id": "a1-13-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "I eats breakfast at home.",
+      "answers": [
+        "I eat breakfast at home."
+      ],
+      "explanation": "С I глагол eat не получает -s. At home — устойчивое сочетание «дома».",
+      "wordIds": [
+        "en:eat"
+      ],
+      "id": "a1-13-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: есть",
+      "answers": [
+        "eat"
+      ],
+      "explanation": "eat — есть.",
+      "wordIds": [
+        "en:eat"
+      ],
+      "id": "a1-13-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Where do you eat breakfast?",
+      "answers": [
+        "I eat breakfast at home."
+      ],
+      "explanation": "Подходящая реплика: I eat breakfast at home.",
+      "wordIds": [
+        "en:eat"
+      ],
+      "options": [
+        "I eat breakfast at home.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-13-e10"
+    }
+  ]
+}

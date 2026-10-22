@@ -1,0 +1,264 @@
+{
+  "orbi_logo": {
+    "source": "orbi/orbi_icon_six_variants_original_sheet.png",
+    "crop": [
+      1204,
+      454,
+      1662,
+      858
+    ]
+  },
+  "orbi_happy": {
+    "source": "orbi/emotions/orbi_happy.png",
+    "crop": [
+      0,
+      0,
+      515,
+      450
+    ]
+  },
+  "orbi_wink_thumbsup": {
+    "source": "orbi/emotions/orbi_wink_thumbsup.png",
+    "crop": [
+      0,
+      0,
+      537,
+      452
+    ]
+  },
+  "orbi_surprised": {
+    "source": "orbi/emotions/orbi_surprised.png",
+    "crop": [
+      0,
+      20,
+      561,
+      467
+    ]
+  },
+  "orbi_thinking": {
+    "source": "orbi/emotions/orbi_thinking.png",
+    "crop": [
+      20,
+      45,
+      531,
+      467
+    ]
+  },
+  "orbi_pout": {
+    "source": "orbi/emotions/orbi_pout.png",
+    "crop": [
+      0,
+      15,
+      531,
+      404
+    ]
+  },
+  "orbi_sleepy": {
+    "source": "orbi/emotions/orbi_sleepy.png",
+    "crop": [
+      0,
+      16,
+      547,
+      438
+    ]
+  },
+  "pixie": {
+    "source": "characters/pixie_sheet.png",
+    "crop": null
+  },
+  "explorer_closed": {
+    "source": "chests/isolated/supernova_closed.png",
+    "crop": null
+  },
+  "explorer_open": {
+    "source": "chests/isolated/supernova_open.png",
+    "crop": null
+  },
+  "nebula_closed": {
+    "source": "chests/isolated/nebula_closed.png",
+    "crop": null
+  },
+  "nebula_open": {
+    "source": "chests/isolated/nebula_open.png",
+    "crop": null
+  },
+  "supernova_closed": {
+    "source": "chests/isolated/explorer_closed.png",
+    "crop": null
+  },
+  "supernova_open": {
+    "source": "chests/isolated/explorer_open.png",
+    "crop": null
+  },
+  "miko": {
+    "source": "characters/miko_sheet.png",
+    "crop": [
+      0,
+      0,
+      380,
+      410
+    ]
+  },
+  "aster": {
+    "source": "characters/aster_sheet.png",
+    "crop": [
+      0,
+      0,
+      390,
+      420
+    ]
+  },
+  "reyvo": {
+    "source": "characters/reyvo_sheet.png",
+    "crop": [
+      0,
+      0,
+      425,
+      440
+    ]
+  },
+  "zig_quartz": {
+    "source": "characters/zig_quartz_sheet.png",
+    "crop": [
+      0,
+      0,
+      450,
+      470
+    ]
+  },
+  "vespa": {
+    "source": "characters/vespa_sheet.png",
+    "crop": [
+      0,
+      0,
+      390,
+      460
+    ]
+  },
+  "fox_scholar": {
+    "source": "characters/fox_scholar_sheet.png",
+    "crop": [
+      0,
+      0,
+      380,
+      440
+    ]
+  },
+  "nox": {
+    "source": "characters/nox_sheet.png",
+    "crop": [
+      0,
+      0,
+      430,
+      500
+    ]
+  },
+  "frame_common": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      802,
+      153,
+      967,
+      305
+    ]
+  },
+  "background_common": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      29,
+      452,
+      213,
+      610
+    ]
+  },
+  "accessory_common": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      859,
+      449,
+      1009,
+      584
+    ]
+  },
+  "frame_rare": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      981,
+      153,
+      1146,
+      305
+    ]
+  },
+  "background_rare": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      227,
+      452,
+      411,
+      610
+    ]
+  },
+  "accessory_rare": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      1022,
+      449,
+      1172,
+      584
+    ]
+  },
+  "frame_epic": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      1160,
+      153,
+      1325,
+      305
+    ]
+  },
+  "background_epic": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      427,
+      452,
+      611,
+      610
+    ]
+  },
+  "accessory_epic": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      1186,
+      449,
+      1336,
+      584
+    ]
+  },
+  "frame_legendary": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      1340,
+      153,
+      1505,
+      305
+    ]
+  },
+  "background_legendary": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      631,
+      452,
+      815,
+      610
+    ]
+  },
+  "accessory_legendary": {
+    "source": "cosmetics/cosmetics_20_items_concept_sheet.png",
+    "crop": [
+      1356,
+      449,
+      1506,
+      584
+    ]
+  }
+}

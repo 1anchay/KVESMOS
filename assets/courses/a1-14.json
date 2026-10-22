@@ -1,0 +1,174 @@
+{
+  "id": "a1-14",
+  "title": "Каждый день",
+  "topic": "Повседневные действия",
+  "section": 1,
+  "theme": 6,
+  "order": 13,
+  "guide": "В Present Simple после she к walk добавляется -s.",
+  "vocabulary": [
+    {
+      "id": "en:walk",
+      "en": "walk",
+      "ru": "ходить пешком"
+    },
+    {
+      "id": "en:run",
+      "en": "run",
+      "ru": "бегать"
+    },
+    {
+      "id": "en:write",
+      "en": "write",
+      "ru": "писать"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «walk»?",
+      "answers": [
+        "ходить пешком"
+      ],
+      "explanation": "walk — ходить пешком.",
+      "wordIds": [
+        "en:walk"
+      ],
+      "options": [
+        "бегать",
+        "ходить пешком",
+        "писать",
+        "вчера"
+      ],
+      "id": "a1-14-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Она ходит в школу пешком.",
+      "answers": [
+        "She walks to school.",
+        "She goes to school on foot."
+      ],
+      "explanation": "В Present Simple после she к walk добавляется -s.",
+      "wordIds": [],
+      "id": "a1-14-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Она ходит в школу пешком.",
+      "answers": [
+        "She walks to school."
+      ],
+      "explanation": "В Present Simple после she к walk добавляется -s.",
+      "wordIds": [],
+      "tokens": [
+        "She",
+        "walks",
+        "to",
+        "school"
+      ],
+      "id": "a1-14-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "She ___ to school.",
+      "answers": [
+        "walks"
+      ],
+      "explanation": "В Present Simple после she к walk добавляется -s.",
+      "wordIds": [],
+      "id": "a1-14-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "She walks to school."
+      ],
+      "explanation": "В Present Simple после she к walk добавляется -s.",
+      "wordIds": [],
+      "audio": "She walks to school.",
+      "id": "a1-14-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:walk",
+          "en": "walk",
+          "ru": "ходить пешком"
+        },
+        {
+          "id": "en:run",
+          "en": "run",
+          "ru": "бегать"
+        },
+        {
+          "id": "en:write",
+          "en": "write",
+          "ru": "писать"
+        }
+      ],
+      "wordIds": [
+        "en:walk",
+        "en:run",
+        "en:write"
+      ],
+      "id": "a1-14-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "She walks to school.",
+      "answers": [
+        "She walks to school."
+      ],
+      "explanation": "В Present Simple после she к walk добавляется -s.",
+      "wordIds": [],
+      "audio": "She walks to school.",
+      "id": "a1-14-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "She walk to school.",
+      "answers": [
+        "She walks to school."
+      ],
+      "explanation": "В Present Simple после she к walk добавляется -s.",
+      "wordIds": [],
+      "id": "a1-14-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: ходить пешком",
+      "answers": [
+        "walk"
+      ],
+      "explanation": "walk — ходить пешком.",
+      "wordIds": [
+        "en:walk"
+      ],
+      "id": "a1-14-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "How does she get to school?",
+      "answers": [
+        "She walks to school."
+      ],
+      "explanation": "Подходящая реплика: She walks to school.",
+      "wordIds": [],
+      "options": [
+        "She walks to school.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-14-e10"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "schema_version": 2,
+  "status": "local_ui_v1",
+  "catalog_id": "kvesmos_cosmetics_v1",
+  "chest_odds_are_base_weights": true,
+  "characters": [
+    {
+      "id": "orbi",
+      "name_ru": "Орби",
+      "role": "mentor",
+      "design_status": "approved_icon",
+      "reference_asset": "01_approved/orbi/orbi_confirmed_by_user_screenshot.png",
+      "asset_path": "assets/kvesmos/orbi_logo.png"
+    },
+    {
+      "id": "zig_quartz",
+      "name_ru": "Зиг Кварц",
+      "role": "experiments",
+      "design_status": "approved_design",
+      "reference_asset": "01_approved/characters/zig_quartz_sheet.png",
+      "asset_path": "assets/kvesmos/zig_quartz.png"
+    },
+    {
+      "id": "miko",
+      "name_ru": "Мико",
+      "role": "onboarding",
+      "design_status": "approved_design",
+      "reference_asset": "01_approved/characters/miko_sheet.png",
+      "asset_path": "assets/kvesmos/miko.png"
+    },
+    {
+      "id": "reyvo",
+      "name_ru": "Рэйво",
+      "role": "challenges",
+      "design_status": "approved_design",
+      "reference_asset": "01_approved/characters/reyvo_sheet.png",
+      "asset_path": "assets/kvesmos/reyvo.png"
+    },
+    {
+      "id": "aster",
+      "name_ru": "Астэр",
+      "role": "languages",
+      "design_status": "approved_design",
+      "reference_asset": "01_approved/characters/aster_sheet.png",
+      "asset_path": "assets/kvesmos/aster.png"
+    },
+    {
+      "id": "vespa",
+      "name_ru": "Веспа",
+      "role": "logic",
+      "design_status": "approved_design",
+      "reference_asset": "01_approved/characters/vespa_sheet.png",
+      "asset_path": "assets/kvesmos/vespa.png"
+    },
+    {
+      "id": "nox",
+      "name_ru": "Нокс",
+      "role": "special_missions",
+      "design_status": "approved_design",
+      "reference_asset": "01_approved/characters/nox_sheet.png",
+      "asset_path": "assets/kvesmos/nox.png"
+    },
+    {
+      "id": "fox_scholar",
+      "name_ru": null,
+      "role": "science_and_math",
+      "design_status": "approved_visual_only",
+      "reference_asset": "01_approved/characters/fox_scholar_sheet.png",
+      "asset_path": "assets/kvesmos/fox_scholar.png"
+    },
+    {
+      "id": "pixie",
+      "name_ru": "Пикси",
+      "role": "rewards",
+      "design_status": "design_only",
+      "reference_asset": null,
+      "asset_path": "assets/kvesmos/pixie.png"
+    }
+  ],
+  "chests": [
+    {
+      "id": "explorer",
+      "name_ru": "Контейнер исследователя",
+      "rarity_weights": {
+        "common": 70,
+        "rare": 25,
+        "epic": 5
+      },
+      "reference_asset": "01_approved/chests/chests_three_types_concept_sheet.png"
+    },
+    {
+      "id": "nebula",
+      "name_ru": "Сундук туманности",
+      "rarity_weights": {
+        "common": 25,
+        "rare": 55,
+        "epic": 18,
+        "legendary": 2
+      },
+      "reference_asset": "01_approved/chests/chests_three_types_concept_sheet.png"
+    },
+    {
+      "id": "supernova",
+      "name_ru": "Сундук сверхновой",
+      "rarity_weights": {
+        "rare": 30,
+        "epic": 55,
+        "legendary": 15
+      },
+      "reference_asset": "01_approved/chests/chests_three_types_concept_sheet.png"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "unique_lessons_1_v1",
+      "unique_lesson_count": 1,
+      "chest_id": "explorer"
+    },
+    {
+      "id": "unique_lessons_3_v1",
+      "unique_lesson_count": 3,
+      "chest_id": "explorer"
+    },
+    {
+      "id": "unique_lessons_5_v1",
+      "unique_lesson_count": 5,
+      "chest_id": "nebula"
+    },
+    {
+      "id": "unique_lessons_6_v1",
+      "unique_lesson_count": 6,
+      "chest_id": "explorer"
+    },
+    {
+      "id": "unique_lessons_9_v1",
+      "unique_lesson_count": 9,
+      "chest_id": "explorer"
+    },
+    {
+      "id": "unique_lessons_10_v1",
+      "unique_lesson_count": 10,
+      "chest_id": "nebula"
+    },
+    {
+      "id": "unique_lessons_12_v1",
+      "unique_lesson_count": 12,
+      "chest_id": "explorer"
+    },
+    {
+      "id": "unique_lessons_15_v1",
+      "unique_lesson_count": 15,
+      "chest_id": "explorer"
+    },
+    {
+      "id": "unique_lessons_18_v1",
+      "unique_lesson_count": 18,
+      "chest_id": "explorer"
+    },
+    {
+      "id": "unique_lessons_20_v1",
+      "unique_lesson_count": 20,
+      "chest_id": "supernova"
+    }
+  ],
+  "cosmetics": [
+    {
+      "id": "cos_avatar_common_v1",
+      "name_ru": "Звёздный исследователь",
+      "slot": "avatar",
+      "rarity": "common",
+      "asset_path": "assets/kvesmos/miko.png",
+      "asset_status": "approved_derivative",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_avatar_rare_v1",
+      "name_ru": "Кристальный гений",
+      "slot": "avatar",
+      "rarity": "rare",
+      "asset_path": "assets/kvesmos/zig_quartz.png",
+      "asset_status": "approved_derivative",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_avatar_epic_v1",
+      "name_ru": "Космический гонщик",
+      "slot": "avatar",
+      "rarity": "epic",
+      "asset_path": "assets/kvesmos/reyvo.png",
+      "asset_status": "approved_derivative",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_avatar_legendary_v1",
+      "name_ru": "Хранитель туманностей",
+      "slot": "avatar",
+      "rarity": "legendary",
+      "asset_path": "assets/kvesmos/nox.png",
+      "asset_status": "approved_derivative",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_frame_common_v1",
+      "name_ru": "Орбита новичка",
+      "slot": "frame",
+      "rarity": "common",
+      "asset_path": "assets/kvesmos/frame_common.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_frame_rare_v1",
+      "name_ru": "Кристальная комета",
+      "slot": "frame",
+      "rarity": "rare",
+      "asset_path": "assets/kvesmos/frame_rare.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_frame_epic_v1",
+      "name_ru": "Фиолетовая туманность",
+      "slot": "frame",
+      "rarity": "epic",
+      "asset_path": "assets/kvesmos/frame_epic.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_frame_legendary_v1",
+      "name_ru": "Золотая сверхновая",
+      "slot": "frame",
+      "rarity": "legendary",
+      "asset_path": "assets/kvesmos/frame_legendary.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_background_common_v1",
+      "name_ru": "Звёздная академия",
+      "slot": "background",
+      "rarity": "common",
+      "asset_path": "assets/kvesmos/background_common.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_background_rare_v1",
+      "name_ru": "Плавающие острова космоса",
+      "slot": "background",
+      "rarity": "rare",
+      "asset_path": "assets/kvesmos/background_rare.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_background_epic_v1",
+      "name_ru": "Библиотека древней галактики",
+      "slot": "background",
+      "rarity": "epic",
+      "asset_path": "assets/kvesmos/background_epic.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_background_legendary_v1",
+      "name_ru": "Радужная туманность",
+      "slot": "background",
+      "rarity": "legendary",
+      "asset_path": "assets/kvesmos/background_legendary.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_accessory_common_v1",
+      "name_ru": "Шарф звёздного путешественника",
+      "slot": "accessory",
+      "rarity": "common",
+      "asset_path": "assets/kvesmos/accessory_common.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile_badge"
+    },
+    {
+      "id": "cos_accessory_rare_v1",
+      "name_ru": "Очки исследователя",
+      "slot": "accessory",
+      "rarity": "rare",
+      "asset_path": "assets/kvesmos/accessory_rare.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile_badge"
+    },
+    {
+      "id": "cos_accessory_epic_v1",
+      "name_ru": "Миниатюрный реактивный ранец",
+      "slot": "accessory",
+      "rarity": "epic",
+      "asset_path": "assets/kvesmos/accessory_epic.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile_badge"
+    },
+    {
+      "id": "cos_accessory_legendary_v1",
+      "name_ru": "Корона созвездий",
+      "slot": "accessory",
+      "rarity": "legendary",
+      "asset_path": "assets/kvesmos/accessory_legendary.png",
+      "asset_status": "concept_crop",
+      "usable_with_characters": "profile_badge"
+    },
+    {
+      "id": "cos_emote_common_v1",
+      "name_ru": "Звёздная радость",
+      "slot": "emote",
+      "rarity": "common",
+      "asset_path": "assets/kvesmos/orbi_happy.png",
+      "asset_status": "approved_derivative",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_emote_rare_v1",
+      "name_ru": "Космическое удивление",
+      "slot": "emote",
+      "rarity": "rare",
+      "asset_path": "assets/kvesmos/orbi_surprised.png",
+      "asset_status": "approved_derivative",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_emote_epic_v1",
+      "name_ru": "Победный танец",
+      "slot": "emote",
+      "rarity": "epic",
+      "asset_path": "assets/kvesmos/orbi_wink_thumbsup.png",
+      "asset_status": "approved_derivative",
+      "usable_with_characters": "profile"
+    },
+    {
+      "id": "cos_emote_legendary_v1",
+      "name_ru": "Легендарное сияние",
+      "slot": "emote",
+      "rarity": "legendary",
+      "asset_path": "assets/kvesmos/orbi_happy.png",
+      "asset_status": "approved_derivative",
+      "usable_with_characters": "profile"
+    }
+  ],
+  "rules": {
+    "paid_chests": false,
+    "advertisements": false,
+    "limits_on_lessons": false,
+    "cosmetics_affect_learning": false,
+    "no_duplicates_until_exhaustion": true,
+    "reweight_available_rarities": true,
+    "show_actual_odds_before_open": true,
+    "fully_collected": "show_completed_state_no_roll",
+    "transactional_grants": true,
+    "offline_first": true,
+    "reduce_motion": true,
+    "cloud_sync_is_unverified": true
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "a1-07",
+  "title": "Моя семья",
+  "topic": "Семья",
+  "section": 0,
+  "theme": 3,
+  "order": 6,
+  "guide": "Перед существительным используется my («мой/моя»), а не me.",
+  "vocabulary": [
+    {
+      "id": "en:sister",
+      "en": "sister",
+      "ru": "сестра"
+    },
+    {
+      "id": "en:brother",
+      "en": "brother",
+      "ru": "брат"
+    },
+    {
+      "id": "en:mother",
+      "en": "mother",
+      "ru": "мать"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «sister»?",
+      "answers": [
+        "сестра"
+      ],
+      "explanation": "sister — сестра.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "options": [
+        "брат",
+        "сестра",
+        "мать",
+        "вчера"
+      ],
+      "id": "a1-07-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Это моя сестра.",
+      "answers": [
+        "This is my sister."
+      ],
+      "explanation": "Перед существительным используется my («мой/моя»), а не me.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "id": "a1-07-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Это моя сестра.",
+      "answers": [
+        "This is my sister."
+      ],
+      "explanation": "Перед существительным используется my («мой/моя»), а не me.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "tokens": [
+        "This",
+        "is",
+        "my",
+        "sister"
+      ],
+      "id": "a1-07-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "This is my ___.",
+      "answers": [
+        "sister"
+      ],
+      "explanation": "Перед существительным используется my («мой/моя»), а не me.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "id": "a1-07-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "This is my sister."
+      ],
+      "explanation": "Перед существительным используется my («мой/моя»), а не me.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "audio": "This is my sister.",
+      "id": "a1-07-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:sister",
+          "en": "sister",
+          "ru": "сестра"
+        },
+        {
+          "id": "en:brother",
+          "en": "brother",
+          "ru": "брат"
+        },
+        {
+          "id": "en:mother",
+          "en": "mother",
+          "ru": "мать"
+        }
+      ],
+      "wordIds": [
+        "en:sister",
+        "en:brother",
+        "en:mother"
+      ],
+      "id": "a1-07-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "This is my sister.",
+      "answers": [
+        "This is my sister."
+      ],
+      "explanation": "Перед существительным используется my («мой/моя»), а не me.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "audio": "This is my sister.",
+      "id": "a1-07-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "This is me sister.",
+      "answers": [
+        "This is my sister."
+      ],
+      "explanation": "Перед существительным используется my («мой/моя»), а не me.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "id": "a1-07-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: сестра",
+      "answers": [
+        "sister"
+      ],
+      "explanation": "sister — сестра.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "id": "a1-07-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Who is this?",
+      "answers": [
+        "This is my sister."
+      ],
+      "explanation": "Подходящая реплика: This is my sister.",
+      "wordIds": [
+        "en:sister"
+      ],
+      "options": [
+        "This is my sister.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-07-e10"
+    }
+  ]
+}

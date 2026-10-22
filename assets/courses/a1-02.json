@@ -1,0 +1,186 @@
+{
+  "id": "a1-02",
+  "title": "Рад знакомству",
+  "topic": "Приветствие и знакомство",
+  "section": 0,
+  "theme": 0,
+  "order": 1,
+  "guide": "С местоимением I используется am.",
+  "vocabulary": [
+    {
+      "id": "en:from",
+      "en": "from",
+      "ru": "из"
+    },
+    {
+      "id": "en:friend",
+      "en": "friend",
+      "ru": "друг"
+    },
+    {
+      "id": "en:welcome",
+      "en": "welcome",
+      "ru": "добро пожаловать"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «from»?",
+      "answers": [
+        "из"
+      ],
+      "explanation": "from — из.",
+      "wordIds": [
+        "en:from"
+      ],
+      "options": [
+        "друг",
+        "из",
+        "добро пожаловать",
+        "вчера"
+      ],
+      "id": "a1-02-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Я из России.",
+      "answers": [
+        "I am from Russia.",
+        "I come from Russia."
+      ],
+      "explanation": "С местоимением I используется am.",
+      "wordIds": [
+        "en:from"
+      ],
+      "id": "a1-02-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Я из России.",
+      "answers": [
+        "I am from Russia."
+      ],
+      "explanation": "С местоимением I используется am.",
+      "wordIds": [
+        "en:from"
+      ],
+      "tokens": [
+        "I",
+        "am",
+        "from",
+        "Russia"
+      ],
+      "id": "a1-02-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "I ___ from Russia.",
+      "answers": [
+        "am"
+      ],
+      "explanation": "С местоимением I используется am.",
+      "wordIds": [],
+      "id": "a1-02-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "I am from Russia."
+      ],
+      "explanation": "С местоимением I используется am.",
+      "wordIds": [
+        "en:from"
+      ],
+      "audio": "I am from Russia.",
+      "id": "a1-02-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:from",
+          "en": "from",
+          "ru": "из"
+        },
+        {
+          "id": "en:friend",
+          "en": "friend",
+          "ru": "друг"
+        },
+        {
+          "id": "en:welcome",
+          "en": "welcome",
+          "ru": "добро пожаловать"
+        }
+      ],
+      "wordIds": [
+        "en:from",
+        "en:friend",
+        "en:welcome"
+      ],
+      "id": "a1-02-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "I am from Russia.",
+      "answers": [
+        "I am from Russia."
+      ],
+      "explanation": "С местоимением I используется am.",
+      "wordIds": [
+        "en:from"
+      ],
+      "audio": "I am from Russia.",
+      "id": "a1-02-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "I is from Russia.",
+      "answers": [
+        "I am from Russia."
+      ],
+      "explanation": "С местоимением I используется am.",
+      "wordIds": [
+        "en:from"
+      ],
+      "id": "a1-02-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: из",
+      "answers": [
+        "from"
+      ],
+      "explanation": "from — из.",
+      "wordIds": [
+        "en:from"
+      ],
+      "id": "a1-02-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Where are you from?",
+      "answers": [
+        "I am from Russia."
+      ],
+      "explanation": "Подходящая реплика: I am from Russia.",
+      "wordIds": [
+        "en:from"
+      ],
+      "options": [
+        "I am from Russia.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-02-e10"
+    }
+  ]
+}

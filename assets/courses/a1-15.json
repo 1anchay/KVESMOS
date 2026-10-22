@@ -1,0 +1,173 @@
+{
+  "id": "a1-15",
+  "title": "На уроке",
+  "topic": "Работа и учёба",
+  "section": 1,
+  "theme": 7,
+  "order": 14,
+  "guide": "После we используется study. Форма studies нужна с he/she/it.",
+  "vocabulary": [
+    {
+      "id": "en:student",
+      "en": "student",
+      "ru": "студент"
+    },
+    {
+      "id": "en:teacher",
+      "en": "teacher",
+      "ru": "учитель"
+    },
+    {
+      "id": "en:lesson",
+      "en": "lesson",
+      "ru": "урок"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «student»?",
+      "answers": [
+        "студент"
+      ],
+      "explanation": "student — студент.",
+      "wordIds": [
+        "en:student"
+      ],
+      "options": [
+        "учитель",
+        "студент",
+        "урок",
+        "вчера"
+      ],
+      "id": "a1-15-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Мы изучаем английский.",
+      "answers": [
+        "We study English.",
+        "We learn English."
+      ],
+      "explanation": "После we используется study. Форма studies нужна с he/she/it.",
+      "wordIds": [],
+      "id": "a1-15-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Мы изучаем английский.",
+      "answers": [
+        "We study English."
+      ],
+      "explanation": "После we используется study. Форма studies нужна с he/she/it.",
+      "wordIds": [],
+      "tokens": [
+        "We",
+        "study",
+        "English"
+      ],
+      "id": "a1-15-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "We ___ English.",
+      "answers": [
+        "study"
+      ],
+      "explanation": "После we используется study. Форма studies нужна с he/she/it.",
+      "wordIds": [],
+      "id": "a1-15-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "We study English."
+      ],
+      "explanation": "После we используется study. Форма studies нужна с he/she/it.",
+      "wordIds": [],
+      "audio": "We study English.",
+      "id": "a1-15-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:student",
+          "en": "student",
+          "ru": "студент"
+        },
+        {
+          "id": "en:teacher",
+          "en": "teacher",
+          "ru": "учитель"
+        },
+        {
+          "id": "en:lesson",
+          "en": "lesson",
+          "ru": "урок"
+        }
+      ],
+      "wordIds": [
+        "en:student",
+        "en:teacher",
+        "en:lesson"
+      ],
+      "id": "a1-15-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "We study English.",
+      "answers": [
+        "We study English."
+      ],
+      "explanation": "После we используется study. Форма studies нужна с he/she/it.",
+      "wordIds": [],
+      "audio": "We study English.",
+      "id": "a1-15-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "We studies English.",
+      "answers": [
+        "We study English."
+      ],
+      "explanation": "После we используется study. Форма studies нужна с he/she/it.",
+      "wordIds": [],
+      "id": "a1-15-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: студент",
+      "answers": [
+        "student"
+      ],
+      "explanation": "student — студент.",
+      "wordIds": [
+        "en:student"
+      ],
+      "id": "a1-15-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "What do you study?",
+      "answers": [
+        "We study English."
+      ],
+      "explanation": "Подходящая реплика: We study English.",
+      "wordIds": [],
+      "options": [
+        "We study English.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-15-e10"
+    }
+  ]
+}

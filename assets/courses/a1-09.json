@@ -1,0 +1,184 @@
+{
+  "id": "a1-09",
+  "title": "Время обеда",
+  "topic": "Еда и напитки",
+  "section": 0,
+  "theme": 4,
+  "order": 8,
+  "guide": "В Present Simple с I используется like без окончания -s.",
+  "vocabulary": [
+    {
+      "id": "en:rice",
+      "en": "rice",
+      "ru": "рис"
+    },
+    {
+      "id": "en:bread",
+      "en": "bread",
+      "ru": "хлеб"
+    },
+    {
+      "id": "en:cheese",
+      "en": "cheese",
+      "ru": "сыр"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «rice»?",
+      "answers": [
+        "рис"
+      ],
+      "explanation": "rice — рис.",
+      "wordIds": [
+        "en:rice"
+      ],
+      "options": [
+        "хлеб",
+        "рис",
+        "сыр",
+        "вчера"
+      ],
+      "id": "a1-09-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Мне нравится рис.",
+      "answers": [
+        "I like rice."
+      ],
+      "explanation": "В Present Simple с I используется like без окончания -s.",
+      "wordIds": [
+        "en:rice"
+      ],
+      "id": "a1-09-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Мне нравится рис.",
+      "answers": [
+        "I like rice."
+      ],
+      "explanation": "В Present Simple с I используется like без окончания -s.",
+      "wordIds": [
+        "en:rice"
+      ],
+      "tokens": [
+        "I",
+        "like",
+        "rice"
+      ],
+      "id": "a1-09-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "I ___ rice.",
+      "answers": [
+        "like"
+      ],
+      "explanation": "В Present Simple с I используется like без окончания -s.",
+      "wordIds": [],
+      "id": "a1-09-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "I like rice."
+      ],
+      "explanation": "В Present Simple с I используется like без окончания -s.",
+      "wordIds": [
+        "en:rice"
+      ],
+      "audio": "I like rice.",
+      "id": "a1-09-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:rice",
+          "en": "rice",
+          "ru": "рис"
+        },
+        {
+          "id": "en:bread",
+          "en": "bread",
+          "ru": "хлеб"
+        },
+        {
+          "id": "en:cheese",
+          "en": "cheese",
+          "ru": "сыр"
+        }
+      ],
+      "wordIds": [
+        "en:rice",
+        "en:bread",
+        "en:cheese"
+      ],
+      "id": "a1-09-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "I like rice.",
+      "answers": [
+        "I like rice."
+      ],
+      "explanation": "В Present Simple с I используется like без окончания -s.",
+      "wordIds": [
+        "en:rice"
+      ],
+      "audio": "I like rice.",
+      "id": "a1-09-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "I likes rice.",
+      "answers": [
+        "I like rice."
+      ],
+      "explanation": "В Present Simple с I используется like без окончания -s.",
+      "wordIds": [
+        "en:rice"
+      ],
+      "id": "a1-09-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: рис",
+      "answers": [
+        "rice"
+      ],
+      "explanation": "rice — рис.",
+      "wordIds": [
+        "en:rice"
+      ],
+      "id": "a1-09-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "What food do you like?",
+      "answers": [
+        "I like rice."
+      ],
+      "explanation": "Подходящая реплика: I like rice.",
+      "wordIds": [
+        "en:rice"
+      ],
+      "options": [
+        "I like rice.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-09-e10"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "id": "a1-04",
+  "title": "Здесь и там",
+  "topic": "Простые слова",
+  "section": 0,
+  "theme": 1,
+  "order": 3,
+  "guide": "That is указывает на один предмет вдали. My — притяжательное определение «мой».",
+  "vocabulary": [
+    {
+      "id": "en:house",
+      "en": "house",
+      "ru": "дом"
+    },
+    {
+      "id": "en:door",
+      "en": "door",
+      "ru": "дверь"
+    },
+    {
+      "id": "en:window",
+      "en": "window",
+      "ru": "окно"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «house»?",
+      "answers": [
+        "дом"
+      ],
+      "explanation": "house — дом.",
+      "wordIds": [
+        "en:house"
+      ],
+      "options": [
+        "дверь",
+        "дом",
+        "окно",
+        "вчера"
+      ],
+      "id": "a1-04-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "То — мой дом.",
+      "answers": [
+        "That is my house.",
+        "That is my home."
+      ],
+      "explanation": "That is указывает на один предмет вдали. My — притяжательное определение «мой».",
+      "wordIds": [
+        "en:house"
+      ],
+      "id": "a1-04-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "То — мой дом.",
+      "answers": [
+        "That is my house."
+      ],
+      "explanation": "That is указывает на один предмет вдали. My — притяжательное определение «мой».",
+      "wordIds": [
+        "en:house"
+      ],
+      "tokens": [
+        "That",
+        "is",
+        "my",
+        "house"
+      ],
+      "id": "a1-04-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "That is ___ house.",
+      "answers": [
+        "my"
+      ],
+      "explanation": "That is указывает на один предмет вдали. My — притяжательное определение «мой».",
+      "wordIds": [],
+      "id": "a1-04-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "That is my house."
+      ],
+      "explanation": "That is указывает на один предмет вдали. My — притяжательное определение «мой».",
+      "wordIds": [
+        "en:house"
+      ],
+      "audio": "That is my house.",
+      "id": "a1-04-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:house",
+          "en": "house",
+          "ru": "дом"
+        },
+        {
+          "id": "en:door",
+          "en": "door",
+          "ru": "дверь"
+        },
+        {
+          "id": "en:window",
+          "en": "window",
+          "ru": "окно"
+        }
+      ],
+      "wordIds": [
+        "en:house",
+        "en:door",
+        "en:window"
+      ],
+      "id": "a1-04-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "That is my house.",
+      "answers": [
+        "That is my house."
+      ],
+      "explanation": "That is указывает на один предмет вдали. My — притяжательное определение «мой».",
+      "wordIds": [
+        "en:house"
+      ],
+      "audio": "That is my house.",
+      "id": "a1-04-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "That are my house.",
+      "answers": [
+        "That is my house."
+      ],
+      "explanation": "That is указывает на один предмет вдали. My — притяжательное определение «мой».",
+      "wordIds": [
+        "en:house"
+      ],
+      "id": "a1-04-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: дом",
+      "answers": [
+        "house"
+      ],
+      "explanation": "house — дом.",
+      "wordIds": [
+        "en:house"
+      ],
+      "id": "a1-04-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Is that your house?",
+      "answers": [
+        "Yes, that is my house."
+      ],
+      "explanation": "Подходящая реплика: Yes, that is my house.",
+      "wordIds": [
+        "en:house"
+      ],
+      "options": [
+        "Yes, that is my house.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-04-e10"
+    }
+  ]
+}

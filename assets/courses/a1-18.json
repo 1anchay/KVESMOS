@@ -1,0 +1,192 @@
+{
+  "id": "a1-18",
+  "title": "В новом городе",
+  "topic": "Путешествия",
+  "section": 1,
+  "theme": 8,
+  "order": 17,
+  "guide": "The hotel — единственное число: is. Near — «рядом с».",
+  "vocabulary": [
+    {
+      "id": "en:hotel",
+      "en": "hotel",
+      "ru": "отель"
+    },
+    {
+      "id": "en:station",
+      "en": "station",
+      "ru": "станция"
+    },
+    {
+      "id": "en:map",
+      "en": "map",
+      "ru": "карта"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «hotel»?",
+      "answers": [
+        "отель"
+      ],
+      "explanation": "hotel — отель.",
+      "wordIds": [
+        "en:hotel"
+      ],
+      "options": [
+        "станция",
+        "отель",
+        "карта",
+        "вчера"
+      ],
+      "id": "a1-18-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Отель рядом со станцией.",
+      "answers": [
+        "The hotel is near the station."
+      ],
+      "explanation": "The hotel — единственное число: is. Near — «рядом с».",
+      "wordIds": [
+        "en:hotel",
+        "en:station"
+      ],
+      "id": "a1-18-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Отель рядом со станцией.",
+      "answers": [
+        "The hotel is near the station."
+      ],
+      "explanation": "The hotel — единственное число: is. Near — «рядом с».",
+      "wordIds": [
+        "en:hotel",
+        "en:station"
+      ],
+      "tokens": [
+        "The",
+        "hotel",
+        "is",
+        "near",
+        "the",
+        "station"
+      ],
+      "id": "a1-18-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "The hotel is ___ the station.",
+      "answers": [
+        "near"
+      ],
+      "explanation": "The hotel — единственное число: is. Near — «рядом с».",
+      "wordIds": [],
+      "id": "a1-18-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "The hotel is near the station."
+      ],
+      "explanation": "The hotel — единственное число: is. Near — «рядом с».",
+      "wordIds": [
+        "en:hotel",
+        "en:station"
+      ],
+      "audio": "The hotel is near the station.",
+      "id": "a1-18-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:hotel",
+          "en": "hotel",
+          "ru": "отель"
+        },
+        {
+          "id": "en:station",
+          "en": "station",
+          "ru": "станция"
+        },
+        {
+          "id": "en:map",
+          "en": "map",
+          "ru": "карта"
+        }
+      ],
+      "wordIds": [
+        "en:hotel",
+        "en:station",
+        "en:map"
+      ],
+      "id": "a1-18-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "The hotel is near the station.",
+      "answers": [
+        "The hotel is near the station."
+      ],
+      "explanation": "The hotel — единственное число: is. Near — «рядом с».",
+      "wordIds": [
+        "en:hotel",
+        "en:station"
+      ],
+      "audio": "The hotel is near the station.",
+      "id": "a1-18-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "The hotel are near the station.",
+      "answers": [
+        "The hotel is near the station."
+      ],
+      "explanation": "The hotel — единственное число: is. Near — «рядом с».",
+      "wordIds": [
+        "en:hotel",
+        "en:station"
+      ],
+      "id": "a1-18-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: отель",
+      "answers": [
+        "hotel"
+      ],
+      "explanation": "hotel — отель.",
+      "wordIds": [
+        "en:hotel"
+      ],
+      "id": "a1-18-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Where is the hotel?",
+      "answers": [
+        "It is near the station."
+      ],
+      "explanation": "Подходящая реплика: It is near the station.",
+      "wordIds": [
+        "en:station"
+      ],
+      "options": [
+        "It is near the station.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-18-e10"
+    }
+  ]
+}

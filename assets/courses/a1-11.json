@@ -1,0 +1,188 @@
+{
+  "id": "a1-11",
+  "title": "Палитра",
+  "topic": "Цвета и предметы",
+  "section": 1,
+  "theme": 5,
+  "order": 10,
+  "guide": "The bag — единственное число: is. Прилагательные цвета не изменяются.",
+  "vocabulary": [
+    {
+      "id": "en:blue",
+      "en": "blue",
+      "ru": "синий"
+    },
+    {
+      "id": "en:red",
+      "en": "red",
+      "ru": "красный"
+    },
+    {
+      "id": "en:green",
+      "en": "green",
+      "ru": "зелёный"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «blue»?",
+      "answers": [
+        "синий"
+      ],
+      "explanation": "blue — синий.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "options": [
+        "красный",
+        "синий",
+        "зелёный",
+        "вчера"
+      ],
+      "id": "a1-11-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Сумка синяя.",
+      "answers": [
+        "The bag is blue.",
+        "A bag is blue."
+      ],
+      "explanation": "The bag — единственное число: is. Прилагательные цвета не изменяются.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "id": "a1-11-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Сумка синяя.",
+      "answers": [
+        "The bag is blue."
+      ],
+      "explanation": "The bag — единственное число: is. Прилагательные цвета не изменяются.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "tokens": [
+        "The",
+        "bag",
+        "is",
+        "blue"
+      ],
+      "id": "a1-11-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "The bag is ___.",
+      "answers": [
+        "blue"
+      ],
+      "explanation": "The bag — единственное число: is. Прилагательные цвета не изменяются.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "id": "a1-11-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "The bag is blue."
+      ],
+      "explanation": "The bag — единственное число: is. Прилагательные цвета не изменяются.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "audio": "The bag is blue.",
+      "id": "a1-11-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:blue",
+          "en": "blue",
+          "ru": "синий"
+        },
+        {
+          "id": "en:red",
+          "en": "red",
+          "ru": "красный"
+        },
+        {
+          "id": "en:green",
+          "en": "green",
+          "ru": "зелёный"
+        }
+      ],
+      "wordIds": [
+        "en:blue",
+        "en:red",
+        "en:green"
+      ],
+      "id": "a1-11-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "The bag is blue.",
+      "answers": [
+        "The bag is blue."
+      ],
+      "explanation": "The bag — единственное число: is. Прилагательные цвета не изменяются.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "audio": "The bag is blue.",
+      "id": "a1-11-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "The bag are blue.",
+      "answers": [
+        "The bag is blue."
+      ],
+      "explanation": "The bag — единственное число: is. Прилагательные цвета не изменяются.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "id": "a1-11-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: синий",
+      "answers": [
+        "blue"
+      ],
+      "explanation": "blue — синий.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "id": "a1-11-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "What colour is the bag?",
+      "answers": [
+        "It is blue."
+      ],
+      "explanation": "Подходящая реплика: It is blue.",
+      "wordIds": [
+        "en:blue"
+      ],
+      "options": [
+        "It is blue.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-11-e10"
+    }
+  ]
+}

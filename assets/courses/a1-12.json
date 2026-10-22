@@ -1,0 +1,192 @@
+{
+  "id": "a1-12",
+  "title": "На столе",
+  "topic": "Цвета и предметы",
+  "section": 1,
+  "theme": 5,
+  "order": 11,
+  "guide": "В английском предложении нужна связка is. On означает «на поверхности».",
+  "vocabulary": [
+    {
+      "id": "en:cup",
+      "en": "cup",
+      "ru": "чашка"
+    },
+    {
+      "id": "en:table",
+      "en": "table",
+      "ru": "стол"
+    },
+    {
+      "id": "en:chair",
+      "en": "chair",
+      "ru": "стул"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «cup»?",
+      "answers": [
+        "чашка"
+      ],
+      "explanation": "cup — чашка.",
+      "wordIds": [
+        "en:cup"
+      ],
+      "options": [
+        "стол",
+        "чашка",
+        "стул",
+        "вчера"
+      ],
+      "id": "a1-12-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Чашка на столе.",
+      "answers": [
+        "The cup is on the table."
+      ],
+      "explanation": "В английском предложении нужна связка is. On означает «на поверхности».",
+      "wordIds": [
+        "en:cup",
+        "en:table"
+      ],
+      "id": "a1-12-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Чашка на столе.",
+      "answers": [
+        "The cup is on the table."
+      ],
+      "explanation": "В английском предложении нужна связка is. On означает «на поверхности».",
+      "wordIds": [
+        "en:cup",
+        "en:table"
+      ],
+      "tokens": [
+        "The",
+        "cup",
+        "is",
+        "on",
+        "the",
+        "table"
+      ],
+      "id": "a1-12-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "The cup is ___ the table.",
+      "answers": [
+        "on"
+      ],
+      "explanation": "В английском предложении нужна связка is. On означает «на поверхности».",
+      "wordIds": [],
+      "id": "a1-12-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "The cup is on the table."
+      ],
+      "explanation": "В английском предложении нужна связка is. On означает «на поверхности».",
+      "wordIds": [
+        "en:cup",
+        "en:table"
+      ],
+      "audio": "The cup is on the table.",
+      "id": "a1-12-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:cup",
+          "en": "cup",
+          "ru": "чашка"
+        },
+        {
+          "id": "en:table",
+          "en": "table",
+          "ru": "стол"
+        },
+        {
+          "id": "en:chair",
+          "en": "chair",
+          "ru": "стул"
+        }
+      ],
+      "wordIds": [
+        "en:cup",
+        "en:table",
+        "en:chair"
+      ],
+      "id": "a1-12-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "The cup is on the table.",
+      "answers": [
+        "The cup is on the table."
+      ],
+      "explanation": "В английском предложении нужна связка is. On означает «на поверхности».",
+      "wordIds": [
+        "en:cup",
+        "en:table"
+      ],
+      "audio": "The cup is on the table.",
+      "id": "a1-12-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "The cup on the table.",
+      "answers": [
+        "The cup is on the table."
+      ],
+      "explanation": "В английском предложении нужна связка is. On означает «на поверхности».",
+      "wordIds": [
+        "en:cup",
+        "en:table"
+      ],
+      "id": "a1-12-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: чашка",
+      "answers": [
+        "cup"
+      ],
+      "explanation": "cup — чашка.",
+      "wordIds": [
+        "en:cup"
+      ],
+      "id": "a1-12-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Where is the cup?",
+      "answers": [
+        "It is on the table."
+      ],
+      "explanation": "Подходящая реплика: It is on the table.",
+      "wordIds": [
+        "en:table"
+      ],
+      "options": [
+        "It is on the table.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-12-e10"
+    }
+  ]
+}

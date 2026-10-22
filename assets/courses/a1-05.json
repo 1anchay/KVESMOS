@@ -1,0 +1,187 @@
+{
+  "id": "a1-05",
+  "title": "Считаем до пяти",
+  "topic": "Числа",
+  "section": 0,
+  "theme": 2,
+  "order": 4,
+  "guide": "После two существительное apple получает окончание множественного числа -s.",
+  "vocabulary": [
+    {
+      "id": "en:one",
+      "en": "one",
+      "ru": "один"
+    },
+    {
+      "id": "en:two",
+      "en": "two",
+      "ru": "два"
+    },
+    {
+      "id": "en:five",
+      "en": "five",
+      "ru": "пять"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «one»?",
+      "answers": [
+        "один"
+      ],
+      "explanation": "one — один.",
+      "wordIds": [
+        "en:one"
+      ],
+      "options": [
+        "два",
+        "один",
+        "пять",
+        "вчера"
+      ],
+      "id": "a1-05-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "У меня два яблока.",
+      "answers": [
+        "I have two apples."
+      ],
+      "explanation": "После two существительное apple получает окончание множественного числа -s.",
+      "wordIds": [
+        "en:two"
+      ],
+      "id": "a1-05-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "У меня два яблока.",
+      "answers": [
+        "I have two apples."
+      ],
+      "explanation": "После two существительное apple получает окончание множественного числа -s.",
+      "wordIds": [
+        "en:two"
+      ],
+      "tokens": [
+        "I",
+        "have",
+        "two",
+        "apples"
+      ],
+      "id": "a1-05-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "I have ___ apples.",
+      "answers": [
+        "two"
+      ],
+      "explanation": "После two существительное apple получает окончание множественного числа -s.",
+      "wordIds": [
+        "en:two"
+      ],
+      "id": "a1-05-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "I have two apples."
+      ],
+      "explanation": "После two существительное apple получает окончание множественного числа -s.",
+      "wordIds": [
+        "en:two"
+      ],
+      "audio": "I have two apples.",
+      "id": "a1-05-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:one",
+          "en": "one",
+          "ru": "один"
+        },
+        {
+          "id": "en:two",
+          "en": "two",
+          "ru": "два"
+        },
+        {
+          "id": "en:five",
+          "en": "five",
+          "ru": "пять"
+        }
+      ],
+      "wordIds": [
+        "en:one",
+        "en:two",
+        "en:five"
+      ],
+      "id": "a1-05-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "I have two apples.",
+      "answers": [
+        "I have two apples."
+      ],
+      "explanation": "После two существительное apple получает окончание множественного числа -s.",
+      "wordIds": [
+        "en:two"
+      ],
+      "audio": "I have two apples.",
+      "id": "a1-05-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "I have two apple.",
+      "answers": [
+        "I have two apples."
+      ],
+      "explanation": "После two существительное apple получает окончание множественного числа -s.",
+      "wordIds": [
+        "en:two"
+      ],
+      "id": "a1-05-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: один",
+      "answers": [
+        "one"
+      ],
+      "explanation": "one — один.",
+      "wordIds": [
+        "en:one"
+      ],
+      "id": "a1-05-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "How many apples do you have?",
+      "answers": [
+        "I have two apples."
+      ],
+      "explanation": "Подходящая реплика: I have two apples.",
+      "wordIds": [
+        "en:two"
+      ],
+      "options": [
+        "I have two apples.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-05-e10"
+    }
+  ]
+}

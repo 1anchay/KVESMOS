@@ -1,0 +1,201 @@
+{
+  "id": "en-ru-a1",
+  "version": 1,
+  "title": "Английский · A1",
+  "sourceLanguage": "ru",
+  "targetLanguage": "en",
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Первые сигналы",
+      "themes": [
+        {
+          "id": "t1",
+          "title": "Приветствие и знакомство",
+          "lessons": [
+            {
+              "id": "a1-01",
+              "title": "Первый контакт",
+              "asset": "assets/courses/a1-01.json",
+              "order": 0
+            },
+            {
+              "id": "a1-02",
+              "title": "Рад знакомству",
+              "asset": "assets/courses/a1-02.json",
+              "order": 1
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "title": "Простые слова",
+          "lessons": [
+            {
+              "id": "a1-03",
+              "title": "Вокруг нас",
+              "asset": "assets/courses/a1-03.json",
+              "order": 2
+            },
+            {
+              "id": "a1-04",
+              "title": "Здесь и там",
+              "asset": "assets/courses/a1-04.json",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "title": "Числа",
+          "lessons": [
+            {
+              "id": "a1-05",
+              "title": "Считаем до пяти",
+              "asset": "assets/courses/a1-05.json",
+              "order": 4
+            },
+            {
+              "id": "a1-06",
+              "title": "Возраст и числа",
+              "asset": "assets/courses/a1-06.json",
+              "order": 5
+            }
+          ]
+        },
+        {
+          "id": "t4",
+          "title": "Семья",
+          "lessons": [
+            {
+              "id": "a1-07",
+              "title": "Моя семья",
+              "asset": "assets/courses/a1-07.json",
+              "order": 6
+            },
+            {
+              "id": "a1-08",
+              "title": "Наши близкие",
+              "asset": "assets/courses/a1-08.json",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "id": "t5",
+          "title": "Еда и напитки",
+          "lessons": [
+            {
+              "id": "a1-09",
+              "title": "Время обеда",
+              "asset": "assets/courses/a1-09.json",
+              "order": 8
+            },
+            {
+              "id": "a1-10",
+              "title": "В кафе",
+              "asset": "assets/courses/a1-10.json",
+              "order": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Новые горизонты",
+      "themes": [
+        {
+          "id": "t6",
+          "title": "Цвета и предметы",
+          "lessons": [
+            {
+              "id": "a1-11",
+              "title": "Палитра",
+              "asset": "assets/courses/a1-11.json",
+              "order": 10
+            },
+            {
+              "id": "a1-12",
+              "title": "На столе",
+              "asset": "assets/courses/a1-12.json",
+              "order": 11
+            }
+          ]
+        },
+        {
+          "id": "t7",
+          "title": "Повседневные действия",
+          "lessons": [
+            {
+              "id": "a1-13",
+              "title": "Моё утро",
+              "asset": "assets/courses/a1-13.json",
+              "order": 12
+            },
+            {
+              "id": "a1-14",
+              "title": "Каждый день",
+              "asset": "assets/courses/a1-14.json",
+              "order": 13
+            }
+          ]
+        },
+        {
+          "id": "t8",
+          "title": "Работа и учёба",
+          "lessons": [
+            {
+              "id": "a1-15",
+              "title": "На уроке",
+              "asset": "assets/courses/a1-15.json",
+              "order": 14
+            },
+            {
+              "id": "a1-16",
+              "title": "Моя работа",
+              "asset": "assets/courses/a1-16.json",
+              "order": 15
+            }
+          ]
+        },
+        {
+          "id": "t9",
+          "title": "Путешествия",
+          "lessons": [
+            {
+              "id": "a1-17",
+              "title": "В дорогу",
+              "asset": "assets/courses/a1-17.json",
+              "order": 16
+            },
+            {
+              "id": "a1-18",
+              "title": "В новом городе",
+              "asset": "assets/courses/a1-18.json",
+              "order": 17
+            }
+          ]
+        },
+        {
+          "id": "t10",
+          "title": "Базовые разговорные ситуации",
+          "lessons": [
+            {
+              "id": "a1-19",
+              "title": "Просим о помощи",
+              "asset": "assets/courses/a1-19.json",
+              "order": 18
+            },
+            {
+              "id": "a1-20",
+              "title": "В магазине",
+              "asset": "assets/courses/a1-20.json",
+              "order": 19
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

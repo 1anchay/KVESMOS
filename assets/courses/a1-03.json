@@ -1,0 +1,186 @@
+{
+  "id": "a1-03",
+  "title": "Вокруг нас",
+  "topic": "Простые слова",
+  "section": 0,
+  "theme": 1,
+  "order": 2,
+  "guide": "This is означает «это». Перед исчисляемым существительным в единственном числе нужен артикль.",
+  "vocabulary": [
+    {
+      "id": "en:book",
+      "en": "book",
+      "ru": "книга"
+    },
+    {
+      "id": "en:pen",
+      "en": "pen",
+      "ru": "ручка"
+    },
+    {
+      "id": "en:bag",
+      "en": "bag",
+      "ru": "сумка"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «book»?",
+      "answers": [
+        "книга"
+      ],
+      "explanation": "book — книга.",
+      "wordIds": [
+        "en:book"
+      ],
+      "options": [
+        "ручка",
+        "книга",
+        "сумка",
+        "вчера"
+      ],
+      "id": "a1-03-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Это книга.",
+      "answers": [
+        "This is a book.",
+        "It is a book."
+      ],
+      "explanation": "This is означает «это». Перед исчисляемым существительным в единственном числе нужен артикль.",
+      "wordIds": [
+        "en:book"
+      ],
+      "id": "a1-03-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Это книга.",
+      "answers": [
+        "This is a book."
+      ],
+      "explanation": "This is означает «это». Перед исчисляемым существительным в единственном числе нужен артикль.",
+      "wordIds": [
+        "en:book"
+      ],
+      "tokens": [
+        "This",
+        "is",
+        "a",
+        "book"
+      ],
+      "id": "a1-03-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "This is ___ book.",
+      "answers": [
+        "a"
+      ],
+      "explanation": "This is означает «это». Перед исчисляемым существительным в единственном числе нужен артикль.",
+      "wordIds": [],
+      "id": "a1-03-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "This is a book."
+      ],
+      "explanation": "This is означает «это». Перед исчисляемым существительным в единственном числе нужен артикль.",
+      "wordIds": [
+        "en:book"
+      ],
+      "audio": "This is a book.",
+      "id": "a1-03-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:book",
+          "en": "book",
+          "ru": "книга"
+        },
+        {
+          "id": "en:pen",
+          "en": "pen",
+          "ru": "ручка"
+        },
+        {
+          "id": "en:bag",
+          "en": "bag",
+          "ru": "сумка"
+        }
+      ],
+      "wordIds": [
+        "en:book",
+        "en:pen",
+        "en:bag"
+      ],
+      "id": "a1-03-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "This is a book.",
+      "answers": [
+        "This is a book."
+      ],
+      "explanation": "This is означает «это». Перед исчисляемым существительным в единственном числе нужен артикль.",
+      "wordIds": [
+        "en:book"
+      ],
+      "audio": "This is a book.",
+      "id": "a1-03-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "This are a book.",
+      "answers": [
+        "This is a book."
+      ],
+      "explanation": "This is означает «это». Перед исчисляемым существительным в единственном числе нужен артикль.",
+      "wordIds": [
+        "en:book"
+      ],
+      "id": "a1-03-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: книга",
+      "answers": [
+        "book"
+      ],
+      "explanation": "book — книга.",
+      "wordIds": [
+        "en:book"
+      ],
+      "id": "a1-03-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "What is this?",
+      "answers": [
+        "It is a book."
+      ],
+      "explanation": "Подходящая реплика: It is a book.",
+      "wordIds": [
+        "en:book"
+      ],
+      "options": [
+        "It is a book.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-03-e10"
+    }
+  ]
+}

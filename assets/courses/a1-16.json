@@ -1,0 +1,186 @@
+{
+  "id": "a1-16",
+  "title": "Моя работа",
+  "topic": "Работа и учёба",
+  "section": 1,
+  "theme": 7,
+  "order": 15,
+  "guide": "После he используется works. In an office — в офисе.",
+  "vocabulary": [
+    {
+      "id": "en:work",
+      "en": "work",
+      "ru": "работать"
+    },
+    {
+      "id": "en:office",
+      "en": "office",
+      "ru": "офис"
+    },
+    {
+      "id": "en:job",
+      "en": "job",
+      "ru": "работа"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «work»?",
+      "answers": [
+        "работать"
+      ],
+      "explanation": "work — работать.",
+      "wordIds": [
+        "en:work"
+      ],
+      "options": [
+        "офис",
+        "работать",
+        "работа",
+        "вчера"
+      ],
+      "id": "a1-16-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Он работает в офисе.",
+      "answers": [
+        "He works in an office."
+      ],
+      "explanation": "После he используется works. In an office — в офисе.",
+      "wordIds": [
+        "en:office"
+      ],
+      "id": "a1-16-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Он работает в офисе.",
+      "answers": [
+        "He works in an office."
+      ],
+      "explanation": "После he используется works. In an office — в офисе.",
+      "wordIds": [
+        "en:office"
+      ],
+      "tokens": [
+        "He",
+        "works",
+        "in",
+        "an",
+        "office"
+      ],
+      "id": "a1-16-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "He works ___ an office.",
+      "answers": [
+        "in"
+      ],
+      "explanation": "После he используется works. In an office — в офисе.",
+      "wordIds": [],
+      "id": "a1-16-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "He works in an office."
+      ],
+      "explanation": "После he используется works. In an office — в офисе.",
+      "wordIds": [
+        "en:office"
+      ],
+      "audio": "He works in an office.",
+      "id": "a1-16-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:work",
+          "en": "work",
+          "ru": "работать"
+        },
+        {
+          "id": "en:office",
+          "en": "office",
+          "ru": "офис"
+        },
+        {
+          "id": "en:job",
+          "en": "job",
+          "ru": "работа"
+        }
+      ],
+      "wordIds": [
+        "en:work",
+        "en:office",
+        "en:job"
+      ],
+      "id": "a1-16-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "He works in an office.",
+      "answers": [
+        "He works in an office."
+      ],
+      "explanation": "После he используется works. In an office — в офисе.",
+      "wordIds": [
+        "en:office"
+      ],
+      "audio": "He works in an office.",
+      "id": "a1-16-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "He work in an office.",
+      "answers": [
+        "He works in an office."
+      ],
+      "explanation": "После he используется works. In an office — в офисе.",
+      "wordIds": [
+        "en:office"
+      ],
+      "id": "a1-16-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: работать",
+      "answers": [
+        "work"
+      ],
+      "explanation": "work — работать.",
+      "wordIds": [
+        "en:work"
+      ],
+      "id": "a1-16-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Where does he work?",
+      "answers": [
+        "He works in an office."
+      ],
+      "explanation": "Подходящая реплика: He works in an office.",
+      "wordIds": [
+        "en:office"
+      ],
+      "options": [
+        "He works in an office.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-16-e10"
+    }
+  ]
+}

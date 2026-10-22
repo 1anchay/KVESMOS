@@ -1,0 +1,185 @@
+{
+  "id": "a1-20",
+  "title": "В магазине",
+  "topic": "Базовые разговорные ситуации",
+  "section": 1,
+  "theme": 9,
+  "order": 19,
+  "guide": "This shirt — единственное число: is. How much is…? — вопрос о цене.",
+  "vocabulary": [
+    {
+      "id": "en:shirt",
+      "en": "shirt",
+      "ru": "рубашка"
+    },
+    {
+      "id": "en:shop",
+      "en": "shop",
+      "ru": "магазин"
+    },
+    {
+      "id": "en:price",
+      "en": "price",
+      "ru": "цена"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «shirt»?",
+      "answers": [
+        "рубашка"
+      ],
+      "explanation": "shirt — рубашка.",
+      "wordIds": [
+        "en:shirt"
+      ],
+      "options": [
+        "магазин",
+        "рубашка",
+        "цена",
+        "вчера"
+      ],
+      "id": "a1-20-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Сколько стоит эта рубашка?",
+      "answers": [
+        "How much is this shirt?",
+        "How much does this shirt cost?"
+      ],
+      "explanation": "This shirt — единственное число: is. How much is…? — вопрос о цене.",
+      "wordIds": [
+        "en:shirt"
+      ],
+      "id": "a1-20-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Сколько стоит эта рубашка?",
+      "answers": [
+        "How much is this shirt?"
+      ],
+      "explanation": "This shirt — единственное число: is. How much is…? — вопрос о цене.",
+      "wordIds": [
+        "en:shirt"
+      ],
+      "tokens": [
+        "How",
+        "much",
+        "is",
+        "this",
+        "shirt"
+      ],
+      "id": "a1-20-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "How much ___ this shirt?",
+      "answers": [
+        "is"
+      ],
+      "explanation": "This shirt — единственное число: is. How much is…? — вопрос о цене.",
+      "wordIds": [],
+      "id": "a1-20-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "How much is this shirt?"
+      ],
+      "explanation": "This shirt — единственное число: is. How much is…? — вопрос о цене.",
+      "wordIds": [
+        "en:shirt"
+      ],
+      "audio": "How much is this shirt?",
+      "id": "a1-20-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:shirt",
+          "en": "shirt",
+          "ru": "рубашка"
+        },
+        {
+          "id": "en:shop",
+          "en": "shop",
+          "ru": "магазин"
+        },
+        {
+          "id": "en:price",
+          "en": "price",
+          "ru": "цена"
+        }
+      ],
+      "wordIds": [
+        "en:shirt",
+        "en:shop",
+        "en:price"
+      ],
+      "id": "a1-20-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "How much is this shirt?",
+      "answers": [
+        "How much is this shirt?"
+      ],
+      "explanation": "This shirt — единственное число: is. How much is…? — вопрос о цене.",
+      "wordIds": [
+        "en:shirt"
+      ],
+      "audio": "How much is this shirt?",
+      "id": "a1-20-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "How much are this shirt?",
+      "answers": [
+        "How much is this shirt?"
+      ],
+      "explanation": "This shirt — единственное число: is. How much is…? — вопрос о цене.",
+      "wordIds": [
+        "en:shirt"
+      ],
+      "id": "a1-20-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: рубашка",
+      "answers": [
+        "shirt"
+      ],
+      "explanation": "shirt — рубашка.",
+      "wordIds": [
+        "en:shirt"
+      ],
+      "id": "a1-20-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "How much is this shirt?",
+      "answers": [
+        "It is ten pounds."
+      ],
+      "explanation": "Подходящая реплика: It is ten pounds.",
+      "wordIds": [],
+      "options": [
+        "It is ten pounds.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-20-e10"
+    }
+  ]
+}

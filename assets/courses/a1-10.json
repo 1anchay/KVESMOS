@@ -1,0 +1,191 @@
+{
+  "id": "a1-10",
+  "title": "В кафе",
+  "topic": "Еда и напитки",
+  "section": 0,
+  "theme": 4,
+  "order": 9,
+  "guide": "После would используется начальная форма like. Some water — немного воды.",
+  "vocabulary": [
+    {
+      "id": "en:water",
+      "en": "water",
+      "ru": "вода"
+    },
+    {
+      "id": "en:tea",
+      "en": "tea",
+      "ru": "чай"
+    },
+    {
+      "id": "en:milk",
+      "en": "milk",
+      "ru": "молоко"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как переводится «water»?",
+      "answers": [
+        "вода"
+      ],
+      "explanation": "water — вода.",
+      "wordIds": [
+        "en:water"
+      ],
+      "options": [
+        "чай",
+        "вода",
+        "молоко",
+        "вчера"
+      ],
+      "id": "a1-10-e01"
+    },
+    {
+      "type": "translate",
+      "prompt": "Я хотел бы немного воды.",
+      "answers": [
+        "I would like some water.",
+        "I'd like some water.",
+        "I would like a little water.",
+        "I'd like a little water."
+      ],
+      "explanation": "После would используется начальная форма like. Some water — немного воды.",
+      "wordIds": [
+        "en:water"
+      ],
+      "id": "a1-10-e02"
+    },
+    {
+      "type": "order",
+      "prompt": "Я хотел бы немного воды.",
+      "answers": [
+        "I would like some water."
+      ],
+      "explanation": "После would используется начальная форма like. Some water — немного воды.",
+      "wordIds": [
+        "en:water"
+      ],
+      "tokens": [
+        "I",
+        "would",
+        "like",
+        "some",
+        "water"
+      ],
+      "id": "a1-10-e03"
+    },
+    {
+      "type": "gap",
+      "prompt": "I would like some ___.",
+      "answers": [
+        "water"
+      ],
+      "explanation": "После would используется начальная форма like. Some water — немного воды.",
+      "wordIds": [
+        "en:water"
+      ],
+      "id": "a1-10-e04"
+    },
+    {
+      "type": "listen",
+      "prompt": "Послушайте и запишите фразу по-английски.",
+      "answers": [
+        "I would like some water."
+      ],
+      "explanation": "После would используется начальная форма like. Some water — немного воды.",
+      "wordIds": [
+        "en:water"
+      ],
+      "audio": "I would like some water.",
+      "id": "a1-10-e05"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедините английские слова с переводами.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сравните каждое английское слово с его переводом.",
+      "pairs": [
+        {
+          "id": "en:water",
+          "en": "water",
+          "ru": "вода"
+        },
+        {
+          "id": "en:tea",
+          "en": "tea",
+          "ru": "чай"
+        },
+        {
+          "id": "en:milk",
+          "en": "milk",
+          "ru": "молоко"
+        }
+      ],
+      "wordIds": [
+        "en:water",
+        "en:tea",
+        "en:milk"
+      ],
+      "id": "a1-10-e06"
+    },
+    {
+      "type": "speak",
+      "prompt": "I would like some water.",
+      "answers": [
+        "I would like some water."
+      ],
+      "explanation": "После would используется начальная форма like. Some water — немного воды.",
+      "wordIds": [
+        "en:water"
+      ],
+      "audio": "I would like some water.",
+      "id": "a1-10-e07"
+    },
+    {
+      "type": "correct",
+      "prompt": "I would likes some water.",
+      "answers": [
+        "I would like some water."
+      ],
+      "explanation": "После would используется начальная форма like. Some water — немного воды.",
+      "wordIds": [
+        "en:water"
+      ],
+      "id": "a1-10-e08"
+    },
+    {
+      "type": "review",
+      "prompt": "Напишите по-английски: вода",
+      "answers": [
+        "water"
+      ],
+      "explanation": "water — вода.",
+      "wordIds": [
+        "en:water"
+      ],
+      "id": "a1-10-e09"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "What would you like to drink?",
+      "answers": [
+        "Some water, please."
+      ],
+      "explanation": "Подходящая реплика: Some water, please.",
+      "wordIds": [
+        "en:water"
+      ],
+      "options": [
+        "Some water, please.",
+        "Goodbye, see you tomorrow.",
+        "My favourite colour is yellow.",
+        "I have a small cat."
+      ],
+      "id": "a1-10-e10"
+    }
+  ]
+}

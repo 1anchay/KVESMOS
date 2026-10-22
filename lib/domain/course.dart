@@ -1,3 +1,24 @@
+/// A tiny teaching beat before the learner is asked to recall the phrase.
+class LessonTeachingStep {
+  final String character, title, phrase, translation, explanation;
+  const LessonTeachingStep({
+    required this.character,
+    required this.title,
+    required this.phrase,
+    required this.translation,
+    required this.explanation,
+  });
+
+  factory LessonTeachingStep.fromJson(Map<String, dynamic> json) =>
+      LessonTeachingStep(
+        character: json['character'],
+        title: json['title'],
+        phrase: json['phrase'],
+        translation: json['translation'],
+        explanation: json['explanation'],
+      );
+}
+
 class Vocabulary {
   final String id, en, ru;
   const Vocabulary(this.id, this.en, this.ru);
@@ -71,6 +92,7 @@ class Lesson {
   final int order;
   final List<Exercise> exercises;
   final List<Vocabulary> vocabulary;
+  final List<LessonTeachingStep> teachingSteps;
   const Lesson({
     required this.id,
     required this.title,
@@ -79,6 +101,7 @@ class Lesson {
     required this.order,
     required this.exercises,
     required this.vocabulary,
+    this.teachingSteps = const [],
   });
   factory Lesson.fromJson(Map<String, dynamic> j) => Lesson(
     id: j['id'],
@@ -91,6 +114,9 @@ class Lesson {
         .toList(),
     vocabulary: (j['vocabulary'] as List)
         .map((e) => Vocabulary.fromJson(e))
+        .toList(),
+    teachingSteps: (j['teachingSteps'] as List? ?? [])
+        .map((e) => LessonTeachingStep.fromJson(Map<String, dynamic>.from(e)))
         .toList(),
   );
 }

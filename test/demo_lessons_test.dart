@@ -223,8 +223,8 @@ void main() {
           await tester.pump(const Duration(milliseconds: 250));
         }
         await tester.pumpAndSettle();
-        if (number == 1) {
-          for (var page = 0; page < 2; page++) {
+        if (l.teachingSteps.isNotEmpty) {
+          for (var page = 0; page < l.teachingSteps.length - 1; page++) {
             expect(find.text('Понятно, дальше'), findsOneWidget);
             await tester.tap(find.text('Понятно, дальше'));
             await tester.pumpAndSettle();

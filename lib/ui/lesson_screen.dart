@@ -322,7 +322,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             await ref.read(appProvider).repository.markTeachingSeen(session!.id);
             if (mounted) setState(() => showTeaching = false);
           } catch (_) {
-            if (mounted) {
+            if (context.mounted) {
               showMessage(context, 'Не удалось сохранить начало практики.');
             }
           } finally {

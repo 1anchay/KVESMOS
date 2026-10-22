@@ -1,0 +1,32 @@
+name: Android Preview
+on:
+  push:
+    branches:
+      - feature/lesson-coaching-voice-honesty
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - name: Format pilot files and show required changes
+        run: |
+          dart format lib/ui/character_moment.dart test/lesson_coach_test.dart
+          git diff -- lib/ui/character_moment.dart test/lesson_coach_test.dart
+      - run: flutter analyze
+      - run: flutter test
+      - name: Build ARM64 debug APK
+        run: flutter build apk --debug --target-platform=android-arm64 --target lib/main.dart
+      - name: Upload build for verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: KVESMOS-preview-arm64-debug
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          if-no-files-found: error

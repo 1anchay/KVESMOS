@@ -33,6 +33,8 @@ void main() {
         ),
       );
       await flushDb(tester);
+      await advanceTeaching(tester);
+      await flushDb(tester);
       await tester.scrollUntilVisible(
         find.widgetWithText(OutlinedButton, wrong),
         220,

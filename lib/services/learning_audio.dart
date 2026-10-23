@@ -240,6 +240,13 @@ class CharacterVoiceService {
     scanned = true;
   }
 
+  /// Count actual distinct installed voices, not character presets.
+  int distinctVoiceCount(String locale) => available
+      .where((voice) => voice.supports(locale))
+      .map((voice) => voice.key)
+      .toSet()
+      .length;
+
   DeviceVoice? voiceFor(String character, String locale) {
     final key = assignments['$character|$locale'];
     return available

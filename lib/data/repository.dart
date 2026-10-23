@@ -160,6 +160,23 @@ class LearningRepository {
     await setSetting('kvesmos.session.retired.v1:$previousId', 'true');
     return (lesson: material, session: await session(newId));
   });
+
+  /// Marks an explanation as read for one session; does not change XP.
+  Future<bool> hasTeachingSeen(String sessionId) async =>
+      (await setting('kvesmos.lesson.teaching.v1:$sessionId')) == 'true';
+
+  Future<void> markTeachingSeen(String sessionId) =>
+      setSetting('kvesmos.lesson.teaching.v1:$sessionId', 'true');
+
+  Future<int> teachingStep(String sessionId) async =>
+      int.tryParse(
+        await setting('kvesmos.lesson.teaching.step.v1:$sessionId') ?? '',
+      ) ??
+      0;
+
+  Future<void> saveTeachingStep(String sessionId, int step) =>
+      setSetting('kvesmos.lesson.teaching.step.v1:$sessionId', '$step');
+
   Future<void> draft(String sessionId, int position, String value) =>
       (db.update(db.sessions)..where(
             (t) =>

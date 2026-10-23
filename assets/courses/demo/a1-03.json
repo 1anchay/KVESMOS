@@ -1,11 +1,11 @@
 {
   "id": "a1-03",
-  "title": "Собираем сумку · новая практика",
-  "topic": "Простые слова",
+  "title": "Собираем вещи · готовимся к полёту",
+  "topic": "Книга, ручка и сумка",
   "section": 0,
   "theme": 1,
   "order": 2,
-  "guide": "Book — книга; pen — ручка; bag — сумка. This is a… — это… Перед одним предметом используем a. My — мой/моя. In the bag — в сумке.",
+  "guide": "Сначала разберём три предмета: book — книга, pen — ручка, bag — сумка. Затем научимся говорить This is a… — это… и in the bag — в сумке.",
   "vocabulary": [
     {
       "id": "en:book",
@@ -26,73 +26,75 @@
   "exercises": [
     {
       "type": "choice",
-      "prompt": "Что изображено на карточке?",
+      "prompt": "Пикси показывает книгу. Что это?",
       "answers": [
         "book"
       ],
-      "explanation": "Book — книга. Pen — ручка, bag — сумка.",
-      "visual": "book",
+      "explanation": "Book — книга.",
+      "character": "pixie",
+      "id": "a1-03-pilot1-e01",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:book"
+      ],
+      "hint": "Вспомни первую карточку: This is a book.",
       "options": [
         "book",
         "pen",
         "bag"
       ],
-      "character": "aster",
-      "introduction": "Собираемся в путь: book — книга, pen — ручка, bag — сумка. This is a… — это…",
-      "id": "a1-03-pilot1-e01",
-      "phase": "Знакомство",
-      "wordIds": [
-        "en:book"
-      ]
+      "visual": "book"
     },
     {
       "type": "order",
-      "prompt": "Скажи: «Это ручка».",
+      "prompt": "Скажи по-английски: «Это ручка».",
       "answers": [
         "This is a pen"
       ],
-      "explanation": "This is a + один предмет: This is a pen.",
+      "explanation": "This is a pen — Это ручка.",
+      "character": "nox",
+      "id": "a1-03-pilot1-e02",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:pen"
+      ],
+      "hint": "This is a… + название предмета.",
       "tokens": [
         "This",
         "is",
         "a",
         "pen"
-      ],
-      "character": "miko",
-      "id": "a1-03-pilot1-e02",
-      "phase": "Знакомство",
-      "wordIds": [
-        "en:pen"
       ]
     },
     {
-      "type": "choice",
-      "prompt": "Какой предмет просит Нокс?",
+      "type": "listen",
+      "prompt": "Послушай, какой предмет нужен Орби.",
       "answers": [
         "bag"
       ],
-      "explanation": "My bag — моя сумка. В вопросе звучит bag.",
-      "audio": "Where is my bag?",
+      "explanation": "Bag — сумка.",
+      "character": "orbi",
+      "id": "a1-03-pilot1-e03",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:bag"
+      ],
+      "hint": "Можно переслушать или открыть текст, если голос не работает.",
       "options": [
         "book",
         "pen",
         "bag"
       ],
-      "character": "nox",
-      "id": "a1-03-pilot1-e03",
-      "phase": "Понимание",
-      "wordIds": [
-        "en:bag"
-      ]
+      "audio": "bag"
     },
     {
       "type": "pairs",
-      "prompt": "Проверь, что берём в путешествие.",
+      "prompt": "Соедини предметы с их переводами.",
       "answers": [
         "matched"
       ],
-      "explanation": "Book — книга, pen — ручка, bag — сумка.",
-      "character": "zig_quartz",
+      "explanation": "Book — книга; pen — ручка; bag — сумка.",
+      "character": "pixie",
       "id": "a1-03-pilot1-e04",
       "phase": "Понимание",
       "wordIds": [
@@ -100,6 +102,7 @@
         "en:pen",
         "en:bag"
       ],
+      "hint": "Три предмета для путешествия: читаем, пишем, складываем.",
       "pairs": [
         {
           "id": "en:book",
@@ -124,105 +127,137 @@
       "answers": [
         "a"
       ],
-      "explanation": "Перед одним исчисляемым предметом здесь нужен артикль a.",
-      "options": [
-        "a",
-        "am",
-        "are"
-      ],
-      "character": "fox_scholar",
+      "explanation": "This is a book — говорим a перед одним предметом.",
+      "character": "nox",
       "id": "a1-03-pilot1-e05",
       "phase": "Понимание",
       "wordIds": [
         "en:book"
+      ],
+      "hint": "Повтори фразу с первой карточки.",
+      "options": [
+        "a",
+        "am",
+        "are"
       ]
     },
     {
       "type": "dialogue",
-      "prompt": "Мико показывает книгу. Что ответить?",
+      "prompt": "Мико показывает свою сумку. Что ответишь на вопрос «Где ручка?»",
       "answers": [
-        "Yes, it is.",
-        "Yes."
+        "The pen is in the bag."
       ],
-      "explanation": "На Is this your book? можно ответить Yes, it is. Краткое Yes тоже естественно.",
-      "scene": "Мико: Is this your book?\nДа, это твоя книга.",
-      "audio": "Is this your book?",
-      "options": [
-        "Yes, it is.",
-        "Yes.",
-        "Goodbye!"
-      ],
+      "explanation": "The pen is in the bag — ручка в сумке.",
       "character": "miko",
       "id": "a1-03-pilot1-e06",
       "phase": "Практика",
       "wordIds": [
-        "en:book"
-      ]
+        "en:pen",
+        "en:bag"
+      ],
+      "hint": "In the bag — внутри сумки.",
+      "options": [
+        "The pen is in the bag.",
+        "My name is Miko.",
+        "Goodbye!"
+      ],
+      "scene": "Мико: This is my bag.\\nОрби: Where is the pen?\\nТы: …"
     },
     {
       "type": "correct",
-      "prompt": "Исправь: This are a bag.",
+      "prompt": "Нокс ошибся: This are a bag. Исправь.",
       "answers": [
         "This is a bag."
       ],
-      "explanation": "This указывает на один предмет, поэтому is.",
-      "character": "vespa",
+      "explanation": "В знакомой конструкции мы говорим This is a…, не This are.",
+      "character": "nox",
       "id": "a1-03-pilot1-e07",
       "phase": "Практика",
       "wordIds": [
         "en:bag"
-      ]
+      ],
+      "hint": "Вспомни This is a book и замени book на bag."
     },
     {
       "type": "choice",
-      "prompt": "Орби не видит ручку. Она лежит в сумке. Подскажи.",
+      "prompt": "Орби показывает ручку. Как он может назвать её?",
       "answers": [
-        "It is in the bag."
+        "This is a pen."
       ],
-      "explanation": "In the bag — в сумке. Отвечаем, где предмет.",
-      "scene": "Орби: Where is my pen?",
-      "options": [
-        "It is in the bag.",
-        "My name is Miko.",
-        "Welcome!"
-      ],
+      "explanation": "This is a pen — Это ручка.",
       "character": "orbi",
-      "introduction": "Полезная фраза: It is in the bag. — Она/он в сумке.",
       "id": "a1-03-pilot1-e08",
-      "phase": "Практика",
+      "phase": "Закрепление",
       "wordIds": [
-        "en:bag"
+        "en:pen"
+      ],
+      "hint": "Меняется только последнее слово: pen — ручка.",
+      "options": [
+        "This is a pen.",
+        "This is a book.",
+        "This is a bag."
       ]
     },
     {
       "type": "translate",
-      "prompt": "Это моя книга.",
+      "prompt": "Напиши: «Это моя книга».",
       "answers": [
         "This is my book.",
         "It is my book."
       ],
-      "explanation": "My заменяет артикль a: my book.",
-      "character": "aster",
+      "explanation": "This is my book — Это моя книга.",
+      "character": "pixie",
       "id": "a1-03-pilot1-e09",
       "phase": "Закрепление",
       "wordIds": [
         "en:book"
-      ]
+      ],
+      "hint": "Сначала This is, затем my и book."
     },
     {
       "type": "review",
-      "prompt": "Пикси проверяет сумку: как по-английски «ручка»?",
+      "prompt": "Без вариантов: как по-английски будет «ручка»?",
       "answers": [
         "pen"
       ],
-      "explanation": "Pen — ручка. Теперь всё готово к путешествию!",
-      "visual": "pen",
-      "character": "pixie",
+      "explanation": "Pen — ручка. Ты освоил три полезных предмета.",
+      "character": "nox",
       "id": "a1-03-pilot1-e10",
       "phase": "Закрепление",
       "wordIds": [
         "en:pen"
-      ]
+      ],
+      "hint": "Короткое английское слово из трёх букв."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "pixie",
+      "title": "Положи книгу",
+      "phrase": "This is a book.",
+      "translation": "Это книга.",
+      "explanation": "Book — книга. This is a… помогает показать один предмет: «Это…». Перед book обычно ставим a."
+    },
+    {
+      "character": "nox",
+      "title": "Найди ручку",
+      "phrase": "This is a pen.",
+      "translation": "Это ручка.",
+      "explanation": "Pen — ручка. Меняем только предмет в знакомой конструкции This is a…"
+    },
+    {
+      "character": "miko",
+      "title": "Где сумка?",
+      "phrase": "This is my bag.",
+      "translation": "Это моя сумка.",
+      "explanation": "Bag — сумка. My означает «мой, моя». Мы уже знаем my из фразы My name is…"
+    },
+    {
+      "character": "orbi",
+      "title": "Положи вещь внутрь",
+      "phrase": "The pen is in the bag.",
+      "translation": "Ручка в сумке.",
+      "explanation": "In the bag — в сумке. The указывает на уже известную нам сумку. Теперь сможем найти пропавшую ручку!"
     }
   ]
 }

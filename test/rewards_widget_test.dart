@@ -46,9 +46,7 @@ void main() {
           ..addFont(
             Future.value(
               ByteData.sublistView(
-                await File(
-                  materialIconsFontPath(),
-                ).readAsBytes(),
+                await File(materialIconsFontPath()).readAsBytes(),
               ),
             ),
           );

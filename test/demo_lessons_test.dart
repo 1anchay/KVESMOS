@@ -159,7 +159,9 @@ void main() {
       await advanceTeaching(tester);
       expect(find.text('Новый формат'), findsOneWidget);
       expect(
-        find.text('Орби встречает тебя на космической станции. Что ему ответить?'),
+        find.text(
+          'Орби встречает тебя на космической станции. Что ему ответить?',
+        ),
         findsOneWidget,
       );
       expect(app.progress.xp, 10);

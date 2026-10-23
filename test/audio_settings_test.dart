@@ -28,11 +28,7 @@ Future<void> loadPreviewFonts() async {
   final icons = FontLoader('MaterialIcons')
     ..addFont(
       Future.value(
-        ByteData.sublistView(
-          await File(
-            materialIconsFontPath(),
-          ).readAsBytes(),
-        ),
+        ByteData.sublistView(await File(materialIconsFontPath()).readAsBytes()),
       ),
     );
   await icons.load();

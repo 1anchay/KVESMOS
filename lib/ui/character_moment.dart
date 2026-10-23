@@ -20,7 +20,9 @@ class CharacterMoment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final reduce = MediaQuery.disableAnimationsOf(context);
-    final mood = talking ? 'talking' : correct == true
+    final mood = talking
+        ? 'talking'
+        : correct == true
         ? 'success'
         : correct == false
         ? 'try-again'

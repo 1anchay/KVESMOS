@@ -13,18 +13,8 @@ import 'package:orbitwords/ui/lesson_introduction.dart';
 Future<void> advanceTeaching(WidgetTester tester) async {
   for (var step = 0; step < 12; step++) {
     if (find.byType(LessonIntroduction).evaluate().isEmpty) return;
-    final next = find.text('Понятно, дальше');
-    final target =
-        next.evaluate().isNotEmpty ? next : find.text('Начать практику');
+    final target = find.byKey(const Key('teaching-next'));
     expect(target, findsOneWidget);
-    await tester.scrollUntilVisible(
-      target,
-      200,
-      scrollable: find.descendant(
-        of: find.byType(LessonIntroduction),
-        matching: find.byType(Scrollable),
-      ).first,
-    );
     await tester.pumpAndSettle();
     await tester.tap(target);
     await tester.runAsync(
@@ -34,7 +24,6 @@ Future<void> advanceTeaching(WidgetTester tester) async {
   }
   fail('Teaching introduction never completed');
 }
-
 
 void setupSqlite() {
   // Tests intentionally create isolated executors to model different devices.
@@ -55,10 +44,7 @@ LearningRepository memoryRepository({DateTime Function()? now}) =>
 /// Locate the Flutter SDK font on developer machines and GitHub Actions.
 String materialIconsFontPath() {
   final sdkRoot = Platform.environment['FLUTTER_ROOT'];
-  const fontNames = [
-    'MaterialIcons-Regular.otf',
-    'materialicons-regular.otf',
-  ];
+  const fontNames = ['MaterialIcons-Regular.otf', 'materialicons-regular.otf'];
   final roots = [
     if (sdkRoot != null && sdkRoot.isNotEmpty) sdkRoot,
     '.tools/flutter',

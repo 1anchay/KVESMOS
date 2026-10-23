@@ -55,6 +55,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   String? activePair;
   bool busy = false, finished = false, revealedAudio = false;
   bool showTeaching = false;
+  int teachingStep = 0;
   bool? result;
   List<String> options = [];
   List<int> tokenPool = [];
@@ -84,15 +85,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       );
       final saved = material.session;
       // Resolve async session state before exposing the quiz to build().
-      final shouldTeach = !saved.done &&
+      final shouldTeach =
+          !saved.done &&
           saved.position == 0 &&
           material.lesson.teachingSteps.isNotEmpty &&
           !await app.repository.hasTeachingSeen(saved.id);
       final summary = saved.done ? await _readSummary(saved.id) : null;
+      final savedTeachingStep = shouldTeach
+          ? await app.repository.teachingStep(saved.id)
+          : 0;
       if (!mounted) return;
+      // Map notices must not follow the student and cover lesson navigation.
+      ScaffoldMessenger.of(context).clearSnackBars();
       lesson = material.lesson;
       session = saved;
       showTeaching = shouldTeach;
+      teachingStep = savedTeachingStep;
       lessonResult = summary;
       prepare();
       setState(() {});
@@ -120,6 +128,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       lesson = material.lesson;
       session = material.session;
       showTeaching = material.lesson.teachingSteps.isNotEmpty;
+      teachingStep = 0;
       lessonResult = null;
       prepare();
     } catch (_) {
@@ -321,11 +330,23 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       return LessonIntroduction(
         lesson: lesson!,
         audio: audio,
+        initialStep: teachingStep,
+        onClose: () => context.go('/'),
+        onStep: (step) async {
+          await ref
+              .read(appProvider)
+              .repository
+              .saveTeachingStep(session!.id, step);
+          teachingStep = step;
+        },
         onStart: () async {
           if (busy) return;
           setState(() => busy = true);
           try {
-            await ref.read(appProvider).repository.markTeachingSeen(session!.id);
+            await ref
+                .read(appProvider)
+                .repository
+                .markTeachingSeen(session!.id);
             if (mounted) setState(() => showTeaching = false);
           } catch (_) {
             if (context.mounted) {
@@ -604,8 +625,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                   child: Text(
                                     result!
                                         ? consecutiveCorrect >= 3
-                                             ? 'Отлично! Серия $consecutiveCorrect · +10 XP'
-                                             : 'Верно! +10 XP'
+                                              ? 'Отлично! Серия $consecutiveCorrect · +10 XP'
+                                              : 'Верно! +10 XP'
                                         : 'Ошибка — разберём её вместе',
                                     style: Theme.of(
                                       context,

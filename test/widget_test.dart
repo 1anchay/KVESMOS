@@ -51,7 +51,9 @@ void main() {
     await flushDb(tester);
     await advanceTeaching(tester);
     expect(
-      find.text('Орби встречает тебя на космической станции. Что ему ответить?'),
+      find.text(
+        'Орби встречает тебя на космической станции. Что ему ответить?',
+      ),
       findsOneWidget,
     );
     await tester.scrollUntilVisible(
@@ -73,7 +75,9 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('Продолжить урок'));
     await flushDb(tester);
-    expect(find.text('Соберите предложение'), findsOneWidget);
+    final resumed = (await tester.runAsync(() => r.startLesson('a1-01')))!;
+    expect(resumed.session.position, 1);
+    expect(find.text(resumed.lesson.exercises[1].prompt), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();
     for (final label in ['Слова', 'Прогресс', 'Профиль', 'Карта']) {

@@ -85,7 +85,9 @@ void main() {
       await flushDb(tester);
       await advanceTeaching(tester);
       expect(
-        find.text('Орби встречает тебя на космической станции. Что ему ответить?'),
+        find.text(
+          'Орби встречает тебя на космической станции. Что ему ответить?',
+        ),
         findsOneWidget,
       );
       router.go('/');
@@ -232,9 +234,7 @@ void main() {
           ..addFont(
             Future.value(
               ByteData.sublistView(
-                await File(
-                  materialIconsFontPath(),
-                ).readAsBytes(),
+                await File(materialIconsFontPath()).readAsBytes(),
               ),
             ),
           );

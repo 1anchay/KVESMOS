@@ -1,0 +1,262 @@
+{
+  "id": "a1-05",
+  "title": "Груз для полёта · считаем предметы",
+  "topic": "Числа",
+  "section": 0,
+  "theme": 2,
+  "order": 4,
+  "guide": "Считаем груз: one — один, two — два, five — пять. I have… — у меня есть… После two и five обычно добавляем -s к названию предмета: two books.",
+  "vocabulary": [
+    {
+      "id": "en:one",
+      "en": "one",
+      "ru": "один"
+    },
+    {
+      "id": "en:two",
+      "en": "two",
+      "ru": "два"
+    },
+    {
+      "id": "en:five",
+      "en": "five",
+      "ru": "пять"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "На ярлыке one book. Сколько книг в коробке?",
+      "answers": [
+        "одна"
+      ],
+      "explanation": "One — один: здесь одна книга.",
+      "hint": "Book — книга, one обозначает количество.",
+      "wordIds": [
+        "en:one"
+      ],
+      "character": "reyvo",
+      "options": [
+        "одна",
+        "две",
+        "пять"
+      ],
+      "id": "a1-05-journey2-e01",
+      "phase": "Знакомство"
+    },
+    {
+      "type": "choice",
+      "prompt": "Нокс говорит five bags. Выбери верный перевод.",
+      "answers": [
+        "пять сумок"
+      ],
+      "explanation": "Five — пять; bags — сумки.",
+      "hint": "Five было в примере Нокса.",
+      "wordIds": [
+        "en:five"
+      ],
+      "character": "nox",
+      "options": [
+        "две сумки",
+        "пять сумок",
+        "одна книга"
+      ],
+      "id": "a1-05-journey2-e02",
+      "phase": "Знакомство"
+    },
+    {
+      "type": "order",
+      "prompt": "Помоги Пикси сказать: «У меня две ручки».",
+      "answers": [
+        "I have two pens"
+      ],
+      "explanation": "I have… сообщает, что у нас есть; two pens — две ручки.",
+      "hint": "После I поставь have, затем количество и предмет.",
+      "wordIds": [
+        "en:two"
+      ],
+      "character": "pixie",
+      "tokens": [
+        "I",
+        "have",
+        "two",
+        "pens"
+      ],
+      "id": "a1-05-journey2-e03",
+      "phase": "Понимание"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедини количества с названиями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "One — один, two — два, five — пять.",
+      "hint": "Сопоставь три числа из объяснений.",
+      "wordIds": [
+        "en:one",
+        "en:two",
+        "en:five"
+      ],
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:one",
+          "en": "one",
+          "ru": "один"
+        },
+        {
+          "id": "en:two",
+          "en": "two",
+          "ru": "два"
+        },
+        {
+          "id": "en:five",
+          "en": "five",
+          "ru": "пять"
+        }
+      ],
+      "id": "a1-05-journey2-e04",
+      "phase": "Понимание"
+    },
+    {
+      "type": "listen",
+      "prompt": "Рэйво передаёт число для погрузки. Что ты слышишь?",
+      "answers": [
+        "two"
+      ],
+      "explanation": "Two означает два.",
+      "hint": "Сначала прослушай; текст доступен, если звук не работает.",
+      "wordIds": [
+        "en:two"
+      ],
+      "character": "reyvo",
+      "audio": "two",
+      "options": [
+        "one",
+        "two",
+        "five"
+      ],
+      "id": "a1-05-journey2-e05",
+      "phase": "Понимание"
+    },
+    {
+      "type": "gap",
+      "prompt": "Ровно одна сумка: I have ___ bag.",
+      "answers": [
+        "one"
+      ],
+      "explanation": "One bag — одна сумка, поэтому у bag нет -s.",
+      "hint": "Один предмет: one.",
+      "wordIds": [
+        "en:one"
+      ],
+      "character": "nox",
+      "options": [
+        "one",
+        "two",
+        "five"
+      ],
+      "id": "a1-05-journey2-e06",
+      "phase": "Практика"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "У тебя две книги. Ответь Орби.",
+      "answers": [
+        "I have two books."
+      ],
+      "explanation": "How many books…? спрашивает о количестве книг, ответ — two books.",
+      "hint": "Используй I have… и two books.",
+      "wordIds": [
+        "en:two"
+      ],
+      "character": "orbi",
+      "scene": "Орби: How many books do you have?\nТы: …",
+      "options": [
+        "I have two books.",
+        "I am from Earth.",
+        "This is my friend."
+      ],
+      "id": "a1-05-journey2-e07",
+      "phase": "Практика"
+    },
+    {
+      "type": "correct",
+      "prompt": "Зиг подписал груз: I have five bag. Исправь слово bag.",
+      "answers": [
+        "I have five bags."
+      ],
+      "explanation": "Пять сумок — несколько предметов: bags с -s.",
+      "hint": "После five нужен bag во множественном числе.",
+      "wordIds": [
+        "en:five"
+      ],
+      "character": "zig_quartz",
+      "id": "a1-05-journey2-e08",
+      "phase": "Практика"
+    },
+    {
+      "type": "translate",
+      "prompt": "Расскажи о своём грузе: «У меня пять ручек».",
+      "answers": [
+        "I have five pens."
+      ],
+      "explanation": "Знакомую конструкцию можно переносить на другие вещи: five pens.",
+      "hint": "I have… + five + pens.",
+      "wordIds": [
+        "en:five"
+      ],
+      "character": "pixie",
+      "id": "a1-05-journey2-e09",
+      "phase": "Закрепление"
+    },
+    {
+      "type": "review",
+      "prompt": "Без вариантов: напиши по-английски число «два».",
+      "answers": [
+        "two"
+      ],
+      "explanation": "Two — два. Ты готов считать груз и отвечать о количестве.",
+      "hint": "Это число между one и three (три).",
+      "wordIds": [
+        "en:two"
+      ],
+      "character": "reyvo",
+      "id": "a1-05-journey2-e10",
+      "phase": "Закрепление"
+    }
+  ],
+  "objective": "Назвать количество вещей и сказать, что у тебя есть.",
+  "teachingSteps": [
+    {
+      "character": "reyvo",
+      "title": "Одна книга",
+      "phrase": "I have one book.",
+      "translation": "У меня одна книга.",
+      "explanation": "I have… — у меня есть… One — один. Book знакомо из урока о вещах."
+    },
+    {
+      "character": "pixie",
+      "title": "Две ручки",
+      "phrase": "I have two pens.",
+      "translation": "У меня две ручки.",
+      "explanation": "Two — два. Для нескольких предметов добавляем -s: pen → pens. I have two pens — у меня две ручки."
+    },
+    {
+      "character": "nox",
+      "title": "Пять сумок",
+      "phrase": "I have five bags.",
+      "translation": "У меня пять сумок.",
+      "explanation": "Five — пять. Bag → bags: несколько сумок. One bag, two bags, five bags."
+    },
+    {
+      "character": "orbi",
+      "title": "Проверь груз",
+      "phrase": "How many books do you have?",
+      "translation": "Сколько у тебя книг?",
+      "explanation": "How many…? — сколько…? Вопрос о книгах. Ответ: I have two books. — У меня две книги. Слово books помогает понять, что именно считают."
+    }
+  ],
+  "materialVersion": 2
+}

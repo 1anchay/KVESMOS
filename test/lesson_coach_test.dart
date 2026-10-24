@@ -42,7 +42,7 @@ void main() {
   test(
     'all guided A1 lessons introduce concepts before independent recall',
     () {
-      for (final id in ['a1-01', 'a1-02', 'a1-03']) {
+      for (final id in ['a1-01', 'a1-02', 'a1-03', 'a1-04', 'a1-05', 'a1-06']) {
         final lesson = Lesson.fromJson(
           jsonDecode(File('assets/courses/demo/$id.json').readAsStringSync())
               as Map<String, dynamic>,
@@ -53,6 +53,20 @@ void main() {
           reason: id,
         );
         expect(lesson.exercises, hasLength(10), reason: id);
+        expect(lesson.objective, isNotEmpty, reason: id);
+        final repeatedAnswers = <String, int>{};
+        for (final e in lesson.exercises) {
+          repeatedAnswers.update(
+            normalizeAnswer(e.answers.first),
+            (v) => v + 1,
+            ifAbsent: () => 1,
+          );
+        }
+        expect(
+          repeatedAnswers.values.every((n) => n <= 3),
+          true,
+          reason: '$id must vary its communicative task',
+        );
         for (final step in lesson.teachingSteps) {
           expect(step.phrase.trim(), isNotEmpty);
           expect(step.translation.trim(), isNotEmpty);

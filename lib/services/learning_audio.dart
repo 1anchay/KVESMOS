@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'recorded_speech.dart';
 
 typedef ReadAudioSetting = Future<String?> Function(String);
 typedef WriteAudioSetting = Future<void> Function(String, String);
@@ -102,19 +104,41 @@ abstract class TtsBackend {
   Future<void> stop();
 }
 
-class SystemTtsBackend implements TtsBackend {
+abstract interface class TtsPlaybackEvents {
+  ValueListenable<bool> get playing;
+}
+
+abstract interface class TtsFailureEvents {
+  ValueListenable<String?> get failure;
+}
+
+class SystemTtsBackend
+    implements TtsBackend, TtsPlaybackEvents, TtsFailureEvents {
   final FlutterTts tts = FlutterTts();
+  @override
+  final ValueNotifier<bool> playing = ValueNotifier<bool>(false);
+  @override
+  final ValueNotifier<String?> failure = ValueNotifier<String?>(null);
   bool _active = false;
   SystemTtsBackend() {
     void release() {
       _active = false;
+      playing.value = false;
       SoundEffectsService.channel
           .invokeMethod<void>('speechFinished')
           .catchError((_) {});
     }
 
     tts.setCompletionHandler(release);
-    tts.setErrorHandler((_) => release());
+    tts.setStartHandler(() {
+      if (_active) playing.value = true;
+    });
+    tts.setCancelHandler(release);
+    tts.setErrorHandler((_) {
+      failure.value =
+          'Системный голос прервал озвучку. Повторите попытку или прочитайте фразу.';
+      release();
+    });
   }
   @override
   Future<List<DeviceVoice>> voices() async {
@@ -149,7 +173,7 @@ class SystemTtsBackend implements TtsBackend {
   ) async {
     if (Platform.isIOS) {
       await tts.setSharedInstance(true);
-      await tts.setIosAudioCategory(IosTextToSpeechAudioCategory.ambient, []);
+      await tts.setIosAudioCategory(IosTextToSpeechAudioCategory.playback, []);
     }
     await tts.setLanguage(voice.locale);
     await tts.setVoice({'name': voice.name, 'locale': voice.locale});
@@ -161,6 +185,7 @@ class SystemTtsBackend implements TtsBackend {
 
   @override
   Future<bool> speak(String text) async {
+    failure.value = null;
     _active = true;
     return await tts.speak(text) == 1;
   }
@@ -169,6 +194,7 @@ class SystemTtsBackend implements TtsBackend {
   Future<void> stop() async {
     if (!_active) return;
     _active = false;
+    playing.value = false;
     await tts.stop();
   }
 }
@@ -351,12 +377,28 @@ class SoundEffectsService {
 }
 
 /// One owner for TTS and effects. New requests cancel old playback, not queue it.
+enum SpeechSource { recording, system }
+
+class SpeechPlayback {
+  final String character;
+  final SpeechSource source;
+  final bool playing;
+  const SpeechPlayback(this.character, this.source, this.playing);
+}
+
 class LearningAudio {
   static const preferencesKey = 'kvesmos.audio.preferences.v1';
   final ReadAudioSetting read;
   final WriteAudioSetting write;
   late final CharacterVoiceService voices;
   final SoundEffectsService effects;
+  final RecordedSpeechBackend recordedPlayer;
+  RecordedSpeechCatalog recordings;
+  final playback = ValueNotifier<SpeechPlayback?>(null);
+  SpeechSource? lastSource;
+  String? lastCharacter, lastText;
+  String? _speakingCharacter;
+  int? _recordingRequest;
   AudioPreferences preferences = const AudioPreferences();
   String? lastProblem;
   int _generation = 0;
@@ -365,14 +407,59 @@ class LearningAudio {
     this.write, {
     TtsBackend? backend,
     SoundEffectsService? effects,
-  }) : effects = effects ?? SoundEffectsService() {
+    RecordedSpeechBackend? recordedPlayer,
+    this.recordings = const RecordedSpeechCatalog(),
+  }) : effects = effects ?? SoundEffectsService(),
+       recordedPlayer = recordedPlayer ?? NativeRecordedSpeech() {
     voices = CharacterVoiceService(read, write, backend: backend);
+    final events = voices.backend;
+    if (events is TtsPlaybackEvents) {
+      final playingEvents = (events as TtsPlaybackEvents).playing;
+      playingEvents.addListener(() {
+        final character = _speakingCharacter;
+        if (character != null && lastSource == SpeechSource.system) {
+          playback.value = SpeechPlayback(
+            character,
+            SpeechSource.system,
+            playingEvents.value,
+          );
+        }
+      });
+    }
+    if (events is TtsFailureEvents) {
+      final failures = (events as TtsFailureEvents).failure;
+      failures.addListener(() {
+        if (_speakingCharacter != null &&
+            lastSource == SpeechSource.system &&
+            failures.value != null) {
+          lastProblem = failures.value;
+          playback.value = null;
+        }
+      });
+    }
   }
   Future<void> initialize() async {
     voices.scanned = false;
     preferences = AudioPreferences.decode(await read(preferencesKey));
+    try {
+      if (recordings.recordings.isEmpty) {
+        recordings = await RecordedSpeechCatalog.load();
+      }
+    } catch (_) {
+      /* TTS fallback remains available. */
+    }
     SoundEffectsService.channel.setMethodCallHandler((call) async {
       if (call.method == 'interrupted') await stop();
+      if ((call.method == 'recordingFinished' ||
+              call.method == 'recordingFailed') &&
+          call.arguments == _recordingRequest) {
+        _recordingRequest = null;
+        playback.value = null;
+        if (call.method == 'recordingFailed') {
+          lastProblem =
+              'Запись прервалась. Повторите прослушивание или прочитайте текст.';
+        }
+      }
     });
     await effects.prepare();
   }
@@ -390,8 +477,15 @@ class LearningAudio {
     bool slow = false,
   }) async {
     lastProblem = null;
+    lastSource = null;
+    lastCharacter = character;
+    lastText = text;
+    _speakingCharacter = null;
+    _recordingRequest = null;
+    playback.value = null;
     final ticket = ++_generation;
     await voices.stop();
+    await recordedPlayer.stop();
     await effects.stop();
     if (ticket != _generation) return false;
     if (!preferences.speech || preferences.speechVolume == 0) {
@@ -412,6 +506,46 @@ class LearningAudio {
       return false;
     }
     if (ticket != _generation) return false;
+    final recording = recordings.find(character, locale, text);
+    if (recording != null) {
+      try {
+        _recordingRequest = ticket;
+        final started = await recordedPlayer.play(
+          recording,
+          slow: slow,
+          volume: preferences.speechVolume,
+          request: ticket,
+        );
+        if (ticket != _generation) return false;
+        if (started) {
+          lastSource = SpeechSource.recording;
+          playback.value = SpeechPlayback(
+            character,
+            SpeechSource.recording,
+            _recordingRequest == ticket,
+          );
+          return true;
+        }
+      } catch (_) {
+        /* A broken/missing clip falls back to an installed voice. */
+      }
+      if (ticket != _generation) return false;
+      _recordingRequest = null;
+      try {
+        if (await SoundEffectsService.channel.invokeMethod<bool>(
+              'allowSpeech',
+            ) !=
+            true) {
+          return false;
+        }
+      } catch (_) {
+        return false;
+      }
+    }
+    if (ticket != _generation) return false;
+    _speakingCharacter = character;
+    lastSource = SpeechSource.system;
+    playback.value = SpeechPlayback(character, SpeechSource.system, false);
     final ok = await voices.speak(
       text,
       character: character,
@@ -420,17 +554,22 @@ class LearningAudio {
       volume: preferences.speechVolume,
     );
     if (!ok && ticket == _generation) {
+      playback.value = null;
       lastProblem = voices.voiceFor(character, locale) == null
           ? 'Нет готового ${locale.startsWith('en') ? 'английского' : 'русского'} голоса. Установите офлайн-пакет в настройках синтеза речи Android и повторите прослушивание.'
           : 'Синтез речи не запустил фразу. Проверьте голос в настройках синтеза речи устройства.';
     }
-    return ok;
+    return ok && ticket == _generation;
   }
 
   Future<bool> play(SoundEffect effect) async {
     if (!preferences.effects || preferences.effectsVolume == 0) return false;
     final ticket = ++_generation;
+    _speakingCharacter = null;
+    _recordingRequest = null;
+    playback.value = null;
     await voices.stop();
+    await recordedPlayer.stop();
     if (ticket != _generation ||
         !preferences.effects ||
         preferences.effectsVolume == 0) {
@@ -441,7 +580,11 @@ class LearningAudio {
 
   Future<void> stop() async {
     _generation++;
+    _speakingCharacter = null;
+    _recordingRequest = null;
+    playback.value = null;
     await voices.stop();
+    await recordedPlayer.stop();
     await effects.stop();
   }
 }

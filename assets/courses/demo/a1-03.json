@@ -250,7 +250,7 @@
       "title": "Где сумка?",
       "phrase": "This is my bag.",
       "translation": "Это моя сумка.",
-      "explanation": "Bag — сумка. My означает «мой, моя». Мы уже знаем my из фразы My name is…"
+      "explanation": "Bag — сумка. My означает «мой, моя». Мы уже знаем my из фразы My name is… Перед my не ставим a: my bag, my book."
     },
     {
       "character": "orbi",
@@ -259,5 +259,7 @@
       "translation": "Ручка в сумке.",
       "explanation": "In the bag — в сумке. The указывает на уже известную нам сумку. Теперь сможем найти пропавшую ручку!"
     }
-  ]
+  ],
+  "objective": "Назвать книгу, ручку и сумку и объяснить, где лежит вещь.",
+  "materialVersion": 2
 }

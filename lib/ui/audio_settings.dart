@@ -41,6 +41,11 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const SectionTitle('Звук и голоса'),
+        Text(
+          audio.recordings.recordings.isEmpty
+              ? 'Студийные записи персонажей пока не добавлены. Доступна резервная озвучка голосами устройства.'
+              : 'Локальных реплик: ${audio.recordings.recordings.length}. Для остальных фраз используется системный голос.',
+        ),
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           title: const Text('Озвучка'),
@@ -122,6 +127,9 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
         ),
         if (message != null) Text(message!),
         if (audio.voices.scanned) ...[
+          Text(
+            'Разных голосов устройства: ${audio.voices.distinctVoiceCount(locale)}. Персонажи могут использовать один и тот же голос.',
+          ),
           const Text(
             'Голоса с обязательным интернетом исключены. Установите английский и русский офлайн-пакеты в системных настройках TTS. Уникальность и пол голоса зависят от движка; параметры не имитируют актёров.',
           ),

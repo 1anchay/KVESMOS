@@ -52,7 +52,7 @@ class LearningRepository {
       }
     }
     await setSetting('installed', 'true');
-    for (final id in ['a1-01', 'a1-02', 'a1-03']) {
+    for (final id in ['a1-01', 'a1-02', 'a1-03', 'a1-04', 'a1-05', 'a1-06']) {
       updatedMaterials[id] = await loadAsset('assets/courses/demo/$id.json');
     }
   }
@@ -263,6 +263,54 @@ class LearningRepository {
       (await db.select(db.events).get())
           .map((e) => LearningEvent.fromJson(jsonDecode(e.payload)))
           .toList();
+
+  /// Recover explanations from the material actually used in a failed session.
+  /// This is a read-only view of existing events and pinned lesson snapshots.
+  Future<Map<String, Exercise>> mistakeExamples() async {
+    final result = <String, Exercise>{};
+    final events =
+        (await allEvents())
+            .where(
+              (e) =>
+                  e.kind == 'answer' &&
+                  e.data['correct'] == false &&
+                  e.data['lesson'] is String,
+            )
+            .toList()
+          ..sort((a, b) => b.occurredAt.compareTo(a.occurredAt));
+    final cache = <String, Lesson>{};
+    for (final event in events) {
+      final words = List<String>.from(
+        event.data['words'] ?? [],
+      ).where((w) => !result.containsKey(w)).toList();
+      if (words.isEmpty) continue;
+      final sessionId = '${event.data['session']}';
+      try {
+        var material = cache[sessionId];
+        if (material == null) {
+          final pinned = await setting(
+            'kvesmos.session.material.v1:$sessionId',
+          );
+          material = pinned == null
+              ? await lesson(event.data['lesson'])
+              : Lesson.fromJson(jsonDecode(pinned));
+          cache[sessionId] = material;
+        }
+        final exercise = material.exercises
+            .where((e) => e.id == event.data['exercise'])
+            .firstOrNull;
+        if (exercise != null) {
+          for (final word in words) {
+            result[word] = exercise;
+          }
+        }
+      } catch (_) {
+        /* Removed offline packs do not block review of known words. */
+      }
+    }
+    return result;
+  }
+
   Future<ProgressSnapshot> progress() async =>
       ProgressSnapshot.fromEvents(await allEvents());
   Future<List<LearningEvent>> pending() async =>

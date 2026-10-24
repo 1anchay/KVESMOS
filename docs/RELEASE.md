@@ -1,6 +1,6 @@
 # Сборки и выпуск
 
-Публикация и платные услуги не выполнялись. Package ID `dev.orbitwords.orbitwords` замените на свой до регистрации приложения. Название OrbitWords и права на бренд требуют проверки. Учебный курс — независимой редактуры.
+Публикация и платные услуги не выполнялись. **Сохраняйте applicationId `dev.orbitwords.orbitwords` и существующий iOS Bundle ID.** Смена идентификатора не является способом обновления или исправления конфликта подписи. Учебный курс требует независимой редактуры.
 
 ## Android
 
@@ -9,10 +9,11 @@ flutter pub get
 flutter analyze
 flutter test
 flutter build apk --debug
-adb install -r build/app/outputs/flutter-apk/app-debug.apk
 ```
 
-Debug APK использует тестовую подпись. Для production создайте собственный upload keystore через keytool с интерактивным вводом пароля, сохраните резервную копию вне проекта. Создайте `android/key.properties`:
+Перед установкой выполните сравнение сертификатов и резервное копирование по инструкции [SAFE-UPDATE.md](SAFE-UPDATE.md). Debug APK использует тестовую подпись. Android Preview восстанавливает постоянный ключ из GitHub Secret; без него публикация артефакта останавливается. Ключ не сохраняется в репозитории или артефактах.
+
+Для отдельного production-канала подготовьте signing strategy до первой публикации. Не заменяйте ключ уже установленного приложения. Сохраните приватную резервную копию; создайте `android/key.properties`:
 
 ```properties
 storeFile=C:/PRIVATE/orbitwords-upload.jks
@@ -37,7 +38,7 @@ flutter build appbundle --release
 1. Установите на Mac Flutter 3.47.7, совместимый Xcode и зависимости по `flutter doctor -v`.
 2. Перенесите проект без `.tools`, `build`, `.dart_tool`. Выполните `flutter pub get` и `dart run build_runner build`.
 3. Запустите `flutter build ios --simulator`, затем `flutter run` на симуляторе.
-4. Откройте `ios/Runner.xcworkspace`, задайте Bundle ID, Team, signing/provisioning. Проверьте Keychain, privacy manifests SDK и разрешения.
+4. Откройте `ios/Runner.xcworkspace`, сохраните существующий Bundle ID, настройте Team и signing/provisioning. Проверьте Keychain, privacy manifests SDK и разрешения.
 5. Пройдите QA на настоящем iPhone, включая офлайн, перезапуск, TTS, отказ микрофона, recovery и удаление аккаунта.
 6. `flutter build ipa --release` создаст архив в `build/ios/archive` и IPA в `build/ios/ipa` при настроенной подписи.
 7. TestFlight/App Store выполняет владелец после приёмки. Apple Developer account не оформлялся.

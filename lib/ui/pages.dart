@@ -6,6 +6,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../core/controller.dart';
 import '../domain/course.dart';
 import '../domain/progress.dart';
+import '../domain/learning_recap.dart';
 import '../domain/missions.dart';
 import '../services/device.dart';
 import 'design.dart';
@@ -383,7 +384,8 @@ class _WordsPageState extends ConsumerState<WordsPage> {
 }
 
 class ReviewPage extends ConsumerStatefulWidget {
-  const ReviewPage({super.key});
+  final bool mistakesOnly;
+  const ReviewPage({super.key, this.mistakesOnly = false});
   @override
   ConsumerState<ReviewPage> createState() => _ReviewPageState();
 }
@@ -394,6 +396,22 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
   int index = 0;
   bool? correct;
   bool busy = false;
+  Map<String, Exercise> examples = {};
+  @override
+  void initState() {
+    super.initState();
+    unawaited(loadExamples());
+  }
+
+  Future<void> loadExamples() async {
+    try {
+      final loaded = await ref.read(appProvider).repository.mistakeExamples();
+      if (mounted) setState(() => examples = loaded);
+    } catch (_) {
+      /* Word review remains available if an old example cannot load. */
+    }
+  }
+
   @override
   void dispose() {
     input.dispose();
@@ -403,17 +421,12 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
   @override
   Widget build(BuildContext context) {
     final app = ref.watch(appProvider);
-    queue ??=
-        app.repository.vocabulary.values.where((w) {
-          final p = app.progress.words[w.id];
-          return p != null &&
-              p.next != null &&
-              !p.next!.isAfter(DateTime.now());
-        }).toList()..sort(
-          (a, b) => app.progress.words[b.id]!.errors.compareTo(
-            app.progress.words[a.id]!.errors,
-          ),
-        );
+    queue ??= reviewWords(
+      app.repository.vocabulary.values,
+      app.progress,
+      DateTime.now(),
+      mistakesOnly: widget.mistakesOnly,
+    );
     final finished = index >= queue!.length;
     return pageBody([
       const SectionTitle(
@@ -421,6 +434,10 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
         subtitle:
             'Сначала слова, которым пора вернуться. Ошибки помогают подобрать следующий интервал.',
       ),
+      if (widget.mistakesOnly)
+        const Text(
+          'Добровольная тренировка ошибок. Плановые интервалы повторения сохраняются.',
+        ),
       if (finished) ...[
         CharacterReaction(
           cue: CharacterCue('reyvo', 'Рэйво', [
@@ -442,18 +459,20 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
           onPressed: () => context.go('/'),
           child: const Text('К урокам'),
         ),
-        if (app.progress.words.isNotEmpty)
+        if (reviewWords(
+          app.repository.vocabulary.values,
+          app.progress,
+          DateTime.now(),
+          mistakesOnly: true,
+        ).isNotEmpty)
           TextButton(
             onPressed: () => setState(() {
-              queue =
-                  app.repository.vocabulary.values
-                      .where((w) => app.progress.words.containsKey(w.id))
-                      .toList()
-                    ..sort(
-                      (a, b) => app.progress.words[b.id]!.errors.compareTo(
-                        app.progress.words[a.id]!.errors,
-                      ),
-                    );
+              queue = reviewWords(
+                app.repository.vocabulary.values,
+                app.progress,
+                DateTime.now(),
+                mistakesOnly: true,
+              );
               index = 0;
               correct = null;
               input.clear();
@@ -485,6 +504,21 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
                 ? 'Верно! +10 XP'
                 : '${queue![index].en} — ${queue![index].ru}. Слово вернётся завтра.',
           ),
+        if (correct == false)
+          if (examples[queue![index].id] case final example?)
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Вспомни ситуацию из урока'),
+                    Text(example.prompt),
+                    Text(example.explanation),
+                  ],
+                ),
+              ),
+            ),
         FilledButton(
           onPressed: busy
               ? null

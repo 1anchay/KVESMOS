@@ -8,6 +8,7 @@ import '../core/controller.dart';
 import '../data/database.dart';
 import '../domain/course.dart';
 import '../domain/progress.dart';
+import '../domain/learning_recap.dart';
 import '../services/device.dart';
 import 'design.dart';
 import 'lesson_effects.dart';
@@ -15,6 +16,7 @@ import 'lesson_coach.dart';
 import 'lesson_introduction.dart';
 import 'dialogue_scene.dart';
 import 'character_moment.dart';
+import 'speech_source.dart';
 import 'character_reactions.dart';
 import 'rewards_pages.dart';
 import '../services/learning_audio.dart';
@@ -50,6 +52,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   late final LearningAudio audio;
   bool unlockedAchievement = false;
   int consecutiveCorrect = 0;
+  int bestCombo = 0;
   List<int> order = [];
   Map<String, String> pairs = {};
   String? activePair;
@@ -91,6 +94,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           material.lesson.teachingSteps.isNotEmpty &&
           !await app.repository.hasTeachingSeen(saved.id);
       final summary = saved.done ? await _readSummary(saved.id) : null;
+      final recap = LearningRecap.fromEvents(
+        await app.repository.allEvents(),
+        saved.id,
+      );
       final savedTeachingStep = shouldTeach
           ? await app.repository.teachingStep(saved.id)
           : 0;
@@ -102,6 +109,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       showTeaching = shouldTeach;
       teachingStep = savedTeachingStep;
       lessonResult = summary;
+      consecutiveCorrect = recap.streak;
+      bestCombo = recap.best;
       prepare();
       setState(() {});
     } catch (e) {
@@ -129,6 +138,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       session = material.session;
       showTeaching = material.lesson.teachingSteps.isNotEmpty;
       teachingStep = 0;
+      consecutiveCorrect = 0;
+      bestCombo = 0;
       lessonResult = null;
       prepare();
     } catch (_) {
@@ -250,6 +261,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         );
         result = correct;
         consecutiveCorrect = correct ? consecutiveCorrect + 1 : 0;
+        bestCombo = max(bestCombo, consecutiveCorrect);
         if (mounted) {
           unawaited(
             audio.play(correct ? SoundEffect.correct : SoundEffect.incorrect),
@@ -390,7 +402,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           questionId: e.id,
           child: pageBody([
             if (e.phase.isEmpty &&
-                const ['a1-01', 'a1-02', 'a1-03'].contains(widget.lessonId))
+                ref
+                    .read(appProvider)
+                    .repository
+                    .updatedMaterials
+                    .containsKey(widget.lessonId))
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(16),
@@ -437,9 +453,14 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             const SizedBox(height: 24),
             Row(
               children: [
-                CharacterMoment(
-                  characterId: e.character,
-                  correct: result,
+                SpeakingCharacter(
+                  audio: audio,
+                  character: e.character,
+                  state: result == true
+                      ? CharacterState.correct
+                      : result == false
+                      ? CharacterState.support
+                      : CharacterState.thinking,
                   size: 66,
                 ),
                 const SizedBox(width: 12),
@@ -502,7 +523,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                           color: turquoise.withValues(alpha: .12),
                           borderRadius: BorderRadius.circular(18),
                         ),
-                        child: DialogueScene(scene: e.scene!),
+                        child: DialogueScene(
+                          scene: e.scene!,
+                          audio: audio,
+                          reply: result == true ? answer : null,
+                        ),
                       ),
                       const SizedBox(height: 16),
                     ],
@@ -514,14 +539,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         e.type == ExerciseType.listen ||
                         e.type == ExerciseType.speak) ...[
                       const SizedBox(height: 20),
+                      SpeechSourceLabel(
+                        audio: audio,
+                        character: e.character,
+                        text: e.audio ?? e.prompt,
+                      ),
                       Text(
-                        !audio.voices.scanned
-                            ? 'Озвучка: ${CharacterVoiceProfile.forId(e.character).name}'
-                            : audio.voices.distinctVoiceCount('en-US') == 0
-                            ? 'Английский голос не установлен — можно читать текст.'
-                            : audio.voices.distinctVoiceCount('en-US') == 1
-                            ? 'Один системный голос для всех героев на этом устройстве.'
-                            : 'Озвучка: ${CharacterVoiceProfile.forId(e.character).name}',
+                        'Герой: ${CharacterVoiceProfile.forId(e.character).name}',
                       ),
                       OutlinedButton.icon(
                         style: OutlinedButton.styleFrom(
@@ -920,6 +944,14 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       ),
       body: SafeArea(
         child: pageBody([
+          Center(
+            child: SpeakingCharacter(
+              audio: audio,
+              character: 'orbi',
+              state: CharacterState.celebration,
+              size: 140,
+            ),
+          ),
           if (app.audio.preferences.reactions)
             CharacterReaction(
               cue: CharacterCue.completed,
@@ -944,6 +976,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             subtitle:
                 'Верных ответов: ${summary.correct}. Ошибок: ${summary.errors}. Прогресс уже сохранён на устройстве.',
           ),
+          if (lesson!.objective != null) ...[
+            const SizedBox(height: 16),
+            Text(
+              'Теперь ты умеешь: ${lesson!.objective}',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+          ],
           const SizedBox(height: 16),
           Metric(
             value: attempts == 0
@@ -957,6 +996,33 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             'Всего ${app.progress.xp} XP · уровень ${app.progress.level}',
             textAlign: TextAlign.center,
           ),
+          if (bestCombo > 1)
+            Padding(
+              padding: const EdgeInsets.only(top: 12),
+              child: Text(
+                'Лучшая серия: $bestCombo ответов подряд',
+                textAlign: TextAlign.center,
+              ),
+            ),
+          if (summary.words.values.any((word) => word.errors > 0)) ...[
+            const SizedBox(height: 20),
+            Text(
+              'Вернёмся к сложным словам',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            for (final word in summary.words.entries.where(
+              (e) => e.value.errors > 0,
+            ))
+              if (app.repository.vocabulary[word.key] case final vocabulary?)
+                Text(
+                  '${vocabulary.en} — ${vocabulary.ru} · плановое повторение ${dayKey((app.progress.words[word.key]?.next ?? DateTime.now()).toLocal())}',
+                ),
+            TextButton.icon(
+              onPressed: () => context.go('/review?mistakes=1'),
+              icon: const Icon(Icons.history_edu),
+              label: const Text('Разобрать ошибки сейчас'),
+            ),
+          ],
           const SizedBox(height: 24),
           if (app.inventory.unopened > 0) ...[
             const RewardShortcut(),

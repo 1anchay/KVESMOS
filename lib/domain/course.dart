@@ -89,6 +89,7 @@ class Exercise {
 
 class Lesson {
   final String id, title, topic, guide;
+  final String? objective;
   final int order;
   final List<Exercise> exercises;
   final List<Vocabulary> vocabulary;
@@ -102,12 +103,14 @@ class Lesson {
     required this.exercises,
     required this.vocabulary,
     this.teachingSteps = const [],
+    this.objective,
   });
   factory Lesson.fromJson(Map<String, dynamic> j) => Lesson(
     id: j['id'],
     title: j['title'],
     topic: j['topic'],
     guide: j['guide'],
+    objective: j['objective'],
     order: j['order'],
     exercises: (j['exercises'] as List)
         .map((e) => Exercise.fromJson(e))

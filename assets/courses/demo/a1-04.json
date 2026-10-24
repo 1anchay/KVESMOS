@@ -1,0 +1,262 @@
+{
+  "id": "a1-04",
+  "title": "Дом на орбите · здесь и там",
+  "topic": "Простые слова",
+  "section": 0,
+  "theme": 1,
+  "order": 3,
+  "guide": "После This is a book учимся показывать предметы вокруг: this — этот, рядом; that — тот, дальше. House — дом, door — дверь, window — окно. My — мой, your — твой.",
+  "vocabulary": [
+    {
+      "id": "en:house",
+      "en": "house",
+      "ru": "дом"
+    },
+    {
+      "id": "en:door",
+      "en": "door",
+      "ru": "дверь"
+    },
+    {
+      "id": "en:window",
+      "en": "window",
+      "ru": "окно"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Астэр показывает здание вдали: house. Что он показывает?",
+      "answers": [
+        "дом"
+      ],
+      "explanation": "House — дом, door — дверь, window — окно.",
+      "hint": "Вспомни первый пример про дом.",
+      "wordIds": [
+        "en:house"
+      ],
+      "character": "aster",
+      "options": [
+        "дом",
+        "дверь",
+        "окно"
+      ],
+      "id": "a1-04-journey2-e01",
+      "phase": "Знакомство"
+    },
+    {
+      "type": "choice",
+      "prompt": "Дверь прямо перед Мико. Как он её покажет?",
+      "answers": [
+        "This is a door."
+      ],
+      "explanation": "This подходит для предмета рядом. That указывает вдаль.",
+      "hint": "Дверь рядом — начни с this.",
+      "wordIds": [
+        "en:door"
+      ],
+      "character": "miko",
+      "options": [
+        "This is a door.",
+        "That is a door.",
+        "This is a window."
+      ],
+      "id": "a1-04-journey2-e02",
+      "phase": "Знакомство"
+    },
+    {
+      "type": "order",
+      "prompt": "Покажи окно вдали: «То — окно».",
+      "answers": [
+        "That is a window"
+      ],
+      "explanation": "That is a window — показываем одно окно вдали.",
+      "hint": "Порядок: указание → is → a → предмет.",
+      "wordIds": [
+        "en:window"
+      ],
+      "character": "pixie",
+      "tokens": [
+        "That",
+        "is",
+        "a",
+        "window"
+      ],
+      "id": "a1-04-journey2-e03",
+      "phase": "Понимание"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Сверь таблички у дома.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Дом — house; дверь — door; окно — window.",
+      "hint": "У каждого предмета своя табличка.",
+      "wordIds": [
+        "en:house",
+        "en:door",
+        "en:window"
+      ],
+      "character": "aster",
+      "pairs": [
+        {
+          "id": "en:house",
+          "en": "house",
+          "ru": "дом"
+        },
+        {
+          "id": "en:door",
+          "en": "door",
+          "ru": "дверь"
+        },
+        {
+          "id": "en:window",
+          "en": "window",
+          "ru": "окно"
+        }
+      ],
+      "id": "a1-04-journey2-e04",
+      "phase": "Понимание"
+    },
+    {
+      "type": "listen",
+      "prompt": "Орби называет предмет. Найди услышанное.",
+      "answers": [
+        "door"
+      ],
+      "explanation": "Ты услышал door — дверь.",
+      "hint": "Переслушай или открой текст сигнала.",
+      "wordIds": [
+        "en:door"
+      ],
+      "character": "orbi",
+      "audio": "door",
+      "options": [
+        "house",
+        "window",
+        "door"
+      ],
+      "id": "a1-04-journey2-e05",
+      "phase": "Понимание"
+    },
+    {
+      "type": "gap",
+      "prompt": "Пикси показывает на свой дом: That is ___ house.",
+      "answers": [
+        "my"
+      ],
+      "explanation": "My означает «мой»: Пикси говорит о своём доме.",
+      "hint": "Твой — your, мой — my.",
+      "wordIds": [
+        "en:house"
+      ],
+      "character": "pixie",
+      "options": [
+        "my",
+        "a",
+        "is"
+      ],
+      "id": "a1-04-journey2-e06",
+      "phase": "Практика"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Астэр спрашивает: «То — твой дом?» Подтверди.",
+      "answers": [
+        "Yes, that is my house."
+      ],
+      "explanation": "Вопрос содержит your, ответ о себе — my.",
+      "hint": "Начни с Yes, затем используй образец про свой дом.",
+      "wordIds": [
+        "en:house"
+      ],
+      "character": "aster",
+      "scene": "Астэр: Is that your house?\nТы: …",
+      "options": [
+        "Yes, that is my house.",
+        "This is a pen.",
+        "My name is Miko."
+      ],
+      "id": "a1-04-journey2-e07",
+      "phase": "Практика"
+    },
+    {
+      "type": "correct",
+      "prompt": "На табличке Зига: That are a window. Исправь одно слово.",
+      "answers": [
+        "That is a window."
+      ],
+      "explanation": "Об одном окне говорим is, а не are.",
+      "hint": "После that об одном предмете ставим is.",
+      "wordIds": [
+        "en:window"
+      ],
+      "character": "zig_quartz",
+      "id": "a1-04-journey2-e08",
+      "phase": "Практика"
+    },
+    {
+      "type": "translate",
+      "prompt": "Ты у входа. Напиши: «Это моя дверь».",
+      "answers": [
+        "This is my door."
+      ],
+      "explanation": "This is my door. Перед my не нужен a.",
+      "hint": "Возьми This is… и добавь my door.",
+      "wordIds": [
+        "en:door"
+      ],
+      "character": "miko",
+      "id": "a1-04-journey2-e09",
+      "phase": "Закрепление"
+    },
+    {
+      "type": "review",
+      "prompt": "Без вариантов: как назвать окно по-английски?",
+      "answers": [
+        "window"
+      ],
+      "explanation": "Window — окно. Теперь ты можешь показывать предметы рядом и вдали.",
+      "hint": "Вспомни предмет, через который смотрела Пикси.",
+      "wordIds": [
+        "en:window"
+      ],
+      "character": "pixie",
+      "id": "a1-04-journey2-e10",
+      "phase": "Закрепление"
+    }
+  ],
+  "objective": "Показать дом, дверь и окно рядом или вдали.",
+  "teachingSteps": [
+    {
+      "character": "aster",
+      "title": "Найди дом",
+      "phrase": "That is my house.",
+      "translation": "То — мой дом.",
+      "explanation": "House — дом. This указывает на предмет рядом, that — на предмет дальше. После this и that ставим is, если говорим об одном предмете."
+    },
+    {
+      "character": "miko",
+      "title": "У самого входа",
+      "phrase": "This is a door.",
+      "translation": "Это дверь.",
+      "explanation": "Door — дверь. This is a… уже знакомо из урока о вещах. Сейчас дверь рядом с нами."
+    },
+    {
+      "character": "pixie",
+      "title": "Посмотри вдаль",
+      "phrase": "That is a window.",
+      "translation": "То — окно.",
+      "explanation": "Window — окно. Объект вдали: that. Перед window ставим a, если впервые называем одно окно."
+    },
+    {
+      "character": "orbi",
+      "title": "Спроси друга",
+      "phrase": "Is that your house?",
+      "translation": "То — твой дом?",
+      "explanation": "Your — твой. В вопросе is ставим перед that. Yes, that is my house. — Да, то мой дом. My — мой, your — твой."
+    }
+  ],
+  "materialVersion": 2
+}

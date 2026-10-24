@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../domain/course.dart';
 import 'character_moment.dart';
 import '../services/learning_audio.dart';
+import 'speech_source.dart';
 
 /// A short teaching sequence, shown before the first exercise of a lesson.
 class LessonIntroduction extends StatefulWidget {
@@ -125,15 +126,28 @@ class _LessonIntroductionState extends State<LessonIntroduction> {
                         minHeight: 8,
                       ),
                       const SizedBox(height: 16),
+                      if (index == 0 && widget.lesson.objective != null) ...[
+                        Text(
+                          'Твоя миссия: ${widget.lesson.objective}',
+                          style: theme.textTheme.titleMedium,
+                        ),
+                        const SizedBox(height: 12),
+                      ],
                       Text(
                         'Шаг ${index + 1} из ${widget.lesson.teachingSteps.length}',
                         style: theme.textTheme.labelLarge,
                       ),
                       const SizedBox(height: 24),
                       Center(
-                        child: CharacterMoment(
-                          characterId: step.character,
-                          talking: talking,
+                        child: SpeakingCharacter(
+                          key: ValueKey(index),
+                          audio: widget.audio,
+                          character: step.character,
+                          state: index == 0
+                              ? CharacterState.greeting
+                              : last && widget.lesson.id == 'a1-01'
+                              ? CharacterState.goodbye
+                              : CharacterState.thinking,
                           size: 120,
                         ),
                       ),
@@ -174,6 +188,12 @@ class _LessonIntroductionState extends State<LessonIntroduction> {
                                 ],
                               ),
                               const Divider(height: 30),
+                              SpeechSourceLabel(
+                                audio: widget.audio,
+                                character: step.character,
+                                text: step.phrase,
+                              ),
+                              const SizedBox(height: 10),
                               Text(
                                 step.explanation,
                                 style: theme.textTheme.bodyLarge,

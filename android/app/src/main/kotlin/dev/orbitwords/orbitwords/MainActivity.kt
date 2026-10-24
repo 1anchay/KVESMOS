@@ -8,6 +8,8 @@ import android.media.AudioAttributes
 import android.media.AudioFocusRequest
 import android.media.AudioManager
 import android.media.SoundPool
+import android.media.MediaPlayer
+import android.media.PlaybackParams
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
@@ -22,6 +24,7 @@ class MainActivity : FlutterActivity() {
     private var focus: AudioFocusRequest? = null
     private var focusEpoch = 0
     private var speechActive = false
+    private var speechPlayer: MediaPlayer? = null
     private val manager get() = getSystemService(Context.AUDIO_SERVICE) as AudioManager
     private val focusListener = AudioManager.OnAudioFocusChangeListener { change ->
         if (change < 0) {
@@ -67,9 +70,55 @@ class MainActivity : FlutterActivity() {
                     result.success(canSpeak() && takeFocus())
                 }
                 "speechFinished" -> {
-                    if (speechActive) stopAudio()
+                    if (speechActive && speechPlayer == null) stopAudio()
                     result.success(null)
                 }
+                "playSpeech" -> {
+                    stopRecording()
+                    val asset = call.argument<String>("asset") ?: ""
+                    val request = call.argument<Number>("request")?.toInt()
+                    if (!asset.startsWith("assets/audio/voices/") || asset.contains("..") ||
+                        asset.contains(":") || asset.contains("\\") || request == null || !canSpeak() || !takeFocus()) {
+                        result.success(false)
+                    } else {
+                        try {
+                            val target = File(cacheDir, "kvesmos-speech-current")
+                            assets.open("flutter_assets/$asset").use { input ->
+                                target.outputStream().use { input.copyTo(it) }
+                            }
+                            val player = MediaPlayer()
+                            speechPlayer = player
+                            player.setAudioAttributes(AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA)
+                                .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build())
+                            player.setDataSource(target.absolutePath)
+                            val volume = (call.argument<Double>("volume") ?: .85).coerceIn(0.0, 1.0).toFloat()
+                            player.setVolume(volume, volume)
+                            player.setOnCompletionListener {
+                                if (speechPlayer === it) {
+                                    stopAudio()
+                                    channel?.invokeMethod("recordingFinished", request)
+                                }
+                            }
+                            player.setOnErrorListener { failed, _, _ ->
+                                if (speechPlayer === failed) {
+                                    stopAudio()
+                                    channel?.invokeMethod("recordingFailed", request)
+                                }
+                                true
+                            }
+                            player.prepare()
+                            val rate = (call.argument<Double>("rate") ?: 1.0).coerceIn(.7, 1.0).toFloat()
+                            player.playbackParams = PlaybackParams().setSpeed(rate).setPitch(1f)
+                            speechActive = true
+                            player.start()
+                            result.success(true)
+                        } catch (_: Exception) {
+                            stopAudio()
+                            result.success(false)
+                        }
+                    }
+                }
+                "stopSpeech" -> { stopRecording(); result.success(null) }
                 "play" -> {
                     val sample = samples[call.argument<String>("effect")]
                     if (sample == null || !ready.contains(sample) || !canPlay() || !takeFocus()) {
@@ -112,8 +161,13 @@ class MainActivity : FlutterActivity() {
         focusEpoch++
         speechActive = false
         pool?.stop(stream)
+        stopRecording()
         if (Build.VERSION.SDK_INT >= 26) focus?.let { manager.abandonAudioFocusRequest(it) }
         else manager.abandonAudioFocus(focusListener)
+    }
+    private fun stopRecording() {
+        speechPlayer?.release()
+        speechPlayer = null
     }
     override fun onPause() {
         stopAudio()

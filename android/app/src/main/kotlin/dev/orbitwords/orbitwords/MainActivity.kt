@@ -119,6 +119,16 @@ class MainActivity : FlutterActivity() {
                     }
                 }
                 "stopSpeech" -> { stopRecording(); result.success(null) }
+                "pauseSpeech" -> {
+                    val player = speechPlayer
+                    if (player == null) result.success(false)
+                    else { player.pause(); result.success(true) }
+                }
+                "resumeSpeech" -> {
+                    val player = speechPlayer
+                    if (player == null || !canSpeak() || !takeFocus()) result.success(false)
+                    else { player.start(); result.success(true) }
+                }
                 "play" -> {
                     val sample = samples[call.argument<String>("effect")]
                     if (sample == null || !ready.contains(sample) || !canPlay() || !takeFocus()) {

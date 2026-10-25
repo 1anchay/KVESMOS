@@ -9,6 +9,25 @@ import 'package:orbitwords/ui/design.dart';
 import 'support.dart';
 
 void main() {
+  testWidgets('Orbi reacts to touch and crew profiles are distinct', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(body: CharacterMoment(characterId: 'orbi', size: 150)),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.byType(CharacterMoment));
+    await tester.pump(const Duration(milliseconds: 200));
+    expect(find.bySemanticsLabel('Орби приветствует'), findsOneWidget);
+    await tester.pumpAndSettle();
+    expect(tester.binding.hasScheduledFrame, false);
+    expect(
+      CharacterAnimationProfile.forId('miko').tempo,
+      isNot(CharacterAnimationProfile.forId('zig_quartz').tempo),
+    );
+  });
   testWidgets(
     'every character state has a visible finite gesture and reduced-motion pose',
     (tester) async {

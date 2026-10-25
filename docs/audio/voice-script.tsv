@@ -33,3 +33,85 @@ vespa	en-US	I am twenty.	a1-06: Ещё одно число	recording-required
 aster	en-US	How old are you?	a1-06: Спроси собеседника	recording-required
 vespa	en-US	twenty	a1-06-journey2-e05	recording-required
 aster	en-US	Hello! How old are you?	a1-06-journey2-e07	recording-required
+orbi	en-US	This is my sister.	a1-07: Моя сестра	recording-required
+miko	en-US	She is ten. He is six.	a1-07: Он и она	recording-required
+zig_quartz	en-US	This is my brother. This is my mother.	a1-07: Семейный альбом	recording-required
+miko	en-US	This is my brother.	a1-07-v3-05	recording-required
+miko	ru-RU	Это мой семейный альбом.	a1-07-v3-08	recording-required
+miko	ru-RU	Подпишем мамину фотографию.	a1-07-v3-08	recording-required
+miko	ru-RU	Добавим его возраст — шесть лет.	a1-07-v3-10	recording-required
+orbi	en-US	This is my father. This is my family.	a1-08: Папа и семья	recording-required
+miko	en-US	These are my parents.	a1-08: Родители	recording-required
+zig_quartz	en-US	We are a family.	a1-08: Мы вместе	recording-required
+miko	en-US	This is my father.	a1-08-v3-05	recording-required
+orbi	en-US	These are my parents.	a1-08-v3-10	recording-required
+orbi	en-US	I like rice.	a1-09: Обед на станции	recording-required
+miko	en-US	Do you like cheese?	a1-09: Вопрос другу	recording-required
+zig_quartz	en-US	I do not like bread.	a1-09: Что не нравится	recording-required
+miko	en-US	I like bread.	a1-09-v3-05	recording-required
+orbi	en-US	Do you like rice?	a1-09-v3-08	recording-required
+orbi	en-US	I like cheese.	a1-09-v3-10	recording-required
+orbi	en-US	Water, tea, milk.	a1-10: Напитки	recording-required
+miko	en-US	Can I have tea, please?	a1-10: Заказ	recording-required
+zig_quartz	en-US	Thank you. You are welcome.	a1-10: Спасибо	recording-required
+miko	en-US	Can I have milk, please?	a1-10-v3-05	recording-required
+miko	en-US	Hello!	a1-10-v3-08	recording-required
+miko	en-US	Thank you!	a1-10-v3-10	recording-required
+orbi	en-US	The bag is blue.	a1-11: Три цвета	recording-required
+miko	en-US	This is a red pen.	a1-11: Цвет перед предметом	recording-required
+zig_quartz	en-US	Is the bag blue?	a1-11: Вопрос о цвете	recording-required
+miko	en-US	The pen is red.	a1-11-v3-05	recording-required
+orbi	en-US	This is a green book.	a1-11-v3-10	recording-required
+orbi	en-US	This is a table. This is a chair. This is a cup.	a1-12: За столом	recording-required
+miko	en-US	The book is on the table.	a1-12: На и под	recording-required
+zig_quartz	en-US	Where is my book?	a1-12: Где предмет?	recording-required
+miko	en-US	The cup is on the table.	a1-12-v3-05	recording-required
+miko	en-US	Where is my book?	a1-12-v3-08	recording-required
+miko	en-US	The green book! Thank you!	a1-12-v3-10	recording-required
+orbi	en-US	I eat rice. I read a book. I sleep.	a1-13: Действия	recording-required
+miko	en-US	I read in the morning. I sleep at night.	a1-13: Время дня	recording-required
+zig_quartz	en-US	I eat bread every day.	a1-13: Обычный день	recording-required
+miko	en-US	I read in the morning.	a1-13-v3-05	recording-required
+orbi	en-US	Do you read every day?	a1-13-v3-08	recording-required
+orbi	en-US	I read a book.	a1-13-v3-10	recording-required
+orbi	en-US	I walk. I run. I write.	a1-14: Новые действия	recording-required
+miko	en-US	She reads. He runs.	a1-14: Он и она действуют	recording-required
+zig_quartz	en-US	Does he run? He does not run.	a1-14: Вопрос и отрицание	recording-required
+miko	en-US	She writes every day.	a1-14-v3-05	recording-required
+zig_quartz	en-US	Does he read every day?	a1-14-v3-08	recording-required
+orbi	en-US	She reads a book.	a1-14-v3-10	recording-required
+orbi	en-US	I am a student. She is a teacher.	a1-15: В академии	recording-required
+miko	en-US	This is an English lesson.	a1-15: На уроке	recording-required
+zig_quartz	en-US	What is this? It is a pen.	a1-15: Что это?	recording-required
+miko	en-US	She is a teacher.	a1-15-v3-05	recording-required
+zig_quartz	en-US	What is this?	a1-15-v3-08	recording-required
+orbi	en-US	Are you a student?	a1-15-v3-10	recording-required
+orbi	en-US	I work in an office.	a1-16: Работа	recording-required
+miko	en-US	I have a job. I am a teacher.	a1-16: Профессия и занятие	recording-required
+zig_quartz	en-US	Where do you work?	a1-16: Где работаешь?	recording-required
+miko	en-US	He works in an office.	a1-16-v3-05	recording-required
+miko	en-US	Where do you work?	a1-16-v3-08	recording-required
+orbi	en-US	Where does she work?	a1-16-v3-10	recording-required
+orbi	en-US	I go by train. I go by bus.	a1-17: В дорогу	recording-required
+miko	en-US	Can I have a ticket, please?	a1-17: Один билет	recording-required
+zig_quartz	en-US	A ticket for the train, please.	a1-17: Билет на поезд	recording-required
+miko	en-US	I go by train.	a1-17-v3-05	recording-required
+miko	ru-RU	Поможешь попросить билет?	a1-17-v3-08	recording-required
+zig_quartz	en-US	Two tickets.	a1-17-v3-10	recording-required
+orbi	en-US	This is a hotel. This is a station. This is a map.	a1-18: В городе	recording-required
+miko	en-US	Where is the station?	a1-18: Спросить дорогу	recording-required
+zig_quartz	en-US	Go straight. Turn left. Turn right.	a1-18: Понять маршрут	recording-required
+miko	en-US	Go straight.	a1-18-v3-05	recording-required
+orbi	en-US	Go straight. Turn left.	a1-18-v3-09	recording-required
+orbi	en-US	The hotel!	a1-18-v3-10	recording-required
+orbi	en-US	Can you help me, please?	a1-19: Нужна помощь	recording-required
+miko	en-US	Excuse me. Where is the station?	a1-19: Обратиться вежливо	recording-required
+zig_quartz	en-US	Sorry. Can you repeat, please?	a1-19: Переспросить	recording-required
+miko	en-US	Can you repeat, please?	a1-19-v3-05	recording-required
+zig_quartz	en-US	Go straight. Turn right.	a1-19-v3-08	recording-required
+orbi	en-US	This is a shop. This is a shirt.	a1-20: В магазине	recording-required
+miko	en-US	What is the price?	a1-20: Цена	recording-required
+zig_quartz	en-US	It is ten dollars.	a1-20: Ответ о цене	recording-required
+miko	en-US	It is twenty dollars.	a1-20-v3-05	recording-required
+miko	en-US	This is a blue shirt.	a1-20-v3-08	recording-required
+zig_quartz	en-US	A blue shirt.	a1-20-v3-10	recording-required

@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - feature/lesson-coaching-voice-honesty
+      - feature/kvesmos-v05-quality
   workflow_dispatch:
 
 jobs:

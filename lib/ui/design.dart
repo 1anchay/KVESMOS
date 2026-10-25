@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'character_moment.dart';
+import 'galaxy_components.dart';
 
 const space = Color(0xFF0F172A),
     cosmicBlue = Color(0xFF1D4ED8),
@@ -34,7 +36,12 @@ ThemeData orbitTheme(Brightness brightness) {
       clipBehavior: Clip.antiAlias,
       color: dark ? const Color(0xFF1B2945) : Colors.white,
       margin: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(24),
+        side: BorderSide(
+          color: dark ? const Color(0xFF344268) : const Color(0xFFDDE5F3),
+        ),
+      ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
@@ -133,16 +140,19 @@ class CharacterPortrait extends StatelessWidget {
 class SpaceBanner extends StatelessWidget {
   final String eyebrow, title, subtitle;
   final Widget? action;
+  final bool animate;
+  final bool showCharacter;
   const SpaceBanner({
     super.key,
     required this.eyebrow,
     required this.title,
     required this.subtitle,
     this.action,
+    this.animate = true,
+    this.showCharacter = true,
   });
   @override
   Widget build(BuildContext context) => Container(
-    padding: const EdgeInsets.all(24),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(28),
       gradient: const LinearGradient(
@@ -151,56 +161,68 @@ class SpaceBanner extends StatelessWidget {
         end: Alignment.bottomRight,
       ),
     ),
-    child: LayoutBuilder(
-      builder: (context, constraints) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
+    clipBehavior: Clip.antiAlias,
+    child: GalaxyField(
+      deep: true,
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: LayoutBuilder(
+          builder: (context, constraints) => Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                child: Text(
-                  eyebrow,
-                  style: const TextStyle(
-                    color: turquoise,
-                    fontWeight: FontWeight.w800,
-                    letterSpacing: 2,
-                    fontSize: 11,
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      eyebrow,
+                      style: const TextStyle(
+                        color: turquoise,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 2,
+                        fontSize: 11,
+                      ),
+                    ),
                   ),
+                  const Icon(Icons.auto_awesome, color: starYellow, size: 20),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        height: 1.15,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                  if (showCharacter && constraints.maxWidth > 270)
+                    CharacterMoment(
+                      characterId: 'orbi',
+                      animate: animate,
+                      state: CharacterState.greeting,
+                      size: constraints.maxWidth > 350 ? 150 : 104,
+                    ),
+                ],
+              ),
+              const SizedBox(height: 14),
+              Text(
+                subtitle,
+                style: const TextStyle(
+                  color: Color(0xFFC5CDE0),
+                  fontSize: 15,
+                  height: 1.5,
                 ),
               ),
-              const Icon(Icons.auto_awesome, color: starYellow, size: 20),
+              if (action != null) ...[const SizedBox(height: 20), action!],
             ],
           ),
-          const SizedBox(height: 12),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Text(
-                  title,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    height: 1.15,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
-              if (constraints.maxWidth > 270)
-                OrbitRobot(size: constraints.maxWidth > 350 ? 160 : 112),
-            ],
-          ),
-          const SizedBox(height: 14),
-          Text(
-            subtitle,
-            style: const TextStyle(
-              color: Color(0xFFC5CDE0),
-              fontSize: 15,
-              height: 1.5,
-            ),
-          ),
-          if (action != null) ...[const SizedBox(height: 20), action!],
-        ],
+        ),
       ),
     ),
   );
@@ -259,12 +281,14 @@ class Metric extends StatelessWidget {
   );
 }
 
-Widget pageBody(List<Widget> children) => Center(
-  child: ConstrainedBox(
-    constraints: const BoxConstraints(maxWidth: 860),
-    child: ListView(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
-      children: children,
+Widget pageBody(List<Widget> children) => GalaxyField(
+  child: Center(
+    child: ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 860),
+      child: ListView(
+        padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
+        children: children,
+      ),
     ),
   ),
 );

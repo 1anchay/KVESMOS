@@ -14,11 +14,14 @@ import 'widget_test.dart' show flushDb;
 void main() {
   setUpAll(setupSqlite);
   test(
-    'six authored lessons validate and complete with unchanged XP',
+    'twenty authored lessons validate and complete with unchanged XP',
     () async {
       final r = memoryRepository();
       await r.initialize();
-      for (final id in ['a1-01', 'a1-02', 'a1-03', 'a1-04', 'a1-05', 'a1-06']) {
+      for (final id in List.generate(
+        20,
+        (i) => 'a1-${(i + 1).toString().padLeft(2, '0')}',
+      )) {
         final result = await r.startLesson(id);
         final l = result.lesson;
         expect(l.exercises, hasLength(10));
@@ -54,16 +57,15 @@ void main() {
         expect((await r.session(result.session.id)).done, true);
       }
       final p = await r.progress();
-      expect(p.xp, 720);
-      expect(p.completed, {
-        'a1-01',
-        'a1-02',
-        'a1-03',
-        'a1-04',
-        'a1-05',
-        'a1-06',
-      });
-      expect(p.correct, 60);
+      expect(p.xp, 2400);
+      expect(
+        p.completed,
+        List.generate(
+          20,
+          (i) => 'a1-${(i + 1).toString().padLeft(2, '0')}',
+        ).toSet(),
+      );
+      expect(p.correct, 200);
       await r.db.close();
     },
   );
@@ -164,7 +166,7 @@ void main() {
       await tester.tap(find.text('Начать обновлённый урок'));
       await flushDb(tester);
       await advanceTeaching(tester);
-      expect(find.text('Новый формат'), findsOneWidget);
+      expect(find.text('Знакомство'), findsOneWidget);
       expect(
         find.text(
           'Орби встречает тебя на космической станции. Что ему ответить?',
@@ -179,12 +181,12 @@ void main() {
     },
   );
   testWidgets(
-    'all six lessons complete with audio disabled through real controls',
+    'all twenty lessons complete with audio disabled through real controls',
     (tester) async {
-      for (var number = 1; number <= 6; number++) {
+      for (var number = 1; number <= 20; number++) {
         final r = memoryRepository();
         final app = AppController(r);
-        final id = 'a1-0$number';
+        final id = 'a1-${number.toString().padLeft(2, '0')}';
         late Lesson l;
         await tester.runAsync(() async {
           await app.initialize();
@@ -198,7 +200,7 @@ void main() {
           for (var previous = 1; previous < number; previous++) {
             await r.append(
               r.event('complete', {
-                'lesson': 'a1-0$previous',
+                'lesson': 'a1-${previous.toString().padLeft(2, '0')}',
                 'session': 'seed$previous',
               }),
             );
@@ -254,6 +256,16 @@ void main() {
           await tester.pumpAndSettle();
           await tester.tap(target);
           await flushDb(tester);
+          // SQLite runs on the real event loop; scrolling in fake time must
+          // not race an in-flight answer transaction on a busy CI runner.
+          for (
+            var wait = 0;
+            wait < 40 && find.text('Сохраняем…').evaluate().isNotEmpty;
+            wait++
+          ) {
+            await flushDb(tester);
+          }
+          expect(find.text('Сохраняем…'), findsNothing);
         }
 
         for (final e in l.exercises) {

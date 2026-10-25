@@ -1,0 +1,248 @@
+{
+  "id": "a1-16",
+  "title": "Моя работа",
+  "topic": "Работа и учёба",
+  "order": 15,
+  "vocabulary": [
+    {
+      "id": "en:work",
+      "en": "work",
+      "ru": "работать"
+    },
+    {
+      "id": "en:office",
+      "en": "office",
+      "ru": "офис"
+    },
+    {
+      "id": "en:job",
+      "en": "job",
+      "ru": "работа"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Рассказать, где работаешь, и спросить о месте работы.",
+  "guide": "Work — работать, he works — он работает; office — офис. In — в помещении. Перед office ставим an. Job — работа как место или должность: a job. Work в I work — действие, без am. Where + do you + work. О другом человеке: Where does she work? После does — work без -s.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Работа",
+      "phrase": "I work in an office.",
+      "translation": "Я работаю в офисе.",
+      "explanation": "Work — работать, he works — он работает; office — офис. In — в помещении. Перед office ставим an."
+    },
+    {
+      "character": "miko",
+      "title": "Профессия и занятие",
+      "phrase": "I have a job. I am a teacher.",
+      "translation": "У меня есть работа. Я учитель.",
+      "explanation": "Job — работа как место или должность: a job. Work в I work — действие, без am."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Где работаешь?",
+      "phrase": "Where do you work?",
+      "translation": "Где ты работаешь?",
+      "explanation": "Where + do you + work. О другом человеке: Where does she work? После does — work без -s."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-16-v3-01",
+      "type": "choice",
+      "prompt": "Зиг работает в офисе. Выбери его реплику.",
+      "answers": [
+        "I work in an office."
+      ],
+      "explanation": "In an office — в офисе.",
+      "hint": "In an office — в офисе.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:work",
+        "en:office"
+      ],
+      "options": [
+        "I work in an office.",
+        "I am work.",
+        "I am a teacher."
+      ]
+    },
+    {
+      "id": "a1-16-v3-02",
+      "type": "pairs",
+      "prompt": "Соедини слова о работе.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Work — работать; job — работа, должность; office — офис.",
+      "hint": "Work — работать; job — работа, должность; office — офис.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:work",
+        "en:office",
+        "en:job"
+      ],
+      "pairs": [
+        {
+          "id": "en:work",
+          "en": "work",
+          "ru": "работать"
+        },
+        {
+          "id": "en:office",
+          "en": "office",
+          "ru": "офис"
+        },
+        {
+          "id": "en:job",
+          "en": "job",
+          "ru": "работа"
+        }
+      ]
+    },
+    {
+      "id": "a1-16-v3-03",
+      "type": "order",
+      "prompt": "Спроси о месте работы.",
+      "answers": [
+        "Where do you work"
+      ],
+      "explanation": "В вопросе об обычном действии нужен do.",
+      "hint": "В вопросе об обычном действии нужен do.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:work"
+      ],
+      "tokens": [
+        "Where",
+        "do",
+        "you",
+        "work"
+      ]
+    },
+    {
+      "id": "a1-16-v3-04",
+      "type": "gap",
+      "prompt": "I have a ___. Подставь «работа, должность».",
+      "answers": [
+        "job"
+      ],
+      "explanation": "После a нужно исчисляемое job.",
+      "hint": "После a нужно исчисляемое job.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:job"
+      ]
+    },
+    {
+      "id": "a1-16-v3-05",
+      "type": "listen",
+      "prompt": "Где он работает?",
+      "answers": [
+        "in an office"
+      ],
+      "explanation": "Он работает в офисе.",
+      "hint": "Он работает в офисе.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:work",
+        "en:office"
+      ],
+      "options": [
+        "in an office",
+        "at night",
+        "on the table"
+      ],
+      "audio": "He works in an office."
+    },
+    {
+      "id": "a1-16-v3-06",
+      "type": "correct",
+      "prompt": "Исправь: She work in an office.",
+      "answers": [
+        "She works in an office."
+      ],
+      "explanation": "После she действие получает -s.",
+      "hint": "После she действие получает -s.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:work",
+        "en:office"
+      ]
+    },
+    {
+      "id": "a1-16-v3-07",
+      "type": "translate",
+      "prompt": "Скажи: «У меня есть работа».",
+      "answers": [
+        "I have a job."
+      ],
+      "explanation": "A job — одна работа или должность.",
+      "hint": "A job — одна работа или должность.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:job"
+      ]
+    },
+    {
+      "id": "a1-16-v3-08",
+      "type": "dialogue",
+      "prompt": "Ты работаешь в офисе. Ответь Мико.",
+      "answers": [
+        "I work in an office."
+      ],
+      "explanation": "Ответь полной знакомой фразой.",
+      "hint": "Ответь полной знакомой фразой.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:work",
+        "en:office"
+      ],
+      "options": [
+        "I work in an office.",
+        "I work on the table.",
+        "I am ten."
+      ],
+      "scene": "Мико: Where do you work?\nТы: …"
+    },
+    {
+      "id": "a1-16-v3-09",
+      "type": "review",
+      "prompt": "Спроси: «Она читает?»",
+      "answers": [
+        "Does she read?"
+      ],
+      "explanation": "После does — read без -s.",
+      "hint": "После does — read без -s.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:read"
+      ]
+    },
+    {
+      "id": "a1-16-v3-10",
+      "type": "speak",
+      "prompt": "Спроси: «Где она работает?»",
+      "answers": [
+        "Where does she work?"
+      ],
+      "explanation": "Where does she + work.",
+      "hint": "Where does she + work.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:work"
+      ],
+      "audio": "Where does she work?"
+    }
+  ]
+}

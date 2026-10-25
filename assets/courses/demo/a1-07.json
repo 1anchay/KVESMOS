@@ -1,0 +1,270 @@
+{
+  "id": "a1-07",
+  "title": "Моя семья",
+  "topic": "Семья",
+  "order": 6,
+  "vocabulary": [
+    {
+      "id": "en:sister",
+      "en": "sister",
+      "ru": "сестра"
+    },
+    {
+      "id": "en:brother",
+      "en": "brother",
+      "ru": "брат"
+    },
+    {
+      "id": "en:mother",
+      "en": "mother",
+      "ru": "мать"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Представить семью и сказать возраст близкого.",
+  "guide": "Sister — сестра. Знакомое This is my… помогает представить человека. She — она, he — он. После he и she используем is. Возраст, как и раньше, выражаем через be, без years. Brother — брат, mother — мама. My не меняется: my sister, my brother, my mother.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Моя сестра",
+      "phrase": "This is my sister.",
+      "translation": "Это моя сестра.",
+      "explanation": "Sister — сестра. Знакомое This is my… помогает представить человека."
+    },
+    {
+      "character": "miko",
+      "title": "Он и она",
+      "phrase": "She is ten. He is six.",
+      "translation": "Ей десять. Ему шесть.",
+      "explanation": "She — она, he — он. После he и she используем is. Возраст, как и раньше, выражаем через be, без years."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Семейный альбом",
+      "phrase": "This is my brother. This is my mother.",
+      "translation": "Это мой брат. Это моя мама.",
+      "explanation": "Brother — брат, mother — мама. My не меняется: my sister, my brother, my mother."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-07-v3-01",
+      "type": "choice",
+      "prompt": "Мико показывает сестру. Как её представить?",
+      "answers": [
+        "This is my sister."
+      ],
+      "explanation": "Sister — сестра; brother — брат.",
+      "hint": "Sister — сестра; brother — брат.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:sister"
+      ],
+      "options": [
+        "This is my sister.",
+        "This is my brother.",
+        "This is my book."
+      ]
+    },
+    {
+      "id": "a1-07-v3-02",
+      "type": "pairs",
+      "prompt": "Подпиши три фотографии в альбоме.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Соедини родство с переводом.",
+      "hint": "Соедини родство с переводом.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:sister",
+        "en:brother",
+        "en:mother"
+      ],
+      "pairs": [
+        {
+          "id": "en:sister",
+          "en": "sister",
+          "ru": "сестра"
+        },
+        {
+          "id": "en:brother",
+          "en": "brother",
+          "ru": "брат"
+        },
+        {
+          "id": "en:mother",
+          "en": "mother",
+          "ru": "мать"
+        }
+      ]
+    },
+    {
+      "id": "a1-07-v3-03",
+      "type": "order",
+      "prompt": "Собери подпись: «Это моя мама».",
+      "answers": [
+        "This is my mother"
+      ],
+      "explanation": "После This ставим is, затем my mother.",
+      "hint": "После This ставим is, затем my mother.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:mother"
+      ],
+      "tokens": [
+        "This",
+        "is",
+        "my",
+        "mother"
+      ]
+    },
+    {
+      "id": "a1-07-v3-04",
+      "type": "gap",
+      "prompt": "Сестре десять: She ___ ten.",
+      "answers": [
+        "is"
+      ],
+      "explanation": "После she нужна форма is.",
+      "hint": "После she нужна форма is.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:ten"
+      ]
+    },
+    {
+      "id": "a1-07-v3-05",
+      "type": "listen",
+      "prompt": "Послушай подпись к фотографии. Кто это?",
+      "answers": [
+        "brother"
+      ],
+      "explanation": "В записи brother — брат.",
+      "hint": "В записи brother — брат.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:brother"
+      ],
+      "options": [
+        "brother",
+        "mother",
+        "sister"
+      ],
+      "audio": "This is my brother."
+    },
+    {
+      "id": "a1-07-v3-06",
+      "type": "correct",
+      "prompt": "Зиг написал: He am six. Исправь предложение.",
+      "answers": [
+        "He is six."
+      ],
+      "explanation": "Am подходит только к I. С he используем is.",
+      "hint": "Am подходит только к I. С he используем is.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:six"
+      ]
+    },
+    {
+      "id": "a1-07-v3-07",
+      "type": "translate",
+      "prompt": "Скажи: «Это моя сестра».",
+      "answers": [
+        "This is my sister."
+      ],
+      "explanation": "Используй This is my и слово sister.",
+      "hint": "Используй This is my и слово sister.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:sister"
+      ]
+    },
+    {
+      "id": "a1-07-v3-08",
+      "type": "dialogue",
+      "prompt": "Помоги Мико подписать фотографию мамы.",
+      "answers": [
+        "This is my mother."
+      ],
+      "explanation": "Mother — мама. Отвечаем о человеке на фотографии.",
+      "hint": "Mother — мама. Отвечаем о человеке на фотографии.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:mother"
+      ],
+      "options": [
+        "This is my mother.",
+        "This is my sister.",
+        "This is my pen."
+      ],
+      "scene": "Мико: Это мой семейный альбом.\nМико: Подпишем мамину фотографию.\nТы: …",
+      "story": {
+        "id": "a1-07-story",
+        "title": "Альбом Мико",
+        "step": 1,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-07-v3-09",
+      "type": "order",
+      "prompt": "На следующей фотографии брат. Собери подпись.",
+      "answers": [
+        "This is my brother"
+      ],
+      "explanation": "Меняется только слово родства.",
+      "hint": "Меняется только слово родства.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:brother"
+      ],
+      "tokens": [
+        "This",
+        "is",
+        "my",
+        "brother"
+      ],
+      "story": {
+        "id": "a1-07-story",
+        "title": "Альбом Мико",
+        "step": 2,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-07-v3-10",
+      "type": "dialogue",
+      "prompt": "Брату шесть. Добавь возраст к подписи.",
+      "answers": [
+        "He is six.",
+        "My brother is six."
+      ],
+      "explanation": "О брате говорим he; после he — is.",
+      "hint": "О брате говорим he; после he — is.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:six",
+        "en:brother"
+      ],
+      "scene": "Мико: This is my brother.\nМико: Добавим его возраст — шесть лет.\nТы: …",
+      "story": {
+        "id": "a1-07-story",
+        "title": "Альбом Мико",
+        "step": 3,
+        "total": 3
+      }
+    }
+  ]
+}

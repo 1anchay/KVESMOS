@@ -8,12 +8,26 @@ import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/services/recorded_speech.dart';
 import 'learning_audio_test.dart' show FakeTts;
 
-class FakeRecordingPlayer implements RecordedSpeechBackend {
+class FakeRecordingPlayer
+    implements RecordedSpeechBackend, PausableRecordedSpeech {
   bool works = true;
   int stops = 0;
   final requests = <int>[];
   bool? lastSlow;
   Completer<bool>? pending;
+  bool paused = false;
+  @override
+  Future<bool> pause() async {
+    paused = true;
+    return true;
+  }
+
+  @override
+  Future<bool> resume() async {
+    paused = false;
+    return true;
+  }
+
   @override
   Future<bool> play(
     SpeechRecording clip, {
@@ -232,6 +246,21 @@ void main() {
           expect(File(path).lengthSync(), greaterThan(0), reason: path);
         }
       }
+    },
+  );
+  test(
+    'recording pause resumes the same request and stop prevents stale resume',
+    () async {
+      expect(await audio.speak('Hello!', character: 'orbi'), true);
+      final requests = player.requests.length;
+      expect(await audio.pauseOrResume(), true);
+      expect(audio.playback.value!.paused, true);
+      expect(player.paused, true);
+      expect(await audio.pauseOrResume(), true);
+      expect(audio.playback.value!.playing, true);
+      expect(player.requests, hasLength(requests));
+      await audio.stop();
+      expect(await audio.pauseOrResume(), false);
     },
   );
 }

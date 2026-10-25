@@ -1,0 +1,246 @@
+{
+  "id": "a1-10",
+  "title": "В кафе",
+  "topic": "Еда и напитки",
+  "order": 9,
+  "vocabulary": [
+    {
+      "id": "en:water",
+      "en": "water",
+      "ru": "вода"
+    },
+    {
+      "id": "en:tea",
+      "en": "tea",
+      "ru": "чай"
+    },
+    {
+      "id": "en:milk",
+      "en": "milk",
+      "ru": "молоко"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Вежливо заказать напиток и поблагодарить.",
+  "guide": "Water — вода, tea — чай, milk — молоко. Эти слова обычно употребляются без a. Запомни вежливую конструкцию Can I have…? Please смягчает просьбу. Это готовая фраза для заказа. Thank you или Thanks — благодарность. You’re welcome — сокращение You are welcome. You are welcome — ответ на благодарность; это не please в просьбе.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Напитки",
+      "phrase": "Water, tea, milk.",
+      "translation": "Вода, чай, молоко.",
+      "explanation": "Water — вода, tea — чай, milk — молоко. Эти слова обычно употребляются без a."
+    },
+    {
+      "character": "miko",
+      "title": "Заказ",
+      "phrase": "Can I have tea, please?",
+      "translation": "Можно мне чай, пожалуйста?",
+      "explanation": "Запомни вежливую конструкцию Can I have…? Please смягчает просьбу. Это готовая фраза для заказа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Спасибо",
+      "phrase": "Thank you. You are welcome.",
+      "translation": "Спасибо. Пожалуйста.",
+      "explanation": "Thank you или Thanks — благодарность. You’re welcome — сокращение You are welcome. You are welcome — ответ на благодарность; это не please в просьбе."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-10-v3-01",
+      "type": "choice",
+      "prompt": "Ты хочешь воду. Выбери вежливый заказ.",
+      "answers": [
+        "Can I have water, please?"
+      ],
+      "explanation": "В просьбе используем please.",
+      "hint": "В просьбе используем please.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:water"
+      ],
+      "options": [
+        "Can I have water, please?",
+        "Can I have milk, please?",
+        "I do not like water."
+      ]
+    },
+    {
+      "id": "a1-10-v3-02",
+      "type": "pairs",
+      "prompt": "Подбери перевод напиткам.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Не путай tea — чай и milk — молоко.",
+      "hint": "Не путай tea — чай и milk — молоко.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:water",
+        "en:tea",
+        "en:milk"
+      ],
+      "pairs": [
+        {
+          "id": "en:water",
+          "en": "water",
+          "ru": "вода"
+        },
+        {
+          "id": "en:tea",
+          "en": "tea",
+          "ru": "чай"
+        },
+        {
+          "id": "en:milk",
+          "en": "milk",
+          "ru": "молоко"
+        }
+      ]
+    },
+    {
+      "id": "a1-10-v3-03",
+      "type": "order",
+      "prompt": "Собери заказ чая.",
+      "answers": [
+        "Can I have tea please"
+      ],
+      "explanation": "Can I have, затем напиток и please.",
+      "hint": "Can I have, затем напиток и please.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:tea"
+      ],
+      "tokens": [
+        "Can",
+        "I",
+        "have",
+        "tea",
+        "please"
+      ]
+    },
+    {
+      "id": "a1-10-v3-04",
+      "type": "gap",
+      "prompt": "Can I ___ milk, please?",
+      "answers": [
+        "have"
+      ],
+      "explanation": "В знакомой просьбе используется have.",
+      "hint": "В знакомой просьбе используется have.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:milk"
+      ]
+    },
+    {
+      "id": "a1-10-v3-05",
+      "type": "listen",
+      "prompt": "Какой напиток заказывает Зиг?",
+      "answers": [
+        "milk"
+      ],
+      "explanation": "Зиг просит молоко.",
+      "hint": "Зиг просит молоко.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:milk"
+      ],
+      "options": [
+        "milk",
+        "water",
+        "tea"
+      ],
+      "audio": "Can I have milk, please?"
+    },
+    {
+      "id": "a1-10-v3-06",
+      "type": "correct",
+      "prompt": "В просьбе перепутали слова: Can have I tea, please?",
+      "answers": [
+        "Can I have tea, please?"
+      ],
+      "explanation": "После Can ставим I, затем have.",
+      "hint": "После Can ставим I, затем have.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:tea"
+      ]
+    },
+    {
+      "id": "a1-10-v3-07",
+      "type": "translate",
+      "prompt": "Поблагодари за напиток.",
+      "answers": [
+        "Thank you.",
+        "Thanks."
+      ],
+      "explanation": "Thank you и Thanks — естественные способы поблагодарить.",
+      "hint": "Thank you и Thanks — естественные способы поблагодарить.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": []
+    },
+    {
+      "id": "a1-10-v3-08",
+      "type": "dialogue",
+      "prompt": "Закажи чай в кафе Мико.",
+      "answers": [
+        "Can I have tea, please?"
+      ],
+      "explanation": "Укажи tea, сохрани вежливую форму.",
+      "hint": "Укажи tea, сохрани вежливую форму.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:hello",
+        "en:tea"
+      ],
+      "options": [
+        "Can I have tea, please?",
+        "I am tea.",
+        "Can I have bread, please?"
+      ],
+      "scene": "Мико: Hello!\nТы: …"
+    },
+    {
+      "id": "a1-10-v3-09",
+      "type": "review",
+      "prompt": "Вспомни: «Мне нравится хлеб».",
+      "answers": [
+        "I like bread."
+      ],
+      "explanation": "Для предпочтения говорим I like…",
+      "hint": "Для предпочтения говорим I like…",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:bread"
+      ]
+    },
+    {
+      "id": "a1-10-v3-10",
+      "type": "dialogue",
+      "prompt": "Тебе сказали Thank you. Ответь вежливо.",
+      "answers": [
+        "You are welcome.",
+        "You’re welcome."
+      ],
+      "explanation": "You are welcome — ответ на благодарность.",
+      "hint": "You are welcome — ответ на благодарность.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:welcome"
+      ],
+      "scene": "Мико: Thank you!\nТы: …"
+    }
+  ]
+}

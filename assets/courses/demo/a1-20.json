@@ -1,0 +1,279 @@
+{
+  "id": "a1-20",
+  "title": "В магазине",
+  "topic": "Базовые разговорные ситуации",
+  "order": 19,
+  "vocabulary": [
+    {
+      "id": "en:shirt",
+      "en": "shirt",
+      "ru": "рубашка"
+    },
+    {
+      "id": "en:shop",
+      "en": "shop",
+      "ru": "магазин"
+    },
+    {
+      "id": "en:price",
+      "en": "price",
+      "ru": "цена"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Выбрать вещь в магазине и спросить цену.",
+  "guide": "Shop — магазин, shirt — рубашка. A blue shirt — синяя рубашка: цвет ставим перед вещью. Price — цена. Естественный вопрос о конкретной вещи: How much is this shirt? — Сколько стоит эта рубашка? Dollar — доллар, после ten — dollars. It заменяет shirt. Для покупки пригодится знакомое Can I have…?",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "В магазине",
+      "phrase": "This is a shop. This is a shirt.",
+      "translation": "Это магазин. Это рубашка.",
+      "explanation": "Shop — магазин, shirt — рубашка. A blue shirt — синяя рубашка: цвет ставим перед вещью."
+    },
+    {
+      "character": "miko",
+      "title": "Цена",
+      "phrase": "What is the price?",
+      "translation": "Какая цена?",
+      "explanation": "Price — цена. Естественный вопрос о конкретной вещи: How much is this shirt? — Сколько стоит эта рубашка?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Ответ о цене",
+      "phrase": "It is ten dollars.",
+      "translation": "Она стоит десять долларов.",
+      "explanation": "Dollar — доллар, после ten — dollars. It заменяет shirt. Для покупки пригодится знакомое Can I have…?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-20-v3-01",
+      "type": "choice",
+      "prompt": "Тебе нужна синяя рубашка. Выбери её.",
+      "answers": [
+        "a blue shirt"
+      ],
+      "explanation": "Цвет стоит перед shirt.",
+      "hint": "Цвет стоит перед shirt.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:blue",
+        "en:shirt"
+      ],
+      "options": [
+        "a blue shirt",
+        "a red shirt",
+        "a green bag"
+      ]
+    },
+    {
+      "id": "a1-20-v3-02",
+      "type": "pairs",
+      "prompt": "Соедини слова магазина.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Shirt — рубашка, shop — магазин, price — цена.",
+      "hint": "Shirt — рубашка, shop — магазин, price — цена.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:shirt",
+        "en:shop",
+        "en:price"
+      ],
+      "pairs": [
+        {
+          "id": "en:shirt",
+          "en": "shirt",
+          "ru": "рубашка"
+        },
+        {
+          "id": "en:shop",
+          "en": "shop",
+          "ru": "магазин"
+        },
+        {
+          "id": "en:price",
+          "en": "price",
+          "ru": "цена"
+        }
+      ]
+    },
+    {
+      "id": "a1-20-v3-03",
+      "type": "order",
+      "prompt": "Спроси цену этой рубашки.",
+      "answers": [
+        "How much is this shirt"
+      ],
+      "explanation": "How much is…? — сколько стоит…?",
+      "hint": "How much is…? — сколько стоит…?",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:shirt"
+      ],
+      "tokens": [
+        "How",
+        "much",
+        "is",
+        "this",
+        "shirt"
+      ]
+    },
+    {
+      "id": "a1-20-v3-04",
+      "type": "gap",
+      "prompt": "Цена десять долларов: It is ten ___.",
+      "answers": [
+        "dollars"
+      ],
+      "explanation": "После ten слово dollars во множественном числе.",
+      "hint": "После ten слово dollars во множественном числе.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:ten"
+      ]
+    },
+    {
+      "id": "a1-20-v3-05",
+      "type": "listen",
+      "prompt": "Сколько стоит рубашка?",
+      "answers": [
+        "twenty"
+      ],
+      "explanation": "It is twenty dollars — двадцать долларов.",
+      "hint": "It is twenty dollars — двадцать долларов.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:twenty"
+      ],
+      "options": [
+        "twenty",
+        "ten",
+        "five"
+      ],
+      "audio": "It is twenty dollars."
+    },
+    {
+      "id": "a1-20-v3-06",
+      "type": "correct",
+      "prompt": "Исправь: This is a shirt blue.",
+      "answers": [
+        "This is a blue shirt."
+      ],
+      "explanation": "Цвет blue должен стоять перед shirt.",
+      "hint": "Цвет blue должен стоять перед shirt.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:blue",
+        "en:shirt"
+      ]
+    },
+    {
+      "id": "a1-20-v3-07",
+      "type": "translate",
+      "prompt": "Спроси: «Какая цена?»",
+      "answers": [
+        "What is the price?"
+      ],
+      "explanation": "Price — цена. Используй What is the price?",
+      "hint": "Price — цена. Используй What is the price?",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:price"
+      ]
+    },
+    {
+      "id": "a1-20-v3-08",
+      "type": "dialogue",
+      "prompt": "Помоги Мико купить синюю рубашку. Спроси её цену.",
+      "answers": [
+        "How much is this shirt?"
+      ],
+      "explanation": "Уточни стоимость рубашки, а не её цвет.",
+      "hint": "Уточни стоимость рубашки, а не её цвет.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:blue",
+        "en:shirt"
+      ],
+      "options": [
+        "How much is this shirt?",
+        "Where is the station?",
+        "Do you like rice?"
+      ],
+      "scene": "Мико: This is a blue shirt.\nТы: …",
+      "story": {
+        "id": "a1-20-story",
+        "title": "Подарок из путешествия",
+        "step": 1,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-20-v3-09",
+      "type": "order",
+      "prompt": "Цена подходит. Попроси рубашку.",
+      "answers": [
+        "Can I have this shirt please"
+      ],
+      "explanation": "Знакомая просьба Can I have… подходит и в магазине.",
+      "hint": "Знакомая просьба Can I have… подходит и в магазине.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:please",
+        "en:shirt"
+      ],
+      "tokens": [
+        "Can",
+        "I",
+        "have",
+        "this",
+        "shirt",
+        "please"
+      ],
+      "story": {
+        "id": "a1-20-story",
+        "title": "Подарок из путешествия",
+        "step": 2,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-20-v3-10",
+      "type": "dialogue",
+      "prompt": "Покупка завершена. Поблагодари и попрощайся.",
+      "answers": [
+        "Thank you. Goodbye!",
+        "Thanks. Goodbye!",
+        "Thank you. Bye!"
+      ],
+      "explanation": "Используй две знакомые фразы: благодарность и прощание.",
+      "hint": "Используй две знакомые фразы: благодарность и прощание.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:goodbye",
+        "en:blue",
+        "en:shirt"
+      ],
+      "scene": "Зиг: A blue shirt.\nТы: …",
+      "story": {
+        "id": "a1-20-story",
+        "title": "Подарок из путешествия",
+        "step": 3,
+        "total": 3
+      }
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import '../domain/course.dart';
 import 'character_moment.dart';
 import '../services/learning_audio.dart';
 import 'speech_source.dart';
+import 'galaxy_components.dart';
 
 /// A short teaching sequence, shown before the first exercise of a lesson.
 class LessonIntroduction extends StatefulWidget {
@@ -111,133 +112,138 @@ class _LessonIntroductionState extends State<LessonIntroduction> {
               ),
       ),
       body: SafeArea(
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 520),
-            child: Column(
-              children: [
-                Expanded(
-                  child: ListView(
-                    controller: scroll,
-                    padding: const EdgeInsets.all(20),
-                    children: [
-                      LinearProgressIndicator(
-                        value: (index + 1) / widget.lesson.teachingSteps.length,
-                        minHeight: 8,
-                      ),
-                      const SizedBox(height: 16),
-                      if (index == 0 && widget.lesson.objective != null) ...[
+        child: GalaxyField(
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 520),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: ListView(
+                      controller: scroll,
+                      padding: const EdgeInsets.all(20),
+                      children: [
+                        LinearProgressIndicator(
+                          value:
+                              (index + 1) / widget.lesson.teachingSteps.length,
+                          minHeight: 8,
+                        ),
+                        const SizedBox(height: 16),
+                        if (index == 0 && widget.lesson.objective != null) ...[
+                          Text(
+                            'Твоя миссия: ${widget.lesson.objective}',
+                            style: theme.textTheme.titleMedium,
+                          ),
+                          const SizedBox(height: 12),
+                        ],
                         Text(
-                          'Твоя миссия: ${widget.lesson.objective}',
-                          style: theme.textTheme.titleMedium,
+                          'Шаг ${index + 1} из ${widget.lesson.teachingSteps.length}',
+                          style: theme.textTheme.labelLarge,
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 24),
+                        Center(
+                          child: SpeakingCharacter(
+                            key: ValueKey(index),
+                            audio: widget.audio,
+                            character: step.character,
+                            state: index == 0
+                                ? CharacterState.greeting
+                                : last && widget.lesson.id == 'a1-01'
+                                ? CharacterState.goodbye
+                                : CharacterState.thinking,
+                            size: 120,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        Text(step.title, style: theme.textTheme.headlineMedium),
+                        const SizedBox(height: 16),
+                        Card(
+                          child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  step.phrase,
+                                  style: theme.textTheme.headlineMedium,
+                                ),
+                                const SizedBox(height: 8),
+                                Text(
+                                  step.translation,
+                                  style: theme.textTheme.titleLarge,
+                                ),
+                                const SizedBox(height: 10),
+                                Wrap(
+                                  spacing: 8,
+                                  children: [
+                                    OutlinedButton.icon(
+                                      onPressed: talking || busy
+                                          ? null
+                                          : listen,
+                                      icon: const Icon(Icons.volume_up_rounded),
+                                      label: const Text('Послушать пример'),
+                                    ),
+                                    TextButton.icon(
+                                      onPressed: talking || busy
+                                          ? null
+                                          : () => listen(slow: true),
+                                      icon: const Icon(Icons.slow_motion_video),
+                                      label: const Text('Медленнее'),
+                                    ),
+                                  ],
+                                ),
+                                const Divider(height: 30),
+                                SpeechSourceLabel(
+                                  audio: widget.audio,
+                                  character: step.character,
+                                  text: step.phrase,
+                                ),
+                                const SizedBox(height: 10),
+                                Text(
+                                  step.explanation,
+                                  style: theme.textTheme.bodyLarge,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 18),
+                        Text(
+                          'Сначала прочитай и пойми пример. В заданиях мы потренируем его без спешки.',
+                          style: theme.textTheme.bodyMedium,
+                        ),
                       ],
-                      Text(
-                        'Шаг ${index + 1} из ${widget.lesson.teachingSteps.length}',
-                        style: theme.textTheme.labelLarge,
-                      ),
-                      const SizedBox(height: 24),
-                      Center(
-                        child: SpeakingCharacter(
-                          key: ValueKey(index),
-                          audio: widget.audio,
-                          character: step.character,
-                          state: index == 0
-                              ? CharacterState.greeting
-                              : last && widget.lesson.id == 'a1-01'
-                              ? CharacterState.goodbye
-                              : CharacterState.thinking,
-                          size: 120,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Text(step.title, style: theme.textTheme.headlineMedium),
-                      const SizedBox(height: 16),
-                      Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                step.phrase,
-                                style: theme.textTheme.headlineMedium,
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                step.translation,
-                                style: theme.textTheme.titleLarge,
-                              ),
-                              const SizedBox(height: 10),
-                              Wrap(
-                                spacing: 8,
-                                children: [
-                                  OutlinedButton.icon(
-                                    onPressed: talking || busy ? null : listen,
-                                    icon: const Icon(Icons.volume_up_rounded),
-                                    label: const Text('Послушать пример'),
-                                  ),
-                                  TextButton.icon(
-                                    onPressed: talking || busy
-                                        ? null
-                                        : () => listen(slow: true),
-                                    icon: const Icon(Icons.slow_motion_video),
-                                    label: const Text('Медленнее'),
-                                  ),
-                                ],
-                              ),
-                              const Divider(height: 30),
-                              SpeechSourceLabel(
-                                audio: widget.audio,
-                                character: step.character,
-                                text: step.phrase,
-                              ),
-                              const SizedBox(height: 10),
-                              Text(
-                                step.explanation,
-                                style: theme.textTheme.bodyLarge,
-                              ),
-                            ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+                    child: Row(
+                      children: [
+                        if (index > 0)
+                          IconButton(
+                            key: const Key('teaching-back'),
+                            tooltip: 'Назад к объяснению',
+                            onPressed: busy ? null : () => advance(index - 1),
+                            icon: const Icon(Icons.arrow_back),
+                          ),
+                        Expanded(
+                          child: FilledButton(
+                            key: const Key('teaching-next'),
+                            onPressed: busy ? null : () => advance(index + 1),
+                            child: Text(
+                              busy
+                                  ? 'Сохраняем…'
+                                  : last
+                                  ? 'Начать практику'
+                                  : 'Понятно, дальше',
+                            ),
                           ),
                         ),
-                      ),
-                      const SizedBox(height: 18),
-                      Text(
-                        'Сначала прочитай и пойми пример. В заданиях мы потренируем его без спешки.',
-                        style: theme.textTheme.bodyMedium,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-                  child: Row(
-                    children: [
-                      if (index > 0)
-                        IconButton(
-                          key: const Key('teaching-back'),
-                          tooltip: 'Назад к объяснению',
-                          onPressed: busy ? null : () => advance(index - 1),
-                          icon: const Icon(Icons.arrow_back),
-                        ),
-                      Expanded(
-                        child: FilledButton(
-                          key: const Key('teaching-next'),
-                          onPressed: busy ? null : () => advance(index + 1),
-                          child: Text(
-                            busy
-                                ? 'Сохраняем…'
-                                : last
-                                ? 'Начать практику'
-                                : 'Понятно, дальше',
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

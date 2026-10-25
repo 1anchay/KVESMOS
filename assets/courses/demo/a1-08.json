@@ -1,0 +1,246 @@
+{
+  "id": "a1-08",
+  "title": "Наши близкие",
+  "topic": "Семья",
+  "order": 7,
+  "vocabulary": [
+    {
+      "id": "en:father",
+      "en": "father",
+      "ru": "отец"
+    },
+    {
+      "id": "en:parent",
+      "en": "parent",
+      "ru": "родитель"
+    },
+    {
+      "id": "en:family",
+      "en": "family",
+      "ru": "семья"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Рассказать о родителях и семье во множественном числе.",
+  "guide": "Father — папа, family — семья. Family здесь обозначает одну семью: is. Parent — один родитель; parents — родители. These are — «это» для нескольких людей или предметов. We — мы. После we используем are. Перед одной семьёй говорим a family.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Папа и семья",
+      "phrase": "This is my father. This is my family.",
+      "translation": "Это мой папа. Это моя семья.",
+      "explanation": "Father — папа, family — семья. Family здесь обозначает одну семью: is."
+    },
+    {
+      "character": "miko",
+      "title": "Родители",
+      "phrase": "These are my parents.",
+      "translation": "Это мои родители.",
+      "explanation": "Parent — один родитель; parents — родители. These are — «это» для нескольких людей или предметов."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Мы вместе",
+      "phrase": "We are a family.",
+      "translation": "Мы — семья.",
+      "explanation": "We — мы. После we используем are. Перед одной семьёй говорим a family."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-08-v3-01",
+      "type": "choice",
+      "prompt": "На встречу пришли оба родителя. Выбери подпись.",
+      "answers": [
+        "These are my parents."
+      ],
+      "explanation": "Несколько человек: These are, а не This is.",
+      "hint": "Несколько человек: These are, а не This is.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:parent"
+      ],
+      "options": [
+        "These are my parents.",
+        "This is my father.",
+        "This is my sister."
+      ]
+    },
+    {
+      "id": "a1-08-v3-02",
+      "type": "pairs",
+      "prompt": "Соедини новые слова.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Parent — один родитель, family — вся семья.",
+      "hint": "Parent — один родитель, family — вся семья.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:father",
+        "en:parent",
+        "en:family"
+      ],
+      "pairs": [
+        {
+          "id": "en:father",
+          "en": "father",
+          "ru": "отец"
+        },
+        {
+          "id": "en:parent",
+          "en": "parent",
+          "ru": "родитель"
+        },
+        {
+          "id": "en:family",
+          "en": "family",
+          "ru": "семья"
+        }
+      ]
+    },
+    {
+      "id": "a1-08-v3-03",
+      "type": "order",
+      "prompt": "Собери: «Мы — семья».",
+      "answers": [
+        "We are a family"
+      ],
+      "explanation": "После we нужна форма are.",
+      "hint": "После we нужна форма are.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:family"
+      ],
+      "tokens": [
+        "We",
+        "are",
+        "a",
+        "family"
+      ]
+    },
+    {
+      "id": "a1-08-v3-04",
+      "type": "gap",
+      "prompt": "These ___ my parents.",
+      "answers": [
+        "are"
+      ],
+      "explanation": "После these используем are.",
+      "hint": "После these используем are.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:parent"
+      ]
+    },
+    {
+      "id": "a1-08-v3-05",
+      "type": "listen",
+      "prompt": "Какое слово звучит в конце фразы?",
+      "answers": [
+        "father"
+      ],
+      "explanation": "Father — папа.",
+      "hint": "Father — папа.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:father"
+      ],
+      "options": [
+        "father",
+        "mother",
+        "brother"
+      ],
+      "audio": "This is my father."
+    },
+    {
+      "id": "a1-08-v3-06",
+      "type": "correct",
+      "prompt": "Исправь: We is a family.",
+      "answers": [
+        "We are a family."
+      ],
+      "explanation": "We требует are, а не is.",
+      "hint": "We требует are, а не is.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:family"
+      ]
+    },
+    {
+      "id": "a1-08-v3-07",
+      "type": "translate",
+      "prompt": "Представь папу одним предложением.",
+      "answers": [
+        "This is my father."
+      ],
+      "explanation": "Знакомая конструкция This is my…",
+      "hint": "Знакомая конструкция This is my…",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:father"
+      ]
+    },
+    {
+      "id": "a1-08-v3-08",
+      "type": "dialogue",
+      "prompt": "Мико знакомит тебя с родителями. Поздоровайся.",
+      "answers": [
+        "Hello!",
+        "Hi!"
+      ],
+      "explanation": "Для приветствия достаточно Hello или Hi.",
+      "hint": "Для приветствия достаточно Hello или Hi.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:hello",
+        "en:parent"
+      ],
+      "options": [
+        "Hello!",
+        "Goodbye!",
+        "I am ten."
+      ],
+      "scene": "Мико: These are my parents.\nТы: …"
+    },
+    {
+      "id": "a1-08-v3-09",
+      "type": "review",
+      "prompt": "Вспомни: как сказать «моя сестра»?",
+      "answers": [
+        "my sister"
+      ],
+      "explanation": "My одинаково подходит к sister и father.",
+      "hint": "My одинаково подходит к sister и father.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:sister"
+      ]
+    },
+    {
+      "id": "a1-08-v3-10",
+      "type": "speak",
+      "prompt": "Представь родителей: «Это мои родители». Произнеси или напиши.",
+      "answers": [
+        "These are my parents."
+      ],
+      "explanation": "These are — для нескольких людей.",
+      "hint": "These are — для нескольких людей.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:parent"
+      ],
+      "audio": "These are my parents."
+    }
+  ]
+}

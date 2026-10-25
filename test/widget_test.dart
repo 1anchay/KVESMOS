@@ -46,7 +46,7 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(start);
     await flushDb(tester);
-    expect(find.text('Галактика\nзнаний'), findsOneWidget);
+    expect(find.textContaining('ЭКСПЕДИЦИЯ A1'), findsOneWidget);
     await tester.tap(find.text('Продолжить урок'));
     await flushDb(tester);
     await advanceTeaching(tester);
@@ -69,7 +69,7 @@ void main() {
     await tester.tap(check);
     await flushDb(tester);
     expect(app.progress.xp, 10);
-    expect(find.text('Верно! +10 XP'), findsOneWidget);
+    expect(find.text('Отлично, идём дальше!'), findsOneWidget);
     expect(find.text(CharacterCue.correct.lines.first), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();

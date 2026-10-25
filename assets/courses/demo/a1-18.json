@@ -1,0 +1,262 @@
+{
+  "id": "a1-18",
+  "title": "В новом городе",
+  "topic": "Путешествия",
+  "order": 17,
+  "vocabulary": [
+    {
+      "id": "en:hotel",
+      "en": "hotel",
+      "ru": "отель"
+    },
+    {
+      "id": "en:station",
+      "en": "station",
+      "ru": "станция"
+    },
+    {
+      "id": "en:map",
+      "en": "map",
+      "ru": "карта"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Спросить дорогу и понять простые указания.",
+  "guide": "Hotel — отель, station — станция или вокзал, map — карта. Знакомая конструкция Where is…? работает и с местами. The station — нужный вокзал. Указание начинается с действия: Go, Turn. Straight — прямо, left — налево, right — направо.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "В городе",
+      "phrase": "This is a hotel. This is a station. This is a map.",
+      "translation": "Это отель. Это станция. Это карта.",
+      "explanation": "Hotel — отель, station — станция или вокзал, map — карта."
+    },
+    {
+      "character": "miko",
+      "title": "Спросить дорогу",
+      "phrase": "Where is the station?",
+      "translation": "Где вокзал?",
+      "explanation": "Знакомая конструкция Where is…? работает и с местами. The station — нужный вокзал."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Понять маршрут",
+      "phrase": "Go straight. Turn left. Turn right.",
+      "translation": "Идите прямо. Поверните налево. Поверните направо.",
+      "explanation": "Указание начинается с действия: Go, Turn. Straight — прямо, left — налево, right — направо."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-18-v3-01",
+      "type": "choice",
+      "prompt": "Ты ищешь вокзал. Что спросить?",
+      "answers": [
+        "Where is the station?"
+      ],
+      "explanation": "Station — вокзал; вопрос начинается с Where is.",
+      "hint": "Station — вокзал; вопрос начинается с Where is.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:station"
+      ],
+      "options": [
+        "Where is the station?",
+        "Where is the hotel?",
+        "What is this?"
+      ]
+    },
+    {
+      "id": "a1-18-v3-02",
+      "type": "pairs",
+      "prompt": "Соедини слова на карте.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Map — карта, hotel — отель, station — вокзал.",
+      "hint": "Map — карта, hotel — отель, station — вокзал.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:hotel",
+        "en:station",
+        "en:map"
+      ],
+      "pairs": [
+        {
+          "id": "en:hotel",
+          "en": "hotel",
+          "ru": "отель"
+        },
+        {
+          "id": "en:station",
+          "en": "station",
+          "ru": "станция"
+        },
+        {
+          "id": "en:map",
+          "en": "map",
+          "ru": "карта"
+        }
+      ]
+    },
+    {
+      "id": "a1-18-v3-03",
+      "type": "order",
+      "prompt": "Спроси, где отель.",
+      "answers": [
+        "Where is the hotel"
+      ],
+      "explanation": "Where is the hotel — где отель?",
+      "hint": "Where is the hotel — где отель?",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:hotel"
+      ],
+      "tokens": [
+        "Where",
+        "is",
+        "the",
+        "hotel"
+      ]
+    },
+    {
+      "id": "a1-18-v3-04",
+      "type": "gap",
+      "prompt": "Поверните налево: Turn ___.",
+      "answers": [
+        "left"
+      ],
+      "explanation": "Left — налево, right — направо.",
+      "hint": "Left — налево, right — направо.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": []
+    },
+    {
+      "id": "a1-18-v3-05",
+      "type": "listen",
+      "prompt": "Какое указание ты услышал?",
+      "answers": [
+        "Идите прямо."
+      ],
+      "explanation": "Go straight — идите прямо.",
+      "hint": "Go straight — идите прямо.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [],
+      "options": [
+        "Идите прямо.",
+        "Поверните налево.",
+        "Поверните направо."
+      ],
+      "audio": "Go straight."
+    },
+    {
+      "id": "a1-18-v3-06",
+      "type": "correct",
+      "prompt": "Исправь вопрос: Where the hotel is?",
+      "answers": [
+        "Where is the hotel?"
+      ],
+      "explanation": "В вопросе is ставим перед the hotel.",
+      "hint": "В вопросе is ставим перед the hotel.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:hotel"
+      ]
+    },
+    {
+      "id": "a1-18-v3-07",
+      "type": "translate",
+      "prompt": "Скажи: «Поверните направо».",
+      "answers": [
+        "Turn right."
+      ],
+      "explanation": "Turn — поверните, right — направо.",
+      "hint": "Turn — поверните, right — направо.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": []
+    },
+    {
+      "id": "a1-18-v3-08",
+      "type": "dialogue",
+      "prompt": "Команда ищет отель. Спроси Орби о нём.",
+      "answers": [
+        "Where is the hotel?"
+      ],
+      "explanation": "Выбери вопрос именно об отеле.",
+      "hint": "Выбери вопрос именно об отеле.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:hello",
+        "en:hotel"
+      ],
+      "options": [
+        "Where is the hotel?",
+        "Where is the station?",
+        "I go by train."
+      ],
+      "scene": "Орби: Hello!\nТы: …",
+      "story": {
+        "id": "a1-18-story",
+        "title": "Карта нового города",
+        "step": 1,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-18-v3-09",
+      "type": "choice",
+      "prompt": "Орби ответил. Какой первый шаг маршрута?",
+      "answers": [
+        "Идти прямо."
+      ],
+      "explanation": "Сначала Go straight, затем Turn left.",
+      "hint": "Сначала Go straight, затем Turn left.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [],
+      "options": [
+        "Идти прямо.",
+        "Повернуть направо.",
+        "Ехать поездом."
+      ],
+      "scene": "Орби: Go straight. Turn left.",
+      "story": {
+        "id": "a1-18-story",
+        "title": "Карта нового города",
+        "step": 2,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-18-v3-10",
+      "type": "dialogue",
+      "prompt": "Маршрут понятен. Поблагодари проводника.",
+      "answers": [
+        "Thank you.",
+        "Thanks."
+      ],
+      "explanation": "Благодарность завершает разговор.",
+      "hint": "Благодарность завершает разговор.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:hotel"
+      ],
+      "scene": "Орби: The hotel!\nТы: …",
+      "story": {
+        "id": "a1-18-story",
+        "title": "Карта нового города",
+        "step": 3,
+        "total": 3
+      }
+    }
+  ]
+}

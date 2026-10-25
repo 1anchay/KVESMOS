@@ -57,6 +57,13 @@ import AVFoundation
           self.speechRequest = request
           result(player.play())
         case "stopSpeech": self.stopSpeech(); result(nil)
+        case "pauseSpeech":
+          guard let player = self.speechPlayer else { result(false); return }
+          player.pause(); result(true)
+        case "resumeSpeech":
+          guard let player = self.speechPlayer else { result(false); return }
+          try AVAudioSession.sharedInstance().setActive(true)
+          result(player.play())
         case "stop":
           self.stopSpeech()
           self.effects.values.forEach { $0.stop(); $0.currentTime = 0 }

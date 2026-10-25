@@ -22,6 +22,16 @@ android {
     }
 
     signingConfigs {
+        // CI selects its restored owner key explicitly; SDK defaults can point
+        // at a different ANDROID_USER_HOME and generate another debug key.
+        System.getenv("KVESMOS_PREVIEW_KEYSTORE")?.let { previewKey ->
+            getByName("debug") {
+                storeFile = file(previewKey)
+                storePassword = "android"
+                keyAlias = "androiddebugkey"
+                keyPassword = "android"
+            }
+        }
         if (signingFile.exists()) {
             create("release") {
                 keyAlias = signingProperties.getProperty("keyAlias")

@@ -1,3 +1,24 @@
+/// A tiny teaching beat before the learner is asked to recall the phrase.
+class LessonTeachingStep {
+  final String character, title, phrase, translation, explanation;
+  const LessonTeachingStep({
+    required this.character,
+    required this.title,
+    required this.phrase,
+    required this.translation,
+    required this.explanation,
+  });
+
+  factory LessonTeachingStep.fromJson(Map<String, dynamic> json) =>
+      LessonTeachingStep(
+        character: json['character'],
+        title: json['title'],
+        phrase: json['phrase'],
+        translation: json['translation'],
+        explanation: json['explanation'],
+      );
+}
+
 class Vocabulary {
   final String id, en, ru;
   const Vocabulary(this.id, this.en, this.ru);
@@ -23,7 +44,7 @@ class Exercise {
   final ExerciseType type;
   final List<String> answers, options, tokens, wordIds;
   final List<Vocabulary> pairs;
-  final String? audio;
+  final String? audio, hint;
   final String? scene, visual, introduction;
   final String character, phase;
   const Exercise({
@@ -37,6 +58,7 @@ class Exercise {
     this.wordIds = const [],
     this.pairs = const [],
     this.audio,
+    this.hint,
     this.scene,
     this.visual,
     this.introduction,
@@ -53,6 +75,7 @@ class Exercise {
     tokens: List<String>.from(j['tokens'] ?? []),
     wordIds: List<String>.from(j['wordIds'] ?? []),
     audio: j['audio'],
+    hint: j['hint'],
     scene: j['scene'],
     visual: j['visual'],
     introduction: j['introduction'],
@@ -66,9 +89,11 @@ class Exercise {
 
 class Lesson {
   final String id, title, topic, guide;
+  final String? objective;
   final int order;
   final List<Exercise> exercises;
   final List<Vocabulary> vocabulary;
+  final List<LessonTeachingStep> teachingSteps;
   const Lesson({
     required this.id,
     required this.title,
@@ -77,18 +102,24 @@ class Lesson {
     required this.order,
     required this.exercises,
     required this.vocabulary,
+    this.teachingSteps = const [],
+    this.objective,
   });
   factory Lesson.fromJson(Map<String, dynamic> j) => Lesson(
     id: j['id'],
     title: j['title'],
     topic: j['topic'],
     guide: j['guide'],
+    objective: j['objective'],
     order: j['order'],
     exercises: (j['exercises'] as List)
         .map((e) => Exercise.fromJson(e))
         .toList(),
     vocabulary: (j['vocabulary'] as List)
         .map((e) => Vocabulary.fromJson(e))
+        .toList(),
+    teachingSteps: (j['teachingSteps'] as List? ?? [])
+        .map((e) => LessonTeachingStep.fromJson(Map<String, dynamic>.from(e)))
         .toList(),
   );
 }

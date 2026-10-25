@@ -28,11 +28,7 @@ Future<void> loadPreviewFonts() async {
   final icons = FontLoader('MaterialIcons')
     ..addFont(
       Future.value(
-        ByteData.sublistView(
-          await File(
-            '.tools/flutter/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
-          ).readAsBytes(),
-        ),
+        ByteData.sublistView(await File(materialIconsFontPath()).readAsBytes()),
       ),
     );
   await icons.load();
@@ -159,6 +155,8 @@ void main() {
             ),
           ),
         );
+        await flushDb(tester);
+        await advanceTeaching(tester);
         await flushDb(tester);
         await tester.runAsync(() async {
           final context = tester.element(find.byType(LessonScreen));

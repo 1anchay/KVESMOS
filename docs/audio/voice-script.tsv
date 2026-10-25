@@ -1,0 +1,35 @@
+character	locale	text	context	status
+orbi	en-US	Hello!	a1-01: Скажи «привет»	recording-required
+miko	en-US	My name is Miko.	a1-01: Назови своё имя	recording-required
+zig_quartz	en-US	Goodbye!	a1-01: Попрощайся	recording-required
+miko	en-US	Hello! My name is Miko.	a1-01-guided-e05	recording-required
+orbi	en-US	My name is Orbi.	a1-01-guided-e08	recording-required
+miko	en-US	Goodbye!	a1-01-guided-e10	recording-required
+aster	en-US	This is my friend.	a1-02: Кто твой друг?	recording-required
+vespa	en-US	I am from Earth.	a1-02: Откуда ты?	recording-required
+vespa	en-US	Where are you from?	a1-02: Теперь твоя очередь спросить	recording-required
+miko	en-US	Welcome!	a1-02: Встреть гостя	recording-required
+vespa	ru-RU	Where are you from?\nТы: …	a1-02-pilot1-e06	recording-required
+pixie	en-US	This is a book.	a1-03: Положи книгу	recording-required
+nox	en-US	This is a pen.	a1-03: Найди ручку	recording-required
+miko	en-US	This is my bag.	a1-03: Где сумка?	recording-required
+orbi	en-US	The pen is in the bag.	a1-03: Положи вещь внутрь	recording-required
+orbi	en-US	bag	a1-03-pilot1-e03	recording-required
+miko	ru-RU	This is my bag.\nОрби: Where is the pen?\nТы: …	a1-03-pilot1-e06	recording-required
+aster	en-US	That is my house.	a1-04: Найди дом	recording-required
+miko	en-US	This is a door.	a1-04: У самого входа	recording-required
+pixie	en-US	That is a window.	a1-04: Посмотри вдаль	recording-required
+orbi	en-US	Is that your house?	a1-04: Спроси друга	recording-required
+orbi	en-US	door	a1-04-journey2-e05	recording-required
+aster	en-US	Is that your house?	a1-04-journey2-e07	recording-required
+reyvo	en-US	I have one book.	a1-05: Одна книга	recording-required
+pixie	en-US	I have two pens.	a1-05: Две ручки	recording-required
+nox	en-US	I have five bags.	a1-05: Пять сумок	recording-required
+orbi	en-US	How many books do you have?	a1-05: Проверь груз	recording-required
+reyvo	en-US	two	a1-05-journey2-e05	recording-required
+miko	en-US	I am six.	a1-06: Познакомься с Мико	recording-required
+orbi	en-US	I am ten years old.	a1-06: Полный ответ	recording-required
+vespa	en-US	I am twenty.	a1-06: Ещё одно число	recording-required
+aster	en-US	How old are you?	a1-06: Спроси собеседника	recording-required
+vespa	en-US	twenty	a1-06-journey2-e05	recording-required
+aster	en-US	Hello! How old are you?	a1-06-journey2-e07	recording-required

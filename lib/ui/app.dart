@@ -63,7 +63,12 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             GoRoute(path: '/crew', builder: (_, _) => const CrewPage()),
             GoRoute(path: '/', builder: (_, _) => const HomePage()),
             GoRoute(path: '/words', builder: (_, _) => const WordsPage()),
-            GoRoute(path: '/review', builder: (_, _) => const ReviewPage()),
+            GoRoute(
+              path: '/review',
+              builder: (_, state) => ReviewPage(
+                mistakesOnly: state.uri.queryParameters['mistakes'] == '1',
+              ),
+            ),
             GoRoute(path: '/stats', builder: (_, _) => const StatsPage()),
             GoRoute(
               path: '/achievements',

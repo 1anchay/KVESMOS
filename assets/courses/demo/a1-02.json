@@ -1,11 +1,11 @@
 {
   "id": "a1-02",
-  "title": "Новый друг на станции · новая практика",
-  "topic": "Приветствие и знакомство",
+  "title": "Новый друг · знакомимся на станции",
+  "topic": "Друзья, откуда ты и добро пожаловать",
   "section": 0,
   "theme": 0,
   "order": 1,
-  "guide": "From — из; friend — друг; welcome — добро пожаловать. I am from… — я из… В ответ на Where are you from? называют место, а не имя.",
+  "guide": "Ты уже умеешь здороваться. Теперь научись представить друга, сказать откуда ты и приветствовать гостя. Friend — друг; from — из; welcome — добро пожаловать.",
   "vocabulary": [
     {
       "id": "en:from",
@@ -26,90 +26,91 @@
   "exercises": [
     {
       "type": "choice",
-      "prompt": "Астэр знакомит с новым словом. Что значит friend?",
+      "prompt": "Астэр представляет нового друга. Что значит friend?",
       "answers": [
         "друг"
       ],
-      "explanation": "Friend — друг; from — из; welcome — добро пожаловать.",
-      "options": [
-        "друг",
-        "из",
-        "добро пожаловать"
-      ],
+      "explanation": "Friend значит «друг».",
       "character": "aster",
-      "introduction": "Сегодня: from — из, friend — друг, welcome — добро пожаловать. England — Англия, Mars — Марс.",
       "id": "a1-02-pilot1-e01",
       "phase": "Знакомство",
       "wordIds": [
         "en:friend"
-      ]
-    },
-    {
-      "type": "order",
-      "prompt": "Собери: «Я из Англии».",
-      "answers": [
-        "I am from England"
       ],
-      "explanation": "I am from + место происхождения.",
-      "tokens": [
-        "I",
-        "am",
-        "from",
-        "England"
-      ],
-      "character": "miko",
-      "id": "a1-02-pilot1-e02",
-      "phase": "Знакомство",
-      "wordIds": [
-        "en:from"
+      "hint": "Это человек, с которым ты дружишь.",
+      "options": [
+        "друг",
+        "из",
+        "добро пожаловать"
       ]
     },
     {
       "type": "choice",
-      "prompt": "Рэйво обращается к тебе. Что он делает?",
+      "prompt": "Веспа говорит I am from Earth. Что она сообщает?",
       "answers": [
-        "Приветствует друга"
+        "Я с Земли."
       ],
-      "explanation": "Welcome, my friend! — Добро пожаловать, мой друг!",
-      "audio": "Welcome, my friend!",
+      "explanation": "I am from… говорит, откуда человек.",
+      "character": "vespa",
+      "id": "a1-02-pilot1-e02",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:from"
+      ],
+      "hint": "From показывает место, откуда ты приехал.",
       "options": [
-        "Приветствует друга",
-        "Прощается",
-        "Называет своё имя"
+        "Я с Земли.",
+        "Меня зовут Земля.",
+        "Добро пожаловать!"
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Собери фразу «Я с Земли».",
+      "answers": [
+        "I am from Earth"
       ],
-      "character": "reyvo",
+      "explanation": "I am from Earth — я с Земли.",
+      "character": "miko",
       "id": "a1-02-pilot1-e03",
       "phase": "Понимание",
       "wordIds": [
-        "en:friend",
-        "en:welcome"
+        "en:from"
+      ],
+      "hint": "Сначала I am, потом from и название места.",
+      "tokens": [
+        "I",
+        "am",
+        "from",
+        "Earth"
       ]
     },
     {
       "type": "pairs",
-      "prompt": "Соедини слова нового знакомства.",
+      "prompt": "Соедини новые слова с переводами.",
       "answers": [
         "matched"
       ],
-      "explanation": "From — из, friend — друг, welcome — добро пожаловать.",
-      "character": "zig_quartz",
+      "explanation": "Friend — друг, from — из, welcome — добро пожаловать.",
+      "character": "aster",
       "id": "a1-02-pilot1-e04",
       "phase": "Понимание",
       "wordIds": [
-        "en:from",
         "en:friend",
+        "en:from",
         "en:welcome"
       ],
+      "hint": "Здесь три слова: человек, происхождение и встреча.",
       "pairs": [
-        {
-          "id": "en:from",
-          "en": "from",
-          "ru": "из"
-        },
         {
           "id": "en:friend",
           "en": "friend",
           "ru": "друг"
+        },
+        {
+          "id": "en:from",
+          "en": "from",
+          "ru": "из"
         },
         {
           "id": "en:welcome",
@@ -120,111 +121,142 @@
     },
     {
       "type": "gap",
-      "prompt": "Орби представляет спутника: This is my ___.",
+      "prompt": "This is my ___.",
       "answers": [
         "friend"
       ],
-      "explanation": "This is my friend. — Это мой друг.",
-      "options": [
-        "friend",
-        "from",
-        "welcome"
-      ],
-      "character": "fox_scholar",
-      "introduction": "This is my friend. — Это мой друг.",
+      "explanation": "This is my friend — Это мой друг.",
+      "character": "miko",
       "id": "a1-02-pilot1-e05",
       "phase": "Понимание",
       "wordIds": [
         "en:friend"
+      ],
+      "hint": "После my здесь нужен человек: друг.",
+      "options": [
+        "friend",
+        "from",
+        "welcome"
       ]
     },
     {
       "type": "dialogue",
-      "prompt": "Что ответить гостю?",
+      "prompt": "Веспа спрашивает, откуда ты. Что ответишь?",
       "answers": [
-        "I am from England."
+        "I am from Earth."
       ],
-      "explanation": "Where are you from? — Откуда ты? Отвечаем I am from + место.",
-      "scene": "Веспа: Where are you from?\nТы прибыл из Англии.",
-      "audio": "Where are you from?",
-      "options": [
-        "I am from England.",
-        "My name is Miko.",
-        "Goodbye!"
-      ],
+      "explanation": "Отвечай I am from… и называй место.",
       "character": "vespa",
       "id": "a1-02-pilot1-e06",
       "phase": "Практика",
       "wordIds": [
         "en:from"
-      ]
+      ],
+      "hint": "В вопросе есть from; ответ тоже содержит from.",
+      "options": [
+        "I am from Earth.",
+        "My name is Miko.",
+        "Goodbye!"
+      ],
+      "scene": "Веспа: Where are you from?\\nТы: …"
     },
     {
       "type": "correct",
-      "prompt": "Зиг записал: You is my friend. Найди ошибку.",
+      "prompt": "Зиг написал: I from Earth. Исправь предложение.",
       "answers": [
-        "You are my friend."
+        "I am from Earth."
       ],
-      "explanation": "С You используем are: You are my friend. — Ты мой друг.",
-      "character": "vespa",
-      "introduction": "I am — я; You are — ты. You are my friend. — Ты мой друг.",
+      "explanation": "В английском предложении I am from Earth нужен am.",
+      "character": "zig_quartz",
       "id": "a1-02-pilot1-e07",
       "phase": "Практика",
       "wordIds": [
-        "en:friend"
-      ]
+        "en:from"
+      ],
+      "hint": "Между I и from вставляется am."
     },
     {
-      "type": "order",
-      "prompt": "Собери разговор: сначала приветствие, затем знакомство, затем приглашение.",
-      "answers": [
-        "A: Hello! B: My name is Miko. A: Welcome, Miko!"
-      ],
-      "explanation": "Приветствуем гостя, узнаём его имя и приглашаем на станцию.",
-      "tokens": [
-        "A: Hello!",
-        "B: My name is Miko.",
-        "A: Welcome, Miko!"
-      ],
-      "character": "zig_quartz",
-      "id": "a1-02-pilot1-e08",
-      "phase": "Практика",
-      "wordIds": [
-        "en:welcome"
-      ]
-    },
-    {
-      "type": "choice",
-      "prompt": "Ты встречаешь нового гостя на станции. Выбери дружелюбную реплику.",
+      "type": "listen",
+      "prompt": "Послушай, что говорит Мико, и выбери услышанное.",
       "answers": [
         "Welcome!"
       ],
-      "explanation": "Welcome! — Добро пожаловать! Подходит для встречи гостя.",
+      "explanation": "Welcome! — добро пожаловать; не перепутай с прощанием.",
+      "character": "miko",
+      "id": "a1-02-pilot1-e08",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:welcome"
+      ],
+      "hint": "Послушай начало слова. Если голос недоступен, покажи текст.",
       "options": [
         "Welcome!",
         "Goodbye!",
-        "I am from Mars."
+        "Hello!"
       ],
+      "audio": "Welcome!"
+    },
+    {
+      "type": "translate",
+      "prompt": "Гость с Земли. Теперь сам спроси его: «Откуда ты?»",
+      "answers": [
+        "Where are you from?"
+      ],
+      "explanation": "Where are you from? — откуда ты? Можно продолжить знакомство этим вопросом.",
       "character": "orbi",
       "id": "a1-02-pilot1-e09",
       "phase": "Закрепление",
       "wordIds": [
-        "en:welcome"
-      ]
+        "en:from"
+      ],
+      "hint": "Вопрос начинается Where are you…"
     },
     {
       "type": "review",
-      "prompt": "Закрепим: переведи «друг».",
+      "prompt": "Без вариантов: как по-английски будет «друг»?",
       "answers": [
         "friend"
       ],
-      "explanation": "Friend — друг. Вспомни нового друга на станции.",
-      "character": "reyvo",
+      "explanation": "Friend — друг. Теперь ты умеешь представлять друзей.",
+      "character": "aster",
       "id": "a1-02-pilot1-e10",
       "phase": "Закрепление",
       "wordIds": [
         "en:friend"
-      ]
+      ],
+      "hint": "Мы познакомились с этим словом в начале урока."
     }
-  ]
+  ],
+  "teachingSteps": [
+    {
+      "character": "aster",
+      "title": "Кто твой друг?",
+      "phrase": "This is my friend.",
+      "translation": "Это мой друг.",
+      "explanation": "Friend — друг. This is my friend — полезная фраза, когда знакомишь двух людей."
+    },
+    {
+      "character": "vespa",
+      "title": "Откуда ты?",
+      "phrase": "I am from Earth.",
+      "translation": "Я с Земли.",
+      "explanation": "Вопрос Where are you from? значит «Откуда ты?». Можно ответить I am from… и назвать место. I am — я (есть)."
+    },
+    {
+      "character": "vespa",
+      "title": "Теперь твоя очередь спросить",
+      "phrase": "Where are you from?",
+      "translation": "Откуда ты?",
+      "explanation": "Мы уже знаем ответ I am from Earth. Earth — Земля. Вопрос Where are you from? помогает узнать, откуда собеседник."
+    },
+    {
+      "character": "miko",
+      "title": "Встреть гостя",
+      "phrase": "Welcome!",
+      "translation": "Добро пожаловать!",
+      "explanation": "Welcome — так приветствуют человека, который только пришёл. Скажи Welcome, Miko!, когда Мико появится на станции."
+    }
+  ],
+  "objective": "Представить друга, спросить откуда он и встретить гостя.",
+  "materialVersion": 2
 }

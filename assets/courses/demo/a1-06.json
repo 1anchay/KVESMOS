@@ -1,0 +1,265 @@
+{
+  "id": "a1-06",
+  "title": "Знакомство с экипажем · возраст",
+  "topic": "Числа",
+  "section": 0,
+  "theme": 2,
+  "order": 5,
+  "guide": "Продолжаем знакомство. Six — шесть, ten — десять, twenty — двадцать. Возраст: I am ten. или I am ten years old. В отличие от вещей с I have, возраст выражаем через I am.",
+  "vocabulary": [
+    {
+      "id": "en:six",
+      "en": "six",
+      "ru": "шесть"
+    },
+    {
+      "id": "en:ten",
+      "en": "ten",
+      "ru": "десять"
+    },
+    {
+      "id": "en:twenty",
+      "en": "twenty",
+      "ru": "двадцать"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Мико говорит: I am six. Сколько ему лет?",
+      "answers": [
+        "шесть"
+      ],
+      "explanation": "Six — шесть, это возраст Мико.",
+      "hint": "Сравни три новых числа: six, ten, twenty.",
+      "wordIds": [
+        "en:six"
+      ],
+      "character": "miko",
+      "options": [
+        "шесть",
+        "десять",
+        "двадцать"
+      ],
+      "id": "a1-06-journey2-e01",
+      "phase": "Знакомство"
+    },
+    {
+      "type": "choice",
+      "prompt": "Выбери вопрос о возрасте.",
+      "answers": [
+        "How old are you?"
+      ],
+      "explanation": "How old are you? — сколько тебе лет? How many…? — сколько предметов?",
+      "hint": "О возрасте спрашиваем с How old.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "character": "aster",
+      "options": [
+        "How old are you?",
+        "How many books do you have?",
+        "Where are you from?"
+      ],
+      "id": "a1-06-journey2-e02",
+      "phase": "Знакомство"
+    },
+    {
+      "type": "order",
+      "prompt": "Ответь за Мико: «Мне шесть лет».",
+      "answers": [
+        "I am six years old"
+      ],
+      "explanation": "I am six years old — полный ответ о возрасте.",
+      "hint": "I am + число + years old.",
+      "wordIds": [
+        "en:six"
+      ],
+      "character": "miko",
+      "tokens": [
+        "I",
+        "am",
+        "six",
+        "years",
+        "old"
+      ],
+      "id": "a1-06-journey2-e03",
+      "phase": "Понимание"
+    },
+    {
+      "type": "pairs",
+      "prompt": "Соедини возраст с числом.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Six — шесть; ten — десять; twenty — двадцать.",
+      "hint": "Сначала найди знакомое ten.",
+      "wordIds": [
+        "en:six",
+        "en:ten",
+        "en:twenty"
+      ],
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:six",
+          "en": "six",
+          "ru": "шесть"
+        },
+        {
+          "id": "en:ten",
+          "en": "ten",
+          "ru": "десять"
+        },
+        {
+          "id": "en:twenty",
+          "en": "twenty",
+          "ru": "двадцать"
+        }
+      ],
+      "id": "a1-06-journey2-e04",
+      "phase": "Понимание"
+    },
+    {
+      "type": "listen",
+      "prompt": "Веспа называет число. Выбери услышанное.",
+      "answers": [
+        "twenty"
+      ],
+      "explanation": "Twenty означает двадцать, ten — десять.",
+      "hint": "Можно сравнить звучание, повторив сигнал.",
+      "wordIds": [
+        "en:twenty"
+      ],
+      "character": "vespa",
+      "audio": "twenty",
+      "options": [
+        "six",
+        "ten",
+        "twenty"
+      ],
+      "id": "a1-06-journey2-e05",
+      "phase": "Понимание"
+    },
+    {
+      "type": "gap",
+      "prompt": "Нокс говорит о возрасте: I ___ ten years old.",
+      "answers": [
+        "am"
+      ],
+      "explanation": "Возраст выражаем через I am. I have подходит для вещей.",
+      "hint": "С I используется am.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "character": "nox",
+      "options": [
+        "am",
+        "have",
+        "is"
+      ],
+      "id": "a1-06-journey2-e06",
+      "phase": "Практика"
+    },
+    {
+      "type": "dialogue",
+      "prompt": "Тебе по роли двадцать лет. Ответь Астэру.",
+      "answers": [
+        "I am twenty.",
+        "I am twenty years old."
+      ],
+      "explanation": "Оба ответа верны: I am twenty и I am twenty years old.",
+      "hint": "Начни с I am; число — twenty.",
+      "wordIds": [
+        "en:twenty"
+      ],
+      "character": "aster",
+      "scene": "Астэр: Hello! How old are you?\nТы: …",
+      "options": [
+        "I am twenty.",
+        "I have twenty bags.",
+        "This is a window."
+      ],
+      "id": "a1-06-journey2-e07",
+      "phase": "Практика"
+    },
+    {
+      "type": "correct",
+      "prompt": "Зиг записал возраст: I have ten years old. Исправь.",
+      "answers": [
+        "I am ten years old."
+      ],
+      "explanation": "О возрасте говорим am; have означает «у меня есть».",
+      "hint": "Замени have на форму be для I.",
+      "wordIds": [
+        "en:ten"
+      ],
+      "character": "zig_quartz",
+      "id": "a1-06-journey2-e08",
+      "phase": "Практика"
+    },
+    {
+      "type": "translate",
+      "prompt": "Самостоятельно ответь за Мико: «Мне шесть».",
+      "answers": [
+        "I am six.",
+        "I am six years old."
+      ],
+      "explanation": "Короткий ответ I am six подходит в разговоре о возрасте.",
+      "hint": "I am + число.",
+      "wordIds": [
+        "en:six"
+      ],
+      "character": "miko",
+      "id": "a1-06-journey2-e09",
+      "phase": "Закрепление"
+    },
+    {
+      "type": "review",
+      "prompt": "В карточке экипажа возраст 20. Напиши только число словом.",
+      "answers": [
+        "twenty"
+      ],
+      "explanation": "Twenty — двадцать. Теперь ты умеешь спросить о возрасте и ответить.",
+      "hint": "Начало слова: tw…",
+      "wordIds": [
+        "en:twenty"
+      ],
+      "character": "vespa",
+      "id": "a1-06-journey2-e10",
+      "phase": "Закрепление"
+    }
+  ],
+  "objective": "Спросить о возрасте и ответить коротко или полной фразой.",
+  "teachingSteps": [
+    {
+      "character": "miko",
+      "title": "Познакомься с Мико",
+      "phrase": "I am six.",
+      "translation": "Мне шесть лет.",
+      "explanation": "Six — шесть. О возрасте можно сказать коротко: I am six. Не I have six — это не количество вещей."
+    },
+    {
+      "character": "orbi",
+      "title": "Полный ответ",
+      "phrase": "I am ten years old.",
+      "translation": "Мне десять лет.",
+      "explanation": "Ten — десять. Years old добавляют после числа, когда говорят о возрасте. I am ten тоже верно."
+    },
+    {
+      "character": "vespa",
+      "title": "Ещё одно число",
+      "phrase": "I am twenty.",
+      "translation": "Мне двадцать лет.",
+      "explanation": "Twenty — двадцать. Сравни ten (10) и twenty (20). Конструкция I am… остаётся той же."
+    },
+    {
+      "character": "aster",
+      "title": "Спроси собеседника",
+      "phrase": "How old are you?",
+      "translation": "Сколько тебе лет?",
+      "explanation": "How old are you? — вопрос о возрасте. Мико отвечает I am six. А How many…? из прошлого урока спрашивает о количестве предметов."
+    }
+  ],
+  "materialVersion": 2
+}

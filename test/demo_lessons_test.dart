@@ -14,11 +14,11 @@ import 'widget_test.dart' show flushDb;
 void main() {
   setUpAll(setupSqlite);
   test(
-    'three authored pilots validate and complete through the existing checker with unchanged XP',
+    'six authored lessons validate and complete with unchanged XP',
     () async {
       final r = memoryRepository();
       await r.initialize();
-      for (final id in ['a1-01', 'a1-02', 'a1-03']) {
+      for (final id in ['a1-01', 'a1-02', 'a1-03', 'a1-04', 'a1-05', 'a1-06']) {
         final result = await r.startLesson(id);
         final l = result.lesson;
         expect(l.exercises, hasLength(10));
@@ -54,9 +54,16 @@ void main() {
         expect((await r.session(result.session.id)).done, true);
       }
       final p = await r.progress();
-      expect(p.xp, 360);
-      expect(p.completed, {'a1-01', 'a1-02', 'a1-03'});
-      expect(p.correct, 30);
+      expect(p.xp, 720);
+      expect(p.completed, {
+        'a1-01',
+        'a1-02',
+        'a1-03',
+        'a1-04',
+        'a1-05',
+        'a1-06',
+      });
+      expect(p.correct, 60);
       await r.db.close();
     },
   );
@@ -156,9 +163,12 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.text('Начать обновлённый урок'));
       await flushDb(tester);
+      await advanceTeaching(tester);
       expect(find.text('Новый формат'), findsOneWidget);
       expect(
-        find.text('Мико встречает тебя у станции. Как сказать «привет»?'),
+        find.text(
+          'Орби встречает тебя на космической станции. Что ему ответить?',
+        ),
         findsOneWidget,
       );
       expect(app.progress.xp, 10);
@@ -169,9 +179,9 @@ void main() {
     },
   );
   testWidgets(
-    'all three pilots complete with audio disabled through real controls',
+    'all six lessons complete with audio disabled through real controls',
     (tester) async {
-      for (var number = 1; number <= 3; number++) {
+      for (var number = 1; number <= 6; number++) {
         final r = memoryRepository();
         final app = AppController(r);
         final id = 'a1-0$number';
@@ -223,6 +233,8 @@ void main() {
           await tester.pump(const Duration(milliseconds: 250));
         }
         await tester.pumpAndSettle();
+        await advanceTeaching(tester);
+        await flushDb(tester);
         Future<void> top() async {
           final list = tester.state<ScrollableState>(
             find.byType(Scrollable).first,
@@ -340,6 +352,8 @@ void main() {
               ),
             ),
           );
+          await flushDb(tester);
+          await advanceTeaching(tester);
           await flushDb(tester);
           await tester.scrollUntilVisible(
             find.text('Проверить'),

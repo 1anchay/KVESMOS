@@ -1,7 +1,20 @@
+import org.gradle.api.artifacts.repositories.MavenArtifactRepository
+
 allprojects {
     repositories {
         google()
         mavenCentral()
+        // Flutter's Maven host contains io.flutter artifacts, not AndroidX.
+        // Avoid querying this host for dynamic androidx.test versions:
+        // it may be unreachable while Google's Android Maven is accessible.
+        configureEach {
+            if (this is MavenArtifactRepository &&
+                url.toString().contains("download.flutter.io")) {
+                content {
+                    includeGroup("io.flutter")
+                }
+            }
+        }
     }
 }
 

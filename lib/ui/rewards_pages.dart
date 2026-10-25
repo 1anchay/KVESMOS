@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../domain/rewards.dart';
 import 'design.dart';
+import 'galaxy_components.dart';
 import 'character_reactions.dart';
 import '../services/learning_audio.dart';
 
@@ -160,7 +161,7 @@ class ProfileLook extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Исследователь · уровень ${app.progress.level}',
+                  'Команда KVESMOS · уровень ${app.progress.level}',
                   textAlign: TextAlign.center,
                   style: const TextStyle(color: Colors.white),
                 ),
@@ -215,9 +216,11 @@ class RewardsPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final app = ref.watch(appProvider), catalog = app.rewards.catalog;
     return pageBody([
-      Text(
-        'Сокровища галактики',
-        style: Theme.of(context).textTheme.headlineMedium,
+      const MissionHeader(
+        eyebrow: 'Находки экспедиции',
+        title: 'Сокровища галактики',
+        subtitle: 'Каждая находка — память о твоих открытиях.',
+        icon: Icons.redeem_rounded,
       ),
       CharacterReaction(
         cue: CharacterCue.pixieReady,
@@ -255,10 +258,23 @@ class RewardsPage extends ConsumerWidget {
               padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
-                  Image.asset(
-                    'assets/kvesmos/${grant.kind}_${grant.itemId == null ? 'closed' : 'open'}.png',
-                    height: 146,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: GalaxyField(
+                      deep: true,
+                      child: SizedBox(
+                        width: double.infinity,
+                        height: 180,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Image.asset(
+                            'assets/kvesmos/${grant.kind}_${grant.itemId == null ? 'closed' : 'open'}.png',
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
+                  const SizedBox(height: 16),
                   Text(
                     catalog.chest(grant.kind)['name_ru'],
                     textAlign: TextAlign.center,
@@ -522,15 +538,18 @@ class _OpenChestDialogState extends ConsumerState<OpenChestDialog>
                         ],
                       ),
                     ),
-                    child: Transform.rotate(
-                      angle: reduce || t >= .55
-                          ? 0
-                          : math.sin(t * math.pi * 20) * .055,
-                      child: Transform.scale(
-                        scale: reduce ? 1 : 1 + math.sin(math.pi * t) * .08,
-                        child: Image.asset(
-                          'assets/kvesmos/${widget.grant.kind}_${opened ? 'open' : 'closed'}.png',
-                          height: 176,
+                    child: CustomPaint(
+                      foregroundPainter: RewardBurst(t, starYellow, reduce),
+                      child: Transform.rotate(
+                        angle: reduce || t >= .55
+                            ? 0
+                            : math.sin(t * math.pi * 20) * .055,
+                        child: Transform.scale(
+                          scale: reduce ? 1 : 1 + math.sin(math.pi * t) * .08,
+                          child: Image.asset(
+                            'assets/kvesmos/${widget.grant.kind}_${opened ? 'open' : 'closed'}.png',
+                            height: 176,
+                          ),
                         ),
                       ),
                     ),

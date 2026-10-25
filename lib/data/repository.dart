@@ -13,6 +13,7 @@ class LearningRepository {
   final List<LessonInfo> catalog = [];
   final Map<String, Vocabulary> vocabulary = {};
   final Map<String, String> updatedMaterials = {};
+  final Map<String, String> learningObjectives = {};
   LearningRepository(
     this.db, {
     DateTime Function()? now,
@@ -52,8 +53,10 @@ class LearningRepository {
       }
     }
     await setSetting('installed', 'true');
-    for (final id in ['a1-01', 'a1-02', 'a1-03', 'a1-04', 'a1-05', 'a1-06']) {
+    for (final id in catalog.map((lesson) => lesson.id)) {
       updatedMaterials[id] = await loadAsset('assets/courses/demo/$id.json');
+      learningObjectives[id] =
+          jsonDecode(updatedMaterials[id]!)['objective'] ?? '';
     }
   }
 

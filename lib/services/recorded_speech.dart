@@ -92,9 +92,21 @@ abstract class RecordedSpeechBackend {
   Future<void> stop();
 }
 
-class NativeRecordedSpeech implements RecordedSpeechBackend {
+abstract interface class PausableRecordedSpeech {
+  Future<bool> pause();
+  Future<bool> resume();
+}
+
+class NativeRecordedSpeech
+    implements RecordedSpeechBackend, PausableRecordedSpeech {
   static const channel = MethodChannel('dev.orbitwords/learning_audio');
   bool _active = false;
+  @override
+  Future<bool> pause() async =>
+      _active && await channel.invokeMethod<bool>('pauseSpeech') == true;
+  @override
+  Future<bool> resume() async =>
+      _active && await channel.invokeMethod<bool>('resumeSpeech') == true;
   @override
   Future<bool> play(
     SpeechRecording clip, {

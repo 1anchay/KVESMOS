@@ -383,7 +383,13 @@ class SpeechPlayback {
   final String character;
   final SpeechSource source;
   final bool playing;
-  const SpeechPlayback(this.character, this.source, this.playing);
+  final bool paused;
+  const SpeechPlayback(
+    this.character,
+    this.source,
+    this.playing, {
+    this.paused = false,
+  });
 }
 
 class LearningAudio {
@@ -454,11 +460,11 @@ class LearningAudio {
               call.method == 'recordingFailed') &&
           call.arguments == _recordingRequest) {
         _recordingRequest = null;
-        playback.value = null;
         if (call.method == 'recordingFailed') {
           lastProblem =
               'Запись прервалась. Повторите прослушивание или прочитайте текст.';
         }
+        playback.value = null;
       }
     });
     await effects.prepare();
@@ -586,5 +592,33 @@ class LearningAudio {
     await voices.stop();
     await recordedPlayer.stop();
     await effects.stop();
+  }
+
+  Future<bool> pauseOrResume() async {
+    final current = playback.value, player = recordedPlayer;
+    if (current == null ||
+        current.source != SpeechSource.recording ||
+        player is! PausableRecordedSpeech) {
+      return false;
+    }
+    final ticket = _generation;
+    try {
+      final pausable = player as PausableRecordedSpeech;
+      final ok = current.paused
+          ? await pausable.resume()
+          : await pausable.pause();
+      if (!ok || ticket != _generation || _recordingRequest == null) {
+        return false;
+      }
+      playback.value = SpeechPlayback(
+        current.character,
+        current.source,
+        current.paused,
+        paused: !current.paused,
+      );
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 }

@@ -1,0 +1,243 @@
+{
+  "id": "a1-15",
+  "title": "На уроке",
+  "topic": "Работа и учёба",
+  "order": 14,
+  "vocabulary": [
+    {
+      "id": "en:student",
+      "en": "student",
+      "ru": "студент"
+    },
+    {
+      "id": "en:teacher",
+      "en": "teacher",
+      "ru": "учитель"
+    },
+    {
+      "id": "en:lesson",
+      "en": "lesson",
+      "ru": "урок"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Назвать роль в классе и спросить, что это за предмет.",
+  "guide": "Student — ученик или студент; teacher — учитель. Перед названием роли одного человека используем a. Lesson — урок. English — английский. Перед гласным звуком в English используется an вместо a. What is this? — вопрос о предмете. It is… — ответ. Для вопроса о роли: Are you a student? — Ты ученик?",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "В академии",
+      "phrase": "I am a student. She is a teacher.",
+      "translation": "Я ученик. Она учитель.",
+      "explanation": "Student — ученик или студент; teacher — учитель. Перед названием роли одного человека используем a."
+    },
+    {
+      "character": "miko",
+      "title": "На уроке",
+      "phrase": "This is an English lesson.",
+      "translation": "Это урок английского.",
+      "explanation": "Lesson — урок. English — английский. Перед гласным звуком в English используется an вместо a."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что это?",
+      "phrase": "What is this? It is a pen.",
+      "translation": "Что это? Это ручка.",
+      "explanation": "What is this? — вопрос о предмете. It is… — ответ. Для вопроса о роли: Are you a student? — Ты ученик?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-15-v3-01",
+      "type": "choice",
+      "prompt": "Представь свою роль ученика.",
+      "answers": [
+        "I am a student."
+      ],
+      "explanation": "Student — ученик; перед ролью нужен a.",
+      "hint": "Student — ученик; перед ролью нужен a.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:student"
+      ],
+      "options": [
+        "I am a student.",
+        "I am a teacher.",
+        "I am a lesson."
+      ]
+    },
+    {
+      "id": "a1-15-v3-02",
+      "type": "pairs",
+      "prompt": "Подпиши слова академии.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Lesson — занятие, teacher — учитель, student — ученик.",
+      "hint": "Lesson — занятие, teacher — учитель, student — ученик.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:student",
+        "en:teacher",
+        "en:lesson"
+      ],
+      "pairs": [
+        {
+          "id": "en:student",
+          "en": "student",
+          "ru": "студент"
+        },
+        {
+          "id": "en:teacher",
+          "en": "teacher",
+          "ru": "учитель"
+        },
+        {
+          "id": "en:lesson",
+          "en": "lesson",
+          "ru": "урок"
+        }
+      ]
+    },
+    {
+      "id": "a1-15-v3-03",
+      "type": "order",
+      "prompt": "Спроси, что это за предмет.",
+      "answers": [
+        "What is this"
+      ],
+      "explanation": "What is this — что это?",
+      "hint": "What is this — что это?",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [],
+      "tokens": [
+        "What",
+        "is",
+        "this"
+      ]
+    },
+    {
+      "id": "a1-15-v3-04",
+      "type": "gap",
+      "prompt": "This is ___ English lesson.",
+      "answers": [
+        "an"
+      ],
+      "explanation": "English начинается с гласного звука: an English lesson.",
+      "hint": "English начинается с гласного звука: an English lesson.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:lesson"
+      ]
+    },
+    {
+      "id": "a1-15-v3-05",
+      "type": "listen",
+      "prompt": "Кто она?",
+      "answers": [
+        "teacher"
+      ],
+      "explanation": "Teacher — учитель.",
+      "hint": "Teacher — учитель.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:teacher"
+      ],
+      "options": [
+        "teacher",
+        "student",
+        "mother"
+      ],
+      "audio": "She is a teacher."
+    },
+    {
+      "id": "a1-15-v3-06",
+      "type": "correct",
+      "prompt": "Исправь: I am student.",
+      "answers": [
+        "I am a student."
+      ],
+      "explanation": "Перед названием одной роли нужен артикль a.",
+      "hint": "Перед названием одной роли нужен артикль a.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:student"
+      ]
+    },
+    {
+      "id": "a1-15-v3-07",
+      "type": "translate",
+      "prompt": "Скажи: «Это урок английского».",
+      "answers": [
+        "This is an English lesson.",
+        "It is an English lesson."
+      ],
+      "explanation": "Используй an перед English.",
+      "hint": "Используй an перед English.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:lesson"
+      ]
+    },
+    {
+      "id": "a1-15-v3-08",
+      "type": "dialogue",
+      "prompt": "На столе ручка. Ответь на вопрос Зига.",
+      "answers": [
+        "It is a pen.",
+        "This is a pen."
+      ],
+      "explanation": "Назови предмет с a.",
+      "hint": "Назови предмет с a.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:pen"
+      ],
+      "options": [
+        "It is a pen.",
+        "It is a teacher.",
+        "I am a pen."
+      ],
+      "scene": "Зиг: What is this?\nТы: …"
+    },
+    {
+      "id": "a1-15-v3-09",
+      "type": "review",
+      "prompt": "Скажи: «Она читает».",
+      "answers": [
+        "She reads."
+      ],
+      "explanation": "После she у действия есть -s.",
+      "hint": "После she у действия есть -s.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:read"
+      ]
+    },
+    {
+      "id": "a1-15-v3-10",
+      "type": "speak",
+      "prompt": "Спроси собеседника, ученик ли он.",
+      "answers": [
+        "Are you a student?"
+      ],
+      "explanation": "Вопрос с you начинается с Are you.",
+      "hint": "Вопрос с you начинается с Are you.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:student"
+      ],
+      "audio": "Are you a student?"
+    }
+  ]
+}

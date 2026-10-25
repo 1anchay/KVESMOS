@@ -17,6 +17,7 @@ import 'lesson_introduction.dart';
 import 'dialogue_scene.dart';
 import 'character_moment.dart';
 import 'speech_source.dart';
+import 'galaxy_components.dart';
 import 'character_reactions.dart';
 import 'rewards_pages.dart';
 import '../services/learning_audio.dart';
@@ -397,6 +398,55 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           ),
         ],
       ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.viewInsetsOf(context).bottom,
+        ),
+        child: SafeArea(
+          top: false,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 12),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (result != null)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Semantics(
+                      liveRegion: true,
+                      child: Text(
+                        result!
+                            ? 'Отлично, идём дальше!'
+                            : 'Попробуем ещё раз — подсказка ниже задания',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: Theme.of(context).colorScheme.onSurface,
+                        ),
+                      ),
+                    ),
+                  ),
+                FilledButton(
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size(double.infinity, 60),
+                  ),
+                  onPressed: busy || (!canCheck && result == null)
+                      ? null
+                      : check,
+                  child: Text(
+                    busy
+                        ? 'Сохраняем…'
+                        : result == true
+                        ? 'Дальше'
+                        : result == false
+                        ? 'Попробовать снова'
+                        : 'Проверить',
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
       body: SafeArea(
         child: QuestionEntrance(
           questionId: e.id,
@@ -425,7 +475,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 ),
               ),
             LessonProgress(done: answered, total: lesson!.exercises.length),
-            if (consecutiveCorrect >= 2) ...[
+            if (consecutiveCorrect >= 2 && e.story == null) ...[
               const SizedBox(height: 8),
               Row(
                 children: [
@@ -440,43 +490,40 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 ],
               ),
             ],
-            if (e.phase.isNotEmpty) ...[
+            if (e.phase.isNotEmpty && e.story == null) ...[
               const SizedBox(height: 12),
-              Wrap(
-                spacing: 8,
+              Wrap(spacing: 8, children: [Chip(label: Text(e.phase))]),
+            ],
+            const SizedBox(height: 12),
+            if (e.story != null)
+              StoryPanel(story: e.story!, completed: result == true),
+            if (e.story == null)
+              Row(
                 children: [
-                  Chip(label: Text(e.phase)),
-                  const Chip(label: Text('Новый формат')),
+                  SpeakingCharacter(
+                    audio: audio,
+                    character: e.character,
+                    state: result == true
+                        ? CharacterState.correct
+                        : result == false
+                        ? CharacterState.support
+                        : CharacterState.thinking,
+                    size: 66,
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      e.visual != null
+                          ? 'Узнай предмет'
+                          : e.audio != null && e.options.isNotEmpty
+                          ? 'Слушай и выбирай'
+                          : exerciseNames[e.type]!,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ),
                 ],
               ),
-            ],
-            const SizedBox(height: 24),
-            Row(
-              children: [
-                SpeakingCharacter(
-                  audio: audio,
-                  character: e.character,
-                  state: result == true
-                      ? CharacterState.correct
-                      : result == false
-                      ? CharacterState.support
-                      : CharacterState.thinking,
-                  size: 66,
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Text(
-                    e.visual != null
-                        ? 'Узнай предмет'
-                        : e.audio != null && e.options.isNotEmpty
-                        ? 'Слушай и выбирай'
-                        : exerciseNames[e.type]!,
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
+            if (e.story == null) const SizedBox(height: 20),
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(24),
@@ -518,7 +565,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     if (e.scene != null) ...[
                       Container(
                         width: double.infinity,
-                        padding: const EdgeInsets.all(16),
+                        padding: EdgeInsets.all(e.story == null ? 12 : 0),
                         decoration: BoxDecoration(
                           color: turquoise.withValues(alpha: .12),
                           borderRadius: BorderRadius.circular(18),
@@ -533,7 +580,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     ],
                     Text(
                       e.prompt,
-                      style: Theme.of(context).textTheme.headlineMedium,
+                      style: e.story == null
+                          ? Theme.of(context).textTheme.headlineMedium
+                          : Theme.of(context).textTheme.titleMedium,
                     ),
                     if (e.audio != null ||
                         e.type == ExerciseType.listen ||
@@ -707,21 +756,6 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     ),
             ),
             const SizedBox(height: 18),
-            FilledButton(
-              style: FilledButton.styleFrom(
-                minimumSize: const Size(double.infinity, 60),
-              ),
-              onPressed: busy || (!canCheck && result == null) ? null : check,
-              child: Text(
-                busy
-                    ? 'Сохраняем…'
-                    : result == true
-                    ? 'Дальше'
-                    : result == false
-                    ? 'Попробовать снова'
-                    : 'Проверить',
-              ),
-            ),
             const SizedBox(height: 16),
             ExpansionTile(
               title: const Text('Подсказка команды'),
@@ -770,25 +804,15 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             .map(
               (v) => Padding(
                 padding: const EdgeInsets.only(bottom: 12),
-                child: Semantics(
+                child: AnswerTile(
+                  text: v,
+                  index: options.indexOf(v),
                   selected: input.text == v,
-                  child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: input.text == v
-                          ? turquoise.withValues(alpha: .22)
-                          : null,
-                      minimumSize: const Size(double.infinity, 58),
-                    ),
-                    onPressed: () {
-                      unawaited(audio.play(SoundEffect.tap));
-                      setState(() => input.text = v);
-                      unawaited(saveDraft());
-                    },
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(v),
-                    ),
-                  ),
+                  onPressed: () {
+                    unawaited(audio.play(SoundEffect.tap));
+                    setState(() => input.text = v);
+                    unawaited(saveDraft());
+                  },
                 ),
               ),
             )
@@ -971,6 +995,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           ),
           const SizedBox(height: 24),
           SpaceBanner(
+            showCharacter: false,
             eyebrow: 'УРОК ЗАВЕРШЁН',
             title: '+${summary.xp} XP',
             subtitle:

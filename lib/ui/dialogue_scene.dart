@@ -11,7 +11,13 @@ class DialogueScene extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final lines = scene.split('\n').where((line) => line.trim().isNotEmpty);
+    final lines = scene
+        .split('\n')
+        .where(
+          (line) =>
+              line.trim().isNotEmpty &&
+              (!line.trim().startsWith('Ты:') || reply != null),
+        );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -52,7 +58,9 @@ class DialogueScene extends StatelessWidget {
               audio: audio!,
               character: id,
               size: 48,
-              state: CharacterState.listening,
+              state: reply == null
+                  ? CharacterState.listening
+                  : CharacterState.correct,
             )
           else
             CharacterMoment(

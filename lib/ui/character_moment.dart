@@ -61,6 +61,24 @@ class CharacterMotion {
   };
 }
 
+/// Individual timing and gesture amplitude, shared by all ten state triggers.
+class CharacterAnimationProfile {
+  final double tempo, tilt, bounce, sway;
+  const CharacterAnimationProfile(
+    this.tempo,
+    this.tilt,
+    this.bounce,
+    this.sway,
+  );
+  static CharacterAnimationProfile forId(String id) => switch (id) {
+    'miko' => const CharacterAnimationProfile(1.25, .7, .65, -5),
+    'zig_quartz' => const CharacterAnimationProfile(.8, 1.3, 1.4, 9),
+    'orbi' => const CharacterAnimationProfile(1.1, .55, .7, 2),
+    'nox' => const CharacterAnimationProfile(1.4, .4, .4, -2),
+    _ => const CharacterAnimationProfile(1, .8, .8, 3),
+  };
+}
+
 /// Finite pose transitions, gestures and Orbi's procedural eyelids. This is not
 /// skeletal animation or lip sync: the hand poses come from supplied artwork.
 class CharacterMoment extends StatefulWidget {
@@ -98,11 +116,15 @@ class _CharacterMomentState extends State<CharacterMoment>
     with SingleTickerProviderStateMixin {
   late final controller = AnimationController(vsync: this);
   bool reduce = false;
+  CharacterState? interaction;
+  double gaze = 0;
+  CharacterState get activeState => interaction ?? widget.effectiveState;
   void play() {
     controller.duration = Duration(
-      milliseconds: CharacterMotion.forState(
-        widget.effectiveState,
-      ).milliseconds,
+      milliseconds:
+          (CharacterMotion.forState(activeState).milliseconds *
+                  CharacterAnimationProfile.forId(widget.characterId).tempo)
+              .round(),
     );
     if (reduce || !widget.animate) {
       controller.stop();
@@ -125,6 +147,7 @@ class _CharacterMomentState extends State<CharacterMoment>
     if (old.effectiveState != widget.effectiveState ||
         old.characterId != widget.characterId ||
         old.animate != widget.animate) {
+      interaction = null;
       play();
     }
   }
@@ -137,8 +160,9 @@ class _CharacterMomentState extends State<CharacterMoment>
 
   @override
   Widget build(BuildContext context) {
-    final state = widget.effectiveState;
+    final state = activeState;
     final motion = CharacterMotion.forState(state);
+    final profile = CharacterAnimationProfile.forId(widget.characterId);
     final name = CharacterVoiceProfile.forId(widget.characterId).name;
     final label = switch (state) {
       CharacterState.idle => 'рядом',
@@ -154,8 +178,7 @@ class _CharacterMomentState extends State<CharacterMoment>
     };
     final pose = switch (state) {
       CharacterState.correct || CharacterState.goodbye => 'wink_thumbsup',
-      CharacterState.greeting || CharacterState.celebration => 'happy',
-      CharacterState.surprise || CharacterState.talking => 'surprised',
+      CharacterState.celebration => 'happy',
       _ => 'thinking',
     };
     final symbol = switch (state) {
@@ -174,130 +197,162 @@ class _CharacterMomentState extends State<CharacterMoment>
     return Semantics(
       label: '$name $label',
       image: true,
-      child: SizedBox(
-        width: widget.size + 20,
-        height: widget.size + 22,
-        child: AnimatedBuilder(
-          animation: controller,
-          builder: (context, _) {
-            final t = controller.value;
-            final moving = !reduce && widget.animate;
-            final envelope = moving ? math.sin(math.pi * t) : 0.0;
-            final wave = math.sin(t * math.pi * motion.beats * 2) * envelope;
-            final frames = widget.frames[state];
-            final asset = frames != null && frames.isNotEmpty
-                ? frames[(t * frames.length).floor().clamp(
-                    0,
-                    frames.length - 1,
-                  )]
-                : 'assets/kvesmos/${widget.characterId == 'orbi' ? 'orbi_$pose' : widget.characterId}.png';
-            final blink =
-                moving &&
-                    pose == 'thinking' &&
-                    widget.characterId == 'orbi' &&
-                    frames == null
-                ? (1 - ((t - .48) / .07).abs()).clamp(0.0, 1.0)
-                : 0.0;
-            return Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Positioned(
-                  left: 0,
-                  bottom: 0,
-                  width: widget.size,
-                  height: widget.size,
-                  child: Transform.translate(
-                    offset: Offset(0, -motion.lift * envelope),
-                    child: Transform.rotate(
-                      angle: motion.tilt * wave,
-                      alignment: Alignment.bottomCenter,
-                      child: Stack(
-                        children: [
-                          AnimatedSwitcher(
-                            duration: reduce
-                                ? Duration.zero
-                                : const Duration(milliseconds: 200),
-                            child: ClipRRect(
-                              key: ValueKey(asset),
-                              borderRadius: BorderRadius.circular(22),
-                              child: Image.asset(
-                                asset,
-                                width: widget.size,
-                                height: widget.size,
-                                fit: BoxFit.contain,
-                                excludeFromSemantics: true,
+      button: true,
+      hint: 'Коснись, чтобы поздороваться',
+      child: GestureDetector(
+        onTapDown: (details) {
+          gaze = ((details.localPosition.dx / widget.size) * 2 - 1).clamp(
+            -1.0,
+            1.0,
+          );
+        },
+        onTap: () {
+          setState(
+            () => interaction = interaction == CharacterState.greeting
+                ? CharacterState.surprise
+                : CharacterState.greeting,
+          );
+          play();
+        },
+        child: SizedBox(
+          width: widget.size + 20,
+          height: widget.size + 22,
+          child: AnimatedBuilder(
+            animation: controller,
+            builder: (context, _) {
+              final t = controller.value;
+              final moving = !reduce && widget.animate;
+              final envelope = moving ? math.sin(math.pi * t) : 0.0;
+              final wave = math.sin(t * math.pi * motion.beats * 2) * envelope;
+              final frames = widget.frames[state];
+              final asset = frames != null && frames.isNotEmpty
+                  ? frames[(t * frames.length).floor().clamp(
+                      0,
+                      frames.length - 1,
+                    )]
+                  : 'assets/kvesmos/${widget.characterId == 'orbi' ? 'orbi_$pose' : widget.characterId}.png';
+              final blink = moving
+                  ? (1 - ((t - .48) / .05).abs()).clamp(0.0, 1.0)
+                  : 0.0;
+              return Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Positioned(
+                    left: 0,
+                    bottom: 0,
+                    width: widget.size,
+                    height: widget.size,
+                    child: Transform.translate(
+                      offset: Offset(
+                        profile.sway * wave,
+                        -motion.lift * envelope * profile.bounce,
+                      ),
+                      child: Transform.rotate(
+                        angle: motion.tilt * wave * profile.tilt,
+                        alignment: Alignment.bottomCenter,
+                        child: Stack(
+                          children: [
+                            AnimatedSwitcher(
+                              duration: reduce
+                                  ? Duration.zero
+                                  : const Duration(milliseconds: 200),
+                              child: ClipRRect(
+                                key: ValueKey(asset),
+                                borderRadius: BorderRadius.circular(22),
+                                child: Image.asset(
+                                  asset,
+                                  width: widget.size,
+                                  height: widget.size,
+                                  fit: BoxFit.contain,
+                                  excludeFromSemantics: true,
+                                ),
                               ),
                             ),
-                          ),
-                          if (blink > 0)
-                            Positioned.fill(
-                              child: CustomPaint(painter: _OrbiEyelids(blink)),
-                            ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                if (state == CharacterState.celebration ||
-                    state == CharacterState.correct)
-                  Positioned.fill(
-                    child: IgnorePointer(
-                      child: CustomPaint(
-                        painter: _CelebrationParticles(t, moving, accent),
-                      ),
-                    ),
-                  ),
-                Positioned(
-                  top: 0,
-                  right: 0,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.surface,
-                      shape: BoxShape.circle,
-                      border: Border.all(color: accent),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(4),
-                      child: Icon(symbol, size: 19, color: accent),
-                    ),
-                  ),
-                ),
-                if (state == CharacterState.talking)
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: List.generate(
-                        4,
-                        (i) => Container(
-                          width: 3,
-                          height:
-                              5 +
-                              (moving
-                                  ? (math.sin(t * 24 + i).abs() * 10 * envelope)
-                                  : 4),
-                          margin: const EdgeInsets.all(1),
-                          decoration: BoxDecoration(
-                            color: accent,
-                            borderRadius: BorderRadius.circular(2),
-                          ),
+                            if (widget.characterId == 'orbi' &&
+                                pose == 'thinking' &&
+                                frames == null)
+                              Positioned.fill(
+                                child: CustomPaint(
+                                  painter: _OrbiFace(
+                                    blink,
+                                    moving
+                                        ? math.sin(t * math.pi * 2) * .6 +
+                                              gaze * envelope
+                                        : 0,
+                                    state,
+                                    moving ? t : 1,
+                                  ),
+                                ),
+                              ),
+                          ],
                         ),
                       ),
                     ),
                   ),
-              ],
-            );
-          },
+                  if (state == CharacterState.celebration ||
+                      state == CharacterState.correct)
+                    Positioned.fill(
+                      child: IgnorePointer(
+                        child: CustomPaint(
+                          painter: _CelebrationParticles(t, moving, accent),
+                        ),
+                      ),
+                    ),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.surface,
+                        shape: BoxShape.circle,
+                        border: Border.all(color: accent),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: Icon(symbol, size: 19, color: accent),
+                      ),
+                    ),
+                  ),
+                  if (state == CharacterState.talking)
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: List.generate(
+                          4,
+                          (i) => Container(
+                            width: 3,
+                            height:
+                                5 +
+                                (moving
+                                    ? (math.sin(t * 24 + i).abs() *
+                                          10 *
+                                          envelope)
+                                    : 4),
+                            margin: const EdgeInsets.all(1),
+                            decoration: BoxDecoration(
+                              color: accent,
+                              borderRadius: BorderRadius.circular(2),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              );
+            },
+          ),
         ),
       ),
     );
   }
 }
 
-class _OrbiEyelids extends CustomPainter {
-  final double amount;
-  _OrbiEyelids(this.amount);
+class _OrbiFace extends CustomPainter {
+  final double amount, gaze, t;
+  final CharacterState state;
+  _OrbiFace(this.amount, this.gaze, this.state, this.t);
   @override
   void paint(Canvas canvas, Size size) {
     // Coordinates refer only to the supplied 443x406 thinking pose. The other
@@ -314,25 +369,86 @@ class _OrbiEyelids extends CustomPainter {
       canvas.rotate(-.28);
       canvas.drawOval(
         const Rect.fromLTWH(-40, -47, 80, 94),
-        Paint()..color = const Color(0xFF010719).withValues(alpha: amount),
+        Paint()..color = const Color(0xFF010719),
       );
-      canvas.drawArc(
-        const Rect.fromLTWH(-29, -12, 58, 20),
-        .1,
-        math.pi - .2,
-        false,
-        Paint()
-          ..color = const Color(0xFF4AE7FF).withValues(alpha: amount)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 5
-          ..strokeCap = StrokeCap.round,
-      );
+      final open = (1 - amount).clamp(.04, 1.0);
+      canvas.save();
+      canvas.scale(1, open);
+      final happy =
+          state == CharacterState.greeting || state == CharacterState.support;
+      if (happy) {
+        canvas.drawArc(
+          const Rect.fromLTWH(-28, -12, 56, 36),
+          math.pi + .15,
+          math.pi - .3,
+          false,
+          Paint()
+            ..color = const Color(0xFF4AE7FF)
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 9
+            ..strokeCap = StrokeCap.round,
+        );
+      } else {
+        canvas.drawOval(
+          const Rect.fromLTWH(-31, -40, 62, 80),
+          Paint()
+            ..shader = const LinearGradient(
+              colors: [Color(0xFF78F4FF), Color(0xFF00C7FF)],
+            ).createShader(const Rect.fromLTWH(-31, -40, 62, 80)),
+        );
+        canvas.drawOval(
+          Rect.fromCenter(
+            center: Offset(gaze * 10 + 9, -10),
+            width: 26,
+            height: state == CharacterState.surprise ? 30 : 42,
+          ),
+          Paint()..color = const Color(0xFF001633),
+        );
+        canvas.drawCircle(
+          Offset(gaze * 10 + 14, -22),
+          5,
+          Paint()..color = Colors.white.withValues(alpha: .8),
+        );
+      }
       canvas.restore();
+      canvas.restore();
+    }
+    // The mouth occupies the unobstructed screen area above the original hand.
+    canvas.drawOval(
+      const Rect.fromLTWH(254, 263, 34, 23),
+      Paint()..color = const Color(0xFF010719),
+    );
+    final mouth = Paint()
+      ..color = const Color(0xFF4AE7FF)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3.5
+      ..strokeCap = StrokeCap.round;
+    if (state == CharacterState.talking) {
+      canvas.drawOval(
+        Rect.fromCenter(
+          center: const Offset(270, 275),
+          width: 14,
+          height: 4 + math.sin(t * 36).abs() * 10,
+        ),
+        mouth,
+      );
+    } else {
+      canvas.drawArc(
+        const Rect.fromLTWH(259, 264, 22, 15),
+        state == CharacterState.thinking ? math.pi : 0,
+        math.pi,
+        false,
+        mouth,
+      );
     }
   }
 
   @override
-  bool shouldRepaint(_OrbiEyelids old) => amount != old.amount;
+  bool shouldRepaint(_OrbiFace old) =>
+      amount != old.amount ||
+      gaze != old.gaze ||
+      state != old.state ||
+      t != old.t;
 }
 
 class _CelebrationParticles extends CustomPainter {

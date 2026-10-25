@@ -1,0 +1,274 @@
+{
+  "id": "a1-17",
+  "title": "В дорогу",
+  "topic": "Путешествия",
+  "order": 16,
+  "vocabulary": [
+    {
+      "id": "en:ticket",
+      "en": "ticket",
+      "ru": "билет"
+    },
+    {
+      "id": "en:train",
+      "en": "train",
+      "ru": "поезд"
+    },
+    {
+      "id": "en:bus",
+      "en": "bus",
+      "ru": "автобус"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Выбрать транспорт и вежливо попросить билет.",
+  "guide": "Train — поезд, bus — автобус. Go — ехать или идти. By train / by bus — способ передвижения, без a. Ticket — билет. Для одного билета нужен a, в отличие от water. For the train уточняет, для какого транспорта билет. Two tickets — два билета, с -s.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "В дорогу",
+      "phrase": "I go by train. I go by bus.",
+      "translation": "Я еду поездом. Я еду автобусом.",
+      "explanation": "Train — поезд, bus — автобус. Go — ехать или идти. By train / by bus — способ передвижения, без a."
+    },
+    {
+      "character": "miko",
+      "title": "Один билет",
+      "phrase": "Can I have a ticket, please?",
+      "translation": "Можно мне билет, пожалуйста?",
+      "explanation": "Ticket — билет. Для одного билета нужен a, в отличие от water."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Билет на поезд",
+      "phrase": "A ticket for the train, please.",
+      "translation": "Билет на поезд, пожалуйста.",
+      "explanation": "For the train уточняет, для какого транспорта билет. Two tickets — два билета, с -s."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-17-v3-01",
+      "type": "choice",
+      "prompt": "Ты едешь поездом. Выбери фразу.",
+      "answers": [
+        "I go by train."
+      ],
+      "explanation": "By train — поездом.",
+      "hint": "By train — поездом.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:train"
+      ],
+      "options": [
+        "I go by train.",
+        "I go by bus.",
+        "I read a book."
+      ]
+    },
+    {
+      "id": "a1-17-v3-02",
+      "type": "pairs",
+      "prompt": "Подготовь слова путешественника.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Ticket — билет, train — поезд, bus — автобус.",
+      "hint": "Ticket — билет, train — поезд, bus — автобус.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:ticket",
+        "en:train",
+        "en:bus"
+      ],
+      "pairs": [
+        {
+          "id": "en:ticket",
+          "en": "ticket",
+          "ru": "билет"
+        },
+        {
+          "id": "en:train",
+          "en": "train",
+          "ru": "поезд"
+        },
+        {
+          "id": "en:bus",
+          "en": "bus",
+          "ru": "автобус"
+        }
+      ]
+    },
+    {
+      "id": "a1-17-v3-03",
+      "type": "order",
+      "prompt": "Попроси один билет.",
+      "answers": [
+        "Can I have a ticket please"
+      ],
+      "explanation": "Can I have a ticket, please — вежливая просьба.",
+      "hint": "Can I have a ticket, please — вежливая просьба.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:ticket"
+      ],
+      "tokens": [
+        "Can",
+        "I",
+        "have",
+        "a",
+        "ticket",
+        "please"
+      ]
+    },
+    {
+      "id": "a1-17-v3-04",
+      "type": "gap",
+      "prompt": "Я еду автобусом: I go ___ bus.",
+      "answers": [
+        "by"
+      ],
+      "explanation": "Способ передвижения: by bus.",
+      "hint": "Способ передвижения: by bus.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:bus"
+      ]
+    },
+    {
+      "id": "a1-17-v3-05",
+      "type": "listen",
+      "prompt": "Какой транспорт нужен Мико?",
+      "answers": [
+        "train"
+      ],
+      "explanation": "Мико едет поездом.",
+      "hint": "Мико едет поездом.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:train"
+      ],
+      "options": [
+        "train",
+        "bus",
+        "office"
+      ],
+      "audio": "I go by train."
+    },
+    {
+      "id": "a1-17-v3-06",
+      "type": "correct",
+      "prompt": "Исправь: I go by a bus.",
+      "answers": [
+        "I go by bus."
+      ],
+      "explanation": "После by в этом выражении артикль не нужен.",
+      "hint": "После by в этом выражении артикль не нужен.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:bus"
+      ]
+    },
+    {
+      "id": "a1-17-v3-07",
+      "type": "translate",
+      "prompt": "Попроси два билета короткой фразой.",
+      "answers": [
+        "Two tickets, please."
+      ],
+      "explanation": "После two используем tickets во множественном числе.",
+      "hint": "После two используем tickets во множественном числе.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:two",
+        "en:ticket"
+      ]
+    },
+    {
+      "id": "a1-17-v3-08",
+      "type": "dialogue",
+      "prompt": "Помоги Мико: нужен билет на поезд.",
+      "answers": [
+        "A ticket for the train, please."
+      ],
+      "explanation": "Уточни for the train, чтобы выбрать нужный билет.",
+      "hint": "Уточни for the train, чтобы выбрать нужный билет.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:ticket",
+        "en:train"
+      ],
+      "options": [
+        "A ticket for the train, please.",
+        "A ticket for the bus, please.",
+        "Tea, please."
+      ],
+      "scene": "Мико: I go by train.\nМико: Поможешь попросить билет?\nТы: …",
+      "story": {
+        "id": "a1-17-story",
+        "title": "Билеты для команды",
+        "step": 1,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-17-v3-09",
+      "type": "order",
+      "prompt": "Мико едет с другом. Теперь попроси два билета.",
+      "answers": [
+        "Two tickets please"
+      ],
+      "explanation": "Число two требует tickets с -s.",
+      "hint": "Число two требует tickets с -s.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:two",
+        "en:ticket"
+      ],
+      "tokens": [
+        "Two",
+        "tickets",
+        "please"
+      ],
+      "story": {
+        "id": "a1-17-story",
+        "title": "Билеты для команды",
+        "step": 2,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-17-v3-10",
+      "type": "dialogue",
+      "prompt": "Билеты получены. Поблагодари сотрудника.",
+      "answers": [
+        "Thank you.",
+        "Thanks."
+      ],
+      "explanation": "Короткое Thank you завершает покупку вежливо.",
+      "hint": "Короткое Thank you завершает покупку вежливо.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:two",
+        "en:ticket"
+      ],
+      "scene": "Зиг: Two tickets.\nТы: …",
+      "story": {
+        "id": "a1-17-story",
+        "title": "Билеты для команды",
+        "step": 3,
+        "total": 3
+      }
+    }
+  ]
+}

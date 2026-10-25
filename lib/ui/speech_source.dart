@@ -13,17 +13,45 @@ class SpeechSourceLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ValueListenableBuilder<SpeechPlayback?>(
     valueListenable: audio.playback,
-    builder: (context, playback, _) => Text(
-      audio.lastCharacter == character &&
-              audio.lastText == text &&
-              audio.lastProblem != null
-          ? audio.lastProblem!
-          : audio.lastSource == SpeechSource.recording &&
-                audio.lastCharacter == character &&
-                audio.lastText == text
-          ? 'Локальная запись персонажа'
-          : 'Резервная озвучка: системный голос устройства',
-      style: Theme.of(context).textTheme.bodySmall,
-    ),
+    builder: (context, playback, _) {
+      final same = audio.lastCharacter == character && audio.lastText == text;
+      final clip = audio.recordings.find(character, 'en-US', text);
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            same && audio.lastProblem != null
+                ? audio.lastProblem!
+                : same && audio.lastSource == SpeechSource.system
+                ? 'Резервная озвучка: системный голос устройства'
+                : clip != null
+                ? 'Синтезированная реплика · офлайн'
+                : 'Резервная озвучка: системный голос устройства',
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
+          if (same && playback != null && (playback.playing || playback.paused))
+            Wrap(
+              spacing: 8,
+              children: [
+                if (playback.source == SpeechSource.recording)
+                  TextButton.icon(
+                    onPressed: audio.pauseOrResume,
+                    icon: Icon(
+                      playback.paused
+                          ? Icons.play_arrow_rounded
+                          : Icons.pause_rounded,
+                    ),
+                    label: Text(playback.paused ? 'Продолжить звук' : 'Пауза'),
+                  ),
+                TextButton.icon(
+                  onPressed: audio.stop,
+                  icon: const Icon(Icons.stop_rounded),
+                  label: const Text('Остановить'),
+                ),
+              ],
+            ),
+        ],
+      );
+    },
   );
 }

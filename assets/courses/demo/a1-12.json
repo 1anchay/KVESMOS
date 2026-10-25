@@ -1,0 +1,277 @@
+{
+  "id": "a1-12",
+  "title": "На столе",
+  "topic": "Цвета и предметы",
+  "order": 11,
+  "vocabulary": [
+    {
+      "id": "en:cup",
+      "en": "cup",
+      "ru": "чашка"
+    },
+    {
+      "id": "en:table",
+      "en": "table",
+      "ru": "стол"
+    },
+    {
+      "id": "en:chair",
+      "en": "chair",
+      "ru": "стул"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Найти предмет и описать, где он находится.",
+  "guide": "Table — стол, chair — стул, cup — чашка. On — на поверхности, under — под предметом. The book is under the chair — книга под стулом. Where is…? спрашивает о местоположении одного предмета. Ответ: It is on the table.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "За столом",
+      "phrase": "This is a table. This is a chair. This is a cup.",
+      "translation": "Это стол. Это стул. Это чашка.",
+      "explanation": "Table — стол, chair — стул, cup — чашка."
+    },
+    {
+      "character": "miko",
+      "title": "На и под",
+      "phrase": "The book is on the table.",
+      "translation": "Книга на столе.",
+      "explanation": "On — на поверхности, under — под предметом. The book is under the chair — книга под стулом."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Где предмет?",
+      "phrase": "Where is my book?",
+      "translation": "Где моя книга?",
+      "explanation": "Where is…? спрашивает о местоположении одного предмета. Ответ: It is on the table."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-12-v3-01",
+      "type": "choice",
+      "prompt": "Книга лежит на столе. Выбери описание.",
+      "answers": [
+        "The book is on the table."
+      ],
+      "explanation": "On — на, under — под.",
+      "hint": "On — на, under — под.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:book",
+        "en:table"
+      ],
+      "options": [
+        "The book is on the table.",
+        "The book is under the table.",
+        "The book is blue."
+      ]
+    },
+    {
+      "id": "a1-12-v3-02",
+      "type": "pairs",
+      "prompt": "Подпиши предметы в комнате.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Cup — чашка, table — стол, chair — стул.",
+      "hint": "Cup — чашка, table — стол, chair — стул.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:cup",
+        "en:table",
+        "en:chair"
+      ],
+      "pairs": [
+        {
+          "id": "en:cup",
+          "en": "cup",
+          "ru": "чашка"
+        },
+        {
+          "id": "en:table",
+          "en": "table",
+          "ru": "стол"
+        },
+        {
+          "id": "en:chair",
+          "en": "chair",
+          "ru": "стул"
+        }
+      ]
+    },
+    {
+      "id": "a1-12-v3-03",
+      "type": "order",
+      "prompt": "Спроси: «Где моя книга?»",
+      "answers": [
+        "Where is my book"
+      ],
+      "explanation": "Where is, затем my book.",
+      "hint": "Where is, затем my book.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:book"
+      ],
+      "tokens": [
+        "Where",
+        "is",
+        "my",
+        "book"
+      ]
+    },
+    {
+      "id": "a1-12-v3-04",
+      "type": "gap",
+      "prompt": "Сумка под стулом: The bag is ___ the chair.",
+      "answers": [
+        "under"
+      ],
+      "explanation": "Under показывает расположение под предметом.",
+      "hint": "Under показывает расположение под предметом.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:bag",
+        "en:chair"
+      ]
+    },
+    {
+      "id": "a1-12-v3-05",
+      "type": "listen",
+      "prompt": "Где чашка?",
+      "answers": [
+        "on the table"
+      ],
+      "explanation": "Чашка находится на столе.",
+      "hint": "Чашка находится на столе.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:cup",
+        "en:table"
+      ],
+      "options": [
+        "on the table",
+        "under the chair",
+        "under the table"
+      ],
+      "audio": "The cup is on the table."
+    },
+    {
+      "id": "a1-12-v3-06",
+      "type": "correct",
+      "prompt": "Исправь вопрос: Where my book is?",
+      "answers": [
+        "Where is my book?"
+      ],
+      "explanation": "В вопросе is стоит после where, перед предметом.",
+      "hint": "В вопросе is стоит после where, перед предметом.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:book"
+      ]
+    },
+    {
+      "id": "a1-12-v3-07",
+      "type": "translate",
+      "prompt": "Скажи: «Сумка под столом».",
+      "answers": [
+        "The bag is under the table."
+      ],
+      "explanation": "Известные предметы: the bag, the table.",
+      "hint": "Известные предметы: the bag, the table.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:bag",
+        "en:table"
+      ]
+    },
+    {
+      "id": "a1-12-v3-08",
+      "type": "dialogue",
+      "prompt": "Мико потерял книгу. Ты видишь её под стулом. Ответь.",
+      "answers": [
+        "It is under the chair."
+      ],
+      "explanation": "It заменяет book; under the chair — под стулом.",
+      "hint": "It заменяет book; under the chair — под стулом.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:book",
+        "en:chair"
+      ],
+      "options": [
+        "It is under the chair.",
+        "It is on the table.",
+        "It is a cup."
+      ],
+      "scene": "Мико: Where is my book?\nТы: …",
+      "story": {
+        "id": "a1-12-story",
+        "title": "Пропавшая книга",
+        "step": 1,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-12-v3-09",
+      "type": "order",
+      "prompt": "Рядом две книги. Уточни: «Книга зелёная».",
+      "answers": [
+        "The book is green"
+      ],
+      "explanation": "Цвет поможет Мико выбрать нужную книгу.",
+      "hint": "Цвет поможет Мико выбрать нужную книгу.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:book",
+        "en:green"
+      ],
+      "tokens": [
+        "The",
+        "book",
+        "is",
+        "green"
+      ],
+      "story": {
+        "id": "a1-12-story",
+        "title": "Пропавшая книга",
+        "step": 2,
+        "total": 3
+      }
+    },
+    {
+      "id": "a1-12-v3-10",
+      "type": "dialogue",
+      "prompt": "Мико нашёл книгу и благодарит. Заверши разговор.",
+      "answers": [
+        "You are welcome.",
+        "You’re welcome."
+      ],
+      "explanation": "На Thank you отвечаем You are welcome.",
+      "hint": "На Thank you отвечаем You are welcome.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:welcome",
+        "en:book",
+        "en:green"
+      ],
+      "scene": "Мико: The green book! Thank you!\nТы: …",
+      "story": {
+        "id": "a1-12-story",
+        "title": "Пропавшая книга",
+        "step": 3,
+        "total": 3
+      }
+    }
+  ]
+}

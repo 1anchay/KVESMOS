@@ -39,6 +39,16 @@ enum ExerciseType {
   dialogue,
 }
 
+/// A short narrative spans normal exercise steps; the existing session/draft
+/// owns persistence and scoring, so stories cannot award XP a second time.
+class StoryBeat {
+  final String id, title;
+  final int step, total;
+  const StoryBeat(this.id, this.title, this.step, this.total);
+  factory StoryBeat.fromJson(Map<String, dynamic> j) =>
+      StoryBeat(j['id'], j['title'], j['step'], j['total']);
+}
+
 class Exercise {
   final String id, prompt, explanation;
   final ExerciseType type;
@@ -47,6 +57,7 @@ class Exercise {
   final String? audio, hint;
   final String? scene, visual, introduction;
   final String character, phase;
+  final StoryBeat? story;
   const Exercise({
     required this.id,
     required this.type,
@@ -64,6 +75,7 @@ class Exercise {
     this.introduction,
     this.character = 'orbi',
     this.phase = '',
+    this.story,
   });
   factory Exercise.fromJson(Map<String, dynamic> j) => Exercise(
     id: j['id'],
@@ -81,6 +93,7 @@ class Exercise {
     introduction: j['introduction'],
     character: j['character'] ?? 'orbi',
     phase: j['phase'] ?? '',
+    story: j['story'] == null ? null : StoryBeat.fromJson(j['story']),
     pairs: (j['pairs'] as List? ?? [])
         .map((e) => Vocabulary.fromJson(e))
         .toList(),

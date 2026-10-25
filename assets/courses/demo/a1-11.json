@@ -1,0 +1,253 @@
+{
+  "id": "a1-11",
+  "title": "Палитра",
+  "topic": "Цвета и предметы",
+  "order": 10,
+  "vocabulary": [
+    {
+      "id": "en:blue",
+      "en": "blue",
+      "ru": "синий"
+    },
+    {
+      "id": "en:red",
+      "en": "red",
+      "ru": "красный"
+    },
+    {
+      "id": "en:green",
+      "en": "green",
+      "ru": "зелёный"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Описать цвет предмета и уточнить нужный предмет.",
+  "guide": "Blue — синий, red — красный, green — зелёный. The означает, что речь об известном предмете, например сумке перед нами. В английском цвет ставим перед предметом: a red pen, a green book. Для вопроса с is переставляем is в начало. Ответ: Yes, it is. / No, it is not.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Три цвета",
+      "phrase": "The bag is blue.",
+      "translation": "Сумка синяя.",
+      "explanation": "Blue — синий, red — красный, green — зелёный. The означает, что речь об известном предмете, например сумке перед нами."
+    },
+    {
+      "character": "miko",
+      "title": "Цвет перед предметом",
+      "phrase": "This is a red pen.",
+      "translation": "Это красная ручка.",
+      "explanation": "В английском цвет ставим перед предметом: a red pen, a green book."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вопрос о цвете",
+      "phrase": "Is the bag blue?",
+      "translation": "Сумка синяя?",
+      "explanation": "Для вопроса с is переставляем is в начало. Ответ: Yes, it is. / No, it is not."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-11-v3-01",
+      "type": "choice",
+      "prompt": "Нужна красная ручка. Выбери её подпись.",
+      "answers": [
+        "a red pen"
+      ],
+      "explanation": "Цвет стоит перед названием предмета.",
+      "hint": "Цвет стоит перед названием предмета.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:pen",
+        "en:red"
+      ],
+      "options": [
+        "a red pen",
+        "a blue pen",
+        "a green book"
+      ]
+    },
+    {
+      "id": "a1-11-v3-02",
+      "type": "pairs",
+      "prompt": "Соедини цвета и переводы.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Blue — синий, red — красный, green — зелёный.",
+      "hint": "Blue — синий, red — красный, green — зелёный.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:blue",
+        "en:red",
+        "en:green"
+      ],
+      "pairs": [
+        {
+          "id": "en:blue",
+          "en": "blue",
+          "ru": "синий"
+        },
+        {
+          "id": "en:red",
+          "en": "red",
+          "ru": "красный"
+        },
+        {
+          "id": "en:green",
+          "en": "green",
+          "ru": "зелёный"
+        }
+      ]
+    },
+    {
+      "id": "a1-11-v3-03",
+      "type": "order",
+      "prompt": "Собери: «Сумка синяя».",
+      "answers": [
+        "The bag is blue"
+      ],
+      "explanation": "Известный предмет: the bag. Затем is и цвет.",
+      "hint": "Известный предмет: the bag. Затем is и цвет.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:bag",
+        "en:blue"
+      ],
+      "tokens": [
+        "The",
+        "bag",
+        "is",
+        "blue"
+      ]
+    },
+    {
+      "id": "a1-11-v3-04",
+      "type": "gap",
+      "prompt": "Это зелёная книга: This is a ___ book.",
+      "answers": [
+        "green"
+      ],
+      "explanation": "Green — зелёный.",
+      "hint": "Green — зелёный.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:book",
+        "en:green"
+      ]
+    },
+    {
+      "id": "a1-11-v3-05",
+      "type": "listen",
+      "prompt": "Какого цвета ручка?",
+      "answers": [
+        "red"
+      ],
+      "explanation": "Red означает красный.",
+      "hint": "Red означает красный.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:pen",
+        "en:red"
+      ],
+      "options": [
+        "red",
+        "blue",
+        "green"
+      ],
+      "audio": "The pen is red."
+    },
+    {
+      "id": "a1-11-v3-06",
+      "type": "correct",
+      "prompt": "Исправь порядок: This is a pen blue.",
+      "answers": [
+        "This is a blue pen."
+      ],
+      "explanation": "Цвет blue ставим перед pen.",
+      "hint": "Цвет blue ставим перед pen.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:pen",
+        "en:blue"
+      ]
+    },
+    {
+      "id": "a1-11-v3-07",
+      "type": "translate",
+      "prompt": "Спроси: «Сумка синяя?»",
+      "answers": [
+        "Is the bag blue?"
+      ],
+      "explanation": "Вопрос начинается с Is.",
+      "hint": "Вопрос начинается с Is.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:bag",
+        "en:blue"
+      ]
+    },
+    {
+      "id": "a1-11-v3-08",
+      "type": "dialogue",
+      "prompt": "Ответь: да, сумка синяя.",
+      "answers": [
+        "Yes, it is."
+      ],
+      "explanation": "В коротком ответе bag заменяем на it.",
+      "hint": "В коротком ответе bag заменяем на it.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:bag",
+        "en:blue"
+      ],
+      "options": [
+        "Yes, it is.",
+        "No, it is not.",
+        "Yes, I do."
+      ],
+      "scene": "Зиг: Is the bag blue?\nТы: …"
+    },
+    {
+      "id": "a1-11-v3-09",
+      "type": "review",
+      "prompt": "Попроси воду вежливо.",
+      "answers": [
+        "Can I have water, please?",
+        "Water, please."
+      ],
+      "explanation": "В просьбе о воде добавь please.",
+      "hint": "В просьбе о воде добавь please.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:water"
+      ]
+    },
+    {
+      "id": "a1-11-v3-10",
+      "type": "speak",
+      "prompt": "Опиши предмет: «Это зелёная книга».",
+      "answers": [
+        "This is a green book."
+      ],
+      "explanation": "A green book — зелёная книга.",
+      "hint": "A green book — зелёная книга.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:book",
+        "en:green"
+      ],
+      "audio": "This is a green book."
+    }
+  ]
+}

@@ -169,7 +169,10 @@ void main() {
         });
         await tester.pumpAndSettle();
         await tester.runAsync(() => capturePreview(boundary, config.$3));
-        expect(find.text('Новый формат'), findsOneWidget);
+        expect(
+          find.text(config.$1 == 'a1-03' ? 'Знакомство' : 'Понимание'),
+          findsOneWidget,
+        );
         expect(tester.takeException(), isNull);
         await tester.pumpWidget(const SizedBox.shrink());
         await tester.runAsync(r.db.close);

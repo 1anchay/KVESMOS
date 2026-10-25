@@ -16,6 +16,7 @@ import 'rewards_pages.dart';
 import 'adventure_map.dart';
 import 'profile_achievements.dart';
 import 'audio_settings.dart';
+import 'galaxy_components.dart';
 import '../services/learning_audio.dart';
 
 class OnboardingPage extends ConsumerWidget {
@@ -174,11 +175,12 @@ class HomePage extends ConsumerWidget {
         ),
       ),
       SpaceBanner(
-        eyebrow: 'АНГЛИЙСКИЙ · ОСНОВЫ A1',
-        title: 'Галактика\nзнаний',
-        subtitle: app.startingLevel == 'С нуля'
-            ? 'Один маленький шаг сегодня — и мир становится ближе.'
-            : 'Закрепляйте знакомое и открывайте новые выражения.',
+        animate: app.audio.preferences.reactions,
+        eyebrow: 'ЭКСПЕДИЦИЯ A1 · ${p.completed.length} / ${catalog.length}',
+        title: next.title,
+        subtitle:
+            app.repository.learningObjectives[next.id] ??
+            'Следующая миссия твоей экспедиции.',
         action: FilledButton.icon(
           style: FilledButton.styleFrom(
             backgroundColor: turquoise,
@@ -190,6 +192,29 @@ class HomePage extends ConsumerWidget {
           icon: const Icon(Icons.arrow_forward),
           label: const Text('Продолжить урок'),
         ),
+      ),
+      const SizedBox(height: 16),
+      JourneyConstellation(
+        lessons: catalog,
+        completed: p.completed,
+        onOpen: (lesson) {
+          final unlocked =
+              lesson.order == 0 ||
+              p.completed.contains(lesson.id) ||
+              p.completed.contains(catalog[lesson.order - 1].id);
+          if (unlocked) {
+            context.go(
+              app.installed.contains(lesson.id)
+                  ? '/lesson/${lesson.id}'
+                  : '/offline',
+            );
+          } else {
+            showMessage(
+              context,
+              'Сначала заверши предыдущую миссию. Каждая готовит к следующей.',
+            );
+          }
+        },
       ),
       const SizedBox(height: 12),
       Card(
@@ -220,7 +245,13 @@ class HomePage extends ConsumerWidget {
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ),
-                  Text('$today / ${app.goal} XP'),
+                  const SizedBox(width: 12),
+                  Flexible(
+                    child: Text(
+                      '$today / ${app.goal} XP',
+                      textAlign: TextAlign.end,
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(height: 14),
@@ -260,27 +291,6 @@ class HomePage extends ConsumerWidget {
         ],
       ),
       const RewardShortcut(),
-      Card(
-        child: Padding(
-          padding: const EdgeInsets.all(18),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Первые три урока обновлены',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const Text(
-                'Новый формат открывается обычной кнопкой продолжения и с карты. Если сохранился старый урок, внутри можно перейти к обновлённым заданиям без потери XP.',
-              ),
-              TextButton(
-                onPressed: () => context.go('/settings'),
-                child: const Text('Проверить голоса и звук'),
-              ),
-            ],
-          ),
-        ),
-      ),
       const AdventureMap(),
       const SizedBox(height: 24),
       Text(
@@ -324,9 +334,12 @@ class _WordsPageState extends ConsumerState<WordsPage> {
         )
         .toList();
     return pageBody([
-      const SectionTitle(
-        'Ваш словарь',
-        subtitle: 'Слова появляются здесь после упражнений.',
+      MissionHeader(
+        eyebrow: 'Бортовой журнал',
+        title: 'Ваш словарь',
+        icon: Icons.auto_stories_rounded,
+        subtitle:
+            '${app.progress.words.length} слов открыто. Повторение помогает сохранить их в памяти.',
       ),
       const CharacterReaction(
         cue: CharacterCue.words,
@@ -359,7 +372,7 @@ class _WordsPageState extends ConsumerState<WordsPage> {
             child: ListTile(
               title: Text(w.en, style: Theme.of(context).textTheme.titleMedium),
               subtitle: Text(
-                '${w.ru}\nВерно: ${state.correct} · ошибок: ${state.errors}\nОсвоено ${(state.mastery * 100).round()}% · повтор ${dayKey(state.next!.toLocal())}',
+                '${w.ru}\n${(state.mastery * 100).round()}% освоено · повтор ${dayKey(state.next!.toLocal())}',
               ),
               isThreeLine: true,
               trailing: IconButton(
@@ -429,8 +442,10 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
     );
     final finished = index >= queue!.length;
     return pageBody([
-      const SectionTitle(
-        'Сигналы памяти',
+      const MissionHeader(
+        eyebrow: 'Тренировка памяти',
+        title: 'Сигналы памяти',
+        icon: Icons.psychology_rounded,
         subtitle:
             'Сначала слова, которым пора вернуться. Ошибки помогают подобрать следующий интервал.',
       ),
@@ -930,6 +945,13 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
         cloud = app.cloud,
         user = app.cloud?.auth.currentUser;
     return pageBody([
+      MissionHeader(
+        eyebrow: 'Паспорт исследователя',
+        title: 'Мой профиль',
+        subtitle:
+            'Уровень ${app.progress.level} · ${app.progress.completed.length} миссий · ${app.inventory.owned.length} находок',
+        icon: Icons.badge_outlined,
+      ),
       ProfileLook(app),
       const SizedBox(height: 16),
       const AchievementShowcase(),

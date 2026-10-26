@@ -33,7 +33,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    expect(find.text('Ваш следующий мир начинается со слова.'), findsOneWidget);
+    expect(find.text('Первое открытие — сегодня.'), findsOneWidget);
     for (var i = 0; i < 3; i++) {
       final next = find.widgetWithText(FilledButton, 'Продолжить');
       await tester.scrollUntilVisible(next, 250);
@@ -46,8 +46,8 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(start);
     await flushDb(tester);
-    expect(find.textContaining('ЭКСПЕДИЦИЯ A1'), findsOneWidget);
-    await tester.tap(find.text('Продолжить урок'));
+    expect(find.textContaining('СЕГОДНЯ ·'), findsOneWidget);
+    await tester.tap(find.text('Продолжить приключение'));
     await flushDb(tester);
     await advanceTeaching(tester);
     expect(
@@ -73,14 +73,14 @@ void main() {
     expect(find.text(CharacterCue.correct.lines.first), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Продолжить урок'));
+    await tester.tap(find.text('Продолжить приключение'));
     await flushDb(tester);
     final resumed = (await tester.runAsync(() => r.startLesson('a1-01')))!;
     expect(resumed.session.position, 1);
     expect(find.text(resumed.lesson.exercises[1].prompt), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();
-    for (final label in ['Слова', 'Прогресс', 'Профиль', 'Карта']) {
+    for (final label in ['Слова', 'Прогресс', 'Профиль', 'Сегодня']) {
       await tester.tap(find.text(label).last);
       await tester.pumpAndSettle();
       expect(tester.takeException(), isNull);

@@ -126,7 +126,7 @@ class _CharacterMomentState extends State<CharacterMoment>
                   CharacterAnimationProfile.forId(widget.characterId).tempo)
               .round(),
     );
-    if (reduce || !widget.animate) {
+    if (reduce || !widget.animate || activeState == CharacterState.idle) {
       controller.stop();
       controller.value = 1;
     } else {
@@ -221,7 +221,8 @@ class _CharacterMomentState extends State<CharacterMoment>
             animation: controller,
             builder: (context, _) {
               final t = controller.value;
-              final moving = !reduce && widget.animate;
+              final moving =
+                  !reduce && widget.animate && state != CharacterState.idle;
               final envelope = moving ? math.sin(math.pi * t) : 0.0;
               final wave = math.sin(t * math.pi * motion.beats * 2) * envelope;
               final frames = widget.frames[state];

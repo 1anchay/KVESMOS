@@ -7,6 +7,7 @@ import 'design.dart';
 import 'pages.dart';
 import 'rewards_pages.dart';
 import 'lesson_screen.dart';
+import 'adventure_map.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -47,6 +48,7 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
         GoRoute(
           path: '/lesson/:id',
           builder: (_, state) => LessonScreen(
+            key: ValueKey(state.uri.toString()),
             lessonId: state.pathParameters['id']!,
             demo: state.uri.queryParameters['demo'] == '1',
           ),
@@ -62,6 +64,10 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             ),
             GoRoute(path: '/crew', builder: (_, _) => const CrewPage()),
             GoRoute(path: '/', builder: (_, _) => const HomePage()),
+            GoRoute(
+              path: '/map',
+              builder: (_, _) => pageBody([const AdventureMap()]),
+            ),
             GoRoute(path: '/words', builder: (_, _) => const WordsPage()),
             GoRoute(
               path: '/review',
@@ -118,7 +124,7 @@ class OrbitShell extends StatelessWidget {
   const OrbitShell({super.key, required this.location, required this.child});
   @override
   Widget build(BuildContext context) {
-    final index = location == '/'
+    final index = location == '/' || location == '/map'
         ? 0
         : ['/words', '/review'].contains(location)
         ? 1
@@ -167,7 +173,7 @@ class OrbitShell extends StatelessWidget {
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.travel_explore),
-            label: 'Карта',
+            label: 'Сегодня',
           ),
           NavigationDestination(
             icon: Icon(Icons.style_outlined),

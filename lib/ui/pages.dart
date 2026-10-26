@@ -13,7 +13,8 @@ import 'design.dart';
 import 'character_reactions.dart';
 import 'weekly_activity.dart';
 import 'rewards_pages.dart';
-import 'adventure_map.dart';
+import 'today_page.dart';
+import 'character_moment.dart';
 import 'profile_achievements.dart';
 import 'audio_settings.dart';
 import 'galaxy_components.dart';
@@ -39,7 +40,12 @@ class OnboardingPage extends ConsumerWidget {
       body: pageBody([
         Center(
           child: step == 0
-              ? const OrbitRobot(size: 180)
+              ? SpeakingCharacter(
+                  audio: app.audio,
+                  character: 'orbi',
+                  state: CharacterState.greeting,
+                  size: 108,
+                )
               : CharacterReaction(
                   cue: CharacterCue.navigator,
                   eventKey: 'onboarding-$step',
@@ -48,7 +54,7 @@ class OnboardingPage extends ConsumerWidget {
         ),
         Text(
           [
-            'Ваш следующий мир начинается со слова.',
+            'Первое открытие — сегодня.',
             'Куда отправимся?',
             'Выберите точку старта',
             'Небольшая цель. Большие открытия.',
@@ -58,7 +64,7 @@ class OnboardingPage extends ConsumerWidget {
         const SizedBox(height: 16),
         Text(
           [
-            'Я Орби, ваш спутник в изучении языков. Здесь можно ошибаться, пробовать снова и учиться в своём темпе. Всё бесплатно — всегда.',
+            'Я Орби. Давай познакомимся с английским: короткий урок, маленькое открытие и первая находка. Ошибаться можно.',
             'Первый маршрут: английский для русскоговорящих. 20 коротких уроков и 60 слов.',
             'Этот курс знакомит с основами A1. Выбор помогает настроить приветствие; это не тест уровня.',
             'Цель мотивирует, но никогда не ограничивает число уроков. Её можно изменить в настройках.',
@@ -145,161 +151,10 @@ class OnboardingPage extends ConsumerWidget {
   }
 }
 
-class HomePage extends ConsumerWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final app = ref.watch(appProvider), p = app.progress;
-    final catalog = app.repository.catalog;
-    final next =
-        catalog.where((e) => !p.completed.contains(e.id)).firstOrNull ??
-        catalog.first;
-    final today = p.dailyXp[dayKey(DateTime.now())] ?? 0;
-    return pageBody([
-      Padding(
-        padding: const EdgeInsets.only(top: 4, bottom: 16),
-        child: Row(
-          children: [
-            Expanded(
-              child: Text(
-                'Привет, ${app.name}',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-            ),
-            const Icon(Icons.bolt, color: coral),
-            Text(
-              '${p.xp} XP',
-              style: const TextStyle(fontWeight: FontWeight.w800),
-            ),
-          ],
-        ),
-      ),
-      SpaceBanner(
-        animate: app.audio.preferences.reactions,
-        eyebrow: 'ЭКСПЕДИЦИЯ A1 · ${p.completed.length} / ${catalog.length}',
-        title: next.title,
-        subtitle:
-            app.repository.learningObjectives[next.id] ??
-            'Следующая миссия твоей экспедиции.',
-        action: FilledButton.icon(
-          style: FilledButton.styleFrom(
-            backgroundColor: turquoise,
-            foregroundColor: space,
-          ),
-          onPressed: () => context.go(
-            app.installed.contains(next.id) ? '/lesson/${next.id}' : '/offline',
-          ),
-          icon: const Icon(Icons.arrow_forward),
-          label: const Text('Продолжить урок'),
-        ),
-      ),
-      const SizedBox(height: 16),
-      JourneyConstellation(
-        lessons: catalog,
-        completed: p.completed,
-        onOpen: (lesson) {
-          final unlocked =
-              lesson.order == 0 ||
-              p.completed.contains(lesson.id) ||
-              p.completed.contains(catalog[lesson.order - 1].id);
-          if (unlocked) {
-            context.go(
-              app.installed.contains(lesson.id)
-                  ? '/lesson/${lesson.id}'
-                  : '/offline',
-            );
-          } else {
-            showMessage(
-              context,
-              'Сначала заверши предыдущую миссию. Каждая готовит к следующей.',
-            );
-          }
-        },
-      ),
-      const SizedBox(height: 12),
-      Card(
-        child: CharacterReaction(
-          cue: hasDailyXpRecord(p, DateTime.now())
-              ? CharacterCue.record(today)
-              : CharacterCue.greeting,
-          eventKey:
-              'home:${dayKey(DateTime.now())}:${hasDailyXpRecord(p, DateTime.now()) ? today : 0}',
-        ),
-      ),
-      const SizedBox(height: 16),
-      Card(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  const Icon(Icons.track_changes, color: violet),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      today >= app.goal
-                          ? 'Дневная цель достигнута!'
-                          : 'Ваша цель на сегодня',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Flexible(
-                    child: Text(
-                      '$today / ${app.goal} XP',
-                      textAlign: TextAlign.end,
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 14),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(5),
-                child: LinearProgressIndicator(
-                  value: (today / app.goal).clamp(0, 1),
-                  minHeight: 8,
-                ),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                today >= app.goal
-                    ? 'Отличная работа. Если хочется — продолжайте!'
-                    : 'Каждый верный ответ добавляет 10 XP. Ошибки ничего не отнимают.',
-              ),
-            ],
-          ),
-        ),
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: TextButton.icon(
-              onPressed: () => context.go('/quests'),
-              icon: const Icon(Icons.rocket_launch_outlined),
-              label: const Text('Задания дня'),
-            ),
-          ),
-          Expanded(
-            child: TextButton.icon(
-              onPressed: () => context.go('/review'),
-              icon: const Icon(Icons.refresh),
-              label: const Text('Повторение'),
-            ),
-          ),
-        ],
-      ),
-      const RewardShortcut(),
-      const AdventureMap(),
-      const SizedBox(height: 24),
-      Text(
-        app.sync?.status ?? 'Локальный режим · уроки и прогресс на устройстве',
-        textAlign: TextAlign.center,
-        style: Theme.of(context).textTheme.bodySmall,
-      ),
-    ]);
-  }
+  Widget build(BuildContext context) => const TodayPage();
 }
 
 class WordsPage extends ConsumerStatefulWidget {
@@ -404,6 +259,7 @@ class ReviewPage extends ConsumerStatefulWidget {
 }
 
 class _ReviewPageState extends ConsumerState<ReviewPage> {
+  late final LearningAudio reviewAudio;
   final input = TextEditingController();
   List<Vocabulary>? queue;
   int index = 0;
@@ -413,6 +269,7 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
   @override
   void initState() {
     super.initState();
+    reviewAudio = ref.read(appProvider).audio;
     unawaited(loadExamples());
   }
 
@@ -427,6 +284,7 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
 
   @override
   void dispose() {
+    unawaited(reviewAudio.stop());
     input.dispose();
     super.dispose();
   }
@@ -550,8 +408,19 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
                   setState(() => busy = true);
                   try {
                     final word = queue![index];
+                    final grantsBefore = app.inventory.grants.length;
                     await app.repository.review(word, input.text);
                     await app.refresh();
+                    unawaited(
+                      reviewAudio.play(
+                        app.inventory.grants.length > grantsBefore
+                            ? SoundEffect.achievement
+                            : normalizeAnswer(input.text) ==
+                                  normalizeAnswer(word.en)
+                            ? SoundEffect.correct
+                            : SoundEffect.incorrect,
+                      ),
+                    );
                     if (mounted) {
                       setState(
                         () => correct =
@@ -769,7 +638,13 @@ class QuestsPage extends ConsumerWidget {
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(height: 8),
-                  Text(mission.description),
+                  Text(
+                    mission.id == 'review' && app.progress.words.length < 5
+                        ? 'Откроется, когда познакомимся с пятью словами. Сейчас известно ${app.progress.words.length}. Продолжи уроки — всё впереди.'
+                        : mission.id == 'review' && !reviewReadyToday(app)
+                        ? 'Все знакомые слова пока закрепляются. Повторение откроется по расписанию; можно продолжить уроки.'
+                        : mission.description,
+                  ),
                   const SizedBox(height: 16),
                   LinearProgressIndicator(
                     value: (state.progress.count(mission) / mission.target)
@@ -806,8 +681,11 @@ class QuestsPage extends ConsumerWidget {
                       state.awarded(mission)
                           ? '/rewards'
                           : mission.id == 'review'
-                          ? '/review'
-                          : '/',
+                          ? (app.progress.words.length < 5 ||
+                                    !reviewReadyToday(app)
+                                ? nextLessonRoute(app)
+                                : '/review')
+                          : nextLessonRoute(app),
                     ),
                     icon: Icon(
                       state.awarded(mission)
@@ -818,7 +696,10 @@ class QuestsPage extends ConsumerWidget {
                       state.awarded(mission)
                           ? 'К сундукам'
                           : mission.id == 'review'
-                          ? 'Повторить слова'
+                          ? (app.progress.words.length < 5 ||
+                                    !reviewReadyToday(app)
+                                ? 'Открыть новые слова'
+                                : 'Повторить слова')
                           : 'К урокам',
                     ),
                   ),

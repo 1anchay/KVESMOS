@@ -26,7 +26,7 @@ void main() {
         await tester.runAsync(() async {
           await loadPreviewFonts();
           if (Platform.environment['CAPTURE_UI'] == '1') {
-            await Directory('test-output/v05').create(recursive: true);
+            await Directory('test-output/v06').create(recursive: true);
           }
         });
         for (final brightness in Brightness.values) {
@@ -38,6 +38,9 @@ void main() {
             'rewards',
             'story',
             'completion',
+            'correct',
+            'support',
+            'quests',
           ]) {
             final repo = memoryRepository();
             final app = AppController(repo);
@@ -93,6 +96,7 @@ void main() {
               'review' => const ReviewPage(mistakesOnly: true),
               'profile' => const ProfilePage(),
               'rewards' => const RewardsPage(),
+              'quests' => const QuestsPage(),
               _ => const LessonScreen(lessonId: 'a1-12'),
             };
             await tester.pumpWidget(
@@ -108,7 +112,13 @@ void main() {
                     ),
                     child: RepaintBoundary(
                       key: key,
-                      child: name == 'story' || name == 'completion'
+                      child:
+                          [
+                            'story',
+                            'completion',
+                            'correct',
+                            'support',
+                          ].contains(name)
                           ? page
                           : OrbitShell(
                               location: name == 'home' ? '/' : '/$name',
@@ -120,6 +130,22 @@ void main() {
               ),
             );
             await flushDb(tester);
+            if (name == 'correct' || name == 'support') {
+              final option = find.widgetWithText(
+                OutlinedButton,
+                name == 'correct' ? 'It is under the chair.' : 'It is a cup.',
+              );
+              await tester.scrollUntilVisible(
+                option,
+                220,
+                maxScrolls: 40,
+                scrollable: find.byType(Scrollable).first,
+              );
+              await tester.tap(option);
+              await flushDb(tester);
+              await tester.tap(find.text('Проверить'));
+              await flushDb(tester);
+            }
             if (name == 'completion') {
               await tester.scrollUntilVisible(
                 find.byType(TextField),
@@ -163,11 +189,12 @@ void main() {
               isNull,
               reason: '$name $brightness small=$small',
             );
-            if (!small) {
-              await tester.runAsync(
-                () => capturePreview(key, 'v05/$name-${brightness.name}'),
-              );
-            }
+            await tester.runAsync(
+              () => capturePreview(
+                key,
+                'v06/$name-${brightness.name}${small ? '-320-200' : ''}',
+              ),
+            );
             // Inspect content below the fold as well as the initial viewport.
             final scrollables = find.byType(Scrollable);
             if (scrollables.evaluate().isNotEmpty) {

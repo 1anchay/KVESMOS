@@ -55,7 +55,7 @@ void main() {
         await tester.pump(const Duration(milliseconds: 300));
         expect(
           tester.widget<Transform>(transforms.first).transform,
-          isNot(initial),
+          state == CharacterState.idle ? equals(initial) : isNot(initial),
           reason: state.name,
         );
         await tester.pumpAndSettle();

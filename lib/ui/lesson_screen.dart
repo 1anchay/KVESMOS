@@ -19,7 +19,9 @@ import 'character_moment.dart';
 import 'speech_source.dart';
 import 'galaxy_components.dart';
 import 'character_reactions.dart';
-import 'rewards_pages.dart';
+import 'flight_completion.dart';
+import 'answer_signal.dart';
+import 'package:flutter/services.dart';
 import '../services/learning_audio.dart';
 
 const exerciseNames = {
@@ -49,9 +51,12 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Session? session;
   String? error;
   final input = TextEditingController();
+  final feedbackAnchor = GlobalKey();
   final voice = VoiceService();
   late final LearningAudio audio;
   bool unlockedAchievement = false;
+  bool completionMoment = false;
+  Set<String> initialGrants = {}, initialAchievements = {};
   int consecutiveCorrect = 0;
   int bestCombo = 0;
   List<int> order = [];
@@ -74,6 +79,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Future<void> load() async {
     try {
       final app = ref.read(appProvider);
+      initialGrants = app.inventory.grants.keys.toSet();
+      initialAchievements = app.progress.achievements.toSet();
       final loaded = await app.repository.lesson(widget.lessonId);
       // Guards also apply to direct deep links, not just the map's buttons.
       if (loaded.order > 0 &&
@@ -234,16 +241,26 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         session = await app.repository.session(session!.id);
         if (session!.done) lessonResult = await _readSummary(session!.id);
         prepare();
-        if (mounted) {
-          unawaited(
-            audio.play(
-              finished
-                  ? (unlockedAchievement
-                        ? SoundEffect.achievement
-                        : SoundEffect.complete)
-                  : SoundEffect.xp,
-            ),
-          );
+        if (mounted && finished) {
+          try {
+            completionMoment = await app.claimExperienceMoment(
+              'complete:${session!.id}',
+            );
+          } catch (_) {
+            // Presentation bookkeeping must not hide an already saved result.
+            completionMoment = false;
+          }
+          if (mounted && completionMoment) {
+            unawaited(
+              audio.play(
+                app.inventory.grants.keys.any(
+                      (id) => !initialGrants.contains(id),
+                    )
+                    ? SoundEffect.achievement
+                    : SoundEffect.complete,
+              ),
+            );
+          }
         }
       } else if (result == false) {
         result = null;
@@ -261,11 +278,26 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           (a) => !achievementsBefore.contains(a),
         );
         result = correct;
+        if (audio.preferences.reactions &&
+            mounted &&
+            !MediaQuery.disableAnimationsOf(context)) {
+          unawaited(
+            correct
+                ? HapticFeedback.lightImpact()
+                : HapticFeedback.selectionClick(),
+          );
+        }
         consecutiveCorrect = correct ? consecutiveCorrect + 1 : 0;
         bestCombo = max(bestCombo, consecutiveCorrect);
         if (mounted) {
           unawaited(
-            audio.play(correct ? SoundEffect.correct : SoundEffect.incorrect),
+            audio.play(
+              !correct
+                  ? SoundEffect.incorrect
+                  : consecutiveCorrect >= 3 && consecutiveCorrect % 3 == 0
+                  ? SoundEffect.xp
+                  : SoundEffect.correct,
+            ),
           );
         }
         unawaited(app.synchronize());
@@ -278,7 +310,23 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         );
       }
     } finally {
-      if (mounted) setState(() => busy = false);
+      if (mounted) {
+        setState(() => busy = false);
+        if (result == false) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            final target = feedbackAnchor.currentContext;
+            if (mounted && target != null) {
+              Scrollable.ensureVisible(
+                target,
+                duration: MediaQuery.disableAnimationsOf(context)
+                    ? Duration.zero
+                    : const Duration(milliseconds: 280),
+                alignment: 0,
+              );
+            }
+          });
+        }
+      }
     }
   }
 
@@ -412,17 +460,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 if (result != null)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8),
-                    child: Semantics(
-                      liveRegion: true,
-                      child: Text(
-                        result!
-                            ? 'Отлично, идём дальше!'
-                            : 'Попробуем ещё раз — подсказка ниже задания',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          color: Theme.of(context).colorScheme.onSurface,
-                        ),
+                    child: AnswerSignal(
+                      key: ValueKey(
+                        '${session!.id}:${session!.position}:$result',
                       ),
+                      correct: result!,
+                      animate: audio.preferences.reactions,
+                      combo: consecutiveCorrect,
                     ),
                   ),
                 FilledButton(
@@ -523,7 +567,17 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   ),
                 ],
               ),
-            if (e.story == null) const SizedBox(height: 20),
+            if (lesson!.exercises.length - session!.position <= 2)
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Text(
+                  lesson!.exercises.length - session!.position == 1
+                      ? 'Финальный шаг. Покажи, чему научился!'
+                      : 'Ещё два шага — и открытие твоё.',
+                  style: Theme.of(context).textTheme.labelLarge,
+                ),
+              ),
+            if (e.story == null) const SizedBox(height: 12),
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(24),
@@ -666,6 +720,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             ],
             const SizedBox(height: 24),
             AnimatedSwitcher(
+              key: feedbackAnchor,
               duration: MediaQuery.disableAnimationsOf(context)
                   ? Duration.zero
                   : const Duration(milliseconds: 220),
@@ -805,6 +860,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               (v) => Padding(
                 padding: const EdgeInsets.only(bottom: 12),
                 child: AnswerTile(
+                  verdict: result,
                   text: v,
                   index: options.indexOf(v),
                   selected: input.text == v,
@@ -957,112 +1013,18 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
 
   Widget _completion(BuildContext context) {
     final app = ref.watch(appProvider);
-    final summary = lessonResult ?? ProgressSnapshot();
-    final attempts = summary.correct + summary.errors;
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => context.go('/'),
-          icon: const Icon(Icons.close),
-        ),
-      ),
-      body: SafeArea(
-        child: pageBody([
-          Center(
-            child: SpeakingCharacter(
-              audio: audio,
-              character: 'orbi',
-              state: CharacterState.celebration,
-              size: 140,
-            ),
-          ),
-          if (app.audio.preferences.reactions)
-            CharacterReaction(
-              cue: CharacterCue.completed,
-              eventKey: 'completed:${session!.id}',
-            ),
-          const SizedBox(height: 12),
-          Text(
-            'Новая орбита освоена!',
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineLarge,
-          ),
-          const SizedBox(height: 16),
-          Text(
-            lesson!.title,
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const SizedBox(height: 24),
-          SpaceBanner(
-            showCharacter: false,
-            eyebrow: 'УРОК ЗАВЕРШЁН',
-            title: '+${summary.xp} XP',
-            subtitle:
-                'Верных ответов: ${summary.correct}. Ошибок: ${summary.errors}. Прогресс уже сохранён на устройстве.',
-          ),
-          if (lesson!.objective != null) ...[
-            const SizedBox(height: 16),
-            Text(
-              'Теперь ты умеешь: ${lesson!.objective}',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-          ],
-          const SizedBox(height: 16),
-          Metric(
-            value: attempts == 0
-                ? '—'
-                : '${(100 * summary.correct / attempts).round()}%',
-            label: 'точность всех попыток в этом уроке',
-            icon: Icons.track_changes,
-          ),
-          const SizedBox(height: 20),
-          Text(
-            'Всего ${app.progress.xp} XP · уровень ${app.progress.level}',
-            textAlign: TextAlign.center,
-          ),
-          if (bestCombo > 1)
-            Padding(
-              padding: const EdgeInsets.only(top: 12),
-              child: Text(
-                'Лучшая серия: $bestCombo ответов подряд',
-                textAlign: TextAlign.center,
-              ),
-            ),
-          if (summary.words.values.any((word) => word.errors > 0)) ...[
-            const SizedBox(height: 20),
-            Text(
-              'Вернёмся к сложным словам',
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            for (final word in summary.words.entries.where(
-              (e) => e.value.errors > 0,
-            ))
-              if (app.repository.vocabulary[word.key] case final vocabulary?)
-                Text(
-                  '${vocabulary.en} — ${vocabulary.ru} · плановое повторение ${dayKey((app.progress.words[word.key]?.next ?? DateTime.now()).toLocal())}',
-                ),
-            TextButton.icon(
-              onPressed: () => context.go('/review?mistakes=1'),
-              icon: const Icon(Icons.history_edu),
-              label: const Text('Разобрать ошибки сейчас'),
-            ),
-          ],
-          const SizedBox(height: 24),
-          if (app.inventory.unopened > 0) ...[
-            const RewardShortcut(),
-            const SizedBox(height: 16),
-          ],
-          FilledButton(
-            onPressed: () => context.go('/'),
-            child: const Text('Вернуться к путешествию'),
-          ),
-          TextButton(
-            onPressed: () => context.go('/words'),
-            child: const Text('Посмотреть новые слова'),
-          ),
-        ]),
-      ),
+    return FlightCompletion(
+      app: app,
+      lesson: lesson!,
+      summary: lessonResult ?? ProgressSnapshot(),
+      celebrate: completionMoment,
+      bestCombo: bestCombo,
+      newChests: app.inventory.grants.keys
+          .where((id) => !initialGrants.contains(id))
+          .length,
+      achievements: app.progress.achievements
+          .where((id) => !initialAchievements.contains(id))
+          .toList(),
     );
   }
 }

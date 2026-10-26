@@ -339,6 +339,7 @@ enum SoundEffect {
 class SoundEffectsService {
   static const channel = MethodChannel('dev.orbitwords/learning_audio');
   DateTime? _last;
+  DateTime? _protectedUntil;
   Future<void> prepare() async {
     try {
       await channel
@@ -351,15 +352,28 @@ class SoundEffectsService {
 
   Future<bool> play(SoundEffect effect, double volume) async {
     final now = DateTime.now();
+    if (effect == SoundEffect.tap && _protectedUntil?.isAfter(now) == true) {
+      return false;
+    }
     if (_last != null &&
         now.difference(_last!) < const Duration(milliseconds: 90)) {
       return false;
     }
     _last = now;
+    _protectedUntil = now.add(
+      Duration(milliseconds: effect == SoundEffect.tap ? 120 : 700),
+    );
     try {
       return await channel.invokeMethod<bool>('play', {
             'effect': effect.name,
-            'volume': volume.clamp(0, 1),
+            'volume':
+                (volume *
+                        (effect == SoundEffect.tap
+                            ? .45
+                            : effect == SoundEffect.incorrect
+                            ? .65
+                            : .85))
+                    .clamp(0, 1),
           }) ??
           false;
     } catch (_) {

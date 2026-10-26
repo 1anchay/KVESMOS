@@ -4,6 +4,7 @@ on:
     branches:
       - feature/lesson-coaching-voice-honesty
       - feature/kvesmos-v05-quality
+      - codex/kvesmos-v06-alive
   workflow_dispatch:
 
 jobs:

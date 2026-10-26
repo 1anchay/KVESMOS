@@ -114,6 +114,15 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     if (!_disposed) notifyListeners();
   }
 
+  /// Durable presentation marker only; never grants XP or inventory items.
+  Future<bool> claimExperienceMoment(String id) =>
+      repository.db.transaction(() async {
+        final key = 'kvesmos.alive.seen.v1:$id';
+        if (await repository.setting(key) != null) return false;
+        await repository.setSetting(key, 'true');
+        return true;
+      });
+
   Future<void> equipCosmetic(String slot, String? id) async {
     inventory = await rewards.equip(slot, id);
     if (!_disposed) notifyListeners();

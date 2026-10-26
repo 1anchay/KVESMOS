@@ -373,46 +373,37 @@ class AnswerTile extends StatelessWidget {
   final String text;
   final int index;
   final bool selected;
+  final bool? verdict;
   final VoidCallback onPressed;
   const AnswerTile({
     super.key,
     required this.text,
     required this.index,
     required this.selected,
+    this.verdict,
     required this.onPressed,
   });
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final accent = verdict == false ? const Color(0xFFAC671C) : scheme.primary;
     return Semantics(
       selected: selected,
       child: AnimatedContainer(
         duration: MediaQuery.disableAnimationsOf(context)
             ? Duration.zero
             : const Duration(milliseconds: 140),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(22),
-          boxShadow: [
-            BoxShadow(
-              color: selected
-                  ? scheme.primary.withValues(alpha: .25)
-                  : scheme.outlineVariant.withValues(alpha: .28),
-              offset: const Offset(0, 4),
-            ),
-          ],
-        ),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(22)),
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
             minimumSize: const Size(double.infinity, 66),
             padding: const EdgeInsets.all(16),
             backgroundColor: selected
-                ? scheme.primaryContainer
+                ? accent.withValues(alpha: .14)
                 : scheme.surfaceContainerLowest,
-            foregroundColor: selected
-                ? scheme.onPrimaryContainer
-                : scheme.onSurface,
+            foregroundColor: scheme.onSurface,
             side: BorderSide(
-              color: selected ? scheme.primary : scheme.outlineVariant,
+              color: selected ? accent : scheme.outlineVariant,
               width: selected ? 2 : 1,
             ),
           ),
@@ -426,13 +417,15 @@ class AnswerTile extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: selected
-                        ? scheme.primary
-                        : scheme.surfaceContainerHighest,
+                    color: selected ? accent : scheme.surfaceContainerHighest,
                   ),
                   child: selected
                       ? Icon(
-                          Icons.check_rounded,
+                          verdict == false
+                              ? Icons.close_rounded
+                              : verdict == true
+                              ? Icons.check_rounded
+                              : Icons.radio_button_checked,
                           size: 18,
                           color: scheme.onPrimary,
                         )

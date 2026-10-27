@@ -326,6 +326,9 @@ class CharacterVoiceService {
 }
 
 enum SoundEffect {
+  equip,
+  epic,
+  legendary,
   correct,
   incorrect,
   xp,

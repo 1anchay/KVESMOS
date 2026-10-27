@@ -1,3 +1,5 @@
+import '../domain/explorer_profile.dart';
+import 'collection_components.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
@@ -11,6 +13,7 @@ import 'character_moment.dart';
 import 'flight_components.dart';
 import 'today_page.dart';
 import 'design.dart';
+import 'character_reactions.dart' show hasDailyXpRecord;
 
 class FlightCompletion extends StatelessWidget {
   final AppController app;
@@ -83,6 +86,29 @@ class FlightCompletion extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
+          if (celebrate &&
+              hasDailyXpRecord(app.progress, app.repository.now())) ...[
+            CollectionPanel(
+              child: Row(
+                children: [
+                  const Icon(Icons.insights_rounded, size: 48),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Новый личный рекорд!', style: type.titleMedium),
+                        Text(
+                          '${today.xp} XP за сегодня — больше, чем в любой прошлый день.',
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+          ],
           if (regionDone && lesson.order % 4 == 3) ...[
             FlightArrival(
               animate: celebrate && app.audio.preferences.reactions,
@@ -155,14 +181,25 @@ class FlightCompletion extends StatelessWidget {
                 for (final achievement in achievements)
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
-                    child: Row(
-                      children: [
-                        const Icon(Icons.auto_awesome_rounded, size: 20),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: Text(achievement, style: type.titleMedium),
-                        ),
-                      ],
+                    child: FlightArrival(
+                      animate: celebrate && app.audio.preferences.reactions,
+                      child: Row(
+                        children: [
+                          BadgeArt(
+                            ExplorerBadge.all.firstWhere(
+                              (b) => b.name == achievement,
+                            ),
+                            size: 64,
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: TextButton(
+                              onPressed: () => context.go('/achievements'),
+                              child: Text(achievement, style: type.titleMedium),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
               ],

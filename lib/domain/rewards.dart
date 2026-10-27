@@ -65,6 +65,13 @@ class ChestGrant {
   };
 }
 
+/// The transaction, rather than UI timing, decides whether this was a new find.
+class RewardOpening {
+  final Cosmetic? item;
+  final bool fresh;
+  const RewardOpening(this.item, this.fresh);
+}
+
 class Inventory {
   final Map<String, ChestGrant> grants;
   final Map<String, String> equipped;

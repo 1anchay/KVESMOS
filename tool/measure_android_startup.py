@@ -17,6 +17,8 @@ def main():
     parser.add_argument('--adb', type=Path, required=True)
     parser.add_argument('--serial', required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--mode', default='debug x64; API 36; SwiftShader; 720x1600 at 320 dpi; 2 cores/1536MB',
+                        help='Actual device/build configuration, recorded with measurements')
     args = parser.parse_args()
 
     def device(*command):
@@ -41,7 +43,7 @@ def main():
     report = {
         'version': version, 'serial': args.serial,
         'metric': 'Android Activity launch TotalTime; not Flutter first meaningful paint',
-        'mode': 'debug x64; API 36; SwiftShader; 720x1600 at 320 dpi; 2 cores/1536MB',
+        'mode': args.mode,
         'warmupMs': samples[0], 'samplesMs': samples[1:],
         'medianMs': statistics.median(samples[1:]),
         'pssKbAfterLastLaunch': int(pss.group(1)) if pss else None,

@@ -26,7 +26,7 @@ import AVFoundation
         switch call.method {
         case "prepare":
           try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
-          for name in ["correct", "incorrect", "xp", "complete", "achievement", "chest", "rare", "tap"] {
+          for name in ["correct", "incorrect", "xp", "complete", "achievement", "chest", "rare", "tap", "equip", "epic", "legendary"] {
             let key = FlutterDartProject.lookupKey(forAsset: "assets/audio/effects/\(name).wav")
             if let path = Bundle.main.path(forResource: key, ofType: nil) {
               let player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))

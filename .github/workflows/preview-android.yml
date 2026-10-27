@@ -6,6 +6,7 @@ on:
       - feature/kvesmos-v05-quality
       - codex/kvesmos-v06-alive
       - feature/kvesmos-v07-learning-game
+      - codex/kvesmos-v08-profile-rewards
   workflow_dispatch:
 
 jobs:

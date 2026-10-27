@@ -64,18 +64,30 @@ class RewardsRepository {
     return state;
   });
 
-  Future<Cosmetic?> open(String chestInstanceId) =>
+  Future<Cosmetic?> open(String chestInstanceId) async =>
+      (await openOnce(chestInstanceId)).item;
+
+  Future<RewardOpening> openOnce(String chestInstanceId) =>
       learning.db.transaction(() async {
         final state = await read();
         final grant = state.grants[chestInstanceId];
         if (grant == null) throw StateError('Этот сундук ещё не получен.');
-        if (grant.itemId != null) return catalog.item(grant.itemId!);
+        if (grant.itemId != null) {
+          return RewardOpening(catalog.item(grant.itemId!), false);
+        }
         final item = catalog.draw(grant.kind, state.owned, random);
-        if (item == null) return null;
+        if (item == null) return const RewardOpening(null, false);
         state.grants[grant.id] = ChestGrant(grant.id, grant.kind, item.id);
         await _save(state);
-        return item;
+        return RewardOpening(item, true);
       });
+
+  Future<Inventory> resetAppearance() => learning.db.transaction(() async {
+    final state = await read();
+    state.equipped.clear();
+    await _save(state);
+    return state;
+  });
 
   Future<Inventory> equip(String slot, String? itemId) =>
       learning.db.transaction(() async {

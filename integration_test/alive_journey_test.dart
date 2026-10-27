@@ -1,3 +1,7 @@
+import 'dart:ui' show FrameTiming;
+import 'dart:convert';
+import 'package:go_router/go_router.dart';
+import '../test/rewards_fixture.dart';
 // Disposable QA emulator ONLY. Flutter's runner may clear its target package.
 // Back up the QA app before running; restore the production APK and backup after.
 import 'package:flutter/material.dart';
@@ -20,7 +24,7 @@ void main() {
   ) async {
     // Isolated fixture; never clear or modify the installed user's database.
     final repo = LearningRepository(AppDatabase(NativeDatabase.memory()));
-    final app = AppController(repo);
+    final app = AppController(repo, rewardRandom: RareFrameRandom());
     await app.initialize();
     expect(
       app.progress.xp,
@@ -129,9 +133,52 @@ void main() {
     await Future<void>.delayed(const Duration(seconds: 2));
     await tap(find.text('Открыть находки'));
     await tap(find.text('Открыть сундук').first);
+    final timings = <FrameTiming>[];
+    void collect(List<FrameTiming> batch) => timings.addAll(batch);
+    WidgetsBinding.instance.addTimingsCallback(collect);
     await tap(find.text('Открыть').first);
+    await Future<void>.delayed(const Duration(seconds: 1));
+    WidgetsBinding.instance.removeTimingsCallback(collect);
+    Map<String, dynamic> distribution(List<double> values) {
+      values.sort();
+      return {
+        'frames': values.length,
+        'medianMs': values[values.length ~/ 2],
+        'p95Ms': values[((values.length - 1) * .95).round()],
+        'over16_7ms': values.where((v) => v > 16.7).length,
+      };
+    }
+
+    expect(timings, isNotEmpty);
+    debugPrint(
+      'KVESMOS_FRAME_TIMINGS ${jsonEncode({'mode': 'debug x64 emulator; engine FrameTiming, not video FPS', 'build': distribution(timings.map((t) => t.buildDuration.inMicroseconds / 1000).toList()), 'raster': distribution(timings.map((t) => t.rasterDuration.inMicroseconds / 1000).toList())})}',
+    );
     await Future<void>.delayed(const Duration(seconds: 2));
     expect(tester.takeException(), isNull);
+    expect(app.inventory.owned, hasLength(1));
+    final item = app.rewards.catalog.item(app.inventory.owned.single);
+    expect(item.rarity, 'rare');
+    await tap(find.text('Примерить находку'));
+    await tap(find.byKey(const ValueKey('apply-cosmetic')));
+    expect(app.inventory.equipped[item.slot], item.id);
+    await tap(find.text('Посмотреть профиль'));
+    await tap(find.text('Вся коллекция'));
+    expect(find.text('Первый контакт'), findsOneWidget);
+    GoRouter.of(tester.element(find.byType(OrbitShell))).go('/map');
+    await tester.pumpAndSettle();
+    expect(app.progress.xp, 120);
+    for (final effect in [
+      SoundEffect.equip,
+      SoundEffect.epic,
+      SoundEffect.legendary,
+    ]) {
+      await Future<void>.delayed(const Duration(milliseconds: 900));
+      expect(
+        await app.audio.play(effect),
+        isTrue,
+        reason: 'Native ${effect.name} effect',
+      );
+    }
     debugPrint('ALIVE_RECORD_DONE');
     await app.refresh();
     final count = app.inventory.grants.length;

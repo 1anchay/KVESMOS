@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -9,6 +10,7 @@ import '../data/missions_repository.dart';
 import '../domain/missions.dart';
 import '../domain/rewards.dart';
 import '../domain/progress.dart';
+import '../domain/explorer_profile.dart';
 import '../services/cloud.dart';
 import '../services/sync.dart';
 import '../services/learning_audio.dart';
@@ -20,6 +22,7 @@ final appProvider = ChangeNotifierProvider<AppController>(
 class AppController extends ChangeNotifier with WidgetsBindingObserver {
   static const showcaseKey = 'kvesmos.profile.showcase.v1';
   final LearningRepository repository;
+  final Random? rewardRandom;
   final SupabaseClient? cloud;
   late final SyncService? sync;
   late final RewardsRepository rewards;
@@ -29,6 +32,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Inventory inventory = Inventory();
   List<String> featuredAchievements = [];
   ProgressSnapshot progress = ProgressSnapshot();
+  ExplorerRecords records = const ExplorerRecords();
   Set<String> installed = {};
   int goal = 50;
   String name = 'Исследователь', startingLevel = 'С нуля';
@@ -40,7 +44,12 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Timer? _retry;
   Timer? _calendarTimer;
   StreamSubscription<AuthState>? _auth;
-  AppController(this.repository, {this.cloud, this.cloudError}) {
+  AppController(
+    this.repository, {
+    this.cloud,
+    this.cloudError,
+    this.rewardRandom,
+  }) {
     audio = LearningAudio(repository.setting, repository.setSetting);
     sync = cloud == null
         ? null
@@ -52,6 +61,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     rewards = RewardsRepository(
       repository,
       RewardCatalog(await repository.loadAsset('assets/kvesmos/catalog.json')),
+      random: rewardRandom,
     );
     dailyMissions = MissionsRepository(repository);
     goal = int.tryParse(await repository.setting('goal') ?? '') ?? 50;
@@ -106,7 +116,9 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   }
 
   Future<void> refresh() async {
-    progress = await repository.progress();
+    final events = await repository.allEvents();
+    progress = ProgressSnapshot.fromEvents(events);
+    records = ExplorerRecords.fromEvents(events, progress);
     installed = await repository.installed();
     await rewards.reconcile();
     missions = await dailyMissions.reconcile();
@@ -125,6 +137,11 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
 
   Future<void> equipCosmetic(String slot, String? id) async {
     inventory = await rewards.equip(slot, id);
+    if (!_disposed) notifyListeners();
+  }
+
+  Future<void> resetAppearance() async {
+    inventory = await rewards.resetAppearance();
     if (!_disposed) notifyListeners();
   }
 
@@ -200,8 +217,11 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     String? level,
   }) async {
     if (newName != null) {
-      name = newName.trim().isEmpty ? 'Исследователь' : newName.trim();
-      await repository.setSetting('name', name);
+      final savedName = newName.trim().isEmpty
+          ? 'Исследователь'
+          : newName.trim();
+      await repository.setSetting('name', savedName);
+      name = savedName;
     }
     if (newGoal != null) {
       goal = newGoal;

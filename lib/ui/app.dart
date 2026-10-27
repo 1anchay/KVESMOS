@@ -55,6 +55,20 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             demo: state.uri.queryParameters['demo'] == '1',
           ),
         ),
+        GoRoute(
+          path: '/chest/:id',
+          builder: (_, state) {
+            final grant = app.inventory.grants[state.pathParameters['id']];
+            return grant == null
+                ? Scaffold(
+                    appBar: AppBar(title: const Text('Находки')),
+                    body: const Center(
+                      child: Text('Этот сундук ещё не получен.'),
+                    ),
+                  )
+                : OpenChestDialog(key: ValueKey(grant.id), grant: grant);
+          },
+        ),
         ShellRoute(
           builder: (context, state, child) =>
               OrbitShell(location: state.uri.path, child: child),

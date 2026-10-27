@@ -1,3 +1,4 @@
+import 'explorer_profile.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -12,7 +13,6 @@ import '../services/device.dart';
 import 'design.dart';
 import 'character_reactions.dart';
 import 'weekly_activity.dart';
-import 'rewards_pages.dart';
 import 'today_page.dart';
 import 'character_moment.dart';
 import 'profile_achievements.dart';
@@ -565,44 +565,7 @@ class AchievementsPage extends ConsumerWidget {
   const AchievementsPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final unlocked = ref.watch(appProvider).progress.achievements;
-    const goals = {
-      'Первый контакт': 'Завершите первый урок',
-      'Исследователь': 'Пройдите 5 разных уроков',
-      'Новая планета': 'Пройдите 10 разных уроков',
-      'Созвездие A1': 'Пройдите все 20 уроков',
-      'Хранитель слов': 'Откройте 30 слов',
-      'Тысяча звёзд': 'Накопите 1000 XP',
-    };
-    return pageBody([
-      const SpaceBanner(
-        eyebrow: 'КОЛЛЕКЦИЯ ОТКРЫТИЙ',
-        title: 'У каждого шага\nсвоя звезда.',
-        subtitle: 'Награды остаются с вами. Ошибки их не отнимают.',
-      ),
-      ...goals.entries.map(
-        (e) => Padding(
-          padding: const EdgeInsets.only(top: 14),
-          child: Card(
-            child: ListTile(
-              contentPadding: const EdgeInsets.all(20),
-              leading: Icon(
-                unlocked.contains(e.key)
-                    ? Icons.auto_awesome
-                    : Icons.star_outline,
-                color: unlocked.contains(e.key) ? coral : Colors.grey,
-                size: 36,
-              ),
-              title: Text(e.key),
-              subtitle: Text(e.value),
-              trailing: unlocked.contains(e.key)
-                  ? const Icon(Icons.check_circle, color: Color(0xFF007B73))
-                  : null,
-            ),
-          ),
-        ),
-      ),
-    ]);
+    return const AchievementCollection();
   }
 }
 
@@ -829,23 +792,8 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
         cloud = app.cloud,
         user = app.cloud?.auth.currentUser;
     return pageBody([
-      MissionHeader(
-        eyebrow: 'Паспорт исследователя',
-        title: 'Мой профиль',
-        subtitle:
-            'Уровень ${app.progress.level} · ${app.progress.completed.length} миссий · ${app.inventory.owned.length} находок',
-        icon: Icons.badge_outlined,
-      ),
-      ProfileLook(app),
-      const SizedBox(height: 16),
-      const AchievementShowcase(),
-      const SizedBox(height: 16),
-      const RewardShortcut(),
-      TextButton.icon(
-        onPressed: () => context.go('/crew'),
-        icon: const Icon(Icons.groups_outlined),
-        label: const Text('Команда KVESMOS'),
-      ),
+      const ExplorerProfile(),
+      const SizedBox(height: 24),
       const SectionTitle('Сохранение прогресса'),
       if (cloud == null) ...[
         const Text(

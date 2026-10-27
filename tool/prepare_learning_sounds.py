@@ -10,6 +10,9 @@ OUT.mkdir(parents=True, exist_ok=True)
 # Original five-note palette: warm fundamental, softly decaying harmonics.
 # xp = every-third-answer streak; achievement = completed quest.
 SCORES = {
+ 'equip': [(392, .055), (659.25, .13)],
+ 'epic': [(392, .08), (659.25, .09), (783.99, .11), (1046.5, .23)],
+ 'legendary': [(261.63, .09), (523.25, .10), (659.25, .11), (783.99, .12), (1046.5, .32)],
  'tap': [(440, .055)], 'correct': [(523.25, .10), (783.99, .18)],
  'incorrect': [(392, .12), (349.23, .18)],
  'xp': [(523.25, .08), (659.25, .09), (783.99, .19)],

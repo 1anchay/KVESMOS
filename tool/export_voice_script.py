@@ -20,12 +20,22 @@ def main():
         for step in lesson.get("teachingSteps", []):
             add(step["character"], step["phrase"], f'{lesson["id"]}: {step["title"]}')
         for exercise in lesson["exercises"]:
+            for field in ["success", "support", "recovered"]:
+                if exercise.get("story", {}).get(field):
+                    add(exercise["character"], exercise["story"][field], exercise["id"] + ": story response")
             if exercise.get("audio"):
                 add(exercise["character"], exercise["audio"], exercise["id"])
             for line in exercise.get("scene", "").splitlines():
                 speaker, sep, text = line.partition(":")
                 if sep and speaker.strip() in SPEAKERS and text.strip() not in {"…", "...", ""}:
                     add(SPEAKERS[speaker.strip()], text, exercise["id"])
+    for word in ["hello", "friend", "name", "from", "welcome", "goodbye"]:
+        add("miko", word, "v07: personal practice")
+    # Preserve every previously licensed recording and its exact text.
+    old_manifest = ROOT / "assets/audio/voices/manifest.json"
+    if old_manifest.exists():
+        for entry in json.loads(old_manifest.read_text(encoding="utf-8"))["recordings"]:
+            add(entry["character"], entry["text"], "previously shipped line")
     target = ROOT / "docs/audio/voice-script.tsv"
     target.parent.mkdir(parents=True, exist_ok=True)
     with target.open("w", encoding="utf-8", newline="") as stream:

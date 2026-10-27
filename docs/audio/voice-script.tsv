@@ -10,6 +10,10 @@ vespa	en-US	I am from Earth.	a1-02: Откуда ты?	recording-required
 vespa	en-US	Where are you from?	a1-02: Теперь твоя очередь спросить	recording-required
 miko	en-US	Welcome!	a1-02: Встреть гостя	recording-required
 vespa	ru-RU	Where are you from?\nТы: …	a1-02-pilot1-e06	recording-required
+orbi	en-US	A new friend! Let us keep exploring.	a1-02-pilot1-e08: story response	recording-required
+orbi	en-US	Take your time. I am here to help.	a1-02-pilot1-e08: story response	recording-required
+orbi	en-US	We found the answer together!	a1-02-pilot1-e08: story response	recording-required
+orbi	en-US	Welcome!	a1-02-pilot1-e08	recording-required
 pixie	en-US	This is a book.	a1-03: Положи книгу	recording-required
 nox	en-US	This is a pen.	a1-03: Найди ручку	recording-required
 miko	en-US	This is my bag.	a1-03: Где сумка?	recording-required
@@ -33,10 +37,16 @@ vespa	en-US	I am twenty.	a1-06: Ещё одно число	recording-required
 aster	en-US	How old are you?	a1-06: Спроси собеседника	recording-required
 vespa	en-US	twenty	a1-06-journey2-e05	recording-required
 aster	en-US	Hello! How old are you?	a1-06-journey2-e07	recording-required
+zig_quartz	en-US	Signal confirmed. Ready for the next step!	a1-06-journey2-e08: story response	recording-required
+zig_quartz	en-US	One small clue can help. Try again.	a1-06-journey2-e08: story response	recording-required
+zig_quartz	en-US	The signal is clear now. Well done!	a1-06-journey2-e08: story response	recording-required
 orbi	en-US	This is my sister.	a1-07: Моя сестра	recording-required
 miko	en-US	She is ten. He is six.	a1-07: Он и она	recording-required
 zig_quartz	en-US	This is my brother. This is my mother.	a1-07: Семейный альбом	recording-required
 miko	en-US	This is my brother.	a1-07-v3-05	recording-required
+miko	en-US	That was lovely. Our story goes on!	a1-07-v3-08: story response	recording-required
+miko	en-US	Let us look at the clue together.	a1-07-v3-08: story response	recording-required
+miko	en-US	You tried again, and it worked!	a1-07-v3-08: story response	recording-required
 miko	ru-RU	Это мой семейный альбом.	a1-07-v3-08	recording-required
 miko	ru-RU	Подпишем мамину фотографию.	a1-07-v3-08	recording-required
 miko	ru-RU	Добавим его возраст — шесть лет.	a1-07-v3-10	recording-required
@@ -115,3 +125,9 @@ zig_quartz	en-US	It is ten dollars.	a1-20: Ответ о цене	recording-requ
 miko	en-US	It is twenty dollars.	a1-20-v3-05	recording-required
 miko	en-US	This is a blue shirt.	a1-20-v3-08	recording-required
 zig_quartz	en-US	A blue shirt.	a1-20-v3-10	recording-required
+miko	en-US	hello	v07: personal practice	recording-required
+miko	en-US	friend	v07: personal practice	recording-required
+miko	en-US	name	v07: personal practice	recording-required
+miko	en-US	from	v07: personal practice	recording-required
+miko	en-US	welcome	v07: personal practice	recording-required
+miko	en-US	goodbye	v07: personal practice	recording-required

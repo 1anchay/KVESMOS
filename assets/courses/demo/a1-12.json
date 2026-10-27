@@ -217,7 +217,10 @@
         "id": "a1-12-story",
         "title": "Пропавшая книга",
         "step": 1,
-        "total": 3
+        "total": 3,
+        "success": "That was lovely. Our story goes on!",
+        "support": "Let us look at the clue together.",
+        "recovered": "You tried again, and it worked!"
       }
     },
     {
@@ -245,7 +248,10 @@
         "id": "a1-12-story",
         "title": "Пропавшая книга",
         "step": 2,
-        "total": 3
+        "total": 3,
+        "success": "Signal confirmed. Ready for the next step!",
+        "support": "One small clue can help. Try again.",
+        "recovered": "The signal is clear now. Well done!"
       }
     },
     {
@@ -270,7 +276,10 @@
         "id": "a1-12-story",
         "title": "Пропавшая книга",
         "step": 3,
-        "total": 3
+        "total": 3,
+        "success": "A new friend! Let us keep exploring.",
+        "support": "Take your time. I am here to help.",
+        "recovered": "We found the answer together!"
       }
     }
   ]

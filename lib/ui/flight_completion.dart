@@ -4,6 +4,9 @@ import '../core/controller.dart';
 import '../domain/course.dart';
 import '../domain/progress.dart';
 import '../domain/today.dart';
+import '../domain/journey.dart';
+import 'journey_planet.dart';
+import 'adventure_map.dart';
 import 'character_moment.dart';
 import 'flight_components.dart';
 import 'today_page.dart';
@@ -30,6 +33,11 @@ class FlightCompletion extends StatelessWidget {
   Widget build(BuildContext context) {
     final today = TodayJourney(app.progress, app.repository.now(), app.goal);
     final type = Theme.of(context).textTheme;
+    final region = JourneyRegion.forOrder(lesson.order);
+    final regionDone = region.complete(
+      app.progress.completed,
+      app.repository.catalog,
+    );
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -75,6 +83,44 @@ class FlightCompletion extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
+          if (regionDone && lesson.order % 4 == 3) ...[
+            FlightArrival(
+              animate: celebrate && app.audio.preferences.reactions,
+              child: FlightPanel(
+                accent: true,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      width: 92,
+                      height: 92,
+                      child: CustomPaint(
+                        painter: JourneyPlanetPainter(
+                          region.index,
+                          regionColors[region.index],
+                        ),
+                      ),
+                    ),
+                    Text(
+                      '${region.title}: исследовано!',
+                      style: type.titleLarge,
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      region.index < 4
+                          ? 'Новая область открыта: ${JourneyRegion.all[region.index + 1].title}. Печать уже в паспорте.'
+                          : 'Все пять печатей собраны. Вводный маршрут пройден — продолжай закреплять слова.',
+                    ),
+                    TextButton(
+                      onPressed: () => context.go('/map'),
+                      child: const Text('Посмотреть новую область'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+          ],
           FlightPanel(
             accent: true,
             child: Column(

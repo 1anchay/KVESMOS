@@ -207,7 +207,10 @@
         "id": "a1-18-story",
         "title": "Карта нового города",
         "step": 1,
-        "total": 3
+        "total": 3,
+        "success": "That was lovely. Our story goes on!",
+        "support": "Let us look at the clue together.",
+        "recovered": "You tried again, and it worked!"
       }
     },
     {
@@ -232,7 +235,10 @@
         "id": "a1-18-story",
         "title": "Карта нового города",
         "step": 2,
-        "total": 3
+        "total": 3,
+        "success": "Signal confirmed. Ready for the next step!",
+        "support": "One small clue can help. Try again.",
+        "recovered": "The signal is clear now. Well done!"
       }
     },
     {
@@ -255,7 +261,10 @@
         "id": "a1-18-story",
         "title": "Карта нового города",
         "step": 3,
-        "total": 3
+        "total": 3,
+        "success": "A new friend! Let us keep exploring.",
+        "support": "Take your time. I am here to help.",
+        "recovered": "We found the answer together!"
       }
     }
   ]

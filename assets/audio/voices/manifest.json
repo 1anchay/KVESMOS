@@ -79,6 +79,50 @@
       "slowAsset": "assets/audio/voices/clips/63447d11b51322b7-slow.m4a"
     },
     {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "A new friend! Let us keep exploring.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/f28e06d6056d9478.m4a",
+      "slowAsset": "assets/audio/voices/clips/f28e06d6056d9478-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Take your time. I am here to help.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/e987fe7309fc713a.m4a",
+      "slowAsset": "assets/audio/voices/clips/e987fe7309fc713a-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "We found the answer together!",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/389ce01df76038b7.m4a",
+      "slowAsset": "assets/audio/voices/clips/389ce01df76038b7-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Welcome!",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/28d7ba2f608acffe.m4a",
+      "slowAsset": "assets/audio/voices/clips/28d7ba2f608acffe-slow.m4a"
+    },
+    {
       "character": "miko",
       "locale": "en-US",
       "text": "This is my bag.",
@@ -178,6 +222,39 @@
       "slowAsset": "assets/audio/voices/clips/44d8dd53840a4b2a-slow.m4a"
     },
     {
+      "character": "zig_quartz",
+      "locale": "en-US",
+      "text": "Signal confirmed. Ready for the next step!",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/7a88e277a4526197.m4a",
+      "slowAsset": "assets/audio/voices/clips/7a88e277a4526197-slow.m4a"
+    },
+    {
+      "character": "zig_quartz",
+      "locale": "en-US",
+      "text": "One small clue can help. Try again.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/1994b2619ae8a46c.m4a",
+      "slowAsset": "assets/audio/voices/clips/1994b2619ae8a46c-slow.m4a"
+    },
+    {
+      "character": "zig_quartz",
+      "locale": "en-US",
+      "text": "The signal is clear now. Well done!",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/74014c1f3609cf1f.m4a",
+      "slowAsset": "assets/audio/voices/clips/74014c1f3609cf1f-slow.m4a"
+    },
+    {
       "character": "orbi",
       "locale": "en-US",
       "text": "This is my sister.",
@@ -220,6 +297,39 @@
       "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
       "asset": "assets/audio/voices/clips/94943dc806088b83.m4a",
       "slowAsset": "assets/audio/voices/clips/94943dc806088b83-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "That was lovely. Our story goes on!",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/0fb4cb361363582d.m4a",
+      "slowAsset": "assets/audio/voices/clips/0fb4cb361363582d-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "Let us look at the clue together.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/9c549761c9f58049.m4a",
+      "slowAsset": "assets/audio/voices/clips/9c549761c9f58049-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "You tried again, and it worked!",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/dfcfbc821bf3f767.m4a",
+      "slowAsset": "assets/audio/voices/clips/dfcfbc821bf3f767-slow.m4a"
     },
     {
       "character": "orbi",
@@ -1034,6 +1144,72 @@
       "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
       "asset": "assets/audio/voices/clips/04e4190fb814741d.m4a",
       "slowAsset": "assets/audio/voices/clips/04e4190fb814741d-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "hello",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/97f89533e19f1da6.m4a",
+      "slowAsset": "assets/audio/voices/clips/97f89533e19f1da6-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "friend",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/c41f4af967718d9a.m4a",
+      "slowAsset": "assets/audio/voices/clips/c41f4af967718d9a-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "name",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/aa07b13dab15c11a.m4a",
+      "slowAsset": "assets/audio/voices/clips/aa07b13dab15c11a-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "from",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/ce868cd3686ef72d.m4a",
+      "slowAsset": "assets/audio/voices/clips/ce868cd3686ef72d-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "welcome",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/0d8079046eae78c0.m4a",
+      "slowAsset": "assets/audio/voices/clips/0d8079046eae78c0-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "goodbye",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/a6593f2ca90f0a58.m4a",
+      "slowAsset": "assets/audio/voices/clips/a6593f2ca90f0a58-slow.m4a"
     }
   ]
 }

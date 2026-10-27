@@ -208,7 +208,17 @@
         "I am tea.",
         "Can I have bread, please?"
       ],
-      "scene": "Мико: Hello!\nТы: …"
+      "scene": "Мико: Hello!\nТы: …",
+      "story": {
+        "id": "miko-cafe",
+        "title": "Встреча в кафе",
+        "step": 1,
+        "total": 3,
+        "success": "That was lovely. Our story goes on!",
+        "support": "Let us look at the clue together.",
+        "recovered": "You tried again, and it worked!"
+      },
+      "introduction": "Мико ждёт у стойки. Сделай вежливый заказ."
     },
     {
       "id": "a1-10-v3-09",
@@ -219,11 +229,21 @@
       ],
       "explanation": "Для предпочтения говорим I like…",
       "hint": "Для предпочтения говорим I like…",
-      "character": "zig_quartz",
+      "character": "miko",
       "phase": "Закрепление",
       "wordIds": [
         "en:bread"
-      ]
+      ],
+      "story": {
+        "id": "miko-cafe",
+        "title": "Встреча в кафе",
+        "step": 2,
+        "total": 3,
+        "success": "That was lovely. Our story goes on!",
+        "support": "Let us look at the clue together.",
+        "recovered": "You tried again, and it worked!"
+      },
+      "introduction": "За столом расскажи о любимой еде."
     },
     {
       "id": "a1-10-v3-10",
@@ -235,12 +255,22 @@
       ],
       "explanation": "You are welcome — ответ на благодарность.",
       "hint": "You are welcome — ответ на благодарность.",
-      "character": "orbi",
+      "character": "miko",
       "phase": "Закрепление",
       "wordIds": [
         "en:welcome"
       ],
-      "scene": "Мико: Thank you!\nТы: …"
+      "scene": "Мико: Thank you!\nТы: …",
+      "story": {
+        "id": "miko-cafe",
+        "title": "Встреча в кафе",
+        "step": 3,
+        "total": 3,
+        "success": "That was lovely. Our story goes on!",
+        "support": "Let us look at the clue together.",
+        "recovered": "You tried again, and it worked!"
+      },
+      "introduction": "Пора попрощаться с хозяином кафе: ответь на благодарность."
     }
   ]
 }

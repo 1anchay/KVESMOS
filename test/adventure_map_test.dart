@@ -1,17 +1,14 @@
 import 'dart:io';
-import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:orbitwords/core/controller.dart';
 import 'package:orbitwords/ui/adventure_map.dart';
-import 'package:orbitwords/ui/character_reactions.dart';
 import 'package:orbitwords/ui/design.dart';
 import 'package:orbitwords/ui/lesson_screen.dart';
 import 'support.dart';
+import 'audio_settings_test.dart' show loadPreviewFonts, capturePreview;
 import 'widget_test.dart' show flushDb;
 
 GoRouter mapRouter(GlobalKey? boundary) => GoRouter(
@@ -46,279 +43,186 @@ GoRouter mapRouter(GlobalKey? boundary) => GoRouter(
 
 void main() {
   setUpAll(setupSqlite);
-  testWidgets(
-    'map preserves locking, opens current lesson and sends missing packs to offline',
-    (tester) async {
-      final repository = memoryRepository();
-      final controller = AppController(repository);
-      await tester.runAsync(controller.initialize);
-      final router = mapRouter(null);
-      addTearDown(router.dispose);
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [appProvider.overrideWith((_) => controller)],
-          child: MaterialApp.router(
-            theme: orbitTheme(Brightness.light),
-            routerConfig: router,
-          ),
+  testWidgets('focused region preserves gates and offline access', (
+    tester,
+  ) async {
+    final repo = memoryRepository();
+    final app = AppController(repo);
+    await tester.runAsync(app.initialize);
+    final router = mapRouter(null);
+    addTearDown(router.dispose);
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [appProvider.overrideWith((_) => app)],
+        child: MaterialApp.router(
+          theme: orbitTheme(Brightness.light),
+          routerConfig: router,
         ),
-      );
-      await tester.pumpAndSettle();
-      expect(find.text('Текущий урок'), findsOneWidget);
-      expect(find.byKey(const ValueKey('map-lesson-a1-20')), findsOneWidget);
-      await tester.ensureVisible(
-        find.byKey(const ValueKey('map-lesson-a1-02')),
-      );
-      await tester.pumpAndSettle();
-      await tester.tap(find.byKey(const ValueKey('map-lesson-a1-02')));
-      await tester.pumpAndSettle();
-      expect(
-        find.text('Пройдите предыдущий урок, чтобы открыть эту орбиту.'),
-        findsOneWidget,
-      );
-      expect(router.routeInformationProvider.value.uri.path, '/');
-      await tester.ensureVisible(
-        find.byKey(const ValueKey('map-lesson-a1-01')),
-      );
-      await tester.pumpAndSettle();
-      await tester.tap(find.byKey(const ValueKey('map-lesson-a1-01')));
-      await flushDb(tester);
-      await advanceTeaching(tester);
-      expect(
-        find.text(
-          'Орби встречает тебя на космической станции. Что ему ответить?',
-        ),
-        findsOneWidget,
-      );
-      router.go('/');
-      await flushDb(tester);
-      await tester.runAsync(() async {
-        await repository.uninstall('a1-01');
-        await controller.refresh();
-      });
-      await tester.pumpAndSettle();
-      await tester.ensureVisible(
-        find.byKey(const ValueKey('map-lesson-a1-01')),
-      );
-      await tester.pumpAndSettle();
-      await tester.tap(find.byKey(const ValueKey('map-lesson-a1-01')));
-      await tester.pumpAndSettle();
-      expect(find.text('Сохранить офлайн-урок'), findsOneWidget);
-      expect(controller.progress.xp, 0);
-      expect(tester.takeException(), isNull);
-      await tester.pumpWidget(const SizedBox.shrink());
-      await tester.runAsync(repository.db.close);
-    },
-  );
-  testWidgets(
-    'progress moves focus; map jumps to current stop and earned reward opens without granting again',
-    (tester) async {
-      final r = memoryRepository();
-      final app = AppController(r);
-      await tester.runAsync(() async {
-        await app.initialize();
-        for (var i = 1; i <= 4; i++) {
-          await r.append(
-            r.event('complete', {
-              'session': 's$i',
-              'lesson': 'a1-${i.toString().padLeft(2, '0')}',
-            }),
-          );
-        }
-        await app.refresh();
-      });
-      final grants = app.inventory.grants.keys.toSet();
-      final events = (await tester.runAsync(r.allEvents))!.length;
-      final router = mapRouter(null);
-      addTearDown(router.dispose);
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [appProvider.overrideWith((_) => app)],
-          child: MaterialApp.router(
-            theme: orbitTheme(Brightness.light),
-            routerConfig: router,
-          ),
-        ),
-      );
-      await tester.pumpAndSettle();
-      expect(find.text('4 из 20 остановок освоено'), findsOneWidget);
-      await tester.tap(find.text('К текущему уроку'));
-      await tester.pumpAndSettle();
-      final stop = find.byKey(const ValueKey('map-lesson-a1-05'));
-      expect(tester.getTopLeft(stop).dy, greaterThanOrEqualTo(0));
-      expect(
-        tester.getTopLeft(stop).dy,
-        lessThan(tester.view.physicalSize.height),
-      );
-      await tester.ensureVisible(find.byKey(const ValueKey('map-guide-2')));
-      await tester.pumpAndSettle();
-      await tester.tap(find.text('На связи: Зиг Кварц'));
-      await tester.pumpAndSettle();
-      expect(find.text(CharacterCue.engineer.lines.first), findsOneWidget);
-      final reward = find.byKey(
-        const ValueKey('map-reward-unique_lessons_3_v1'),
-      );
-      await tester.ensureVisible(reward);
-      await tester.pumpAndSettle();
-      await tester.tap(reward);
-      await tester.pumpAndSettle();
-      expect(find.text('Полученные сундуки'), findsOneWidget);
-      expect(app.inventory.grants.keys.toSet(), grants);
-      expect((await tester.runAsync(r.allEvents))!.length, events);
-      router.go('/');
-      await tester.pumpAndSettle();
-      await tester.runAsync(() async {
-        await r.append(
-          r.event('complete', {'session': 's5', 'lesson': 'a1-05'}),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('map-lesson-a1-01')), findsOneWidget);
+    expect(find.byKey(const ValueKey('map-lesson-a1-20')), findsNothing);
+    await tester.ensureVisible(find.byKey(const ValueKey('map-lesson-a1-02')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('map-lesson-a1-02')));
+    await tester.pumpAndSettle();
+    expect(router.routeInformationProvider.value.uri.path, '/');
+    expect(
+      find.text('Пройдите предыдущий урок, чтобы открыть эту орбиту.'),
+      findsOneWidget,
+    );
+    await tester.ensureVisible(find.byKey(const ValueKey('map-lesson-a1-01')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('map-lesson-a1-01')));
+    await flushDb(tester);
+    await advanceTeaching(tester);
+    expect(
+      find.text(
+        'Орби встречает тебя на космической станции. Что ему ответить?',
+      ),
+      findsOneWidget,
+    );
+    router.go('/');
+    await flushDb(tester);
+    await tester.runAsync(() async {
+      await repo.uninstall('a1-01');
+      await app.refresh();
+    });
+    await tester.ensureVisible(find.byKey(const ValueKey('map-lesson-a1-01')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('map-lesson-a1-01')));
+    await tester.pumpAndSettle();
+    expect(find.text('Сохранить офлайн-урок'), findsOneWidget);
+    expect(app.progress.xp, 0);
+    await tester.pumpWidget(const SizedBox.shrink());
+    await tester.runAsync(repo.db.close);
+  });
+  testWidgets('completed region focuses next mission and map never grants XP', (
+    tester,
+  ) async {
+    final repo = memoryRepository();
+    final app = AppController(repo);
+    await tester.runAsync(() async {
+      await app.initialize();
+      for (var n = 1; n <= 4; n++) {
+        await repo.append(
+          repo.event('complete', {
+            'session': 's$n',
+            'lesson': 'a1-${n.toString().padLeft(2, '0')}',
+          }),
         );
-        await app.refresh();
-      });
-      await tester.pumpAndSettle();
-      expect(
-        find.descendant(
-          of: find.byKey(const ValueKey('map-lesson-a1-06')),
-          matching: find.text('Текущий урок'),
+      }
+      await app.refresh();
+    });
+    final xp = app.progress.xp, grants = app.inventory.grants.length;
+    final router = mapRouter(null);
+    addTearDown(router.dispose);
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [appProvider.overrideWith((_) => app)],
+        child: MaterialApp.router(
+          theme: orbitTheme(Brightness.light),
+          routerConfig: router,
         ),
-        findsOneWidget,
-      );
-      expect(find.text('Текущий урок'), findsOneWidget);
-      await tester.runAsync(() async {
-        for (var i = 6; i <= 20; i++) {
-          await r.append(
-            r.event('complete', {
-              'session': 's$i',
-              'lesson': 'a1-${i.toString().padLeft(2, '0')}',
-            }),
-          );
-        }
-        await app.refresh();
-      });
-      await tester.pumpAndSettle();
-      expect(find.text('Текущий урок'), findsNothing);
-      expect(find.text('20 из 20 остановок освоено'), findsOneWidget);
-      expect(find.text('Повторить первый урок'), findsOneWidget);
-      expect(tester.takeException(), isNull);
-      await tester.pumpWidget(const SizedBox.shrink());
-      await tester.runAsync(r.db.close);
-    },
-  );
-  testWidgets(
-    'ten worlds and twenty stops fit 320 pixels at 200% in both themes; captures normal layout',
-    (tester) async {
-      tester.view.physicalSize = const Size(390, 844);
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('map-lesson-a1-05')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('map-world-0')));
+    await tester.pumpAndSettle();
+    expect(
+      find.text('Область исследована! Печать в паспорте путешествий.'),
+      findsOneWidget,
+    );
+    await tester.ensureVisible(find.text('К текущей миссии'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('К текущей миссии'));
+    await tester.pumpAndSettle();
+    expect(
+      tester.getTopLeft(find.byKey(const ValueKey('map-lesson-a1-05'))).dy,
+      greaterThanOrEqualTo(0),
+    );
+    expect(app.progress.xp, xp);
+    expect(app.inventory.grants.length, grants);
+    await tester.pumpWidget(const SizedBox.shrink());
+    await tester.runAsync(repo.db.close);
+  });
+  testWidgets('five regions fit 390 and 320px 200 percent in both themes', (
+    tester,
+  ) async {
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
+    final repo = memoryRepository();
+    final app = AppController(repo);
+    await tester.runAsync(() async {
+      await app.initialize();
+      await loadPreviewFonts();
+      if (Platform.environment['CAPTURE_UI'] == '1') {
+        await Directory('test-output/v07').create(recursive: true);
+      }
+    });
+    final container = ProviderContainer(
+      overrides: [appProvider.overrideWith((_) => app)],
+    );
+    addTearDown(container.dispose);
+    for (final small in [false, true]) {
+      tester.view.physicalSize = Size(small ? 320 : 390, 844);
       tester.view.devicePixelRatio = 1;
-      addTearDown(tester.view.resetPhysicalSize);
-      addTearDown(tester.view.resetDevicePixelRatio);
-      final r = memoryRepository();
-      final app = AppController(r);
-      final boundary = GlobalKey();
-      await tester.runAsync(() async {
-        await app.initialize();
-        for (var i = 1; i <= 4; i++) {
-          await r.append(
-            r.event('complete', {
-              'session': 's$i',
-              'lesson': 'a1-${i.toString().padLeft(2, '0')}',
-            }),
-          );
-        }
-        await app.refresh();
-        final bytes = ByteData.sublistView(
-          await File('assets/fonts/roboto-regular.ttf').readAsBytes(),
-        );
-        for (final family in ['OrbitSans', 'Roboto', 'Ahem']) {
-          final loader = FontLoader(family)..addFont(Future.value(bytes));
-          await loader.load();
-        }
-        final icons = FontLoader('MaterialIcons')
-          ..addFont(
-            Future.value(
-              ByteData.sublistView(
-                await File(materialIconsFontPath()).readAsBytes(),
-              ),
-            ),
-          );
-        await icons.load();
-      });
-      final router = mapRouter(boundary);
-      addTearDown(router.dispose);
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [appProvider.overrideWith((_) => app)],
-          child: Consumer(
-            builder: (context, ref, _) => MaterialApp.router(
-              theme: orbitTheme(
-                ref.watch(appProvider).theme == ThemeMode.dark
-                    ? Brightness.dark
-                    : Brightness.light,
-              ),
+      tester.platformDispatcher.textScaleFactorTestValue = small ? 2 : 1;
+      for (final brightness in Brightness.values) {
+        final boundary = GlobalKey();
+        final router = mapRouter(boundary);
+        addTearDown(router.dispose);
+        await tester.pumpWidget(
+          UncontrolledProviderScope(
+            container: container,
+            child: MaterialApp.router(
+              debugShowCheckedModeBanner: false,
+              theme: orbitTheme(brightness),
               routerConfig: router,
             ),
           ),
-        ),
-      );
-      await tester.pumpAndSettle();
-      Future<void> capture(String name) async {
-        if (Platform.environment['CAPTURE_UI'] != '1') return;
-        await tester.runAsync(() async {
-          final render =
-              boundary.currentContext!.findRenderObject()!
-                  as RenderRepaintBoundary;
-          final image = await render.toImage(pixelRatio: 2);
-          final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
-          await Directory('test-output').create(recursive: true);
-          await File(
-            'test-output/$name.png',
-          ).writeAsBytes(bytes!.buffer.asUint8List());
-          image.dispose();
-        });
-      }
-
-      await tester.runAsync(() async {
-        final context = tester.element(find.byType(AdventureMap));
-        for (final type in ['explorer', 'nebula', 'supernova']) {
-          await precacheImage(
-            AssetImage('assets/kvesmos/${type}_closed.png'),
-            context,
-          );
-        }
-      });
-      await tester.runAsync(() async {
-        final context = tester.element(find.byType(AdventureMap));
-        for (final name in ['miko', 'zig_quartz', 'aster']) {
-          await precacheImage(AssetImage('assets/kvesmos/$name.png'), context);
-        }
-      });
-      await tester.pumpAndSettle();
-      await capture('kvesmos-map-overview');
-      await tester.ensureVisible(find.byKey(const ValueKey('map-world-2')));
-      await tester.pumpAndSettle();
-      await capture('kvesmos-map-current');
-      tester.view.physicalSize = const Size(320, 720);
-      tester.platformDispatcher.textScaleFactorTestValue = 2;
-      addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
-      tester.platformDispatcher.accessibilityFeaturesTestValue =
-          const FakeAccessibilityFeatures(disableAnimations: true);
-      addTearDown(
-        tester.platformDispatcher.clearAccessibilityFeaturesTestValue,
-      );
-      for (final theme in [ThemeMode.light, ThemeMode.dark]) {
-        await tester.runAsync(() => app.savePreferences(newTheme: theme));
+        );
         await tester.pumpAndSettle();
-        for (final info in r.catalog) {
-          await tester.ensureVisible(
-            find.byKey(ValueKey('map-lesson-${info.id}')),
-          );
+        for (var region = 0; region < 5; region++) {
+          final chip = find.byKey(ValueKey('map-world-$region'));
+          await tester.ensureVisible(chip);
+          await tester.pumpAndSettle();
+          await tester.tap(chip);
           await tester.pumpAndSettle();
           expect(
             tester.takeException(),
             isNull,
-            reason: '${theme.name} ${info.id}',
+            reason: '$small $brightness region $region',
           );
+          if (region == 0) {
+            tester
+                .state<ScrollableState>(find.byType(Scrollable).first)
+                .position
+                .jumpTo(0);
+            await tester.pumpAndSettle();
+            await tester.runAsync(
+              () => capturePreview(
+                boundary,
+                'v07/map-${brightness.name}${small ? '-320-200' : ''}',
+              ),
+            );
+          }
+          for (var n = region * 4 + 1; n <= region * 4 + 4; n++) {
+            await tester.ensureVisible(
+              find.byKey(
+                ValueKey('map-lesson-a1-${n.toString().padLeft(2, '0')}'),
+              ),
+            );
+            await tester.pumpAndSettle();
+            expect(tester.takeException(), isNull);
+          }
         }
+        await tester.pumpWidget(const SizedBox.shrink());
       }
-      await tester.pumpWidget(const SizedBox.shrink());
-      await tester.runAsync(r.db.close);
-    },
-  );
+    }
+    await tester.runAsync(repo.db.close);
+  });
 }

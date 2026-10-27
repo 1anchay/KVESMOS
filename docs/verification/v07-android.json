@@ -1,0 +1,56 @@
+{
+  "baseline": {
+    "version": "0.6.0-dev.1",
+    "serial": "emulator-5554",
+    "metric": "Android Activity launch TotalTime; not Flutter first meaningful paint",
+    "mode": "debug x64; API 36; SwiftShader; 720x1600 at 320 dpi; 2 cores/1536MB",
+    "warmupMs": 4875,
+    "samplesMs": [
+      4287,
+      4056,
+      4277,
+      4190,
+      4777
+    ],
+    "medianMs": 4277,
+    "pssKbAfterLastLaunch": 336301
+  },
+  "candidate": {
+    "version": "0.7.0-dev.1",
+    "serial": "emulator-5554",
+    "metric": "Android Activity launch TotalTime; not Flutter first meaningful paint",
+    "mode": "debug x64; API 36; SwiftShader; 720x1600 at 320 dpi; 2 cores/1536MB",
+    "warmupMs": 5138,
+    "samplesMs": [
+      4171,
+      4164,
+      4456,
+      4224,
+      4133
+    ],
+    "medianMs": 4171,
+    "pssKbAfterLastLaunch": 337145
+  },
+  "preservedRows": {
+    "settings": {
+      "before": 10,
+      "after": 10,
+      "changedOrMissingOldRows": 0
+    },
+    "lesson_packs": {
+      "before": 20,
+      "after": 20,
+      "changedOrMissingOldRows": 0
+    },
+    "sessions": {
+      "before": 3,
+      "after": 3,
+      "changedOrMissingOldRows": 0
+    },
+    "events": {
+      "before": 13,
+      "after": 13,
+      "changedOrMissingOldRows": 0
+    }
+  }
+}

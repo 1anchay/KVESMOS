@@ -225,6 +225,29 @@ class _CharacterMomentState extends State<CharacterMoment>
                   !reduce && widget.animate && state != CharacterState.idle;
               final envelope = moving ? math.sin(math.pi * t) : 0.0;
               final wave = math.sin(t * math.pi * motion.beats * 2) * envelope;
+              // Three different gesture paths, not one bounce at different speeds.
+              // These transform supplied portraits; they are not skeletal rigs.
+              final (
+                gestureX,
+                gestureY,
+                gestureAngle,
+              ) = switch (widget.characterId) {
+                'miko' => (
+                  8 * envelope * (1 - 2 * t),
+                  -2 * envelope,
+                  -.055 * envelope,
+                ),
+                'zig_quartz' => (
+                  6 * envelope * math.sin(t * math.pi * 4),
+                  -3 * envelope,
+                  -.09 * envelope * math.sin(t * math.pi * 2),
+                ),
+                _ => (
+                  profile.sway * wave,
+                  -motion.lift * envelope * profile.bounce,
+                  motion.tilt * wave * profile.tilt,
+                ),
+              };
               final frames = widget.frames[state];
               final asset = frames != null && frames.isNotEmpty
                   ? frames[(t * frames.length).floor().clamp(
@@ -244,12 +267,9 @@ class _CharacterMomentState extends State<CharacterMoment>
                     width: widget.size,
                     height: widget.size,
                     child: Transform.translate(
-                      offset: Offset(
-                        profile.sway * wave,
-                        -motion.lift * envelope * profile.bounce,
-                      ),
+                      offset: Offset(gestureX, gestureY),
                       child: Transform.rotate(
-                        angle: motion.tilt * wave * profile.tilt,
+                        angle: gestureAngle,
                         alignment: Alignment.bottomCenter,
                         child: Stack(
                           children: [

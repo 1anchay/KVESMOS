@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../domain/missions.dart';
 import '../domain/today.dart';
+import '../domain/journey.dart';
 import '../domain/progress.dart';
 import '../services/learning_audio.dart';
 import 'character_moment.dart';
@@ -172,6 +173,16 @@ class _TodayPageState extends ConsumerState<TodayPage> {
         ),
       ),
       const SizedBox(height: 12),
+      if (personalPractice(
+        app.repository.vocabulary.values,
+        app.progress,
+        app.repository.now(),
+      ).isNotEmpty)
+        OutlinedButton.icon(
+          onPressed: () => context.go('/practice'),
+          icon: const Icon(Icons.psychology_outlined),
+          label: const Text('Перед полётом: короткая разминка'),
+        ),
       InkWell(
         borderRadius: BorderRadius.circular(16),
         onTap: () =>

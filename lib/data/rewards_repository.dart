@@ -1,5 +1,7 @@
 import 'dart:math';
 import '../domain/rewards.dart';
+import '../domain/journey.dart';
+import '../domain/progress.dart';
 import 'repository.dart';
 
 /// Additive, versioned state in the existing Settings table. Schema v1 and all
@@ -29,6 +31,33 @@ class RewardsRepository {
           !state.grants.containsKey(id)) {
         state.grants[id] = ChestGrant(id, m['chest_id']);
         changed = true;
+      }
+    }
+    if (await learning.setting('kvesmos.expeditions.optin.v1') == 'true') {
+      var since = await learning.setting('kvesmos.expeditions.since.v1');
+      if (since == null) {
+        final now = learning.now();
+        final month = DateTime(now.year, now.month, 1);
+        final week = DateTime(
+          now.year,
+          now.month,
+          now.day,
+        ).subtract(Duration(days: now.weekday - 1));
+        since = dayKey(month.isBefore(week) ? month : week);
+        await learning.setSetting('kvesmos.expeditions.since.v1', since);
+      }
+      for (final expedition in Expedition.earnedHistory(
+        await learning.allEvents(),
+        learning.now(),
+        since,
+      )) {
+        if (expedition.complete && !state.grants.containsKey(expedition.id)) {
+          state.grants[expedition.id] = ChestGrant(
+            expedition.id,
+            expedition.chest,
+          );
+          changed = true;
+        }
       }
     }
     if (changed) await _save(state);

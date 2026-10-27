@@ -1,7 +1,7 @@
 name: orbitwords
 description: Free offline language journeys. Original English A1 course for Russian speakers.
 publish_to: none
-version: 0.6.0-dev.1+8
+version: 0.7.0-dev.1+9
 environment:
   sdk: '>=3.8.0 <4.0.0'
 dependencies:

@@ -26,7 +26,7 @@ void main() {
         await tester.runAsync(() async {
           await loadPreviewFonts();
           if (Platform.environment['CAPTURE_UI'] == '1') {
-            await Directory('test-output/v06').create(recursive: true);
+            await Directory('test-output/v07').create(recursive: true);
           }
         });
         for (final brightness in Brightness.values) {
@@ -192,7 +192,7 @@ void main() {
             await tester.runAsync(
               () => capturePreview(
                 key,
-                'v06/$name-${brightness.name}${small ? '-320-200' : ''}',
+                'v07/$name-${brightness.name}${small ? '-320-200' : ''}',
               ),
             );
             // Inspect content below the fold as well as the initial viewport.

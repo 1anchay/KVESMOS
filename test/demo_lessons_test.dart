@@ -309,6 +309,12 @@ void main() {
           await tap(find.text('Проверить'));
           expect(app.progress.errors, 0, reason: e.id);
           await tap(find.text('Дальше'));
+          if (find
+              .byKey(const Key('checkpoint-continue'))
+              .evaluate()
+              .isNotEmpty) {
+            await tap(find.byKey(const Key('checkpoint-continue')));
+          }
         }
         expect(app.progress.completed, contains(id));
         expect(app.progress.xp, 120 + (number - 1) * 20);

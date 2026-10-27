@@ -251,16 +251,31 @@ class LearningRepository {
     }
     return correct;
   });
-  Future<void> review(Vocabulary word, String input) async {
+  Future<void> review(
+    Vocabulary word,
+    String input,
+  ) => db.transaction(() async {
+    final day = dayKey(now());
+    final previous = (await allEvents())
+        .where(
+          (e) =>
+              e.kind == 'answer' &&
+              e.day == day &&
+              e.data['exercise'] == 'review:${word.id}' &&
+              e.data['correct'] == true,
+        )
+        .firstOrNull;
     await append(
       event('answer', {
-        'session': const Uuid().v4(),
+        // One credit per known word per local study day, including retries and
+        // voluntary practice. Historical events retain their original scoring.
+        'session': previous?.data['session'] ?? 'review:v2:$day:${word.id}',
         'exercise': 'review:${word.id}',
         'correct': normalizeAnswer(input) == normalizeAnswer(word.en),
         'words': [word.id],
       }),
     );
-  }
+  });
 
   Future<List<LearningEvent>> allEvents() async =>
       (await db.select(db.events).get())

@@ -182,7 +182,7 @@
         "Welcome!"
       ],
       "explanation": "Welcome! — добро пожаловать; не перепутай с прощанием.",
-      "character": "miko",
+      "character": "orbi",
       "id": "a1-02-pilot1-e08",
       "phase": "Закрепление",
       "wordIds": [
@@ -194,7 +194,17 @@
         "Goodbye!",
         "Hello!"
       ],
-      "audio": "Welcome!"
+      "audio": "Welcome!",
+      "story": {
+        "id": "guest-at-beacon",
+        "title": "Гость у маяка",
+        "step": 1,
+        "total": 3,
+        "success": "A new friend! Let us keep exploring.",
+        "support": "Take your time. I am here to help.",
+        "recovered": "We found the answer together!"
+      },
+      "introduction": "На станцию пришёл новый гость. Узнай, как его поприветствовали."
     },
     {
       "type": "translate",
@@ -209,7 +219,17 @@
       "wordIds": [
         "en:from"
       ],
-      "hint": "Вопрос начинается Where are you…"
+      "hint": "Вопрос начинается Where are you…",
+      "story": {
+        "id": "guest-at-beacon",
+        "title": "Гость у маяка",
+        "step": 2,
+        "total": 3,
+        "success": "A new friend! Let us keep exploring.",
+        "support": "Take your time. I am here to help.",
+        "recovered": "We found the answer together!"
+      },
+      "introduction": "Орби представился. Помоги гостю спросить, откуда он."
     },
     {
       "type": "review",
@@ -218,13 +238,23 @@
         "friend"
       ],
       "explanation": "Friend — друг. Теперь ты умеешь представлять друзей.",
-      "character": "aster",
+      "character": "orbi",
       "id": "a1-02-pilot1-e10",
       "phase": "Закрепление",
       "wordIds": [
         "en:friend"
       ],
-      "hint": "Мы познакомились с этим словом в начале урока."
+      "hint": "Мы познакомились с этим словом в начале урока.",
+      "story": {
+        "id": "guest-at-beacon",
+        "title": "Гость у маяка",
+        "step": 3,
+        "total": 3,
+        "success": "A new friend! Let us keep exploring.",
+        "support": "Take your time. I am here to help.",
+        "recovered": "We found the answer together!"
+      },
+      "introduction": "Знакомство состоялось. Как назовём нового друга?"
     }
   ],
   "teachingSteps": [

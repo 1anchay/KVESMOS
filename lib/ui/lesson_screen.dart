@@ -20,6 +20,8 @@ import 'speech_source.dart';
 import 'galaxy_components.dart';
 import 'character_reactions.dart';
 import 'flight_completion.dart';
+import 'mission_checkpoint.dart';
+import 'story_response.dart';
 import 'answer_signal.dart';
 import 'package:flutter/services.dart';
 import '../services/learning_audio.dart';
@@ -56,6 +58,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   late final LearningAudio audio;
   bool unlockedAchievement = false;
   bool completionMoment = false;
+  bool storyNeededHelp = false;
+  bool showCheckpoint = false;
+  int checkpointXp = 0;
   Set<String> initialGrants = {}, initialAchievements = {};
   int consecutiveCorrect = 0;
   int bestCombo = 0;
@@ -119,8 +124,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       lessonResult = summary;
       consecutiveCorrect = recap.streak;
       bestCombo = recap.best;
+      storyNeededHelp = recap.difficultWords.isNotEmpty;
       prepare();
-      setState(() {});
+      await checkCheckpoint();
+      if (mounted) setState(() {});
     } catch (e) {
       if (mounted) {
         setState(
@@ -132,6 +139,50 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   }
 
   Exercise get exercise => lesson!.exercises[session!.position];
+  Future<void> checkCheckpoint() async {
+    if (session!.done ||
+        lesson!.exercises.length < 8 ||
+        session!.position != lesson!.exercises.length ~/ 2 ||
+        session!.draft.isNotEmpty) {
+      return;
+    }
+    final repo = ref.read(appProvider).repository;
+    if (await repo.setting(
+          'kvesmos.stage.seen.v1:${session!.id}:${session!.position}',
+        ) ==
+        'true') {
+      return;
+    }
+    checkpointXp = ProgressSnapshot.fromEvents(
+      (await repo.allEvents()).where((e) => e.data['session'] == session!.id),
+    ).xp;
+    if (mounted) showCheckpoint = true;
+  }
+
+  Future<void> continueCheckpoint() async {
+    if (busy) return;
+    setState(() => busy = true);
+    try {
+      await ref
+          .read(appProvider)
+          .repository
+          .setSetting(
+            'kvesmos.stage.seen.v1:${session!.id}:${session!.position}',
+            'true',
+          );
+      if (mounted) setState(() => showCheckpoint = false);
+    } catch (_) {
+      if (mounted) {
+        showMessage(
+          context,
+          'Не удалось сохранить переход. Попробуйте ещё раз.',
+        );
+      }
+    } finally {
+      if (mounted) setState(() => busy = false);
+    }
+  }
+
   Future<void> restartUpdated() async {
     if (busy) return;
     setState(() => busy = true);
@@ -241,6 +292,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         session = await app.repository.session(session!.id);
         if (session!.done) lessonResult = await _readSummary(session!.id);
         prepare();
+        await checkCheckpoint();
         if (mounted && finished) {
           try {
             completionMoment = await app.claimExperienceMoment(
@@ -278,6 +330,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           (a) => !achievementsBefore.contains(a),
         );
         result = correct;
+        if (!correct) storyNeededHelp = true;
         if (audio.preferences.reactions &&
             mounted &&
             !MediaQuery.disableAnimationsOf(context)) {
@@ -312,7 +365,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     } finally {
       if (mounted) {
         setState(() => busy = false);
-        if (result == false) {
+        if (result == false || result == true && exercise.story != null) {
           WidgetsBinding.instance.addPostFrameCallback((_) {
             final target = feedbackAnchor.currentContext;
             if (mounted && target != null) {
@@ -387,6 +440,16 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     if (finished) return _completion(context);
+    if (showCheckpoint) {
+      return MissionCheckpoint(
+        lesson: lesson!,
+        position: session!.position,
+        xp: checkpointXp,
+        animate: audio.preferences.reactions,
+        busy: busy,
+        onContinue: continueCheckpoint,
+      );
+    }
     if (showTeaching) {
       return LessonIntroduction(
         lesson: lesson!,
@@ -811,6 +874,14 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     ),
             ),
             const SizedBox(height: 18),
+            if (e.story != null && result != null)
+              StoryResponse(
+                key: ValueKey('${e.id}:$result'),
+                exercise: e,
+                correct: result!,
+                neededHelp: storyNeededHelp,
+                audio: audio,
+              ),
             const SizedBox(height: 16),
             ExpansionTile(
               title: const Text('Подсказка команды'),

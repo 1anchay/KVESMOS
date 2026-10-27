@@ -260,6 +260,7 @@ class ReviewPage extends ConsumerStatefulWidget {
 
 class _ReviewPageState extends ConsumerState<ReviewPage> {
   late final LearningAudio reviewAudio;
+  int creditedXp = 0;
   final input = TextEditingController();
   List<Vocabulary>? queue;
   int index = 0;
@@ -295,7 +296,7 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
     queue ??= reviewWords(
       app.repository.vocabulary.values,
       app.progress,
-      DateTime.now(),
+      app.repository.now(),
       mistakesOnly: widget.mistakesOnly,
     );
     final finished = index >= queue!.length;
@@ -374,7 +375,7 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
         if (correct != null)
           Text(
             correct!
-                ? 'Верно! +10 XP'
+                ? 'Верно! +$creditedXp XP'
                 : '${queue![index].en} — ${queue![index].ru}. Слово вернётся завтра.',
           ),
         if (correct == false)
@@ -409,8 +410,10 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
                   try {
                     final word = queue![index];
                     final grantsBefore = app.inventory.grants.length;
+                    final xpBefore = app.progress.xp;
                     await app.repository.review(word, input.text);
                     await app.refresh();
+                    creditedXp = app.progress.xp - xpBefore;
                     unawaited(
                       reviewAudio.play(
                         app.inventory.grants.length > grantsBefore

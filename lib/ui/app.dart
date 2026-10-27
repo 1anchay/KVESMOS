@@ -8,6 +8,8 @@ import 'pages.dart';
 import 'rewards_pages.dart';
 import 'lesson_screen.dart';
 import 'adventure_map.dart';
+import 'expeditions_page.dart';
+import 'personal_practice.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -68,12 +70,20 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
               path: '/map',
               builder: (_, _) => pageBody([const AdventureMap()]),
             ),
+            GoRoute(
+              path: '/practice',
+              builder: (_, _) => const PersonalPracticePage(),
+            ),
             GoRoute(path: '/words', builder: (_, _) => const WordsPage()),
             GoRoute(
               path: '/review',
               builder: (_, state) => ReviewPage(
                 mistakesOnly: state.uri.queryParameters['mistakes'] == '1',
               ),
+            ),
+            GoRoute(
+              path: '/expeditions',
+              builder: (_, _) => const ExpeditionsPage(),
             ),
             GoRoute(path: '/stats', builder: (_, _) => const StatsPage()),
             GoRoute(
@@ -126,7 +136,7 @@ class OrbitShell extends StatelessWidget {
   Widget build(BuildContext context) {
     final index = location == '/' || location == '/map'
         ? 0
-        : ['/words', '/review'].contains(location)
+        : ['/words', '/review', '/practice'].contains(location)
         ? 1
         : location == '/rewards'
         ? 2

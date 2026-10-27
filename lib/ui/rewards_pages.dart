@@ -238,7 +238,12 @@ class RewardsPage extends ConsumerWidget {
       const SectionTitle(
         'Ваши сундуки',
         subtitle:
-            'За разные завершённые уроки. Повторения не создают новые сундуки.',
+            'За учебные рубежи, задания дня и добровольные экспедиции. Каждая награда выдаётся один раз.',
+      ),
+      TextButton.icon(
+        onPressed: () => context.go('/expeditions'),
+        icon: const Icon(Icons.auto_stories_outlined),
+        label: const Text('Паспорт и экспедиции'),
       ),
       if (app.inventory.grants.isEmpty)
         const Card(
@@ -279,6 +284,16 @@ class RewardsPage extends ConsumerWidget {
                     catalog.chest(grant.kind)['name_ru'],
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  Text(
+                    grant.id.startsWith('expedition:v1:week:')
+                        ? 'За три учебных дня недели'
+                        : grant.id.startsWith('expedition:v1:month:')
+                        ? 'За восемь разных миссий месяца'
+                        : grant.id.startsWith('daily:')
+                        ? 'За выполненное задание дня'
+                        : 'За учебный рубеж',
+                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 8),
                   if (grant.itemId == null)

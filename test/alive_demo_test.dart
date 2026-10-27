@@ -2,9 +2,11 @@
 // CAPTURE_DEMO=1 flutter test test/alive_demo_test.dart
 import 'package:flutter/material.dart';
 import 'package:drift/native.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'dart:io';
+import 'dart:convert';
 import 'dart:ui' as ui;
 import 'package:flutter/rendering.dart';
 import 'support.dart';
@@ -29,9 +31,10 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     final boundary = GlobalKey();
     var frame = 0;
+    var frameDirectory = 'test-output/v07/frames';
     await tester.runAsync(() async {
       await loadPreviewFonts();
-      await Directory('test-output/v06/frames').create(recursive: true);
+      await Directory('test-output/v07/frames').create(recursive: true);
     });
     Future<void> film([int count = 6]) async {
       for (var i = 0; i < count; i++) {
@@ -43,14 +46,18 @@ void main() {
           final image = await object.toImage(pixelRatio: 1);
           final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
           await File(
-            'test-output/v06/frames/${(frame++).toString().padLeft(5, '0')}.png',
+            '$frameDirectory/${(frame++).toString().padLeft(5, '0')}.png',
           ).writeAsBytes(bytes!.buffer.asUint8List());
           image.dispose();
         });
       }
     }
 
-    final repo = LearningRepository(AppDatabase(NativeDatabase.memory()));
+    var now = DateTime(2026, 10, 26, 12);
+    final repo = LearningRepository(
+      AppDatabase(NativeDatabase.memory()),
+      now: () => now,
+    );
     final app = AppController(repo);
     await tester.runAsync(app.initialize);
     expect(
@@ -122,7 +129,9 @@ void main() {
     }
     await tap(find.text('Начать путешествие'));
     await film(15);
-    await tap(find.byKey(const Key('today-start')));
+    await tap(find.text('Карта путешествия'));
+    await film(12);
+    await tap(find.byKey(const Key('map-lesson-a1-01')));
     for (
       var i = 0;
       i < 10 && find.byType(LessonIntroduction).evaluate().isNotEmpty;
@@ -171,6 +180,10 @@ void main() {
       }
       await tap(find.text('Проверить'));
       await tap(find.text('Дальше'));
+      if (find.byKey(const Key('checkpoint-continue')).evaluate().isNotEmpty) {
+        await film(12);
+        await tap(find.byKey(const Key('checkpoint-continue')));
+      }
     }
     expect(app.progress.xp, 120);
     expect(app.progress.errors, 1);
@@ -183,6 +196,42 @@ void main() {
     await film(15);
     expect(tester.takeException(), isNull);
     debugPrint('ALIVE_RECORD_DONE');
+    await tap(find.text('Забрать'));
+    // A second recording advances only this isolated repository's clock.
+    now = now.add(const Duration(days: 1));
+    await tester.runAsync(app.refresh);
+    frame = 0;
+    frameDirectory = 'test-output/v07/day-two-frames';
+    await tester.runAsync(
+      () => Directory(frameDirectory).create(recursive: true),
+    );
+    GoRouter.of(tester.element(find.byType(Scaffold).first)).go('/');
+    await tester.pumpAndSettle();
+    await film(20);
+    GoRouter.of(tester.element(find.byType(Scaffold).first)).go('/practice');
+    await tester.pumpAndSettle();
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 150)),
+    );
+    await film(20);
+    final picks = List<String>.from(
+      jsonDecode(
+        (await tester.runAsync(
+          () async => (await repo.setting('kvesmos.practice.v1'))!,
+        ))!,
+      )['words'],
+    );
+    for (final id in picks) {
+      await tap(find.text('Скрыть и вспомнить'));
+      await tester.enterText(find.byType(TextField), repo.vocabulary[id]!.en);
+      await film(10);
+      await tap(find.text('Проверить'));
+      await film(10);
+      await tap(find.text('Следующее слово'));
+    }
+    await film(20);
+    expect(find.text('Слова снова на связи!'), findsOneWidget);
+    debugPrint('DAY_TWO_RECORD_DONE');
     await tester.runAsync(app.refresh);
     final count = app.inventory.grants.length;
     await tester.runAsync(app.refresh);

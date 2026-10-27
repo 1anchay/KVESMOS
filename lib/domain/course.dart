@@ -43,10 +43,26 @@ enum ExerciseType {
 /// owns persistence and scoring, so stories cannot award XP a second time.
 class StoryBeat {
   final String id, title;
+  final String success, support, recovered;
   final int step, total;
-  const StoryBeat(this.id, this.title, this.step, this.total);
-  factory StoryBeat.fromJson(Map<String, dynamic> j) =>
-      StoryBeat(j['id'], j['title'], j['step'], j['total']);
+  const StoryBeat(
+    this.id,
+    this.title,
+    this.step,
+    this.total, {
+    this.success = 'We are ready for the next step!',
+    this.support = 'Take your time. I am here to help.',
+    this.recovered = 'We found the answer together!',
+  });
+  factory StoryBeat.fromJson(Map<String, dynamic> j) => StoryBeat(
+    j['id'],
+    j['title'],
+    j['step'],
+    j['total'],
+    success: j['success'] ?? 'We are ready for the next step!',
+    support: j['support'] ?? 'Take your time. I am here to help.',
+    recovered: j['recovered'] ?? 'We found the answer together!',
+  );
 }
 
 class Exercise {

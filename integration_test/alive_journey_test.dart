@@ -118,6 +118,9 @@ void main() {
       }
       await tap(find.text('Проверить'));
       await tap(find.text('Дальше'));
+      if (find.byKey(const Key('checkpoint-continue')).evaluate().isNotEmpty) {
+        await tap(find.byKey(const Key('checkpoint-continue')));
+      }
     }
     expect(app.progress.xp, 120);
     expect(app.progress.errors, 1);

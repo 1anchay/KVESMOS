@@ -61,47 +61,50 @@ void main() {
     },
   );
 
-  test('five complete story arcs resume their pinned beat and draft', () async {
-    final repo = memoryRepository();
-    await repo.initialize();
-    for (final n in [7, 12, 17, 18, 20]) {
-      final id = 'a1-${n.toString().padLeft(2, '0')}';
-      final material = await repo.startLesson(id);
-      final beats = material.lesson.exercises
-          .where((e) => e.story != null)
-          .toList();
-      expect(beats.map((e) => e.story!.step), [1, 2, 3]);
-      expect(beats.map((e) => e.story!.id).toSet(), hasLength(1));
-      for (var i = 0; i < 8; i++) {
-        final e = material.lesson.exercises[i];
-        await repo.answer(
-          material.session.id,
-          i,
-          e,
-          e.answers.first,
-          total: 10,
+  test(
+    'eight complete story arcs resume their pinned beat and draft',
+    () async {
+      final repo = memoryRepository();
+      await repo.initialize();
+      for (final n in [2, 6, 7, 10, 12, 17, 18, 20]) {
+        final id = 'a1-${n.toString().padLeft(2, '0')}';
+        final material = await repo.startLesson(id);
+        final beats = material.lesson.exercises
+            .where((e) => e.story != null)
+            .toList();
+        expect(beats.map((e) => e.story!.step), [1, 2, 3]);
+        expect(beats.map((e) => e.story!.id).toSet(), hasLength(1));
+        for (var i = 0; i < 8; i++) {
+          final e = material.lesson.exercises[i];
+          await repo.answer(
+            material.session.id,
+            i,
+            e,
+            e.answers.first,
+            total: 10,
+          );
+        }
+        await repo.draft(material.session.id, 8, '{"text":"story draft"}');
+        final pinned = await repo.setting(
+          'kvesmos.session.material.v1:${material.session.id}',
+        );
+        repo.updatedMaterials[id] = repo.updatedMaterials[id]!.replaceAll(
+          beats[0].story!.title,
+          'Changed future story',
+        );
+        final resumed = await repo.startLesson(id);
+        expect(resumed.session.position, 8);
+        expect(resumed.session.draft, contains('story draft'));
+        expect(resumed.lesson.exercises[8].story!.title, beats[0].story!.title);
+        expect(
+          await repo.setting(
+            'kvesmos.session.material.v1:${material.session.id}',
+          ),
+          pinned,
         );
       }
-      await repo.draft(material.session.id, 8, '{"text":"story draft"}');
-      final pinned = await repo.setting(
-        'kvesmos.session.material.v1:${material.session.id}',
-      );
-      repo.updatedMaterials[id] = repo.updatedMaterials[id]!.replaceAll(
-        beats[0].story!.title,
-        'Changed future story',
-      );
-      final resumed = await repo.startLesson(id);
-      expect(resumed.session.position, 8);
-      expect(resumed.session.draft, contains('story draft'));
-      expect(resumed.lesson.exercises[8].story!.title, beats[0].story!.title);
-      expect(
-        await repo.setting(
-          'kvesmos.session.material.v1:${material.session.id}',
-        ),
-        pinned,
-      );
-    }
-    expect((await repo.progress()).xp, 400);
-    await repo.db.close();
-  });
+      expect((await repo.progress()).xp, 8 * 80);
+      await repo.db.close();
+    },
+  );
 }

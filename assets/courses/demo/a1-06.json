@@ -196,7 +196,17 @@
       ],
       "character": "zig_quartz",
       "id": "a1-06-journey2-e08",
-      "phase": "Практика"
+      "phase": "Практика",
+      "story": {
+        "id": "zig-control-room",
+        "title": "Проверка координат",
+        "step": 1,
+        "total": 3,
+        "success": "Signal confirmed. Ready for the next step!",
+        "support": "One small clue can help. Try again.",
+        "recovered": "The signal is clear now. Well done!"
+      },
+      "introduction": "Зиг проверяет возраст пилота в анкете. Исправь одну деталь."
     },
     {
       "type": "translate",
@@ -210,9 +220,19 @@
       "wordIds": [
         "en:six"
       ],
-      "character": "miko",
+      "character": "zig_quartz",
       "id": "a1-06-journey2-e09",
-      "phase": "Закрепление"
+      "phase": "Закрепление",
+      "story": {
+        "id": "zig-control-room",
+        "title": "Проверка координат",
+        "step": 2,
+        "total": 3,
+        "success": "Signal confirmed. Ready for the next step!",
+        "support": "One small clue can help. Try again.",
+        "recovered": "The signal is clear now. Well done!"
+      },
+      "introduction": "Теперь помоги младшему пилоту представиться."
     },
     {
       "type": "review",
@@ -225,9 +245,19 @@
       "wordIds": [
         "en:twenty"
       ],
-      "character": "vespa",
+      "character": "zig_quartz",
       "id": "a1-06-journey2-e10",
-      "phase": "Закрепление"
+      "phase": "Закрепление",
+      "story": {
+        "id": "zig-control-room",
+        "title": "Проверка координат",
+        "step": 3,
+        "total": 3,
+        "success": "Signal confirmed. Ready for the next step!",
+        "support": "One small clue can help. Try again.",
+        "recovered": "The signal is clear now. Well done!"
+      },
+      "introduction": "Последняя координата — число двадцать. Вспомни его без подсказки."
     }
   ],
   "objective": "Спросить о возрасте и ответить коротко или полной фразой.",

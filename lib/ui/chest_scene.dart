@@ -422,7 +422,9 @@ class _ChestSceneState extends ConsumerState<OpenChestDialog>
                           children: [
                             CharacterMoment(
                               characterId: 'pixie',
-                              state: CharacterState.celebration,
+                              state: fresh
+                                  ? CharacterState.celebration
+                                  : CharacterState.idle,
                               animate: fresh && !reduced,
                               size: 52,
                             ),

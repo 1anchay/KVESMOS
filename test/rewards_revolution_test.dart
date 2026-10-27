@@ -7,11 +7,49 @@ import 'package:orbitwords/data/rewards_repository.dart';
 import 'package:orbitwords/domain/rewards.dart';
 import 'package:orbitwords/ui/collection_components.dart';
 import 'package:orbitwords/ui/rewards_pages.dart';
+import 'package:orbitwords/ui/explorer_profile.dart';
 import 'support.dart';
 import 'widget_test.dart' show flushDb;
 
 void main() {
   setUpAll(setupSqlite);
+  testWidgets(
+    'activity range controls wrap at 200% with wide fallback glyphs',
+    (tester) async {
+      tester.view.physicalSize = const Size(320, 760);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
+      final repo = memoryRepository();
+      final app = AppController(repo);
+      await tester.runAsync(app.initialize);
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [appProvider.overrideWith((_) => app)],
+          child: MaterialApp(
+            theme: ThemeData(fontFamily: 'Ahem'),
+            home: MediaQuery(
+              data: const MediaQueryData(
+                size: Size(320, 760),
+                textScaler: TextScaler.linear(2),
+              ),
+              child: const Scaffold(
+                body: SingleChildScrollView(child: ExplorerActivity()),
+              ),
+            ),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(tester.takeException(), isNull);
+      await tester.tap(find.text('30 дней'));
+      await tester.pumpAndSettle();
+      expect(find.text('За этот период занятий пока нет.'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+      await tester.pumpWidget(const SizedBox.shrink());
+      await tester.runAsync(repo.db.close);
+    },
+  );
   testWidgets(
     'closing while transaction is blocked still commits one durable find; reopen is quiet',
     (tester) async {

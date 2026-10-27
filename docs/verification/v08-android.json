@@ -1,0 +1,120 @@
+{
+  "version": "0.8.0-dev.1+10",
+  "baselineCommit": "00b86e4cd7b60c3149dcad883fd319d2cf9c4da8",
+  "activityStartup": {
+    "v07": {
+      "version": "0.7.0-dev.1",
+      "serial": "emulator-5554",
+      "metric": "Android Activity launch TotalTime; not Flutter first meaningful paint",
+      "mode": "debug x64; API36; host GPU Vulkan off; 720x1600 320dpi; 2 cores/2048MB",
+      "warmupMs": 4967,
+      "samplesMs": [
+        4833,
+        4900,
+        5141,
+        4844,
+        4406
+      ],
+      "medianMs": 4844,
+      "pssKbAfterLastLaunch": 345786
+    },
+    "v08": {
+      "version": "0.8.0-dev.1",
+      "serial": "emulator-5554",
+      "metric": "Android Activity launch TotalTime; not Flutter first meaningful paint",
+      "mode": "debug x64; API36; host GPU Vulkan off; 720x1600 320dpi; 2 cores/2048MB",
+      "warmupMs": 4023,
+      "samplesMs": [
+        4168,
+        4568,
+        4180,
+        4135,
+        4761
+      ],
+      "medianMs": 4180,
+      "pssKbAfterLastLaunch": 346587
+    }
+  },
+  "preservation": {
+    "settings": {
+      "before": 10,
+      "after": 10,
+      "changedOrMissingOldRows": 0
+    },
+    "lesson_packs": {
+      "before": 20,
+      "after": 20,
+      "changedOrMissingOldRows": 0
+    },
+    "sessions": {
+      "before": 3,
+      "after": 3,
+      "changedOrMissingOldRows": 0
+    },
+    "events": {
+      "before": 13,
+      "after": 13,
+      "changedOrMissingOldRows": 0
+    }
+  },
+  "mainX64": {
+    "bytes": 101689755,
+    "sha256": "00452cffa535dd14a603d9c6e2a9bacc28c928cc08c9525cae5f6ac4db5ee580"
+  },
+  "oldMainX64": {
+    "bytes": 101571974
+  },
+  "notes": [
+    "No personal phone was used or reset.",
+    "Activity launch is not Flutter first meaningful paint.",
+    "Widget demo is 22 seconds, 10 fps, silent, not a performance measurement.",
+    "The final follow-up adjusts activity-button wrapping and the idle pose of already-opened rewards; engine measurements cover the prior reward opening implementation. No matching 0.7 Flutter FrameTiming baseline was recorded."
+  ],
+  "nativeJourney": {
+    "passed": true,
+    "elapsedSeconds": 96,
+    "xp": 120,
+    "errors": 1,
+    "grants": 3,
+    "rarity": "rare",
+    "equipped": true,
+    "returnedToMap": true,
+    "newNativeSoundsAccepted": [
+      "equip",
+      "epic",
+      "legendary"
+    ],
+    "frameTiming": {
+      "mode": "debug x64 emulator; engine FrameTiming, not video FPS",
+      "build": {
+        "frames": 36,
+        "medianMs": 2.729,
+        "p95Ms": 5.41,
+        "over16_7ms": 2
+      },
+      "raster": {
+        "frames": 36,
+        "medianMs": 2.317,
+        "p95Ms": 7.463,
+        "over16_7ms": 0
+      }
+    }
+  },
+  "killDuringOpening": {
+    "tapToForceStopSeconds": 0.5940000000009604,
+    "openingDurationSeconds": 1.8,
+    "offline": true,
+    "grant": {
+      "chestInstanceId": "daily:v1:2026-10-24:lesson",
+      "grantEventId": "grant:daily:v1:2026-10-24:lesson",
+      "kind": "explorer",
+      "openEventId": "open:daily:v1:2026-10-24:lesson",
+      "itemId": "cos_frame_common_v1"
+    },
+    "ownedBefore": 1,
+    "ownedAfter": 2,
+    "equipmentPreserved": true,
+    "reopenedQuiet": true
+  },
+  "measuredRuntimeRevision": "97673720bd0e7a2d3357f286affe1ba115093196"
+}

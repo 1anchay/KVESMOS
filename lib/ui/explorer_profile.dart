@@ -317,8 +317,9 @@ class _ExplorerActivityState extends ConsumerState<ExplorerActivity> {
                   fontWeight: FontWeight.w800,
                 ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
                 children: [
                   for (final n in [7, 30])
                     TextButton(

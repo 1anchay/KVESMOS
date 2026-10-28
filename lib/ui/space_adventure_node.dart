@@ -52,7 +52,7 @@ class SpaceAdventureNode extends ConsumerWidget {
                 const SizedBox(height: 8),
                 Text(
                   state?.completed == true
-                      ? '✓ Печать станции получена · можно повторить'
+                      ? 'Печать станции получена · можно повторить'
                       : open
                       ? 'Короткая цель: ${adventure.steps.length} действий в космосе'
                       : 'После уроков: ${adventure.prerequisites.map((id) => app.repository.catalog.firstWhere((l) => l.id == id).title).join(", ")}',

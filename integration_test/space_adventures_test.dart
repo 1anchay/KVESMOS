@@ -72,7 +72,18 @@ void main() {
           for (final token in e.tokens) {
             await tap(find.widgetWithText(ActionChip, token));
           }
+        } else if (e.type == ExerciseType.pairs) {
+          for (final pair in e.pairs) {
+            await tap(find.widgetWithText(OutlinedButton, pair.en));
+            await tap(find.widgetWithText(OutlinedButton, pair.ru));
+          }
         } else {
+          await tester.scrollUntilVisible(
+            find.byType(TextField),
+            180,
+            maxScrolls: 30,
+            scrollable: find.byType(Scrollable).first,
+          );
           await tester.enterText(find.byType(TextField), e.answers.first);
         }
         await tap(find.text('Проверить'));

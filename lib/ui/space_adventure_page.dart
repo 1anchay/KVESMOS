@@ -92,7 +92,7 @@ class _SpaceAdventurePageState extends ConsumerState<SpaceAdventurePage> {
       if (mounted) {
         setState(
           () => problem =
-              'Не удалось сохранить действие. Повтори попытку: предыдущий шаг сохранён.',
+              'Не удалось завершить сохранение. Повтори попытку: уже записанное действие не начислит XP повторно.',
         );
       }
     } finally {
@@ -275,7 +275,9 @@ class _SpaceAdventurePageState extends ConsumerState<SpaceAdventurePage> {
             ),
             if (audioProblem != null)
               Text(audioProblem!, style: type.bodySmall),
-            if (!step.assessed || s.hint) Text(step.explanation),
+            if ((!step.assessed || s.hint) &&
+                !s.dialogue.startsWith('Попробуем'))
+              Text(step.explanation),
             if (s.dialogue.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
@@ -437,13 +439,20 @@ class _SpaceAdventurePageState extends ConsumerState<SpaceAdventurePage> {
     ),
     const SizedBox(height: 16),
     Text(
-      'Печать станции получена · до ${adventure.xp} XP за первые решения. Повторение не начисляет XP заново.',
+      'Печать станции получена · ${adventure.xp} XP за освоенные действия. При повторении новые XP не начисляются.',
     ),
     const SizedBox(height: 14),
     for (final line in adventure.recap)
       Padding(
         padding: const EdgeInsets.only(bottom: 8),
-        child: Text('✓ $line'),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Icon(Icons.check_circle_outline, size: 20),
+            const SizedBox(width: 8),
+            Expanded(child: Text(line)),
+          ],
+        ),
       ),
     if (s.errors.isNotEmpty) ...[
       const Text(

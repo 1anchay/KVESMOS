@@ -20,7 +20,7 @@ IconData cargoIcon(String id) => switch (id) {
 String objectName(String id) => switch (id) {
   'book' => 'Книга',
   'pen' => 'Ручка',
-  'bag' => 'Шкаф с сумкой',
+  'bag' => 'Сумка',
   'guide' => 'Собеседник',
   'log' => 'Журнал',
   'console' => 'Пульт',
@@ -142,11 +142,13 @@ class SpaceStation extends StatelessWidget {
                               ),
                               child: objects[i] == 'guide'
                                   ? IgnorePointer(
-                                      child: CharacterMoment(
-                                        characterId: adventure.guide,
-                                        size: 50,
-                                        animate: !quiet,
-                                        state: CharacterState.greeting,
+                                      child: ExcludeSemantics(
+                                        child: CharacterMoment(
+                                          characterId: adventure.guide,
+                                          size: 50,
+                                          animate: !quiet,
+                                          state: CharacterState.greeting,
+                                        ),
                                       ),
                                     )
                                   : Icon(
@@ -169,13 +171,15 @@ class SpaceStation extends StatelessWidget {
                     left: state.x * box.maxWidth - 24,
                     top: state.y * box.maxHeight - 30,
                     child: IgnorePointer(
-                      child: CharacterMoment(
-                        characterId: 'orbi',
-                        size: 48,
-                        animate: !quiet,
-                        state: state.dialogue.startsWith('Попробуем')
-                            ? CharacterState.support
-                            : CharacterState.idle,
+                      child: ExcludeSemantics(
+                        child: CharacterMoment(
+                          characterId: 'orbi',
+                          size: 48,
+                          animate: !quiet,
+                          state: state.dialogue.startsWith('Попробуем')
+                              ? CharacterState.support
+                              : CharacterState.idle,
+                        ),
                       ),
                     ),
                   ),

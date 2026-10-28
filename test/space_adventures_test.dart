@@ -1,14 +1,39 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:orbitwords/data/adventures_repository.dart';
 import 'package:orbitwords/domain/space_adventures.dart';
+import 'package:orbitwords/services/recorded_speech.dart';
 import 'support.dart';
 
 void main() {
   setUpAll(setupSqlite);
   test('authoring schema validates stable steps and taught vocabulary', () {
+    final voices = RecordedSpeechCatalog.decode(
+      File('assets/audio/voices/manifest.json').readAsStringSync(),
+    );
     for (final adventure in SpaceAdventure.all) {
       adventure.validate();
+      final taught = <String>{};
+      for (final id in adventure.prerequisites) {
+        final lesson = jsonDecode(
+          File('assets/courses/demo/$id.json').readAsStringSync(),
+        );
+        taught.addAll(
+          (lesson['vocabulary'] as List).map((v) => v['id'] as String),
+        );
+      }
+      for (final step in adventure.steps) {
+        expect(
+          taught,
+          containsAll(step.words),
+          reason: '${adventure.id}/${step.id}',
+        );
+        final clip = voices.find(adventure.guide, 'en-US', step.english);
+        expect(clip, isNotNull, reason: step.english);
+        expect(File(clip!.asset).existsSync(), true);
+        expect(File(clip.slowAsset!).existsSync(), true);
+      }
     }
     expect(SpaceAdventure.all.map((a) => a.id).toSet().length, 3);
   });

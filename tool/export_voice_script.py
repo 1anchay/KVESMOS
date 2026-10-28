@@ -31,6 +31,12 @@ def main():
                     add(SPEAKERS[speaker.strip()], text, exercise["id"])
     for word in ["hello", "friend", "name", "from", "welcome", "goodbye"]:
         add("miko", word, "v07: personal practice")
+    for character, phrases in {
+        'miko': ['Hello!', 'My name is Miko.', 'My name is Orbi.', 'Goodbye!', 'book', 'two', 'one'],
+        'zig_quartz': ['book', 'pen', 'bag'],
+    }.items():
+        for phrase in phrases:
+            add(character, phrase, 'v09: Space Adventures')
     # Preserve every previously licensed recording and its exact text.
     old_manifest = ROOT / "assets/audio/voices/manifest.json"
     if old_manifest.exists():

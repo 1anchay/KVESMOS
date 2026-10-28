@@ -10,6 +10,7 @@ import 'lesson_screen.dart';
 import 'adventure_map.dart';
 import 'expeditions_page.dart';
 import 'personal_practice.dart';
+import 'space_adventure_page.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -31,6 +32,13 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           : null,
       initialLocation: app.onboarded ? '/' : '/welcome',
       routes: [
+        GoRoute(
+          path: '/adventure/:id',
+          builder: (_, state) => SpaceAdventurePage(
+            key: ValueKey(state.pathParameters['id']),
+            id: state.pathParameters['id']!,
+          ),
+        ),
         GoRoute(
           path: '/welcome',
           builder: (_, _) => const OnboardingPage(step: 0),

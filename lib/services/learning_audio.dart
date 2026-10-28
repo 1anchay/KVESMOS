@@ -326,6 +326,9 @@ class CharacterVoiceService {
 }
 
 enum SoundEffect {
+  interact,
+  pickup,
+  chapter,
   equip,
   epic,
   legendary,

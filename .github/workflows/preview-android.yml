@@ -7,6 +7,7 @@ on:
       - codex/kvesmos-v06-alive
       - feature/kvesmos-v07-learning-game
       - codex/kvesmos-v08-profile-rewards
+      - codex/kvesmos-v09-space-adventures
   workflow_dispatch:
 
 jobs:

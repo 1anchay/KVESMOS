@@ -32,6 +32,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Inventory inventory = Inventory();
   List<String> featuredAchievements = [];
   ProgressSnapshot progress = ProgressSnapshot();
+  Set<String> completedAdventures = {};
+  int adventuresToday = 0;
   ExplorerRecords records = const ExplorerRecords();
   Set<String> installed = {};
   int goal = 50;
@@ -117,6 +119,19 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
 
   Future<void> refresh() async {
     final events = await repository.allEvents();
+    completedAdventures = events
+        .where((e) => e.kind == 'adventure_complete')
+        .map((e) => e.data['adventure'] as String)
+        .toSet();
+    adventuresToday = events
+        .where(
+          (e) =>
+              e.kind == 'adventure_complete' &&
+              e.day == dayKey(repository.now()),
+        )
+        .map((e) => e.data['adventure'])
+        .toSet()
+        .length;
     progress = ProgressSnapshot.fromEvents(events);
     records = ExplorerRecords.fromEvents(events, progress);
     installed = await repository.installed();

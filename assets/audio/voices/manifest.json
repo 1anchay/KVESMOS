@@ -1210,6 +1210,83 @@
       "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
       "asset": "assets/audio/voices/clips/a6593f2ca90f0a58.m4a",
       "slowAsset": "assets/audio/voices/clips/a6593f2ca90f0a58-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "My name is Orbi.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/39cea96fad5d110f.m4a",
+      "slowAsset": "assets/audio/voices/clips/39cea96fad5d110f-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "book",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/af4d2580830c866d.m4a",
+      "slowAsset": "assets/audio/voices/clips/af4d2580830c866d-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "two",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/e9ad78c00bc9f452.m4a",
+      "slowAsset": "assets/audio/voices/clips/e9ad78c00bc9f452-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "one",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/db84f355dfd50390.m4a",
+      "slowAsset": "assets/audio/voices/clips/db84f355dfd50390-slow.m4a"
+    },
+    {
+      "character": "zig_quartz",
+      "locale": "en-US",
+      "text": "book",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/4e799e22ca8ccddd.m4a",
+      "slowAsset": "assets/audio/voices/clips/4e799e22ca8ccddd-slow.m4a"
+    },
+    {
+      "character": "zig_quartz",
+      "locale": "en-US",
+      "text": "pen",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/eb9e8289b53b7ee1.m4a",
+      "slowAsset": "assets/audio/voices/clips/eb9e8289b53b7ee1-slow.m4a"
+    },
+    {
+      "character": "zig_quartz",
+      "locale": "en-US",
+      "text": "bag",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/2f0f30e5c6c9e476.m4a",
+      "slowAsset": "assets/audio/voices/clips/2f0f30e5c6c9e476-slow.m4a"
     }
   ]
 }

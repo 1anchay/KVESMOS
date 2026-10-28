@@ -8,6 +8,8 @@ import 'character_moment.dart';
 import 'design.dart';
 import 'flight_components.dart';
 import 'journey_planet.dart';
+import '../domain/space_adventures.dart';
+import 'space_adventure_node.dart';
 
 const regionColors = [
   Color(0xFF168B92),
@@ -50,6 +52,13 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
         ),
         const SizedBox(height: 6),
         Text('Куда полетим?', style: type.headlineLarge),
+        if (app.progress.completed.contains('a1-01'))
+          Text(
+            app.adventuresToday > 0
+                ? 'Сегодня исследовано станций: ${app.adventuresToday}. Отличное открытие!'
+                : 'Идея на сегодня: применить английский в Space Adventures.',
+            style: type.bodySmall,
+          ),
         const SizedBox(height: 12),
         Wrap(
           spacing: 8,
@@ -162,6 +171,10 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
             ),
           ),
           _node(app, lesson, current?.id, color),
+          for (final adventure in SpaceAdventure.all.where(
+            (a) => a.prerequisites.last == lesson.id,
+          ))
+            SpaceAdventureNode(adventure: adventure),
           if (lesson.order == lessons[1].order) ...[
             const SizedBox(height: 14),
             OutlinedButton.icon(

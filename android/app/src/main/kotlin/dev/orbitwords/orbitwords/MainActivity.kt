@@ -50,7 +50,7 @@ class MainActivity : FlutterActivity() {
                                 remaining--
                                 if (remaining == 0) result.success(ready.size == 8)
                             }
-                            for (name in listOf("correct", "incorrect", "xp", "complete", "achievement", "chest", "rare", "tap", "equip", "epic", "legendary")) {
+                            for (name in listOf("correct", "incorrect", "xp", "complete", "achievement", "chest", "rare", "tap", "equip", "epic", "legendary", "interact", "pickup", "chapter")) {
                                 val target = File(cacheDir, "kvesmos-$name-v1.wav")
                                 assets.open("flutter_assets/assets/audio/effects/$name.wav").use { input ->
                                     target.outputStream().use { input.copyTo(it) }

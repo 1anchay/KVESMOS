@@ -141,6 +141,8 @@ void main() {
                 maxScrolls: 40,
                 scrollable: find.byType(Scrollable).first,
               );
+              await tester.ensureVisible(option);
+              await tester.pumpAndSettle();
               await tester.tap(option);
               await flushDb(tester);
               await tester.tap(find.text('Проверить'));

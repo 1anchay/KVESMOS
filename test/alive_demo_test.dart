@@ -132,6 +132,7 @@ void main() {
     await tap(find.text('Карта путешествия'));
     await film(12);
     await tap(find.byKey(const Key('map-lesson-a1-01')));
+    await tap(find.byKey(const Key('lesson-preview-start')));
     for (
       var i = 0;
       i < 10 && find.byType(LessonIntroduction).evaluate().isNotEmpty;

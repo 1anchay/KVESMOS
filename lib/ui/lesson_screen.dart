@@ -18,7 +18,7 @@ import 'dialogue_scene.dart';
 import 'character_moment.dart';
 import 'speech_source.dart';
 import 'galaxy_components.dart';
-import 'character_reactions.dart';
+import 'lesson_audio_toggle.dart';
 import 'flight_completion.dart';
 import 'mission_checkpoint.dart';
 import 'story_response.dart';
@@ -53,10 +53,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Session? session;
   String? error;
   final input = TextEditingController();
-  final feedbackAnchor = GlobalKey();
   final voice = VoiceService();
   late final LearningAudio audio;
-  bool unlockedAchievement = false;
   bool completionMoment = false;
   bool storyNeededHelp = false;
   bool showCheckpoint = false;
@@ -317,7 +315,6 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       } else if (result == false) {
         result = null;
       } else {
-        final achievementsBefore = app.progress.achievements.toSet();
         final correct = await app.repository.answer(
           session!.id,
           session!.position,
@@ -326,9 +323,6 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           total: lesson!.exercises.length,
         );
         await app.refresh();
-        unlockedAchievement = app.progress.achievements.any(
-          (a) => !achievementsBefore.contains(a),
-        );
         result = correct;
         if (!correct) storyNeededHelp = true;
         if (audio.preferences.reactions &&
@@ -365,20 +359,6 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     } finally {
       if (mounted) {
         setState(() => busy = false);
-        if (result == false || result == true && exercise.story != null) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            final target = feedbackAnchor.currentContext;
-            if (mounted && target != null) {
-              Scrollable.ensureVisible(
-                target,
-                duration: MediaQuery.disableAnimationsOf(context)
-                    ? Duration.zero
-                    : const Duration(milliseconds: 280),
-                alignment: 0,
-              );
-            }
-          });
-        }
       }
     }
   }
@@ -483,7 +463,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       );
     }
     final e = exercise;
-    final reactions = ref.watch(appProvider).audio.preferences.reactions;
+    ref.watch(appProvider);
     final answered = session!.position + (result == true ? 1 : 0);
     return Scaffold(
       appBar: AppBar(
@@ -496,18 +476,20 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           icon: const Icon(Icons.close),
         ),
         title: Text(
-          lesson!.title,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
+          'Шаг ${session!.position + 1} из ${lesson!.exercises.length}',
+          style: Theme.of(context).textTheme.titleMedium,
         ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Text(
-              '${session!.position + 1} / ${lesson!.exercises.length}',
+        actions: const [LessonAudioToggle(), SizedBox(width: 8)],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(16),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+            child: LessonProgress(
+              done: answered,
+              total: lesson!.exercises.length,
             ),
           ),
-        ],
+        ),
       ),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.only(
@@ -523,13 +505,29 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 if (result != null)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8),
-                    child: AnswerSignal(
-                      key: ValueKey(
-                        '${session!.id}:${session!.position}:$result',
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: MediaQuery.sizeOf(context).height * .28,
                       ),
-                      correct: result!,
-                      animate: audio.preferences.reactions,
-                      combo: consecutiveCorrect,
+                      child: SingleChildScrollView(
+                        key: ValueKey('feedback:${e.id}:$result'),
+                        child: AnswerSignal(
+                          explanation: e.explanation,
+                          correction: result == false
+                              ? e.type == ExerciseType.pairs
+                                    ? e.pairs
+                                          .map((v) => '${v.en} — ${v.ru}')
+                                          .join('\n')
+                                    : 'Верный вариант: ${e.answers.first}'
+                              : null,
+                          key: ValueKey(
+                            '${session!.id}:${session!.position}:$result',
+                          ),
+                          correct: result!,
+                          animate: audio.preferences.reactions,
+                          combo: consecutiveCorrect,
+                        ),
+                      ),
                     ),
                   ),
                 FilledButton(
@@ -581,27 +579,17 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   ),
                 ),
               ),
-            LessonProgress(done: answered, total: lesson!.exercises.length),
-            if (consecutiveCorrect >= 2 && e.story == null) ...[
-              const SizedBox(height: 8),
-              Row(
-                children: [
-                  const Icon(Icons.local_fire_department_rounded, size: 22),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      'Серия без ошибок: $consecutiveCorrect! Продолжай!',
-                      style: Theme.of(context).textTheme.titleSmall,
-                    ),
-                  ),
-                ],
+            Text(
+              [
+                if (e.phase.isNotEmpty) e.phase.toUpperCase(),
+                if (consecutiveCorrect >= 2) 'Серия: $consecutiveCorrect',
+              ].join('  ·  '),
+              style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                color: Theme.of(context).colorScheme.primary,
+                letterSpacing: .8,
               ),
-            ],
-            if (e.phase.isNotEmpty && e.story == null) ...[
-              const SizedBox(height: 12),
-              Wrap(spacing: 8, children: [Chip(label: Text(e.phase))]),
-            ],
-            const SizedBox(height: 12),
+            ),
+            const SizedBox(height: 8),
             if (e.story != null)
               StoryPanel(story: e.story!, completed: result == true),
             if (e.story == null)
@@ -615,7 +603,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         : result == false
                         ? CharacterState.support
                         : CharacterState.thinking,
-                    size: 66,
+                    size: 44,
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -630,125 +618,112 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   ),
                 ],
               ),
-            if (lesson!.exercises.length - session!.position <= 2)
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                child: Text(
-                  lesson!.exercises.length - session!.position == 1
-                      ? 'Финальный шаг. Покажи, чему научился!'
-                      : 'Ещё два шага — и открытие твоё.',
-                  style: Theme.of(context).textTheme.labelLarge,
-                ),
-              ),
-            if (e.story == null) const SizedBox(height: 12),
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    if (e.introduction != null) ...[
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (e.introduction != null) ...[
+                    Text(
+                      e.introduction!,
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  if (e.visual != null) ...[
+                    Center(
+                      child: Semantics(
+                        label:
+                            'Иллюстрация: ${e.visual == 'book'
+                                ? 'книга'
+                                : e.visual == 'pen'
+                                ? 'ручка'
+                                : 'сумка'}',
+                        child: Icon(
+                          switch (e.visual) {
+                            'book' => Icons.menu_book_rounded,
+                            'pen' => Icons.edit_rounded,
+                            _ => Icons.backpack_rounded,
+                          },
+                          size: 64,
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? turquoise
+                              : cosmicBlue,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  if (e.scene != null) ...[
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(e.story == null ? 12 : 0),
+                      decoration: BoxDecoration(
+                        color: turquoise.withValues(alpha: .12),
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      child: DialogueScene(
+                        scene: e.scene!,
+                        audio: audio,
+                        reply: result == true ? answer : null,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  Text(
+                    e.prompt,
+                    style: e.story == null
+                        ? Theme.of(context).textTheme.titleLarge
+                        : Theme.of(context).textTheme.titleMedium,
+                  ),
+                  if (e.audio != null ||
+                      e.type == ExerciseType.listen ||
+                      e.type == ExerciseType.speak) ...[
+                    const SizedBox(height: 20),
+                    SpeechSourceLabel(
+                      audio: audio,
+                      character: e.character,
+                      text: e.audio ?? e.prompt,
+                    ),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 4,
+                      children: [
+                        OutlinedButton.icon(
+                          onPressed: () => speak(),
+                          icon: const Icon(Icons.volume_up_outlined),
+                          label: const Text('Прослушать'),
+                        ),
+                        TextButton.icon(
+                          onPressed: () => speak(slow: true),
+                          icon: const Icon(Icons.slow_motion_video),
+                          label: const Text('Медленно'),
+                        ),
+                      ],
+                    ),
+                    if (e.audio != null)
+                      TextButton(
+                        onPressed: () => setState(() => revealedAudio = true),
+                        child: const Text('Нет звука? Показать фразу'),
+                      ),
+                    if (revealedAudio && e.audio != null)
                       Text(
-                        e.introduction!,
+                        e.audio!,
+                        key: const Key('audio-transcript'),
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
-                      const SizedBox(height: 16),
-                    ],
-                    if (e.visual != null) ...[
-                      Center(
-                        child: Semantics(
-                          label:
-                              'Иллюстрация: ${e.visual == 'book'
-                                  ? 'книга'
-                                  : e.visual == 'pen'
-                                  ? 'ручка'
-                                  : 'сумка'}',
-                          child: Icon(
-                            switch (e.visual) {
-                              'book' => Icons.menu_book_rounded,
-                              'pen' => Icons.edit_rounded,
-                              _ => Icons.backpack_rounded,
-                            },
-                            size: 100,
-                            color:
-                                Theme.of(context).brightness == Brightness.dark
-                                ? turquoise
-                                : cosmicBlue,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                    ],
-                    if (e.scene != null) ...[
-                      Container(
-                        width: double.infinity,
-                        padding: EdgeInsets.all(e.story == null ? 12 : 0),
-                        decoration: BoxDecoration(
-                          color: turquoise.withValues(alpha: .12),
-                          borderRadius: BorderRadius.circular(18),
-                        ),
-                        child: DialogueScene(
-                          scene: e.scene!,
-                          audio: audio,
-                          reply: result == true ? answer : null,
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                    ],
-                    Text(
-                      e.prompt,
-                      style: e.story == null
-                          ? Theme.of(context).textTheme.headlineMedium
-                          : Theme.of(context).textTheme.titleMedium,
-                    ),
-                    if (e.audio != null ||
-                        e.type == ExerciseType.listen ||
-                        e.type == ExerciseType.speak) ...[
-                      const SizedBox(height: 20),
-                      SpeechSourceLabel(
-                        audio: audio,
-                        character: e.character,
-                        text: e.audio ?? e.prompt,
-                      ),
-                      Text(
-                        'Герой: ${CharacterVoiceProfile.forId(e.character).name}',
-                      ),
-                      OutlinedButton.icon(
-                        style: OutlinedButton.styleFrom(
-                          minimumSize: const Size(double.infinity, 58),
-                        ),
-                        onPressed: () => speak(),
-                        icon: const Icon(Icons.volume_up_outlined),
-                        label: const Text('Прослушать'),
-                      ),
-                      TextButton.icon(
-                        onPressed: () => speak(slow: true),
-                        icon: const Icon(Icons.slow_motion_video),
-                        label: const Text('Медленно'),
-                      ),
-                      if (e.audio != null)
-                        TextButton(
-                          onPressed: () => setState(() => revealedAudio = true),
-                          child: const Text('Нет звука? Показать фразу'),
-                        ),
-                      if (revealedAudio && e.audio != null)
-                        Text(
-                          e.audio!,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                    ],
                   ],
-                ),
+                ],
               ),
             ),
-            const SizedBox(height: 12),
-            LessonCoachCard(lesson: lesson!, exercise: e),
-            const SizedBox(height: 24),
+            const SizedBox(height: 16),
             AbsorbPointer(
               absorbing: result != null || busy,
               child: _answerWidget(e),
             ),
-            const SizedBox(height: 18),
+            LessonCoachCard(lesson: lesson!, exercise: e),
+            const SizedBox(height: 12),
             if (e.type == ExerciseType.speak) ...[
               OutlinedButton.icon(
                 onPressed: result != null || busy
@@ -781,99 +756,6 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 'Сравниваем распознанный текст с фразой. Это не оценка произношения. Можно ввести текст вручную.',
               ),
             ],
-            const SizedBox(height: 24),
-            AnimatedSwitcher(
-              key: feedbackAnchor,
-              duration: MediaQuery.disableAnimationsOf(context)
-                  ? Duration.zero
-                  : const Duration(milliseconds: 220),
-              child: result == null
-                  ? const SizedBox.shrink()
-                  : Container(
-                      key: ValueKey(result),
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: (result! ? mintGlow : coral).withValues(
-                          alpha: .18,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                result!
-                                    ? Icons.check_circle_outline
-                                    : Icons.lightbulb_outline,
-                              ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: XpPop(
-                                  enabled: result!,
-                                  eventKey: '${e.id}:$result',
-                                  child: Text(
-                                    result!
-                                        ? consecutiveCorrect >= 3
-                                              ? 'Отлично! Серия $consecutiveCorrect · +10 XP'
-                                              : 'Верно! +10 XP'
-                                        : 'Ошибка — разберём её вместе',
-                                    style: Theme.of(
-                                      context,
-                                    ).textTheme.titleMedium,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 10),
-                          if (reactions)
-                            CharacterReaction(
-                              cue: result!
-                                  ? CharacterCue.correct
-                                  : CharacterCue.support,
-                              eventKey: '${e.id}:$result',
-                            ),
-                          if (reactions)
-                            TextButton.icon(
-                              onPressed: () async {
-                                final cue = result!
-                                    ? CharacterCue.correct
-                                    : CharacterCue.support;
-                                final ok = await audio.speak(
-                                  cue.lines.first,
-                                  character: cue.id,
-                                  locale: 'ru-RU',
-                                );
-                                if (!ok && context.mounted) {
-                                  showMessage(
-                                    context,
-                                    'Реплика доступна текстом. Проверьте русский голос в настройках звука.',
-                                  );
-                                }
-                              },
-                              icon: const Icon(Icons.volume_up_outlined),
-                              label: const Text('Послушать Орби'),
-                            ),
-                          Text(
-                            result!
-                                ? 'Почему это правильно: ${e.explanation}'
-                                : 'Разберём ошибку: ${e.explanation}',
-                          ),
-                          if (!result!)
-                            Text(
-                              e.type == ExerciseType.pairs
-                                  ? e.pairs
-                                        .map((v) => '${v.en} — ${v.ru}')
-                                        .join('\n')
-                                  : 'Один из верных ответов: ${e.answers.first}',
-                            ),
-                        ],
-                      ),
-                    ),
-            ),
-            const SizedBox(height: 18),
             if (e.story != null && result != null)
               StoryResponse(
                 key: ValueKey('${e.id}:$result'),
@@ -882,41 +764,6 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 neededHelp: storyNeededHelp,
                 audio: audio,
               ),
-            const SizedBox(height: 16),
-            ExpansionTile(
-              title: const Text('Подсказка команды'),
-              children: [
-                if (reactions)
-                  CharacterReaction(
-                    cue: CharacterCue.tutor(e.type),
-                    eventKey: 'hint:${e.id}',
-                    announce: false,
-                  ),
-                if (reactions)
-                  TextButton.icon(
-                    onPressed: () async {
-                      final cue = CharacterCue.tutor(e.type);
-                      final ok = await audio.speak(
-                        cue.lines.first,
-                        character: cue.id,
-                        locale: 'ru-RU',
-                      );
-                      if (!ok && context.mounted) {
-                        showMessage(
-                          context,
-                          'Реплика доступна текстом. Проверьте русский голос в настройках звука.',
-                        );
-                      }
-                    },
-                    icon: const Icon(Icons.volume_up_outlined),
-                    label: const Text('Послушать подсказку'),
-                  ),
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Text(lesson!.guide),
-                ),
-              ],
-            ),
           ]),
         ),
       ),
@@ -957,21 +804,27 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               border: Border.all(color: violet),
               borderRadius: BorderRadius.circular(18),
             ),
-            child: Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: order
-                  .map(
-                    (i) => InputChip(
-                      label: Text(e.tokens[i]),
-                      onDeleted: () {
-                        setState(() => order.remove(i));
-                        unawaited(saveDraft());
-                      },
-                    ),
+            child: order.isEmpty
+                ? Text(
+                    'Нажимай слова в нужном порядке',
+                    style: Theme.of(context).textTheme.bodyMedium,
                   )
-                  .toList(),
-            ),
+                : Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: order
+                        .map(
+                          (i) => InputChip(
+                            label: Text(e.tokens[i]),
+                            onDeleted: () {
+                              unawaited(audio.play(SoundEffect.tap));
+                              setState(() => order.remove(i));
+                              unawaited(saveDraft());
+                            },
+                          ),
+                        )
+                        .toList(),
+                  ),
           ),
           const SizedBox(height: 20),
           Wrap(
@@ -984,6 +837,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     onPressed: order.contains(i)
                         ? null
                         : () {
+                            unawaited(audio.play(SoundEffect.tap));
                             setState(() => order.add(i));
                             unawaited(saveDraft());
                           },
@@ -1015,12 +869,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                             style: OutlinedButton.styleFrom(
                               backgroundColor: activePair == v.id
                                   ? turquoise.withValues(alpha: .25)
+                                  : pairs.containsKey(v.id)
+                                  ? Theme.of(
+                                      context,
+                                    ).colorScheme.primaryContainer
                                   : null,
+                              minimumSize: const Size(double.infinity, 52),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 12,
+                              ),
                             ),
-                            onPressed: () => setState(() => activePair = v.id),
-                            child: Text(
-                              '${v.en}${pairs.containsKey(v.id) ? ' ✓' : ''}',
-                            ),
+                            onPressed: () {
+                              unawaited(audio.play(SoundEffect.tap));
+                              setState(() => activePair = v.id);
+                            },
+                            child: Text(v.en),
                           ),
                         ),
                       )
@@ -1035,9 +899,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         (v) => Padding(
                           padding: const EdgeInsets.only(bottom: 10),
                           child: OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              minimumSize: const Size(double.infinity, 52),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 12,
+                              ),
+                              backgroundColor: pairs.containsValue(v.ru)
+                                  ? Theme.of(
+                                      context,
+                                    ).colorScheme.primaryContainer
+                                  : null,
+                            ),
                             onPressed: activePair == null
                                 ? null
                                 : () {
+                                    unawaited(audio.play(SoundEffect.tap));
                                     setState(() {
                                       pairs.removeWhere(
                                         (key, value) => value == v.ru,
@@ -1058,7 +935,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           ),
           ...pairs.entries.map(
             (pair) => Text(
-              '${e.pairs.firstWhere((v) => v.id == pair.key).en} → ${pair.value}',
+              '${e.pairs.firstWhere((v) => v.id == pair.key).en} — ${pair.value}',
             ),
           ),
         ],

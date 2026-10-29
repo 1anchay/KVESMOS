@@ -30,26 +30,30 @@ class LessonProgress extends StatelessWidget {
   final int done, total;
   const LessonProgress({super.key, required this.done, required this.total});
   @override
-  Widget build(BuildContext context) => Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      TweenAnimationBuilder<double>(
-        tween: Tween(begin: 0, end: total == 0 ? 0 : done / total),
-        duration: MediaQuery.disableAnimationsOf(context)
-            ? Duration.zero
-            : const Duration(milliseconds: 240),
-        builder: (_, value, _) => LinearProgressIndicator(
-          value: value.clamp(0, 1),
-          minHeight: 10,
-          semanticsLabel: 'Готово $done из $total упражнений',
-        ),
-      ),
-      const SizedBox(height: 10),
-      Text(
-        'Готово $done из $total',
-        style: Theme.of(context).textTheme.labelLarge,
-      ),
-    ],
+  Widget build(BuildContext context) => Semantics(
+    label: 'Готово $done из $total упражнений',
+    value: '$done / $total',
+    child: Row(
+      children: [
+        for (var i = 0; i < total; i++) ...[
+          if (i > 0) SizedBox(width: i == total ~/ 2 ? 10 : 4),
+          Expanded(
+            child: AnimatedContainer(
+              duration: MediaQuery.disableAnimationsOf(context)
+                  ? Duration.zero
+                  : const Duration(milliseconds: 240),
+              height: 6,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: i < done
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).colorScheme.outlineVariant,
+              ),
+            ),
+          ),
+        ],
+      ],
+    ),
   );
 }
 

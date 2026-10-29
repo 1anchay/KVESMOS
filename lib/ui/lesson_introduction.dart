@@ -4,6 +4,7 @@ import 'character_moment.dart';
 import '../services/learning_audio.dart';
 import 'speech_source.dart';
 import 'galaxy_components.dart';
+import 'lesson_effects.dart';
 
 /// A short teaching sequence, shown before the first exercise of a lesson.
 class LessonIntroduction extends StatefulWidget {
@@ -123,15 +124,14 @@ class _LessonIntroductionState extends State<LessonIntroduction> {
                       controller: scroll,
                       padding: const EdgeInsets.all(20),
                       children: [
-                        LinearProgressIndicator(
-                          value:
-                              (index + 1) / widget.lesson.teachingSteps.length,
-                          minHeight: 8,
+                        LessonProgress(
+                          done: index + 1,
+                          total: widget.lesson.teachingSteps.length,
                         ),
                         const SizedBox(height: 16),
                         if (index == 0 && widget.lesson.objective != null) ...[
                           Text(
-                            'Твоя миссия: ${widget.lesson.objective}',
+                            'Сегодня научимся: ${widget.lesson.objective}',
                             style: theme.textTheme.titleMedium,
                           ),
                           const SizedBox(height: 12),
@@ -140,22 +140,29 @@ class _LessonIntroductionState extends State<LessonIntroduction> {
                           'Шаг ${index + 1} из ${widget.lesson.teachingSteps.length}',
                           style: theme.textTheme.labelLarge,
                         ),
-                        const SizedBox(height: 24),
-                        Center(
-                          child: SpeakingCharacter(
-                            key: ValueKey(index),
-                            audio: widget.audio,
-                            character: step.character,
-                            state: index == 0
-                                ? CharacterState.greeting
-                                : last && widget.lesson.id == 'a1-01'
-                                ? CharacterState.goodbye
-                                : CharacterState.thinking,
-                            size: 120,
-                          ),
+                        const SizedBox(height: 16),
+                        Row(
+                          children: [
+                            SpeakingCharacter(
+                              key: ValueKey(index),
+                              audio: widget.audio,
+                              character: step.character,
+                              state: index == 0
+                                  ? CharacterState.greeting
+                                  : last && widget.lesson.id == 'a1-01'
+                                  ? CharacterState.goodbye
+                                  : CharacterState.thinking,
+                              size: 72,
+                            ),
+                            const SizedBox(width: 14),
+                            Expanded(
+                              child: Text(
+                                step.title,
+                                style: theme.textTheme.titleLarge,
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(height: 20),
-                        Text(step.title, style: theme.textTheme.headlineMedium),
                         const SizedBox(height: 16),
                         Card(
                           child: Padding(
@@ -209,7 +216,7 @@ class _LessonIntroductionState extends State<LessonIntroduction> {
                         ),
                         const SizedBox(height: 18),
                         Text(
-                          'Сначала прочитай и пойми пример. В заданиях мы потренируем его без спешки.',
+                          'Можно послушать ещё раз. Затем попробуем вместе.',
                           style: theme.textTheme.bodyMedium,
                         ),
                       ],

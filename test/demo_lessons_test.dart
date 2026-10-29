@@ -166,7 +166,7 @@ void main() {
       await tester.tap(find.text('Начать обновлённый урок'));
       await flushDb(tester);
       await advanceTeaching(tester);
-      expect(find.text('Знакомство'), findsOneWidget);
+      expect(find.text('ЗНАКОМСТВО'), findsOneWidget);
       expect(
         find.text(
           'Орби встречает тебя на космической станции. Что ему ответить?',
@@ -272,10 +272,7 @@ void main() {
           if (e.audio != null) {
             await tap(find.widgetWithText(OutlinedButton, 'Прослушать'));
             await top();
-            final transcript = find.descendant(
-              of: find.byType(Card),
-              matching: find.text(e.audio!),
-            );
+            final transcript = find.byKey(const Key('audio-transcript'));
             await tester.scrollUntilVisible(
               transcript,
               200,
@@ -283,6 +280,7 @@ void main() {
             );
             await tester.pumpAndSettle();
             expect(transcript, findsOneWidget);
+            expect(tester.widget<Text>(transcript).data, e.audio!);
           }
           if (e.options.isNotEmpty) {
             await tap(find.widgetWithText(OutlinedButton, e.answers.first));

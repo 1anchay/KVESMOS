@@ -11,6 +11,7 @@ import 'adventure_map.dart';
 import 'expeditions_page.dart';
 import 'personal_practice.dart';
 import 'space_adventure_page.dart';
+import 'optional_adventures.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -81,6 +82,10 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           builder: (context, state, child) =>
               OrbitShell(location: state.uri.path, child: child),
           routes: [
+            GoRoute(
+              path: '/adventures',
+              builder: (_, _) => const OptionalAdventuresPage(),
+            ),
             GoRoute(path: '/rewards', builder: (_, _) => const RewardsPage()),
             GoRoute(
               path: '/inventory',

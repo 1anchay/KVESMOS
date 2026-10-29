@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../domain/journey.dart';
 import '../domain/course.dart';
-import 'character_moment.dart';
+import 'lesson_preview.dart';
 import 'design.dart';
 import 'flight_components.dart';
 import 'journey_planet.dart';
@@ -47,18 +47,11 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
-          'АТЛАС ОТКРЫТИЙ',
+          'АНГЛИЙСКИЙ · ВВОДНЫЙ МАРШРУТ A1',
           style: type.labelSmall?.copyWith(letterSpacing: 2),
         ),
         const SizedBox(height: 6),
-        Text('Куда полетим?', style: type.headlineLarge),
-        if (app.progress.completed.contains('a1-01'))
-          Text(
-            app.adventuresToday > 0
-                ? 'Сегодня исследовано станций: ${app.adventuresToday}. Отличное открытие!'
-                : 'Идея на сегодня: применить английский в Space Adventures.',
-            style: type.bodySmall,
-          ),
+        Text('Твой маршрут', style: type.headlineLarge),
         const SizedBox(height: 12),
         Wrap(
           spacing: 8,
@@ -86,82 +79,53 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
         ),
         const SizedBox(height: 14),
         Container(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: color.withValues(alpha: .13),
-            borderRadius: BorderRadius.circular(30),
-            border: Border.all(color: color.withValues(alpha: .3)),
+            color: Theme.of(
+              context,
+            ).colorScheme.primaryContainer.withValues(alpha: .55),
+            borderRadius: BorderRadius.circular(24),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Row(
             children: [
-              Row(
-                children: [
-                  if (!largeText)
-                    ExcludeSemantics(
-                      child: SizedBox(
-                        width: 92,
-                        height: 92,
-                        child: CustomPaint(
-                          painter: JourneyPlanetPainter(region.index, color),
-                        ),
-                      ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'ОБЛАСТЬ ${region.index + 1} ИЗ 5  ·  $done / ${lessons.length}',
+                      style: type.labelSmall,
                     ),
-                  if (!largeText) const SizedBox(width: 12),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'ОБЛАСТЬ ${region.index + 1} / 5',
-                          style: type.labelSmall,
-                        ),
-                        Text(region.title, style: type.titleLarge),
-                        Text(
-                          '$done / ${lessons.length} миссии',
+                    const SizedBox(height: 6),
+                    Text(region.title, style: type.titleLarge),
+                    const SizedBox(height: 6),
+                    Text(region.subtitle, style: type.bodyMedium),
+                    if (region.index >
+                        JourneyRegion.forOrder(current?.order ?? 19).index)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8),
+                        child: Text(
+                          'Откроется после предыдущей области',
                           style: type.bodySmall,
                         ),
-                      ],
+                      ),
+                  ],
+                ),
+              ),
+              if (!largeText) ...[
+                const SizedBox(width: 12),
+                ExcludeSemantics(
+                  child: SizedBox(
+                    width: 66,
+                    height: 66,
+                    child: CustomPaint(
+                      painter: JourneyPlanetPainter(region.index, color),
                     ),
                   ),
-                ],
-              ),
-              const SizedBox(height: 10),
-              Text(region.subtitle, style: type.titleMedium),
-              const SizedBox(height: 10),
-              FlightProgress(
-                value: done,
-                target: lessons.length,
-                label: 'Исследовано в области',
-              ),
-              const SizedBox(height: 12),
-              Text(region.invitation),
-              if (region.index >
-                  JourneyRegion.forOrder(current?.order ?? 19).index) ...[
-                const SizedBox(height: 8),
-                const Text(
-                  'Пока это обзор будущей области. Продолжай текущий маршрут, чтобы открыть её миссии.',
                 ),
               ],
             ],
           ),
-        ),
-        const SizedBox(height: 12),
-        Row(
-          children: [
-            CharacterMoment(
-              characterId: region.guide,
-              size: 42,
-              animate: false,
-            ),
-            const SizedBox(width: 10),
-            Expanded(
-              child: Text(
-                'Две короткие части в каждой миссии. Можно остановиться на контрольной точке.',
-                style: type.bodySmall,
-              ),
-            ),
-          ],
         ),
         for (final lesson in lessons) ...[
           SizedBox(
@@ -172,7 +136,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
           ),
           _node(app, lesson, current?.id, color),
           for (final adventure in SpaceAdventure.all.where(
-            (a) => a.prerequisites.last == lesson.id,
+            (a) => app.showMiniAdventures && a.prerequisites.last == lesson.id,
           ))
             SpaceAdventureNode(adventure: adventure),
           if (lesson.order == lessons[1].order) ...[
@@ -241,9 +205,14 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
           icon: const Icon(Icons.explore_outlined),
           label: const Text('Паспорт и экспедиции'),
         ),
+        TextButton.icon(
+          onPressed: () => context.go('/adventures'),
+          icon: const Icon(Icons.explore_outlined),
+          label: const Text('Дополнительно · Приключения'),
+        ),
         const SizedBox(height: 10),
         Text(
-          '${app.progress.completed.length} из ${catalog.length} миссий · вводный маршрут A1',
+          '${app.progress.completed.length} из ${catalog.length} уроков · вводный маршрут A1',
           textAlign: TextAlign.center,
           style: type.bodySmall,
         ),
@@ -290,14 +259,10 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
               );
               return;
             }
-            context.go(
-              app.installed.contains(lesson.id)
-                  ? '/lesson/${lesson.id}'
-                  : '/offline',
-            );
+            showLessonPreview(context, app, lesson);
           },
           child: Container(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(active ? 20 : 16),
             decoration: BoxDecoration(
               color: active
                   ? accent.withValues(alpha: .12)
@@ -312,14 +277,28 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
             ),
             child: Row(
               children: [
-                Icon(
-                  done
-                      ? Icons.check_circle
-                      : open
-                      ? Icons.play_arrow_rounded
-                      : Icons.lock_outline,
-                  color: open ? accent : null,
-                  size: 32,
+                Container(
+                  width: active ? 58 : 40,
+                  height: active ? 58 : 40,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: active
+                        ? Theme.of(context).colorScheme.primary
+                        : accent.withValues(alpha: .1),
+                  ),
+                  child: Icon(
+                    done
+                        ? Icons.check_circle
+                        : open
+                        ? Icons.play_arrow_rounded
+                        : Icons.lock_outline,
+                    color: active
+                        ? Theme.of(context).colorScheme.onPrimary
+                        : open
+                        ? accent
+                        : Theme.of(context).colorScheme.onSurfaceVariant,
+                    size: active ? 34 : 24,
+                  ),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -329,7 +308,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                       Text(
                         active
                             ? 'ТВОЙ СЛЕДУЮЩИЙ ШАГ'
-                            : 'МИССИЯ ${lesson.order + 1}',
+                            : 'УРОК ${lesson.order + 1}',
                         style: Theme.of(context).textTheme.labelSmall,
                       ),
                       Text(
@@ -339,7 +318,9 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                       Text(
                         done
                             ? 'Пройдено · повторить'
-                            : '2 этапа · есть точка отдыха',
+                            : open
+                            ? '10 шагов · посмотреть цель'
+                            : 'После предыдущего урока',
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],

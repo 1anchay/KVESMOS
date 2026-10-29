@@ -137,6 +137,14 @@ class _TodayPageState extends ConsumerState<TodayPage> {
             ),
             const SizedBox(height: 14),
             Text('ДАЛЬШЕ · ${next.title}', style: type.labelLarge),
+            if (app.repository.learningObjectives[next.id]?.isNotEmpty ==
+                true) ...[
+              const SizedBox(height: 6),
+              Text(
+                app.repository.learningObjectives[next.id]!,
+                style: type.bodyMedium,
+              ),
+            ],
             const SizedBox(height: 10),
             SizedBox(
               width: double.infinity,
@@ -147,7 +155,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
                   context.go(nextLessonRoute(app));
                 },
                 icon: const Icon(Icons.arrow_forward_rounded),
-                label: const Text('Продолжить приключение'),
+                label: const Text('Продолжить урок'),
               ),
             ),
           ],

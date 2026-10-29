@@ -17,6 +17,7 @@ import 'today_page.dart';
 import 'character_moment.dart';
 import 'profile_achievements.dart';
 import 'audio_settings.dart';
+import 'optional_adventures.dart';
 import 'galaxy_components.dart';
 import '../services/learning_audio.dart';
 
@@ -1021,6 +1022,13 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     return pageBody([
       const SectionTitle('Настройки'),
       const AudioSettings(),
+      const SectionTitle('Учебный путь'),
+      const AdventureVisibilitySetting(),
+      TextButton.icon(
+        onPressed: () => context.go('/adventures'),
+        icon: const Icon(Icons.explore_outlined),
+        label: const Text('Открыть приключения'),
+      ),
       TextField(
         controller: name,
         maxLength: 40,

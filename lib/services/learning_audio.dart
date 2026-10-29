@@ -590,6 +590,9 @@ class LearningAudio {
 
   Future<bool> play(SoundEffect effect) async {
     if (!preferences.effects || preferences.effectsVolume == 0) return false;
+    // Choosing an answer should not cut off the example being listened to.
+    // Verdicts/transitions still stop speech before playing their feedback.
+    if (effect == SoundEffect.tap && playback.value != null) return false;
     final ticket = ++_generation;
     _speakingCharacter = null;
     _recordingRequest = null;

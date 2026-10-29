@@ -396,7 +396,7 @@ class AnswerTile extends StatelessWidget {
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(22)),
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
-            minimumSize: const Size(double.infinity, 66),
+            minimumSize: const Size(double.infinity, 56),
             padding: const EdgeInsets.all(16),
             backgroundColor: selected
                 ? accent.withValues(alpha: .14)

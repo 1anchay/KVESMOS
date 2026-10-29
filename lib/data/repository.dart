@@ -110,6 +110,30 @@ class LearningRepository {
   Future<Session> session(String id) =>
       (db.select(db.sessions)..where((t) => t.id.equals(id))).getSingle();
 
+  /// Read-only overview: use exactly the material that continuation would open.
+  /// Merely looking at a lesson must not create a session or pin new content.
+  Future<({Lesson lesson, Session? session})> previewLesson(String id) async {
+    final original = await lesson(id);
+    final active = await (db.select(
+      db.sessions,
+    )..where((s) => s.lessonId.equals(id) & s.done.equals(false))).get();
+    for (final session in active) {
+      if (await setting('kvesmos.session.retired.v1:${session.id}') == 'true') {
+        continue;
+      }
+      final pinned = await setting('kvesmos.session.material.v1:${session.id}');
+      return (
+        lesson: pinned == null ? original : Lesson.fromJson(jsonDecode(pinned)),
+        session: session,
+      );
+    }
+    final raw = updatedMaterials[id];
+    return (
+      lesson: raw == null ? original : Lesson.fromJson(jsonDecode(raw)),
+      session: null,
+    );
+  }
+
   /// Demo material is pinned to its session. An old draft always resumes the
   /// installed lesson; opting into a demo never silently changes its questions.
   Future<({Lesson lesson, Session session})> startLesson(

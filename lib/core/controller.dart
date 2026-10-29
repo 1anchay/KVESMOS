@@ -40,6 +40,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   String name = 'Исследователь', startingLevel = 'С нуля';
   ThemeMode theme = ThemeMode.system;
   bool onboarded = false;
+  bool showMiniAdventures = false;
+  static const adventuresVisibilityKey = 'kvesmos.learning.showAdventures.v1';
   bool recoveringPassword = false, syncPaused = false;
   bool _disposed = false;
   String? cloudError;
@@ -70,6 +72,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     name = await repository.setting('name') ?? 'Исследователь';
     startingLevel = await repository.setting('level') ?? 'С нуля';
     onboarded = await repository.setting('onboarded') == 'true';
+    showMiniAdventures =
+        await repository.setting(adventuresVisibilityKey) == 'true';
     try {
       final saved = jsonDecode(await repository.setting(showcaseKey) ?? '[]');
       if (saved is List) {
@@ -113,6 +117,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     startingLevel = 'С нуля';
     theme = ThemeMode.system;
     onboarded = false;
+    showMiniAdventures = false;
     await repository.initialize();
     await refresh();
   }
@@ -153,6 +158,47 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Future<void> equipCosmetic(String slot, String? id) async {
     inventory = await rewards.equip(slot, id);
     if (!_disposed) notifyListeners();
+  }
+
+  Future<void> saveAdventureVisibility(bool visible) async {
+    await repository.setSetting(adventuresVisibilityKey, '$visible');
+    showMiniAdventures = visible;
+    if (!_disposed) notifyListeners();
+  }
+
+  /// Read-only route selection. Never completes a game, creates a lesson
+  /// session or awards anything. Existing unfinished lessons retain priority.
+  Future<String> learningContinuationRoute() async {
+    bool available(String id) {
+      final lesson = repository.catalog.where((l) => l.id == id).firstOrNull;
+      return lesson != null &&
+          (lesson.order == 0 ||
+              progress.completed.contains(id) ||
+              progress.completed.contains(
+                repository.catalog[lesson.order - 1].id,
+              ));
+    }
+
+    final drafts = await (repository.db.select(
+      repository.db.sessions,
+    )..where((s) => s.done.equals(false))).get();
+    for (final draft in drafts) {
+      if (available(draft.lessonId) &&
+          await repository.setting('kvesmos.session.retired.v1:${draft.id}') !=
+              'true') {
+        return installed.contains(draft.lessonId)
+            ? '/lesson/${draft.lessonId}'
+            : '/offline';
+      }
+    }
+    final next = repository.catalog
+        .where((l) => !progress.completed.contains(l.id) && available(l.id))
+        .firstOrNull;
+    return next == null
+        ? '/map'
+        : installed.contains(next.id)
+        ? '/lesson/${next.id}'
+        : '/offline';
   }
 
   Future<void> resetAppearance() async {

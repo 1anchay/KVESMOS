@@ -29,6 +29,18 @@ class MissionCheckpoint extends StatelessWidget {
         icon: const Icon(Icons.close),
       ),
     ),
+    bottomNavigationBar: SafeArea(
+      top: false,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 10, 20, 12),
+        child: FilledButton.icon(
+          key: const Key('checkpoint-continue'),
+          onPressed: busy ? null : onContinue,
+          icon: const Icon(Icons.arrow_forward),
+          label: const Text('Второй этап'),
+        ),
+      ),
+    ),
     body: SafeArea(
       child: pageBody([
         FlightArrival(
@@ -38,7 +50,7 @@ class MissionCheckpoint extends StatelessWidget {
               CharacterMoment(
                 characterId: JourneyRegion.forOrder(lesson.order).guide,
                 state: CharacterState.correct,
-                size: 112,
+                size: 88,
                 animate: animate,
               ),
               const SizedBox(height: 16),
@@ -82,12 +94,6 @@ class MissionCheckpoint extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 24),
-        FilledButton.icon(
-          key: const Key('checkpoint-continue'),
-          onPressed: busy ? null : onContinue,
-          icon: const Icon(Icons.arrow_forward),
-          label: const Text('Второй этап'),
-        ),
         const SizedBox(height: 8),
         TextButton(
           onPressed: () => context.go('/'),

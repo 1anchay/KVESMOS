@@ -35,6 +35,7 @@ void main() {
             await Directory('test-output/v09').create(recursive: true);
             await app.initialize();
             await app.finishOnboarding();
+            await app.saveAdventureVisibility(true);
             await app.savePreferences(newTheme: theme);
             await app.saveAudio(
               AudioPreferences(
@@ -182,6 +183,12 @@ void main() {
                     () => game.read(adventure.id),
                   ))!.encode(),
                   saved!.encode(),
+                );
+                await tester.scrollUntilVisible(
+                  find.textContaining('Попробуем ещё.'),
+                  180,
+                  maxScrolls: 40,
+                  scrollable: find.byType(Scrollable).first,
                 );
                 expect(find.textContaining('Попробуем ещё.'), findsOneWidget);
               }

@@ -8,6 +8,7 @@ import '../domain/space_adventures.dart';
 import '../services/learning_audio.dart';
 import 'character_moment.dart';
 import 'space_station.dart';
+import 'optional_adventures.dart';
 
 class SpaceAdventurePage extends ConsumerStatefulWidget {
   final String id;
@@ -140,6 +141,13 @@ class _SpaceAdventurePageState extends ConsumerState<SpaceAdventurePage> {
           onPressed: () => context.go('/map'),
         ),
         title: const Text('Space Adventures'),
+      ),
+      bottomNavigationBar: const SafeArea(
+        top: false,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 18, vertical: 6),
+          child: SkipAdventureButton(),
+        ),
       ),
       body: SafeArea(
         child: s == null

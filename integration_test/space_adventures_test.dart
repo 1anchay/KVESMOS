@@ -27,6 +27,7 @@ void main() {
       final app = AppController(repo);
       await app.initialize();
       await app.finishOnboarding();
+      await app.saveAdventureVisibility(true);
       await app.saveAudio(const AudioPreferences(speech: false, effects: true));
       await tester.pumpWidget(
         ProviderScope(

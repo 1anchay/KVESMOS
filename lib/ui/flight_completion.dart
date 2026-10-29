@@ -49,6 +49,36 @@ class FlightCompletion extends StatelessWidget {
           onPressed: () => context.go('/'),
         ),
       ),
+      bottomNavigationBar: SafeArea(
+        top: false,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 10, 20, 12),
+          child: FilledButton.icon(
+            key: const Key('completion-next'),
+            onPressed: () => context.go(
+              newChests > 0 && app.inventory.unopened > 0
+                  ? '/rewards'
+                  : app.progress.completed.length ==
+                        app.repository.catalog.length
+                  ? '/review'
+                  : nextLessonRoute(app),
+            ),
+            icon: Icon(
+              newChests > 0 && app.inventory.unopened > 0
+                  ? Icons.redeem_rounded
+                  : Icons.arrow_forward_rounded,
+            ),
+            label: Text(
+              newChests > 0 && app.inventory.unopened > 0
+                  ? 'Открыть находки'
+                  : app.progress.completed.length ==
+                        app.repository.catalog.length
+                  ? 'Короткое повторение'
+                  : 'Следующий урок',
+            ),
+          ),
+        ),
+      ),
       body: SafeArea(
         child: pageBody([
           FlightArrival(
@@ -80,6 +110,31 @@ class FlightCompletion extends StatelessWidget {
                 ),
                 Text(
                   '${summary.correct} верных ответов · всё сохранено',
+                  style: type.bodySmall,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          FlightPanel(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('ТВОЁ ОТКРЫТИЕ', style: type.labelSmall),
+                const SizedBox(height: 8),
+                Text(lesson.objective ?? lesson.title, style: type.titleMedium),
+                const SizedBox(height: 10),
+                for (final word in lesson.vocabulary.take(3))
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 5),
+                    child: Text(
+                      '${word.en} — ${word.ru}',
+                      style: type.bodyMedium,
+                    ),
+                  ),
+                const SizedBox(height: 4),
+                Text(
+                  'Ты потренировал эти слова в заданиях. Вернёмся к ним в повторении.',
                   style: type.bodySmall,
                 ),
               ],
@@ -206,33 +261,11 @@ class FlightCompletion extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          if (lesson.objective != null)
-            Text(
-              'Теперь ты умеешь: ${lesson.objective}',
-              style: type.bodyLarge,
-            ),
-          const SizedBox(height: 18),
-          FilledButton.icon(
-            onPressed: () => context.go(
-              app.progress.completed.length == app.repository.catalog.length
-                  ? '/review'
-                  : nextLessonRoute(app),
-            ),
-            icon: const Icon(Icons.arrow_forward_rounded),
-            label: Text(
-              app.progress.completed.length == app.repository.catalog.length
-                  ? 'Короткое повторение'
-                  : 'Следующая миссия',
-            ),
-          ),
-          if (app.inventory.unopened > 0)
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: OutlinedButton.icon(
-                onPressed: () => context.go('/rewards'),
-                icon: const Icon(Icons.redeem_rounded),
-                label: const Text('Открыть находки'),
-              ),
+          if (newChests > 0 && app.inventory.unopened > 0)
+            OutlinedButton.icon(
+              onPressed: () => context.go(nextLessonRoute(app)),
+              icon: const Icon(Icons.arrow_forward_rounded),
+              label: const Text('Продолжить учиться'),
             ),
           TextButton(
             onPressed: () => context.go('/'),

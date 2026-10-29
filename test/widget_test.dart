@@ -8,7 +8,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:orbitwords/core/controller.dart';
 import 'package:orbitwords/ui/app.dart';
-import 'package:orbitwords/ui/character_reactions.dart';
 import 'support.dart';
 
 Future<void> flushDb(WidgetTester tester) async {
@@ -47,7 +46,7 @@ void main() {
     await tester.tap(start);
     await flushDb(tester);
     expect(find.textContaining('СЕГОДНЯ ·'), findsOneWidget);
-    await tester.tap(find.text('Продолжить приключение'));
+    await tester.tap(find.byKey(const Key('today-start')));
     await flushDb(tester);
     await advanceTeaching(tester);
     expect(
@@ -70,10 +69,14 @@ void main() {
     await flushDb(tester);
     expect(app.progress.xp, 10);
     expect(find.text('Отлично, идём дальше!'), findsOneWidget);
-    expect(find.text(CharacterCue.correct.lines.first), findsOneWidget);
+    expect(find.text('Есть контакт! +10 XP'), findsOneWidget);
+    expect(
+      find.text('Сначала нас приветствуют — выбираем Hello!'),
+      findsOneWidget,
+    );
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Продолжить приключение'));
+    await tester.tap(find.byKey(const Key('today-start')));
     await flushDb(tester);
     final resumed = (await tester.runAsync(() => r.startLesson('a1-01')))!;
     expect(resumed.session.position, 1);

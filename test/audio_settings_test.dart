@@ -170,7 +170,9 @@ void main() {
         await tester.pumpAndSettle();
         await tester.runAsync(() => capturePreview(boundary, config.$3));
         expect(
-          find.text(config.$1 == 'a1-03' ? 'Знакомство' : 'Понимание'),
+          find.textContaining(
+            config.$1 == 'a1-03' ? 'ЗНАКОМСТВО' : 'ПОНИМАНИЕ',
+          ),
           findsOneWidget,
         );
         expect(tester.takeException(), isNull);

@@ -5,6 +5,7 @@ import '../core/controller.dart';
 import '../data/adventures_repository.dart';
 import '../domain/space_adventures.dart';
 import 'space_station.dart';
+import 'optional_adventures.dart';
 
 class SpaceAdventureNode extends ConsumerWidget {
   final SpaceAdventure adventure;
@@ -33,7 +34,7 @@ class SpaceAdventureNode extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'SPACE ADVENTURES',
+                  'Необязательно · мини-приключение',
                   style: TextStyle(
                     color: stationMint,
                     letterSpacing: 1.5,
@@ -79,6 +80,14 @@ class SpaceAdventureNode extends ConsumerWidget {
                         ? 'Продолжить приключение'
                         : 'Войти на станцию',
                   ),
+                ),
+                Theme(
+                  data: Theme.of(context).copyWith(
+                    textButtonTheme: TextButtonThemeData(
+                      style: TextButton.styleFrom(foregroundColor: stationMint),
+                    ),
+                  ),
+                  child: const SkipAdventureButton(),
                 ),
               ],
             ),

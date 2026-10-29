@@ -76,6 +76,9 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const ValueKey('map-lesson-a1-01')));
     await flushDb(tester);
+    expect(find.byKey(const Key('lesson-preview-title')), findsOneWidget);
+    await tester.tap(find.byKey(const Key('lesson-preview-start')));
+    await flushDb(tester);
     await advanceTeaching(tester);
     expect(
       find.text(

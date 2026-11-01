@@ -17,7 +17,7 @@ void main() {
         for (final r in JourneyRegion.all)
           ...r.lessons(repo.catalog).map((l) => l.id),
       ];
-      expect(ids, repo.catalog.map((l) => l.id));
+      expect(ids, repo.catalog.take(20).map((l) => l.id));
       expect(ids.toSet(), hasLength(20));
       final lesson = await repo.startLesson('a1-01');
       for (var i = 0; i < 5; i++) {

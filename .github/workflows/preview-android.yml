@@ -9,6 +9,7 @@ on:
       - codex/kvesmos-v08-profile-rewards
       - codex/kvesmos-v09-space-adventures
       - codex/kvesmos-v010-learning-first
+      - codex/kvesmos-v011-languages-companion
   workflow_dispatch:
 
 jobs:

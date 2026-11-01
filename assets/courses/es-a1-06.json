@@ -1,0 +1,281 @@
+{
+  "id": "es-a1-06",
+  "title": "В кафе · еда и заказ",
+  "topic": "В кафе · еда и заказ",
+  "order": 5,
+  "objective": "Вежливо заказать еду и попросить счёт.",
+  "guide": "Quisiera… — я хотел(а) бы… Por favor — пожалуйста, gracias — спасибо. Un café — один кофе, una sopa — один суп. La cuenta — счёт. Слово agua женского рода, но здесь используем его без артикля: agua, por favor.",
+  "vocabulary": [
+    {
+      "id": "es:café",
+      "en": "café",
+      "ru": "кофе"
+    },
+    {
+      "id": "es:sopa",
+      "en": "sopa",
+      "ru": "суп"
+    },
+    {
+      "id": "es:agua",
+      "en": "agua",
+      "ru": "вода"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-06-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Я хотел бы кофе, пожалуйста.»",
+      "answers": [
+        "Quisiera un café, por favor."
+      ],
+      "explanation": "Quisiera un café, por favor. — Я хотел бы кофе, пожалуйста.",
+      "hint": "Quisiera un café, por favor. — Я хотел бы кофе, пожалуйста.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Una sopa, por favor.",
+        "Quisiera un café, por favor.",
+        "La cuenta, por favor."
+      ]
+    },
+    {
+      "id": "es-a1-06-e02",
+      "type": "choice",
+      "prompt": "Что означает «Una sopa, por favor.»?",
+      "answers": [
+        "Суп, пожалуйста."
+      ],
+      "explanation": "Una sopa, por favor. — Суп, пожалуйста.",
+      "hint": "Una sopa, por favor. — Суп, пожалуйста.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Воды, пожалуйста.",
+        "Счёт, пожалуйста.",
+        "Суп, пожалуйста."
+      ]
+    },
+    {
+      "id": "es-a1-06-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Воды, пожалуйста.»",
+      "answers": [
+        "Agua, por favor"
+      ],
+      "explanation": "Agua, por favor. — Воды, пожалуйста.",
+      "hint": "Agua, por favor. — Воды, пожалуйста.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Agua,",
+        "por",
+        "favor"
+      ]
+    },
+    {
+      "id": "es-a1-06-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "café — кофе; sopa — суп; agua — вода",
+      "hint": "café — кофе; sopa — суп; agua — вода",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "es:café",
+          "en": "café",
+          "ru": "кофе"
+        },
+        {
+          "id": "es:sopa",
+          "en": "sopa",
+          "ru": "суп"
+        },
+        {
+          "id": "es:agua",
+          "en": "agua",
+          "ru": "вода"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-06-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Счёт, пожалуйста."
+      ],
+      "explanation": "La cuenta, por favor. — Счёт, пожалуйста.",
+      "hint": "La cuenta, por favor. — Счёт, пожалуйста.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "La cuenta, por favor.",
+      "options": [
+        "Я хотел бы кофе, пожалуйста.",
+        "Счёт, пожалуйста.",
+        "Воды, пожалуйста."
+      ]
+    },
+    {
+      "id": "es-a1-06-e06",
+      "type": "gap",
+      "prompt": "Sopa женского рода: ___ sopa, por favor.",
+      "answers": [
+        "Una"
+      ],
+      "explanation": "Quisiera… — я хотел(а) бы… Por favor — пожалуйста, gracias — спасибо. Un café — один кофе, una sopa — один суп. La cuenta — счёт. Слово agua женского рода, но здесь используем его без артикля: agua, por favor.",
+      "hint": "Quisiera… — я хотел(а) бы… Por favor — пожалуйста, gracias — спасибо. Un café — один кофе, una sopa — один суп. La cuenta — счёт. Слово agua женского рода, но здесь используем его без артикля: agua, por favor.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "Un",
+        "Una",
+        "Uno"
+      ]
+    },
+    {
+      "id": "es-a1-06-e07",
+      "type": "dialogue",
+      "prompt": "Ты закончил обед и хочешь оплатить заказ. Что скажешь официанту?",
+      "answers": [
+        "La cuenta, por favor."
+      ],
+      "explanation": "В этой ситуации подходит: La cuenta, por favor.",
+      "hint": "В этой ситуации подходит: La cuenta, por favor.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Una sopa, por favor.",
+        "Buenos días.",
+        "La cuenta, por favor."
+      ],
+      "scene": "cafe"
+    },
+    {
+      "id": "es-a1-06-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Un sopa, por favor.»",
+      "answers": [
+        "Una sopa, por favor."
+      ],
+      "explanation": "Существительное sopa женского рода, поэтому una.",
+      "hint": "Существительное sopa женского рода, поэтому una.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "es-a1-06-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Счёт, пожалуйста.»",
+      "answers": [
+        "La cuenta, por favor."
+      ],
+      "explanation": "La cuenta, por favor. — Счёт, пожалуйста.",
+      "hint": "La cuenta, por favor. — Счёт, пожалуйста.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "es-a1-06-e10",
+      "type": "review",
+      "prompt": "Финал: Ты закончил обед и хочешь оплатить заказ. Что скажешь официанту?",
+      "answers": [
+        "La cuenta, por favor."
+      ],
+      "explanation": "Теперь ты умеешь: вежливо заказать еду и попросить счёт.",
+      "hint": "Теперь ты умеешь: вежливо заказать еду и попросить счёт.",
+      "wordIds": [
+        "es:café",
+        "es:sopa",
+        "es:agua"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "La cuenta, por favor.",
+        "Buenos días.",
+        "Una sopa, por favor."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Quisiera un café, por favor.",
+      "translation": "Я хотел бы кофе, пожалуйста.",
+      "explanation": "Ситуация: Вежливо заказать еду и попросить счёт. Quisiera un café, por favor. — Я хотел бы кофе, пожалуйста."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Una sopa, por favor.",
+      "translation": "Суп, пожалуйста.",
+      "explanation": "Ситуация: Вежливо заказать еду и попросить счёт. Una sopa, por favor. — Суп, пожалуйста."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Agua, por favor.",
+      "translation": "Воды, пожалуйста.",
+      "explanation": "Quisiera… — я хотел(а) бы… Por favor — пожалуйста, gracias — спасибо. Un café — один кофе, una sopa — один суп. La cuenta — счёт. Слово agua женского рода, но здесь используем его без артикля: agua, por favor."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "La cuenta, por favor.",
+      "translation": "Счёт, пожалуйста.",
+      "explanation": "Ситуация: Вежливо заказать еду и попросить счёт. La cuenta, por favor. — Счёт, пожалуйста."
+    }
+  ]
+}

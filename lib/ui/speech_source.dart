@@ -15,7 +15,7 @@ class SpeechSourceLabel extends StatelessWidget {
     valueListenable: audio.playback,
     builder: (context, playback, _) {
       final same = audio.lastCharacter == character && audio.lastText == text;
-      final clip = audio.recordings.find(character, 'en-US', text);
+      final clip = audio.recordings.find(character, audio.studyLocale, text);
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -23,10 +23,10 @@ class SpeechSourceLabel extends StatelessWidget {
             same && audio.lastProblem != null
                 ? audio.lastProblem!
                 : same && audio.lastSource == SpeechSource.system
-                ? 'Резервная озвучка: системный голос устройства'
+                ? 'Системный голос выбранного языка · текст доступен всегда'
                 : clip != null
                 ? 'Синтезированная реплика · офлайн'
-                : 'Резервная озвучка: системный голос устройства',
+                : 'Системный голос выбранного языка · текст доступен всегда',
             style: Theme.of(context).textTheme.bodySmall,
           ),
           if (same && playback != null && (playback.playing || playback.paused))

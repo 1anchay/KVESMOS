@@ -34,20 +34,26 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
     final current = catalog
         .where((l) => !app.progress.completed.contains(l.id))
         .firstOrNull;
-    final region = JourneyRegion
-        .all[selected ?? JourneyRegion.forOrder(current?.order ?? 19).index];
+    final regions = JourneyRegion.forCourse(app.course.language);
+    final region =
+        regions[(selected ??
+                JourneyRegion.forOrder(
+                  current?.order ?? catalog.last.order,
+                  language: app.course.language,
+                ).index)
+            .clamp(0, regions.length - 1)];
     final lessons = region.lessons(catalog).toList();
     final done = lessons
         .where((l) => app.progress.completed.contains(l.id))
         .length;
-    final color = regionColors[region.index];
+    final color = regionColors[region.index % regionColors.length];
     final type = Theme.of(context).textTheme;
     final largeText = MediaQuery.textScalerOf(context).scale(14) > 20;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
-          'АНГЛИЙСКИЙ · ВВОДНЫЙ МАРШРУТ A1',
+          '${app.course.name.toUpperCase()} · НАЧАЛЬНЫЙ МАРШРУТ',
           style: type.labelSmall?.copyWith(letterSpacing: 2),
         ),
         const SizedBox(height: 6),
@@ -57,7 +63,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
           spacing: 8,
           runSpacing: 8,
           children: [
-            for (final r in JourneyRegion.all)
+            for (final r in regions)
               ChoiceChip(
                 key: ValueKey('map-world-${r.index}'),
                 selected: region.index == r.index,
@@ -68,7 +74,10 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                   r.complete(app.progress.completed, catalog)
                       ? Icons.check
                       : r.index >
-                            JourneyRegion.forOrder(current?.order ?? 19).index
+                            JourneyRegion.forOrder(
+                              current?.order ?? catalog.last.order,
+                              language: app.course.language,
+                            ).index
                       ? Icons.lock_outline
                       : Icons.public,
                   size: 18,
@@ -93,7 +102,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'ОБЛАСТЬ ${region.index + 1} ИЗ 5  ·  $done / ${lessons.length}',
+                      'ОБЛАСТЬ ${region.index + 1} ИЗ ${regions.length}  ·  $done / ${lessons.length}',
                       style: type.labelSmall,
                     ),
                     const SizedBox(height: 6),
@@ -101,7 +110,10 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                     const SizedBox(height: 6),
                     Text(region.subtitle, style: type.bodyMedium),
                     if (region.index >
-                        JourneyRegion.forOrder(current?.order ?? 19).index)
+                        JourneyRegion.forOrder(
+                          current?.order ?? catalog.last.order,
+                          language: app.course.language,
+                        ).index)
                       Padding(
                         padding: const EdgeInsets.only(top: 8),
                         child: Text(
@@ -139,7 +151,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
             (a) => app.showMiniAdventures && a.prerequisites.last == lesson.id,
           ))
             SpaceAdventureNode(adventure: adventure),
-          if (lesson.order == lessons[1].order) ...[
+          if (lessons.length > 1 && lesson.order == lessons[1].order) ...[
             const SizedBox(height: 14),
             OutlinedButton.icon(
               key: const Key('map-practice'),
@@ -165,7 +177,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                 child: Text(
                   done == lessons.length
                       ? 'Область исследована! Печать в паспорте путешествий.'
-                      : 'Финал области: ${region.subtitle.toLowerCase()}. Печать за все четыре миссии.',
+                      : 'Финал области: ${region.subtitle.toLowerCase()}. Печать за все ${lessons.length} урока.',
                 ),
               ),
             ],
@@ -176,7 +188,10 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
           TextButton.icon(
             onPressed: () {
               setState(
-                () => selected = JourneyRegion.forOrder(current.order).index,
+                () => selected = JourneyRegion.forOrder(
+                  current.order,
+                  language: app.course.language,
+                ).index,
               );
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 final target = currentKey.currentContext;
@@ -205,11 +220,12 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
           icon: const Icon(Icons.explore_outlined),
           label: const Text('Паспорт и экспедиции'),
         ),
-        TextButton.icon(
-          onPressed: () => context.go('/adventures'),
-          icon: const Icon(Icons.explore_outlined),
-          label: const Text('Дополнительно · Приключения'),
-        ),
+        if (app.course.language == 'en')
+          TextButton.icon(
+            onPressed: () => context.go('/adventures'),
+            icon: const Icon(Icons.explore_outlined),
+            label: const Text('Дополнительно · Приключения'),
+          ),
         const SizedBox(height: 10),
         Text(
           '${app.progress.completed.length} из ${catalog.length} уроков · вводный маршрут A1',

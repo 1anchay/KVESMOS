@@ -23,7 +23,7 @@ class RewardsRepository {
   /// A crash after lesson commit is recovered here on the next refresh/start.
   Future<Inventory> reconcile() => learning.db.transaction(() async {
     final state = await read();
-    final completed = (await learning.progress()).completed.length;
+    final completed = (await learning.globalProgress()).completed.length;
     var changed = false;
     for (final m in catalog.milestones) {
       final id = m['id'] as String;

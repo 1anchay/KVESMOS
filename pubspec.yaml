@@ -1,7 +1,7 @@
 name: orbitwords
-description: Free offline language journeys. Original English A1 course for Russian speakers.
+description: Free offline language journeys. English, Spanish and German starter courses for Russian speakers.
 publish_to: none
-version: 0.10.0-dev.1+12
+version: 0.11.0-dev.1+13
 environment:
   sdk: '>=3.8.0 <4.0.0'
 dependencies:
@@ -21,6 +21,7 @@ dependencies:
   flutter_secure_storage: ^9.2.4
   flutter_tts: ^4.2.3
   speech_to_text: ^7.3.0
+  timezone: ^0.10.1
   flutter_local_notifications: ^19.4.0
 dev_dependencies:
   flutter_test:

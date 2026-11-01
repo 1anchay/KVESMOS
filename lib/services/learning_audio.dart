@@ -226,7 +226,7 @@ class CharacterVoiceService {
               const Duration(seconds: 5),
             )).where((v) => v.networkRequired != true).toList()
             ..sort((a, b) => a.key.compareTo(b.key));
-      for (final locale in ['en-US', 'ru-RU']) {
+      for (final locale in ['en-US', 'ru-RU', 'es-ES', 'de-DE']) {
         final pool = available.where((v) => v.supports(locale)).toList();
         for (final p in CharacterVoiceProfile.all) {
           final key = '${p.id}|$locale';
@@ -427,6 +427,7 @@ class LearningAudio {
   int? _recordingRequest;
   AudioPreferences preferences = const AudioPreferences();
   String? lastProblem;
+  String studyLocale = 'en-US';
   int _generation = 0;
   LearningAudio(
     this.read,
@@ -499,9 +500,10 @@ class LearningAudio {
   Future<bool> speak(
     String text, {
     String character = 'orbi',
-    String locale = 'en-US',
+    String? locale,
     bool slow = false,
   }) async {
+    locale ??= studyLocale;
     lastProblem = null;
     lastSource = null;
     lastCharacter = character;
@@ -582,7 +584,7 @@ class LearningAudio {
     if (!ok && ticket == _generation) {
       playback.value = null;
       lastProblem = voices.voiceFor(character, locale) == null
-          ? 'Нет готового ${locale.startsWith('en') ? 'английского' : 'русского'} голоса. Установите офлайн-пакет в настройках синтеза речи Android и повторите прослушивание.'
+          ? 'Нет готового ${{'en': 'английского', 'es': 'испанского', 'de': 'немецкого', 'ru': 'русского'}[locale.split('-').first] ?? locale} голоса. Установите офлайн-пакет в настройках синтеза речи Android и повторите прослушивание.'
           : 'Синтез речи не запустил фразу. Проверьте голос в настройках синтеза речи устройства.';
     }
     return ok && ticket == _generation;

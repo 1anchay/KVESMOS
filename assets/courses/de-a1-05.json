@@ -1,0 +1,282 @@
+{
+  "id": "de-a1-05",
+  "title": "Моя семья",
+  "topic": "Моя семья",
+  "order": 4,
+  "objective": "Представить семью и назвать имя близкого.",
+  "guide": "Mein Vater — мой папа, meine Mutter — моя мама. Окончание зависит от рода слова. Sie heißt… — её зовут…; er heißt… — его зовут… Schwester — сестра, Bruder — брат.",
+  "vocabulary": [
+    {
+      "id": "de:mutter",
+      "en": "Mutter",
+      "ru": "мама"
+    },
+    {
+      "id": "de:vater",
+      "en": "Vater",
+      "ru": "папа"
+    },
+    {
+      "id": "de:schwester",
+      "en": "Schwester",
+      "ru": "сестра"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-05-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Это моя мама.»",
+      "answers": [
+        "Das ist meine Mutter."
+      ],
+      "explanation": "Das ist meine Mutter. — Это моя мама.",
+      "hint": "Das ist meine Mutter. — Это моя мама.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Das ist mein Vater.",
+        "Das ist meine Mutter.",
+        "Mein Bruder heißt Max."
+      ]
+    },
+    {
+      "id": "de-a1-05-e02",
+      "type": "choice",
+      "prompt": "Что означает «Das ist mein Vater.»?",
+      "answers": [
+        "Это мой папа."
+      ],
+      "explanation": "Das ist mein Vater. — Это мой папа.",
+      "hint": "Das ist mein Vater. — Это мой папа.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Мою сестру зовут Анна.",
+        "Моего брата зовут Макс.",
+        "Это мой папа."
+      ]
+    },
+    {
+      "id": "de-a1-05-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Мою сестру зовут Анна.»",
+      "answers": [
+        "Meine Schwester heißt Anna"
+      ],
+      "explanation": "Meine Schwester heißt Anna. — Мою сестру зовут Анна.",
+      "hint": "Meine Schwester heißt Anna. — Мою сестру зовут Анна.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Meine",
+        "Schwester",
+        "heißt",
+        "Anna"
+      ]
+    },
+    {
+      "id": "de-a1-05-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Mutter — мама; Vater — папа; Schwester — сестра",
+      "hint": "Mutter — мама; Vater — папа; Schwester — сестра",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "de:mutter",
+          "en": "Mutter",
+          "ru": "мама"
+        },
+        {
+          "id": "de:vater",
+          "en": "Vater",
+          "ru": "папа"
+        },
+        {
+          "id": "de:schwester",
+          "en": "Schwester",
+          "ru": "сестра"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-05-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Моего брата зовут Макс."
+      ],
+      "explanation": "Mein Bruder heißt Max. — Моего брата зовут Макс.",
+      "hint": "Mein Bruder heißt Max. — Моего брата зовут Макс.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Mein Bruder heißt Max.",
+      "options": [
+        "Это моя мама.",
+        "Моего брата зовут Макс.",
+        "Мою сестру зовут Анна."
+      ]
+    },
+    {
+      "id": "de-a1-05-e06",
+      "type": "gap",
+      "prompt": "Mutter женского рода: Das ist ___ Mutter.",
+      "answers": [
+        "meine"
+      ],
+      "explanation": "Mein Vater — мой папа, meine Mutter — моя мама. Окончание зависит от рода слова. Sie heißt… — её зовут…; er heißt… — его зовут… Schwester — сестра, Bruder — брат.",
+      "hint": "Mein Vater — мой папа, meine Mutter — моя мама. Окончание зависит от рода слова. Sie heißt… — её зовут…; er heißt… — его зовут… Schwester — сестра, Bruder — брат.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "mein",
+        "meine",
+        "meinen"
+      ]
+    },
+    {
+      "id": "de-a1-05-e07",
+      "type": "dialogue",
+      "prompt": "Орби: «Wie heißt deine Schwester?» Ответь, что её зовут Анна.",
+      "answers": [
+        "Sie heißt Anna."
+      ],
+      "explanation": "В этой ситуации подходит: Sie heißt Anna.",
+      "hint": "В этой ситуации подходит: Sie heißt Anna.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Er heißt Max.",
+        "Ich heiße Miko.",
+        "Sie heißt Anna."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "de-a1-05-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Das ist mein Mutter.»",
+      "answers": [
+        "Das ist meine Mutter."
+      ],
+      "explanation": "С существительным женского рода Mutter используется meine.",
+      "hint": "С существительным женского рода Mutter используется meine.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "de-a1-05-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Моего брата зовут Макс.»",
+      "answers": [
+        "Mein Bruder heißt Max."
+      ],
+      "explanation": "Mein Bruder heißt Max. — Моего брата зовут Макс.",
+      "hint": "Mein Bruder heißt Max. — Моего брата зовут Макс.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "de-a1-05-e10",
+      "type": "review",
+      "prompt": "Финал: Орби: «Wie heißt deine Schwester?» Ответь, что её зовут Анна.",
+      "answers": [
+        "Sie heißt Anna."
+      ],
+      "explanation": "Теперь ты умеешь: представить семью и назвать имя близкого.",
+      "hint": "Теперь ты умеешь: представить семью и назвать имя близкого.",
+      "wordIds": [
+        "de:mutter",
+        "de:vater",
+        "de:schwester"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Sie heißt Anna.",
+        "Ich heiße Miko.",
+        "Er heißt Max."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Das ist meine Mutter.",
+      "translation": "Это моя мама.",
+      "explanation": "Ситуация: Представить семью и назвать имя близкого. Das ist meine Mutter. — Это моя мама."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Das ist mein Vater.",
+      "translation": "Это мой папа.",
+      "explanation": "Ситуация: Представить семью и назвать имя близкого. Das ist mein Vater. — Это мой папа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Meine Schwester heißt Anna.",
+      "translation": "Мою сестру зовут Анна.",
+      "explanation": "Mein Vater — мой папа, meine Mutter — моя мама. Окончание зависит от рода слова. Sie heißt… — её зовут…; er heißt… — его зовут… Schwester — сестра, Bruder — брат."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Mein Bruder heißt Max.",
+      "translation": "Моего брата зовут Макс.",
+      "explanation": "Ситуация: Представить семью и назвать имя близкого. Mein Bruder heißt Max. — Моего брата зовут Макс."
+    }
+  ]
+}

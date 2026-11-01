@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/database.dart';
 import '../domain/course.dart';
+import '../domain/languages.dart';
 import '../domain/progress.dart';
 import '../domain/learning_recap.dart';
 import '../services/device.dart';
@@ -33,7 +34,7 @@ const exerciseNames = {
   ExerciseType.gap: 'Заполните пропуск',
   ExerciseType.listen: 'Поймайте сигнал',
   ExerciseType.pairs: 'Соедините пары',
-  ExerciseType.speak: 'Скажите по-английски',
+  ExerciseType.speak: 'Произнесите фразу',
   ExerciseType.correct: 'Исправьте ошибку',
   ExerciseType.review: 'Вспомните слово',
   ExerciseType.dialogue: 'Продолжите диалог',
@@ -83,7 +84,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     try {
       final app = ref.read(appProvider);
       initialGrants = app.inventory.grants.keys.toSet();
-      initialAchievements = app.progress.achievements.toSet();
+      initialAchievements = app.globalProgress.achievements.toSet();
+      if (app.course.id != StudyCourse.forContent(widget.lessonId).id) {
+        await app.selectCourse(StudyCourse.forContent(widget.lessonId).id);
+      }
       final loaded = await app.repository.lesson(widget.lessonId);
       // Guards also apply to direct deep links, not just the map's buttons.
       if (loaded.order > 0 &&
@@ -740,6 +744,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                           (message) {
                             if (mounted) showMessage(context, message);
                           },
+                          language: ref.read(appProvider).course.language,
                         );
                         if (!ok && context.mounted) {
                           showMessage(
@@ -950,7 +955,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       decoration: InputDecoration(
         hintText: e.type == ExerciseType.gap
             ? 'Пропущенное слово'
-            : 'Ваш ответ по-английски',
+            : 'Ответ на изучаемом языке',
       ),
       onChanged: (_) {
         setState(() {});
@@ -970,7 +975,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       newChests: app.inventory.grants.keys
           .where((id) => !initialGrants.contains(id))
           .length,
-      achievements: app.progress.achievements
+      achievements: app.globalProgress.achievements
           .where((id) => !initialAchievements.contains(id))
           .toList(),
     );

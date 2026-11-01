@@ -1,6 +1,6 @@
 {
   "id": "en-ru-a1",
-  "version": 1,
+  "version": 2,
   "title": "Английский · A1",
   "sourceLanguage": "ru",
   "targetLanguage": "en",
@@ -192,6 +192,66 @@
               "title": "В магазине",
               "asset": "assets/courses/a1-20.json",
               "order": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-v011",
+      "title": "Жизненные ситуации",
+      "themes": [
+        {
+          "id": "en-intro",
+          "title": "Начальный курс",
+          "lessons": [
+            {
+              "id": "en-a1-21",
+              "title": "Время встречи",
+              "asset": "assets/courses/en-a1-21.json",
+              "order": 20
+            },
+            {
+              "id": "en-a1-22",
+              "title": "Покупки и цена",
+              "asset": "assets/courses/en-a1-22.json",
+              "order": 21
+            },
+            {
+              "id": "en-a1-23",
+              "title": "На автобусной остановке",
+              "asset": "assets/courses/en-a1-23.json",
+              "order": 22
+            },
+            {
+              "id": "en-a1-24",
+              "title": "У меня дома",
+              "asset": "assets/courses/en-a1-24.json",
+              "order": 23
+            },
+            {
+              "id": "en-a1-25",
+              "title": "Погода и планы",
+              "asset": "assets/courses/en-a1-25.json",
+              "order": 24
+            },
+            {
+              "id": "en-a1-26",
+              "title": "Свободное время",
+              "asset": "assets/courses/en-a1-26.json",
+              "order": 25
+            },
+            {
+              "id": "en-a1-27",
+              "title": "Как ты себя чувствуешь?",
+              "asset": "assets/courses/en-a1-27.json",
+              "order": 26
+            },
+            {
+              "id": "en-a1-28",
+              "title": "Эмоции и поддержка",
+              "asset": "assets/courses/en-a1-28.json",
+              "order": 27
             }
           ]
         }

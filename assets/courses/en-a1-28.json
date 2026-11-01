@@ -1,0 +1,284 @@
+{
+  "id": "en-a1-28",
+  "title": "Эмоции и поддержка",
+  "topic": "Эмоции и поддержка",
+  "order": 27,
+  "objective": "Назвать чувство и поддержать собеседника.",
+  "guide": "I am happy / worried — я рад / волнуюсь. I feel better — мне лучше. После be не нужен feel: I am worried. It is okay to… — нормально что-то делать.",
+  "vocabulary": [
+    {
+      "id": "en:happy",
+      "en": "happy",
+      "ru": "радостный"
+    },
+    {
+      "id": "en:worried",
+      "en": "worried",
+      "ru": "взволнованный"
+    },
+    {
+      "id": "en:better",
+      "en": "better",
+      "ru": "лучше"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-28-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Я рад тебя видеть.»",
+      "answers": [
+        "I am happy to see you."
+      ],
+      "explanation": "I am happy to see you. — Я рад тебя видеть.",
+      "hint": "I am happy to see you. — Я рад тебя видеть.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "I am a little worried.",
+        "I am happy to see you.",
+        "I feel better now."
+      ]
+    },
+    {
+      "id": "en-a1-28-e02",
+      "type": "choice",
+      "prompt": "Что означает «I am a little worried.»?",
+      "answers": [
+        "Я немного волнуюсь."
+      ],
+      "explanation": "I am a little worried. — Я немного волнуюсь.",
+      "hint": "I am a little worried. — Я немного волнуюсь.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Ошибаться нормально.",
+        "Теперь мне лучше.",
+        "Я немного волнуюсь."
+      ]
+    },
+    {
+      "id": "en-a1-28-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Ошибаться нормально.»",
+      "answers": [
+        "It is okay to make mistakes"
+      ],
+      "explanation": "It is okay to make mistakes. — Ошибаться нормально.",
+      "hint": "It is okay to make mistakes. — Ошибаться нормально.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "It",
+        "is",
+        "okay",
+        "to",
+        "make",
+        "mistakes"
+      ]
+    },
+    {
+      "id": "en-a1-28-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "happy — радостный; worried — взволнованный; better — лучше",
+      "hint": "happy — радостный; worried — взволнованный; better — лучше",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:happy",
+          "en": "happy",
+          "ru": "радостный"
+        },
+        {
+          "id": "en:worried",
+          "en": "worried",
+          "ru": "взволнованный"
+        },
+        {
+          "id": "en:better",
+          "en": "better",
+          "ru": "лучше"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-28-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Теперь мне лучше."
+      ],
+      "explanation": "I feel better now. — Теперь мне лучше.",
+      "hint": "I feel better now. — Теперь мне лучше.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "I feel better now.",
+      "options": [
+        "Я рад тебя видеть.",
+        "Теперь мне лучше.",
+        "Ошибаться нормально."
+      ]
+    },
+    {
+      "id": "en-a1-28-e06",
+      "type": "gap",
+      "prompt": "Я волнуюсь: I ___ a little worried.",
+      "answers": [
+        "am"
+      ],
+      "explanation": "I am happy / worried — я рад / волнуюсь. I feel better — мне лучше. После be не нужен feel: I am worried. It is okay to… — нормально что-то делать.",
+      "hint": "I am happy / worried — я рад / волнуюсь. I feel better — мне лучше. После be не нужен feel: I am worried. It is okay to… — нормально что-то делать.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "have",
+        "am",
+        "do"
+      ]
+    },
+    {
+      "id": "en-a1-28-e07",
+      "type": "dialogue",
+      "prompt": "Мико переживает из-за ошибки. Какая фраза поддержит его?",
+      "answers": [
+        "It is okay to make mistakes."
+      ],
+      "explanation": "В этой ситуации подходит: It is okay to make mistakes.",
+      "hint": "В этой ситуации подходит: It is okay to make mistakes.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "I am happy to see you.",
+        "How much is this bag?",
+        "It is okay to make mistakes."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "en-a1-28-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «I am feel better now.»",
+      "answers": [
+        "I feel better now."
+      ],
+      "explanation": "Feel уже является глаголом; am перед ним здесь не нужен.",
+      "hint": "Feel уже является глаголом; am перед ним здесь не нужен.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "en-a1-28-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Теперь мне лучше.»",
+      "answers": [
+        "I feel better now."
+      ],
+      "explanation": "I feel better now. — Теперь мне лучше.",
+      "hint": "I feel better now. — Теперь мне лучше.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "en-a1-28-e10",
+      "type": "review",
+      "prompt": "Финал: Мико переживает из-за ошибки. Какая фраза поддержит его?",
+      "answers": [
+        "It is okay to make mistakes."
+      ],
+      "explanation": "Теперь ты умеешь: назвать чувство и поддержать собеседника.",
+      "hint": "Теперь ты умеешь: назвать чувство и поддержать собеседника.",
+      "wordIds": [
+        "en:happy",
+        "en:worried",
+        "en:better"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "It is okay to make mistakes.",
+        "How much is this bag?",
+        "I am happy to see you."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "I am happy to see you.",
+      "translation": "Я рад тебя видеть.",
+      "explanation": "Ситуация: Назвать чувство и поддержать собеседника. I am happy to see you. — Я рад тебя видеть."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "I am a little worried.",
+      "translation": "Я немного волнуюсь.",
+      "explanation": "Ситуация: Назвать чувство и поддержать собеседника. I am a little worried. — Я немного волнуюсь."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "It is okay to make mistakes.",
+      "translation": "Ошибаться нормально.",
+      "explanation": "I am happy / worried — я рад / волнуюсь. I feel better — мне лучше. После be не нужен feel: I am worried. It is okay to… — нормально что-то делать."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "I feel better now.",
+      "translation": "Теперь мне лучше.",
+      "explanation": "Ситуация: Назвать чувство и поддержать собеседника. I feel better now. — Теперь мне лучше."
+    }
+  ]
+}

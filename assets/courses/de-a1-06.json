@@ -1,0 +1,281 @@
+{
+  "id": "de-a1-06",
+  "title": "В кафе · вежливый заказ",
+  "topic": "В кафе · вежливый заказ",
+  "order": 5,
+  "objective": "Заказать напиток и попросить счёт.",
+  "guide": "Ich möchte… — я хотел(а) бы… После möchte предмет — дополнение: der Kaffee превращается в einen Kaffee. Das Wasser остаётся без артикля в заказе. Bitte — пожалуйста. Zahlen, bitte — счёт, пожалуйста (буквально: оплатить).",
+  "vocabulary": [
+    {
+      "id": "de:kaffee",
+      "en": "Kaffee",
+      "ru": "кофе"
+    },
+    {
+      "id": "de:wasser",
+      "en": "Wasser",
+      "ru": "вода"
+    },
+    {
+      "id": "de:suppe",
+      "en": "Suppe",
+      "ru": "суп"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-06-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Я хотел бы кофе, пожалуйста.»",
+      "answers": [
+        "Ich möchte einen Kaffee, bitte."
+      ],
+      "explanation": "Ich möchte einen Kaffee, bitte. — Я хотел бы кофе, пожалуйста.",
+      "hint": "Ich möchte einen Kaffee, bitte. — Я хотел бы кофе, пожалуйста.",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Wasser, bitte.",
+        "Ich möchte einen Kaffee, bitte.",
+        "Zahlen, bitte."
+      ]
+    },
+    {
+      "id": "de-a1-06-e02",
+      "type": "choice",
+      "prompt": "Что означает «Wasser, bitte.»?",
+      "answers": [
+        "Воды, пожалуйста."
+      ],
+      "explanation": "Wasser, bitte. — Воды, пожалуйста.",
+      "hint": "Wasser, bitte. — Воды, пожалуйста.",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Суп, пожалуйста.",
+        "Счёт, пожалуйста.",
+        "Воды, пожалуйста."
+      ]
+    },
+    {
+      "id": "de-a1-06-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Суп, пожалуйста.»",
+      "answers": [
+        "Eine Suppe, bitte"
+      ],
+      "explanation": "Eine Suppe, bitte. — Суп, пожалуйста.",
+      "hint": "Eine Suppe, bitte. — Суп, пожалуйста.",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Eine",
+        "Suppe,",
+        "bitte"
+      ]
+    },
+    {
+      "id": "de-a1-06-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Kaffee — кофе; Wasser — вода; Suppe — суп",
+      "hint": "Kaffee — кофе; Wasser — вода; Suppe — суп",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "de:kaffee",
+          "en": "Kaffee",
+          "ru": "кофе"
+        },
+        {
+          "id": "de:wasser",
+          "en": "Wasser",
+          "ru": "вода"
+        },
+        {
+          "id": "de:suppe",
+          "en": "Suppe",
+          "ru": "суп"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-06-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Счёт, пожалуйста."
+      ],
+      "explanation": "Zahlen, bitte. — Счёт, пожалуйста.",
+      "hint": "Zahlen, bitte. — Счёт, пожалуйста.",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Zahlen, bitte.",
+      "options": [
+        "Я хотел бы кофе, пожалуйста.",
+        "Счёт, пожалуйста.",
+        "Суп, пожалуйста."
+      ]
+    },
+    {
+      "id": "de-a1-06-e06",
+      "type": "gap",
+      "prompt": "Закажем кофе: Ich möchte ___ Kaffee.",
+      "answers": [
+        "einen"
+      ],
+      "explanation": "Ich möchte… — я хотел(а) бы… После möchte предмет — дополнение: der Kaffee превращается в einen Kaffee. Das Wasser остаётся без артикля в заказе. Bitte — пожалуйста. Zahlen, bitte — счёт, пожалуйста (буквально: оплатить).",
+      "hint": "Ich möchte… — я хотел(а) бы… После möchte предмет — дополнение: der Kaffee превращается в einen Kaffee. Das Wasser остаётся без артикля в заказе. Bitte — пожалуйста. Zahlen, bitte — счёт, пожалуйста (буквально: оплатить).",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "ein",
+        "einen",
+        "eine"
+      ]
+    },
+    {
+      "id": "de-a1-06-e07",
+      "type": "dialogue",
+      "prompt": "Ты закончил обед. Как попросить оплатить заказ?",
+      "answers": [
+        "Zahlen, bitte."
+      ],
+      "explanation": "В этой ситуации подходит: Zahlen, bitte.",
+      "hint": "В этой ситуации подходит: Zahlen, bitte.",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Eine Suppe, bitte.",
+        "Guten Morgen.",
+        "Zahlen, bitte."
+      ],
+      "scene": "cafe"
+    },
+    {
+      "id": "de-a1-06-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Ich möchte ein Kaffee.»",
+      "answers": [
+        "Ich möchte einen Kaffee."
+      ],
+      "explanation": "Kaffee мужского рода; прямое дополнение после möchte требует einen.",
+      "hint": "Kaffee мужского рода; прямое дополнение после möchte требует einen.",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "de-a1-06-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Счёт, пожалуйста.»",
+      "answers": [
+        "Zahlen, bitte."
+      ],
+      "explanation": "Zahlen, bitte. — Счёт, пожалуйста.",
+      "hint": "Zahlen, bitte. — Счёт, пожалуйста.",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "de-a1-06-e10",
+      "type": "review",
+      "prompt": "Финал: Ты закончил обед. Как попросить оплатить заказ?",
+      "answers": [
+        "Zahlen, bitte."
+      ],
+      "explanation": "Теперь ты умеешь: заказать напиток и попросить счёт.",
+      "hint": "Теперь ты умеешь: заказать напиток и попросить счёт.",
+      "wordIds": [
+        "de:kaffee",
+        "de:wasser",
+        "de:suppe"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Zahlen, bitte.",
+        "Guten Morgen.",
+        "Eine Suppe, bitte."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Ich möchte einen Kaffee, bitte.",
+      "translation": "Я хотел бы кофе, пожалуйста.",
+      "explanation": "Ситуация: Заказать напиток и попросить счёт. Ich möchte einen Kaffee, bitte. — Я хотел бы кофе, пожалуйста."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Wasser, bitte.",
+      "translation": "Воды, пожалуйста.",
+      "explanation": "Ситуация: Заказать напиток и попросить счёт. Wasser, bitte. — Воды, пожалуйста."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Eine Suppe, bitte.",
+      "translation": "Суп, пожалуйста.",
+      "explanation": "Ich möchte… — я хотел(а) бы… После möchte предмет — дополнение: der Kaffee превращается в einen Kaffee. Das Wasser остаётся без артикля в заказе. Bitte — пожалуйста. Zahlen, bitte — счёт, пожалуйста (буквально: оплатить)."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Zahlen, bitte.",
+      "translation": "Счёт, пожалуйста.",
+      "explanation": "Ситуация: Заказать напиток и попросить счёт. Zahlen, bitte. — Счёт, пожалуйста."
+    }
+  ]
+}

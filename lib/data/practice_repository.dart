@@ -8,11 +8,13 @@ import 'repository.dart';
 /// State and the graded answer commit together; retrying a button cannot replay it.
 class PracticeRepository {
   static const key = 'kvesmos.practice.v1';
+  String get storageKey =>
+      learning.course.id == 'ru-en' ? key : '$key:${learning.course.id}';
   final LearningRepository learning;
   PracticeRepository(this.learning);
   Future<Map<String, dynamic>> open({bool restart = false}) =>
       learning.db.transaction(() async {
-        final saved = await learning.setting(key);
+        final saved = await learning.setting(storageKey);
         if (saved != null && !restart) {
           final state = Map<String, dynamic>.from(jsonDecode(saved));
           final words = List<String>.from(state['words']);
@@ -43,7 +45,7 @@ class PracticeRepository {
         return state;
       });
   Future<void> save(Map<String, dynamic> state) =>
-      learning.setSetting(key, jsonEncode(state));
+      learning.setSetting(storageKey, jsonEncode(state));
   Future<Map<String, dynamic>> advance(
     int expectedIndex,
     int expectedPhase,

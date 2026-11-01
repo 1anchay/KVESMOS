@@ -1,0 +1,56 @@
+{
+  "id": "ru-de",
+  "version": 1,
+  "sourceLanguage": "ru",
+  "targetLanguage": "de",
+  "sections": [
+    {
+      "id": "de-v011",
+      "title": "Первые разговоры",
+      "themes": [
+        {
+          "id": "de-intro",
+          "title": "Начальный курс",
+          "lessons": [
+            {
+              "id": "de-a1-01",
+              "title": "Hallo · приветствие",
+              "asset": "assets/courses/de-a1-01.json",
+              "order": 0
+            },
+            {
+              "id": "de-a1-02",
+              "title": "Ich heiße · имя и происхождение",
+              "asset": "assets/courses/de-a1-02.json",
+              "order": 1
+            },
+            {
+              "id": "de-a1-03",
+              "title": "Предметы · der, die, das",
+              "asset": "assets/courses/de-a1-03.json",
+              "order": 2
+            },
+            {
+              "id": "de-a1-04",
+              "title": "Числа и возраст",
+              "asset": "assets/courses/de-a1-04.json",
+              "order": 3
+            },
+            {
+              "id": "de-a1-05",
+              "title": "Моя семья",
+              "asset": "assets/courses/de-a1-05.json",
+              "order": 4
+            },
+            {
+              "id": "de-a1-06",
+              "title": "В кафе · вежливый заказ",
+              "asset": "assets/courses/de-a1-06.json",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

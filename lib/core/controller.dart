@@ -10,8 +10,11 @@ import '../data/missions_repository.dart';
 import '../domain/missions.dart';
 import '../domain/rewards.dart';
 import '../domain/progress.dart';
+import '../domain/languages.dart';
 import '../domain/explorer_profile.dart';
 import '../services/cloud.dart';
+import '../services/daily_companion.dart';
+import '../domain/reminders.dart';
 import '../services/sync.dart';
 import '../services/learning_audio.dart';
 
@@ -28,10 +31,13 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   late final RewardsRepository rewards;
   late final MissionsRepository dailyMissions;
   late final LearningAudio audio;
+  late final DailyCompanion companion;
   MissionSnapshot? missions;
   Inventory inventory = Inventory();
   List<String> featuredAchievements = [];
   ProgressSnapshot progress = ProgressSnapshot();
+  ProgressSnapshot globalProgress = ProgressSnapshot();
+  StudyCourse get course => repository.course;
   Set<String> completedAdventures = {};
   int adventuresToday = 0;
   ExplorerRecords records = const ExplorerRecords();
@@ -54,6 +60,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     this.cloudError,
     this.rewardRandom,
   }) {
+    companion = DailyCompanion(repository);
     audio = LearningAudio(repository.setting, repository.setSetting);
     sync = cloud == null
         ? null
@@ -62,6 +69,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Future<void> initialize() async {
     await repository.initialize();
     await audio.initialize();
+    audio.studyLocale = course.locale;
+    await companion.initialize();
     rewards = RewardsRepository(
       repository,
       RewardCatalog(await repository.loadAsset('assets/kvesmos/catalog.json')),
@@ -110,6 +119,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
 
   Future<void> initializeAfterReset() async {
     await audio.initialize();
+    audio.studyLocale = course.locale;
     featuredAchievements = [];
     recoveringPassword = false;
     goal = 50;
@@ -119,6 +129,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     onboarded = false;
     showMiniAdventures = false;
     await repository.initialize();
+    await companion.save(const ReminderPreferences());
+    audio.studyLocale = course.locale;
     await refresh();
   }
 
@@ -137,12 +149,16 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
         .map((e) => e.data['adventure'])
         .toSet()
         .length;
-    progress = ProgressSnapshot.fromEvents(events);
+    globalProgress = ProgressSnapshot.fromEvents(events);
+    progress = ProgressSnapshot.fromEvents(
+      events.where((e) => e.courseId == course.id),
+    );
     records = ExplorerRecords.fromEvents(events, progress);
     installed = await repository.installed();
     await rewards.reconcile();
     missions = await dailyMissions.reconcile();
     inventory = missions!.inventory;
+    await companion.sync(goal);
     if (!_disposed) notifyListeners();
   }
 
@@ -201,6 +217,19 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
         : '/offline';
   }
 
+  Future<void> saveReminders(ReminderPreferences value) async {
+    await companion.save(value);
+    await companion.sync(goal);
+    if (!_disposed) notifyListeners();
+  }
+
+  Future<void> selectCourse(String id) async {
+    await audio.stop();
+    await repository.selectCourse(id);
+    audio.studyLocale = course.locale;
+    await refresh();
+  }
+
   Future<void> resetAppearance() async {
     inventory = await rewards.resetAppearance();
     if (!_disposed) notifyListeners();
@@ -209,7 +238,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Future<void> saveShowcase(List<String> names) async {
     final selected = names.toSet().toList();
     if (selected.length > 3 ||
-        selected.any((n) => !progress.achievements.contains(n))) {
+        selected.any((n) => !globalProgress.achievements.contains(n))) {
       throw StateError('Выберите до трёх уже полученных достижений.');
     }
     await repository.setSetting(showcaseKey, jsonEncode(selected));
@@ -287,6 +316,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     if (newGoal != null) {
       goal = newGoal;
       await repository.setSetting('goal', '$goal');
+      await companion.sync(goal);
     }
     if (newTheme != null) {
       theme = newTheme;
@@ -310,6 +340,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     if (state != AppLifecycleState.resumed) unawaited(audio.stop());
     if (state == AppLifecycleState.resumed) {
       audio.voices.scanned = false;
+      unawaited(refresh());
       unawaited(_refreshCalendar());
       unawaited(synchronize());
     }

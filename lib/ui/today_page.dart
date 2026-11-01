@@ -77,7 +77,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'СЕГОДНЯ · ${today.streak} ДН. ВМЕСТЕ',
+          '${app.course.name.toUpperCase()} · ${today.streak} ДН. ПОДРЯД',
           style: type.labelSmall?.copyWith(letterSpacing: 1.2),
         ),
         const SizedBox(height: 5),
@@ -164,7 +164,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
       const SizedBox(height: 18),
       Row(
         children: [
-          Expanded(child: Text('Три задания дня', style: type.titleMedium)),
+          Expanded(child: Text('Задания · все языки', style: type.titleMedium)),
           TextButton(
             onPressed: () => context.go('/quests'),
             child: const Text('Все детали'),
@@ -244,7 +244,7 @@ class MissionFlightRow extends ConsumerWidget {
     final locked =
         mission.id == 'review' &&
         !earned &&
-        (app.progress.words.length < 5 || !reviewReadyToday(app));
+        (app.globalProgress.words.length < 5 || !reviewReadyToday(app));
     final count = state.progress.count(mission).clamp(0, mission.target);
     final title = switch (mission.id) {
       'lesson' => 'Один урок',
@@ -254,9 +254,9 @@ class MissionFlightRow extends ConsumerWidget {
     final subtitle = earned
         ? 'Сундук уже твой'
         : locked
-        ? app.progress.words.length < 5
-              ? 'Откроется с 5 словами · сейчас ${app.progress.words.length}'
-              : 'Новые слова закрепятся — вернёмся по расписанию'
+        ? app.globalProgress.words.length < 5
+              ? 'Откроется с 5 словами · сейчас ${app.globalProgress.words.length}'
+              : 'В этом языке пока нет слов для повторения'
         : mission.chest == 'nebula'
         ? 'Награда: сундук туманности'
         : 'Награда: сундук исследователя';

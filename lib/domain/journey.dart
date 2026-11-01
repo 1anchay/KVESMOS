@@ -49,12 +49,49 @@ class JourneyRegion {
       'Пора в путешествие. Ты уже многое умеешь!',
     ),
   ];
+  static List<JourneyRegion> forCourse(String language) => language == 'en'
+      ? [
+          ...all,
+          const JourneyRegion(
+            5,
+            'Орбита повседневности',
+            'Время, покупки, транспорт и дом',
+            'orbi',
+            'Новые слова для реальных ситуаций.',
+          ),
+          const JourneyRegion(
+            6,
+            'Планета заботы',
+            'Погода, хобби, самочувствие и эмоции',
+            'miko',
+            'Учимся говорить о том, что важно.',
+          ),
+        ]
+      : [
+          const JourneyRegion(
+            0,
+            'Первые разговоры',
+            'Знакомство, предметы и числа',
+            'orbi',
+            'Начнём с понятных выражений.',
+          ),
+          const JourneyRegion(
+            1,
+            'Близкие и встречи',
+            'Семья и заказ в кафе',
+            'miko',
+            'Применим слова в разговоре.',
+          ),
+        ];
   Iterable<LessonInfo> lessons(List<LessonInfo> catalog) =>
       catalog.skip(index * 4).take(4);
   bool complete(Set<String> done, List<LessonInfo> catalog) =>
+      lessons(catalog).isNotEmpty &&
       lessons(catalog).every((l) => done.contains(l.id));
-  static JourneyRegion forOrder(int order) =>
-      all[(order ~/ 4).clamp(0, all.length - 1)];
+  static JourneyRegion forOrder(int order, {String language = 'en'}) {
+    final regions = forCourse(language);
+    return regions[(order ~/ 4).clamp(0, regions.length - 1)];
+  }
 }
 
 class PracticePick {

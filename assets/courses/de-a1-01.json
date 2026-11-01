@@ -1,0 +1,286 @@
+{
+  "id": "de-a1-01",
+  "title": "Hallo · приветствие",
+  "topic": "Hallo · приветствие",
+  "order": 0,
+  "objective": "Поздороваться и спросить о делах.",
+  "guide": "Hallo — привет. Guten Morgen — доброе утро. Wie geht es dir? — как твои дела? (неформально). Danke, gut — спасибо, хорошо. В немецком все существительные пишутся с заглавной буквы: Morgen.",
+  "vocabulary": [
+    {
+      "id": "de:hallo",
+      "en": "hallo",
+      "ru": "привет"
+    },
+    {
+      "id": "de:danke",
+      "en": "danke",
+      "ru": "спасибо"
+    },
+    {
+      "id": "de:gut",
+      "en": "gut",
+      "ru": "хорошо"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-01-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Привет.»",
+      "answers": [
+        "Hallo."
+      ],
+      "explanation": "Hallo. — Привет.",
+      "hint": "Hallo. — Привет.",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Guten Morgen.",
+        "Hallo.",
+        "Auf Wiedersehen."
+      ]
+    },
+    {
+      "id": "de-a1-01-e02",
+      "type": "choice",
+      "prompt": "Что означает «Guten Morgen.»?",
+      "answers": [
+        "Доброе утро."
+      ],
+      "explanation": "Guten Morgen. — Доброе утро.",
+      "hint": "Guten Morgen. — Доброе утро.",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Как твои дела?",
+        "До свидания.",
+        "Доброе утро."
+      ]
+    },
+    {
+      "id": "de-a1-01-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Как твои дела?»",
+      "answers": [
+        "Wie geht es dir"
+      ],
+      "explanation": "Wie geht es dir? — Как твои дела?",
+      "hint": "Wie geht es dir? — Как твои дела?",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Wie",
+        "geht",
+        "es",
+        "dir"
+      ]
+    },
+    {
+      "id": "de-a1-01-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "hallo — привет; danke — спасибо; gut — хорошо",
+      "hint": "hallo — привет; danke — спасибо; gut — хорошо",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "de:hallo",
+          "en": "hallo",
+          "ru": "привет"
+        },
+        {
+          "id": "de:danke",
+          "en": "danke",
+          "ru": "спасибо"
+        },
+        {
+          "id": "de:gut",
+          "en": "gut",
+          "ru": "хорошо"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-01-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "До свидания."
+      ],
+      "explanation": "Auf Wiedersehen. — До свидания.",
+      "hint": "Auf Wiedersehen. — До свидания.",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Auf Wiedersehen.",
+      "options": [
+        "Привет.",
+        "До свидания.",
+        "Как твои дела?"
+      ]
+    },
+    {
+      "id": "de-a1-01-e06",
+      "type": "gap",
+      "prompt": "Вежливое утреннее приветствие: Guten ___.",
+      "answers": [
+        "Morgen"
+      ],
+      "explanation": "Hallo — привет. Guten Morgen — доброе утро. Wie geht es dir? — как твои дела? (неформально). Danke, gut — спасибо, хорошо. В немецком все существительные пишутся с заглавной буквы: Morgen.",
+      "hint": "Hallo — привет. Guten Morgen — доброе утро. Wie geht es dir? — как твои дела? (неформально). Danke, gut — спасибо, хорошо. В немецком все существительные пишутся с заглавной буквы: Morgen.",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "danke",
+        "Morgen",
+        "gut"
+      ]
+    },
+    {
+      "id": "de-a1-01-e07",
+      "type": "dialogue",
+      "prompt": "Орби: «Wie geht es dir?» Ответь, что всё хорошо, и поблагодари.",
+      "answers": [
+        "Danke, gut."
+      ],
+      "explanation": "В этой ситуации подходит: Danke, gut.",
+      "hint": "В этой ситуации подходит: Danke, gut.",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Auf Wiedersehen.",
+        "Wie geht es dir?",
+        "Danke, gut."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "de-a1-01-e08",
+      "type": "choice",
+      "prompt": "Выбери правильную фразу вместо «Gute Morgen.».",
+      "answers": [
+        "Guten Morgen."
+      ],
+      "explanation": "Устойчивое утреннее приветствие — Guten Morgen; окончание -en нужно сохранить.",
+      "hint": "Устойчивое утреннее приветствие — Guten Morgen; окончание -en нужно сохранить.",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "options": [
+        "Gute Morgen.",
+        "Guten Morgen."
+      ]
+    },
+    {
+      "id": "de-a1-01-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «До свидания.»",
+      "answers": [
+        "Auf Wiedersehen."
+      ],
+      "explanation": "Auf Wiedersehen. — До свидания.",
+      "hint": "Auf Wiedersehen. — До свидания.",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "de-a1-01-e10",
+      "type": "review",
+      "prompt": "Финал: Орби: «Wie geht es dir?» Ответь, что всё хорошо, и поблагодари.",
+      "answers": [
+        "Danke, gut."
+      ],
+      "explanation": "Теперь ты умеешь: поздороваться и спросить о делах.",
+      "hint": "Теперь ты умеешь: поздороваться и спросить о делах.",
+      "wordIds": [
+        "de:hallo",
+        "de:danke",
+        "de:gut"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Danke, gut.",
+        "Wie geht es dir?",
+        "Auf Wiedersehen."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Hallo.",
+      "translation": "Привет.",
+      "explanation": "Ситуация: Поздороваться и спросить о делах. Hallo. — Привет."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Guten Morgen.",
+      "translation": "Доброе утро.",
+      "explanation": "Ситуация: Поздороваться и спросить о делах. Guten Morgen. — Доброе утро."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Wie geht es dir?",
+      "translation": "Как твои дела?",
+      "explanation": "Hallo — привет. Guten Morgen — доброе утро. Wie geht es dir? — как твои дела? (неформально). Danke, gut — спасибо, хорошо. В немецком все существительные пишутся с заглавной буквы: Morgen."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Auf Wiedersehen.",
+      "translation": "До свидания.",
+      "explanation": "Ситуация: Поздороваться и спросить о делах. Auf Wiedersehen. — До свидания."
+    }
+  ]
+}

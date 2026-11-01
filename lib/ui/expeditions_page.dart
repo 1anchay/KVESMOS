@@ -53,10 +53,10 @@ class _ExpeditionsPageState extends ConsumerState<ExpeditionsPage> {
       Text('Паспорт путешествий', style: type.headlineLarge),
       const SizedBox(height: 8),
       const Text(
-        'Пять областей. Каждая печать — за четыре завершённые миссии, без покупок и случайностей.',
+        'Каждая печать — за уроки области выбранного языка. Экспедиции и награды общие для всех языков.',
       ),
       const SizedBox(height: 20),
-      for (final region in JourneyRegion.all) ...[
+      for (final region in JourneyRegion.forCourse(app.course.language)) ...[
         FlightPanel(
           accent: region.complete(
             app.progress.completed,
@@ -71,7 +71,7 @@ class _ExpeditionsPageState extends ConsumerState<ExpeditionsPage> {
                   child: CustomPaint(
                     painter: JourneyPlanetPainter(
                       region.index,
-                      regionColors[region.index],
+                      regionColors[region.index % regionColors.length],
                     ),
                   ),
                 ),
@@ -88,7 +88,7 @@ class _ExpeditionsPageState extends ConsumerState<ExpeditionsPage> {
                             app.repository.catalog,
                           )
                           ? 'Печать получена · ${region.subtitle}'
-                          : '${region.lessons(app.repository.catalog).where((l) => app.progress.completed.contains(l.id)).length} / 4 миссии',
+                          : '${region.lessons(app.repository.catalog).where((l) => app.progress.completed.contains(l.id)).length} / ${region.lessons(app.repository.catalog).length} миссии',
                     ),
                   ],
                 ),

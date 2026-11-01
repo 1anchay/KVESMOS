@@ -12,6 +12,7 @@ import 'expeditions_page.dart';
 import 'personal_practice.dart';
 import 'space_adventure_page.dart';
 import 'optional_adventures.dart';
+import 'course_picker.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -21,15 +22,37 @@ class OrbitApp extends ConsumerStatefulWidget {
 
 class _OrbitAppState extends ConsumerState<OrbitApp> {
   late final GoRouter router;
+  late final AppController controller;
+  bool handlingLaunch = false;
+  Future<void> openCompanion() async {
+    if (!mounted) return;
+    final app = controller;
+    final id = app.companion.launchCourse.value;
+    if (id == null || !app.onboarded || handlingLaunch) return;
+    handlingLaunch = true;
+    app.companion.launchCourse.value = null;
+    try {
+      await app.selectCourse(id);
+      final route = await app.learningContinuationRoute();
+      if (mounted) router.go(route);
+    } finally {
+      handlingLaunch = false;
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-    final app = ref.read(appProvider);
+    final app = controller = ref.read(appProvider);
     router = GoRouter(
       refreshListenable: app,
       redirect: (context, state) =>
           app.recoveringPassword && state.uri.path != '/profile'
           ? '/profile'
+          : app.course.language != 'en' &&
+                (state.uri.path == '/adventures' ||
+                    state.uri.path.startsWith('/adventure/'))
+          ? '/map'
           : null,
       initialLocation: app.onboarded ? '/' : '/welcome',
       routes: [
@@ -119,6 +142,7 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             ),
             GoRoute(path: '/quests', builder: (_, _) => const QuestsPage()),
             GoRoute(path: '/profile', builder: (_, _) => const ProfilePage()),
+            GoRoute(path: '/courses', builder: (_, _) => const CoursesPage()),
             GoRoute(path: '/settings', builder: (_, _) => const SettingsPage()),
             GoRoute(path: '/offline', builder: (_, _) => const OfflinePage()),
           ],
@@ -133,10 +157,15 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
         ),
       ),
     );
+    app.companion.launchCourse.addListener(openCompanion);
+    app.addListener(openCompanion);
+    WidgetsBinding.instance.addPostFrameCallback((_) => openCompanion());
   }
 
   @override
   void dispose() {
+    controller.companion.launchCourse.removeListener(openCompanion);
+    controller.removeListener(openCompanion);
     router.dispose();
     super.dispose();
   }
@@ -188,6 +217,7 @@ class OrbitShell extends StatelessWidget {
           ],
         ),
         actions: [
+          const CourseSwitch(),
           IconButton(
             tooltip: 'Офлайн-уроки',
             onPressed: () => context.go('/offline'),
@@ -201,7 +231,14 @@ class OrbitShell extends StatelessWidget {
           const SizedBox(width: 8),
         ],
       ),
-      body: SafeArea(child: child),
+      body: SafeArea(
+        child: Consumer(
+          builder: (context, ref, _) => KeyedSubtree(
+            key: ValueKey(ref.watch(appProvider).course.id),
+            child: child,
+          ),
+        ),
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: index,
         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,

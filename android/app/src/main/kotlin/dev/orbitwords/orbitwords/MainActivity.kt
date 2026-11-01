@@ -4,6 +4,8 @@ import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 import android.content.Context
+import android.content.Intent
+import java.util.TimeZone
 import android.media.AudioAttributes
 import android.media.AudioFocusRequest
 import android.media.AudioManager
@@ -16,6 +18,7 @@ import android.os.Looper
 import java.io.File
 
 class MainActivity : FlutterActivity() {
+    private var companionChannel: MethodChannel? = null
     private var channel: MethodChannel? = null
     private var pool: SoundPool? = null
     private val samples = mutableMapOf<String, Int>()
@@ -32,8 +35,35 @@ class MainActivity : FlutterActivity() {
             channel?.invokeMethod("interrupted", null)
         }
     }
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        intent.getStringExtra(DailyCompanion.OPEN_COURSE)?.let {
+            // Android can reuse the activity while Dart is still starting.
+            // Keep the extra for consumeLaunch until Dart acknowledges it.
+            companionChannel?.invokeMethod("openCourse", DailyCompanion.course(it), object : MethodChannel.Result {
+                override fun success(result: Any?) {
+                    if (this@MainActivity.intent === intent) intent.removeExtra(DailyCompanion.OPEN_COURSE)
+                }
+                override fun error(code: String, message: String?, details: Any?) {}
+                override fun notImplemented() {}
+            })
+        }
+    }
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        companionChannel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "dev.orbitwords/daily_companion")
+        companionChannel!!.setMethodCallHandler { call, result ->
+            try {
+                when(call.method) {
+                    "consumeLaunch" -> { val id = intent.getStringExtra(DailyCompanion.OPEN_COURSE); intent.removeExtra(DailyCompanion.OPEN_COURSE); result.success(id) }
+                    "sync" -> { DailyCompanion.sync(this, call.arguments as String); result.success(null) }
+                    "pinWidget" -> result.success(DailyCompanion.pin(this))
+                    "timezone" -> result.success(TimeZone.getDefault().id)
+                    else -> result.notImplemented()
+                }
+            } catch (e: Exception) { result.error("companion", e.message, null) }
+        }
         channel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "dev.orbitwords/learning_audio")
         channel!!.setMethodCallHandler { call, result ->
             when (call.method) {

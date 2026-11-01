@@ -1,0 +1,284 @@
+{
+  "id": "en-a1-22",
+  "title": "Покупки и цена",
+  "topic": "Покупки и цена",
+  "order": 21,
+  "objective": "Узнать цену и вежливо попросить покупку.",
+  "guide": "How much is…? спрашивает цену одной вещи. I would like… — вежливое «я хотел бы…». Сумма во множественном числе: five pounds.",
+  "vocabulary": [
+    {
+      "id": "en:bag",
+      "en": "bag",
+      "ru": "сумка"
+    },
+    {
+      "id": "en:pound",
+      "en": "pound",
+      "ru": "фунт"
+    },
+    {
+      "id": "en:card",
+      "en": "card",
+      "ru": "карта"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-22-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Сколько стоит эта сумка?»",
+      "answers": [
+        "How much is this bag?"
+      ],
+      "explanation": "How much is this bag? — Сколько стоит эта сумка?",
+      "hint": "How much is this bag? — Сколько стоит эта сумка?",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "It is five pounds.",
+        "How much is this bag?",
+        "Can I pay by card?"
+      ]
+    },
+    {
+      "id": "en-a1-22-e02",
+      "type": "choice",
+      "prompt": "Что означает «It is five pounds.»?",
+      "answers": [
+        "Это стоит пять фунтов."
+      ],
+      "explanation": "It is five pounds. — Это стоит пять фунтов.",
+      "hint": "It is five pounds. — Это стоит пять фунтов.",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Я хотел бы эту сумку, пожалуйста.",
+        "Можно заплатить картой?",
+        "Это стоит пять фунтов."
+      ]
+    },
+    {
+      "id": "en-a1-22-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Я хотел бы эту сумку, пожалуйста.»",
+      "answers": [
+        "I would like this bag, please"
+      ],
+      "explanation": "I would like this bag, please. — Я хотел бы эту сумку, пожалуйста.",
+      "hint": "I would like this bag, please. — Я хотел бы эту сумку, пожалуйста.",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "I",
+        "would",
+        "like",
+        "this",
+        "bag,",
+        "please"
+      ]
+    },
+    {
+      "id": "en-a1-22-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "bag — сумка; pound — фунт; card — карта",
+      "hint": "bag — сумка; pound — фунт; card — карта",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:bag",
+          "en": "bag",
+          "ru": "сумка"
+        },
+        {
+          "id": "en:pound",
+          "en": "pound",
+          "ru": "фунт"
+        },
+        {
+          "id": "en:card",
+          "en": "card",
+          "ru": "карта"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-22-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Можно заплатить картой?"
+      ],
+      "explanation": "Can I pay by card? — Можно заплатить картой?",
+      "hint": "Can I pay by card? — Можно заплатить картой?",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Can I pay by card?",
+      "options": [
+        "Сколько стоит эта сумка?",
+        "Можно заплатить картой?",
+        "Я хотел бы эту сумку, пожалуйста."
+      ]
+    },
+    {
+      "id": "en-a1-22-e06",
+      "type": "gap",
+      "prompt": "Одна сумка: How much ___ this bag?",
+      "answers": [
+        "is"
+      ],
+      "explanation": "How much is…? спрашивает цену одной вещи. I would like… — вежливое «я хотел бы…». Сумма во множественном числе: five pounds.",
+      "hint": "How much is…? спрашивает цену одной вещи. I would like… — вежливое «я хотел бы…». Сумма во множественном числе: five pounds.",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ]
+    },
+    {
+      "id": "en-a1-22-e07",
+      "type": "dialogue",
+      "prompt": "Продавец спрашивает «How would you like to pay?» Попроси оплатить картой.",
+      "answers": [
+        "Can I pay by card?"
+      ],
+      "explanation": "В этой ситуации подходит: Can I pay by card?",
+      "hint": "В этой ситуации подходит: Can I pay by card?",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "It is five pounds.",
+        "How much is this bag?",
+        "Can I pay by card?"
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "en-a1-22-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «It is five pound.»",
+      "answers": [
+        "It is five pounds."
+      ],
+      "explanation": "После five у исчисляемого pound добавляем -s.",
+      "hint": "После five у исчисляемого pound добавляем -s.",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "en-a1-22-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Можно заплатить картой?»",
+      "answers": [
+        "Can I pay by card?"
+      ],
+      "explanation": "Can I pay by card? — Можно заплатить картой?",
+      "hint": "Can I pay by card? — Можно заплатить картой?",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "en-a1-22-e10",
+      "type": "review",
+      "prompt": "Финал: Продавец спрашивает «How would you like to pay?» Попроси оплатить картой.",
+      "answers": [
+        "Can I pay by card?"
+      ],
+      "explanation": "Теперь ты умеешь: узнать цену и вежливо попросить покупку.",
+      "hint": "Теперь ты умеешь: узнать цену и вежливо попросить покупку.",
+      "wordIds": [
+        "en:bag",
+        "en:pound",
+        "en:card"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Can I pay by card?",
+        "How much is this bag?",
+        "It is five pounds."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "How much is this bag?",
+      "translation": "Сколько стоит эта сумка?",
+      "explanation": "Ситуация: Узнать цену и вежливо попросить покупку. How much is this bag? — Сколько стоит эта сумка?"
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "It is five pounds.",
+      "translation": "Это стоит пять фунтов.",
+      "explanation": "Ситуация: Узнать цену и вежливо попросить покупку. It is five pounds. — Это стоит пять фунтов."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "I would like this bag, please.",
+      "translation": "Я хотел бы эту сумку, пожалуйста.",
+      "explanation": "How much is…? спрашивает цену одной вещи. I would like… — вежливое «я хотел бы…». Сумма во множественном числе: five pounds."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Can I pay by card?",
+      "translation": "Можно заплатить картой?",
+      "explanation": "Ситуация: Узнать цену и вежливо попросить покупку. Can I pay by card? — Можно заплатить картой?"
+    }
+  ]
+}

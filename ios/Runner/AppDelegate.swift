@@ -19,6 +19,20 @@ import AVFoundation
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
     guard let registrar = engineBridge.pluginRegistry.registrar(forPlugin: "KVESMOSLearningAudio") else { return }
+    let companion = FlutterMethodChannel(name: "dev.orbitwords/daily_companion", binaryMessenger: registrar.messenger())
+    companion.setMethodCallHandler { call, result in
+      switch call.method {
+      case "timezone": result(TimeZone.current.identifier)
+      case "consumeLaunch": result(nil)
+      case "pinWidget": result(false) // No WidgetKit extension is shipped yet.
+      case "sync":
+        // Adapter boundary for a future signed App Group + WidgetKit extension.
+        // Standard defaults deliberately do not pretend to be a shared widget.
+        UserDefaults.standard.set(call.arguments as? String, forKey: "kvesmos.companion.snapshot.v1")
+        result(nil)
+      default: result(FlutterMethodNotImplemented)
+      }
+    }
     learningAudio = FlutterMethodChannel(name: "dev.orbitwords/learning_audio", binaryMessenger: registrar.messenger())
     learningAudio?.setMethodCallHandler { [weak self] call, result in
       guard let self = self else { result(false); return }

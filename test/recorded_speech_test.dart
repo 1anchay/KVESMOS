@@ -1,11 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/services/recorded_speech.dart';
+import 'package:orbitwords/ui/dialogue_scene.dart';
 import 'learning_audio_test.dart' show FakeTts;
 
 class FakeRecordingPlayer
@@ -97,6 +98,60 @@ void main() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(SoundEffectsService.channel, null);
     SoundEffectsService.channel.setMethodCallHandler(null);
+  });
+  test(
+    'course locale selects only its offline voice, never an English clip',
+    () async {
+      tts.installed.addAll(const [
+        DeviceVoice('Español', 'es-ES', false),
+        DeviceVoice('Deutsch', 'de-DE', false),
+      ]);
+      await audio.voices.refresh();
+      for (final locale in ['es-ES', 'de-DE']) {
+        audio.studyLocale = locale;
+        // Deliberately use text present in the English recording catalogue.
+        expect(await audio.speak('Hello!'), true);
+        expect(player.requests, isEmpty);
+        expect(audio.lastSource, SpeechSource.system);
+        expect(tts.selected?.locale, locale);
+        expect(await audio.speak('Hello!', slow: true), true);
+        expect(tts.selected?.locale, locale);
+      }
+      tts.installed.removeWhere((v) => v.locale == 'de-DE');
+      await audio.voices.refresh();
+      expect(await audio.speak('Hello!'), false);
+      expect(player.requests, isEmpty);
+      expect(audio.lastProblem, contains('немецкого'));
+      audio.studyLocale = 'en-US';
+      expect(await audio.speak('Hello!'), true);
+      expect(audio.lastSource, SpeechSource.recording);
+    },
+  );
+  testWidgets('dialogue playback follows the selected course language', (
+    tester,
+  ) async {
+    tts.installed.addAll(const [
+      DeviceVoice('Español', 'es-ES', false),
+      DeviceVoice('Deutsch', 'de-DE', false),
+    ]);
+    await audio.voices.refresh();
+    for (final entry in {'es-ES': 'Hola.', 'de-DE': 'Guten Tag.'}.entries) {
+      audio.studyLocale = entry.key;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: DialogueScene(scene: 'Орби: ${entry.value}', audio: audio),
+          ),
+        ),
+      );
+      await tester.runAsync(() async {
+        await tester.tap(find.text('Послушать: Орби'));
+        await Future<void>.delayed(const Duration(milliseconds: 100));
+      });
+      await tester.pumpAndSettle();
+      expect(tts.selected?.locale, entry.key, reason: audio.lastProblem);
+      expect(tts.spoken.last, entry.value);
+    }
   });
   test(
     'inactive native recording player does not block ordinary lesson transitions',

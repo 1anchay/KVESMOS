@@ -180,7 +180,7 @@ String normalizeAnswer(String value) {
     s = s.replaceAll(RegExp('\\b${entry.key}\\b'), entry.value);
   }
   return s
-      .replaceAll(RegExp(r'''[.,!?;:«»"—–]'''), ' ')
+      .replaceAll(RegExp(r'''[.,!?¿¡;:«»"—–]'''), ' ')
       .replaceAll(RegExp(r'\s+'), ' ')
       .trim();
 }

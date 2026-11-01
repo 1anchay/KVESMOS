@@ -193,7 +193,7 @@ void main() {
       );
       expect((await r.session(session.id)).draft, 'draft from 0.2.0');
       expect(await r.setting('owner'), 'existing');
-      expect(await r.installed(), hasLength(20));
+      expect(await r.installed(), hasLength(40));
       expect(
         (await MissionsRepository(r).reconcile()).inventory.grants,
         hasLength(1),

@@ -36,7 +36,10 @@ class FlightCompletion extends StatelessWidget {
   Widget build(BuildContext context) {
     final today = TodayJourney(app.progress, app.repository.now(), app.goal);
     final type = Theme.of(context).textTheme;
-    final region = JourneyRegion.forOrder(lesson.order);
+    final region = JourneyRegion.forOrder(
+      lesson.order,
+      language: app.course.language,
+    );
     final regionDone = region.complete(
       app.progress.completed,
       app.repository.catalog,
@@ -177,7 +180,7 @@ class FlightCompletion extends StatelessWidget {
                       child: CustomPaint(
                         painter: JourneyPlanetPainter(
                           region.index,
-                          regionColors[region.index],
+                          regionColors[region.index % regionColors.length],
                         ),
                       ),
                     ),
@@ -188,8 +191,12 @@ class FlightCompletion extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      region.index < 4
-                          ? 'Новая область открыта: ${JourneyRegion.all[region.index + 1].title}. Печать уже в паспорте.'
+                      region.index <
+                              JourneyRegion.forCourse(
+                                    app.course.language,
+                                  ).length -
+                                  1
+                          ? 'Новая область открыта: ${JourneyRegion.forCourse(app.course.language)[region.index + 1].title}. Печать уже в паспорте.'
                           : 'Все пять печатей собраны. Вводный маршрут пройден — продолжай закреплять слова.',
                     ),
                     TextButton(

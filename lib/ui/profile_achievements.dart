@@ -12,7 +12,7 @@ class AchievementShowcase extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final app = ref.watch(appProvider);
     final selected = app.featuredAchievements
-        .where(app.progress.achievements.contains)
+        .where(app.globalProgress.achievements.contains)
         .toList();
     final big = MediaQuery.textScalerOf(context).scale(16) > 24;
     return Column(
@@ -118,7 +118,7 @@ class AchievementCollection extends ConsumerWidget {
         'Каждый шаг оставляет след',
         'Коллекция открытий',
         trailing: Text(
-          '${app.progress.achievements.length} / 6',
+          '${app.globalProgress.achievements.length} / 6',
           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
         ),
       ),
@@ -144,14 +144,14 @@ class AchievementCollection extends ConsumerWidget {
                   builder: (context, c) {
                     final art = BadgeArt(
                       badge,
-                      unlocked: badge.earned(app.progress),
+                      unlocked: badge.earned(app.globalProgress),
                       size: 92,
                     );
                     final detail = Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'СТУПЕНЬ ${badge.tier} · ${badge.earned(app.progress) ? 'ПОЛУЧЕНО' : 'ЗАКРЫТО'}',
+                          'СТУПЕНЬ ${badge.tier} · ${badge.earned(app.globalProgress) ? 'ПОЛУЧЕНО' : 'ЗАКРЫТО'}',
                           style: TextStyle(
                             fontSize: 10,
                             letterSpacing: .7,
@@ -174,13 +174,14 @@ class AchievementCollection extends ConsumerWidget {
                         ),
                         const SizedBox(height: 10),
                         LinearProgressIndicator(
-                          value: (badge.value(app.progress) / badge.target)
-                              .clamp(0, 1),
+                          value:
+                              (badge.value(app.globalProgress) / badge.target)
+                                  .clamp(0, 1),
                           minHeight: 5,
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          '${badge.value(app.progress).clamp(0, badge.target)} / ${badge.target}',
+                          '${badge.value(app.globalProgress).clamp(0, badge.target)} / ${badge.target}',
                           style: const TextStyle(fontSize: 11),
                         ),
                       ],
@@ -213,7 +214,7 @@ class _BadgeDetails extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final app = ref.watch(appProvider),
-        earned = badge.earned(app.progress),
+        earned = badge.earned(app.globalProgress),
         date = app.records.badgeDates[badge.name];
     return SafeArea(
       child: SingleChildScrollView(
@@ -234,7 +235,7 @@ class _BadgeDetails extends ConsumerWidget {
             Text(
               earned
                   ? 'Получено${date == null ? '' : ' · $date'}'
-                  : '${badge.value(app.progress)} / ${badge.target}',
+                  : '${badge.value(app.globalProgress)} / ${badge.target}',
               style: const TextStyle(fontWeight: FontWeight.w800),
             ),
             const SizedBox(height: 20),
@@ -280,13 +281,14 @@ class _ShowcaseDialogState extends ConsumerState<_ShowcaseDialog> {
     super.initState();
     final app = ref.read(appProvider);
     selected = app.featuredAchievements
-        .where(app.progress.achievements.contains)
+        .where(app.globalProgress.achievements.contains)
         .toSet();
   }
 
   @override
   Widget build(BuildContext context) {
-    final app = ref.watch(appProvider), available = app.progress.achievements;
+    final app = ref.watch(appProvider),
+        available = app.globalProgress.achievements;
     return AlertDialog(
       title: const Text('Любимые достижения'),
       content: SizedBox(

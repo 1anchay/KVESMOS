@@ -13,6 +13,7 @@ class LearningEvent {
     required this.day,
     required this.data,
   });
+  String get courseId => data['courseId'] as String? ?? 'ru-en';
   Map<String, dynamic> toJson() => {
     'id': id,
     'kind': kind,

@@ -1,0 +1,282 @@
+{
+  "id": "en-a1-21",
+  "title": "Время встречи",
+  "topic": "Время встречи",
+  "order": 20,
+  "objective": "Договориться о времени и дне встречи.",
+  "guide": "Для часов используем at: at two. Для дней — on: on Monday. What time is it? — который час? It is two — сейчас два.",
+  "vocabulary": [
+    {
+      "id": "en:time",
+      "en": "time",
+      "ru": "время"
+    },
+    {
+      "id": "en:monday",
+      "en": "Monday",
+      "ru": "понедельник"
+    },
+    {
+      "id": "en:two",
+      "en": "two",
+      "ru": "два"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-21-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Который час?»",
+      "answers": [
+        "What time is it?"
+      ],
+      "explanation": "What time is it? — Который час?",
+      "hint": "What time is it? — Который час?",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "It is two o’clock.",
+        "What time is it?",
+        "See you at two."
+      ]
+    },
+    {
+      "id": "en-a1-21-e02",
+      "type": "choice",
+      "prompt": "Что означает «It is two o’clock.»?",
+      "answers": [
+        "Сейчас два часа."
+      ],
+      "explanation": "It is two o’clock. — Сейчас два часа.",
+      "hint": "It is two o’clock. — Сейчас два часа.",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Давай встретимся в понедельник.",
+        "Увидимся в два.",
+        "Сейчас два часа."
+      ]
+    },
+    {
+      "id": "en-a1-21-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Давай встретимся в понедельник.»",
+      "answers": [
+        "Let’s meet on Monday"
+      ],
+      "explanation": "Let’s meet on Monday. — Давай встретимся в понедельник.",
+      "hint": "Let’s meet on Monday. — Давай встретимся в понедельник.",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Let’s",
+        "meet",
+        "on",
+        "Monday"
+      ]
+    },
+    {
+      "id": "en-a1-21-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "time — время; Monday — понедельник; two — два",
+      "hint": "time — время; Monday — понедельник; two — два",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:time",
+          "en": "time",
+          "ru": "время"
+        },
+        {
+          "id": "en:monday",
+          "en": "Monday",
+          "ru": "понедельник"
+        },
+        {
+          "id": "en:two",
+          "en": "two",
+          "ru": "два"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-21-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Увидимся в два."
+      ],
+      "explanation": "See you at two. — Увидимся в два.",
+      "hint": "See you at two. — Увидимся в два.",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "See you at two.",
+      "options": [
+        "Который час?",
+        "Увидимся в два.",
+        "Давай встретимся в понедельник."
+      ]
+    },
+    {
+      "id": "en-a1-21-e06",
+      "type": "gap",
+      "prompt": "Увидимся в два: See you ___ two.",
+      "answers": [
+        "at"
+      ],
+      "explanation": "Для часов используем at: at two. Для дней — on: on Monday. What time is it? — который час? It is two — сейчас два.",
+      "hint": "Для часов используем at: at two. Для дней — on: on Monday. What time is it? — который час? It is two — сейчас два.",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "on",
+        "at",
+        "in"
+      ]
+    },
+    {
+      "id": "en-a1-21-e07",
+      "type": "dialogue",
+      "prompt": "Мико уточняет время встречи: «What time shall we meet?» Ответь: в два.",
+      "answers": [
+        "Let’s meet at two."
+      ],
+      "explanation": "В этой ситуации подходит: Let’s meet at two.",
+      "hint": "В этой ситуации подходит: Let’s meet at two.",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Let’s meet on Monday.",
+        "It is my house.",
+        "Let’s meet at two."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "en-a1-21-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «See you on two.»",
+      "answers": [
+        "See you at two."
+      ],
+      "explanation": "Перед временем по часам нужен at; on используется с днями.",
+      "hint": "Перед временем по часам нужен at; on используется с днями.",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "en-a1-21-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Увидимся в два.»",
+      "answers": [
+        "See you at two."
+      ],
+      "explanation": "See you at two. — Увидимся в два.",
+      "hint": "See you at two. — Увидимся в два.",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "en-a1-21-e10",
+      "type": "review",
+      "prompt": "Финал: Мико уточняет время встречи: «What time shall we meet?» Ответь: в два.",
+      "answers": [
+        "Let’s meet at two."
+      ],
+      "explanation": "Теперь ты умеешь: договориться о времени и дне встречи.",
+      "hint": "Теперь ты умеешь: договориться о времени и дне встречи.",
+      "wordIds": [
+        "en:time",
+        "en:monday",
+        "en:two"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Let’s meet at two.",
+        "It is my house.",
+        "Let’s meet on Monday."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "What time is it?",
+      "translation": "Который час?",
+      "explanation": "Ситуация: Договориться о времени и дне встречи. What time is it? — Который час?"
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "It is two o’clock.",
+      "translation": "Сейчас два часа.",
+      "explanation": "Ситуация: Договориться о времени и дне встречи. It is two o’clock. — Сейчас два часа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Let’s meet on Monday.",
+      "translation": "Давай встретимся в понедельник.",
+      "explanation": "Для часов используем at: at two. Для дней — on: on Monday. What time is it? — который час? It is two — сейчас два."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "See you at two.",
+      "translation": "Увидимся в два.",
+      "explanation": "Ситуация: Договориться о времени и дне встречи. See you at two. — Увидимся в два."
+    }
+  ]
+}

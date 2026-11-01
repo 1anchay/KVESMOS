@@ -223,7 +223,9 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
           controller: input,
           enabled: !busy,
           onSubmitted: (_) => next(),
-          decoration: const InputDecoration(labelText: 'Вспомни по-английски'),
+          decoration: const InputDecoration(
+            labelText: 'Вспомни на изучаемом языке',
+          ),
         ),
       ],
       if (phase == 2 && state!['correct'] == true)

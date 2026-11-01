@@ -3,6 +3,7 @@ import 'package:drift/drift.dart';
 import 'package:flutter/services.dart';
 import 'package:uuid/uuid.dart';
 import '../domain/course.dart';
+import '../domain/languages.dart';
 import '../domain/progress.dart';
 import 'database.dart';
 
@@ -10,8 +11,26 @@ class LearningRepository {
   final AppDatabase db;
   final DateTime Function() now;
   final Future<String> Function(String) loadAsset;
-  final List<LessonInfo> catalog = [];
-  final Map<String, Vocabulary> vocabulary = {};
+  final List<LessonInfo> allCatalog = [];
+  final Map<String, Vocabulary> allVocabulary = {};
+  StudyCourse course = StudyCourse.english;
+  List<LessonInfo> get catalog => allCatalog
+      .where((l) => StudyCourse.forContent(l.id).id == course.id)
+      .toList();
+  Map<String, Vocabulary> get vocabulary => Map.fromEntries(
+    allVocabulary.entries.where(
+      (e) => StudyCourse.forContent(e.key).id == course.id,
+    ),
+  );
+  static const courseKey = 'kvesmos.course.selected.v1';
+  Future<void> selectCourse(String id) async {
+    if (!StudyCourse.all.any((c) => c.id == id)) {
+      throw ArgumentError('Unknown course');
+    }
+    await setSetting(courseKey, id);
+    course = StudyCourse.byId(id);
+  }
+
   final Map<String, String> updatedMaterials = {};
   final Map<String, String> learningObjectives = {};
   LearningRepository(
@@ -21,43 +40,80 @@ class LearningRepository {
   }) : now = now ?? DateTime.now,
        loadAsset = loadAsset ?? rootBundle.loadString;
   Future<void> initialize() async {
-    final manifest = jsonDecode(
-      await loadAsset('assets/courses/manifest.json'),
-    );
-    catalog.clear();
-    for (final section in manifest['sections']) {
-      for (final theme in section['themes']) {
-        for (final lesson in theme['lessons']) {
-          catalog.add(
-            LessonInfo(
+    course = StudyCourse.byId(await setting(courseKey));
+    allCatalog.clear();
+    allVocabulary.clear();
+    updatedMaterials.clear();
+    learningObjectives.clear();
+    final legacyInstalled = await setting('installed') != null;
+    for (final course in StudyCourse.all) {
+      final manifest = jsonDecode(await loadAsset(course.manifest));
+      if (manifest['sourceLanguage'] != 'ru' ||
+          manifest['targetLanguage'] != course.language) {
+        throw const FormatException('Неверный язык каталога');
+      }
+      for (final section in manifest['sections']) {
+        for (final theme in section['themes']) {
+          for (final lesson in theme['lessons']) {
+            final info = LessonInfo(
               lesson['id'],
               lesson['title'],
               theme['title'],
               section['title'],
               lesson['asset'],
               lesson['order'],
-            ),
-          );
+            );
+            if (allCatalog.any((l) => l.id == info.id) ||
+                StudyCourse.forContent(info.id).id != course.id ||
+                !info.asset.startsWith('assets/courses/') ||
+                info.asset.contains('..')) {
+              throw const FormatException('Неверный идентификатор урока');
+            }
+            allCatalog.add(info);
+            final raw = await loadAsset(info.asset);
+            final material = Lesson.fromJson(jsonDecode(raw));
+            if (material.id != info.id ||
+                material.order != info.order ||
+                material.exercises.isEmpty ||
+                material.vocabulary.any(
+                  (v) => StudyCourse.forContent(v.id).id != course.id,
+                )) {
+              throw const FormatException('Неверный учебный пакет');
+            }
+            for (final word in material.vocabulary) {
+              allVocabulary[word.id] = word;
+            }
+            final legacy = RegExp(r'^a1-\d{2}$').hasMatch(info.id);
+            final marker = 'kvesmos.pack.seen.v1:${info.id}';
+            // Old deleted packs stay deleted. New IDs install exactly once;
+            // a later app update never overwrites a pinned session or pack.
+            await db.transaction(() async {
+              if (await setting(marker) == null) {
+                if (!(legacy && legacyInstalled) &&
+                    !(await installed()).contains(info.id)) {
+                  await installRaw(info.id, raw);
+                }
+                await setSetting(marker, 'true');
+              }
+            });
+            final current = legacy
+                ? await loadAsset('assets/courses/demo/${info.id}.json')
+                : raw;
+            updatedMaterials[info.id] = current;
+            learningObjectives[info.id] =
+                jsonDecode(current)['objective'] ?? '';
+          }
         }
       }
-    }
-    // Assets are read sequentially, and lessons remain in SQLite, not in RAM.
-    for (final info in catalog) {
-      final raw = await loadAsset(info.asset);
-      final lesson = Lesson.fromJson(jsonDecode(raw));
-      for (final v in lesson.vocabulary) {
-        vocabulary[v.id] = v;
-      }
-      if (await setting('installed') == null) {
-        await installRaw(info.id, raw);
+      final orders = allCatalog
+          .where((l) => StudyCourse.forContent(l.id).id == course.id)
+          .map((l) => l.order)
+          .toList();
+      if (orders.asMap().entries.any((e) => e.key != e.value)) {
+        throw const FormatException('Нарушен порядок курса');
       }
     }
     await setSetting('installed', 'true');
-    for (final id in catalog.map((lesson) => lesson.id)) {
-      updatedMaterials[id] = await loadAsset('assets/courses/demo/$id.json');
-      learningObjectives[id] =
-          jsonDecode(updatedMaterials[id]!)['objective'] ?? '';
-    }
   }
 
   Future<void> installRaw(String id, String raw) => db
@@ -219,7 +275,15 @@ class LearningRepository {
       kind: kind,
       occurredAt: time.toUtc().toIso8601String(),
       day: dayKey(time),
-      data: data,
+      data: {
+        ...data,
+        'courseId': StudyCourse.forContent(
+          '${data['lesson'] ?? (data['words'] as List?)?.firstOrNull ?? ''}',
+        ).id,
+        'targetLanguage': StudyCourse.forContent(
+          '${data['lesson'] ?? (data['words'] as List?)?.firstOrNull ?? ''}',
+        ).language,
+      },
     );
   }
 
@@ -353,7 +417,10 @@ class LearningRepository {
     return result;
   }
 
-  Future<ProgressSnapshot> progress() async =>
+  Future<ProgressSnapshot> progress() async => ProgressSnapshot.fromEvents(
+    (await allEvents()).where((e) => e.courseId == course.id),
+  );
+  Future<ProgressSnapshot> globalProgress() async =>
       ProgressSnapshot.fromEvents(await allEvents());
   Future<List<LearningEvent>> pending() async =>
       (await (db.select(db.events)..where((t) => t.synced.equals(false))).get())

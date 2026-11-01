@@ -1,0 +1,284 @@
+{
+  "id": "en-a1-24",
+  "title": "У меня дома",
+  "topic": "У меня дома",
+  "order": 23,
+  "objective": "Описать комнаты и расположение вещей.",
+  "guide": "There is — есть один предмет; there are — несколько. In — внутри, on — на поверхности. В описании комнаты сначала называем вещь, затем место.",
+  "vocabulary": [
+    {
+      "id": "en:kitchen",
+      "en": "kitchen",
+      "ru": "кухня"
+    },
+    {
+      "id": "en:chair",
+      "en": "chair",
+      "ru": "стул"
+    },
+    {
+      "id": "en:bedroom",
+      "en": "bedroom",
+      "ru": "спальня"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-24-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «На кухне есть стол.»",
+      "answers": [
+        "There is a table in the kitchen."
+      ],
+      "explanation": "There is a table in the kitchen. — На кухне есть стол.",
+      "hint": "There is a table in the kitchen. — На кухне есть стол.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "There are two chairs.",
+        "There is a table in the kitchen.",
+        "This is my bedroom."
+      ]
+    },
+    {
+      "id": "en-a1-24-e02",
+      "type": "choice",
+      "prompt": "Что означает «There are two chairs.»?",
+      "answers": [
+        "Есть два стула."
+      ],
+      "explanation": "There are two chairs. — Есть два стула.",
+      "hint": "There are two chairs. — Есть два стула.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Книга на столе.",
+        "Это моя спальня.",
+        "Есть два стула."
+      ]
+    },
+    {
+      "id": "en-a1-24-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Книга на столе.»",
+      "answers": [
+        "The book is on the table"
+      ],
+      "explanation": "The book is on the table. — Книга на столе.",
+      "hint": "The book is on the table. — Книга на столе.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "The",
+        "book",
+        "is",
+        "on",
+        "the",
+        "table"
+      ]
+    },
+    {
+      "id": "en-a1-24-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "kitchen — кухня; chair — стул; bedroom — спальня",
+      "hint": "kitchen — кухня; chair — стул; bedroom — спальня",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:kitchen",
+          "en": "kitchen",
+          "ru": "кухня"
+        },
+        {
+          "id": "en:chair",
+          "en": "chair",
+          "ru": "стул"
+        },
+        {
+          "id": "en:bedroom",
+          "en": "bedroom",
+          "ru": "спальня"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-24-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Это моя спальня."
+      ],
+      "explanation": "This is my bedroom. — Это моя спальня.",
+      "hint": "This is my bedroom. — Это моя спальня.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "This is my bedroom.",
+      "options": [
+        "На кухне есть стол.",
+        "Это моя спальня.",
+        "Книга на столе."
+      ]
+    },
+    {
+      "id": "en-a1-24-e06",
+      "type": "gap",
+      "prompt": "Два стула: There ___ two chairs.",
+      "answers": [
+        "are"
+      ],
+      "explanation": "There is — есть один предмет; there are — несколько. In — внутри, on — на поверхности. В описании комнаты сначала называем вещь, затем место.",
+      "hint": "There is — есть один предмет; there are — несколько. In — внутри, on — на поверхности. В описании комнаты сначала называем вещь, затем место.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ]
+    },
+    {
+      "id": "en-a1-24-e07",
+      "type": "dialogue",
+      "prompt": "Орби ищет книгу: «Where is the book?» Подскажи, что она на столе.",
+      "answers": [
+        "The book is on the table."
+      ],
+      "explanation": "В этой ситуации подходит: The book is on the table.",
+      "hint": "В этой ситуации подходит: The book is on the table.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "This is my bedroom.",
+        "There are two chairs.",
+        "The book is on the table."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "en-a1-24-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «There is two chairs.»",
+      "answers": [
+        "There are two chairs."
+      ],
+      "explanation": "Two chairs — множественное число, поэтому there are.",
+      "hint": "Two chairs — множественное число, поэтому there are.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "en-a1-24-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Это моя спальня.»",
+      "answers": [
+        "This is my bedroom."
+      ],
+      "explanation": "This is my bedroom. — Это моя спальня.",
+      "hint": "This is my bedroom. — Это моя спальня.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "en-a1-24-e10",
+      "type": "review",
+      "prompt": "Финал: Орби ищет книгу: «Where is the book?» Подскажи, что она на столе.",
+      "answers": [
+        "The book is on the table."
+      ],
+      "explanation": "Теперь ты умеешь: описать комнаты и расположение вещей.",
+      "hint": "Теперь ты умеешь: описать комнаты и расположение вещей.",
+      "wordIds": [
+        "en:kitchen",
+        "en:chair",
+        "en:bedroom"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "The book is on the table.",
+        "There are two chairs.",
+        "This is my bedroom."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "There is a table in the kitchen.",
+      "translation": "На кухне есть стол.",
+      "explanation": "Ситуация: Описать комнаты и расположение вещей. There is a table in the kitchen. — На кухне есть стол."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "There are two chairs.",
+      "translation": "Есть два стула.",
+      "explanation": "Ситуация: Описать комнаты и расположение вещей. There are two chairs. — Есть два стула."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "The book is on the table.",
+      "translation": "Книга на столе.",
+      "explanation": "There is — есть один предмет; there are — несколько. In — внутри, on — на поверхности. В описании комнаты сначала называем вещь, затем место."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "This is my bedroom.",
+      "translation": "Это моя спальня.",
+      "explanation": "Ситуация: Описать комнаты и расположение вещей. This is my bedroom. — Это моя спальня."
+    }
+  ]
+}

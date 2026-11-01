@@ -91,7 +91,7 @@ class DialogueScene extends StatelessWidget {
                         character: id,
                         locale: RegExp('[А-Яа-яЁё]').hasMatch(text)
                             ? 'ru-RU'
-                            : 'en-US',
+                            : audio!.studyLocale,
                       );
                       if (!ok && context.mounted) {
                         ScaffoldMessenger.of(context).showSnackBar(

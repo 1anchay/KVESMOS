@@ -45,7 +45,7 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(start);
     await flushDb(tester);
-    expect(find.textContaining('СЕГОДНЯ ·'), findsOneWidget);
+    expect(find.textContaining('АНГЛИЙСКИЙ ·'), findsOneWidget);
     await tester.tap(find.byKey(const Key('today-start')));
     await flushDb(tester);
     await advanceTeaching(tester);

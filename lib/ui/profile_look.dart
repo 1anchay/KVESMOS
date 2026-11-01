@@ -62,7 +62,7 @@ class ProfileLook extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(
-                'LV ${app.progress.level.toString().padLeft(2, '0')}',
+                'LV ${app.globalProgress.level.toString().padLeft(2, '0')}',
                 style: const TextStyle(
                   color: collectionInk,
                   fontSize: 12,
@@ -99,19 +99,19 @@ class ProfileLook extends StatelessWidget {
         ),
         const SizedBox(height: 14),
         Text(
-          '${app.progress.xp} XP · уровень ${app.progress.level}',
+          '${app.globalProgress.xp} XP всех языков · уровень ${app.globalProgress.level}',
           style: const TextStyle(color: Color(0xFFD7E9E7), fontSize: 12),
         ),
         const SizedBox(height: 7),
         LinearProgressIndicator(
-          value: (app.progress.xp % 250) / 250,
+          value: (app.globalProgress.xp % 250) / 250,
           minHeight: 5,
           color: collectionMint,
           backgroundColor: Colors.white12,
         ),
         const SizedBox(height: 5),
         Text(
-          'Ещё ${250 - app.progress.xp % 250} XP до уровня ${app.progress.level + 1}',
+          'Ещё ${250 - app.globalProgress.xp % 250} XP до уровня ${app.globalProgress.level + 1}',
           style: const TextStyle(color: Color(0xFFB5CDCD), fontSize: 11),
         ),
       ],

@@ -1,4 +1,6 @@
 import 'explorer_profile.dart';
+import 'course_picker.dart';
+import 'companion_settings.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,7 +11,6 @@ import '../domain/course.dart';
 import '../domain/progress.dart';
 import '../domain/learning_recap.dart';
 import '../domain/missions.dart';
-import '../services/device.dart';
 import 'design.dart';
 import 'character_reactions.dart';
 import 'weekly_activity.dart';
@@ -65,8 +66,8 @@ class OnboardingPage extends ConsumerWidget {
         const SizedBox(height: 16),
         Text(
           [
-            'Я Орби. Давай познакомимся с английским: короткий урок, маленькое открытие и первая находка. Ошибаться можно.',
-            'Первый маршрут: английский для русскоговорящих. 20 коротких уроков и 60 слов.',
+            'Я Орби. Давай выберем язык: короткий урок, маленькое открытие и первая находка. Ошибаться можно.',
+            'Английский, испанский или немецкий — с понятными объяснениями по-русски.',
             'Этот курс знакомит с основами A1. Выбор помогает настроить приветствие; это не тест уровня.',
             'Цель мотивирует, но никогда не ограничивает число уроков. Её можно изменить в настройках.',
           ][step],
@@ -83,24 +84,7 @@ class OnboardingPage extends ConsumerWidget {
               Chip(label: Text('Без лимита ошибок')),
             ],
           ),
-        if (step == 1) ...[
-          Card(
-            child: ListTile(
-              contentPadding: const EdgeInsets.all(16),
-              leading: const Icon(Icons.public, color: violet, size: 36),
-              title: const Text('Английский'),
-              subtitle: const Text('Русский → English · основы A1'),
-              trailing: const Icon(
-                Icons.check_circle,
-                color: Color(0xFF007B73),
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-          const Text(
-            'Другие языки появятся после подготовки и проверки курсов.',
-          ),
-        ],
+        if (step == 1) const CoursePicker(onboarding: true),
         if (step == 2)
           ...['С нуля', 'Знаю немного'].map(
             (level) => Padding(
@@ -239,7 +223,7 @@ class _WordsPageState extends ConsumerState<WordsPage> {
                       context.mounted) {
                     showMessage(
                       context,
-                      'Английский голос недоступен. Установите его в настройках речи устройства.',
+                      'Голос выбранного языка недоступен. Текст остаётся доступным; голос можно установить в настройках речи устройства.',
                     );
                   }
                 },
@@ -370,7 +354,9 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
         TextField(
           controller: input,
           enabled: correct == null,
-          decoration: const InputDecoration(hintText: 'Напишите по-английски'),
+          decoration: const InputDecoration(
+            hintText: 'Напишите на изучаемом языке',
+          ),
         ),
         const SizedBox(height: 20),
         if (correct != null)
@@ -579,8 +565,7 @@ class QuestsPage extends ConsumerWidget {
     return pageBody([
       const SectionTitle(
         'Задания дня',
-        subtitle:
-            'Маленькая практика — новые находки. Все три задания бесплатны.',
+        subtitle: 'Общие для всех языков. Маленькая практика — новые находки.',
       ),
       Text(
         'Сегодня: ${state.day}',
@@ -606,8 +591,9 @@ class QuestsPage extends ConsumerWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    mission.id == 'review' && app.progress.words.length < 5
-                        ? 'Откроется, когда познакомимся с пятью словами. Сейчас известно ${app.progress.words.length}. Продолжи уроки — всё впереди.'
+                    mission.id == 'review' &&
+                            app.globalProgress.words.length < 5
+                        ? 'Откроется, когда познакомимся с пятью словами. Сейчас известно ${app.globalProgress.words.length}. Продолжи уроки — всё впереди.'
                         : mission.id == 'review' && !reviewReadyToday(app)
                         ? 'Все знакомые слова пока закрепляются. Повторение откроется по расписанию; можно продолжить уроки.'
                         : mission.description,
@@ -648,7 +634,7 @@ class QuestsPage extends ConsumerWidget {
                       state.awarded(mission)
                           ? '/rewards'
                           : mission.id == 'review'
-                          ? (app.progress.words.length < 5 ||
+                          ? (app.globalProgress.words.length < 5 ||
                                     !reviewReadyToday(app)
                                 ? nextLessonRoute(app)
                                 : '/review')
@@ -663,7 +649,7 @@ class QuestsPage extends ConsumerWidget {
                       state.awarded(mission)
                           ? 'К сундукам'
                           : mission.id == 'review'
-                          ? (app.progress.words.length < 5 ||
+                          ? (app.globalProgress.words.length < 5 ||
                                     !reviewReadyToday(app)
                                 ? 'Открыть новые слова'
                                 : 'Повторить слова')
@@ -699,10 +685,12 @@ class _OfflinePageState extends ConsumerState<OfflinePage> {
         subtitle:
             'Курс включён в приложение. Сохранение переносит урок в локальную SQLite-базу и не требует интернета.',
       ),
-      Text('${app.installed.length} из 20 уроков сохранено'),
+      Text(
+        '${app.course.name}: ${app.repository.catalog.where((l) => app.installed.contains(l.id)).length} из ${app.repository.catalog.length} уроков сохранено',
+      ),
       const SizedBox(height: 12),
       const Text(
-        'Озвучивание требует установленного английского голоса. Распознавание речи зависит от устройства; ввод текста доступен всегда.',
+        'Новый материал озвучивается установленным голосом выбранного языка. Для старых английских фраз есть встроенные записи. Распознавание речи зависит от устройства; ввод текста доступен всегда.',
       ),
       const SizedBox(height: 20),
       ...app.repository.catalog.map(
@@ -999,16 +987,7 @@ class SettingsPage extends ConsumerStatefulWidget {
 
 class _SettingsPageState extends ConsumerState<SettingsPage> {
   TextEditingController? name;
-  bool reminders = false, busy = false;
-  final reminderService = ReminderService();
-  @override
-  void initState() {
-    super.initState();
-    ref.read(appProvider).repository.setting('reminders').then((v) {
-      if (mounted) setState(() => reminders = v == 'true');
-    });
-  }
-
+  bool busy = false;
   @override
   void dispose() {
     name?.dispose();
@@ -1023,12 +1002,18 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
       const SectionTitle('Настройки'),
       const AudioSettings(),
       const SectionTitle('Учебный путь'),
-      const AdventureVisibilitySetting(),
-      TextButton.icon(
-        onPressed: () => context.go('/adventures'),
-        icon: const Icon(Icons.explore_outlined),
-        label: const Text('Открыть приключения'),
+      ListTile(
+        title: Text('${app.course.flag} ${app.course.name}'),
+        subtitle: const Text('Сменить язык обучения'),
+        onTap: () => context.go('/courses'),
       ),
+      if (app.course.language == 'en') const AdventureVisibilitySetting(),
+      if (app.course.language == 'en')
+        TextButton.icon(
+          onPressed: () => context.go('/adventures'),
+          icon: const Icon(Icons.explore_outlined),
+          label: const Text('Открыть приключения'),
+        ),
       TextField(
         controller: name,
         maxLength: 40,
@@ -1073,44 +1058,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
             )
             .toList(),
       ),
-      const SectionTitle('Напоминания'),
-      SwitchListTile(
-        contentPadding: EdgeInsets.zero,
-        title: const Text('Раз в сутки с момента включения'),
-        subtitle: const Text(
-          'Приблизительное время. Разрешение запрашивается только при включении.',
-        ),
-        value: reminders,
-        onChanged: busy
-            ? null
-            : (v) async {
-                setState(() => busy = true);
-                try {
-                  if (v) {
-                    final ok = await reminderService.enable();
-                    if (!ok) {
-                      if (context.mounted) {
-                        showMessage(context, 'Уведомления не разрешены.');
-                      }
-                      return;
-                    }
-                  } else {
-                    await reminderService.disable();
-                  }
-                  await app.repository.setSetting('reminders', '$v');
-                  if (mounted) setState(() => reminders = v);
-                } catch (_) {
-                  if (context.mounted) {
-                    showMessage(
-                      context,
-                      'Не удалось настроить уведомления на этом устройстве.',
-                    );
-                  }
-                } finally {
-                  if (mounted) setState(() => busy = false);
-                }
-              },
-      ),
+      const CompanionSettings(),
       const SectionTitle('Доступность'),
       const Text(
         'Размер текста следует настройке устройства. При отключении системных анимаций эффекты сокращаются. Микрофон необязателен; для речи есть текстовый режим.',
@@ -1134,7 +1082,6 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 try {
                   await app.changeAccount(() async {
                     await app.cloud?.auth.signOut(scope: SignOutScope.local);
-                    await reminderService.disable();
                     await app.repository.reset();
                     await app.initializeAfterReset();
                   });

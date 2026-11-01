@@ -15,7 +15,9 @@ class ExplorerProfile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final app = ref.watch(appProvider), p = app.progress;
-    final next = ExplorerBadge.all.where((b) => !b.earned(p)).firstOrNull;
+    final next = ExplorerBadge.all
+        .where((b) => !b.earned(app.globalProgress))
+        .firstOrNull;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -35,6 +37,9 @@ class ExplorerProfile extends ConsumerWidget {
           ),
         ),
         ProfileLook(app, showCustomizeButton: false),
+        Text(
+          '${app.course.name}: ${p.xp} XP · Все языки: ${app.globalProgress.xp} XP',
+        ),
         const SizedBox(height: 14),
         LayoutBuilder(
           builder: (context, c) => Wrap(
@@ -84,7 +89,7 @@ class ExplorerProfile extends ConsumerWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: Text(
-              'Впереди: ${next.name} · ${next.value(p)} / ${next.target}',
+              'Впереди: ${next.name} · ${next.value(app.globalProgress)} / ${next.target}',
               style: TextStyle(
                 fontSize: 12,
                 color: Theme.of(context).colorScheme.primary,
@@ -149,11 +154,11 @@ class ExplorerProfile extends ConsumerWidget {
                       ),
                       const SizedBox(height: 8),
                       LinearProgressIndicator(
-                        value: next.value(p) / next.target,
+                        value: next.value(app.globalProgress) / next.target,
                       ),
                       const SizedBox(height: 5),
                       Text(
-                        '${next.value(p)} / ${next.target}',
+                        '${next.value(app.globalProgress)} / ${next.target}',
                         style: const TextStyle(fontSize: 11),
                       ),
                     ],
@@ -198,7 +203,7 @@ class ExplorerProfile extends ConsumerWidget {
         const ExplorerActivity(),
         const SizedBox(height: 24),
         const CollectionHeading('Маршрут A1', 'Освоенные области'),
-        for (final region in JourneyRegion.all)
+        for (final region in JourneyRegion.forCourse(app.course.language))
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: CollectionPanel(
@@ -240,7 +245,7 @@ class ExplorerProfile extends ConsumerWidget {
                           style: const TextStyle(fontWeight: FontWeight.w800),
                         ),
                         Text(
-                          '${region.lessons(app.repository.catalog).where((l) => p.completed.contains(l.id)).length} / 4 миссии',
+                          '${region.lessons(app.repository.catalog).where((l) => p.completed.contains(l.id)).length} / ${region.lessons(app.repository.catalog).length} миссии',
                           style: const TextStyle(fontSize: 12),
                         ),
                       ],

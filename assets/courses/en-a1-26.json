@@ -1,0 +1,282 @@
+{
+  "id": "en-a1-26",
+  "title": "Свободное время",
+  "topic": "Свободное время",
+  "order": 25,
+  "objective": "Рассказать об увлечении и пригласить друга.",
+  "guide": "После enjoy используем глагол с -ing: enjoy reading. Play the guitar — играть на гитаре, но play football — играть в футбол, без the. Do you like…? — вопрос о предпочтении.",
+  "vocabulary": [
+    {
+      "id": "en:reading",
+      "en": "reading",
+      "ru": "чтение"
+    },
+    {
+      "id": "en:guitar",
+      "en": "guitar",
+      "ru": "гитара"
+    },
+    {
+      "id": "en:together",
+      "en": "together",
+      "ru": "вместе"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-26-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Мне нравится читать.»",
+      "answers": [
+        "I enjoy reading."
+      ],
+      "explanation": "I enjoy reading. — Мне нравится читать.",
+      "hint": "I enjoy reading. — Мне нравится читать.",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "I play the guitar.",
+        "I enjoy reading.",
+        "Let’s play together."
+      ]
+    },
+    {
+      "id": "en-a1-26-e02",
+      "type": "choice",
+      "prompt": "Что означает «I play the guitar.»?",
+      "answers": [
+        "Я играю на гитаре."
+      ],
+      "explanation": "I play the guitar. — Я играю на гитаре.",
+      "hint": "I play the guitar. — Я играю на гитаре.",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Тебе нравится футбол?",
+        "Давай поиграем вместе.",
+        "Я играю на гитаре."
+      ]
+    },
+    {
+      "id": "en-a1-26-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Тебе нравится футбол?»",
+      "answers": [
+        "Do you like football"
+      ],
+      "explanation": "Do you like football? — Тебе нравится футбол?",
+      "hint": "Do you like football? — Тебе нравится футбол?",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Do",
+        "you",
+        "like",
+        "football"
+      ]
+    },
+    {
+      "id": "en-a1-26-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "reading — чтение; guitar — гитара; together — вместе",
+      "hint": "reading — чтение; guitar — гитара; together — вместе",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:reading",
+          "en": "reading",
+          "ru": "чтение"
+        },
+        {
+          "id": "en:guitar",
+          "en": "guitar",
+          "ru": "гитара"
+        },
+        {
+          "id": "en:together",
+          "en": "together",
+          "ru": "вместе"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-26-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Давай поиграем вместе."
+      ],
+      "explanation": "Let’s play together. — Давай поиграем вместе.",
+      "hint": "Let’s play together. — Давай поиграем вместе.",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Let’s play together.",
+      "options": [
+        "Мне нравится читать.",
+        "Давай поиграем вместе.",
+        "Тебе нравится футбол?"
+      ]
+    },
+    {
+      "id": "en-a1-26-e06",
+      "type": "gap",
+      "prompt": "Люблю читать: I enjoy ___.",
+      "answers": [
+        "reading"
+      ],
+      "explanation": "После enjoy используем глагол с -ing: enjoy reading. Play the guitar — играть на гитаре, но play football — играть в футбол, без the. Do you like…? — вопрос о предпочтении.",
+      "hint": "После enjoy используем глагол с -ing: enjoy reading. Play the guitar — играть на гитаре, но play football — играть в футбол, без the. Do you like…? — вопрос о предпочтении.",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "read",
+        "reading",
+        "reads"
+      ]
+    },
+    {
+      "id": "en-a1-26-e07",
+      "type": "dialogue",
+      "prompt": "Друг говорит: «I like football.» Предложи поиграть вместе.",
+      "answers": [
+        "Let’s play together."
+      ],
+      "explanation": "В этой ситуации подходит: Let’s play together.",
+      "hint": "В этой ситуации подходит: Let’s play together.",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "I play the guitar.",
+        "I enjoy reading.",
+        "Let’s play together."
+      ],
+      "scene": "cafe"
+    },
+    {
+      "id": "en-a1-26-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «I play guitar.»",
+      "answers": [
+        "I play the guitar."
+      ],
+      "explanation": "В этом выражении с музыкальным инструментом нужен the.",
+      "hint": "В этом выражении с музыкальным инструментом нужен the.",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "en-a1-26-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Давай поиграем вместе.»",
+      "answers": [
+        "Let’s play together."
+      ],
+      "explanation": "Let’s play together. — Давай поиграем вместе.",
+      "hint": "Let’s play together. — Давай поиграем вместе.",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "en-a1-26-e10",
+      "type": "review",
+      "prompt": "Финал: Друг говорит: «I like football.» Предложи поиграть вместе.",
+      "answers": [
+        "Let’s play together."
+      ],
+      "explanation": "Теперь ты умеешь: рассказать об увлечении и пригласить друга.",
+      "hint": "Теперь ты умеешь: рассказать об увлечении и пригласить друга.",
+      "wordIds": [
+        "en:reading",
+        "en:guitar",
+        "en:together"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Let’s play together.",
+        "I enjoy reading.",
+        "I play the guitar."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "I enjoy reading.",
+      "translation": "Мне нравится читать.",
+      "explanation": "Ситуация: Рассказать об увлечении и пригласить друга. I enjoy reading. — Мне нравится читать."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "I play the guitar.",
+      "translation": "Я играю на гитаре.",
+      "explanation": "Ситуация: Рассказать об увлечении и пригласить друга. I play the guitar. — Я играю на гитаре."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Do you like football?",
+      "translation": "Тебе нравится футбол?",
+      "explanation": "После enjoy используем глагол с -ing: enjoy reading. Play the guitar — играть на гитаре, но play football — играть в футбол, без the. Do you like…? — вопрос о предпочтении."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Let’s play together.",
+      "translation": "Давай поиграем вместе.",
+      "explanation": "Ситуация: Рассказать об увлечении и пригласить друга. Let’s play together. — Давай поиграем вместе."
+    }
+  ]
+}

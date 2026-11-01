@@ -1,0 +1,282 @@
+{
+  "id": "de-a1-02",
+  "title": "Ich heiße · имя и происхождение",
+  "topic": "Ich heiße · имя и происхождение",
+  "order": 1,
+  "objective": "Представиться и назвать свою страну.",
+  "guide": "Ich heiße… — меня зовут…; ß читается как «с». Wie heißt du? — как тебя зовут? Ich komme aus… — я из… Глагол в обычном предложении стоит на втором месте: Ich komme aus Russland.",
+  "vocabulary": [
+    {
+      "id": "de:name",
+      "en": "Name",
+      "ru": "имя"
+    },
+    {
+      "id": "de:russland",
+      "en": "Russland",
+      "ru": "Россия"
+    },
+    {
+      "id": "de:deutschland",
+      "en": "Deutschland",
+      "ru": "Германия"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-02-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Меня зовут Анна.»",
+      "answers": [
+        "Ich heiße Anna."
+      ],
+      "explanation": "Ich heiße Anna. — Меня зовут Анна.",
+      "hint": "Ich heiße Anna. — Меня зовут Анна.",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Wie heißt du?",
+        "Ich heiße Anna.",
+        "Freut mich."
+      ]
+    },
+    {
+      "id": "de-a1-02-e02",
+      "type": "choice",
+      "prompt": "Что означает «Wie heißt du?»?",
+      "answers": [
+        "Как тебя зовут?"
+      ],
+      "explanation": "Wie heißt du? — Как тебя зовут?",
+      "hint": "Wie heißt du? — Как тебя зовут?",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Я из России.",
+        "Очень приятно.",
+        "Как тебя зовут?"
+      ]
+    },
+    {
+      "id": "de-a1-02-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Я из России.»",
+      "answers": [
+        "Ich komme aus Russland"
+      ],
+      "explanation": "Ich komme aus Russland. — Я из России.",
+      "hint": "Ich komme aus Russland. — Я из России.",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Ich",
+        "komme",
+        "aus",
+        "Russland"
+      ]
+    },
+    {
+      "id": "de-a1-02-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Name — имя; Russland — Россия; Deutschland — Германия",
+      "hint": "Name — имя; Russland — Россия; Deutschland — Германия",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "de:name",
+          "en": "Name",
+          "ru": "имя"
+        },
+        {
+          "id": "de:russland",
+          "en": "Russland",
+          "ru": "Россия"
+        },
+        {
+          "id": "de:deutschland",
+          "en": "Deutschland",
+          "ru": "Германия"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-02-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Очень приятно."
+      ],
+      "explanation": "Freut mich. — Очень приятно.",
+      "hint": "Freut mich. — Очень приятно.",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Freut mich.",
+      "options": [
+        "Меня зовут Анна.",
+        "Очень приятно.",
+        "Я из России."
+      ]
+    },
+    {
+      "id": "de-a1-02-e06",
+      "type": "gap",
+      "prompt": "Я представляюсь: Ich ___ Anna.",
+      "answers": [
+        "heiße"
+      ],
+      "explanation": "Ich heiße… — меня зовут…; ß читается как «с». Wie heißt du? — как тебя зовут? Ich komme aus… — я из… Глагол в обычном предложении стоит на втором месте: Ich komme aus Russland.",
+      "hint": "Ich heiße… — меня зовут…; ß читается как «с». Wie heißt du? — как тебя зовут? Ich komme aus… — я из… Глагол в обычном предложении стоит на втором месте: Ich komme aus Russland.",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "heißt",
+        "heiße",
+        "heißen"
+      ]
+    },
+    {
+      "id": "de-a1-02-e07",
+      "type": "dialogue",
+      "prompt": "Мико: «Woher kommst du?» Ответь, что ты из России.",
+      "answers": [
+        "Ich komme aus Russland."
+      ],
+      "explanation": "В этой ситуации подходит: Ich komme aus Russland.",
+      "hint": "В этой ситуации подходит: Ich komme aus Russland.",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Ich heiße Anna.",
+        "Freut mich.",
+        "Ich komme aus Russland."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "de-a1-02-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Ich aus Russland komme.»",
+      "answers": [
+        "Ich komme aus Russland."
+      ],
+      "explanation": "В повествовательной фразе спрягаемый глагол komme занимает второе место.",
+      "hint": "В повествовательной фразе спрягаемый глагол komme занимает второе место.",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "de-a1-02-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Очень приятно.»",
+      "answers": [
+        "Freut mich."
+      ],
+      "explanation": "Freut mich. — Очень приятно.",
+      "hint": "Freut mich. — Очень приятно.",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "de-a1-02-e10",
+      "type": "review",
+      "prompt": "Финал: Мико: «Woher kommst du?» Ответь, что ты из России.",
+      "answers": [
+        "Ich komme aus Russland."
+      ],
+      "explanation": "Теперь ты умеешь: представиться и назвать свою страну.",
+      "hint": "Теперь ты умеешь: представиться и назвать свою страну.",
+      "wordIds": [
+        "de:name",
+        "de:russland",
+        "de:deutschland"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Ich komme aus Russland.",
+        "Freut mich.",
+        "Ich heiße Anna."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Ich heiße Anna.",
+      "translation": "Меня зовут Анна.",
+      "explanation": "Ситуация: Представиться и назвать свою страну. Ich heiße Anna. — Меня зовут Анна."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Wie heißt du?",
+      "translation": "Как тебя зовут?",
+      "explanation": "Ситуация: Представиться и назвать свою страну. Wie heißt du? — Как тебя зовут?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Ich komme aus Russland.",
+      "translation": "Я из России.",
+      "explanation": "Ich heiße… — меня зовут…; ß читается как «с». Wie heißt du? — как тебя зовут? Ich komme aus… — я из… Глагол в обычном предложении стоит на втором месте: Ich komme aus Russland."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Freut mich.",
+      "translation": "Очень приятно.",
+      "explanation": "Ситуация: Представиться и назвать свою страну. Freut mich. — Очень приятно."
+    }
+  ]
+}

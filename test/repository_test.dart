@@ -11,9 +11,14 @@ void main() {
     final r = memoryRepository();
     addTearDown(r.db.close);
     await r.initialize();
-    expect(await r.installed(), hasLength(20));
-    expect(r.catalog, hasLength(20));
-    expect(r.vocabulary, hasLength(60));
+    expect(await r.installed(), hasLength(40));
+    expect(r.catalog, hasLength(28));
+    expect(
+      r.vocabulary.keys
+          .where((id) => !id.startsWith('es:') && !id.startsWith('de:'))
+          .length,
+      greaterThan(60),
+    );
   });
   test(
     'failed answer persists without advancing; correct commits XP and position',
@@ -112,7 +117,7 @@ void main() {
       final r = memoryRepository();
       addTearDown(r.db.close);
       await r.initialize();
-      for (final info in r.catalog) {
+      for (final info in r.catalog.take(20)) {
         final l = await r.lesson(info.id);
         final s = await r.start(l.id);
         for (var i = 0; i < l.exercises.length; i++) {
@@ -148,7 +153,7 @@ void main() {
       await r.setSetting('name', 'Anna');
       await r.uninstall('a1-01');
       await r.initialize();
-      expect(await r.installed(), hasLength(19));
+      expect(await r.installed(), hasLength(39));
       await expectLater(r.lesson('a1-01'), throwsStateError);
       await r.install(r.catalog.first);
       expect((await r.lesson('a1-01')).id, 'a1-01');

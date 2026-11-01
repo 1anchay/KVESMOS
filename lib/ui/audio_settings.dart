@@ -131,13 +131,15 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
             'Разных голосов устройства: ${audio.voices.distinctVoiceCount(locale)}. Персонажи могут использовать один и тот же голос.',
           ),
           const Text(
-            'Голоса с обязательным интернетом исключены. Установите английский и русский офлайн-пакеты в системных настройках TTS. Уникальность и пол голоса зависят от движка; параметры не имитируют актёров.',
+            'Голоса с обязательным интернетом исключены. Установите офлайн-пакет изучаемого языка и русский в системных настройках TTS. Уникальность и пол голоса зависят от движка; параметры не имитируют актёров.',
           ),
           Wrap(
             spacing: 8,
             children: [
               for (final entry in {
                 'en-US': 'English',
+                'es-ES': 'Español',
+                'de-DE': 'Deutsch',
                 'ru-RU': 'Русский',
               }.entries)
                 ChoiceChip(
@@ -170,9 +172,12 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
                           TextButton.icon(
                             onPressed: () async {
                               final ok = await audio.speak(
-                                locale == 'en-US'
-                                    ? 'Hello! Let us learn together.'
-                                    : 'Привет! Давай учиться вместе.',
+                                {
+                                  'en-US': 'Hello! Let us learn together.',
+                                  'es-ES': '¡Hola! Vamos a aprender juntos.',
+                                  'de-DE': 'Hallo! Lernen wir zusammen.',
+                                  'ru-RU': 'Привет! Давай учиться вместе.',
+                                }[locale]!,
                                 character: profile.id,
                                 locale: locale,
                                 slow: slow,

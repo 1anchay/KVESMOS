@@ -68,12 +68,28 @@ class CourseSwitch extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final c = ref.watch(appProvider).course;
+    final compact =
+        MediaQuery.sizeOf(context).width < 360 ||
+        MediaQuery.textScalerOf(context).scale(14) > 20;
     return TextButton(
       key: const Key('switch-course'),
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+      ),
       onPressed: () => context.go('/courses'),
-      child: Text(
-        '${c.flag} ${c.language.toUpperCase()} ▾',
-        semanticsLabel: 'Язык обучения: ${c.name}. Сменить язык',
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            compact
+                ? c.language.toUpperCase()
+                : '${c.flag} ${c.language.toUpperCase()}',
+            maxLines: 1,
+            semanticsLabel: 'Язык обучения: ${c.name}. Сменить язык',
+          ),
+          const SizedBox(width: 4),
+          const Icon(Icons.expand_more, size: 18),
+        ],
       ),
     );
   }

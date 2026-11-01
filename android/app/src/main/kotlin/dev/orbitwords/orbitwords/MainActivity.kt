@@ -39,8 +39,15 @@ class MainActivity : FlutterActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         intent.getStringExtra(DailyCompanion.OPEN_COURSE)?.let {
-            intent.removeExtra(DailyCompanion.OPEN_COURSE)
-            companionChannel?.invokeMethod("openCourse", DailyCompanion.course(it))
+            // Android can reuse the activity while Dart is still starting.
+            // Keep the extra for consumeLaunch until Dart acknowledges it.
+            companionChannel?.invokeMethod("openCourse", DailyCompanion.course(it), object : MethodChannel.Result {
+                override fun success(result: Any?) {
+                    if (this@MainActivity.intent === intent) intent.removeExtra(DailyCompanion.OPEN_COURSE)
+                }
+                override fun error(code: String, message: String?, details: Any?) {}
+                override fun notImplemented() {}
+            })
         }
     }
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {

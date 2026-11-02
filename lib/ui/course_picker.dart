@@ -55,7 +55,7 @@ class CoursesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => pageBody([
     Text(
-      'Три языка. Твой маршрут.',
+      'Пять языков. Твой маршрут.',
       style: Theme.of(context).textTheme.headlineMedium,
     ),
     const SizedBox(height: 16),

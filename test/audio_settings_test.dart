@@ -14,6 +14,14 @@ import 'support.dart';
 import 'widget_test.dart' show flushDb;
 
 Future<void> loadPreviewFonts() async {
+  await (FontLoader('KvesmosHanzi')..addFont(
+        Future.value(
+          ByteData.sublistView(
+            await File('assets/fonts/kvesmos-hanzi.otf').readAsBytes(),
+          ),
+        ),
+      ))
+      .load();
   for (final family in ['OrbitSans', 'Roboto', 'Ahem']) {
     final loader = FontLoader(family)
       ..addFont(

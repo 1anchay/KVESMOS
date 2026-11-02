@@ -104,6 +104,7 @@ class DailyCompanion {
       'version': 1,
       'selectedCourse': repository.course.id,
       'goal': goal,
+      'theme': await repository.setting('theme') ?? 'system',
       'updatedAt': repository.now().toUtc().toIso8601String(),
       'courses': courses,
       'reminders': preferences.toJson(),

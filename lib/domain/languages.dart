@@ -40,13 +40,34 @@ class StudyCourse {
       'assets/courses/manifest-de.json',
       6,
     ),
+    StudyCourse(
+      'ru-fr',
+      'fr',
+      'Французский',
+      '🇫🇷',
+      'fr-FR',
+      'assets/courses/manifest-fr.json',
+      6,
+    ),
+    StudyCourse(
+      'ru-zh',
+      'zh',
+      'Китайский · путунхуа',
+      '🇨🇳',
+      'zh-CN',
+      'assets/courses/manifest-zh.json',
+      6,
+    ),
   ];
   static StudyCourse byId(String? id) =>
       all.where((c) => c.id == id).firstOrNull ?? english;
   static StudyCourse forContent(String id) =>
-      id.startsWith('es-') || id.startsWith('es:')
-      ? all[1]
-      : id.startsWith('de-') || id.startsWith('de:')
-      ? all[2]
-      : english;
+      all
+          .where(
+            (c) =>
+                id.startsWith('${c.language}-') ||
+                id.startsWith('${c.language}:'),
+          )
+          .firstOrNull ??
+      english;
 }

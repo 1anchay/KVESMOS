@@ -40,11 +40,18 @@ void main() {
       await tester.tap(next);
       await tester.pumpAndSettle();
     }
-    final start = find.widgetWithText(FilledButton, 'Начать путешествие');
+    final start = find.widgetWithText(FilledButton, 'Продолжить');
     await tester.scrollUntilVisible(start, 250);
     await tester.pumpAndSettle();
     await tester.tap(start);
     await flushDb(tester);
+    for (var decision = 0; decision < 2; decision++) {
+      final later = find.widgetWithText(TextButton, 'Не сейчас');
+      await tester.scrollUntilVisible(later, 250);
+      await tester.tap(later);
+      await flushDb(tester);
+    }
+    expect(app.companion.preferences.enabled, isFalse);
     expect(find.textContaining('АНГЛИЙСКИЙ ·'), findsOneWidget);
     await tester.tap(find.byKey(const Key('today-start')));
     await flushDb(tester);

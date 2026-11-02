@@ -181,11 +181,12 @@ void main() {
       }
       router.go('/rewards');
       await flushDb(tester);
-      await tester.scrollUntilVisible(chestButton('Посмотреть награду'), 200);
-      await tester.pumpAndSettle();
-      await tester.tap(chestButton('Посмотреть награду'));
-      await tester.pumpAndSettle();
-      expect(find.text(item.name), findsOneWidget);
+      expect(chestButton('Посмотреть награду'), findsNothing);
+      expect(app.inventory.pending.where((g) => g.itemId == itemId), isEmpty);
+      expect(
+        app.inventory.grants.values.any((g) => g.itemId == itemId),
+        isTrue,
+      );
       expect(app.inventory.owned.single, itemId);
       expect(tester.takeException(), isNull);
       await tester.pumpWidget(const SizedBox.shrink());

@@ -12,8 +12,10 @@ import imageio_ffmpeg
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-checks = json.loads((ROOT / 'docs/audio/voice-pack-checksums.json').read_text())
-manifest = json.loads((ROOT / 'assets/audio/voices/manifest.json').read_text())
+checks = json.loads((ROOT / 'docs/audio/voice-pack-checksums.json').read_text(encoding='utf-8'))
+extra = ROOT / 'docs/audio/voice-v012-checksums.json'
+if extra.exists(): checks['files'] += json.loads(extra.read_text(encoding='utf-8'))['files']
+manifest = json.loads((ROOT / 'assets/audio/voices/manifest.json').read_text(encoding='utf-8'))
 durations = {}
 for entry in checks['files']:
     path = ROOT / entry['asset']

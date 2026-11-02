@@ -72,12 +72,19 @@ class RewardsRepository {
         final state = await read();
         final grant = state.grants[chestInstanceId];
         if (grant == null) throw StateError('Этот сундук ещё не получен.');
-        if (grant.itemId != null) {
-          return RewardOpening(catalog.item(grant.itemId!), false);
+        if (grant.claimed) {
+          return RewardOpening(
+            grant.itemId == null ? null : catalog.item(grant.itemId!),
+            false,
+          );
         }
         final item = catalog.draw(grant.kind, state.owned, random);
-        if (item == null) return const RewardOpening(null, false);
-        state.grants[grant.id] = ChestGrant(grant.id, grant.kind, item.id);
+        state.grants[grant.id] = ChestGrant(
+          grant.id,
+          grant.kind,
+          item?.id,
+          item == null,
+        );
         await _save(state);
         return RewardOpening(item, true);
       });

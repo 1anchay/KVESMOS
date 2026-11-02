@@ -1,3 +1,4 @@
+import 'semantic_colors.dart';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import '../domain/space_adventures.dart';
@@ -89,6 +90,7 @@ class SpaceStation extends StatelessWidget {
                           adventure.id,
                           step.room,
                           state.resolved.length,
+                          dark: Theme.of(context).brightness == Brightness.dark,
                         ),
                       ),
                     ),
@@ -99,8 +101,8 @@ class SpaceStation extends StatelessWidget {
                     right: 18,
                     child: Text(
                       roomName(step.room).toUpperCase(),
-                      style: const TextStyle(
-                        color: stationMint,
+                      style: TextStyle(
+                        color: KvColors.of(context).accent,
                         fontSize: 11,
                         letterSpacing: 1.5,
                       ),
@@ -197,24 +199,27 @@ class SpaceStation extends StatelessWidget {
 class StationPainter extends CustomPainter {
   final String adventure, room;
   final int resolved;
-  StationPainter(this.adventure, this.room, this.resolved);
+  final bool dark;
+  StationPainter(this.adventure, this.room, this.resolved, {this.dark = true});
   @override
   void paint(Canvas canvas, Size size) {
     final w = size.width, h = size.height;
-    final ink = Paint()..color = stationInk;
+    final ink = Paint()..color = dark ? stationInk : const Color(0xFFE7F4EE);
     canvas.drawRect(Offset.zero & size, ink);
     final floor = RRect.fromRectAndRadius(
       Rect.fromLTWH(12, h * .2, w - 24, h * .73),
       const Radius.circular(20),
     );
-    ink.color = adventure == 'kit'
+    ink.color = !dark
+        ? const Color(0xFFD9E7E2)
+        : adventure == 'kit'
         ? const Color(0xFF28333F)
         : const Color(0xFF1C3448);
     canvas.drawRRect(floor, ink);
     canvas.save();
     canvas.clipRRect(floor);
     ink
-      ..color = const Color(0xFF355064)
+      ..color = dark ? const Color(0xFF355064) : const Color(0xFFADC7BE)
       ..strokeWidth = 1;
     for (double x = -h; x < w + h; x += 42) {
       canvas.drawLine(Offset(x, h * .2), Offset(x + h * .5, h), ink);
@@ -297,6 +302,7 @@ class StationPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(StationPainter old) =>
+      old.dark != dark ||
       old.adventure != adventure ||
       old.room != room ||
       old.resolved != resolved;

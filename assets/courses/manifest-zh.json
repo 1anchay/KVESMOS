@@ -1,0 +1,56 @@
+{
+  "id": "ru-zh",
+  "version": 1,
+  "sourceLanguage": "ru",
+  "targetLanguage": "zh",
+  "sections": [
+    {
+      "id": "zh-v012",
+      "title": "Первые разговоры",
+      "themes": [
+        {
+          "id": "zh-intro",
+          "title": "Начальный курс",
+          "lessons": [
+            {
+              "id": "zh-a1-01",
+              "title": "你好 · первый контакт",
+              "asset": "assets/courses/zh-a1-01.json",
+              "order": 0
+            },
+            {
+              "id": "zh-a1-02",
+              "title": "我叫 · имя",
+              "asset": "assets/courses/zh-a1-02.json",
+              "order": 1
+            },
+            {
+              "id": "zh-a1-03",
+              "title": "Числа и возраст",
+              "asset": "assets/courses/zh-a1-03.json",
+              "order": 2
+            },
+            {
+              "id": "zh-a1-04",
+              "title": "Предметы · что это?",
+              "asset": "assets/courses/zh-a1-04.json",
+              "order": 3
+            },
+            {
+              "id": "zh-a1-05",
+              "title": "Моя семья",
+              "asset": "assets/courses/zh-a1-05.json",
+              "order": 4
+            },
+            {
+              "id": "zh-a1-06",
+              "title": "В кафе · чай и просьбы",
+              "asset": "assets/courses/zh-a1-06.json",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

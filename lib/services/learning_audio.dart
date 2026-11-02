@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'recorded_speech.dart';
+import '../domain/languages.dart';
 
 typedef ReadAudioSetting = Future<String?> Function(String);
 typedef WriteAudioSetting = Future<void> Function(String, String);
@@ -226,7 +227,7 @@ class CharacterVoiceService {
               const Duration(seconds: 5),
             )).where((v) => v.networkRequired != true).toList()
             ..sort((a, b) => a.key.compareTo(b.key));
-      for (final locale in ['en-US', 'ru-RU', 'es-ES', 'de-DE']) {
+      for (final locale in ['ru-RU', ...StudyCourse.all.map((c) => c.locale)]) {
         final pool = available.where((v) => v.supports(locale)).toList();
         for (final p in CharacterVoiceProfile.all) {
           final key = '${p.id}|$locale';

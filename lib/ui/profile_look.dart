@@ -1,3 +1,4 @@
+import 'semantic_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
@@ -16,6 +17,7 @@ class ProfileLook extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    final colors = KvColors.of(context);
     final gear = {...app.inventory.equipped};
     if (preview != null) gear[preview!.slot] = preview!.id;
     Cosmetic? item(String slot) =>
@@ -35,8 +37,8 @@ class ProfileLook extends StatelessWidget {
             height: 112,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white.withValues(alpha: .08),
-              border: Border.all(color: collectionMint.withValues(alpha: .5)),
+              color: colors.text.withValues(alpha: .08),
+              border: Border.all(color: colors.accent.withValues(alpha: .5)),
             ),
           ),
           ClipOval(
@@ -58,13 +60,13 @@ class ProfileLook extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
               decoration: BoxDecoration(
-                color: collectionMint,
+                color: colors.accent,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(
                 'LV ${app.globalProgress.level.toString().padLeft(2, '0')}',
-                style: const TextStyle(
-                  color: collectionInk,
+                style: TextStyle(
+                  color: colors.dark ? const Color(0xFF142F3B) : Colors.white,
                   fontSize: 12,
                   fontWeight: FontWeight.w900,
                   letterSpacing: 1,
@@ -78,10 +80,10 @@ class ProfileLook extends StatelessWidget {
     final identity = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'ИССЛЕДОВАТЕЛЬ',
           style: TextStyle(
-            color: collectionMint,
+            color: colors.accent,
             fontSize: 10,
             letterSpacing: 1.4,
             fontWeight: FontWeight.w800,
@@ -90,9 +92,9 @@ class ProfileLook extends StatelessWidget {
         const SizedBox(height: 5),
         Text(
           app.name,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 25,
+          style: TextStyle(
+            color: colors.text,
+            fontSize: big ? 25 : 21,
             fontWeight: FontWeight.w800,
             height: 1.1,
           ),
@@ -100,19 +102,19 @@ class ProfileLook extends StatelessWidget {
         const SizedBox(height: 14),
         Text(
           '${app.globalProgress.xp} XP всех языков · уровень ${app.globalProgress.level}',
-          style: const TextStyle(color: Color(0xFFD7E9E7), fontSize: 12),
+          style: TextStyle(color: colors.muted, fontSize: 12),
         ),
         const SizedBox(height: 7),
         LinearProgressIndicator(
           value: (app.globalProgress.xp % 250) / 250,
           minHeight: 5,
-          color: collectionMint,
-          backgroundColor: Colors.white12,
+          color: colors.accent,
+          backgroundColor: colors.stroke,
         ),
         const SizedBox(height: 5),
         Text(
           'Ещё ${250 - app.globalProgress.xp % 250} XP до уровня ${app.globalProgress.level + 1}',
-          style: const TextStyle(color: Color(0xFFB5CDCD), fontSize: 11),
+          style: TextStyle(color: colors.muted, fontSize: 11),
         ),
       ],
     );
@@ -124,7 +126,7 @@ class ProfileLook extends StatelessWidget {
         borderRadius: BorderRadius.circular(26),
         child: Container(
           decoration: BoxDecoration(
-            color: collectionInk,
+            color: colors.hero,
             image: background == null
                 ? null
                 : DecorationImage(
@@ -135,86 +137,92 @@ class ProfileLook extends StatelessWidget {
                     fit: BoxFit.cover,
                     onError: (_, _) {},
                     colorFilter: ColorFilter.mode(
-                      Colors.black.withValues(alpha: .65),
-                      BlendMode.darken,
+                      (colors.dark ? Colors.black : Colors.white).withValues(
+                        alpha: .84,
+                      ),
+                      colors.dark ? BlendMode.darken : BlendMode.lighten,
                     ),
                   ),
           ),
           child: Padding(
             padding: const EdgeInsets.all(18),
-            child: Column(
-              children: [
-                if (big) ...[
-                  portrait,
-                  const SizedBox(height: 16),
-                  identity,
-                ] else
-                  Row(
-                    children: [
-                      portrait,
-                      const SizedBox(width: 16),
-                      Expanded(child: identity),
-                    ],
-                  ),
-                if (item('accessory') != null || item('emote') != null)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16),
-                    child: Wrap(
-                      spacing: 12,
-                      runSpacing: 8,
+            child: LayoutBuilder(
+              builder: (context, constraints) => Column(
+                children: [
+                  if (big || constraints.maxWidth < 320) ...[
+                    portrait,
+                    const SizedBox(height: 16),
+                    identity,
+                  ] else
+                    Row(
                       children: [
-                        for (final slot in ['accessory', 'emote'])
-                          if (item(slot) != null)
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 10,
-                                vertical: 5,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Colors.white.withValues(alpha: .09),
-                                borderRadius: BorderRadius.circular(14),
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  CollectionArt(
-                                    item(slot)!.asset,
-                                    label: item(slot)!.name,
-                                    size: 35,
-                                  ),
-                                  const SizedBox(width: 8),
-                                  Text(
-                                    slot == 'accessory' ? 'Эмблема' : 'Эмоция',
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 12,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                        portrait,
+                        const SizedBox(width: 16),
+                        Expanded(child: identity),
                       ],
                     ),
-                  ),
-                if (showCustomizeButton) ...[
-                  const SizedBox(height: 16),
-                  SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton.icon(
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        side: BorderSide(
-                          color: Colors.white.withValues(alpha: .3),
-                        ),
-                        minimumSize: const Size(48, 44),
+                  if (item('accessory') != null || item('emote') != null)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16),
+                      child: Wrap(
+                        spacing: 12,
+                        runSpacing: 8,
+                        children: [
+                          for (final slot in ['accessory', 'emote'])
+                            if (item(slot) != null)
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 10,
+                                  vertical: 5,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: colors.text.withValues(alpha: .09),
+                                  borderRadius: BorderRadius.circular(14),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    CollectionArt(
+                                      item(slot)!.asset,
+                                      label: item(slot)!.name,
+                                      size: 35,
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Text(
+                                      slot == 'accessory'
+                                          ? 'Эмблема'
+                                          : 'Эмоция',
+                                      style: TextStyle(
+                                        color: colors.text,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                        ],
                       ),
-                      onPressed: () => context.go('/inventory'),
-                      icon: const Icon(Icons.tune_rounded, size: 18),
-                      label: const Text('Настроить профиль'),
                     ),
-                  ),
+                  if (showCustomizeButton) ...[
+                    const SizedBox(height: 16),
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton.icon(
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: colors.text,
+                          side: BorderSide(
+                            color: colors.text.withValues(alpha: .3),
+                          ),
+                          minimumSize: const Size(48, 44),
+                        ),
+                        onPressed: () => context.go('/inventory'),
+                        icon: Icon(Icons.tune_rounded, size: 18),
+                        label: Text('Настроить профиль'),
+                      ),
+                    ),
+                  ],
                 ],
-              ],
+              ),
             ),
           ),
         ),

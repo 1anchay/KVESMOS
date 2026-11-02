@@ -175,6 +175,11 @@ class _LessonIntroductionState extends State<LessonIntroduction> {
                                   style: theme.textTheme.headlineMedium,
                                 ),
                                 const SizedBox(height: 8),
+                                if (step.pronunciation != null)
+                                  Text(
+                                    step.pronunciation!,
+                                    style: theme.textTheme.titleMedium,
+                                  ),
                                 Text(
                                   step.translation,
                                   style: theme.textTheme.titleLarge,

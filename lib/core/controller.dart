@@ -11,6 +11,7 @@ import '../domain/missions.dart';
 import '../domain/rewards.dart';
 import '../domain/progress.dart';
 import '../domain/languages.dart';
+import '../domain/language_passport.dart';
 import '../domain/explorer_profile.dart';
 import '../services/cloud.dart';
 import '../services/daily_companion.dart';
@@ -37,6 +38,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   List<String> featuredAchievements = [];
   ProgressSnapshot progress = ProgressSnapshot();
   ProgressSnapshot globalProgress = ProgressSnapshot();
+  List<LanguagePassport> passports = [];
   StudyCourse get course => repository.course;
   Set<String> completedAdventures = {};
   int adventuresToday = 0;
@@ -46,6 +48,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   String name = 'Исследователь', startingLevel = 'С нуля';
   ThemeMode theme = ThemeMode.system;
   bool onboarded = false;
+  bool companionInvitation = false;
+  String onboardingRoute = '/welcome';
   bool showMiniAdventures = false;
   static const adventuresVisibilityKey = 'kvesmos.learning.showAdventures.v1';
   bool recoveringPassword = false, syncPaused = false;
@@ -81,6 +85,18 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     name = await repository.setting('name') ?? 'Исследователь';
     startingLevel = await repository.setting('level') ?? 'С нуля';
     onboarded = await repository.setting('onboarded') == 'true';
+    companionInvitation =
+        onboarded &&
+        await repository.setting('kvesmos.companion.invitation.v012') != 'seen';
+    final savedRoute = await repository.setting(
+      'kvesmos.onboarding.route.v012',
+    );
+    if (const [
+      '/companion/reminders',
+      '/companion/widget',
+    ].contains(savedRoute)) {
+      onboardingRoute = savedRoute!;
+    }
     showMiniAdventures =
         await repository.setting(adventuresVisibilityKey) == 'true';
     try {
@@ -127,6 +143,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     startingLevel = 'С нуля';
     theme = ThemeMode.system;
     onboarded = false;
+    onboardingRoute = '/welcome';
+    companionInvitation = false;
     showMiniAdventures = false;
     await repository.initialize();
     await companion.save(const ReminderPreferences());
@@ -150,6 +168,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
         .toSet()
         .length;
     globalProgress = ProgressSnapshot.fromEvents(events);
+    passports = LanguagePassport.fromEvents(events);
     progress = ProgressSnapshot.fromEvents(
       events.where((e) => e.courseId == course.id),
     );
@@ -220,6 +239,12 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Future<void> saveReminders(ReminderPreferences value) async {
     await companion.save(value);
     await companion.sync(goal);
+    if (!_disposed) notifyListeners();
+  }
+
+  Future<void> dismissCompanionInvitation() async {
+    await repository.setSetting('kvesmos.companion.invitation.v012', 'seen');
+    companionInvitation = false;
     if (!_disposed) notifyListeners();
   }
 
@@ -321,6 +346,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     if (newTheme != null) {
       theme = newTheme;
       await repository.setSetting('theme', theme.name);
+      await companion.sync(goal);
     }
     if (level != null) {
       startingLevel = level;

@@ -1,3 +1,4 @@
+import 'semantic_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -11,12 +12,9 @@ class RewardsPage extends ConsumerWidget {
   const RewardsPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final colors = KvColors.of(context);
     final app = ref.watch(appProvider), catalog = app.rewards.catalog;
-    final grants = app.inventory.grants.values.toList()
-      ..sort(
-        (a, b) =>
-            (a.itemId == null ? 0 : 1).compareTo(b.itemId == null ? 0 : 1),
-      );
+    final grants = app.inventory.pending.toList();
     return pageBody([
       CollectionHeading(
         'Находки экспедиции',
@@ -28,7 +26,7 @@ class RewardsPage extends ConsumerWidget {
         ),
       ),
       CollectionPanel(
-        color: collectionInk,
+        color: colors.hero,
         child: Row(
           children: [
             Expanded(
@@ -37,16 +35,16 @@ class RewardsPage extends ConsumerWidget {
                 children: [
                   Text(
                     '${app.inventory.unopened} ждут открытия',
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: colors.text,
                       fontSize: 21,
                       fontWeight: FontWeight.w800,
                     ),
                   ),
                   const SizedBox(height: 6),
-                  const Text(
+                  Text(
                     'Каждая находка — память\nо твоих открытиях.',
-                    style: TextStyle(color: Color(0xFFB7D0D1), fontSize: 13),
+                    style: TextStyle(color: colors.muted, fontSize: 13),
                   ),
                 ],
               ),
@@ -62,7 +60,7 @@ class RewardsPage extends ConsumerWidget {
       const SizedBox(height: 12),
       TextButton.icon(
         onPressed: () => context.go('/inventory'),
-        icon: const Icon(Icons.grid_view_rounded),
+        icon: Icon(Icons.grid_view_rounded),
         label: Text(
           'Моя коллекция · ${app.inventory.owned.length} / ${catalog.items.length}',
         ),
@@ -72,18 +70,18 @@ class RewardsPage extends ConsumerWidget {
         CollectionPanel(
           child: Column(
             children: [
-              const Text(
-                'Первая находка — совсем рядом',
+              Text(
+                'Всё распаковано!',
                 style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
               ),
               const SizedBox(height: 10),
-              const Text(
-                'Завершите первый урок — контейнер исследователя появится здесь.',
+              Text(
+                'Полученные предметы ждут в коллекции. Новые знания принесут следующие находки.',
               ),
               const SizedBox(height: 14),
               FilledButton(
                 onPressed: () => context.go('/map'),
-                child: const Text('Начать миссию'),
+                child: Text('Начать миссию'),
               ),
             ],
           ),
@@ -110,19 +108,19 @@ class RewardsPage extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         CollectionArt(
-                          'assets/kvesmos/${grant.kind}_${grant.itemId == null ? 'closed' : 'open'}.png',
+                          'assets/kvesmos/${grant.kind}_closed.png',
                           label: catalog.chest(grant.kind)['name_ru'],
                           size: 108,
                         ),
                         const SizedBox(height: 8),
                         Text(
                           catalog.chest(grant.kind)['name_ru'],
-                          style: const TextStyle(fontWeight: FontWeight.w800),
+                          style: TextStyle(fontWeight: FontWeight.w800),
                         ),
                         const SizedBox(height: 6),
                         Text(
                           grantSource(grant),
-                          style: const TextStyle(fontSize: 11),
+                          style: TextStyle(fontSize: 11),
                         ),
                         const SizedBox(height: 10),
                         TextButton(
@@ -134,10 +132,8 @@ class RewardsPage extends ConsumerWidget {
                             '/chest/${Uri.encodeComponent(grant.id)}',
                           ),
                           child: Text(
-                            grant.itemId == null
-                                ? 'Открыть сундук'
-                                : 'Посмотреть награду',
-                            style: const TextStyle(fontSize: 13),
+                            'Открыть сундук',
+                            style: TextStyle(fontSize: 13),
                           ),
                         ),
                       ],
@@ -170,11 +166,11 @@ class RewardsPage extends ConsumerWidget {
                         children: [
                           Text(
                             type['name_ru'],
-                            style: const TextStyle(fontWeight: FontWeight.w800),
+                            style: TextStyle(fontWeight: FontWeight.w800),
                           ),
                           Text(
                             'За уроки: ${catalog.milestones.where((m) => m['chest_id'] == type['id']).map((m) => m['unique_lesson_count']).join(', ')}',
-                            style: const TextStyle(fontSize: 12),
+                            style: TextStyle(fontSize: 12),
                           ),
                         ],
                       ),
@@ -187,13 +183,13 @@ class RewardsPage extends ConsumerWidget {
             ),
           ),
         ),
-      const Text(
+      Text(
         'Шансы учитывают уже собранные предметы. Внутри редкости все новые предметы равновероятны. Косметика не влияет на обучение. Коллекция хранится на этом устройстве.',
         style: TextStyle(fontSize: 12),
       ),
       TextButton(
         onPressed: () => context.go('/expeditions'),
-        child: const Text('Паспорт и экспедиции'),
+        child: Text('Паспорт и экспедиции'),
       ),
     ]);
   }

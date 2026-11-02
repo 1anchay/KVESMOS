@@ -1,0 +1,289 @@
+{
+  "id": "fr-a1-06",
+  "title": "В кафе · просьбы",
+  "topic": "В кафе · просьбы",
+  "order": 5,
+  "objective": "Вежливо попросить напиток и счёт.",
+  "guide": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+  "vocabulary": [
+    {
+      "id": "fr:l6-w1",
+      "en": "un café",
+      "ru": "кофе"
+    },
+    {
+      "id": "fr:l6-w2",
+      "en": "de l’eau",
+      "ru": "воды"
+    },
+    {
+      "id": "fr:l6-w3",
+      "en": "l’addition",
+      "ru": "счёт"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Встречаем фразу",
+      "phrase": "Je voudrais un café.",
+      "translation": "Я хотел бы кофе.",
+      "explanation": "Je voudrais un café. — Я хотел бы кофе.\nun café · кофе; de l’eau · воды; l’addition · счёт"
+    },
+    {
+      "character": "miko",
+      "title": "Слушаем друга",
+      "phrase": "De l’eau, s’il vous plaît.",
+      "translation": "Воды, пожалуйста.",
+      "explanation": "De l’eau, s’il vous plaît. — Воды, пожалуйста."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Разбираемся вместе",
+      "phrase": "L’addition, s’il vous plaît.",
+      "translation": "Счёт, пожалуйста.",
+      "explanation": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь твой ход",
+      "phrase": "Merci beaucoup !",
+      "translation": "Большое спасибо!",
+      "explanation": "Merci beaucoup ! — Большое спасибо!"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-06-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Я хотел бы кофе.»",
+      "answers": [
+        "Je voudrais un café."
+      ],
+      "explanation": "Je voudrais un café. — Я хотел бы кофе.",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "De l’eau, s’il vous plaît.",
+        "Je voudrais un café.",
+        "Merci beaucoup !"
+      ]
+    },
+    {
+      "id": "fr-a1-06-e02",
+      "type": "choice",
+      "prompt": "Что означает «De l’eau, s’il vous plaît.»?",
+      "answers": [
+        "Воды, пожалуйста."
+      ],
+      "explanation": "De l’eau, s’il vous plaît. — Воды, пожалуйста.",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "options": [
+        "Счёт, пожалуйста.",
+        "Большое спасибо!",
+        "Воды, пожалуйста."
+      ]
+    },
+    {
+      "id": "fr-a1-06-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Счёт, пожалуйста.»",
+      "answers": [
+        "L’addition, s’il vous plaît"
+      ],
+      "explanation": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "tokens": [
+        "L’addition,",
+        "s’il",
+        "vous",
+        "plaît"
+      ]
+    },
+    {
+      "id": "fr-a1-06-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова и значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "un café — кофе; de l’eau — воды; l’addition — счёт",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "pairs": [
+        {
+          "id": "fr:l6-w1",
+          "en": "un café",
+          "ru": "кофе"
+        },
+        {
+          "id": "fr:l6-w2",
+          "en": "de l’eau",
+          "ru": "воды"
+        },
+        {
+          "id": "fr:l6-w3",
+          "en": "l’addition",
+          "ru": "счёт"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-06-e05",
+      "type": "listen",
+      "prompt": "Послушай или открой текст и выбери значение.",
+      "answers": [
+        "Большое спасибо!"
+      ],
+      "explanation": "Merci beaucoup ! — Большое спасибо!",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "audio": "Merci beaucoup !",
+      "options": [
+        "Я хотел бы кофе.",
+        "Большое спасибо!",
+        "Счёт, пожалуйста."
+      ]
+    },
+    {
+      "id": "fr-a1-06-e06",
+      "type": "gap",
+      "prompt": "Je ___ un café.",
+      "answers": [
+        "voudrais"
+      ],
+      "explanation": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "options": [
+        "voudrait",
+        "voudrais",
+        "voudront"
+      ]
+    },
+    {
+      "id": "fr-a1-06-e07",
+      "type": "dialogue",
+      "prompt": "Ты закончил обед. Попроси счёт.",
+      "answers": [
+        "L’addition, s’il vous plaît."
+      ],
+      "explanation": "L’addition, s’il vous plaît. — Счёт, пожалуйста.",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "Je voudrais un café.",
+        "De l’eau, s’il vous plaît.",
+        "L’addition, s’il vous plaît.",
+        "Merci beaucoup !"
+      ],
+      "scene": "Орби: Ты закончил обед. Попроси счёт.\nМико: …"
+    },
+    {
+      "id": "fr-a1-06-e08",
+      "type": "choice",
+      "prompt": "Найди перевод «un café».",
+      "answers": [
+        "кофе"
+      ],
+      "explanation": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "miko",
+      "phase": "Закрепление",
+      "options": [
+        "кофе",
+        "воды",
+        "счёт"
+      ]
+    },
+    {
+      "id": "fr-a1-06-e09",
+      "type": "translate",
+      "prompt": "Вспомни: «Большое спасибо!»",
+      "answers": [
+        "Merci beaucoup !"
+      ],
+      "explanation": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Закрепление"
+    },
+    {
+      "id": "fr-a1-06-e10",
+      "type": "review",
+      "prompt": "Финал разговора: Ты закончил обед. Попроси счёт.",
+      "answers": [
+        "L’addition, s’il vous plaît."
+      ],
+      "explanation": "Теперь ты умеешь: вежливо попросить напиток и счёт.",
+      "hint": "Je voudrais… — я хотел(а) бы… Un café — чашка кофе. De l’eau — воды: eau женского рода, но перед гласной la сокращается до l’. S’il vous plaît — пожалуйста при вежливом обращении. L’addition — счёт в кафе.",
+      "wordIds": [
+        "fr:l6-w1",
+        "fr:l6-w2",
+        "fr:l6-w3"
+      ],
+      "character": "orbi",
+      "phase": "Закрепление",
+      "options": [
+        "Merci beaucoup !",
+        "L’addition, s’il vous plaît.",
+        "De l’eau, s’il vous plaît.",
+        "Je voudrais un café."
+      ]
+    }
+  ]
+}

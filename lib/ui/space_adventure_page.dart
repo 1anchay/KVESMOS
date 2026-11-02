@@ -1,3 +1,4 @@
+import 'semantic_colors.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -404,14 +405,16 @@ class _SpaceAdventurePageState extends ConsumerState<SpaceAdventurePage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       color: candidates.isEmpty
-                          ? stationInk
-                          : const Color(0xFF225A56),
+                          ? KvColors.of(context).hero
+                          : Theme.of(context).colorScheme.primaryContainer,
                       border: Border.all(color: stationMint, width: 2),
                     ),
                     child: Text(
                       step.english,
                       textAlign: TextAlign.center,
-                      style: type.headlineSmall?.copyWith(color: Colors.white),
+                      style: type.headlineSmall?.copyWith(
+                        color: KvColors.of(context).text,
+                      ),
                     ),
                   ),
                 ),

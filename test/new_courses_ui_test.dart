@@ -16,11 +16,11 @@ import 'package:orbitwords/domain/languages.dart';
 void main() {
   setUpAll(setupSqlite);
   testWidgets(
-    'all 20 new lessons complete through UI with language-specific fallback',
+    'all 32 new lessons complete through UI with language-specific fallback',
     (tester) async {
       for (final id in [
         for (var n = 21; n <= 28; n++) 'en-a1-$n',
-        for (final lang in ['es', 'de'])
+        for (final lang in ['es', 'de', 'fr', 'zh'])
           for (var n = 1; n <= 6; n++)
             '$lang-a1-${n.toString().padLeft(2, '0')}',
       ]) {

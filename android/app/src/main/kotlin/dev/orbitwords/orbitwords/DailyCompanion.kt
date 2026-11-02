@@ -32,7 +32,7 @@ object DailyCompanion {
     fun snapshot(c: Context): JSONObject? = try {
         JSONObject(prefs(c).getString("snapshot", "")!!).takeIf { it.optInt("version") == 1 }
     } catch (_: Exception) { null }
-    fun course(id: String?) = id?.takeIf { it in listOf("ru-en", "ru-es", "ru-de") } ?: "ru-en"
+    fun course(id: String?) = id?.takeIf { it in listOf("ru-en", "ru-es", "ru-de", "ru-fr", "ru-zh") } ?: "ru-en"
     fun sync(c: Context, raw: String) {
         val json = JSONObject(raw)
         require(json.optInt("version") == 1)
@@ -132,6 +132,17 @@ object DailyCompanion {
         while (history.optInt(cursor.toString()) > 0) { streak++; cursor = cursor.minusDays(1) }
         val info = j?.optJSONObject("courses")?.optJSONObject(id)
         val views = RemoteViews(c.packageName, R.layout.streak_widget)
+        val dark = when (j?.optString("theme")) {
+            "dark" -> true
+            "light" -> false
+            else -> (c.resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES
+        }
+        views.setInt(R.id.widget_root, "setBackgroundResource", if (dark) R.drawable.widget_background_dark else R.drawable.widget_background_light)
+        val text = android.graphics.Color.parseColor(if (dark) "#F0F7F5" else "#142B38")
+        val muted = android.graphics.Color.parseColor(if (dark) "#B7D0D1" else "#48616A")
+        views.setTextColor(R.id.widget_language, text)
+        views.setTextColor(R.id.widget_streak, text)
+        views.setTextColor(R.id.widget_goal, muted)
         val width = manager.getAppWidgetOptions(widget).getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH)
         val wide = width >= 240
         val compact = width < 180

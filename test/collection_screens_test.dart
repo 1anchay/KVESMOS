@@ -137,7 +137,7 @@ void main() {
             Theme.of(
               tester.element(find.byType(CosmeticPreviewDialog)),
             ).colorScheme.brightness,
-            Brightness.dark,
+            theme == ThemeMode.dark ? Brightness.dark : Brightness.light,
           );
           await tester.ensureVisible(
             find.byKey(const ValueKey('apply-cosmetic')),

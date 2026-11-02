@@ -1,0 +1,288 @@
+{
+  "id": "fr-a1-04",
+  "title": "Вещи · un и une",
+  "topic": "Вещи · un и une",
+  "order": 3,
+  "objective": "Назвать предмет вместе с артиклем.",
+  "guide": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+  "vocabulary": [
+    {
+      "id": "fr:l4-w1",
+      "en": "un livre",
+      "ru": "книга"
+    },
+    {
+      "id": "fr:l4-w2",
+      "en": "une table",
+      "ru": "стол"
+    },
+    {
+      "id": "fr:l4-w3",
+      "en": "un sac",
+      "ru": "сумка"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Встречаем фразу",
+      "phrase": "C’est un livre.",
+      "translation": "Это книга.",
+      "explanation": "C’est un livre. — Это книга.\nun livre · книга; une table · стол; un sac · сумка"
+    },
+    {
+      "character": "miko",
+      "title": "Слушаем друга",
+      "phrase": "C’est une table.",
+      "translation": "Это стол.",
+      "explanation": "C’est une table. — Это стол."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Разбираемся вместе",
+      "phrase": "C’est un sac.",
+      "translation": "Это сумка.",
+      "explanation": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?"
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь твой ход",
+      "phrase": "Qu’est-ce que c’est ?",
+      "translation": "Что это?",
+      "explanation": "Qu’est-ce que c’est ? — Что это?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-04-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Это книга.»",
+      "answers": [
+        "C’est un livre."
+      ],
+      "explanation": "C’est un livre. — Это книга.",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "C’est une table.",
+        "C’est un livre.",
+        "Qu’est-ce que c’est ?"
+      ]
+    },
+    {
+      "id": "fr-a1-04-e02",
+      "type": "choice",
+      "prompt": "Что означает «C’est une table.»?",
+      "answers": [
+        "Это стол."
+      ],
+      "explanation": "C’est une table. — Это стол.",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "options": [
+        "Это сумка.",
+        "Что это?",
+        "Это стол."
+      ]
+    },
+    {
+      "id": "fr-a1-04-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Это сумка.»",
+      "answers": [
+        "C’est un sac"
+      ],
+      "explanation": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "tokens": [
+        "C’est",
+        "un",
+        "sac"
+      ]
+    },
+    {
+      "id": "fr-a1-04-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова и значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "un livre — книга; une table — стол; un sac — сумка",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "pairs": [
+        {
+          "id": "fr:l4-w1",
+          "en": "un livre",
+          "ru": "книга"
+        },
+        {
+          "id": "fr:l4-w2",
+          "en": "une table",
+          "ru": "стол"
+        },
+        {
+          "id": "fr:l4-w3",
+          "en": "un sac",
+          "ru": "сумка"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-04-e05",
+      "type": "listen",
+      "prompt": "Послушай или открой текст и выбери значение.",
+      "answers": [
+        "Что это?"
+      ],
+      "explanation": "Qu’est-ce que c’est ? — Что это?",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "audio": "Qu’est-ce que c’est ?",
+      "options": [
+        "Это книга.",
+        "Что это?",
+        "Это сумка."
+      ]
+    },
+    {
+      "id": "fr-a1-04-e06",
+      "type": "gap",
+      "prompt": "C’est ___ table.",
+      "answers": [
+        "une"
+      ],
+      "explanation": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "options": [
+        "un",
+        "une",
+        "des"
+      ]
+    },
+    {
+      "id": "fr-a1-04-e07",
+      "type": "dialogue",
+      "prompt": "Мико показывает книгу: «Qu’est-ce que c’est ?» Назови её.",
+      "answers": [
+        "C’est un livre."
+      ],
+      "explanation": "C’est un livre. — Это книга.",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "C’est un livre.",
+        "C’est une table.",
+        "C’est un sac.",
+        "Qu’est-ce que c’est ?"
+      ],
+      "scene": "Орби: Мико показывает книгу: «Qu’est-ce que c’est ?» Назови её.\nМико: …"
+    },
+    {
+      "id": "fr-a1-04-e08",
+      "type": "choice",
+      "prompt": "Найди перевод «un livre».",
+      "answers": [
+        "книга"
+      ],
+      "explanation": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "miko",
+      "phase": "Закрепление",
+      "options": [
+        "книга",
+        "стол",
+        "сумка"
+      ]
+    },
+    {
+      "id": "fr-a1-04-e09",
+      "type": "translate",
+      "prompt": "Вспомни: «Что это?»",
+      "answers": [
+        "Qu’est-ce que c’est ?"
+      ],
+      "explanation": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Закрепление"
+    },
+    {
+      "id": "fr-a1-04-e10",
+      "type": "review",
+      "prompt": "Финал разговора: Мико показывает книгу: «Qu’est-ce que c’est ?» Назови её.",
+      "answers": [
+        "C’est un livre."
+      ],
+      "explanation": "Теперь ты умеешь: назвать предмет вместе с артиклем.",
+      "hint": "Un livre — книга (мужской род), une table — стол (женский род), un sac — сумка (мужской род). Род не совпадает с русским: учим слово вместе с артиклем. C’est… — это…; ce + est сокращается до c’est. Qu’est-ce que c’est ? — что это?",
+      "wordIds": [
+        "fr:l4-w1",
+        "fr:l4-w2",
+        "fr:l4-w3"
+      ],
+      "character": "orbi",
+      "phase": "Закрепление",
+      "options": [
+        "Qu’est-ce que c’est ?",
+        "C’est un sac.",
+        "C’est une table.",
+        "C’est un livre."
+      ]
+    }
+  ]
+}

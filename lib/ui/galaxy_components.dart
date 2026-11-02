@@ -1,3 +1,4 @@
+import 'semantic_colors.dart';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import '../domain/course.dart';
@@ -10,7 +11,7 @@ class GalaxyField extends StatelessWidget {
   @override
   Widget build(BuildContext context) => CustomPaint(
     painter: _GalaxyPainter(
-      deep || Theme.of(context).brightness == Brightness.dark,
+      Theme.of(context).brightness == Brightness.dark,
       deep,
     ),
     child: child,
@@ -166,10 +167,10 @@ class JourneyConstellation extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'ТВОЁ СОЗВЕЗДИЕ',
                 style: TextStyle(
-                  color: Color(0xFFAEEBFF),
+                  color: KvColors.of(context).accent,
                   fontSize: 11,
                   letterSpacing: 2,
                   fontWeight: FontWeight.w800,
@@ -178,8 +179,8 @@ class JourneyConstellation extends StatelessWidget {
               const SizedBox(height: 6),
               Text(
                 '${completed.length} / ${lessons.length} миссий',
-                style: const TextStyle(
-                  color: Colors.white,
+                style: TextStyle(
+                  color: KvColors.of(context).text,
                   fontSize: 20,
                   fontWeight: FontWeight.w800,
                 ),
@@ -265,7 +266,7 @@ class JourneyConstellation extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              const Text(
+              Text(
                 'Каждая звезда — новый разговор',
                 style: TextStyle(color: Color(0xFFD4DDF6)),
               ),
@@ -326,7 +327,7 @@ class StoryPanel extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'ИСТОРИЯ КОМАНДЫ',
             style: TextStyle(
               fontSize: 11,

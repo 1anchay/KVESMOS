@@ -1,0 +1,289 @@
+{
+  "id": "fr-a1-05",
+  "title": "Моя семья",
+  "topic": "Моя семья",
+  "order": 4,
+  "objective": "Представить близких.",
+  "guide": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+  "vocabulary": [
+    {
+      "id": "fr:l5-w1",
+      "en": "ma mère",
+      "ru": "моя мама"
+    },
+    {
+      "id": "fr:l5-w2",
+      "en": "mon père",
+      "ru": "мой папа"
+    },
+    {
+      "id": "fr:l5-w3",
+      "en": "ma sœur",
+      "ru": "моя сестра"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Встречаем фразу",
+      "phrase": "C’est ma mère.",
+      "translation": "Это моя мама.",
+      "explanation": "C’est ma mère. — Это моя мама.\nma mère · моя мама; mon père · мой папа; ma sœur · моя сестра"
+    },
+    {
+      "character": "miko",
+      "title": "Слушаем друга",
+      "phrase": "C’est mon père.",
+      "translation": "Это мой папа.",
+      "explanation": "C’est mon père. — Это мой папа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Разбираемся вместе",
+      "phrase": "C’est ma sœur.",
+      "translation": "Это моя сестра.",
+      "explanation": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь твой ход",
+      "phrase": "Elle s’appelle Anna.",
+      "translation": "Её зовут Анна.",
+      "explanation": "Elle s’appelle Anna. — Её зовут Анна."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-05-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Это моя мама.»",
+      "answers": [
+        "C’est ma mère."
+      ],
+      "explanation": "C’est ma mère. — Это моя мама.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "C’est mon père.",
+        "C’est ma mère.",
+        "Elle s’appelle Anna."
+      ]
+    },
+    {
+      "id": "fr-a1-05-e02",
+      "type": "choice",
+      "prompt": "Что означает «C’est mon père.»?",
+      "answers": [
+        "Это мой папа."
+      ],
+      "explanation": "C’est mon père. — Это мой папа.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "options": [
+        "Это моя сестра.",
+        "Её зовут Анна.",
+        "Это мой папа."
+      ]
+    },
+    {
+      "id": "fr-a1-05-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Это моя сестра.»",
+      "answers": [
+        "C’est ma sœur",
+        "C’est ma soeur"
+      ],
+      "explanation": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "tokens": [
+        "C’est",
+        "ma",
+        "sœur"
+      ]
+    },
+    {
+      "id": "fr-a1-05-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова и значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "ma mère — моя мама; mon père — мой папа; ma sœur — моя сестра",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "pairs": [
+        {
+          "id": "fr:l5-w1",
+          "en": "ma mère",
+          "ru": "моя мама"
+        },
+        {
+          "id": "fr:l5-w2",
+          "en": "mon père",
+          "ru": "мой папа"
+        },
+        {
+          "id": "fr:l5-w3",
+          "en": "ma sœur",
+          "ru": "моя сестра"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-05-e05",
+      "type": "listen",
+      "prompt": "Послушай или открой текст и выбери значение.",
+      "answers": [
+        "Её зовут Анна."
+      ],
+      "explanation": "Elle s’appelle Anna. — Её зовут Анна.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "audio": "Elle s’appelle Anna.",
+      "options": [
+        "Это моя мама.",
+        "Её зовут Анна.",
+        "Это моя сестра."
+      ]
+    },
+    {
+      "id": "fr-a1-05-e06",
+      "type": "gap",
+      "prompt": "C’est ___ mère.",
+      "answers": [
+        "ma"
+      ],
+      "explanation": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "options": [
+        "mon",
+        "ma",
+        "mes"
+      ]
+    },
+    {
+      "id": "fr-a1-05-e07",
+      "type": "dialogue",
+      "prompt": "Орби спрашивает имя твоей сестры. Скажи: её зовут Анна.",
+      "answers": [
+        "Elle s’appelle Anna."
+      ],
+      "explanation": "Elle s’appelle Anna. — Её зовут Анна.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "C’est ma mère.",
+        "C’est mon père.",
+        "C’est ma sœur.",
+        "Elle s’appelle Anna."
+      ],
+      "scene": "Орби: Орби спрашивает имя твоей сестры. Скажи: её зовут Анна.\nМико: …"
+    },
+    {
+      "id": "fr-a1-05-e08",
+      "type": "choice",
+      "prompt": "Найди перевод «ma mère».",
+      "answers": [
+        "моя мама"
+      ],
+      "explanation": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "miko",
+      "phase": "Закрепление",
+      "options": [
+        "моя мама",
+        "мой папа",
+        "моя сестра"
+      ]
+    },
+    {
+      "id": "fr-a1-05-e09",
+      "type": "translate",
+      "prompt": "Вспомни: «Её зовут Анна.»",
+      "answers": [
+        "Elle s’appelle Anna."
+      ],
+      "explanation": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Закрепление"
+    },
+    {
+      "id": "fr-a1-05-e10",
+      "type": "review",
+      "prompt": "Финал разговора: Орби спрашивает имя твоей сестры. Скажи: её зовут Анна.",
+      "answers": [
+        "Elle s’appelle Anna."
+      ],
+      "explanation": "Теперь ты умеешь: представить близких.",
+      "hint": "Ma mère — моя мама, mon père — мой папа, ma sœur — моя сестра. Ma и mon зависят от рода существительного, а не от того, кто говорит. Elle s’appelle… — её зовут… Здесь sœur пишется с œ; вариант soeur тоже принимается при вводе.",
+      "wordIds": [
+        "fr:l5-w1",
+        "fr:l5-w2",
+        "fr:l5-w3"
+      ],
+      "character": "orbi",
+      "phase": "Закрепление",
+      "options": [
+        "Elle s’appelle Anna.",
+        "C’est ma sœur.",
+        "C’est mon père.",
+        "C’est ma mère."
+      ]
+    }
+  ]
+}

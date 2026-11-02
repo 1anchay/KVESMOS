@@ -1,12 +1,14 @@
 /// A tiny teaching beat before the learner is asked to recall the phrase.
 class LessonTeachingStep {
   final String character, title, phrase, translation, explanation;
+  final String? pronunciation;
   const LessonTeachingStep({
     required this.character,
     required this.title,
     required this.phrase,
     required this.translation,
     required this.explanation,
+    this.pronunciation,
   });
 
   factory LessonTeachingStep.fromJson(Map<String, dynamic> json) =>
@@ -16,14 +18,16 @@ class LessonTeachingStep {
         phrase: json['phrase'],
         translation: json['translation'],
         explanation: json['explanation'],
+        pronunciation: json['pronunciation'],
       );
 }
 
 class Vocabulary {
   final String id, en, ru;
-  const Vocabulary(this.id, this.en, this.ru);
+  final String? pronunciation;
+  const Vocabulary(this.id, this.en, this.ru, [this.pronunciation]);
   factory Vocabulary.fromJson(Map<String, dynamic> j) =>
-      Vocabulary(j['id'], j['en'], j['ru']);
+      Vocabulary(j['id'], j['en'], j['ru'], j['pronunciation']);
 }
 
 enum ExerciseType {
@@ -71,6 +75,7 @@ class Exercise {
   final List<String> answers, options, tokens, wordIds;
   final List<Vocabulary> pairs;
   final String? audio, hint;
+  final String? pronunciation;
   final String? scene, visual, introduction;
   final String character, phase;
   final StoryBeat? story;
@@ -86,6 +91,7 @@ class Exercise {
     this.pairs = const [],
     this.audio,
     this.hint,
+    this.pronunciation,
     this.scene,
     this.visual,
     this.introduction,
@@ -104,6 +110,7 @@ class Exercise {
     wordIds: List<String>.from(j['wordIds'] ?? []),
     audio: j['audio'],
     hint: j['hint'],
+    pronunciation: j['pronunciation'],
     scene: j['scene'],
     visual: j['visual'],
     introduction: j['introduction'],
@@ -179,10 +186,16 @@ String normalizeAnswer(String value) {
   }.entries) {
     s = s.replaceAll(RegExp('\\b${entry.key}\\b'), entry.value);
   }
-  return s
-      .replaceAll(RegExp(r'''[.,!?¿¡;:«»"—–]'''), ' ')
+  s = s
+      .replaceAll(RegExp(r'''[.,!?¿¡;:«»"—–。！？，、：；“”]'''), ' ')
       .replaceAll(RegExp(r'\s+'), ' ')
       .trim();
+  // Hanzi has no word-space requirement. Tone marks and French accents stay
+  // meaningful; apostrophes remain part of the word.
+  if (RegExp(r'[\u3400-\u9fff]').hasMatch(s) && !RegExp(r'[a-z]').hasMatch(s)) {
+    s = s.replaceAll(' ', '');
+  }
+  return s;
 }
 
 bool checkAnswer(Exercise exercise, String input) => exercise.answers.any(

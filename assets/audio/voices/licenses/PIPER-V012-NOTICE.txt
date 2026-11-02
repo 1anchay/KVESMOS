@@ -1,0 +1,30 @@
+KVESMOS 0.12 offline synthetic speech (not studio recordings)
+
+Spanish: Piper es_ES-sharvard-medium, speaker 0.
+Model: https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_ES/sharvard/medium
+Model repository declares MIT. Model card identifies the source dataset as
+Sharvard_IJA, CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
+Attribution: Aubanel, Vincent; Garcia Lecumberri, Maria Luisa; Cooke, Martin
+(2014), Sharvard_IJA. LISTA Consortium. https://doi.org/10.7488/ds/75
+Changes: new original KVESMOS lesson text synthesized with the trained model,
+two speaking speeds, loudness normalization, mono AAC encoding. No endorsement
+by the dataset authors or original speakers is implied. Attribution is retained
+with the generated Spanish files; redistribute this notice with them.
+
+German: Piper de_DE-thorsten-medium.
+Model: https://huggingface.co/rhasspy/piper-voices/tree/main/de/de_DE/thorsten/medium
+Model repository declares MIT. Model card identifies Thorsten-Voice as CC0:
+https://github.com/thorstenMueller/Thorsten-Voice
+https://creativecommons.org/publicdomain/zero/1.0/
+Speaker/dataset creator: Thorsten Mueller. New KVESMOS lesson text synthesized
+at two speaking speeds, normalized and encoded as mono AAC. No endorsement.
+
+Authoring engine: Piper TTS 1.8.0 (GPL-3.0), used only as an offline build tool.
+https://github.com/OHF-Voice/piper1-gpl
+Neither Piper nor its model weights are distributed in the application.
+No paid service, remote synthesis endpoint or user text upload is used.
+
+Exact model/config/file SHA-256, text and phonemes are in
+docs/audio/voice-v012-checksums.json. None of these recordings has been
+human-reviewed in this development environment. Automated signal and playback
+checks do not certify pronunciation or artistic quality.

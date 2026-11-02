@@ -67,7 +67,7 @@ class OnboardingPage extends ConsumerWidget {
         Text(
           [
             'Я Орби. Давай выберем язык: короткий урок, маленькое открытие и первая находка. Ошибаться можно.',
-            'Английский, испанский или немецкий — с понятными объяснениями по-русски.',
+            'Пять языков, от английского до путунхуа, — с понятными объяснениями по-русски.',
             'Этот курс знакомит с основами A1. Выбор помогает настроить приветствие; это не тест уровня.',
             'Цель мотивирует, но никогда не ограничивает число уроков. Её можно изменить в настройках.',
           ][step],
@@ -117,17 +117,20 @@ class OnboardingPage extends ConsumerWidget {
         FilledButton(
           onPressed: () async {
             if (step == 3) {
-              await app.finishOnboarding();
-              if (context.mounted) context.go('/');
+              await app.repository.setSetting(
+                'kvesmos.onboarding.route.v012',
+                '/companion/reminders',
+              );
+              if (context.mounted) context.go('/companion/reminders');
             } else {
               context.go(['/language', '/level', '/goal'][step]);
             }
           },
-          child: Text(step == 3 ? 'Начать путешествие' : 'Продолжить'),
+          child: const Text('Продолжить'),
         ),
         const SizedBox(height: 18),
         Text(
-          'ШАГ ${step + 1} ИЗ 4',
+          'ШАГ ${step + 1} ИЗ 6',
           textAlign: TextAlign.center,
           style: const TextStyle(letterSpacing: 2, fontSize: 12),
         ),
@@ -212,7 +215,7 @@ class _WordsPageState extends ConsumerState<WordsPage> {
             child: ListTile(
               title: Text(w.en, style: Theme.of(context).textTheme.titleMedium),
               subtitle: Text(
-                '${w.ru}\n${(state.mastery * 100).round()}% освоено · повтор ${dayKey(state.next!.toLocal())}',
+                '${w.pronunciation == null ? '' : '${w.pronunciation}\n'}${w.ru}\n${(state.mastery * 100).round()}% освоено · повтор ${dayKey(state.next!.toLocal())}',
               ),
               isThreeLine: true,
               trailing: IconButton(

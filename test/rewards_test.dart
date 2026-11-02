@@ -116,7 +116,7 @@ void main() {
     },
   );
   test(
-    'exhausted chest is kept unopened, and equipment rejects unowned or wrong slots',
+    'exhausted chest is durably consumed, and equipment rejects unowned or wrong slots',
     () async {
       final r = memoryRepository();
       addTearDown(r.db.close);
@@ -131,7 +131,11 @@ void main() {
       await r.setSetting(RewardsRepository.storageKey, state.encode());
       final rewards = RewardsRepository(r, catalog);
       expect(await rewards.open('pending'), isNull);
-      expect((await rewards.read()).unopened, 1);
+      expect((await rewards.read()).unopened, 0);
+      final restarted = RewardsRepository(r, catalog);
+      expect((await restarted.openOnce('pending')).fresh, isFalse);
+      expect((await restarted.read()).grants['pending']!.consumedEmpty, isTrue);
+      expect((await restarted.read()).owned, hasLength(catalog.items.length));
       final avatar = catalog.items.firstWhere((i) => i.slot == 'avatar');
       await expectLater(rewards.equip('frame', avatar.id), throwsStateError);
       await rewards.equip('avatar', avatar.id);
@@ -187,7 +191,7 @@ void main() {
       expect((await r.session(session.id)).position, 1);
       expect(await r.setting('name'), 'Аня');
       expect(await r.setting('owner'), 'existing-account');
-      expect(await r.installed(), hasLength(40));
+      expect(await r.installed(), hasLength(52));
       expect(
         (await r.db.customSelect('PRAGMA user_version').getSingle()).read<int>(
           'user_version',

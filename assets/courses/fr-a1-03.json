@@ -1,0 +1,288 @@
+{
+  "id": "fr-a1-03",
+  "title": "Числа и возраст",
+  "topic": "Числа и возраст",
+  "order": 2,
+  "objective": "Посчитать до пяти и назвать возраст.",
+  "guide": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+  "vocabulary": [
+    {
+      "id": "fr:l3-w1",
+      "en": "deux",
+      "ru": "два"
+    },
+    {
+      "id": "fr:l3-w2",
+      "en": "trois",
+      "ru": "три"
+    },
+    {
+      "id": "fr:l3-w3",
+      "en": "cinq",
+      "ru": "пять"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Встречаем фразу",
+      "phrase": "Un, deux, trois.",
+      "translation": "Один, два, три.",
+      "explanation": "Un, deux, trois. — Один, два, три.\ndeux · два; trois · три; cinq · пять"
+    },
+    {
+      "character": "miko",
+      "title": "Слушаем друга",
+      "phrase": "Quatre, cinq.",
+      "translation": "Четыре, пять.",
+      "explanation": "Quatre, cinq. — Четыре, пять."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Разбираемся вместе",
+      "phrase": "J’ai vingt ans.",
+      "translation": "Мне двадцать лет.",
+      "explanation": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь твой ход",
+      "phrase": "Tu as quel âge ?",
+      "translation": "Сколько тебе лет?",
+      "explanation": "Tu as quel âge ? — Сколько тебе лет?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-03-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Один, два, три.»",
+      "answers": [
+        "Un, deux, trois."
+      ],
+      "explanation": "Un, deux, trois. — Один, два, три.",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "Quatre, cinq.",
+        "Un, deux, trois.",
+        "Tu as quel âge ?"
+      ]
+    },
+    {
+      "id": "fr-a1-03-e02",
+      "type": "choice",
+      "prompt": "Что означает «Quatre, cinq.»?",
+      "answers": [
+        "Четыре, пять."
+      ],
+      "explanation": "Quatre, cinq. — Четыре, пять.",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "options": [
+        "Мне двадцать лет.",
+        "Сколько тебе лет?",
+        "Четыре, пять."
+      ]
+    },
+    {
+      "id": "fr-a1-03-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Мне двадцать лет.»",
+      "answers": [
+        "J’ai vingt ans"
+      ],
+      "explanation": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "tokens": [
+        "J’ai",
+        "vingt",
+        "ans"
+      ]
+    },
+    {
+      "id": "fr-a1-03-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова и значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "deux — два; trois — три; cinq — пять",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "pairs": [
+        {
+          "id": "fr:l3-w1",
+          "en": "deux",
+          "ru": "два"
+        },
+        {
+          "id": "fr:l3-w2",
+          "en": "trois",
+          "ru": "три"
+        },
+        {
+          "id": "fr:l3-w3",
+          "en": "cinq",
+          "ru": "пять"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-03-e05",
+      "type": "listen",
+      "prompt": "Послушай или открой текст и выбери значение.",
+      "answers": [
+        "Сколько тебе лет?"
+      ],
+      "explanation": "Tu as quel âge ? — Сколько тебе лет?",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "audio": "Tu as quel âge ?",
+      "options": [
+        "Один, два, три.",
+        "Сколько тебе лет?",
+        "Мне двадцать лет."
+      ]
+    },
+    {
+      "id": "fr-a1-03-e06",
+      "type": "gap",
+      "prompt": "J’___ vingt ans.",
+      "answers": [
+        "ai"
+      ],
+      "explanation": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "options": [
+        "as",
+        "ai",
+        "est"
+      ]
+    },
+    {
+      "id": "fr-a1-03-e07",
+      "type": "dialogue",
+      "prompt": "Орби: «Tu as quel âge ?» Скажи, что тебе двадцать лет.",
+      "answers": [
+        "J’ai vingt ans."
+      ],
+      "explanation": "J’ai vingt ans. — Мне двадцать лет.",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "Un, deux, trois.",
+        "Quatre, cinq.",
+        "J’ai vingt ans.",
+        "Tu as quel âge ?"
+      ],
+      "scene": "Орби: Орби: «Tu as quel âge ?» Скажи, что тебе двадцать лет.\nМико: …"
+    },
+    {
+      "id": "fr-a1-03-e08",
+      "type": "choice",
+      "prompt": "Найди перевод «deux».",
+      "answers": [
+        "два"
+      ],
+      "explanation": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "miko",
+      "phase": "Закрепление",
+      "options": [
+        "два",
+        "три",
+        "пять"
+      ]
+    },
+    {
+      "id": "fr-a1-03-e09",
+      "type": "translate",
+      "prompt": "Вспомни: «Сколько тебе лет?»",
+      "answers": [
+        "Tu as quel âge ?"
+      ],
+      "explanation": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Закрепление"
+    },
+    {
+      "id": "fr-a1-03-e10",
+      "type": "review",
+      "prompt": "Финал разговора: Орби: «Tu as quel âge ?» Скажи, что тебе двадцать лет.",
+      "answers": [
+        "J’ai vingt ans."
+      ],
+      "explanation": "Теперь ты умеешь: посчитать до пяти и назвать возраст.",
+      "hint": "Un, deux, trois, quatre, cinq — один, два, три, четыре, пять. Возраст во французском «имеют»: j’ai vingt ans — мне двадцать лет. Je + ai сокращается до j’ai. В vingt ans конечное t связывается с гласной следующего слова; конечное s в ans не произносится.",
+      "wordIds": [
+        "fr:l3-w1",
+        "fr:l3-w2",
+        "fr:l3-w3"
+      ],
+      "character": "orbi",
+      "phase": "Закрепление",
+      "options": [
+        "Tu as quel âge ?",
+        "J’ai vingt ans.",
+        "Quatre, cinq.",
+        "Un, deux, trois."
+      ]
+    }
+  ]
+}

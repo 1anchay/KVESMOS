@@ -1,3 +1,4 @@
+import 'semantic_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -22,21 +23,21 @@ class SpaceAdventureNode extends ConsumerWidget {
           margin: const EdgeInsets.symmetric(vertical: 16),
           padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
-            color: stationInk,
+            color: KvColors.of(context).hero,
             borderRadius: BorderRadius.circular(24),
             border: Border.all(color: stationMint.withValues(alpha: .6)),
           ),
           child: DefaultTextStyle(
             style: Theme.of(
               context,
-            ).textTheme.bodyMedium!.copyWith(color: Colors.white),
+            ).textTheme.bodyMedium!.copyWith(color: KvColors.of(context).text),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Необязательно · мини-приключение',
                   style: TextStyle(
-                    color: stationMint,
+                    color: KvColors.of(context).accent,
                     letterSpacing: 1.5,
                     fontSize: 11,
                   ),

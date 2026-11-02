@@ -140,6 +140,8 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
                 'en-US': 'English',
                 'es-ES': 'Español',
                 'de-DE': 'Deutsch',
+                'fr-FR': 'Français',
+                'zh-CN': '普通话 · путунхуа',
                 'ru-RU': 'Русский',
               }.entries)
                 ChoiceChip(
@@ -176,6 +178,8 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
                                   'en-US': 'Hello! Let us learn together.',
                                   'es-ES': '¡Hola! Vamos a aprender juntos.',
                                   'de-DE': 'Hallo! Lernen wir zusammen.',
+                                  'fr-FR': 'Bonjour ! Apprenons ensemble.',
+                                  'zh-CN': '你好！我们一起学习。',
                                   'ru-RU': 'Привет! Давай учиться вместе.',
                                 }[locale]!,
                                 character: profile.id,

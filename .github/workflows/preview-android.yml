@@ -10,6 +10,7 @@ on:
       - codex/kvesmos-v09-space-adventures
       - codex/kvesmos-v010-learning-first
       - codex/kvesmos-v011-languages-companion
+      - codex/kvesmos-v012-five-languages-polish
   workflow_dispatch:
 
 jobs:

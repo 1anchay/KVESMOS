@@ -1,3 +1,4 @@
+import 'semantic_colors.dart';
 import 'package:flutter/material.dart';
 import 'character_moment.dart';
 import 'galaxy_components.dart';
@@ -24,6 +25,7 @@ ThemeData orbitTheme(Brightness brightness) {
       );
   return ThemeData(
     fontFamily: 'OrbitSans',
+    fontFamilyFallback: const ['KvesmosHanzi'],
     useMaterial3: true,
     colorScheme: scheme,
     scaffoldBackgroundColor: scheme.surface,
@@ -176,8 +178,8 @@ class SpaceBanner extends StatelessWidget {
                   Expanded(
                     child: Text(
                       eyebrow,
-                      style: const TextStyle(
-                        color: turquoise,
+                      style: TextStyle(
+                        color: KvColors.of(context).accent,
                         fontWeight: FontWeight.w800,
                         letterSpacing: 2,
                         fontSize: 11,
@@ -194,8 +196,8 @@ class SpaceBanner extends StatelessWidget {
                   Expanded(
                     child: Text(
                       title,
-                      style: const TextStyle(
-                        color: Colors.white,
+                      style: TextStyle(
+                        color: KvColors.of(context).text,
                         fontSize: 30,
                         height: 1.15,
                         fontWeight: FontWeight.w800,
@@ -214,8 +216,8 @@ class SpaceBanner extends StatelessWidget {
               const SizedBox(height: 14),
               Text(
                 subtitle,
-                style: const TextStyle(
-                  color: Color(0xFFC5CDE0),
+                style: TextStyle(
+                  color: KvColors.of(context).muted,
                   fontSize: 15,
                   height: 1.5,
                 ),

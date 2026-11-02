@@ -190,7 +190,12 @@ void main() {
       await tester.tap(find.text('Без анимации'));
       await flushDb(tester);
       expect(find.text('Коллекция этого сундука собрана!'), findsOneWidget);
-      expect(app.inventory.unopened, 1);
+      expect(app.inventory.unopened, 0);
+      expect(app.inventory.grants['pending']!.consumedEmpty, isTrue);
+      expect(
+        (await tester.runAsync(() => app.rewards.openOnce('pending')))!.fresh,
+        isFalse,
+      );
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(

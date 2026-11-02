@@ -1,3 +1,4 @@
+import 'companion_onboarding.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -224,6 +225,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
         icon: const Icon(Icons.route_rounded),
         label: const Text('Карта путешествия'),
       ),
+      const CompanionInvitation(),
       const SizedBox(height: 8),
       Text(
         'Твой темп. Твоя орбита. Без штрафов за паузы.',

@@ -1,0 +1,288 @@
+{
+  "id": "fr-a1-01",
+  "title": "Bonjour · первый разговор",
+  "topic": "Bonjour · первый разговор",
+  "order": 0,
+  "objective": "Поздороваться и ответить на вопрос о делах.",
+  "guide": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+  "vocabulary": [
+    {
+      "id": "fr:l1-w1",
+      "en": "bonjour",
+      "ru": "здравствуйте"
+    },
+    {
+      "id": "fr:l1-w2",
+      "en": "merci",
+      "ru": "спасибо"
+    },
+    {
+      "id": "fr:l1-w3",
+      "en": "salut",
+      "ru": "привет"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Встречаем фразу",
+      "phrase": "Bonjour !",
+      "translation": "Здравствуйте!",
+      "explanation": "Bonjour ! — Здравствуйте!\nbonjour · здравствуйте; merci · спасибо; salut · привет"
+    },
+    {
+      "character": "miko",
+      "title": "Слушаем друга",
+      "phrase": "Ça va ?",
+      "translation": "Как дела?",
+      "explanation": "Ça va ? — Как дела?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Разбираемся вместе",
+      "phrase": "Ça va, merci.",
+      "translation": "Хорошо, спасибо.",
+      "explanation": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь твой ход",
+      "phrase": "Au revoir !",
+      "translation": "До свидания!",
+      "explanation": "Au revoir ! — До свидания!"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-01-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Здравствуйте!»",
+      "answers": [
+        "Bonjour !"
+      ],
+      "explanation": "Bonjour ! — Здравствуйте!",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "Ça va ?",
+        "Bonjour !",
+        "Au revoir !"
+      ]
+    },
+    {
+      "id": "fr-a1-01-e02",
+      "type": "choice",
+      "prompt": "Что означает «Ça va ?»?",
+      "answers": [
+        "Как дела?"
+      ],
+      "explanation": "Ça va ? — Как дела?",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "options": [
+        "Хорошо, спасибо.",
+        "До свидания!",
+        "Как дела?"
+      ]
+    },
+    {
+      "id": "fr-a1-01-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Хорошо, спасибо.»",
+      "answers": [
+        "Ça va, merci"
+      ],
+      "explanation": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "tokens": [
+        "Ça",
+        "va,",
+        "merci"
+      ]
+    },
+    {
+      "id": "fr-a1-01-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова и значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "bonjour — здравствуйте; merci — спасибо; salut — привет",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "pairs": [
+        {
+          "id": "fr:l1-w1",
+          "en": "bonjour",
+          "ru": "здравствуйте"
+        },
+        {
+          "id": "fr:l1-w2",
+          "en": "merci",
+          "ru": "спасибо"
+        },
+        {
+          "id": "fr:l1-w3",
+          "en": "salut",
+          "ru": "привет"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-01-e05",
+      "type": "listen",
+      "prompt": "Послушай или открой текст и выбери значение.",
+      "answers": [
+        "До свидания!"
+      ],
+      "explanation": "Au revoir ! — До свидания!",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "audio": "Au revoir !",
+      "options": [
+        "Здравствуйте!",
+        "До свидания!",
+        "Хорошо, спасибо."
+      ]
+    },
+    {
+      "id": "fr-a1-01-e06",
+      "type": "gap",
+      "prompt": "Ça ___, merci.",
+      "answers": [
+        "va"
+      ],
+      "explanation": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "options": [
+        "vas",
+        "va",
+        "vais"
+      ]
+    },
+    {
+      "id": "fr-a1-01-e07",
+      "type": "dialogue",
+      "prompt": "Орби: «Ça va ?» Ответь: хорошо, спасибо.",
+      "answers": [
+        "Ça va, merci."
+      ],
+      "explanation": "Ça va, merci. — Хорошо, спасибо.",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "Bonjour !",
+        "Ça va ?",
+        "Ça va, merci.",
+        "Au revoir !"
+      ],
+      "scene": "Орби: Орби: «Ça va ?» Ответь: хорошо, спасибо.\nМико: …"
+    },
+    {
+      "id": "fr-a1-01-e08",
+      "type": "choice",
+      "prompt": "Найди перевод «bonjour».",
+      "answers": [
+        "здравствуйте"
+      ],
+      "explanation": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "miko",
+      "phase": "Закрепление",
+      "options": [
+        "здравствуйте",
+        "спасибо",
+        "привет"
+      ]
+    },
+    {
+      "id": "fr-a1-01-e09",
+      "type": "translate",
+      "prompt": "Вспомни: «До свидания!»",
+      "answers": [
+        "Au revoir !"
+      ],
+      "explanation": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Закрепление"
+    },
+    {
+      "id": "fr-a1-01-e10",
+      "type": "review",
+      "prompt": "Финал разговора: Орби: «Ça va ?» Ответь: хорошо, спасибо.",
+      "answers": [
+        "Ça va, merci."
+      ],
+      "explanation": "Теперь ты умеешь: поздороваться и ответить на вопрос о делах.",
+      "hint": "Bonjour — дневное приветствие, salut — неформальное. В ça va буква ç читается как «с». Вопрос Ça va ? и ответ Ça va. различаются интонацией. Merci — спасибо.",
+      "wordIds": [
+        "fr:l1-w1",
+        "fr:l1-w2",
+        "fr:l1-w3"
+      ],
+      "character": "orbi",
+      "phase": "Закрепление",
+      "options": [
+        "Au revoir !",
+        "Ça va, merci.",
+        "Ça va ?",
+        "Bonjour !"
+      ]
+    }
+  ]
+}

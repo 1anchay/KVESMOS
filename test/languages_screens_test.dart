@@ -27,7 +27,7 @@ void main() {
             app = AppController(r),
             boundary = GlobalKey();
         await tester.runAsync(() async {
-          await Directory('test-output/v011').create(recursive: true);
+          await Directory('test-output/v012').create(recursive: true);
           await loadPreviewFonts();
           await app.initialize();
           await app.finishOnboarding();
@@ -50,18 +50,24 @@ void main() {
         final router = GoRouter.of(tester.element(find.byType(OrbitShell)));
         Future<void> capture(String label) async {
           await flushDb(tester);
+          await tester.runAsync(() async {
+            for (final image in tester.widgetList<Image>(find.byType(Image))) {
+              await precacheImage(image.image, boundary.currentContext!);
+            }
+          });
+          await tester.pumpAndSettle();
           expect(tester.takeException(), isNull, reason: label);
           await tester.runAsync(
             () => capturePreview(
               boundary,
-              'v011/$label-${theme.name}-${small ? "320-200" : "390"}',
+              'v012/$label-${theme.name}-${small ? "320-200" : "390"}',
             ),
           );
         }
 
         router.go('/courses');
         await capture('courses');
-        for (final lang in ['es', 'de', 'en']) {
+        for (final lang in ['es', 'de', 'fr', 'zh', 'en']) {
           await tester.runAsync(() => app.selectCourse('ru-$lang'));
           router.go('/');
           await capture('today-$lang');
@@ -85,6 +91,50 @@ void main() {
           await advanceTeaching(tester);
           await capture('lesson-$lang');
         }
+        for (final language in ['en', 'es', 'de', 'fr', 'zh']) {
+          await tester.runAsync(() async {
+            await app.selectCourse('ru-$language');
+            final run = await r.startLesson(r.catalog.first.id);
+            await r.answer(
+              run.session.id,
+              0,
+              run.lesson.exercises.first,
+              run.lesson.exercises.first.answers.first,
+              total: 10,
+            );
+            await app.refresh();
+          });
+        }
+        for (final route in [
+          '/profile',
+          '/inventory',
+          '/rewards',
+          '/achievements',
+          '/stats',
+          '/companion/reminders',
+          '/companion/widget',
+        ]) {
+          router.go(route);
+          await capture(route.substring(1).replaceAll('/', '-'));
+        }
+        router.go('/profile');
+        await flushDb(tester);
+        await tester.scrollUntilVisible(
+          find.text('Изучаю языков: 5'),
+          250,
+          maxScrolls: 40,
+          scrollable: find.byType(Scrollable).first,
+        );
+        await capture('passport-five');
+        final grant = app.inventory.pending.first;
+        router.go('/chest/${Uri.encodeComponent(grant.id)}');
+        await capture('chest-before');
+        await tester.ensureVisible(find.text('Без анимации'));
+        await tester.tap(find.text('Без анимации'));
+        await capture('chest-reveal');
+        expect(app.inventory.pending.any((g) => g.id == grant.id), isFalse);
+        router.go('/rewards');
+        await capture('chest-removed');
         router.go('/settings');
         await flushDb(tester);
         await tester.scrollUntilVisible(

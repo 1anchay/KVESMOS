@@ -1,0 +1,56 @@
+{
+  "id": "ru-fr",
+  "version": 1,
+  "sourceLanguage": "ru",
+  "targetLanguage": "fr",
+  "sections": [
+    {
+      "id": "fr-v012",
+      "title": "Первые разговоры",
+      "themes": [
+        {
+          "id": "fr-intro",
+          "title": "Начальный курс",
+          "lessons": [
+            {
+              "id": "fr-a1-01",
+              "title": "Bonjour · первый разговор",
+              "asset": "assets/courses/fr-a1-01.json",
+              "order": 0
+            },
+            {
+              "id": "fr-a1-02",
+              "title": "Je m’appelle · знакомимся",
+              "asset": "assets/courses/fr-a1-02.json",
+              "order": 1
+            },
+            {
+              "id": "fr-a1-03",
+              "title": "Числа и возраст",
+              "asset": "assets/courses/fr-a1-03.json",
+              "order": 2
+            },
+            {
+              "id": "fr-a1-04",
+              "title": "Вещи · un и une",
+              "asset": "assets/courses/fr-a1-04.json",
+              "order": 3
+            },
+            {
+              "id": "fr-a1-05",
+              "title": "Моя семья",
+              "asset": "assets/courses/fr-a1-05.json",
+              "order": 4
+            },
+            {
+              "id": "fr-a1-06",
+              "title": "В кафе · просьбы",
+              "asset": "assets/courses/fr-a1-06.json",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

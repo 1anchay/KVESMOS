@@ -1,3 +1,4 @@
+import 'semantic_colors.dart';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import '../domain/explorer_profile.dart';
@@ -54,11 +55,7 @@ class CollectionPanel extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: padding,
     decoration: BoxDecoration(
-      color:
-          color ??
-          (Theme.of(context).brightness == Brightness.dark
-              ? const Color(0xFF1D3540)
-              : Colors.white),
+      color: color ?? KvColors.of(context).panel,
       borderRadius: BorderRadius.circular(24),
       border: Border.all(
         color: Theme.of(

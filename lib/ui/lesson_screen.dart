@@ -628,6 +628,13 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  if (e.pronunciation != null) ...[
+                    Text(
+                      e.pronunciation!,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const SizedBox(height: 8),
+                  ],
                   if (e.introduction != null) ...[
                     Text(
                       e.introduction!,

@@ -11,7 +11,7 @@ void main() {
     final r = memoryRepository();
     addTearDown(r.db.close);
     await r.initialize();
-    expect(await r.installed(), hasLength(40));
+    expect(await r.installed(), hasLength(52));
     expect(r.catalog, hasLength(28));
     expect(
       r.vocabulary.keys
@@ -153,7 +153,7 @@ void main() {
       await r.setSetting('name', 'Anna');
       await r.uninstall('a1-01');
       await r.initialize();
-      expect(await r.installed(), hasLength(39));
+      expect(await r.installed(), hasLength(51));
       await expectLater(r.lesson('a1-01'), throwsStateError);
       await r.install(r.catalog.first);
       expect((await r.lesson('a1-01')).id, 'a1-01');

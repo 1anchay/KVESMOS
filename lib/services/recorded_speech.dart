@@ -79,7 +79,21 @@ class RecordedSpeechCatalog {
                 r.locale == locale &&
                 r.text.trim() == text.trim(),
           )
+          .firstOrNull ??
+      recordings
+          .where(
+            (r) =>
+                r.character == '*' &&
+                r.locale == locale &&
+                _phrase(r.text) == _phrase(text),
+          )
           .firstOrNull;
+  static String _phrase(String text) => text
+      .trim()
+      .toLowerCase()
+      .replaceAll('’', "'")
+      .replaceAll(RegExp(r'[.!?¿¡]'), '')
+      .replaceAll(RegExp(r'\s+'), ' ');
 }
 
 abstract class RecordedSpeechBackend {

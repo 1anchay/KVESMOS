@@ -9,6 +9,7 @@ import '../domain/progress.dart';
 import 'collection_components.dart';
 import 'profile_look.dart';
 import 'profile_achievements.dart';
+import 'language_passport.dart';
 
 class ExplorerProfile extends ConsumerWidget {
   const ExplorerProfile({super.key});
@@ -98,6 +99,7 @@ class ExplorerProfile extends ConsumerWidget {
             ),
           ),
         const AchievementShowcase(),
+        const LanguagePassportPanel(),
         const SizedBox(height: 14),
         Wrap(
           spacing: 10,

@@ -14,12 +14,12 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUpAll(setupSqlite);
   test(
-    '40 installed lessons: separate catalogs, authored content and full scoring',
+    '52 installed lessons: separate catalogs, authored content and full scoring',
     () async {
       final r = memoryRepository();
       addTearDown(r.db.close);
       await r.initialize();
-      expect(await r.installed(), hasLength(40));
+      expect(await r.installed(), hasLength(52));
       for (final c in StudyCourse.all) {
         await r.selectCourse(c.id);
         expect(r.catalog, hasLength(c.lessons));
@@ -46,7 +46,7 @@ void main() {
         expect((await r.progress()).xp, c.lessons * 120);
         expect((await r.progress()).completed, hasLength(c.lessons));
       }
-      expect((await r.globalProgress()).xp, 4800);
+      expect((await r.globalProgress()).xp, 6240);
     },
   );
   test(
@@ -85,7 +85,7 @@ void main() {
       final before = jsonEncode((await r.allEvents()).single.toJson());
       await r.initialize();
       await r.initialize();
-      expect(await r.installed(), hasLength(39));
+      expect(await r.installed(), hasLength(51));
       expect(await r.installed(), isNot(contains('a1-20')));
       expect(jsonEncode((await r.allEvents()).single.toJson()), before);
       expect((await r.startLesson('a1-01')).session.id, old.id);
@@ -140,10 +140,10 @@ void main() {
           true,
         );
         expect(app.progress.xp, 10);
-        expect(app.globalProgress.xp, 30);
+        expect(app.globalProgress.xp, 50);
         expect(app.inventory.encode(), grants);
       }
-      expect(app.progress.streak(now), 1); // German studied yesterday.
+      expect(app.progress.streak(now), 1); // Mandarin studied yesterday.
       await app.selectCourse('ru-en');
       expect(app.progress.streak(now), 0);
       final remote = FakeRemote(), other = memoryRepository();
@@ -153,14 +153,16 @@ void main() {
       final copy = SyncService(other, remote);
       await copy.run();
       await copy.run();
-      expect((await other.globalProgress()).xp, 30);
+      expect((await other.globalProgress()).xp, 50);
       await other.selectCourse('ru-es');
       expect((await other.progress()).xp, 10);
-      expect((await r.globalProgress()).xp, 30);
+      expect((await r.globalProgress()).xp, 50);
       expect((await r.allEvents()).map((e) => e.courseId).toSet(), {
         'ru-en',
         'ru-es',
         'ru-de',
+        'ru-fr',
+        'ru-zh',
       });
     },
   );

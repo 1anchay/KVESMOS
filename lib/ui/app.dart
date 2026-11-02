@@ -13,6 +13,7 @@ import 'personal_practice.dart';
 import 'space_adventure_page.dart';
 import 'optional_adventures.dart';
 import 'course_picker.dart';
+import 'companion_onboarding.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -54,8 +55,16 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
                     state.uri.path.startsWith('/adventure/'))
           ? '/map'
           : null,
-      initialLocation: app.onboarded ? '/' : '/welcome',
+      initialLocation: app.onboarded ? '/' : app.onboardingRoute,
       routes: [
+        GoRoute(
+          path: '/companion/reminders',
+          builder: (_, _) => const CompanionOnboarding(),
+        ),
+        GoRoute(
+          path: '/companion/widget',
+          builder: (_, _) => const CompanionOnboarding(widgetStep: true),
+        ),
         GoRoute(
           path: '/adventure/:id',
           builder: (_, state) => SpaceAdventurePage(

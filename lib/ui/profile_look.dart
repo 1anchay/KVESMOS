@@ -146,79 +146,83 @@ class ProfileLook extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(18),
-            child: Column(
-              children: [
-                if (big) ...[
-                  portrait,
-                  const SizedBox(height: 16),
-                  identity,
-                ] else
-                  Row(
-                    children: [
-                      portrait,
-                      const SizedBox(width: 16),
-                      Expanded(child: identity),
-                    ],
-                  ),
-                if (item('accessory') != null || item('emote') != null)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16),
-                    child: Wrap(
-                      spacing: 12,
-                      runSpacing: 8,
+            child: LayoutBuilder(
+              builder: (context, constraints) => Column(
+                children: [
+                  if (big || constraints.maxWidth < 320) ...[
+                    portrait,
+                    const SizedBox(height: 16),
+                    identity,
+                  ] else
+                    Row(
                       children: [
-                        for (final slot in ['accessory', 'emote'])
-                          if (item(slot) != null)
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 10,
-                                vertical: 5,
-                              ),
-                              decoration: BoxDecoration(
-                                color: colors.text.withValues(alpha: .09),
-                                borderRadius: BorderRadius.circular(14),
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  CollectionArt(
-                                    item(slot)!.asset,
-                                    label: item(slot)!.name,
-                                    size: 35,
-                                  ),
-                                  const SizedBox(width: 8),
-                                  Text(
-                                    slot == 'accessory' ? 'Эмблема' : 'Эмоция',
-                                    style: TextStyle(
-                                      color: colors.text,
-                                      fontSize: 12,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                        portrait,
+                        const SizedBox(width: 16),
+                        Expanded(child: identity),
                       ],
                     ),
-                  ),
-                if (showCustomizeButton) ...[
-                  const SizedBox(height: 16),
-                  SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton.icon(
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: colors.text,
-                        side: BorderSide(
-                          color: colors.text.withValues(alpha: .3),
-                        ),
-                        minimumSize: const Size(48, 44),
+                  if (item('accessory') != null || item('emote') != null)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16),
+                      child: Wrap(
+                        spacing: 12,
+                        runSpacing: 8,
+                        children: [
+                          for (final slot in ['accessory', 'emote'])
+                            if (item(slot) != null)
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 10,
+                                  vertical: 5,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: colors.text.withValues(alpha: .09),
+                                  borderRadius: BorderRadius.circular(14),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    CollectionArt(
+                                      item(slot)!.asset,
+                                      label: item(slot)!.name,
+                                      size: 35,
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Text(
+                                      slot == 'accessory'
+                                          ? 'Эмблема'
+                                          : 'Эмоция',
+                                      style: TextStyle(
+                                        color: colors.text,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                        ],
                       ),
-                      onPressed: () => context.go('/inventory'),
-                      icon: Icon(Icons.tune_rounded, size: 18),
-                      label: Text('Настроить профиль'),
                     ),
-                  ),
+                  if (showCustomizeButton) ...[
+                    const SizedBox(height: 16),
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton.icon(
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: colors.text,
+                          side: BorderSide(
+                            color: colors.text.withValues(alpha: .3),
+                          ),
+                          minimumSize: const Size(48, 44),
+                        ),
+                        onPressed: () => context.go('/inventory'),
+                        icon: Icon(Icons.tune_rounded, size: 18),
+                        label: Text('Настроить профиль'),
+                      ),
+                    ),
+                  ],
                 ],
-              ],
+              ),
             ),
           ),
         ),

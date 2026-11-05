@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Вчера: was и were", "goal": "Рассказать, где вы были вчера.",
+    "guide": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+    "phrases": [["I was at home yesterday.", "Вчера я был дома."], ["We were at the station.", "Мы были на станции."], ["Were you at work?", "Ты был на работе?"], ["No, I wasn't at work.", "Нет, я не был на работе."]],
+    "dialogue": "Орби: Were you at work?\nМико: No, I wasn't at work. I was at home yesterday.",
+    "question": "Где Мико был вчера?", "comprehension": ["Дома", "На работе", "На станции"],
+    "repair": ["We was at the station.", "We were at the station.", "После we в прошлом времени нужна форма were."],
+    "tokens": ["We", "were", "at", "the", "station"]
+  },
+  {
+    "title": "Выходные: действия в прошлом", "goal": "Рассказать о двух завершённых действиях.",
+    "guide": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+    "phrases": [["I visited my sister yesterday.", "Вчера я навестил сестру."], ["We watched a film last Sunday.", "В прошлое воскресенье мы посмотрели фильм."], ["I cooked dinner at home.", "Я приготовил ужин дома."], ["We walked in the park.", "Мы погуляли в парке."]],
+    "dialogue": "Орби: I visited my sister yesterday.\nМико: We watched a film last Sunday. We walked in the park.",
+    "question": "Что Мико сделал в прошлое воскресенье?", "comprehension": ["Посмотрел фильм", "Купил билет", "Работал в офисе"],
+    "repair": ["Yesterday I visit my sister.", "Yesterday I visited my sister.", "Yesterday требует прошедшего времени: visited."],
+    "tokens": ["We", "watched", "a", "film", "last", "Sunday"]
+  },
+  {
+    "title": "Вопросы о вчерашнем дне", "goal": "Спросить о прошлом событии и ответить отрицательно.",
+    "guide": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+    "phrases": [["Did you visit the museum?", "Ты посетил музей?"], ["I didn't visit the museum.", "Я не посетил музей."], ["Did you enjoy the film?", "Тебе понравился фильм?"], ["Yes, I did.", "Да."]],
+    "dialogue": "Орби: Did you visit the museum?\nМико: I didn't visit the museum.\nОрби: Did you enjoy the film?\nМико: Yes, I did.",
+    "question": "Что известно из разговора?", "comprehension": ["Мико понравился фильм", "Мико посетил музей", "Мико не смотрел фильм"],
+    "repair": ["Did you visited the museum?", "Did you visit the museum?", "Прошлое уже выражено did: второй глагол — visit."],
+    "tokens": ["I", "didn't", "visit", "the", "museum"]
+  },
+  {
+    "title": "Поездка: went и bought", "goal": "Сообщить, куда вы съездили и что купили.",
+    "guide": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+    "phrases": [["I went to London by train.", "Я поехал в Лондон на поезде."], ["I bought a return ticket.", "Я купил билет туда и обратно."], ["We took a taxi to the hotel.", "Мы взяли такси до гостиницы."], ["I didn't buy a single ticket.", "Я не покупал билет в одну сторону."]],
+    "dialogue": "Орби: I went to London by train. I bought a return ticket.\nМико: We took a taxi to the hotel.",
+    "question": "Какой билет купил Орби?", "comprehension": ["Туда и обратно", "Только в одну сторону", "Билет в музей"],
+    "repair": ["I didn't bought a single ticket.", "I didn't buy a single ticket.", "После didn't используем buy; bought нужно в утвердительной фразе."],
+    "tokens": ["I", "bought", "a", "return", "ticket"]
+  },
+  {
+    "title": "Заселяемся в гостиницу", "goal": "Сообщить о бронировании и уточнить время выезда.",
+    "guide": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+    "phrases": [["I have a reservation under the name Anna.", "У меня бронирование на имя Анна."], ["I need a room for two nights.", "Мне нужен номер на две ночи."], ["What time is check-out?", "Во сколько выезд?"], ["Check-out is at eleven.", "Выезд в одиннадцать."]],
+    "dialogue": "Анна: I have a reservation under the name Anna.\nОрби: Welcome!\nАнна: What time is check-out?\nОрби: Check-out is at eleven.",
+    "question": "Когда Анне нужно освободить номер?", "comprehension": ["В одиннадцать", "В два", "Завтра вечером"],
+    "repair": ["Check-out is on eleven.", "Check-out is at eleven.", "С часами используется at. On употребляется с днями."],
+    "tokens": ["I", "need", "a", "room", "for", "two", "nights"]
+  },
+  {
+    "title": "Помощь в гостинице", "goal": "Описать простую проблему и попросить помощь.",
+    "guide": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+    "phrases": [["There isn't a towel in my room.", "В моём номере нет полотенца."], ["The shower doesn't work.", "Душ не работает."], ["Could you help me, please?", "Не могли бы вы мне помочь?"], ["Could I have another towel?", "Можно мне ещё одно полотенце?"]],
+    "dialogue": "Анна: The shower doesn't work. Could you help me, please?\nОрби: Yes.\nАнна: Could I have another towel?",
+    "question": "Какая проблема у Анны?", "comprehension": ["Не работает душ", "Потерян билет", "Закрыт ресторан"],
+    "repair": ["Could you to help me, please?", "Could you help me, please?", "После could используем help без to."],
+    "tokens": ["The", "shower", "doesn't", "work"]
+  },
+  {
+    "title": "Переносим встречу", "goal": "Предложить другое время и согласовать его.",
+    "guide": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+    "phrases": [["Could we move our meeting to Friday?", "Можем перенести нашу встречу на пятницу?"], ["I'm afraid I can't come on Thursday.", "К сожалению, я не могу прийти в четверг."], ["Friday works for me.", "Пятница мне подходит."], ["Let's meet at half past ten.", "Давай встретимся в половине одиннадцатого."]],
+    "dialogue": "Орби: Could we move our meeting to Friday?\nМико: Friday works for me.\nОрби: Let's meet at half past ten.",
+    "question": "О каком времени договорились?", "comprehension": ["Пятница, 10:30", "Четверг, 10:00", "Пятница, 11:30"],
+    "repair": ["Let's to meet at half past ten.", "Let's meet at half past ten.", "После let's идёт meet без to. Half past ten — 10:30."],
+    "tokens": ["I'm", "afraid", "I", "can't", "come", "on", "Thursday"]
+  },
+  {
+    "title": "Сравниваем покупки", "goal": "Сравнить два предмета по цене и размеру.",
+    "guide": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+    "phrases": [["This bag is cheaper than that one.", "Эта сумка дешевле той."], ["This jacket is bigger.", "Эта куртка больше."], ["These shoes are more comfortable.", "Эти туфли удобнее."], ["I'll take the cheaper bag.", "Я возьму сумку подешевле."]],
+    "dialogue": "Орби: This bag is cheaper than that one.\nМико: I'll take the cheaper bag.",
+    "question": "Какую сумку выбрал Мико?", "comprehension": ["Более дешёвую", "Более дорогую", "Самую большую"],
+    "repair": ["This bag is more cheaper.", "This bag is cheaper.", "Не используем more вместе с -er: достаточно cheaper."],
+    "tokens": ["This", "jacket", "is", "bigger"]
+  },
+  {
+    "title": "В аптеке: простые советы", "goal": "Описать симптом и понять мягкий совет.",
+    "guide": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+    "phrases": [["I have a sore throat.", "У меня болит горло."], ["Do you have anything for a headache?", "У вас есть что-нибудь от головной боли?"], ["You should rest today.", "Тебе стоит сегодня отдохнуть."], ["I need to speak to a pharmacist.", "Мне нужно поговорить с фармацевтом."]],
+    "dialogue": "Мико: I have a sore throat.\nОрби: You should rest today.\nМико: I need to speak to a pharmacist.",
+    "question": "С кем хочет поговорить Мико?", "comprehension": ["С фармацевтом", "С водителем", "С учителем"],
+    "repair": ["You should to rest today.", "You should rest today.", "После should глагол rest употребляется без to."],
+    "tokens": ["Do", "you", "have", "anything", "for", "a", "headache"]
+  },
+  {
+    "title": "Планы: going to", "goal": "Рассказать о намерении на завтра.",
+    "guide": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+    "phrases": [["I'm going to cook dinner tomorrow.", "Завтра я собираюсь приготовить ужин."], ["We're going to visit our friends.", "Мы собираемся навестить друзей."], ["Are you going to stay at home?", "Ты собираешься остаться дома?"], ["I'm not going to work tomorrow.", "Завтра я не собираюсь работать."]],
+    "dialogue": "Орби: Are you going to stay at home?\nМико: We're going to visit our friends. I'm not going to work tomorrow.",
+    "question": "Что планирует Мико?", "comprehension": ["Навестить друзей", "Пойти на работу", "Купить куртку"],
+    "repair": ["We going to visit our friends.", "We're going to visit our friends.", "Перед going to нужен are: we're = we are."],
+    "tokens": ["We're", "going", "to", "visit", "our", "friends"]
+  },
+  {
+    "title": "На связи: рабочий звонок", "goal": "Попросить повторить и договориться о звонке.",
+    "guide": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+    "phrases": [["Could you repeat that, please?", "Не могли бы вы повторить?"], ["Could you send me the address by email?", "Не могли бы вы отправить мне адрес по электронной почте?"], ["I'll call you back after lunch.", "Я перезвоню тебе после обеда."], ["The connection is bad.", "Плохая связь."]],
+    "dialogue": "Мико: The connection is bad. Could you repeat that, please?\nОрби: I'll call you back after lunch.",
+    "question": "Что собирается сделать Орби?", "comprehension": ["Перезвонить после обеда", "Прийти до обеда", "Отменить поездку"],
+    "repair": ["I'll to call you back after lunch.", "I'll call you back after lunch.", "I'll = I will. После will не ставим to."],
+    "tokens": ["Could", "you", "send", "me", "the", "address", "by", "email"]
+  },
+  {
+    "title": "Итог: рассказываем о поездке", "goal": "Связать прошлое событие, проблему и следующий шаг.",
+    "guide": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+    "phrases": [["Yesterday we went to a museum.", "Вчера мы сходили в музей."], ["The hotel was quiet and comfortable.", "Гостиница была тихой и удобной."], ["Could you book a taxi for tomorrow?", "Не могли бы вы заказать такси на завтра?"], ["We're going to leave after breakfast.", "Мы собираемся уехать после завтрака."]],
+    "dialogue": "Мико: The hotel was quiet and comfortable.\nОрби: Could you book a taxi for tomorrow?\nМико: Yes. We're going to leave after breakfast.",
+    "question": "Когда путешественники собираются уехать?", "comprehension": ["После завтрака", "Вчера вечером", "До ужина сегодня"],
+    "repair": ["Yesterday we go to a museum.", "Yesterday we went to a museum.", "О завершённом вчерашнем действии говорим went, а не go."],
+    "tokens": ["The", "hotel", "was", "quiet", "and", "comfortable"]
+  }
+]

@@ -58,6 +58,11 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
         ),
         const SizedBox(height: 6),
         Text('Твой маршрут', style: type.headlineLarge),
+        TextButton.icon(
+          onPressed: () => context.go('/units'),
+          icon: const Icon(Icons.auto_stories_outlined),
+          label: const Text('Темы и справочники'),
+        ),
         const SizedBox(height: 12),
         Wrap(
           spacing: 8,

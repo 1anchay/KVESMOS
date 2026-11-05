@@ -14,6 +14,7 @@ import 'space_adventure_page.dart';
 import 'optional_adventures.dart';
 import 'course_picker.dart';
 import 'companion_onboarding.dart';
+import 'unit_guide.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -125,6 +126,7 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             ),
             GoRoute(path: '/crew', builder: (_, _) => const CrewPage()),
             GoRoute(path: '/', builder: (_, _) => const HomePage()),
+            GoRoute(path: '/units', builder: (_, _) => const UnitGuidePage()),
             GoRoute(
               path: '/map',
               builder: (_, _) => pageBody([const AdventureMap()]),

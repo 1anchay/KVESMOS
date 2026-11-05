@@ -67,11 +67,13 @@ void main() {
       final router = GoRouter.of(tester.element(find.byType(OrbitShell)));
       Future<void> capture(String name) async {
         await tester.pumpAndSettle();
+        expect(tester.takeException(), isNull, reason: name);
         await marker('V013_CAPTURE:$name');
         await Future<void>.delayed(const Duration(seconds: 2));
       }
 
-      await marker('V013_CYCLE_START');
+      const practiceOnly = bool.fromEnvironment('KVESMOS_QA_PRACTICE_ONLY');
+      if (!practiceOnly) await marker('V013_CYCLE_START');
       for (final language in ['en', 'es', 'de', 'fr', 'zh']) {
         if (language == 'es') await marker('V013_ES_START');
         router.go('/courses');
@@ -88,6 +90,17 @@ void main() {
           );
         }
         await app.refresh();
+        if (practiceOnly) {
+          final run = await repo.startLesson(
+            language == 'en' ? 'en-a1-29' : '$language-a1-07',
+          );
+          for (var i = 0; i < run.lesson.exercises.length; i++) {
+            final e = run.lesson.exercises[i];
+            await repo.answer(run.session.id, i, e, e.answers.first, total: 10);
+          }
+          await app.refresh();
+          continue;
+        }
         router.go('/map');
         await capture('units-$language');
         router.go('/');
@@ -200,6 +213,8 @@ void main() {
           find.byKey(const Key('practice-input')),
           word.en,
         );
+        FocusManager.instance.primaryFocus?.unfocus();
+        await tester.pumpAndSettle();
         await tap(find.byKey(const Key('practice-next')));
         expect((await p.open())['correct'], true);
       }

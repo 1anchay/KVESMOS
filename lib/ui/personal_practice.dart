@@ -89,6 +89,7 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
         state!['phase'] == 1 && input.text.trim().isEmpty) {
       return;
     }
+    FocusScope.of(context).unfocus();
     setState(() => busy = true);
     try {
       await voice.stop();
@@ -128,6 +129,9 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
   @override
   Widget build(BuildContext context) {
     final app = ref.watch(appProvider), type = Theme.of(context).textTheme;
+    if (app.course.id != practice.courseId) {
+      return const Center(child: Text('Переключаем курс…'));
+    }
     if (error != null) {
       return pageBody([
         Text(error!),
@@ -326,6 +330,7 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
         TextField(
           key: const Key('practice-input'),
           controller: input,
+          textInputAction: TextInputAction.done,
           enabled: !busy,
           onSubmitted: (_) => next(),
           onChanged: (text) => unawaited(practice.draft(index, text)),

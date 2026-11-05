@@ -138,7 +138,7 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             GoRoute(
               path: '/practice/:mode',
               builder: (_, state) => PersonalPracticePage(
-                key: ValueKey(state.uri.toString()),
+                key: ValueKey('${app.course.id}:${state.uri}'),
                 lessonIds: (state.uri.queryParameters['unit'] ?? '')
                     .split(',')
                     .where((id) => id.isNotEmpty)
@@ -152,7 +152,8 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             ),
             GoRoute(
               path: '/practice',
-              builder: (_, _) => const PersonalPracticePage(),
+              builder: (_, _) =>
+                  PersonalPracticePage(key: ValueKey(app.course.id)),
             ),
             GoRoute(path: '/words', builder: (_, _) => const WordsPage()),
             GoRoute(

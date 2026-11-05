@@ -89,6 +89,14 @@ void main() {
             router.go(route);
             await capture(route.substring(1).replaceAll('/', '-'));
           }
+          await tester.runAsync(() => app.selectCourse('ru-de'));
+          await flushDb(tester);
+          expect(
+            tester.takeException(),
+            isNull,
+            reason: 'switch course with practice mounted',
+          );
+          await tester.runAsync(() => app.selectCourse('ru-zh'));
           router.go('/map');
           await flushDb(tester);
           final guide = find.text('Перед стартом · справочник').first;

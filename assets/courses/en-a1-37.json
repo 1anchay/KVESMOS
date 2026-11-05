@@ -1,0 +1,282 @@
+{
+  "id": "en-a1-37",
+  "title": "В аптеке: простые советы",
+  "topic": "В аптеке: простые советы",
+  "order": 36,
+  "objective": "Описать симптом и понять мягкий совет.",
+  "guide": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+  "vocabulary": [
+    {
+      "id": "en:v013:37:p0",
+      "en": "I have a sore throat.",
+      "ru": "У меня болит горло."
+    },
+    {
+      "id": "en:v013:37:p1",
+      "en": "Do you have anything for a headache?",
+      "ru": "У вас есть что-нибудь от головной боли?"
+    },
+    {
+      "id": "en:v013:37:p2",
+      "en": "You should rest today.",
+      "ru": "Тебе стоит сегодня отдохнуть."
+    },
+    {
+      "id": "en:v013:37:p3",
+      "en": "I need to speak to a pharmacist.",
+      "ru": "Мне нужно поговорить с фармацевтом."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "I have a sore throat.",
+      "translation": "У меня болит горло.",
+      "explanation": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Do you have anything for a headache?",
+      "translation": "У вас есть что-нибудь от головной боли?",
+      "explanation": "Do you have anything for a headache? — У вас есть что-нибудь от головной боли?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "You should rest today.",
+      "translation": "Тебе стоит сегодня отдохнуть.",
+      "explanation": "You should rest today. — Тебе стоит сегодня отдохнуть."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "I need to speak to a pharmacist.",
+      "translation": "Мне нужно поговорить с фармацевтом.",
+      "explanation": "I need to speak to a pharmacist. — Мне нужно поговорить с фармацевтом.\nПосле should глагол rest употребляется без to.\nВерно: You should rest today."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-37-e05",
+      "type": "dialogue",
+      "prompt": "С кем хочет поговорить Мико?",
+      "answers": [
+        "С фармацевтом"
+      ],
+      "explanation": "Мико: I have a sore throat.\nОрби: You should rest today.\nМико: I need to speak to a pharmacist.\nС фармацевтом",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [
+        "en:v013:37:p0",
+        "en:v013:37:p1",
+        "en:v013:37:p2",
+        "en:v013:37:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: I have a sore throat.\nОрби: You should rest today.\nМико: I need to speak to a pharmacist.",
+      "options": [
+        "С водителем",
+        "С фармацевтом",
+        "С учителем"
+      ]
+    },
+    {
+      "id": "en-a1-37-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: У меня болит горло. Выбери реплику.",
+      "answers": [
+        "I have a sore throat."
+      ],
+      "explanation": "I have a sore throat. — У меня болит горло.",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [
+        "en:v013:37:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "You should rest today.",
+        "I have a sore throat.",
+        "Do you have anything for a headache?"
+      ]
+    },
+    {
+      "id": "en-a1-37-e03",
+      "type": "order",
+      "prompt": "Составь реплику: У вас есть что-нибудь от головной боли?",
+      "answers": [
+        "Do you have anything for a headache?"
+      ],
+      "explanation": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [
+        "en:v013:37:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Do",
+        "you",
+        "have",
+        "anything",
+        "for",
+        "a",
+        "headache"
+      ]
+    },
+    {
+      "id": "en-a1-37-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Тебе стоит сегодня отдохнуть."
+      ],
+      "explanation": "You should rest today. — Тебе стоит сегодня отдохнуть.",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [
+        "en:v013:37:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "You should rest today.",
+      "options": [
+        "У вас есть что-нибудь от головной боли?",
+        "Мне нужно поговорить с фармацевтом.",
+        "Тебе стоит сегодня отдохнуть."
+      ]
+    },
+    {
+      "id": "en-a1-37-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: You should to rest today.",
+      "answers": [
+        "You should rest today."
+      ],
+      "explanation": "После should глагол rest употребляется без to.",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "You should to rest today.",
+        "You should rest today."
+      ]
+    },
+    {
+      "id": "en-a1-37-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [
+        "en:v013:37:p0",
+        "en:v013:37:p1",
+        "en:v013:37:p2",
+        "en:v013:37:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:37:p0",
+          "en": "I have a sore throat.",
+          "ru": "У меня болит горло."
+        },
+        {
+          "id": "en:v013:37:p1",
+          "en": "Do you have anything for a headache?",
+          "ru": "У вас есть что-нибудь от головной боли?"
+        },
+        {
+          "id": "en:v013:37:p2",
+          "en": "You should rest today.",
+          "ru": "Тебе стоит сегодня отдохнуть."
+        },
+        {
+          "id": "en:v013:37:p3",
+          "en": "I need to speak to a pharmacist.",
+          "ru": "Мне нужно поговорить с фармацевтом."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-37-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: У меня болит горло.",
+      "answers": [
+        "I have a sore throat."
+      ],
+      "explanation": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [
+        "en:v013:37:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "I have a sore throat.",
+        "meaning": "У меня болит горло."
+      }
+    },
+    {
+      "id": "en-a1-37-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Мне нужно поговорить с фармацевтом.",
+      "answers": [
+        "I need to speak to a pharmacist."
+      ],
+      "explanation": "I need to speak to a pharmacist. — Мне нужно поговорить с фармацевтом.",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [
+        "en:v013:37:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "I need to speak to a pharmacist."
+    },
+    {
+      "id": "en-a1-37-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Do you have anything for a headache?»?",
+      "answers": [
+        "У вас есть что-нибудь от головной боли?"
+      ],
+      "explanation": "Do you have anything for a headache? — У вас есть что-нибудь от головной боли?",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [
+        "en:v013:37:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "У меня болит горло.",
+        "У вас есть что-нибудь от головной боли?",
+        "Мне нужно поговорить с фармацевтом."
+      ]
+    },
+    {
+      "id": "en-a1-37-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Эта сумка дешевле той.",
+      "answers": [
+        "This bag is cheaper than that one."
+      ],
+      "explanation": "Ты уже встречал эту реплику: This bag is cheaper than that one. — Эта сумка дешевле той.",
+      "hint": "A headache — головная боль, a sore throat — боль в горле. Should выражает совет, после него начальная форма: should rest. Это языковое упражнение, а не подбор лечения. Medicine — лекарство, обычно без неопределённого артикля.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "This bag is cheaper than that one.",
+        "This jacket is bigger.",
+        "These shoes are more comfortable.",
+        "I'll take the cheaper bag."
+      ]
+    }
+  ]
+}

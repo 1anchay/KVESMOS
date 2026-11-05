@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 
 class QuestionEntrance extends StatelessWidget {
   final String questionId;
+  final bool enabled;
   final Widget child;
   const QuestionEntrance({
     super.key,
     required this.questionId,
+    this.enabled = true,
     required this.child,
   });
   @override
   Widget build(BuildContext context) => TweenAnimationBuilder<double>(
     key: ValueKey('question:$questionId'),
     tween: Tween(begin: 0, end: 1),
-    duration: MediaQuery.disableAnimationsOf(context)
+    duration: !enabled || MediaQuery.disableAnimationsOf(context)
         ? Duration.zero
         : const Duration(milliseconds: 220),
     builder: (_, value, child) => Opacity(
@@ -33,26 +35,21 @@ class LessonProgress extends StatelessWidget {
   Widget build(BuildContext context) => Semantics(
     label: 'Готово $done из $total упражнений',
     value: '$done / $total',
-    child: Row(
-      children: [
-        for (var i = 0; i < total; i++) ...[
-          if (i > 0) SizedBox(width: i == total ~/ 2 ? 10 : 4),
-          Expanded(
-            child: AnimatedContainer(
-              duration: MediaQuery.disableAnimationsOf(context)
-                  ? Duration.zero
-                  : const Duration(milliseconds: 240),
-              height: 6,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(3),
-                color: i < done
-                    ? Theme.of(context).colorScheme.primary
-                    : Theme.of(context).colorScheme.outlineVariant,
-              ),
-            ),
-          ),
-        ],
-      ],
+    child: TweenAnimationBuilder<double>(
+      tween: Tween(end: total == 0 ? 0 : (done / total).clamp(0, 1)),
+      duration: MediaQuery.disableAnimationsOf(context)
+          ? Duration.zero
+          : const Duration(milliseconds: 320),
+      curve: Curves.easeOutCubic,
+      builder: (context, value, _) => ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: LinearProgressIndicator(
+          value: value,
+          minHeight: 14,
+          color: Theme.of(context).colorScheme.primary,
+          backgroundColor: Theme.of(context).colorScheme.outlineVariant,
+        ),
+      ),
     ),
   );
 }

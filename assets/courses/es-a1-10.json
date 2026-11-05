@@ -1,0 +1,280 @@
+{
+  "id": "es-a1-10",
+  "title": "Каждый день · глаголы на -ar",
+  "topic": "Каждый день · глаголы на -ar",
+  "order": 9,
+  "objective": "Рассказать о работе и учёбе.",
+  "guide": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+  "vocabulary": [
+    {
+      "id": "es:v013:10:p0",
+      "en": "Trabajo por la mañana.",
+      "ru": "Я работаю по утрам."
+    },
+    {
+      "id": "es:v013:10:p1",
+      "en": "Estudio español por la tarde.",
+      "ru": "Я учу испанский во второй половине дня."
+    },
+    {
+      "id": "es:v013:10:p2",
+      "en": "¿Hablas español?",
+      "ru": "Ты говоришь по-испански?"
+    },
+    {
+      "id": "es:v013:10:p3",
+      "en": "Hablo un poco de español.",
+      "ru": "Я немного говорю по-испански."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Trabajo por la mañana.",
+      "translation": "Я работаю по утрам.",
+      "explanation": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Estudio español por la tarde.",
+      "translation": "Я учу испанский во второй половине дня.",
+      "explanation": "Estudio español por la tarde. — Я учу испанский во второй половине дня."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "¿Hablas español?",
+      "translation": "Ты говоришь по-испански?",
+      "explanation": "¿Hablas español? — Ты говоришь по-испански?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Hablo un poco de español.",
+      "translation": "Я немного говорю по-испански.",
+      "explanation": "Hablo un poco de español. — Я немного говорю по-испански.\nДля yo у trabajar окончание -o, а -a относится к él/ella.\nВерно: Yo trabajo por la mañana."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-10-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я работаю по утрам. Выбери реплику.",
+      "answers": [
+        "Trabajo por la mañana."
+      ],
+      "explanation": "Trabajo por la mañana. — Я работаю по утрам.",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [
+        "es:v013:10:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "¿Hablas español?",
+        "Trabajo por la mañana.",
+        "Estudio español por la tarde."
+      ]
+    },
+    {
+      "id": "es-a1-10-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Ты говоришь по-испански?"
+      ],
+      "explanation": "¿Hablas español? — Ты говоришь по-испански?",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [
+        "es:v013:10:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "¿Hablas español?",
+      "options": [
+        "Я учу испанский во второй половине дня.",
+        "Я немного говорю по-испански.",
+        "Ты говоришь по-испански?"
+      ]
+    },
+    {
+      "id": "es-a1-10-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я учу испанский во второй половине дня.",
+      "answers": [
+        "Estudio español por la tarde."
+      ],
+      "explanation": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [
+        "es:v013:10:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Estudio",
+        "español",
+        "por",
+        "la",
+        "tarde"
+      ]
+    },
+    {
+      "id": "es-a1-10-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [
+        "es:v013:10:p0",
+        "es:v013:10:p1",
+        "es:v013:10:p2",
+        "es:v013:10:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:10:p0",
+          "en": "Trabajo por la mañana.",
+          "ru": "Я работаю по утрам."
+        },
+        {
+          "id": "es:v013:10:p1",
+          "en": "Estudio español por la tarde.",
+          "ru": "Я учу испанский во второй половине дня."
+        },
+        {
+          "id": "es:v013:10:p2",
+          "en": "¿Hablas español?",
+          "ru": "Ты говоришь по-испански?"
+        },
+        {
+          "id": "es:v013:10:p3",
+          "en": "Hablo un poco de español.",
+          "ru": "Я немного говорю по-испански."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-10-e05",
+      "type": "dialogue",
+      "prompt": "Когда Мико учит испанский?",
+      "answers": [
+        "Во второй половине дня"
+      ],
+      "explanation": "Орби: ¿Hablas español?\nМико: Hablo un poco de español. Estudio español por la tarde.\nВо второй половине дня",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [
+        "es:v013:10:p0",
+        "es:v013:10:p1",
+        "es:v013:10:p2",
+        "es:v013:10:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: ¿Hablas español?\nМико: Hablo un poco de español. Estudio español por la tarde.",
+      "options": [
+        "По утрам",
+        "Во второй половине дня",
+        "Только ночью"
+      ]
+    },
+    {
+      "id": "es-a1-10-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Yo trabaja por la mañana.",
+      "answers": [
+        "Yo trabajo por la mañana."
+      ],
+      "explanation": "Для yo у trabajar окончание -o, а -a относится к él/ella.",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Yo trabaja por la mañana.",
+        "Yo trabajo por la mañana."
+      ]
+    },
+    {
+      "id": "es-a1-10-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я немного говорю по-испански.",
+      "answers": [
+        "Hablo un poco de español."
+      ],
+      "explanation": "Hablo un poco de español. — Я немного говорю по-испански.",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [
+        "es:v013:10:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Hablo un poco de español."
+    },
+    {
+      "id": "es-a1-10-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я работаю по утрам.",
+      "answers": [
+        "Trabajo por la mañana."
+      ],
+      "explanation": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [
+        "es:v013:10:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Trabajo por la mañana.",
+        "meaning": "Я работаю по утрам."
+      }
+    },
+    {
+      "id": "es-a1-10-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Estudio español por la tarde.»?",
+      "answers": [
+        "Я учу испанский во второй половине дня."
+      ],
+      "explanation": "Estudio español por la tarde. — Я учу испанский во второй половине дня.",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [
+        "es:v013:10:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я работаю по утрам.",
+        "Я учу испанский во второй половине дня.",
+        "Я немного говорю по-испански."
+      ]
+    },
+    {
+      "id": "es-a1-10-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Банк далеко.",
+      "answers": [
+        "El banco está lejos."
+      ],
+      "explanation": "Ты уже встречал эту реплику: El banco está lejos. — Банк далеко.",
+      "hint": "У hablar/trabajar/estudiar для yo окончание -o: hablo, trabajo, estudio. Для tú — -as: hablas. Местоимение часто опускается: hablo español уже означает я говорю по-испански. Por la mañana — по утрам, por la tarde — днём/во второй половине дня.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "¿Hay una farmacia cerca?",
+        "Hay un banco en esta calle.",
+        "La farmacia está aquí.",
+        "El banco está lejos."
+      ]
+    }
+  ]
+}

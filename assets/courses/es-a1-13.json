@@ -1,0 +1,278 @@
+{
+  "id": "es-a1-13",
+  "title": "На рынке · цены",
+  "topic": "На рынке · цены",
+  "order": 12,
+  "objective": "Узнать стоимость и попросить количество.",
+  "guide": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+  "vocabulary": [
+    {
+      "id": "es:v013:13:p0",
+      "en": "¿Cuánto cuesta un kilo de manzanas?",
+      "ru": "Сколько стоит килограмм яблок?"
+    },
+    {
+      "id": "es:v013:13:p1",
+      "en": "Cuesta dos euros.",
+      "ru": "Это стоит два евро."
+    },
+    {
+      "id": "es:v013:13:p2",
+      "en": "Quiero dos kilos, por favor.",
+      "ru": "Я хочу два килограмма, пожалуйста."
+    },
+    {
+      "id": "es:v013:13:p3",
+      "en": "Aquí tiene diez euros.",
+      "ru": "Вот десять евро."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "¿Cuánto cuesta un kilo de manzanas?",
+      "translation": "Сколько стоит килограмм яблок?",
+      "explanation": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Cuesta dos euros.",
+      "translation": "Это стоит два евро.",
+      "explanation": "Cuesta dos euros. — Это стоит два евро."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Quiero dos kilos, por favor.",
+      "translation": "Я хочу два килограмма, пожалуйста.",
+      "explanation": "Quiero dos kilos, por favor. — Я хочу два килограмма, пожалуйста."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Aquí tiene diez euros.",
+      "translation": "Вот десять евро.",
+      "explanation": "Aquí tiene diez euros. — Вот десять евро.\nПосле dos существительное во множественном числе: kilos.\nВерно: Quiero dos kilos."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-13-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Сколько стоит килограмм яблок? Выбери реплику.",
+      "answers": [
+        "¿Cuánto cuesta un kilo de manzanas?"
+      ],
+      "explanation": "¿Cuánto cuesta un kilo de manzanas? — Сколько стоит килограмм яблок?",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [
+        "es:v013:13:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Quiero dos kilos, por favor.",
+        "¿Cuánto cuesta un kilo de manzanas?",
+        "Cuesta dos euros."
+      ]
+    },
+    {
+      "id": "es-a1-13-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Я хочу два килограмма, пожалуйста."
+      ],
+      "explanation": "Quiero dos kilos, por favor. — Я хочу два килограмма, пожалуйста.",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [
+        "es:v013:13:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Quiero dos kilos, por favor.",
+      "options": [
+        "Это стоит два евро.",
+        "Вот десять евро.",
+        "Я хочу два килограмма, пожалуйста."
+      ]
+    },
+    {
+      "id": "es-a1-13-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Это стоит два евро.",
+      "answers": [
+        "Cuesta dos euros."
+      ],
+      "explanation": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [
+        "es:v013:13:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Cuesta",
+        "dos",
+        "euros"
+      ]
+    },
+    {
+      "id": "es-a1-13-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [
+        "es:v013:13:p0",
+        "es:v013:13:p1",
+        "es:v013:13:p2",
+        "es:v013:13:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:13:p0",
+          "en": "¿Cuánto cuesta un kilo de manzanas?",
+          "ru": "Сколько стоит килограмм яблок?"
+        },
+        {
+          "id": "es:v013:13:p1",
+          "en": "Cuesta dos euros.",
+          "ru": "Это стоит два евро."
+        },
+        {
+          "id": "es:v013:13:p2",
+          "en": "Quiero dos kilos, por favor.",
+          "ru": "Я хочу два килограмма, пожалуйста."
+        },
+        {
+          "id": "es:v013:13:p3",
+          "en": "Aquí tiene diez euros.",
+          "ru": "Вот десять евро."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-13-e05",
+      "type": "dialogue",
+      "prompt": "Сколько стоят два килограмма?",
+      "answers": [
+        "Четыре евро"
+      ],
+      "explanation": "Мико: ¿Cuánto cuesta un kilo de manzanas?\nОрби: Cuesta dos euros.\nМико: Quiero dos kilos, por favor.\nЧетыре евро",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [
+        "es:v013:13:p0",
+        "es:v013:13:p1",
+        "es:v013:13:p2",
+        "es:v013:13:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: ¿Cuánto cuesta un kilo de manzanas?\nОрби: Cuesta dos euros.\nМико: Quiero dos kilos, por favor.",
+      "options": [
+        "Два евро",
+        "Четыре евро",
+        "Десять евро"
+      ]
+    },
+    {
+      "id": "es-a1-13-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Quiero dos kilo.",
+      "answers": [
+        "Quiero dos kilos."
+      ],
+      "explanation": "После dos существительное во множественном числе: kilos.",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Quiero dos kilo.",
+        "Quiero dos kilos."
+      ]
+    },
+    {
+      "id": "es-a1-13-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Вот десять евро.",
+      "answers": [
+        "Aquí tiene diez euros."
+      ],
+      "explanation": "Aquí tiene diez euros. — Вот десять евро.",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [
+        "es:v013:13:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Aquí tiene diez euros."
+    },
+    {
+      "id": "es-a1-13-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Сколько стоит килограмм яблок?",
+      "answers": [
+        "¿Cuánto cuesta un kilo de manzanas?"
+      ],
+      "explanation": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [
+        "es:v013:13:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "¿Cuánto cuesta un kilo de manzanas?",
+        "meaning": "Сколько стоит килограмм яблок?"
+      }
+    },
+    {
+      "id": "es-a1-13-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Cuesta dos euros.»?",
+      "answers": [
+        "Это стоит два евро."
+      ],
+      "explanation": "Cuesta dos euros. — Это стоит два евро.",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [
+        "es:v013:13:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Сколько стоит килограмм яблок?",
+        "Это стоит два евро.",
+        "Вот десять евро."
+      ]
+    },
+    {
+      "id": "es-a1-13-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Урок начинается в три часа.",
+      "answers": [
+        "La clase empieza a las tres."
+      ],
+      "explanation": "Ты уже встречал эту реплику: La clase empieza a las tres. — Урок начинается в три часа.",
+      "hint": "¿Cuánto cuesta? — сколько стоит? Dos kilos de… — два килограмма…; после количества de. Diez — десять, veinte — двадцать. Quiero — хочу, в заказе смягчаем por favor. Las manzanas — яблоки.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "¿Qué hora es?",
+        "Son las dos y media.",
+        "La clase empieza a las tres.",
+        "Nos vemos a las cuatro."
+      ]
+    }
+  ]
+}

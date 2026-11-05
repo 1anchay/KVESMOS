@@ -1,0 +1,282 @@
+{
+  "id": "en-a1-33",
+  "title": "Заселяемся в гостиницу",
+  "topic": "Заселяемся в гостиницу",
+  "order": 32,
+  "objective": "Сообщить о бронировании и уточнить время выезда.",
+  "guide": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+  "vocabulary": [
+    {
+      "id": "en:v013:33:p0",
+      "en": "I have a reservation under the name Anna.",
+      "ru": "У меня бронирование на имя Анна."
+    },
+    {
+      "id": "en:v013:33:p1",
+      "en": "I need a room for two nights.",
+      "ru": "Мне нужен номер на две ночи."
+    },
+    {
+      "id": "en:v013:33:p2",
+      "en": "What time is check-out?",
+      "ru": "Во сколько выезд?"
+    },
+    {
+      "id": "en:v013:33:p3",
+      "en": "Check-out is at eleven.",
+      "ru": "Выезд в одиннадцать."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "I have a reservation under the name Anna.",
+      "translation": "У меня бронирование на имя Анна.",
+      "explanation": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "I need a room for two nights.",
+      "translation": "Мне нужен номер на две ночи.",
+      "explanation": "I need a room for two nights. — Мне нужен номер на две ночи."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "What time is check-out?",
+      "translation": "Во сколько выезд?",
+      "explanation": "What time is check-out? — Во сколько выезд?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Check-out is at eleven.",
+      "translation": "Выезд в одиннадцать.",
+      "explanation": "Check-out is at eleven. — Выезд в одиннадцать.\nС часами используется at. On употребляется с днями.\nВерно: Check-out is at eleven."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-33-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Во сколько выезд?"
+      ],
+      "explanation": "What time is check-out? — Во сколько выезд?",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [
+        "en:v013:33:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "What time is check-out?",
+      "options": [
+        "Мне нужен номер на две ночи.",
+        "Выезд в одиннадцать.",
+        "Во сколько выезд?"
+      ]
+    },
+    {
+      "id": "en-a1-33-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: У меня бронирование на имя Анна. Выбери реплику.",
+      "answers": [
+        "I have a reservation under the name Anna."
+      ],
+      "explanation": "I have a reservation under the name Anna. — У меня бронирование на имя Анна.",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [
+        "en:v013:33:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "What time is check-out?",
+        "I have a reservation under the name Anna.",
+        "I need a room for two nights."
+      ]
+    },
+    {
+      "id": "en-a1-33-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [
+        "en:v013:33:p0",
+        "en:v013:33:p1",
+        "en:v013:33:p2",
+        "en:v013:33:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:33:p0",
+          "en": "I have a reservation under the name Anna.",
+          "ru": "У меня бронирование на имя Анна."
+        },
+        {
+          "id": "en:v013:33:p1",
+          "en": "I need a room for two nights.",
+          "ru": "Мне нужен номер на две ночи."
+        },
+        {
+          "id": "en:v013:33:p2",
+          "en": "What time is check-out?",
+          "ru": "Во сколько выезд?"
+        },
+        {
+          "id": "en:v013:33:p3",
+          "en": "Check-out is at eleven.",
+          "ru": "Выезд в одиннадцать."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-33-e05",
+      "type": "dialogue",
+      "prompt": "Когда Анне нужно освободить номер?",
+      "answers": [
+        "В одиннадцать"
+      ],
+      "explanation": "Анна: I have a reservation under the name Anna.\nОрби: Welcome!\nАнна: What time is check-out?\nОрби: Check-out is at eleven.\nВ одиннадцать",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [
+        "en:v013:33:p0",
+        "en:v013:33:p1",
+        "en:v013:33:p2",
+        "en:v013:33:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Анна: I have a reservation under the name Anna.\nОрби: Welcome!\nАнна: What time is check-out?\nОрби: Check-out is at eleven.",
+      "options": [
+        "В два",
+        "В одиннадцать",
+        "Завтра вечером"
+      ]
+    },
+    {
+      "id": "en-a1-33-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Мне нужен номер на две ночи.",
+      "answers": [
+        "I need a room for two nights."
+      ],
+      "explanation": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [
+        "en:v013:33:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "I",
+        "need",
+        "a",
+        "room",
+        "for",
+        "two",
+        "nights"
+      ]
+    },
+    {
+      "id": "en-a1-33-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Выезд в одиннадцать.",
+      "answers": [
+        "Check-out is at eleven."
+      ],
+      "explanation": "Check-out is at eleven. — Выезд в одиннадцать.",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [
+        "en:v013:33:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Check-out is at eleven."
+    },
+    {
+      "id": "en-a1-33-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Check-out is on eleven.",
+      "answers": [
+        "Check-out is at eleven."
+      ],
+      "explanation": "С часами используется at. On употребляется с днями.",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Check-out is on eleven.",
+        "Check-out is at eleven."
+      ]
+    },
+    {
+      "id": "en-a1-33-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «I need a room for two nights.»?",
+      "answers": [
+        "Мне нужен номер на две ночи."
+      ],
+      "explanation": "I need a room for two nights. — Мне нужен номер на две ночи.",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [
+        "en:v013:33:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "У меня бронирование на имя Анна.",
+        "Мне нужен номер на две ночи.",
+        "Выезд в одиннадцать."
+      ]
+    },
+    {
+      "id": "en-a1-33-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: У меня бронирование на имя Анна.",
+      "answers": [
+        "I have a reservation under the name Anna."
+      ],
+      "explanation": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [
+        "en:v013:33:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "I have a reservation under the name Anna.",
+        "meaning": "У меня бронирование на имя Анна."
+      }
+    },
+    {
+      "id": "en-a1-33-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я поехал в Лондон на поезде.",
+      "answers": [
+        "I went to London by train."
+      ],
+      "explanation": "Ты уже встречал эту реплику: I went to London by train. — Я поехал в Лондон на поезде.",
+      "hint": "A reservation — бронирование. Under the name… — на имя… For two nights — на две ночи. What time is check-out? спрашивает время выезда. Check-in — заселение, check-out — выезд.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I went to London by train.",
+        "I bought a return ticket.",
+        "We took a taxi to the hotel.",
+        "I didn't buy a single ticket."
+      ]
+    }
+  ]
+}

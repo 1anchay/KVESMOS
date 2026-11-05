@@ -1,0 +1,282 @@
+{
+  "id": "fr-a1-12",
+  "title": "Итог · день в городе",
+  "topic": "Итог · день в городе",
+  "order": 11,
+  "objective": "Применить просьбы, время и ориентиры в одном разговоре.",
+  "guide": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+  "vocabulary": [
+    {
+      "id": "fr:v013:12:p0",
+      "en": "Aujourd'hui, je vais au musée.",
+      "ru": "Сегодня я иду в музей."
+    },
+    {
+      "id": "fr:v013:12:p1",
+      "en": "Je voudrais deux billets pour le musée.",
+      "ru": "Я хотел бы два билета в музей."
+    },
+    {
+      "id": "fr:v013:12:p2",
+      "en": "Le musée est près de la gare.",
+      "ru": "Музей рядом с вокзалом."
+    },
+    {
+      "id": "fr:v013:12:p3",
+      "en": "Nous allons au musée à dix heures.",
+      "ru": "Мы идём в музей в десять часов."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Aujourd'hui, je vais au musée.",
+      "translation": "Сегодня я иду в музей.",
+      "explanation": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Je voudrais deux billets pour le musée.",
+      "translation": "Я хотел бы два билета в музей.",
+      "explanation": "Je voudrais deux billets pour le musée. — Я хотел бы два билета в музей."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Le musée est près de la gare.",
+      "translation": "Музей рядом с вокзалом.",
+      "explanation": "Le musée est près de la gare. — Музей рядом с вокзалом."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Nous allons au musée à dix heures.",
+      "translation": "Мы идём в музей в десять часов.",
+      "explanation": "Nous allons au musée à dix heures. — Мы идём в музей в десять часов.\nÀ и le объединяются в au. С la объединения нет: à la gare.\nВерно: Je vais au musée."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-12-e05",
+      "type": "dialogue",
+      "prompt": "Во сколько Мико с другом идут в музей?",
+      "answers": [
+        "В десять"
+      ],
+      "explanation": "Мико: Je voudrais deux billets pour le musée.\nОрби: Le musée est près de la gare.\nМико: Nous allons au musée à dix heures.\nВ десять",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [
+        "fr:v013:12:p0",
+        "fr:v013:12:p1",
+        "fr:v013:12:p2",
+        "fr:v013:12:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Je voudrais deux billets pour le musée.\nОрби: Le musée est près de la gare.\nМико: Nous allons au musée à dix heures.",
+      "options": [
+        "В два",
+        "В десять",
+        "В три"
+      ]
+    },
+    {
+      "id": "fr-a1-12-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Сегодня я иду в музей. Выбери реплику.",
+      "answers": [
+        "Aujourd'hui, je vais au musée."
+      ],
+      "explanation": "Aujourd'hui, je vais au musée. — Сегодня я иду в музей.",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [
+        "fr:v013:12:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Le musée est près de la gare.",
+        "Aujourd'hui, je vais au musée.",
+        "Je voudrais deux billets pour le musée."
+      ]
+    },
+    {
+      "id": "fr-a1-12-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я хотел бы два билета в музей.",
+      "answers": [
+        "Je voudrais deux billets pour le musée."
+      ],
+      "explanation": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [
+        "fr:v013:12:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Je",
+        "voudrais",
+        "deux",
+        "billets",
+        "pour",
+        "le",
+        "musée"
+      ]
+    },
+    {
+      "id": "fr-a1-12-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Музей рядом с вокзалом."
+      ],
+      "explanation": "Le musée est près de la gare. — Музей рядом с вокзалом.",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [
+        "fr:v013:12:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Le musée est près de la gare.",
+      "options": [
+        "Я хотел бы два билета в музей.",
+        "Мы идём в музей в десять часов.",
+        "Музей рядом с вокзалом."
+      ]
+    },
+    {
+      "id": "fr-a1-12-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je vais à le musée.",
+      "answers": [
+        "Je vais au musée."
+      ],
+      "explanation": "À и le объединяются в au. С la объединения нет: à la gare.",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Je vais à le musée.",
+        "Je vais au musée."
+      ]
+    },
+    {
+      "id": "fr-a1-12-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [
+        "fr:v013:12:p0",
+        "fr:v013:12:p1",
+        "fr:v013:12:p2",
+        "fr:v013:12:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "fr:v013:12:p0",
+          "en": "Aujourd'hui, je vais au musée.",
+          "ru": "Сегодня я иду в музей."
+        },
+        {
+          "id": "fr:v013:12:p1",
+          "en": "Je voudrais deux billets pour le musée.",
+          "ru": "Я хотел бы два билета в музей."
+        },
+        {
+          "id": "fr:v013:12:p2",
+          "en": "Le musée est près de la gare.",
+          "ru": "Музей рядом с вокзалом."
+        },
+        {
+          "id": "fr:v013:12:p3",
+          "en": "Nous allons au musée à dix heures.",
+          "ru": "Мы идём в музей в десять часов."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-12-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Сегодня я иду в музей.",
+      "answers": [
+        "Aujourd'hui, je vais au musée."
+      ],
+      "explanation": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [
+        "fr:v013:12:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Aujourd'hui, je vais au musée.",
+        "meaning": "Сегодня я иду в музей."
+      }
+    },
+    {
+      "id": "fr-a1-12-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Мы идём в музей в десять часов.",
+      "answers": [
+        "Nous allons au musée à dix heures."
+      ],
+      "explanation": "Nous allons au musée à dix heures. — Мы идём в музей в десять часов.",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [
+        "fr:v013:12:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Nous allons au musée à dix heures."
+    },
+    {
+      "id": "fr-a1-12-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Je voudrais deux billets pour le musée.»?",
+      "answers": [
+        "Я хотел бы два билета в музей."
+      ],
+      "explanation": "Je voudrais deux billets pour le musée. — Я хотел бы два билета в музей.",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [
+        "fr:v013:12:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Сегодня я иду в музей.",
+        "Я хотел бы два билета в музей.",
+        "Мы идём в музей в десять часов."
+      ]
+    },
+    {
+      "id": "fr-a1-12-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Во сколько?",
+      "answers": [
+        "À quelle heure ?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: À quelle heure ? — Во сколько?",
+      "hint": "Повторяем à droite, près du, je voudrais и je prends. Aujourd'hui — сегодня. Le billet — билет, le musée — музей. Pour le musée — для музея/в музей. Je vais — я иду/еду (aller). Nous allons — мы идём/едем. À + le объединяются в au: au musée.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "On se retrouve demain ?",
+        "À quelle heure ?",
+        "À dix heures devant la gare.",
+        "Je ne peux pas venir demain."
+      ]
+    }
+  ]
+}

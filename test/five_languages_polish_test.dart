@@ -143,7 +143,7 @@ void main() {
       final recordings = RecordedSpeechCatalog.decode(
         File('assets/audio/voices/manifest.json').readAsStringSync(),
       );
-      for (final lang in ['es', 'de']) {
+      for (final lang in ['es', 'de', 'fr']) {
         final c = StudyCourse.byId('ru-$lang');
         for (final f
             in Directory('assets/courses').listSync().whereType<File>().where(
@@ -161,7 +161,9 @@ void main() {
                 .where((e) => e.type == ExerciseType.dialogue)
                 .expand((e) => e.answers),
           ];
-          for (final phrase in phrases) {
+          for (final phrase in phrases.where(
+            (s) => !RegExp('[А-Яа-яЁё]').hasMatch(s),
+          )) {
             final clip = recordings.find('aster', c.locale, phrase);
             expect(clip, isNotNull, reason: '${c.id}: $phrase');
             expect(clip!.slowAsset, isNotNull);

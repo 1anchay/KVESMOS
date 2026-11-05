@@ -25,13 +25,13 @@ class FlightPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = Theme.of(context).brightness == Brightness.dark;
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: accent
-            ? (dark ? const Color(0xFF173B40) : const Color(0xFFE4F3EE))
-            : (dark ? const Color(0xFF192C38) : Colors.white),
+    return Material(
+      color: accent
+          ? (dark ? const Color(0xFF173B40) : const Color(0xFFE4F3EE))
+          : (dark ? const Color(0xFF192C38) : Colors.white),
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(FlightTokens.radius),
-        border: Border.all(
+        side: BorderSide(
           color: dark ? const Color(0xFF2C4552) : const Color(0xFFDCE5DF),
         ),
       ),

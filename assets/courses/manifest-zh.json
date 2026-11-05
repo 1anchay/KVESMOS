@@ -51,6 +51,66 @@
           ]
         }
       ]
+    },
+    {
+      "id": "zh-v013",
+      "title": "Самостоятельные разговоры",
+      "themes": [
+        {
+          "id": "zh-v013-unit-1",
+          "title": "Где находится предмет · 在",
+          "lessons": [
+            {
+              "id": "zh-a1-07",
+              "title": "Где находится предмет · 在",
+              "asset": "assets/courses/zh-a1-07.json",
+              "order": 6
+            },
+            {
+              "id": "zh-a1-08",
+              "title": "Куда идти · 左 и 右",
+              "asset": "assets/courses/zh-a1-08.json",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "id": "zh-v013-unit-2",
+          "title": "Цена и количество · 块 и 个",
+          "lessons": [
+            {
+              "id": "zh-a1-09",
+              "title": "Цена и количество · 块 и 个",
+              "asset": "assets/courses/zh-a1-09.json",
+              "order": 8
+            },
+            {
+              "id": "zh-a1-10",
+              "title": "Сегодня и завтра · время",
+              "asset": "assets/courses/zh-a1-10.json",
+              "order": 9
+            }
+          ]
+        },
+        {
+          "id": "zh-v013-unit-3",
+          "title": "Просьбы · 可以 и 会",
+          "lessons": [
+            {
+              "id": "zh-a1-11",
+              "title": "Просьбы · 可以 и 会",
+              "asset": "assets/courses/zh-a1-11.json",
+              "order": 10
+            },
+            {
+              "id": "zh-a1-12",
+              "title": "Итог · покупки и планы",
+              "asset": "assets/courses/zh-a1-12.json",
+              "order": 11
+            }
+          ]
+        }
+      ]
     }
   ]
 }

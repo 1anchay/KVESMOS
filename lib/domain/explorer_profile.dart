@@ -90,6 +90,7 @@ class ExplorerRecords {
     final dates = <String, String>{};
     var xp = 0;
     for (final e in events) {
+      if (e.data['rehearsal'] == true) continue;
       if (e.kind == 'answer') {
         words.addAll(List<String>.from(e.data['words'] ?? []));
         if (e.data['correct'] == true &&

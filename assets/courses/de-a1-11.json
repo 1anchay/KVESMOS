@@ -1,0 +1,278 @@
+{
+  "id": "de-a1-11",
+  "title": "Распорядок · отделяемая приставка",
+  "topic": "Распорядок · отделяемая приставка",
+  "order": 10,
+  "objective": "Описать утро и время подъёма.",
+  "guide": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+  "vocabulary": [
+    {
+      "id": "de:v013:11:p0",
+      "en": "Ich stehe um sieben Uhr auf.",
+      "ru": "Я встаю в семь часов."
+    },
+    {
+      "id": "de:v013:11:p1",
+      "en": "Dann frühstücke ich.",
+      "ru": "Затем я завтракаю."
+    },
+    {
+      "id": "de:v013:11:p2",
+      "en": "Ich arbeite von neun bis fünf.",
+      "ru": "Я работаю с девяти до пяти."
+    },
+    {
+      "id": "de:v013:11:p3",
+      "en": "Abends lese ich ein Buch.",
+      "ru": "По вечерам я читаю книгу."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Ich stehe um sieben Uhr auf.",
+      "translation": "Я встаю в семь часов.",
+      "explanation": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Dann frühstücke ich.",
+      "translation": "Затем я завтракаю.",
+      "explanation": "Dann frühstücke ich. — Затем я завтракаю."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Ich arbeite von neun bis fünf.",
+      "translation": "Я работаю с девяти до пяти.",
+      "explanation": "Ich arbeite von neun bis fünf. — Я работаю с девяти до пяти."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Abends lese ich ein Buch.",
+      "translation": "По вечерам я читаю книгу.",
+      "explanation": "Abends lese ich ein Buch. — По вечерам я читаю книгу.\nВ главном предложении приставка auf отделяется и стоит в конце.\nВерно: Ich stehe um sieben Uhr auf."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-11-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Я работаю с девяти до пяти."
+      ],
+      "explanation": "Ich arbeite von neun bis fünf. — Я работаю с девяти до пяти.",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [
+        "de:v013:11:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Ich arbeite von neun bis fünf.",
+      "options": [
+        "Затем я завтракаю.",
+        "По вечерам я читаю книгу.",
+        "Я работаю с девяти до пяти."
+      ]
+    },
+    {
+      "id": "de-a1-11-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я встаю в семь часов. Выбери реплику.",
+      "answers": [
+        "Ich stehe um sieben Uhr auf."
+      ],
+      "explanation": "Ich stehe um sieben Uhr auf. — Я встаю в семь часов.",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [
+        "de:v013:11:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Ich arbeite von neun bis fünf.",
+        "Ich stehe um sieben Uhr auf.",
+        "Dann frühstücke ich."
+      ]
+    },
+    {
+      "id": "de-a1-11-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [
+        "de:v013:11:p0",
+        "de:v013:11:p1",
+        "de:v013:11:p2",
+        "de:v013:11:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:11:p0",
+          "en": "Ich stehe um sieben Uhr auf.",
+          "ru": "Я встаю в семь часов."
+        },
+        {
+          "id": "de:v013:11:p1",
+          "en": "Dann frühstücke ich.",
+          "ru": "Затем я завтракаю."
+        },
+        {
+          "id": "de:v013:11:p2",
+          "en": "Ich arbeite von neun bis fünf.",
+          "ru": "Я работаю с девяти до пяти."
+        },
+        {
+          "id": "de:v013:11:p3",
+          "en": "Abends lese ich ein Buch.",
+          "ru": "По вечерам я читаю книгу."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-11-e05",
+      "type": "dialogue",
+      "prompt": "Что Орби делает после подъёма?",
+      "answers": [
+        "Завтракает"
+      ],
+      "explanation": "Орби: Ich stehe um sieben Uhr auf. Dann frühstücke ich.\nМико: Ich arbeite von neun bis fünf.\nЗавтракает",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [
+        "de:v013:11:p0",
+        "de:v013:11:p1",
+        "de:v013:11:p2",
+        "de:v013:11:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Ich stehe um sieben Uhr auf. Dann frühstücke ich.\nМико: Ich arbeite von neun bis fünf.",
+      "options": [
+        "Читает книгу",
+        "Завтракает",
+        "Едет на вокзал"
+      ]
+    },
+    {
+      "id": "de-a1-11-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Затем я завтракаю.",
+      "answers": [
+        "Dann frühstücke ich."
+      ],
+      "explanation": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [
+        "de:v013:11:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Dann",
+        "frühstücke",
+        "ich"
+      ]
+    },
+    {
+      "id": "de-a1-11-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: По вечерам я читаю книгу.",
+      "answers": [
+        "Abends lese ich ein Buch."
+      ],
+      "explanation": "Abends lese ich ein Buch. — По вечерам я читаю книгу.",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [
+        "de:v013:11:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Abends lese ich ein Buch."
+    },
+    {
+      "id": "de-a1-11-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich aufstehe um sieben Uhr.",
+      "answers": [
+        "Ich stehe um sieben Uhr auf."
+      ],
+      "explanation": "В главном предложении приставка auf отделяется и стоит в конце.",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich aufstehe um sieben Uhr.",
+        "Ich stehe um sieben Uhr auf."
+      ]
+    },
+    {
+      "id": "de-a1-11-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Dann frühstücke ich.»?",
+      "answers": [
+        "Затем я завтракаю."
+      ],
+      "explanation": "Dann frühstücke ich. — Затем я завтракаю.",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [
+        "de:v013:11:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я встаю в семь часов.",
+        "Затем я завтракаю.",
+        "По вечерам я читаю книгу."
+      ]
+    },
+    {
+      "id": "de-a1-11-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я встаю в семь часов.",
+      "answers": [
+        "Ich stehe um sieben Uhr auf."
+      ],
+      "explanation": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [
+        "de:v013:11:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Ich stehe um sieben Uhr auf.",
+        "meaning": "Я встаю в семь часов."
+      }
+    },
+    {
+      "id": "de-a1-11-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Где ты живёшь?",
+      "answers": [
+        "Wo wohnst du?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: Wo wohnst du? — Где ты живёшь?",
+      "hint": "Aufstehen — вставать: ich stehe … auf. Отделяемая приставка auf уходит в конец предложения. Um sieben Uhr — в семь часов. Frühstücken — завтракать. Dann — затем: после dann глагол на втором месте.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Wo wohnst du?",
+        "Ich wohne in Berlin.",
+        "Wann beginnt der Kurs?",
+        "Der Kurs beginnt um neun Uhr."
+      ]
+    }
+  ]
+}

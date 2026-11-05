@@ -61,6 +61,7 @@ ThemeData orbitTheme(Brightness brightness) {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         textStyle: const TextStyle(
           fontFamily: 'OrbitSans',
+          fontFamilyFallback: ['KvesmosHanzi'],
           fontSize: 16,
           fontWeight: FontWeight.w700,
         ),

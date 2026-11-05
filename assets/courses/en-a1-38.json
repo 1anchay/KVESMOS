@@ -1,0 +1,281 @@
+{
+  "id": "en-a1-38",
+  "title": "Планы: going to",
+  "topic": "Планы: going to",
+  "order": 37,
+  "objective": "Рассказать о намерении на завтра.",
+  "guide": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+  "vocabulary": [
+    {
+      "id": "en:v013:38:p0",
+      "en": "I'm going to cook dinner tomorrow.",
+      "ru": "Завтра я собираюсь приготовить ужин."
+    },
+    {
+      "id": "en:v013:38:p1",
+      "en": "We're going to visit our friends.",
+      "ru": "Мы собираемся навестить друзей."
+    },
+    {
+      "id": "en:v013:38:p2",
+      "en": "Are you going to stay at home?",
+      "ru": "Ты собираешься остаться дома?"
+    },
+    {
+      "id": "en:v013:38:p3",
+      "en": "I'm not going to work tomorrow.",
+      "ru": "Завтра я не собираюсь работать."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "I'm going to cook dinner tomorrow.",
+      "translation": "Завтра я собираюсь приготовить ужин.",
+      "explanation": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?"
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "We're going to visit our friends.",
+      "translation": "Мы собираемся навестить друзей.",
+      "explanation": "We're going to visit our friends. — Мы собираемся навестить друзей."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Are you going to stay at home?",
+      "translation": "Ты собираешься остаться дома?",
+      "explanation": "Are you going to stay at home? — Ты собираешься остаться дома?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "I'm not going to work tomorrow.",
+      "translation": "Завтра я не собираюсь работать.",
+      "explanation": "I'm not going to work tomorrow. — Завтра я не собираюсь работать.\nПеред going to нужен are: we're = we are.\nВерно: We're going to visit our friends."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-38-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Завтра я собираюсь приготовить ужин. Выбери реплику.",
+      "answers": [
+        "I'm going to cook dinner tomorrow."
+      ],
+      "explanation": "I'm going to cook dinner tomorrow. — Завтра я собираюсь приготовить ужин.",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [
+        "en:v013:38:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Are you going to stay at home?",
+        "I'm going to cook dinner tomorrow.",
+        "We're going to visit our friends."
+      ]
+    },
+    {
+      "id": "en-a1-38-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Ты собираешься остаться дома?"
+      ],
+      "explanation": "Are you going to stay at home? — Ты собираешься остаться дома?",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [
+        "en:v013:38:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Are you going to stay at home?",
+      "options": [
+        "Мы собираемся навестить друзей.",
+        "Завтра я не собираюсь работать.",
+        "Ты собираешься остаться дома?"
+      ]
+    },
+    {
+      "id": "en-a1-38-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Мы собираемся навестить друзей.",
+      "answers": [
+        "We're going to visit our friends."
+      ],
+      "explanation": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [
+        "en:v013:38:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "We're",
+        "going",
+        "to",
+        "visit",
+        "our",
+        "friends"
+      ]
+    },
+    {
+      "id": "en-a1-38-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [
+        "en:v013:38:p0",
+        "en:v013:38:p1",
+        "en:v013:38:p2",
+        "en:v013:38:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:38:p0",
+          "en": "I'm going to cook dinner tomorrow.",
+          "ru": "Завтра я собираюсь приготовить ужин."
+        },
+        {
+          "id": "en:v013:38:p1",
+          "en": "We're going to visit our friends.",
+          "ru": "Мы собираемся навестить друзей."
+        },
+        {
+          "id": "en:v013:38:p2",
+          "en": "Are you going to stay at home?",
+          "ru": "Ты собираешься остаться дома?"
+        },
+        {
+          "id": "en:v013:38:p3",
+          "en": "I'm not going to work tomorrow.",
+          "ru": "Завтра я не собираюсь работать."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-38-e05",
+      "type": "dialogue",
+      "prompt": "Что планирует Мико?",
+      "answers": [
+        "Навестить друзей"
+      ],
+      "explanation": "Орби: Are you going to stay at home?\nМико: We're going to visit our friends. I'm not going to work tomorrow.\nНавестить друзей",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [
+        "en:v013:38:p0",
+        "en:v013:38:p1",
+        "en:v013:38:p2",
+        "en:v013:38:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Are you going to stay at home?\nМико: We're going to visit our friends. I'm not going to work tomorrow.",
+      "options": [
+        "Пойти на работу",
+        "Навестить друзей",
+        "Купить куртку"
+      ]
+    },
+    {
+      "id": "en-a1-38-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We going to visit our friends.",
+      "answers": [
+        "We're going to visit our friends."
+      ],
+      "explanation": "Перед going to нужен are: we're = we are.",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "We going to visit our friends.",
+        "We're going to visit our friends."
+      ]
+    },
+    {
+      "id": "en-a1-38-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Завтра я не собираюсь работать.",
+      "answers": [
+        "I'm not going to work tomorrow."
+      ],
+      "explanation": "I'm not going to work tomorrow. — Завтра я не собираюсь работать.",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [
+        "en:v013:38:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "I'm not going to work tomorrow."
+    },
+    {
+      "id": "en-a1-38-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Завтра я собираюсь приготовить ужин.",
+      "answers": [
+        "I'm going to cook dinner tomorrow."
+      ],
+      "explanation": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [
+        "en:v013:38:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "I'm going to cook dinner tomorrow.",
+        "meaning": "Завтра я собираюсь приготовить ужин."
+      }
+    },
+    {
+      "id": "en-a1-38-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «We're going to visit our friends.»?",
+      "answers": [
+        "Мы собираемся навестить друзей."
+      ],
+      "explanation": "We're going to visit our friends. — Мы собираемся навестить друзей.",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [
+        "en:v013:38:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Завтра я собираюсь приготовить ужин.",
+        "Мы собираемся навестить друзей.",
+        "Завтра я не собираюсь работать."
+      ]
+    },
+    {
+      "id": "en-a1-38-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: У вас есть что-нибудь от головной боли?",
+      "answers": [
+        "Do you have anything for a headache?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: Do you have anything for a headache? — У вас есть что-нибудь от головной боли?",
+      "hint": "Am/is/are going to + глагол выражает намерение. Это не всегда движение: I'm going to cook — собираюсь готовить. Tomorrow — завтра. В вопросе be ставится перед человеком: Are you going to…?",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I have a sore throat.",
+        "Do you have anything for a headache?",
+        "You should rest today.",
+        "I need to speak to a pharmacist."
+      ]
+    }
+  ]
+}

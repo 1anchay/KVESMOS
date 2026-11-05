@@ -1,0 +1,280 @@
+{
+  "id": "en-a1-29",
+  "title": "Вчера: was и were",
+  "topic": "Вчера: was и were",
+  "order": 28,
+  "objective": "Рассказать, где вы были вчера.",
+  "guide": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+  "vocabulary": [
+    {
+      "id": "en:v013:29:p0",
+      "en": "I was at home yesterday.",
+      "ru": "Вчера я был дома."
+    },
+    {
+      "id": "en:v013:29:p1",
+      "en": "We were at the station.",
+      "ru": "Мы были на станции."
+    },
+    {
+      "id": "en:v013:29:p2",
+      "en": "Were you at work?",
+      "ru": "Ты был на работе?"
+    },
+    {
+      "id": "en:v013:29:p3",
+      "en": "No, I wasn't at work.",
+      "ru": "Нет, я не был на работе."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "I was at home yesterday.",
+      "translation": "Вчера я был дома.",
+      "explanation": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "We were at the station.",
+      "translation": "Мы были на станции.",
+      "explanation": "We were at the station. — Мы были на станции."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Were you at work?",
+      "translation": "Ты был на работе?",
+      "explanation": "Were you at work? — Ты был на работе?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "No, I wasn't at work.",
+      "translation": "Нет, я не был на работе.",
+      "explanation": "No, I wasn't at work. — Нет, я не был на работе.\nПосле we в прошлом времени нужна форма were.\nВерно: We were at the station."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-29-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Вчера я был дома. Выбери реплику.",
+      "answers": [
+        "I was at home yesterday."
+      ],
+      "explanation": "I was at home yesterday. — Вчера я был дома.",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [
+        "en:v013:29:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Were you at work?",
+        "I was at home yesterday.",
+        "We were at the station."
+      ]
+    },
+    {
+      "id": "en-a1-29-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Ты был на работе?"
+      ],
+      "explanation": "Were you at work? — Ты был на работе?",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [
+        "en:v013:29:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Were you at work?",
+      "options": [
+        "Мы были на станции.",
+        "Нет, я не был на работе.",
+        "Ты был на работе?"
+      ]
+    },
+    {
+      "id": "en-a1-29-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Мы были на станции.",
+      "answers": [
+        "We were at the station."
+      ],
+      "explanation": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [
+        "en:v013:29:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "We",
+        "were",
+        "at",
+        "the",
+        "station"
+      ]
+    },
+    {
+      "id": "en-a1-29-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [
+        "en:v013:29:p0",
+        "en:v013:29:p1",
+        "en:v013:29:p2",
+        "en:v013:29:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:29:p0",
+          "en": "I was at home yesterday.",
+          "ru": "Вчера я был дома."
+        },
+        {
+          "id": "en:v013:29:p1",
+          "en": "We were at the station.",
+          "ru": "Мы были на станции."
+        },
+        {
+          "id": "en:v013:29:p2",
+          "en": "Were you at work?",
+          "ru": "Ты был на работе?"
+        },
+        {
+          "id": "en:v013:29:p3",
+          "en": "No, I wasn't at work.",
+          "ru": "Нет, я не был на работе."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-29-e05",
+      "type": "dialogue",
+      "prompt": "Где Мико был вчера?",
+      "answers": [
+        "Дома"
+      ],
+      "explanation": "Орби: Were you at work?\nМико: No, I wasn't at work. I was at home yesterday.\nДома",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [
+        "en:v013:29:p0",
+        "en:v013:29:p1",
+        "en:v013:29:p2",
+        "en:v013:29:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Were you at work?\nМико: No, I wasn't at work. I was at home yesterday.",
+      "options": [
+        "На работе",
+        "Дома",
+        "На станции"
+      ]
+    },
+    {
+      "id": "en-a1-29-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We was at the station.",
+      "answers": [
+        "We were at the station."
+      ],
+      "explanation": "После we в прошлом времени нужна форма were.",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "We was at the station.",
+        "We were at the station."
+      ]
+    },
+    {
+      "id": "en-a1-29-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Нет, я не был на работе.",
+      "answers": [
+        "No, I wasn't at work."
+      ],
+      "explanation": "No, I wasn't at work. — Нет, я не был на работе.",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [
+        "en:v013:29:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "No, I wasn't at work."
+    },
+    {
+      "id": "en-a1-29-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Вчера я был дома.",
+      "answers": [
+        "I was at home yesterday."
+      ],
+      "explanation": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [
+        "en:v013:29:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "I was at home yesterday.",
+        "meaning": "Вчера я был дома."
+      }
+    },
+    {
+      "id": "en-a1-29-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «We were at the station.»?",
+      "answers": [
+        "Мы были на станции."
+      ],
+      "explanation": "We were at the station. — Мы были на станции.",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [
+        "en:v013:29:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Вчера я был дома.",
+        "Мы были на станции.",
+        "Нет, я не был на работе."
+      ]
+    },
+    {
+      "id": "en-a1-29-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я рад тебя видеть.",
+      "answers": [
+        "I am happy to see you."
+      ],
+      "explanation": "Ты уже встречал эту реплику: I am happy to see you. — Я рад тебя видеть.",
+      "hint": "Yesterday означает вчера. Для прошлого состояния используем was с I/he/she и were с you/we/they. Отрицание: was not → wasn't, were not → weren't. Не добавляем did к was/were.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I am happy to see you.",
+        "I am a little worried.",
+        "It is okay to make mistakes.",
+        "I feel better now."
+      ]
+    }
+  ]
+}

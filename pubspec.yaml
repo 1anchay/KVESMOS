@@ -1,7 +1,7 @@
 name: orbitwords
 description: Free offline language journeys. English, Spanish, German, French and Mandarin starter courses for Russian speakers.
 publish_to: none
-version: 0.12.0-dev.1+14
+version: 0.13.0-dev.1+15
 environment:
   sdk: '>=3.8.0 <4.0.0'
 dependencies:

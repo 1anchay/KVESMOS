@@ -145,7 +145,7 @@ void main() {
             );
           }
 
-          router.go('/map');
+          router.go('/galaxy');
           await flushDb(tester);
           await tap(const Key('map-world-0'));
           await tester.ensureVisible(find.byKey(const Key('adventure-beacon')));
@@ -174,7 +174,7 @@ void main() {
                 final saved = await tester.runAsync(
                   () => game.read(adventure.id),
                 );
-                router.go('/map');
+                router.go('/galaxy');
                 await flushDb(tester);
                 router.go('/adventure/${adventure.id}');
                 await flushDb(tester);
@@ -245,7 +245,7 @@ void main() {
           router.go('/profile');
           await flushDb(tester);
           expect(app.progress.completed.length, 5);
-          router.go('/map');
+          router.go('/galaxy');
           await flushDb(tester);
           await tester.pumpWidget(const SizedBox());
           await tester.runAsync(r.db.close);

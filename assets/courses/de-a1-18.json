@@ -1,0 +1,283 @@
+{
+  "id": "de-a1-18",
+  "title": "Итог · самостоятельная поездка",
+  "topic": "Итог · самостоятельная поездка",
+  "order": 17,
+  "objective": "Соединить покупку билета, время и просьбу в разговоре.",
+  "guide": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+  "vocabulary": [
+    {
+      "id": "de:v013:18:p0",
+      "en": "Heute fahre ich nach Berlin.",
+      "ru": "Сегодня я еду в Берлин."
+    },
+    {
+      "id": "de:v013:18:p1",
+      "en": "Ich muss den Zug um zehn Uhr nehmen.",
+      "ru": "Мне нужно сесть на поезд в десять часов."
+    },
+    {
+      "id": "de:v013:18:p2",
+      "en": "Können Sie mir den Fahrplan zeigen?",
+      "ru": "Не могли бы вы показать мне расписание?"
+    },
+    {
+      "id": "de:v013:18:p3",
+      "en": "Ich habe eine Fahrkarte.",
+      "ru": "У меня есть билет."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Heute fahre ich nach Berlin.",
+      "translation": "Сегодня я еду в Берлин.",
+      "explanation": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Ich muss den Zug um zehn Uhr nehmen.",
+      "translation": "Мне нужно сесть на поезд в десять часов.",
+      "explanation": "Ich muss den Zug um zehn Uhr nehmen. — Мне нужно сесть на поезд в десять часов."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Können Sie mir den Fahrplan zeigen?",
+      "translation": "Не могли бы вы показать мне расписание?",
+      "explanation": "Können Sie mir den Fahrplan zeigen? — Не могли бы вы показать мне расписание?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Ich habe eine Fahrkarte.",
+      "translation": "У меня есть билет.",
+      "explanation": "Ich habe eine Fahrkarte. — У меня есть билет.\nВ главном предложении после Heute на втором месте стоит fahre.\nВерно: Heute fahre ich nach Berlin."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-18-e05",
+      "type": "dialogue",
+      "prompt": "Что у Мико уже есть?",
+      "answers": [
+        "Билет"
+      ],
+      "explanation": "Мико: Heute fahre ich nach Berlin. Ich muss den Zug um zehn Uhr nehmen.\nОрби: Hast du eine Fahrkarte?\nМико: Ich habe eine Fahrkarte.\nБилет",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [
+        "de:v013:18:p0",
+        "de:v013:18:p1",
+        "de:v013:18:p2",
+        "de:v013:18:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Heute fahre ich nach Berlin. Ich muss den Zug um zehn Uhr nehmen.\nОрби: Hast du eine Fahrkarte?\nМико: Ich habe eine Fahrkarte.",
+      "options": [
+        "Велосипед",
+        "Билет",
+        "Номер в гостинице"
+      ]
+    },
+    {
+      "id": "de-a1-18-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Сегодня я еду в Берлин. Выбери реплику.",
+      "answers": [
+        "Heute fahre ich nach Berlin."
+      ],
+      "explanation": "Heute fahre ich nach Berlin. — Сегодня я еду в Берлин.",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [
+        "de:v013:18:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Können Sie mir den Fahrplan zeigen?",
+        "Heute fahre ich nach Berlin.",
+        "Ich muss den Zug um zehn Uhr nehmen."
+      ]
+    },
+    {
+      "id": "de-a1-18-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Мне нужно сесть на поезд в десять часов.",
+      "answers": [
+        "Ich muss den Zug um zehn Uhr nehmen."
+      ],
+      "explanation": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [
+        "de:v013:18:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Ich",
+        "muss",
+        "den",
+        "Zug",
+        "um",
+        "zehn",
+        "Uhr",
+        "nehmen"
+      ]
+    },
+    {
+      "id": "de-a1-18-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Не могли бы вы показать мне расписание?"
+      ],
+      "explanation": "Können Sie mir den Fahrplan zeigen? — Не могли бы вы показать мне расписание?",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [
+        "de:v013:18:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Können Sie mir den Fahrplan zeigen?",
+      "options": [
+        "Мне нужно сесть на поезд в десять часов.",
+        "У меня есть билет.",
+        "Не могли бы вы показать мне расписание?"
+      ]
+    },
+    {
+      "id": "de-a1-18-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Heute ich fahre nach Berlin.",
+      "answers": [
+        "Heute fahre ich nach Berlin."
+      ],
+      "explanation": "В главном предложении после Heute на втором месте стоит fahre.",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Heute ich fahre nach Berlin.",
+        "Heute fahre ich nach Berlin."
+      ]
+    },
+    {
+      "id": "de-a1-18-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [
+        "de:v013:18:p0",
+        "de:v013:18:p1",
+        "de:v013:18:p2",
+        "de:v013:18:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:18:p0",
+          "en": "Heute fahre ich nach Berlin.",
+          "ru": "Сегодня я еду в Берлин."
+        },
+        {
+          "id": "de:v013:18:p1",
+          "en": "Ich muss den Zug um zehn Uhr nehmen.",
+          "ru": "Мне нужно сесть на поезд в десять часов."
+        },
+        {
+          "id": "de:v013:18:p2",
+          "en": "Können Sie mir den Fahrplan zeigen?",
+          "ru": "Не могли бы вы показать мне расписание?"
+        },
+        {
+          "id": "de:v013:18:p3",
+          "en": "Ich habe eine Fahrkarte.",
+          "ru": "У меня есть билет."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-18-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Сегодня я еду в Берлин.",
+      "answers": [
+        "Heute fahre ich nach Berlin."
+      ],
+      "explanation": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [
+        "de:v013:18:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Heute fahre ich nach Berlin.",
+        "meaning": "Сегодня я еду в Берлин."
+      }
+    },
+    {
+      "id": "de-a1-18-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: У меня есть билет.",
+      "answers": [
+        "Ich habe eine Fahrkarte."
+      ],
+      "explanation": "Ich habe eine Fahrkarte. — У меня есть билет.",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [
+        "de:v013:18:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Ich habe eine Fahrkarte."
+    },
+    {
+      "id": "de-a1-18-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Ich muss den Zug um zehn Uhr nehmen.»?",
+      "answers": [
+        "Мне нужно сесть на поезд в десять часов."
+      ],
+      "explanation": "Ich muss den Zug um zehn Uhr nehmen. — Мне нужно сесть на поезд в десять часов.",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [
+        "de:v013:18:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Сегодня я еду в Берлин.",
+        "Мне нужно сесть на поезд в десять часов.",
+        "У меня есть билет."
+      ]
+    },
+    {
+      "id": "de-a1-18-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я хотел бы встретить тебя на вокзале.",
+      "answers": [
+        "Ich möchte dich am Bahnhof treffen."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Ich möchte dich am Bahnhof treffen. — Я хотел бы встретить тебя на вокзале.",
+      "hint": "Повторяем eine Fahrkarte (die), um с часами, können с инфинитивом и порядок слов после Heute. Der Anschluss — пересадка/стыковка. Ich muss… — мне нужно…; после muss инфинитив в конце. Стабильное выражение einen Zug nehmen — сесть на поезд.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Möchtest du morgen einen Kaffee trinken?",
+        "Wie wäre es am Freitag?",
+        "Um drei Uhr passt es mir.",
+        "Ich möchte dich am Bahnhof treffen."
+      ]
+    }
+  ]
+}

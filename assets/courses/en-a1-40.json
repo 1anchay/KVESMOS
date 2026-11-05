@@ -1,0 +1,281 @@
+{
+  "id": "en-a1-40",
+  "title": "Итог: рассказываем о поездке",
+  "topic": "Итог: рассказываем о поездке",
+  "order": 39,
+  "objective": "Связать прошлое событие, проблему и следующий шаг.",
+  "guide": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+  "vocabulary": [
+    {
+      "id": "en:v013:40:p0",
+      "en": "Yesterday we went to a museum.",
+      "ru": "Вчера мы сходили в музей."
+    },
+    {
+      "id": "en:v013:40:p1",
+      "en": "The hotel was quiet and comfortable.",
+      "ru": "Гостиница была тихой и удобной."
+    },
+    {
+      "id": "en:v013:40:p2",
+      "en": "Could you book a taxi for tomorrow?",
+      "ru": "Не могли бы вы заказать такси на завтра?"
+    },
+    {
+      "id": "en:v013:40:p3",
+      "en": "We're going to leave after breakfast.",
+      "ru": "Мы собираемся уехать после завтрака."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Yesterday we went to a museum.",
+      "translation": "Вчера мы сходили в музей.",
+      "explanation": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "The hotel was quiet and comfortable.",
+      "translation": "Гостиница была тихой и удобной.",
+      "explanation": "The hotel was quiet and comfortable. — Гостиница была тихой и удобной."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Could you book a taxi for tomorrow?",
+      "translation": "Не могли бы вы заказать такси на завтра?",
+      "explanation": "Could you book a taxi for tomorrow? — Не могли бы вы заказать такси на завтра?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "We're going to leave after breakfast.",
+      "translation": "Мы собираемся уехать после завтрака.",
+      "explanation": "We're going to leave after breakfast. — Мы собираемся уехать после завтрака.\nО завершённом вчерашнем действии говорим went, а не go.\nВерно: Yesterday we went to a museum."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-40-e05",
+      "type": "dialogue",
+      "prompt": "Когда путешественники собираются уехать?",
+      "answers": [
+        "После завтрака"
+      ],
+      "explanation": "Мико: The hotel was quiet and comfortable.\nОрби: Could you book a taxi for tomorrow?\nМико: Yes. We're going to leave after breakfast.\nПосле завтрака",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [
+        "en:v013:40:p0",
+        "en:v013:40:p1",
+        "en:v013:40:p2",
+        "en:v013:40:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: The hotel was quiet and comfortable.\nОрби: Could you book a taxi for tomorrow?\nМико: Yes. We're going to leave after breakfast.",
+      "options": [
+        "Вчера вечером",
+        "После завтрака",
+        "До ужина сегодня"
+      ]
+    },
+    {
+      "id": "en-a1-40-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Вчера мы сходили в музей. Выбери реплику.",
+      "answers": [
+        "Yesterday we went to a museum."
+      ],
+      "explanation": "Yesterday we went to a museum. — Вчера мы сходили в музей.",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [
+        "en:v013:40:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Could you book a taxi for tomorrow?",
+        "Yesterday we went to a museum.",
+        "The hotel was quiet and comfortable."
+      ]
+    },
+    {
+      "id": "en-a1-40-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Гостиница была тихой и удобной.",
+      "answers": [
+        "The hotel was quiet and comfortable."
+      ],
+      "explanation": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [
+        "en:v013:40:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "The",
+        "hotel",
+        "was",
+        "quiet",
+        "and",
+        "comfortable"
+      ]
+    },
+    {
+      "id": "en-a1-40-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Не могли бы вы заказать такси на завтра?"
+      ],
+      "explanation": "Could you book a taxi for tomorrow? — Не могли бы вы заказать такси на завтра?",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [
+        "en:v013:40:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Could you book a taxi for tomorrow?",
+      "options": [
+        "Гостиница была тихой и удобной.",
+        "Мы собираемся уехать после завтрака.",
+        "Не могли бы вы заказать такси на завтра?"
+      ]
+    },
+    {
+      "id": "en-a1-40-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Yesterday we go to a museum.",
+      "answers": [
+        "Yesterday we went to a museum."
+      ],
+      "explanation": "О завершённом вчерашнем действии говорим went, а не go.",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Yesterday we go to a museum.",
+        "Yesterday we went to a museum."
+      ]
+    },
+    {
+      "id": "en-a1-40-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [
+        "en:v013:40:p0",
+        "en:v013:40:p1",
+        "en:v013:40:p2",
+        "en:v013:40:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:40:p0",
+          "en": "Yesterday we went to a museum.",
+          "ru": "Вчера мы сходили в музей."
+        },
+        {
+          "id": "en:v013:40:p1",
+          "en": "The hotel was quiet and comfortable.",
+          "ru": "Гостиница была тихой и удобной."
+        },
+        {
+          "id": "en:v013:40:p2",
+          "en": "Could you book a taxi for tomorrow?",
+          "ru": "Не могли бы вы заказать такси на завтра?"
+        },
+        {
+          "id": "en:v013:40:p3",
+          "en": "We're going to leave after breakfast.",
+          "ru": "Мы собираемся уехать после завтрака."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-40-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Вчера мы сходили в музей.",
+      "answers": [
+        "Yesterday we went to a museum."
+      ],
+      "explanation": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [
+        "en:v013:40:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Yesterday we went to a museum.",
+        "meaning": "Вчера мы сходили в музей."
+      }
+    },
+    {
+      "id": "en-a1-40-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Мы собираемся уехать после завтрака.",
+      "answers": [
+        "We're going to leave after breakfast."
+      ],
+      "explanation": "We're going to leave after breakfast. — Мы собираемся уехать после завтрака.",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [
+        "en:v013:40:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "We're going to leave after breakfast."
+    },
+    {
+      "id": "en-a1-40-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «The hotel was quiet and comfortable.»?",
+      "answers": [
+        "Гостиница была тихой и удобной."
+      ],
+      "explanation": "The hotel was quiet and comfortable. — Гостиница была тихой и удобной.",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [
+        "en:v013:40:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Вчера мы сходили в музей.",
+        "Гостиница была тихой и удобной.",
+        "Мы собираемся уехать после завтрака."
+      ]
+    },
+    {
+      "id": "en-a1-40-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Плохая связь.",
+      "answers": [
+        "The connection is bad."
+      ],
+      "explanation": "Ты уже встречал эту реплику: The connection is bad. — Плохая связь.",
+      "hint": "Повторяем went (go в прошлом), was/were, просьбу could you и намерение going to. Yesterday — вчера, tomorrow — завтра: выбираем форму по смыслу, а не по длине фразы. Because объясняет причину.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Could you repeat that, please?",
+        "Could you send me the address by email?",
+        "I'll call you back after lunch.",
+        "The connection is bad."
+      ]
+    }
+  ]
+}

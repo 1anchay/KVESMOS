@@ -1,0 +1,282 @@
+{
+  "id": "de-a1-16",
+  "title": "Как пройти · ориентиры",
+  "topic": "Как пройти · ориентиры",
+  "order": 15,
+  "objective": "Понять короткие указания пути.",
+  "guide": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+  "vocabulary": [
+    {
+      "id": "de:v013:16:p0",
+      "en": "Gehen Sie geradeaus.",
+      "ru": "Идите прямо."
+    },
+    {
+      "id": "de:v013:16:p1",
+      "en": "Gehen Sie an der Ampel nach links.",
+      "ru": "У светофора поверните налево."
+    },
+    {
+      "id": "de:v013:16:p2",
+      "en": "Die Apotheke ist rechts.",
+      "ru": "Аптека справа."
+    },
+    {
+      "id": "de:v013:16:p3",
+      "en": "Der Bahnhof ist um die Ecke.",
+      "ru": "Вокзал за углом."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Gehen Sie geradeaus.",
+      "translation": "Идите прямо.",
+      "explanation": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Gehen Sie an der Ampel nach links.",
+      "translation": "У светофора поверните налево.",
+      "explanation": "Gehen Sie an der Ampel nach links. — У светофора поверните налево."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Die Apotheke ist rechts.",
+      "translation": "Аптека справа.",
+      "explanation": "Die Apotheke ist rechts. — Аптека справа."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Der Bahnhof ist um die Ecke.",
+      "translation": "Вокзал за углом.",
+      "explanation": "Der Bahnhof ist um die Ecke. — Вокзал за углом.\nВ вежливой команде после глагола Gehen идёт Sie.\nВерно: Gehen Sie geradeaus."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-16-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Идите прямо. Выбери реплику.",
+      "answers": [
+        "Gehen Sie geradeaus."
+      ],
+      "explanation": "Gehen Sie geradeaus. — Идите прямо.",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [
+        "de:v013:16:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Die Apotheke ist rechts.",
+        "Gehen Sie geradeaus.",
+        "Gehen Sie an der Ampel nach links."
+      ]
+    },
+    {
+      "id": "de-a1-16-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Аптека справа."
+      ],
+      "explanation": "Die Apotheke ist rechts. — Аптека справа.",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [
+        "de:v013:16:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Die Apotheke ist rechts.",
+      "options": [
+        "У светофора поверните налево.",
+        "Вокзал за углом.",
+        "Аптека справа."
+      ]
+    },
+    {
+      "id": "de-a1-16-e03",
+      "type": "order",
+      "prompt": "Составь реплику: У светофора поверните налево.",
+      "answers": [
+        "Gehen Sie an der Ampel nach links."
+      ],
+      "explanation": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [
+        "de:v013:16:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Gehen",
+        "Sie",
+        "an",
+        "der",
+        "Ampel",
+        "nach",
+        "links"
+      ]
+    },
+    {
+      "id": "de-a1-16-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [
+        "de:v013:16:p0",
+        "de:v013:16:p1",
+        "de:v013:16:p2",
+        "de:v013:16:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:16:p0",
+          "en": "Gehen Sie geradeaus.",
+          "ru": "Идите прямо."
+        },
+        {
+          "id": "de:v013:16:p1",
+          "en": "Gehen Sie an der Ampel nach links.",
+          "ru": "У светофора поверните налево."
+        },
+        {
+          "id": "de:v013:16:p2",
+          "en": "Die Apotheke ist rechts.",
+          "ru": "Аптека справа."
+        },
+        {
+          "id": "de:v013:16:p3",
+          "en": "Der Bahnhof ist um die Ecke.",
+          "ru": "Вокзал за углом."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-16-e05",
+      "type": "dialogue",
+      "prompt": "С какой стороны аптека?",
+      "answers": [
+        "Справа"
+      ],
+      "explanation": "Орби: Gehen Sie geradeaus. Die Apotheke ist rechts.\nМико: Danke.\nСправа",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [
+        "de:v013:16:p0",
+        "de:v013:16:p1",
+        "de:v013:16:p2",
+        "de:v013:16:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Gehen Sie geradeaus. Die Apotheke ist rechts.\nМико: Danke.",
+      "options": [
+        "Слева",
+        "Справа",
+        "За вокзалом"
+      ]
+    },
+    {
+      "id": "de-a1-16-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Gehen geradeaus Sie.",
+      "answers": [
+        "Gehen Sie geradeaus."
+      ],
+      "explanation": "В вежливой команде после глагола Gehen идёт Sie.",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Gehen geradeaus Sie.",
+        "Gehen Sie geradeaus."
+      ]
+    },
+    {
+      "id": "de-a1-16-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Вокзал за углом.",
+      "answers": [
+        "Der Bahnhof ist um die Ecke."
+      ],
+      "explanation": "Der Bahnhof ist um die Ecke. — Вокзал за углом.",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [
+        "de:v013:16:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Der Bahnhof ist um die Ecke."
+    },
+    {
+      "id": "de-a1-16-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Идите прямо.",
+      "answers": [
+        "Gehen Sie geradeaus."
+      ],
+      "explanation": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [
+        "de:v013:16:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Gehen Sie geradeaus.",
+        "meaning": "Идите прямо."
+      }
+    },
+    {
+      "id": "de-a1-16-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Gehen Sie an der Ampel nach links.»?",
+      "answers": [
+        "У светофора поверните налево."
+      ],
+      "explanation": "Gehen Sie an der Ampel nach links. — У светофора поверните налево.",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [
+        "de:v013:16:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Идите прямо.",
+        "У светофора поверните налево.",
+        "Вокзал за углом."
+      ]
+    },
+    {
+      "id": "de-a1-16-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Не могли бы вы говорить медленнее?",
+      "answers": [
+        "Können Sie langsamer sprechen?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: Können Sie langsamer sprechen? — Не могли бы вы говорить медленнее?",
+      "hint": "Links — налево/слева, rechts — направо/справа, geradeaus — прямо. Gehen Sie… — идите (вежливо). An der Ampel — у светофора. Die Apotheke — аптека. Um die Ecke — за углом, учим как целую фразу.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Können Sie mir bitte helfen?",
+        "Können Sie langsamer sprechen?",
+        "Kann ich hier sitzen?",
+        "Können Sie das bitte wiederholen?"
+      ]
+    }
+  ]
+}

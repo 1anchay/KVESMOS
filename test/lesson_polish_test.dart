@@ -72,7 +72,7 @@ void main() {
       await tester.tap(find.text('Дальше'));
       await flushDb(tester);
       expect(find.text(lesson.exercises[1].prompt), findsOneWidget);
-      expect(find.byType(QuestionEntrance), findsOneWidget);
+      expect(find.byType(QuestionEntrance), findsNWidgets(2));
       expect(app.progress.xp, 10);
       expect(tester.takeException(), isNull);
       await tester.pumpWidget(const SizedBox.shrink());

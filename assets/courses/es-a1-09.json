@@ -1,0 +1,281 @@
+{
+  "id": "es-a1-09",
+  "title": "Что есть в городе",
+  "topic": "Что есть в городе",
+  "order": 8,
+  "objective": "Спросить о наличии места и назвать ориентир.",
+  "guide": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+  "vocabulary": [
+    {
+      "id": "es:v013:9:p0",
+      "en": "¿Hay una farmacia cerca?",
+      "ru": "Поблизости есть аптека?"
+    },
+    {
+      "id": "es:v013:9:p1",
+      "en": "Hay un banco en esta calle.",
+      "ru": "На этой улице есть банк."
+    },
+    {
+      "id": "es:v013:9:p2",
+      "en": "La farmacia está aquí.",
+      "ru": "Аптека здесь."
+    },
+    {
+      "id": "es:v013:9:p3",
+      "en": "El banco está lejos.",
+      "ru": "Банк далеко."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "¿Hay una farmacia cerca?",
+      "translation": "Поблизости есть аптека?",
+      "explanation": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Hay un banco en esta calle.",
+      "translation": "На этой улице есть банк.",
+      "explanation": "Hay un banco en esta calle. — На этой улице есть банк."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "La farmacia está aquí.",
+      "translation": "Аптека здесь.",
+      "explanation": "La farmacia está aquí. — Аптека здесь."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "El banco está lejos.",
+      "translation": "Банк далеко.",
+      "explanation": "El banco está lejos. — Банк далеко.\nКогда указываем расположение определённой аптеки с la, используем está.\nВерно: La farmacia está aquí."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-09-e05",
+      "type": "dialogue",
+      "prompt": "Какое место находится прямо здесь?",
+      "answers": [
+        "Аптека"
+      ],
+      "explanation": "Мико: ¿Hay una farmacia cerca?\nОрби: La farmacia está aquí. Hay un banco en esta calle.\nАптека",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [
+        "es:v013:9:p0",
+        "es:v013:9:p1",
+        "es:v013:9:p2",
+        "es:v013:9:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: ¿Hay una farmacia cerca?\nОрби: La farmacia está aquí. Hay un banco en esta calle.",
+      "options": [
+        "Школа",
+        "Аптека",
+        "Гостиница"
+      ]
+    },
+    {
+      "id": "es-a1-09-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Поблизости есть аптека? Выбери реплику.",
+      "answers": [
+        "¿Hay una farmacia cerca?"
+      ],
+      "explanation": "¿Hay una farmacia cerca? — Поблизости есть аптека?",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [
+        "es:v013:9:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "La farmacia está aquí.",
+        "¿Hay una farmacia cerca?",
+        "Hay un banco en esta calle."
+      ]
+    },
+    {
+      "id": "es-a1-09-e03",
+      "type": "order",
+      "prompt": "Составь реплику: На этой улице есть банк.",
+      "answers": [
+        "Hay un banco en esta calle."
+      ],
+      "explanation": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [
+        "es:v013:9:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Hay",
+        "un",
+        "banco",
+        "en",
+        "esta",
+        "calle"
+      ]
+    },
+    {
+      "id": "es-a1-09-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Аптека здесь."
+      ],
+      "explanation": "La farmacia está aquí. — Аптека здесь.",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [
+        "es:v013:9:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "La farmacia está aquí.",
+      "options": [
+        "На этой улице есть банк.",
+        "Банк далеко.",
+        "Аптека здесь."
+      ]
+    },
+    {
+      "id": "es-a1-09-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Hay la farmacia aquí.",
+      "answers": [
+        "La farmacia está aquí."
+      ],
+      "explanation": "Когда указываем расположение определённой аптеки с la, используем está.",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Hay la farmacia aquí.",
+        "La farmacia está aquí."
+      ]
+    },
+    {
+      "id": "es-a1-09-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [
+        "es:v013:9:p0",
+        "es:v013:9:p1",
+        "es:v013:9:p2",
+        "es:v013:9:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:9:p0",
+          "en": "¿Hay una farmacia cerca?",
+          "ru": "Поблизости есть аптека?"
+        },
+        {
+          "id": "es:v013:9:p1",
+          "en": "Hay un banco en esta calle.",
+          "ru": "На этой улице есть банк."
+        },
+        {
+          "id": "es:v013:9:p2",
+          "en": "La farmacia está aquí.",
+          "ru": "Аптека здесь."
+        },
+        {
+          "id": "es:v013:9:p3",
+          "en": "El banco está lejos.",
+          "ru": "Банк далеко."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-09-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Поблизости есть аптека?",
+      "answers": [
+        "¿Hay una farmacia cerca?"
+      ],
+      "explanation": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [
+        "es:v013:9:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "¿Hay una farmacia cerca?",
+        "meaning": "Поблизости есть аптека?"
+      }
+    },
+    {
+      "id": "es-a1-09-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Банк далеко.",
+      "answers": [
+        "El banco está lejos."
+      ],
+      "explanation": "El banco está lejos. — Банк далеко.",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [
+        "es:v013:9:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "El banco está lejos."
+    },
+    {
+      "id": "es-a1-09-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Hay un banco en esta calle.»?",
+      "answers": [
+        "На этой улице есть банк."
+      ],
+      "explanation": "Hay un banco en esta calle. — На этой улице есть банк.",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [
+        "es:v013:9:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Поблизости есть аптека?",
+        "На этой улице есть банк.",
+        "Банк далеко."
+      ]
+    },
+    {
+      "id": "es-a1-09-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Стул рядом с письменным столом.",
+      "answers": [
+        "La silla está al lado del escritorio."
+      ],
+      "explanation": "Ты уже встречал эту реплику: La silla está al lado del escritorio. — Стул рядом с письменным столом.",
+      "hint": "Hay означает есть/имеется и не меняется для одного или нескольких предметов. Una farmacia — аптека, un banco — банк. Для уже известного места используем está: la farmacia está aquí. Cerca — близко, lejos — далеко.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "El libro está encima de la mesa.",
+        "La mochila está debajo de la silla.",
+        "La silla está al lado del escritorio.",
+        "¿Dónde está mi libro?"
+      ]
+    }
+  ]
+}

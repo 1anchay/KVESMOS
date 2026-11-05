@@ -1,0 +1,280 @@
+{
+  "id": "en-a1-31",
+  "title": "Вопросы о вчерашнем дне",
+  "topic": "Вопросы о вчерашнем дне",
+  "order": 30,
+  "objective": "Спросить о прошлом событии и ответить отрицательно.",
+  "guide": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+  "vocabulary": [
+    {
+      "id": "en:v013:31:p0",
+      "en": "Did you visit the museum?",
+      "ru": "Ты посетил музей?"
+    },
+    {
+      "id": "en:v013:31:p1",
+      "en": "I didn't visit the museum.",
+      "ru": "Я не посетил музей."
+    },
+    {
+      "id": "en:v013:31:p2",
+      "en": "Did you enjoy the film?",
+      "ru": "Тебе понравился фильм?"
+    },
+    {
+      "id": "en:v013:31:p3",
+      "en": "Yes, I did.",
+      "ru": "Да."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Did you visit the museum?",
+      "translation": "Ты посетил музей?",
+      "explanation": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "I didn't visit the museum.",
+      "translation": "Я не посетил музей.",
+      "explanation": "I didn't visit the museum. — Я не посетил музей."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Did you enjoy the film?",
+      "translation": "Тебе понравился фильм?",
+      "explanation": "Did you enjoy the film? — Тебе понравился фильм?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Yes, I did.",
+      "translation": "Да.",
+      "explanation": "Yes, I did. — Да.\nПрошлое уже выражено did: второй глагол — visit.\nВерно: Did you visit the museum?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-31-e05",
+      "type": "dialogue",
+      "prompt": "Что известно из разговора?",
+      "answers": [
+        "Мико понравился фильм"
+      ],
+      "explanation": "Орби: Did you visit the museum?\nМико: I didn't visit the museum.\nОрби: Did you enjoy the film?\nМико: Yes, I did.\nМико понравился фильм",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [
+        "en:v013:31:p0",
+        "en:v013:31:p1",
+        "en:v013:31:p2",
+        "en:v013:31:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Did you visit the museum?\nМико: I didn't visit the museum.\nОрби: Did you enjoy the film?\nМико: Yes, I did.",
+      "options": [
+        "Мико посетил музей",
+        "Мико понравился фильм",
+        "Мико не смотрел фильм"
+      ]
+    },
+    {
+      "id": "en-a1-31-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Ты посетил музей? Выбери реплику.",
+      "answers": [
+        "Did you visit the museum?"
+      ],
+      "explanation": "Did you visit the museum? — Ты посетил музей?",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [
+        "en:v013:31:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Did you enjoy the film?",
+        "Did you visit the museum?",
+        "I didn't visit the museum."
+      ]
+    },
+    {
+      "id": "en-a1-31-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я не посетил музей.",
+      "answers": [
+        "I didn't visit the museum."
+      ],
+      "explanation": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [
+        "en:v013:31:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "I",
+        "didn't",
+        "visit",
+        "the",
+        "museum"
+      ]
+    },
+    {
+      "id": "en-a1-31-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Тебе понравился фильм?"
+      ],
+      "explanation": "Did you enjoy the film? — Тебе понравился фильм?",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [
+        "en:v013:31:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Did you enjoy the film?",
+      "options": [
+        "Я не посетил музей.",
+        "Да.",
+        "Тебе понравился фильм?"
+      ]
+    },
+    {
+      "id": "en-a1-31-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Did you visited the museum?",
+      "answers": [
+        "Did you visit the museum?"
+      ],
+      "explanation": "Прошлое уже выражено did: второй глагол — visit.",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Did you visited the museum?",
+        "Did you visit the museum?"
+      ]
+    },
+    {
+      "id": "en-a1-31-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [
+        "en:v013:31:p0",
+        "en:v013:31:p1",
+        "en:v013:31:p2",
+        "en:v013:31:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:31:p0",
+          "en": "Did you visit the museum?",
+          "ru": "Ты посетил музей?"
+        },
+        {
+          "id": "en:v013:31:p1",
+          "en": "I didn't visit the museum.",
+          "ru": "Я не посетил музей."
+        },
+        {
+          "id": "en:v013:31:p2",
+          "en": "Did you enjoy the film?",
+          "ru": "Тебе понравился фильм?"
+        },
+        {
+          "id": "en:v013:31:p3",
+          "en": "Yes, I did.",
+          "ru": "Да."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-31-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Ты посетил музей?",
+      "answers": [
+        "Did you visit the museum?"
+      ],
+      "explanation": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [
+        "en:v013:31:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Did you visit the museum?",
+        "meaning": "Ты посетил музей?"
+      }
+    },
+    {
+      "id": "en-a1-31-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Да.",
+      "answers": [
+        "Yes, I did."
+      ],
+      "explanation": "Yes, I did. — Да.",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [
+        "en:v013:31:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Yes, I did."
+    },
+    {
+      "id": "en-a1-31-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «I didn't visit the museum.»?",
+      "answers": [
+        "Я не посетил музей."
+      ],
+      "explanation": "I didn't visit the museum. — Я не посетил музей.",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [
+        "en:v013:31:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ты посетил музей?",
+        "Я не посетил музей.",
+        "Да."
+      ]
+    },
+    {
+      "id": "en-a1-31-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я приготовил ужин дома.",
+      "answers": [
+        "I cooked dinner at home."
+      ],
+      "explanation": "Ты уже встречал эту реплику: I cooked dinner at home. — Я приготовил ужин дома.",
+      "hint": "Вопрос в Past Simple начинается с Did, затем подлежащее и начальная форма глагола: Did you visit…? После didn't также нужна visit, а не visited. В коротком ответе: Yes, I did / No, I didn't.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I visited my sister yesterday.",
+        "We watched a film last Sunday.",
+        "I cooked dinner at home.",
+        "We walked in the park."
+      ]
+    }
+  ]
+}

@@ -256,6 +256,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "en-v013",
+      "title": "Самостоятельные разговоры",
+      "themes": [
+        {
+          "id": "en-v013-unit-1",
+          "title": "Вчера: was и were",
+          "lessons": [
+            {
+              "id": "en-a1-29",
+              "title": "Вчера: was и were",
+              "asset": "assets/courses/en-a1-29.json",
+              "order": 28
+            },
+            {
+              "id": "en-a1-30",
+              "title": "Выходные: действия в прошлом",
+              "asset": "assets/courses/en-a1-30.json",
+              "order": 29
+            }
+          ]
+        },
+        {
+          "id": "en-v013-unit-2",
+          "title": "Вопросы о вчерашнем дне",
+          "lessons": [
+            {
+              "id": "en-a1-31",
+              "title": "Вопросы о вчерашнем дне",
+              "asset": "assets/courses/en-a1-31.json",
+              "order": 30
+            },
+            {
+              "id": "en-a1-32",
+              "title": "Поездка: went и bought",
+              "asset": "assets/courses/en-a1-32.json",
+              "order": 31
+            }
+          ]
+        },
+        {
+          "id": "en-v013-unit-3",
+          "title": "Заселяемся в гостиницу",
+          "lessons": [
+            {
+              "id": "en-a1-33",
+              "title": "Заселяемся в гостиницу",
+              "asset": "assets/courses/en-a1-33.json",
+              "order": 32
+            },
+            {
+              "id": "en-a1-34",
+              "title": "Помощь в гостинице",
+              "asset": "assets/courses/en-a1-34.json",
+              "order": 33
+            }
+          ]
+        },
+        {
+          "id": "en-v013-unit-4",
+          "title": "Переносим встречу",
+          "lessons": [
+            {
+              "id": "en-a1-35",
+              "title": "Переносим встречу",
+              "asset": "assets/courses/en-a1-35.json",
+              "order": 34
+            },
+            {
+              "id": "en-a1-36",
+              "title": "Сравниваем покупки",
+              "asset": "assets/courses/en-a1-36.json",
+              "order": 35
+            }
+          ]
+        },
+        {
+          "id": "en-v013-unit-5",
+          "title": "В аптеке: простые советы",
+          "lessons": [
+            {
+              "id": "en-a1-37",
+              "title": "В аптеке: простые советы",
+              "asset": "assets/courses/en-a1-37.json",
+              "order": 36
+            },
+            {
+              "id": "en-a1-38",
+              "title": "Планы: going to",
+              "asset": "assets/courses/en-a1-38.json",
+              "order": 37
+            }
+          ]
+        },
+        {
+          "id": "en-v013-unit-6",
+          "title": "На связи: рабочий звонок",
+          "lessons": [
+            {
+              "id": "en-a1-39",
+              "title": "На связи: рабочий звонок",
+              "asset": "assets/courses/en-a1-39.json",
+              "order": 38
+            },
+            {
+              "id": "en-a1-40",
+              "title": "Итог: рассказываем о поездке",
+              "asset": "assets/courses/en-a1-40.json",
+              "order": 39
+            }
+          ]
+        }
+      ]
     }
   ]
 }

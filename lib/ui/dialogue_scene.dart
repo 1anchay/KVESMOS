@@ -6,8 +6,14 @@ import 'character_moment.dart';
 class DialogueScene extends StatelessWidget {
   final String scene;
   final LearningAudio? audio;
-  final String? reply;
-  const DialogueScene({super.key, required this.scene, this.audio, this.reply});
+  final String? reply, pronunciation;
+  const DialogueScene({
+    super.key,
+    required this.scene,
+    this.audio,
+    this.reply,
+    this.pronunciation,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +27,14 @@ class DialogueScene extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        if (pronunciation != null)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Text(
+              pronunciation!,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ),
         for (final line in lines)
           Padding(
             padding: const EdgeInsets.only(bottom: 10),

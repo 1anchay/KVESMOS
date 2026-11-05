@@ -1,0 +1,279 @@
+{
+  "id": "de-a1-08",
+  "title": "Артикли · кого и что",
+  "topic": "Артикли · кого и что",
+  "order": 7,
+  "objective": "Попросить предмет с правильным артиклем.",
+  "guide": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+  "vocabulary": [
+    {
+      "id": "de:v013:8:p0",
+      "en": "Ich brauche einen Stift.",
+      "ru": "Мне нужна ручка."
+    },
+    {
+      "id": "de:v013:8:p1",
+      "en": "Ich habe eine Tasche.",
+      "ru": "У меня сумка."
+    },
+    {
+      "id": "de:v013:8:p2",
+      "en": "Ich brauche ein Buch.",
+      "ru": "Мне нужна книга."
+    },
+    {
+      "id": "de:v013:8:p3",
+      "en": "Hast du einen Stift?",
+      "ru": "У тебя есть ручка?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Ich brauche einen Stift.",
+      "translation": "Мне нужна ручка.",
+      "explanation": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Ich habe eine Tasche.",
+      "translation": "У меня сумка.",
+      "explanation": "Ich habe eine Tasche. — У меня сумка."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Ich brauche ein Buch.",
+      "translation": "Мне нужна книга.",
+      "explanation": "Ich brauche ein Buch. — Мне нужна книга."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Hast du einen Stift?",
+      "translation": "У тебя есть ручка?",
+      "explanation": "Hast du einen Stift? — У тебя есть ручка?\nDer Stift — мужской род. В Akkusativ: einen Stift.\nВерно: Ich brauche einen Stift."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-08-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Мне нужна книга."
+      ],
+      "explanation": "Ich brauche ein Buch. — Мне нужна книга.",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [
+        "de:v013:8:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Ich brauche ein Buch.",
+      "options": [
+        "У меня сумка.",
+        "У тебя есть ручка?",
+        "Мне нужна книга."
+      ]
+    },
+    {
+      "id": "de-a1-08-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Мне нужна ручка. Выбери реплику.",
+      "answers": [
+        "Ich brauche einen Stift."
+      ],
+      "explanation": "Ich brauche einen Stift. — Мне нужна ручка.",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [
+        "de:v013:8:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Ich brauche ein Buch.",
+        "Ich brauche einen Stift.",
+        "Ich habe eine Tasche."
+      ]
+    },
+    {
+      "id": "de-a1-08-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [
+        "de:v013:8:p0",
+        "de:v013:8:p1",
+        "de:v013:8:p2",
+        "de:v013:8:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:8:p0",
+          "en": "Ich brauche einen Stift.",
+          "ru": "Мне нужна ручка."
+        },
+        {
+          "id": "de:v013:8:p1",
+          "en": "Ich habe eine Tasche.",
+          "ru": "У меня сумка."
+        },
+        {
+          "id": "de:v013:8:p2",
+          "en": "Ich brauche ein Buch.",
+          "ru": "Мне нужна книга."
+        },
+        {
+          "id": "de:v013:8:p3",
+          "en": "Hast du einen Stift?",
+          "ru": "У тебя есть ручка?"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-08-e05",
+      "type": "dialogue",
+      "prompt": "Что нужно Мико?",
+      "answers": [
+        "Ручка"
+      ],
+      "explanation": "Мико: Ich brauche einen Stift. Hast du einen Stift?\nОрби: Ja. Ich habe einen Stift.\nРучка",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [
+        "de:v013:8:p0",
+        "de:v013:8:p1",
+        "de:v013:8:p2",
+        "de:v013:8:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Ich brauche einen Stift. Hast du einen Stift?\nОрби: Ja. Ich habe einen Stift.",
+      "options": [
+        "Сумка",
+        "Ручка",
+        "Чашка"
+      ]
+    },
+    {
+      "id": "de-a1-08-e03",
+      "type": "order",
+      "prompt": "Составь реплику: У меня сумка.",
+      "answers": [
+        "Ich habe eine Tasche."
+      ],
+      "explanation": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [
+        "de:v013:8:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Ich",
+        "habe",
+        "eine",
+        "Tasche"
+      ]
+    },
+    {
+      "id": "de-a1-08-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: У тебя есть ручка?",
+      "answers": [
+        "Hast du einen Stift?"
+      ],
+      "explanation": "Hast du einen Stift? — У тебя есть ручка?",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [
+        "de:v013:8:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Hast du einen Stift?"
+    },
+    {
+      "id": "de-a1-08-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich brauche ein Stift.",
+      "answers": [
+        "Ich brauche einen Stift."
+      ],
+      "explanation": "Der Stift — мужской род. В Akkusativ: einen Stift.",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich brauche ein Stift.",
+        "Ich brauche einen Stift."
+      ]
+    },
+    {
+      "id": "de-a1-08-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Ich habe eine Tasche.»?",
+      "answers": [
+        "У меня сумка."
+      ],
+      "explanation": "Ich habe eine Tasche. — У меня сумка.",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [
+        "de:v013:8:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Мне нужна ручка.",
+        "У меня сумка.",
+        "У тебя есть ручка?"
+      ]
+    },
+    {
+      "id": "de-a1-08-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Мне нужна ручка.",
+      "answers": [
+        "Ich brauche einen Stift."
+      ],
+      "explanation": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [
+        "de:v013:8:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Ich brauche einen Stift.",
+        "meaning": "Мне нужна ручка."
+      }
+    },
+    {
+      "id": "de-a1-08-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: У меня велосипед.",
+      "answers": [
+        "Ich habe ein Fahrrad."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Ich habe ein Fahrrad. — У меня велосипед.",
+      "hint": "Der Stift — ручка, die Tasche — сумка, das Buch — книга. После haben/brauchen прямое дополнение стоит в Akkusativ. Мужской ein меняется на einen: einen Stift. Женский eine и средний ein не меняются. Brauchen — нуждаться: ich brauche.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich bin müde.",
+        "Ich habe ein Fahrrad.",
+        "Hast du Zeit?",
+        "Wir sind zu Hause."
+      ]
+    }
+  ]
+}

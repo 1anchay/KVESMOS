@@ -51,6 +51,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "de-v013",
+      "title": "Самостоятельные разговоры",
+      "themes": [
+        {
+          "id": "de-v013-unit-1",
+          "title": "Sein und haben · состояние и вещи",
+          "lessons": [
+            {
+              "id": "de-a1-07",
+              "title": "Sein und haben · состояние и вещи",
+              "asset": "assets/courses/de-a1-07.json",
+              "order": 6
+            },
+            {
+              "id": "de-a1-08",
+              "title": "Артикли · кого и что",
+              "asset": "assets/courses/de-a1-08.json",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-2",
+          "title": "Работа и учёба · порядок слов",
+          "lessons": [
+            {
+              "id": "de-a1-09",
+              "title": "Работа и учёба · порядок слов",
+              "asset": "assets/courses/de-a1-09.json",
+              "order": 8
+            },
+            {
+              "id": "de-a1-10",
+              "title": "Вопросы · wer, wo, wann",
+              "asset": "assets/courses/de-a1-10.json",
+              "order": 9
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-3",
+          "title": "Распорядок · отделяемая приставка",
+          "lessons": [
+            {
+              "id": "de-a1-11",
+              "title": "Распорядок · отделяемая приставка",
+              "asset": "assets/courses/de-a1-11.json",
+              "order": 10
+            },
+            {
+              "id": "de-a1-12",
+              "title": "Еда и отрицание",
+              "asset": "assets/courses/de-a1-12.json",
+              "order": 11
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-4",
+          "title": "На рынке · количество и цена",
+          "lessons": [
+            {
+              "id": "de-a1-13",
+              "title": "На рынке · количество и цена",
+              "asset": "assets/courses/de-a1-13.json",
+              "order": 12
+            },
+            {
+              "id": "de-a1-14",
+              "title": "В дороге · составные слова",
+              "asset": "assets/courses/de-a1-14.json",
+              "order": 13
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-5",
+          "title": "Просьбы · können",
+          "lessons": [
+            {
+              "id": "de-a1-15",
+              "title": "Просьбы · können",
+              "asset": "assets/courses/de-a1-15.json",
+              "order": 14
+            },
+            {
+              "id": "de-a1-16",
+              "title": "Как пройти · ориентиры",
+              "asset": "assets/courses/de-a1-16.json",
+              "order": 15
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-6",
+          "title": "Встреча · möchten",
+          "lessons": [
+            {
+              "id": "de-a1-17",
+              "title": "Встреча · möchten",
+              "asset": "assets/courses/de-a1-17.json",
+              "order": 16
+            },
+            {
+              "id": "de-a1-18",
+              "title": "Итог · самостоятельная поездка",
+              "asset": "assets/courses/de-a1-18.json",
+              "order": 17
+            }
+          ]
+        }
+      ]
     }
   ]
 }

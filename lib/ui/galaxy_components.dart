@@ -394,10 +394,24 @@ class AnswerTile extends StatelessWidget {
         duration: MediaQuery.disableAnimationsOf(context)
             ? Duration.zero
             : const Duration(milliseconds: 140),
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(22)),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18),
+          border: Border(
+            bottom: BorderSide(
+              color: selected
+                  ? accent.withValues(alpha: .55)
+                  : scheme.outlineVariant,
+              width: selected ? 2 : 4,
+            ),
+          ),
+        ),
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
-            minimumSize: const Size(double.infinity, 56),
+            minimumSize: const Size(double.infinity, 62),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            textStyle: Theme.of(context).textTheme.titleMedium,
             padding: const EdgeInsets.all(16),
             backgroundColor: selected
                 ? accent.withValues(alpha: .14)
@@ -405,7 +419,7 @@ class AnswerTile extends StatelessWidget {
             foregroundColor: scheme.onSurface,
             side: BorderSide(
               color: selected ? accent : scheme.outlineVariant,
-              width: selected ? 2 : 1,
+              width: 2,
             ),
           ),
           onPressed: onPressed,
@@ -417,7 +431,7 @@ class AnswerTile extends StatelessWidget {
                   height: 28,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+                    borderRadius: BorderRadius.circular(8),
                     color: selected ? accent : scheme.surfaceContainerHighest,
                   ),
                   child: selected

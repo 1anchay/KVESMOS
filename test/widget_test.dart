@@ -90,7 +90,7 @@ void main() {
     expect(find.text(resumed.lesson.exercises[1].prompt), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();
-    for (final label in ['Слова', 'Прогресс', 'Профиль', 'Сегодня']) {
+    for (final label in ['Практика', 'Прогресс', 'Профиль', 'Сегодня']) {
       await tester.tap(find.text(label).last);
       await tester.pumpAndSettle();
       expect(tester.takeException(), isNull);

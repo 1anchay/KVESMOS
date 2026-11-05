@@ -1,0 +1,1586 @@
+{
+  "files": [
+    {
+      "asset": "assets/audio/voices/clips/kokoro-9a050e65a1a475bfab32.m4a",
+      "sha256": "8b6972c9a3fd7ef86f70ef20be1d0bcf85c293bb463505fd275b81b6dac504be",
+      "bytes": 21573,
+      "text": "Are you going to stay at home?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-9a050e65a1a475bfab32-slow.m4a",
+      "sha256": "6bf7582015ff9fe7f21eeecb21059014ed095ba7b385fde9758bab5a79315cd9",
+      "bytes": 30491,
+      "text": "Are you going to stay at home?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-df4f49003031a72769c5.m4a",
+      "sha256": "2bfdee44d38091cc00c6a29f00e7f8a32ba0ab80c160d93423b2733233caa348",
+      "bytes": 20031,
+      "text": "Can I pay by card?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-df4f49003031a72769c5-slow.m4a",
+      "sha256": "15f422a3b545f9c69c25dbc32e07ae3c523692f02d7b7e129dd94b97b3b696e7",
+      "bytes": 27415,
+      "text": "Can I pay by card?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-4a967ac7e0a7ccc38bf1.m4a",
+      "sha256": "60d8d272563023d5f713b08a6e13afa15b1bf6f445470a54ed2a84074c2a747a",
+      "bytes": 21143,
+      "text": "Check-out is at eleven.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-4a967ac7e0a7ccc38bf1-slow.m4a",
+      "sha256": "ed599c16ce3698da97e4c5c950e67dc0f9e432678b357c8bf1149ca02cc1aa90",
+      "bytes": 29169,
+      "text": "Check-out is at eleven.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b12d9d47691b5508b2bd.m4a",
+      "sha256": "4b4ac0f0184f60f1684e99f548620c0e21c7637b565f881e4502aeea669bb8be",
+      "bytes": 21765,
+      "text": "Could I have another towel?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b12d9d47691b5508b2bd-slow.m4a",
+      "sha256": "06053668f18f1b499cb34185a596efaf20ba04a17bcaaa7a21520ff13f73c747",
+      "bytes": 28909,
+      "text": "Could I have another towel?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-45eacd87c7aaf136eb89.m4a",
+      "sha256": "53550c02e8bcdd92bcf2a0bf0ee0f022f15d382aaeccd33d2dd6a5824bb035a7",
+      "bytes": 26642,
+      "text": "Could we move our meeting to Friday?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-45eacd87c7aaf136eb89-slow.m4a",
+      "sha256": "49cf0496fad9fb65cdda4a790bb04abb57d5003da22d20cf82be7f0eea45f4f4",
+      "bytes": 34653,
+      "text": "Could we move our meeting to Friday?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b45ff4cd7416a63b7191.m4a",
+      "sha256": "784c3a5a02926088eb05d9c6f986a8d8e69510d8aea21ff1341e391d1649c798",
+      "bytes": 24699,
+      "text": "Could you book a taxi for tomorrow?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b45ff4cd7416a63b7191-slow.m4a",
+      "sha256": "f835c60c6cadc76f0d683d609ffa7e83eb81a30f3314dd1a0cb0cc1166e3420b",
+      "bytes": 33582,
+      "text": "Could you book a taxi for tomorrow?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-48c0e64742a89930fe42.m4a",
+      "sha256": "ff7c86553c5663047170b3cc99aea4e4f1df7cbfa4d40e3a64a4005e15942e95",
+      "bytes": 17736,
+      "text": "Could you help me, please?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-48c0e64742a89930fe42-slow.m4a",
+      "sha256": "abed686964a190e38825622c109815c4def181ec7e1c2b0d1a7f32ac40a40146",
+      "bytes": 26396,
+      "text": "Could you help me, please?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-08f913e322f7e4b38e55.m4a",
+      "sha256": "9ff45449bebafeaaf6a81d73c2e9661e3055a6bff68938b8bd869bad9c82ae41",
+      "bytes": 22597,
+      "text": "Could you repeat that, please?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-08f913e322f7e4b38e55-slow.m4a",
+      "sha256": "8cbd93f8a0259a4f6523f925ad1aea2931101a78f8746bd16f6d466f6c79180e",
+      "bytes": 28676,
+      "text": "Could you repeat that, please?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d76f900729c528b377db.m4a",
+      "sha256": "6bb372cea06298798d77a372897541f7d9be05de231aacc70d058dce33c92512",
+      "bytes": 26666,
+      "text": "Could you send me the address by email?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d76f900729c528b377db-slow.m4a",
+      "sha256": "feb613fced1d6c9ad1d37a54d244610d983cb7f335902a871fcd4b9f0652d6b3",
+      "bytes": 36916,
+      "text": "Could you send me the address by email?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-836862df2ae8e71bb501.m4a",
+      "sha256": "03171fafe3cfd260a9270d64c5030c20e5c49cde46519f68ca4b6084db4adb90",
+      "bytes": 20491,
+      "text": "Did you enjoy the film?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-836862df2ae8e71bb501-slow.m4a",
+      "sha256": "3a958461055656ad7193d7e252d25faf4f678ac90082eac893203b3c5d1fceec",
+      "bytes": 27747,
+      "text": "Did you enjoy the film?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-83e2558ddeed28e1a228.m4a",
+      "sha256": "2e8becdd3c961f8a71f51daa7057dfb8c521b0124763c9fb4096c8bfff2e0d51",
+      "bytes": 19923,
+      "text": "Did you visit the museum?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-83e2558ddeed28e1a228-slow.m4a",
+      "sha256": "35058162a283952d6c9819ef26e0738a6026173e98e1888589e520bbdb57473f",
+      "bytes": 27995,
+      "text": "Did you visit the museum?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-65b78a6b9d9ba25dc327.m4a",
+      "sha256": "0f83e1ad22bf2df98ee1864d9e599aadf79120aa248dd23c12091d49852d696a",
+      "bytes": 24620,
+      "text": "Do you have anything for a headache?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-65b78a6b9d9ba25dc327-slow.m4a",
+      "sha256": "33b63e2956248aa08783034c67fd7ac181af437795c46ced9b6133b20c77c468",
+      "bytes": 33953,
+      "text": "Do you have anything for a headache?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-cf384555afaea965affc.m4a",
+      "sha256": "c09195d715acfff785d7c19dbd5a64f702e0f5ad7087add05795af9e25c9f79b",
+      "bytes": 17071,
+      "text": "Do you like football?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-cf384555afaea965affc-slow.m4a",
+      "sha256": "d94fa10bdf0b459f4b2694a45bc367b503483e97b1ff27a07e3199bc736d9f51",
+      "bytes": 23121,
+      "text": "Do you like football?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a23ea50dafdab20253e0.m4a",
+      "sha256": "06a886c5a5853a9e37addd39418112fa4ef65622d5d512d4e4d88d7e381e3cef",
+      "bytes": 24272,
+      "text": "Does this bus go to the station?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a23ea50dafdab20253e0-slow.m4a",
+      "sha256": "3d42f06694fc505eeb1800dab242262109694a37e5d6fdc8f80855b74bf472be",
+      "bytes": 32160,
+      "text": "Does this bus go to the station?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-77b4c891361d89e1893d.m4a",
+      "sha256": "082fc9473c10947bd999b80340a785989343668e739d58cebf1c02910ad3af47",
+      "bytes": 18701,
+      "text": "Friday works for me.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-77b4c891361d89e1893d-slow.m4a",
+      "sha256": "fbf969e52231620e15c72638c521d72ce550f447e7da37d76fa6723f10ca10c0",
+      "bytes": 26011,
+      "text": "Friday works for me.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-92c6a013c52e43f70b35.m4a",
+      "sha256": "d73bc50b3924a03fccf8b454c86e5d33b9dfa1099dc461b20a9439be7bc0b9ca",
+      "bytes": 15048,
+      "text": "How do you feel?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-92c6a013c52e43f70b35-slow.m4a",
+      "sha256": "9b396a84d3a5b6ee387ad07442688c0a9a3cf455b427714939af4d2f62334c80",
+      "bytes": 20461,
+      "text": "How do you feel?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-6e4ef9f15bf7bf3311f8.m4a",
+      "sha256": "7e5a80ab3c17158770a4deb699d979c2009b9e57c8afccfe7af1f9d8a5aab6c3",
+      "bytes": 19898,
+      "text": "How much is this bag?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-6e4ef9f15bf7bf3311f8-slow.m4a",
+      "sha256": "28caf3f6a16690f26c304bc5984f66dadcdbb1fda51c4d101d2666e83f667b03",
+      "bytes": 28907,
+      "text": "How much is this bag?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c26d270af6000caa03a2.m4a",
+      "sha256": "db5ca86ecfa41d6ddf5722b9a811c784b4518d5eabaec4d1983c1bd4cfd310c4",
+      "bytes": 18391,
+      "text": "I am a little worried.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c26d270af6000caa03a2-slow.m4a",
+      "sha256": "84d1d5994810e5f69f9e7d47afff0bf5600ecdec21cc78d3fd3f5c9c1ca901ae",
+      "bytes": 24464,
+      "text": "I am a little worried.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5c75ae2c1d1af664f6cf.m4a",
+      "sha256": "94c1efa7c2a67835bf50f4fdfc6fd76388baf19332b4b44c5c9182b84703fe6e",
+      "bytes": 20054,
+      "text": "I am happy to see you.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5c75ae2c1d1af664f6cf-slow.m4a",
+      "sha256": "bd5fcc54322acfdc746512cbf6c57f9b376a5726df74ec7a661d9c5e43c6e429",
+      "bytes": 27268,
+      "text": "I am happy to see you.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a4708d092327ed3e4b49.m4a",
+      "sha256": "7cc92e4b0445fdae61f9e96224bcfe63c060494f6a58c43955b17842df74fb9a",
+      "bytes": 21349,
+      "text": "I bought a return ticket.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a4708d092327ed3e4b49-slow.m4a",
+      "sha256": "9a8beea4e881efd4ae20c90bdfed162c1f6673e7eaed5dc1014a86af01538a02",
+      "bytes": 29010,
+      "text": "I bought a return ticket.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b608335570eeaab90948.m4a",
+      "sha256": "04bba3bc918da93b9dada0768bd7866169f8ad73ce7bc2d11ff8d456e21a8c82",
+      "bytes": 19298,
+      "text": "I cooked dinner at home.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b608335570eeaab90948-slow.m4a",
+      "sha256": "43a49ce88e81a9090b6a1c98b5b141b71034c1011fb43cc0a7f516d707aa8908",
+      "bytes": 26649,
+      "text": "I cooked dinner at home.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-566598a33ec52e70011a.m4a",
+      "sha256": "b40268ef3bbc3e9b329659562a4df3a559a67c3b52b909f9475f40ea897a2627",
+      "bytes": 23343,
+      "text": "I didn't buy a single ticket.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-566598a33ec52e70011a-slow.m4a",
+      "sha256": "ba08c1b541c360c0d4031e8c18f189e0b6dd211c67406ea2dd3d21804864f5d3",
+      "bytes": 31770,
+      "text": "I didn't buy a single ticket.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-bbe06be80d9405e4646e.m4a",
+      "sha256": "fecca9e5e42e289b9ad819503e1174478f68d083706bdef938140cf85f2b9e3a",
+      "bytes": 21807,
+      "text": "I didn't visit the museum.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-bbe06be80d9405e4646e-slow.m4a",
+      "sha256": "4bc79f0e7acb4b98fadf9e78dfcff6e4c1c1d0fb2675306b33c7792be6e5bc9b",
+      "bytes": 29146,
+      "text": "I didn't visit the museum.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-6802c7a96d3f91065e74.m4a",
+      "sha256": "f7dc20c99be0096d1292ed5e2ad9427c208a86e8de170b5442809a0b9859fb4b",
+      "bytes": 18017,
+      "text": "I enjoy reading.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-6802c7a96d3f91065e74-slow.m4a",
+      "sha256": "82c9158ae468754af8bc337e56d9c11419ebb9cc0c2b9cb54613d466f894246f",
+      "bytes": 25362,
+      "text": "I enjoy reading.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-036beb11dfe124f71c47.m4a",
+      "sha256": "bfca8e00652bf1c15be0d286b73f220df5ce4b79fd22354fd23628eb6bc57712",
+      "bytes": 18253,
+      "text": "I feel better now.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-036beb11dfe124f71c47-slow.m4a",
+      "sha256": "4a456fcfbf96ce58b758d979798e1e01e21e2b6577ec1ea3dbeca796da6e26a6",
+      "bytes": 25147,
+      "text": "I feel better now.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-563d8c5b7853ff73913f.m4a",
+      "sha256": "9a331f9f197c56f95c20fff8239db74d6d8cb5e68fb193592a4b0b8ca361c64e",
+      "bytes": 16255,
+      "text": "I feel tired.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-563d8c5b7853ff73913f-slow.m4a",
+      "sha256": "15f02c9e878fc9028a6a2d380ed1db49b6d6e78a319f3b127eadcc387a3c3798",
+      "bytes": 22256,
+      "text": "I feel tired.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7fabe3b7b2b74daf28f9.m4a",
+      "sha256": "a032533d09ca6a6f60ba5208c5e870e27754c163def771f92d05b2b87dd6a82a",
+      "bytes": 15938,
+      "text": "I have a headache.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7fabe3b7b2b74daf28f9-slow.m4a",
+      "sha256": "afe24c5cd8d60a0cca33494b6bb4ccfb853a67bf56f9a10ad6fc7f95252b50fd",
+      "bytes": 22013,
+      "text": "I have a headache.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-257b4a2d140eff572149.m4a",
+      "sha256": "eb937b4168fc5855a750cf5154ff9883c19dacd5dea2dfaa7c63a707c8aa23d0",
+      "bytes": 30253,
+      "text": "I have a reservation under the name Anna.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-257b4a2d140eff572149-slow.m4a",
+      "sha256": "03f26f177d82304191b01b99492370bee443fa1d9f29a2c893215823fc7cf6d4",
+      "bytes": 41348,
+      "text": "I have a reservation under the name Anna.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5f7ee1fba9cba1724d09.m4a",
+      "sha256": "77ee832aa0a2cc762428323de8bed4c66952b9f98e07e1f469c02ac6f6a1227a",
+      "bytes": 18920,
+      "text": "I have a sore throat.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5f7ee1fba9cba1724d09-slow.m4a",
+      "sha256": "799f833eb2d42c9330bc2cd13cb4cfe649eb66a541cefa6e24e4283dc367d50d",
+      "bytes": 25140,
+      "text": "I have a sore throat.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c56bb4fe9dcd9b842745.m4a",
+      "sha256": "55edeac126b79fc8cce89dcfceef26e96c2733879a06447bcfd457b464a89bcd",
+      "bytes": 23313,
+      "text": "I need a room for two nights.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c56bb4fe9dcd9b842745-slow.m4a",
+      "sha256": "3686e5ad8c55a8bac8cacecafdba2fe5af5639272a83a2aabfc8681fb06c33c3",
+      "bytes": 31578,
+      "text": "I need a room for two nights.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-87f512ea381faed8197d.m4a",
+      "sha256": "64f5199b035d6cb3e87b0f5ee4408cc407d70b24e7c96f7e4314696868b35975",
+      "bytes": 23113,
+      "text": "I need some water, please.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-87f512ea381faed8197d-slow.m4a",
+      "sha256": "8e154d223d70fe54afd7006bfef2a62d90af572d7b26af6d13deb5cedecc4794",
+      "bytes": 30234,
+      "text": "I need some water, please.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-959c5c00e2f83a5beaf4.m4a",
+      "sha256": "1b3918410e310633d7f6bfc39c3e6e8882afad6b4aeab1355145aa4af306c249",
+      "bytes": 25994,
+      "text": "I need to speak to a pharmacist.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-959c5c00e2f83a5beaf4-slow.m4a",
+      "sha256": "4804c97ebf109fedf84a41cc6e65e5d552ece31bcdb580b855653f3e8bb9c4f0",
+      "bytes": 34319,
+      "text": "I need to speak to a pharmacist.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-db729bfe30916459ffd8.m4a",
+      "sha256": "2576aea60691edc542abcdb0605124010ce30a6e606b99c97624167b9c59586f",
+      "bytes": 18253,
+      "text": "I play the guitar.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-db729bfe30916459ffd8-slow.m4a",
+      "sha256": "d2a9de5fec27f7ad7e7b2884539de7b7e4ce92aa201da73449bbfa92c194547c",
+      "bytes": 24920,
+      "text": "I play the guitar.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d0489bcb4230dee4878f.m4a",
+      "sha256": "3ba9bd8659786c0151b050b20e7429f4bef439f0cce6537b9357efa5a5f46d68",
+      "bytes": 25687,
+      "text": "I visited my sister yesterday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d0489bcb4230dee4878f-slow.m4a",
+      "sha256": "c34254d6a8736fca54b409f1dd9c32f326a811cd3341d47f518a7c85a73b5ad6",
+      "bytes": 37809,
+      "text": "I visited my sister yesterday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-2298544c6355a4a7cab5.m4a",
+      "sha256": "a4df4dd735906e381b70ecdcc4a577cafd17d59e340aa7404057f55c7f594921",
+      "bytes": 22219,
+      "text": "I was at home yesterday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-2298544c6355a4a7cab5-slow.m4a",
+      "sha256": "30e4d1c45ae70ba6682d732fba4096869f7ecefcf43455919ec14ae4aa700f27",
+      "bytes": 29642,
+      "text": "I was at home yesterday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-04179183a26d7bdfd0f6.m4a",
+      "sha256": "4debf9d8c0cd1834318ffd0f15e0abfb643e824e8cd4da448d37ed125fa56959",
+      "bytes": 22927,
+      "text": "I went to London by train.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-04179183a26d7bdfd0f6-slow.m4a",
+      "sha256": "8c6ca86a018209d60a45668c46577ca40be29d256afc14b1bd7a05df49578f78",
+      "bytes": 30947,
+      "text": "I went to London by train.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-9ac6877314579bb29e14.m4a",
+      "sha256": "a7effaec4d7c85099efa14c69d73d6e8460a6689d76b89057f2bd5e8bbcef6da",
+      "bytes": 39708,
+      "text": "I went to London by train. I bought a return ticket.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-9ac6877314579bb29e14-slow.m4a",
+      "sha256": "b421f25253ca8829203b51981d5d269a6eb0d701631a447fca133422ea4d0f48",
+      "bytes": 56336,
+      "text": "I went to London by train. I bought a return ticket.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-13611af3fb115837c3d7.m4a",
+      "sha256": "02f021c864f2d50bfb178f2d4bd5149033c18df44b17394025b6168bb2b3d5cf",
+      "bytes": 24098,
+      "text": "I would like this bag, please.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-13611af3fb115837c3d7-slow.m4a",
+      "sha256": "aecbf41d95fc0896d0572033ad6f0f294c8deff3ca3598e90cd7dadaba2ea2b5",
+      "bytes": 32438,
+      "text": "I would like this bag, please.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e396157aa8c81b3f748e.m4a",
+      "sha256": "6a27fbedcfd40638cc49032a43e354ae105e5367203560594256cf7b7e1b59d0",
+      "bytes": 22377,
+      "text": "I'll call you back after lunch.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e396157aa8c81b3f748e-slow.m4a",
+      "sha256": "29adf68a64e7c07a9d4623d88d7744d4cca8df117aab275d8f171366a3c9eebd",
+      "bytes": 31332,
+      "text": "I'll call you back after lunch.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7deb1ded55c9369e7c53.m4a",
+      "sha256": "3b29283d723d6de80e94b5430f277cd4c29155ea3cffbf0e3f9d8c226c3a112e",
+      "bytes": 20362,
+      "text": "I'll take the cheaper bag.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7deb1ded55c9369e7c53-slow.m4a",
+      "sha256": "2a678f492d3b22c37b6b877698a503c6b8d0a391c28e8ebe7801858df308bd0e",
+      "bytes": 28188,
+      "text": "I'll take the cheaper bag.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-4abcc5de01e9f677bfec.m4a",
+      "sha256": "c951b9f982d40c2939af3702871aa2d8974a9ebb83e759d741bc1a12e54f567f",
+      "bytes": 28165,
+      "text": "I'm afraid I can't come on Thursday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-4abcc5de01e9f677bfec-slow.m4a",
+      "sha256": "6aa790a93951ab9c1829eedb9480b15fbd18ffe1366ee28ddb07d6d4c44dc4b1",
+      "bytes": 38196,
+      "text": "I'm afraid I can't come on Thursday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b1ab02c241eba7bba8f0.m4a",
+      "sha256": "62de72937d730fd1c3782048cf5459f89abc81882d46106f23f9d27a0a46df15",
+      "bytes": 25100,
+      "text": "I'm going to cook dinner tomorrow.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b1ab02c241eba7bba8f0-slow.m4a",
+      "sha256": "1735c75e12515846ca9b4625a3964496462529c569f8bf2d67e3edf1c1587414",
+      "bytes": 35761,
+      "text": "I'm going to cook dinner tomorrow.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-486a3bd508c27465c8db.m4a",
+      "sha256": "fb1bdca7917285c5ba0d2341b0fef6c7454ebe46bbe20117465b6cebe5ca845f",
+      "bytes": 24623,
+      "text": "I'm not going to work tomorrow.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-486a3bd508c27465c8db-slow.m4a",
+      "sha256": "fce9fc7da60f47050e6299472c0c130246c639c9cd716eeb92d9825420969b9f",
+      "bytes": 35506,
+      "text": "I'm not going to work tomorrow.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-beab18357bc34650d033.m4a",
+      "sha256": "b282d4119ff4b0ec479061292fb8c259e88c7da367bebfaed4be6a416ec39a2a",
+      "bytes": 19126,
+      "text": "It is cold outside.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-beab18357bc34650d033-slow.m4a",
+      "sha256": "4ce7e0bb5162f549e984d4bf2c7ebfeee2c2233e9e6b42f9f3ef3655e6719343",
+      "bytes": 26652,
+      "text": "It is cold outside.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-0dfda542874b98ffd1b5.m4a",
+      "sha256": "d0e950ba5816361906db22d915c9145fef8f971e0c6f552c585df685bfb79fed",
+      "bytes": 18923,
+      "text": "It is five pounds.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-0dfda542874b98ffd1b5-slow.m4a",
+      "sha256": "97d0fd2f23a11abad955fa34851debcc63b532f449efe1f711fd7eb8f7c29d40",
+      "bytes": 25763,
+      "text": "It is five pounds.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5ec02f73f7434162a5c8.m4a",
+      "sha256": "25bcf22965151ea9f7d811d805ba3f53a998d042ccd003ecdc323b13bdd1c11d",
+      "bytes": 24824,
+      "text": "It is okay to make mistakes.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5ec02f73f7434162a5c8-slow.m4a",
+      "sha256": "8ffc5aab6beebe081ed6784f9716f7da52080d90b765770d15483ad7bb1f7aca",
+      "bytes": 33134,
+      "text": "It is okay to make mistakes.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c85ec16c2d30804c980e.m4a",
+      "sha256": "084d8517b325af6e3043df69f718239d9a655ed9d305432ed62bd8fdc27730c6",
+      "bytes": 15776,
+      "text": "It is raining.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c85ec16c2d30804c980e-slow.m4a",
+      "sha256": "ab5797710ec061db9e1b7b466ab6d6549032ffbabdcce0c5254601d65a533d10",
+      "bytes": 20915,
+      "text": "It is raining.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-bc9638d059849fd01728.m4a",
+      "sha256": "defffbf6e819baab455d77a94c1a8f22832bbcea3da37ba000ec7fd718d09720",
+      "bytes": 18230,
+      "text": "It is sunny today.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-bc9638d059849fd01728-slow.m4a",
+      "sha256": "8d84e5e6ed6bdaf0a822170b00d02a7b680d0c4eb7a159976ebab5c1981ed96e",
+      "bytes": 24649,
+      "text": "It is sunny today.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7e05ea1168a485b9e3dc.m4a",
+      "sha256": "98e667ea624941d0723be7e12a1d6da678d44694a99dd8d1c746e5b993535c5a",
+      "bytes": 17120,
+      "text": "It is two o’clock.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7e05ea1168a485b9e3dc-slow.m4a",
+      "sha256": "60b3404798061868bce9cf1d0742b06edf0fb5d3045fcb4d79496b92f4c9f6ad",
+      "bytes": 23755,
+      "text": "It is two o’clock.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-041b6d160810d1f59960.m4a",
+      "sha256": "595cd07775956428339b05af57c9437f8432af270d0cf2395527fb9b878b92c0",
+      "bytes": 22254,
+      "text": "Let's meet at half past ten.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-041b6d160810d1f59960-slow.m4a",
+      "sha256": "413709196499577a5a80ada61db698b20ccee03e5a84d1749d8afe0d6c5e1208",
+      "bytes": 31158,
+      "text": "Let's meet at half past ten.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-efe0b27e7d2b283bdbc6.m4a",
+      "sha256": "434b74ebdaf235867e4f4281756f6f7ee67a5d02d81cba691584495ab34342cb",
+      "bytes": 19100,
+      "text": "Let’s meet on Monday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-efe0b27e7d2b283bdbc6-slow.m4a",
+      "sha256": "b2a95009c25d00d42328700518e0271fe351e02be8ad062d4c2b17c2e14da1b8",
+      "bytes": 26055,
+      "text": "Let’s meet on Monday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-04e0379d44886b42c10f.m4a",
+      "sha256": "fe148290d6fecfc635f3bb66b11e7fcf8f71bfcf55651b09ea12500546c4a5fd",
+      "bytes": 17352,
+      "text": "Let’s play together.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-04e0379d44886b42c10f-slow.m4a",
+      "sha256": "29790a7add238c116adcf81570326d04f24ad5598e0775500441f46146aab5ca",
+      "bytes": 23781,
+      "text": "Let’s play together.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5298b9a994397cc38e23.m4a",
+      "sha256": "409e6c73f8e012fcf001ab4fbf7687dfad91d577abebd92a968b63f841d209e4",
+      "bytes": 19971,
+      "text": "Let’s take an umbrella.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5298b9a994397cc38e23-slow.m4a",
+      "sha256": "ea2d82e482c46491b2ec7040893fd15cfa4468ef1c01cad034bcb19aaec3c21d",
+      "bytes": 27586,
+      "text": "Let’s take an umbrella.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-dd8c96857b6956163ce8.m4a",
+      "sha256": "82396c48c1a7e62ff01617c8614d6c1092ce052eb08ef697d2fd1b835b7fc925",
+      "bytes": 10869,
+      "text": "Monday",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-dd8c96857b6956163ce8-slow.m4a",
+      "sha256": "9d99716f36ebc26ef3724ded90c1aecc3ba9ca69440b766ed1dcc8a8217f68e5",
+      "bytes": 14958,
+      "text": "Monday",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e4a3c0d29dbc148da10a.m4a",
+      "sha256": "53a2ac49891bcf53d079848f7c81eae6284da48ec31cd085cbacce9d91149628",
+      "bytes": 21403,
+      "text": "No, I wasn't at work.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e4a3c0d29dbc148da10a-slow.m4a",
+      "sha256": "b799562f6c949fbf1a354f9d85c79db44de99a266f244916bf49795ba9fa9db3",
+      "bytes": 27757,
+      "text": "No, I wasn't at work.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-866abb0732645e63af09.m4a",
+      "sha256": "c6d8077b6ab50b82ddfd3d4d7fc31bd01cad46aaab362f81ac9b3398da19a769",
+      "bytes": 37642,
+      "text": "No, I wasn't at work. I was at home yesterday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-866abb0732645e63af09-slow.m4a",
+      "sha256": "0d41a36f579edab2fbabcd6dd42a6c453b12cc0cdd51a008d655caacdda669bf",
+      "bytes": 53159,
+      "text": "No, I wasn't at work. I was at home yesterday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-96afe158b68e911139e7.m4a",
+      "sha256": "508c966e5703cd06c9f6af683bba3f17c25fb5ad4eec2502f1d52538cca2eb59",
+      "bytes": 26382,
+      "text": "One ticket to the station, please.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-96afe158b68e911139e7-slow.m4a",
+      "sha256": "effce71bcf978862343f16b0952bc32a0dd0c3f2028862ac74b4b4c2ba20474f",
+      "bytes": 36148,
+      "text": "One ticket to the station, please.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-ec78f17d9a2d0c07c054.m4a",
+      "sha256": "5db849d6664e388f0109ce4f73e528e952a461fce0b6d48819dbd2b2f2c89574",
+      "bytes": 15533,
+      "text": "See you at two.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-ec78f17d9a2d0c07c054-slow.m4a",
+      "sha256": "40442633787fe10cfa6199a20a536cb062ef4474bf891bdcdbf40169e2ab8abf",
+      "bytes": 21329,
+      "text": "See you at two.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e03341ff86ed57286318.m4a",
+      "sha256": "d0c7b2865ea32b77c02b531c78e519f7a5cf973adc5018bc4d0c5310b2c81279",
+      "bytes": 19573,
+      "text": "The book is on the table.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e03341ff86ed57286318-slow.m4a",
+      "sha256": "10cb5eeda57a5478d68759ff25eb0f998f04bd994d93219f28c23e296039a73e",
+      "bytes": 28064,
+      "text": "The book is on the table.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d7f70754a19ddc8ca74d.m4a",
+      "sha256": "dc1a232726c3c78d1d3258ea68cd488f85a19e3b4e284df05abbf4bb034da423",
+      "bytes": 18911,
+      "text": "The connection is bad.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d7f70754a19ddc8ca74d-slow.m4a",
+      "sha256": "2ec2b410bd7d22f5bca9be60f02f0af14d343710fbd9ee9552842bc6cab6d1ba",
+      "bytes": 26492,
+      "text": "The connection is bad.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-ffb188580a694c025a6f.m4a",
+      "sha256": "bbffe5fc4595183a9968ca87650787a0fee68b7e663e95bb0c6c3d5ea1794866",
+      "bytes": 38971,
+      "text": "The connection is bad. Could you repeat that, please?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-ffb188580a694c025a6f-slow.m4a",
+      "sha256": "d5ebc92d177bc129e8ea0ed8f7562506e7d650102736c04437939b16d0c01c3a",
+      "bytes": 53579,
+      "text": "The connection is bad. Could you repeat that, please?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-13c4c4cd626f8feda946.m4a",
+      "sha256": "751a89c69a92f0ba8363ff098dc7d3d83cb7acd3664a00ba70c0ae2f0b551b62",
+      "bytes": 26968,
+      "text": "The hotel was quiet and comfortable.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-13c4c4cd626f8feda946-slow.m4a",
+      "sha256": "ec46eb550f09f4c996c6e3b6d24a56cb5bc419458a164c90e4f7652c14706209",
+      "bytes": 37596,
+      "text": "The hotel was quiet and comfortable.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-0d7c3379c8130ff9232b.m4a",
+      "sha256": "5c651b327b29b87d4f4f133a03849a0ccd6d890d8f4c26a33de1529725f514cc",
+      "bytes": 20483,
+      "text": "The shower doesn't work.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-0d7c3379c8130ff9232b-slow.m4a",
+      "sha256": "9cf0e7fbfc58555d7534620b93b36545f60dd990cdbf324641767db3c5639034",
+      "bytes": 27594,
+      "text": "The shower doesn't work.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e4d1cedcaba0ec5b27de.m4a",
+      "sha256": "3a330114d7cbb15de8ccb93e42948a371f8f3660e624c9a39deee657d0161dd7",
+      "bytes": 36251,
+      "text": "The shower doesn't work. Could you help me, please?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e4d1cedcaba0ec5b27de-slow.m4a",
+      "sha256": "aeecee4a71ca29cfcf0b762946f09c795f676aa374f0e41cb7ce07eb52bd41a4",
+      "bytes": 50429,
+      "text": "The shower doesn't work. Could you help me, please?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-4ddff537c2800153800e.m4a",
+      "sha256": "48b07200cbe11f60c0ea44251b49fa70290aa6d2ec39f0b50a47a0632a734794",
+      "bytes": 16404,
+      "text": "There are two chairs.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-4ddff537c2800153800e-slow.m4a",
+      "sha256": "f30c68b78d92a9d2cc16b5a3a3519c20f6d077900bca1431061931513f851031",
+      "bytes": 22468,
+      "text": "There are two chairs.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-21dcae064a0d847878a2.m4a",
+      "sha256": "1c202cee749c12873995008c85bf5563015fc2abe2f8974f5d85dbbe631cda2d",
+      "bytes": 22632,
+      "text": "There is a table in the kitchen.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-21dcae064a0d847878a2-slow.m4a",
+      "sha256": "f4cbfc5edc487effe36634a94d0bde66fb34cd42c15249fe655826951800dac8",
+      "bytes": 31365,
+      "text": "There is a table in the kitchen.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-3abbbda45ab3a4f3e882.m4a",
+      "sha256": "bc2d61a825483f81a6a5ab856eb52e1793da4b52ae7312ebd5b490de3de56a52",
+      "bytes": 24477,
+      "text": "There isn't a towel in my room.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-3abbbda45ab3a4f3e882-slow.m4a",
+      "sha256": "0a95c9d1c24b2a0aca7d1dbb89d55bb2f0d08639a90a61644f8689ae2c26a4f3",
+      "bytes": 33339,
+      "text": "There isn't a towel in my room.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-618104f8aba762e42f9e.m4a",
+      "sha256": "d42a957c9e46d1028b5ce66dd5b0cacd85546dc8b73ca92f71309b6584e976bc",
+      "bytes": 24502,
+      "text": "These shoes are more comfortable.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-618104f8aba762e42f9e-slow.m4a",
+      "sha256": "113918ccb990e693c899c1ab6b940bfdb56962899416d0b88bf898de9537055f",
+      "bytes": 34220,
+      "text": "These shoes are more comfortable.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c475c018a8f36e523979.m4a",
+      "sha256": "1b687864b49e12e71992adc494f3838a983b1304c0122b10af6d157a951b23c1",
+      "bytes": 24471,
+      "text": "This bag is cheaper than that one.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c475c018a8f36e523979-slow.m4a",
+      "sha256": "37a5e5a40bb1426a44e8bd48d4a9aa8bd2e23d18c52f53651aa045d9dee96f77",
+      "bytes": 32677,
+      "text": "This bag is cheaper than that one.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-8265d9f64860be94d4c8.m4a",
+      "sha256": "cf5fc5aeed396c9db02f89db7cd575e60c841e31f30b5d04c313f2ed20cec641",
+      "bytes": 18467,
+      "text": "This is my bedroom.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-8265d9f64860be94d4c8-slow.m4a",
+      "sha256": "ba95b55cdb0c94b39c6fb405e1fb2c1987e72cc22c1d3884d4bc088566b0b42e",
+      "bytes": 25832,
+      "text": "This is my bedroom.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b5c00b54ebcc0259a58d.m4a",
+      "sha256": "88ef794529a0c202c7c3c3b6bff10a62912b6d33bee145c81a2c9513859a6d56",
+      "bytes": 19167,
+      "text": "This jacket is bigger.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-b5c00b54ebcc0259a58d-slow.m4a",
+      "sha256": "6a443217300fc8c3650a93fba316789f40e40a132044f629d725f7b3f804f5ec",
+      "bytes": 26161,
+      "text": "This jacket is bigger.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f0872db5cac2e8515c99.m4a",
+      "sha256": "f3f118b844615e9a309bf1d6424cd49a449edb856956cfed44aa8cf40f2fa417",
+      "bytes": 19961,
+      "text": "Turn left at the station.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f0872db5cac2e8515c99-slow.m4a",
+      "sha256": "12ff672dea53625cba98dd2bab830823a420c0d0ff83ac434cbb42d4feb4a543",
+      "bytes": 28247,
+      "text": "Turn left at the station.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-9e9b363d9c5b64d064e5.m4a",
+      "sha256": "57fcccfc9e43dd4d920835f2fd7ac6139c80b1f7d80d98951aea47aa835451f8",
+      "bytes": 23755,
+      "text": "We took a taxi to the hotel.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-9e9b363d9c5b64d064e5-slow.m4a",
+      "sha256": "2651d5df4faff06f34aa72e80ed5d7a7aa5652eeb1339643485eb072b11f5478",
+      "bytes": 32645,
+      "text": "We took a taxi to the hotel.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5546b742c49ef95faf7c.m4a",
+      "sha256": "f49d0b395da3492c96c3b1615f6f817477a6f0ec2c478af35338c134def0d5ca",
+      "bytes": 19170,
+      "text": "We walked in the park.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5546b742c49ef95faf7c-slow.m4a",
+      "sha256": "9130625a7d1ecea9ce2b262f19a088562bcbad86f81fddb93de016d38c8a7c2f",
+      "bytes": 25137,
+      "text": "We walked in the park.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-72cb40398234412c0b42.m4a",
+      "sha256": "51b771bfc00d5ee0f1b225c4ccb3e63135945ee79395e9490c2a6f28a7c41ddc",
+      "bytes": 24453,
+      "text": "We watched a film last Sunday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-72cb40398234412c0b42-slow.m4a",
+      "sha256": "c123cc6468a8c75e956763705f6ff7ceceba7ab2a4c8dd3ea0fb1667945771d4",
+      "bytes": 34461,
+      "text": "We watched a film last Sunday.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-1f1384dc4b0701b4d6dd.m4a",
+      "sha256": "0e9f50b6d0a0b022550f2ba5b45a1d2cdd3fb135adc42ef985eeeb01fe00f1bf",
+      "bytes": 39705,
+      "text": "We watched a film last Sunday. We walked in the park.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-1f1384dc4b0701b4d6dd-slow.m4a",
+      "sha256": "7dc49a60aaeb1ff9f2d975d45922f4cad57404d4c035eac0ea4df64e73f6172c",
+      "bytes": 54358,
+      "text": "We watched a film last Sunday. We walked in the park.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-25633704d6d8ddba31c0.m4a",
+      "sha256": "62e65889a4cf9a1f78ff8493a08c9638da67cd0ad8e625ab34086215b39014dd",
+      "bytes": 19330,
+      "text": "We were at the station.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-25633704d6d8ddba31c0-slow.m4a",
+      "sha256": "2852cef93cc7bf62cded5cda6e9f01ffb8c9c54901f6e2ca405f943fb1b8b121",
+      "bytes": 25136,
+      "text": "We were at the station.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f0c1875e5ad9b8ddda37.m4a",
+      "sha256": "409b131de1ca1b8704773666e94de5ea7b36a8502084f3811b8ca614c1de8fb9",
+      "bytes": 25920,
+      "text": "We're going to leave after breakfast.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f0c1875e5ad9b8ddda37-slow.m4a",
+      "sha256": "70ea162efa3acca50a2922e83b2cc279258038a76ad0747c7f50702a4e03f51d",
+      "bytes": 36789,
+      "text": "We're going to leave after breakfast.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f2fa7453b93ef5336d7e.m4a",
+      "sha256": "350aad6cb9caac1694da75f3dbd37caa91b9b411404e49f51cf3787ad5a3fe43",
+      "bytes": 23294,
+      "text": "We're going to visit our friends.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f2fa7453b93ef5336d7e-slow.m4a",
+      "sha256": "495de6a2b3641fe661cd98713c0f3d4b163a7177b93088011eef79b782d36949",
+      "bytes": 32720,
+      "text": "We're going to visit our friends.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-de0912121775b6e8b44c.m4a",
+      "sha256": "930678c0e016f786c6ac6f09aab37cfac7ef376020e98e9e0ea712e892936250",
+      "bytes": 44487,
+      "text": "We're going to visit our friends. I'm not going to work tomorrow.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-de0912121775b6e8b44c-slow.m4a",
+      "sha256": "f6cb52de37953ddc17d2773e2b3c9a8411cd2ba12f3581bea38f9d247233336b",
+      "bytes": 64218,
+      "text": "We're going to visit our friends. I'm not going to work tomorrow.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-91c78e9f9cf374b685dd.m4a",
+      "sha256": "f535e22b1da085b1f0f6d074f2bf855723de3b9a4df2b36f2c25210d10404ffb",
+      "bytes": 11801,
+      "text": "Welcome!",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-91c78e9f9cf374b685dd-slow.m4a",
+      "sha256": "357361a0298a993876375f117a03581d6a1e9e57e73c4eda4f63869f7cf9d75d",
+      "bytes": 16133,
+      "text": "Welcome!",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c050cea53077c575657d.m4a",
+      "sha256": "0293743aded09a1b477f052e2b90f9a719bd0cd524f2ecf33945a7090dd8ccc7",
+      "bytes": 16232,
+      "text": "Were you at work?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c050cea53077c575657d-slow.m4a",
+      "sha256": "5cb3833e8552a6d0312fbf602c98e736b5e1e3d32c99baa844858ae7126675c7",
+      "bytes": 21587,
+      "text": "Were you at work?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-bd28fe456f03e4bd5bca.m4a",
+      "sha256": "7ccb13f352f1d65ce4a4d405af487c9129abfe876cc177639c375e65f2daf4e1",
+      "bytes": 18844,
+      "text": "What time is check-out?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-bd28fe456f03e4bd5bca-slow.m4a",
+      "sha256": "9c9c19a266eacc247d5cf50b8de658ee50f6424255aeceb4b56297c7c9da0051",
+      "bytes": 25990,
+      "text": "What time is check-out?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a83482ba59a671e12917.m4a",
+      "sha256": "110b5e4737f8aa0e9bb7ab9c9390c152830b335e45caf15b9fb8f20d9d41adad",
+      "bytes": 15914,
+      "text": "What time is it?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a83482ba59a671e12917-slow.m4a",
+      "sha256": "cae30dc985775b0ff699d7804dfb217d48c5fbfc2e95f9836fdd26a9c104d663",
+      "bytes": 21471,
+      "text": "What time is it?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a0e3856c575c02cb87ed.m4a",
+      "sha256": "5b905ecbbc1b32cdb19e55029b27e5aeafc2eab1cd24932451498e75e85b0410",
+      "bytes": 19128,
+      "text": "Where is the bus stop?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a0e3856c575c02cb87ed-slow.m4a",
+      "sha256": "03d673bb8c41e7e5709ec340023ebfd8c349168924d1034364dd0123889b5bb7",
+      "bytes": 26043,
+      "text": "Where is the bus stop?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-16c5f0760465f33ad8fd.m4a",
+      "sha256": "20964eec55399527626bff9de887d73945956d7e37f21eebf80477f460767e38",
+      "bytes": 14386,
+      "text": "Yes, I did.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-16c5f0760465f33ad8fd-slow.m4a",
+      "sha256": "d1adf603ddf22f2c81126564fc3da7b5aebcda094eed860dc55b7d3af659be77",
+      "bytes": 20165,
+      "text": "Yes, I did.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f02db32e8d3b40ea903f.m4a",
+      "sha256": "d75e3326e3f31f6ea4e89dcc59e1c88cbc103fbce6ab00f782a4d2b4df9e234b",
+      "bytes": 10140,
+      "text": "Yes.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f02db32e8d3b40ea903f-slow.m4a",
+      "sha256": "8c2e9a27f709fba9b366f3117c5a11cb5c6b742c2dd8f0a7ab6aeb3cce8b9b3d",
+      "bytes": 13570,
+      "text": "Yes.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-81dbb5bbd76d38946aaf.m4a",
+      "sha256": "4cef8b6ebf4c2d35cc2938693a750d3d87123c507527a32f9cdba2daa7562f2c",
+      "bytes": 30202,
+      "text": "Yes. We're going to leave after breakfast.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-81dbb5bbd76d38946aaf-slow.m4a",
+      "sha256": "6af0ba2974a2e8939a5e4cf3e5df381ed409db473661154730ed515602a0237f",
+      "bytes": 41460,
+      "text": "Yes. We're going to leave after breakfast.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-0a09dfd72091c69599eb.m4a",
+      "sha256": "62bcd9e4d0e25ce9b9a72a405e3530f01103db832af1965b5732d2ee37a9a21b",
+      "bytes": 25322,
+      "text": "Yesterday we went to a museum.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-0a09dfd72091c69599eb-slow.m4a",
+      "sha256": "2031a6eefdc6b1e3f47bdc183c0d60756b9d7a1aedb11081542cf58712f0aa72",
+      "bytes": 35066,
+      "text": "Yesterday we went to a museum.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c4bf8cedb241afe7797a.m4a",
+      "sha256": "4aaa78fdc8329f00d3bf718d0cf716645a9c6f5fde0525f244388977b653861a",
+      "bytes": 18186,
+      "text": "You should rest today.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c4bf8cedb241afe7797a-slow.m4a",
+      "sha256": "7b705478531ef7e90fd8e7b260d116846ab64e5daf18e38f6cfbdaaba4f8873c",
+      "bytes": 24487,
+      "text": "You should rest today.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7d4ab63f131fb20e4c6a.m4a",
+      "sha256": "86512e2e3e162023913b5cc5654048b643900360a569aa8ac4126b212fdbb237",
+      "bytes": 8819,
+      "text": "bag",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7d4ab63f131fb20e4c6a-slow.m4a",
+      "sha256": "a752a63570522b460e34b6d9411ea2aad7d76f73562e2dc3b551f5fe4c481f0f",
+      "bytes": 12052,
+      "text": "bag",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d3f4a1c144a485a133f8.m4a",
+      "sha256": "aa9d55e2decb152403ca5de2f247ec6d6d70019cec70ad0b492598448f582234",
+      "bytes": 11948,
+      "text": "bedroom",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d3f4a1c144a485a133f8-slow.m4a",
+      "sha256": "db2444f896a3e83400ea9b147792501382c83b3be922650448b7a49f1054ba7d",
+      "bytes": 16012,
+      "text": "bedroom",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-9b60675f38b6f80087bb.m4a",
+      "sha256": "f71ddc332945cb14a262bd9d99a1b8653445b822a682552a5fc7cb5700f517f4",
+      "bytes": 9305,
+      "text": "better",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-9b60675f38b6f80087bb-slow.m4a",
+      "sha256": "1dc45a6735fdb970b7d955c97f22391c73bc42e5dbfd85487a2a5fe749f2c532",
+      "bytes": 12654,
+      "text": "better",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-31c8d8cc448338b80f1d.m4a",
+      "sha256": "601082afc56531e554266c806d97543612f896123bb314bd05c8201a8fc890ee",
+      "bytes": 8126,
+      "text": "bus",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-31c8d8cc448338b80f1d-slow.m4a",
+      "sha256": "eb947753fa9e048500fbd81fc2cbf6f9e8436fda9b8d037ae0bfe1496df745ba",
+      "bytes": 11596,
+      "text": "bus",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f554b2187781c243b8e3.m4a",
+      "sha256": "afdd0516c625e23596492128efdacd7ba91de1e306910b3cc66c628203b672d6",
+      "bytes": 9533,
+      "text": "card",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f554b2187781c243b8e3-slow.m4a",
+      "sha256": "17bb56a214353f1704e242ea5a731d4b93c7577eeee14e197ee552bd0755a060",
+      "bytes": 12665,
+      "text": "card",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d04bfb37eed712c84b4b.m4a",
+      "sha256": "b21ff63c8913ebdfb43b95240e0879a338a1c009ac92ef29885e07bb801e7079",
+      "bytes": 8853,
+      "text": "chair",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-d04bfb37eed712c84b4b-slow.m4a",
+      "sha256": "470596ca3253c2595ca9b1791b239ab97e03118e1de7a2868cffdaf7817b5225",
+      "bytes": 11960,
+      "text": "chair",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e72bc77ab68ebf1a7899.m4a",
+      "sha256": "3b3d5758a0f9dab0304a43d4b407232c742f17a81f582b4a96e8b07d3b2b3add",
+      "bytes": 9519,
+      "text": "cold",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e72bc77ab68ebf1a7899-slow.m4a",
+      "sha256": "b4d8f5d9633a13e7eda81f2f74c6e385e379a37de13bb8a9c60a5e1582edb2d8",
+      "bytes": 12678,
+      "text": "cold",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-8ba98c4b9b3bec711074.m4a",
+      "sha256": "6aa5c211eb1c437a2d660d019756ed1ef3f5de2ee53ec318783c427baf133286",
+      "bytes": 11812,
+      "text": "guitar",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-8ba98c4b9b3bec711074-slow.m4a",
+      "sha256": "09681931512162084ec878c42f015daecf711b3246ba6b695fa3a84473162af6",
+      "bytes": 15787,
+      "text": "guitar",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-6feec5bc824d0f328dc6.m4a",
+      "sha256": "d4f69dd782a2403b3a1ad5ea07b33027f4a2f4d6b4725d76b6e518d1b0e3b91e",
+      "bytes": 9991,
+      "text": "happy",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-6feec5bc824d0f328dc6-slow.m4a",
+      "sha256": "a82cc03f4592f4b20dbfc9706ed71edce7d2aca761fb73de90c9ba6b53b2a3ec",
+      "bytes": 13601,
+      "text": "happy",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-54f39095c1592e0254e0.m4a",
+      "sha256": "c2c0a665bdde7098b6a133cf3d46630cc21b49a6f51eaa0d94cc6551c10287f8",
+      "bytes": 9966,
+      "text": "headache",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-54f39095c1592e0254e0-slow.m4a",
+      "sha256": "e710b5340c6bdbe702edde549d4622762129a1a9ee6b1ea552eba1ab7fe5c7f8",
+      "bytes": 13989,
+      "text": "headache",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a7bc379e1119c8e4728c.m4a",
+      "sha256": "2453e982160272aeba0ee5cff3d9256fd161cc5bc9a459cf6fb65b2a104df3cf",
+      "bytes": 10199,
+      "text": "kitchen",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-a7bc379e1119c8e4728c-slow.m4a",
+      "sha256": "cd4ba4961a4e5e99ab1ad7a4fb87e68421fdd76e8c49ff4d9be330bbf05ea2f2",
+      "bytes": 13975,
+      "text": "kitchen",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-196fef9d193f54eac2ec.m4a",
+      "sha256": "c690391eb2a1eb7c976e129ccb95feb56fcb5086b0acc70ad5458fc5eeec1ec4",
+      "bytes": 10436,
+      "text": "pound",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-196fef9d193f54eac2ec-slow.m4a",
+      "sha256": "de5f251fc9126f1fea50cdc401b743702d372c699d4fa00b91f696757b3e21ae",
+      "bytes": 13742,
+      "text": "pound",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e93babd61354276fcbbe.m4a",
+      "sha256": "272bb2a292075e955ee196fe6a9b079640821a8abf955d1bf433574787d54e5f",
+      "bytes": 11471,
+      "text": "reading",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e93babd61354276fcbbe-slow.m4a",
+      "sha256": "7b08c0285118e243ec4e83eecf168a25692797880a92fc2853e98ec3ee677c4b",
+      "bytes": 15095,
+      "text": "reading",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c059ef39e54a6f7caa8a.m4a",
+      "sha256": "dbabf3db9c43f25bffe1e7cd076a0c8c74d8389f4a576b2f949acffcf45b963b",
+      "bytes": 11102,
+      "text": "station",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c059ef39e54a6f7caa8a-slow.m4a",
+      "sha256": "afc1a965bdad9ed1d5c7021d30579111d5b9eb1f05abc8d207d361ddd2a3c0e4",
+      "bytes": 15760,
+      "text": "station",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f9dac5d2695fbecfc0bf.m4a",
+      "sha256": "31761a245e270f13720a162f5a94c25a5213035646b1c61cf1ac4cfd87f6e124",
+      "bytes": 9761,
+      "text": "sunny",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f9dac5d2695fbecfc0bf-slow.m4a",
+      "sha256": "27894fee31b2eea34d9f6cab1952e51b40b70759d042b16371e1015ccfa1e4fe",
+      "bytes": 13326,
+      "text": "sunny",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c3f9747514c7a82748da.m4a",
+      "sha256": "00584b58c7f79d7e0a8d52aaca440ccb8bf831c6e2001a8822e4849bfd1c9042",
+      "bytes": 9330,
+      "text": "ticket",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-c3f9747514c7a82748da-slow.m4a",
+      "sha256": "5a11087f77257485f2b74cc1581bc419096e50ff765f9a14043b5dece34ddbf2",
+      "bytes": 12640,
+      "text": "ticket",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7ff23770b52c8bdd1e70.m4a",
+      "sha256": "9df5214229a3f32e6d47ee7e20ff004fcdde75913aae3ffb96ece3d154f8f5ce",
+      "bytes": 9977,
+      "text": "time",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-7ff23770b52c8bdd1e70-slow.m4a",
+      "sha256": "ad21870ee5478d44e501b506a7deb095061e7a113f8ac180cefe9a714e041786",
+      "bytes": 13203,
+      "text": "time",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-afd2eae9c9e077760a57.m4a",
+      "sha256": "43be9890d815bc9003f661f2d77ec3d32c343df3db4e5507f194f185a858bdfe",
+      "bytes": 10187,
+      "text": "tired",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-afd2eae9c9e077760a57-slow.m4a",
+      "sha256": "ab760f2e834124287a02f0240cadd266b15adb32ca364155d09acd4298de305f",
+      "bytes": 13726,
+      "text": "tired",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e151b0a3892f393e59ce.m4a",
+      "sha256": "68fbf54ee2329383da29c4695c1e7e95a311e197fc2bab1ab1d1cd442630cbb7",
+      "bytes": 10457,
+      "text": "together",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-e151b0a3892f393e59ce-slow.m4a",
+      "sha256": "46c7d8dff856820e2549975b414e3b025fb1fa857c5c63a000d8c345821c0796",
+      "bytes": 14854,
+      "text": "together",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5c499707bd5cffae672e.m4a",
+      "sha256": "0724d330c730977a39cce4dada1ab75898c7113d8fac3a70e5a24c1c21610be3",
+      "bytes": 9070,
+      "text": "two",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-5c499707bd5cffae672e-slow.m4a",
+      "sha256": "9a705166a59759e4d19fe08fc87f6e3b5dd96afd01378301534f80c9d172f9fb",
+      "bytes": 12251,
+      "text": "two",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f25936bd035951806f4c.m4a",
+      "sha256": "ddcb06e2ad4f9efafdd82a354e014498090aa0528a8e7d2d596211e9b31ee86c",
+      "bytes": 11938,
+      "text": "umbrella",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-f25936bd035951806f4c-slow.m4a",
+      "sha256": "273b2cec05a8c2d1567042a03f63935a2a306c9719924f38d5e62180855276c7",
+      "bytes": 16487,
+      "text": "umbrella",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-715604a4a261b45d8a3b.m4a",
+      "sha256": "b5a3c3a4b64c49eadb47c3ee9f7c167c84f7a5e1937bad5be0f4e25f571eff39",
+      "bytes": 9927,
+      "text": "water",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-715604a4a261b45d8a3b-slow.m4a",
+      "sha256": "e9c24d37d63dc12a93d51291f78cfc472fa7908901cd55bf7b7113ec38ffc12f",
+      "bytes": 13151,
+      "text": "water",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-3ca268d766a8db5da490.m4a",
+      "sha256": "c41a2aa6d6287666923a9e2f71dad15418e1eac3cc6e0543e819ef11264c42e9",
+      "bytes": 9977,
+      "text": "worried",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/kokoro-3ca268d766a8db5da490-slow.m4a",
+      "sha256": "2521a606b539210070e0141fc0476ab8acd43b445fbdea01311226062016de8b",
+      "bytes": 13362,
+      "text": "worried",
+      "humanReviewed": false
+    }
+  ]
+}

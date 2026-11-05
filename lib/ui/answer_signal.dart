@@ -4,13 +4,14 @@ import 'flight_components.dart';
 
 class AnswerSignal extends StatelessWidget {
   final bool correct, animate;
-  final int combo;
+  final int combo, awardedXp;
   final String? explanation, correction;
   const AnswerSignal({
     super.key,
     required this.correct,
     required this.animate,
     required this.combo,
+    this.awardedXp = 10,
     this.explanation,
     this.correction,
   });
@@ -48,7 +49,11 @@ class AnswerSignal extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        correct ? 'Есть контакт! +10 XP' : 'Почти! Я помогу.',
+                        correct
+                            ? awardedXp > 0
+                                  ? 'Есть контакт! +$awardedXp XP'
+                                  : 'Есть контакт! Ты вспомнил.'
+                            : 'Почти! Я помогу.',
                         style: Theme.of(context).textTheme.titleSmall,
                       ),
                       if (MediaQuery.textScalerOf(context).scale(16) <= 22)

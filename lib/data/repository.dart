@@ -160,6 +160,9 @@ class LearningRepository {
     await db
         .into(db.sessions)
         .insert(SessionsCompanion.insert(id: id, lessonId: lessonId));
+    if ((await progress()).completed.contains(lessonId)) {
+      await setSetting('kvesmos.session.rehearsal.v1:$id', 'true');
+    }
     return session(id);
   }
 
@@ -310,12 +313,15 @@ class LearningRepository {
     if (current.done || current.position != expectedPosition) {
       throw StateError('Ответ уже сохранён.');
     }
+    final rehearsal =
+        await setting('kvesmos.session.rehearsal.v1:$sessionId') == 'true';
     final correct = checkAnswer(exercise, input);
     await append(
       event('answer', {
         'session': sessionId,
         'exercise': exercise.id,
         'lesson': current.lessonId,
+        if (rehearsal) 'rehearsal': true,
         'correct': correct,
         'words': exercise.wordIds,
       }),
@@ -333,7 +339,11 @@ class LearningRepository {
       );
       if (done) {
         await append(
-          event('complete', {'session': sessionId, 'lesson': current.lessonId}),
+          event('complete', {
+            'session': sessionId,
+            'lesson': current.lessonId,
+            if (rehearsal) 'rehearsal': true,
+          }),
         );
       }
     }

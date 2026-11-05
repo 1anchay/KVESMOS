@@ -18,9 +18,18 @@ class UnitGuidePage extends ConsumerWidget {
     final units = LearningUnit.fromCatalog(app.repository.catalog);
     final current = units.where((u) => !u.mastered(app.progress)).firstOrNull;
     final type = Theme.of(context).textTheme;
+    final currentOrder =
+        current?.next(app.progress)?.order ?? app.repository.catalog.length;
     return pageBody([
-      const CharacterMoment(characterId: 'orbi', size: 80, animate: false),
-      Text('Маленькие шаги · большие открытия', style: type.headlineMedium),
+      Row(
+        children: [
+          const CharacterMoment(characterId: 'orbi', size: 72, animate: false),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Text('Твой маршрут\nразговоров', style: type.headlineMedium),
+          ),
+        ],
+      ),
       Text('${app.course.name} · цель, пример, применение и повторение'),
       const SizedBox(height: 16),
       if (current != null)
@@ -37,18 +46,39 @@ class UnitGuidePage extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(unit.section, style: type.labelSmall),
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 19,
+                    child: unit.mastered(app.progress)
+                        ? const Icon(Icons.check_rounded)
+                        : Text('${units.indexOf(unit) + 1}'),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      unit.id == current?.id
+                          ? 'ТЫ ЗДЕСЬ · ${unit.section}'
+                          : unit.section,
+                      style: type.labelSmall,
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(height: 6),
               Text(unit.title, style: type.titleLarge),
               const SizedBox(height: 10),
-              LinearProgressIndicator(
-                value: unit.completed(app.progress) / unit.lessons.length,
+              FlightProgress(
+                value: unit.completed(app.progress),
+                target: unit.lessons.length,
+                label: unit.title,
               ),
               Text(
                 '${unit.completed(app.progress)} / ${unit.lessons.length} уроков завершено',
               ),
               for (final lesson in unit.lessons)
                 ListTile(
+                  key: ValueKey('map-lesson-${lesson.id}'),
                   contentPadding: EdgeInsets.zero,
                   leading: Icon(
                     app.progress.completed.contains(lesson.id)
@@ -60,7 +90,16 @@ class UnitGuidePage extends ConsumerWidget {
                     app.repository.learningObjectives[lesson.id] ??
                         lesson.topic,
                   ),
-                  onTap: () => showLessonPreview(context, app, lesson),
+                  onTap:
+                      lesson.order <= currentOrder ||
+                          app.progress.completed.contains(lesson.id)
+                      ? () => showLessonPreview(context, app, lesson)
+                      : null,
+                  trailing:
+                      lesson.order > currentOrder &&
+                          !app.progress.completed.contains(lesson.id)
+                      ? const Icon(Icons.lock_outline)
+                      : const Icon(Icons.chevron_right),
                 ),
               OutlinedButton.icon(
                 onPressed: () => _guide(context, app, unit),
@@ -70,18 +109,26 @@ class UnitGuidePage extends ConsumerWidget {
               if (unit.mastered(app.progress)) ...[
                 const SizedBox(height: 8),
                 const Text(
-                  'Тема пройдена. Закрепим её по расписанию повторений.',
+                  'Уроки пройдены. Вспомни реплики без вариантов и проверь, что осталось в памяти.',
                 ),
                 TextButton.icon(
-                  onPressed: () => context.go('/practice'),
+                  onPressed: () => context.go(
+                    '/practice/words?unit=${unit.lessons.map((l) => l.id).join(',')}',
+                  ),
                   icon: const Icon(Icons.psychology_outlined),
-                  label: const Text('Повторить трудные слова'),
+                  label: const Text('Контрольная точка · вспомнить тему'),
                 ),
               ],
             ],
           ),
         ),
       ],
+      const SizedBox(height: 16),
+      OutlinedButton.icon(
+        onPressed: () => context.go('/galaxy'),
+        icon: const Icon(Icons.public),
+        label: const Text('Галактика и экспедиции'),
+      ),
     ]);
   }
 

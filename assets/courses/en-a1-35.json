@@ -1,0 +1,282 @@
+{
+  "id": "en-a1-35",
+  "title": "Переносим встречу",
+  "topic": "Переносим встречу",
+  "order": 34,
+  "objective": "Предложить другое время и согласовать его.",
+  "guide": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+  "vocabulary": [
+    {
+      "id": "en:v013:35:p0",
+      "en": "Could we move our meeting to Friday?",
+      "ru": "Можем перенести нашу встречу на пятницу?"
+    },
+    {
+      "id": "en:v013:35:p1",
+      "en": "I'm afraid I can't come on Thursday.",
+      "ru": "К сожалению, я не могу прийти в четверг."
+    },
+    {
+      "id": "en:v013:35:p2",
+      "en": "Friday works for me.",
+      "ru": "Пятница мне подходит."
+    },
+    {
+      "id": "en:v013:35:p3",
+      "en": "Let's meet at half past ten.",
+      "ru": "Давай встретимся в половине одиннадцатого."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Could we move our meeting to Friday?",
+      "translation": "Можем перенести нашу встречу на пятницу?",
+      "explanation": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "I'm afraid I can't come on Thursday.",
+      "translation": "К сожалению, я не могу прийти в четверг.",
+      "explanation": "I'm afraid I can't come on Thursday. — К сожалению, я не могу прийти в четверг."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Friday works for me.",
+      "translation": "Пятница мне подходит.",
+      "explanation": "Friday works for me. — Пятница мне подходит."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Let's meet at half past ten.",
+      "translation": "Давай встретимся в половине одиннадцатого.",
+      "explanation": "Let's meet at half past ten. — Давай встретимся в половине одиннадцатого.\nПосле let's идёт meet без to. Half past ten — 10:30.\nВерно: Let's meet at half past ten."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-35-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Можем перенести нашу встречу на пятницу? Выбери реплику.",
+      "answers": [
+        "Could we move our meeting to Friday?"
+      ],
+      "explanation": "Could we move our meeting to Friday? — Можем перенести нашу встречу на пятницу?",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [
+        "en:v013:35:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Friday works for me.",
+        "Could we move our meeting to Friday?",
+        "I'm afraid I can't come on Thursday."
+      ]
+    },
+    {
+      "id": "en-a1-35-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Пятница мне подходит."
+      ],
+      "explanation": "Friday works for me. — Пятница мне подходит.",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [
+        "en:v013:35:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Friday works for me.",
+      "options": [
+        "К сожалению, я не могу прийти в четверг.",
+        "Давай встретимся в половине одиннадцатого.",
+        "Пятница мне подходит."
+      ]
+    },
+    {
+      "id": "en-a1-35-e03",
+      "type": "order",
+      "prompt": "Составь реплику: К сожалению, я не могу прийти в четверг.",
+      "answers": [
+        "I'm afraid I can't come on Thursday."
+      ],
+      "explanation": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [
+        "en:v013:35:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "I'm",
+        "afraid",
+        "I",
+        "can't",
+        "come",
+        "on",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "en-a1-35-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [
+        "en:v013:35:p0",
+        "en:v013:35:p1",
+        "en:v013:35:p2",
+        "en:v013:35:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:35:p0",
+          "en": "Could we move our meeting to Friday?",
+          "ru": "Можем перенести нашу встречу на пятницу?"
+        },
+        {
+          "id": "en:v013:35:p1",
+          "en": "I'm afraid I can't come on Thursday.",
+          "ru": "К сожалению, я не могу прийти в четверг."
+        },
+        {
+          "id": "en:v013:35:p2",
+          "en": "Friday works for me.",
+          "ru": "Пятница мне подходит."
+        },
+        {
+          "id": "en:v013:35:p3",
+          "en": "Let's meet at half past ten.",
+          "ru": "Давай встретимся в половине одиннадцатого."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-35-e05",
+      "type": "dialogue",
+      "prompt": "О каком времени договорились?",
+      "answers": [
+        "Пятница, 10:30"
+      ],
+      "explanation": "Орби: Could we move our meeting to Friday?\nМико: Friday works for me.\nОрби: Let's meet at half past ten.\nПятница, 10:30",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [
+        "en:v013:35:p0",
+        "en:v013:35:p1",
+        "en:v013:35:p2",
+        "en:v013:35:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Could we move our meeting to Friday?\nМико: Friday works for me.\nОрби: Let's meet at half past ten.",
+      "options": [
+        "Четверг, 10:00",
+        "Пятница, 10:30",
+        "Пятница, 11:30"
+      ]
+    },
+    {
+      "id": "en-a1-35-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Let's to meet at half past ten.",
+      "answers": [
+        "Let's meet at half past ten."
+      ],
+      "explanation": "После let's идёт meet без to. Half past ten — 10:30.",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Let's to meet at half past ten.",
+        "Let's meet at half past ten."
+      ]
+    },
+    {
+      "id": "en-a1-35-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Давай встретимся в половине одиннадцатого.",
+      "answers": [
+        "Let's meet at half past ten."
+      ],
+      "explanation": "Let's meet at half past ten. — Давай встретимся в половине одиннадцатого.",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [
+        "en:v013:35:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Let's meet at half past ten."
+    },
+    {
+      "id": "en-a1-35-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Можем перенести нашу встречу на пятницу?",
+      "answers": [
+        "Could we move our meeting to Friday?"
+      ],
+      "explanation": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [
+        "en:v013:35:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Could we move our meeting to Friday?",
+        "meaning": "Можем перенести нашу встречу на пятницу?"
+      }
+    },
+    {
+      "id": "en-a1-35-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «I'm afraid I can't come on Thursday.»?",
+      "answers": [
+        "К сожалению, я не могу прийти в четверг."
+      ],
+      "explanation": "I'm afraid I can't come on Thursday. — К сожалению, я не могу прийти в четверг.",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [
+        "en:v013:35:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Можем перенести нашу встречу на пятницу?",
+        "К сожалению, я не могу прийти в четверг.",
+        "Давай встретимся в половине одиннадцатого."
+      ]
+    },
+    {
+      "id": "en-a1-35-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Не могли бы вы мне помочь?",
+      "answers": [
+        "Could you help me, please?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: Could you help me, please? — Не могли бы вы мне помочь?",
+      "hint": "Could we move…? — можем ли перенести…? To Friday — на пятницу. I'm afraid здесь мягко вводит отказ: к сожалению. That works for me — мне подходит. Let's + начальная форма предлагает совместное действие.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "There isn't a towel in my room.",
+        "The shower doesn't work.",
+        "Could you help me, please?",
+        "Could I have another towel?"
+      ]
+    }
+  ]
+}

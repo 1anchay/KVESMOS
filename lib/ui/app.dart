@@ -15,6 +15,8 @@ import 'optional_adventures.dart';
 import 'course_picker.dart';
 import 'companion_onboarding.dart';
 import 'unit_guide.dart';
+import 'practice_hub.dart';
+import '../data/practice_repository.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -127,9 +129,26 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             GoRoute(path: '/crew', builder: (_, _) => const CrewPage()),
             GoRoute(path: '/', builder: (_, _) => const HomePage()),
             GoRoute(path: '/units', builder: (_, _) => const UnitGuidePage()),
+            GoRoute(path: '/map', builder: (_, _) => const UnitGuidePage()),
             GoRoute(
-              path: '/map',
+              path: '/galaxy',
               builder: (_, _) => pageBody([const AdventureMap()]),
+            ),
+            GoRoute(path: '/training', builder: (_, _) => const PracticeHub()),
+            GoRoute(
+              path: '/practice/:mode',
+              builder: (_, state) => PersonalPracticePage(
+                key: ValueKey(state.uri.toString()),
+                lessonIds: (state.uri.queryParameters['unit'] ?? '')
+                    .split(',')
+                    .where((id) => id.isNotEmpty)
+                    .toList(),
+                mode:
+                    PracticeMode.values
+                        .where((m) => m.name == state.pathParameters['mode'])
+                        .firstOrNull ??
+                    PracticeMode.warmup,
+              ),
             ),
             GoRoute(
               path: '/practice',
@@ -201,9 +220,10 @@ class OrbitShell extends StatelessWidget {
   const OrbitShell({super.key, required this.location, required this.child});
   @override
   Widget build(BuildContext context) {
-    final index = location == '/' || location == '/map'
+    final index = ['/', '/map', '/units', '/galaxy'].contains(location)
         ? 0
-        : ['/words', '/review', '/practice'].contains(location)
+        : ['/words', '/review', '/practice', '/training'].contains(location) ||
+              location.startsWith('/practice/')
         ? 1
         : location == '/rewards'
         ? 2
@@ -254,7 +274,7 @@ class OrbitShell extends StatelessWidget {
         selectedIndex: index,
         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         onDestinationSelected: (i) =>
-            context.go(['/', '/words', '/rewards', '/stats', '/profile'][i]),
+            context.go(['/', '/training', '/rewards', '/stats', '/profile'][i]),
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.travel_explore),
@@ -262,7 +282,7 @@ class OrbitShell extends StatelessWidget {
           ),
           NavigationDestination(
             icon: Icon(Icons.style_outlined),
-            label: 'Слова',
+            label: 'Практика',
           ),
           NavigationDestination(
             icon: Icon(Icons.redeem_rounded),

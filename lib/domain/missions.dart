@@ -78,6 +78,7 @@ Map<String, MissionDay> missionHistory(
   final seenWords = <String, DateTime>{};
   for (final event in events) {
     final d = event.data;
+    if (d['rehearsal'] == true) continue;
     final inRange =
         event.day.compareTo(since) >= 0 && event.day.compareTo(through) <= 0;
     final day = inRange ? days.putIfAbsent(event.day, MissionDay.new) : null;

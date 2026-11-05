@@ -1,0 +1,278 @@
+{
+  "id": "fr-a1-07",
+  "title": "Être et avoir · состояние и вещи",
+  "topic": "Être et avoir · состояние и вещи",
+  "order": 6,
+  "objective": "Различать состояние человека и то, что у него есть.",
+  "guide": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+  "vocabulary": [
+    {
+      "id": "fr:v013:7:p0",
+      "en": "Je suis à la maison.",
+      "ru": "Я дома."
+    },
+    {
+      "id": "fr:v013:7:p1",
+      "en": "J'ai un vélo.",
+      "ru": "У меня велосипед."
+    },
+    {
+      "id": "fr:v013:7:p2",
+      "en": "Tu as faim ?",
+      "ru": "Ты хочешь есть?"
+    },
+    {
+      "id": "fr:v013:7:p3",
+      "en": "Je suis fatiguée.",
+      "ru": "Я устала."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Je suis à la maison.",
+      "translation": "Я дома.",
+      "explanation": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "J'ai un vélo.",
+      "translation": "У меня велосипед.",
+      "explanation": "J'ai un vélo. — У меня велосипед."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Tu as faim ?",
+      "translation": "Ты хочешь есть?",
+      "explanation": "Tu as faim ? — Ты хочешь есть?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Je suis fatiguée.",
+      "translation": "Я устала.",
+      "explanation": "Je suis fatiguée. — Я устала.\nО владении велосипедом говорим j'ai. Je suis un vélo означало бы «я велосипед».\nВерно: J'ai un vélo."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-07-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я дома. Выбери реплику.",
+      "answers": [
+        "Je suis à la maison."
+      ],
+      "explanation": "Je suis à la maison. — Я дома.",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [
+        "fr:v013:7:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Tu as faim ?",
+        "Je suis à la maison.",
+        "J'ai un vélo."
+      ]
+    },
+    {
+      "id": "fr-a1-07-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Ты хочешь есть?"
+      ],
+      "explanation": "Tu as faim ? — Ты хочешь есть?",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [
+        "fr:v013:7:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Tu as faim ?",
+      "options": [
+        "У меня велосипед.",
+        "Я устала.",
+        "Ты хочешь есть?"
+      ]
+    },
+    {
+      "id": "fr-a1-07-e03",
+      "type": "order",
+      "prompt": "Составь реплику: У меня велосипед.",
+      "answers": [
+        "J'ai un vélo."
+      ],
+      "explanation": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [
+        "fr:v013:7:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "J'ai",
+        "un",
+        "vélo"
+      ]
+    },
+    {
+      "id": "fr-a1-07-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [
+        "fr:v013:7:p0",
+        "fr:v013:7:p1",
+        "fr:v013:7:p2",
+        "fr:v013:7:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "fr:v013:7:p0",
+          "en": "Je suis à la maison.",
+          "ru": "Я дома."
+        },
+        {
+          "id": "fr:v013:7:p1",
+          "en": "J'ai un vélo.",
+          "ru": "У меня велосипед."
+        },
+        {
+          "id": "fr:v013:7:p2",
+          "en": "Tu as faim ?",
+          "ru": "Ты хочешь есть?"
+        },
+        {
+          "id": "fr:v013:7:p3",
+          "en": "Je suis fatiguée.",
+          "ru": "Я устала."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-07-e05",
+      "type": "dialogue",
+      "prompt": "Где Анна?",
+      "answers": [
+        "Дома"
+      ],
+      "explanation": "Орби: Tu as faim ?\nАнна: Oui. Je suis à la maison. Je suis fatiguée.\nДома",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [
+        "fr:v013:7:p0",
+        "fr:v013:7:p1",
+        "fr:v013:7:p2",
+        "fr:v013:7:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Tu as faim ?\nАнна: Oui. Je suis à la maison. Je suis fatiguée.",
+      "options": [
+        "В кафе",
+        "Дома",
+        "На работе"
+      ]
+    },
+    {
+      "id": "fr-a1-07-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je suis un vélo.",
+      "answers": [
+        "J'ai un vélo."
+      ],
+      "explanation": "О владении велосипедом говорим j'ai. Je suis un vélo означало бы «я велосипед».",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Je suis un vélo.",
+        "J'ai un vélo."
+      ]
+    },
+    {
+      "id": "fr-a1-07-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я устала.",
+      "answers": [
+        "Je suis fatiguée."
+      ],
+      "explanation": "Je suis fatiguée. — Я устала.",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [
+        "fr:v013:7:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Je suis fatiguée."
+    },
+    {
+      "id": "fr-a1-07-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я дома.",
+      "answers": [
+        "Je suis à la maison."
+      ],
+      "explanation": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [
+        "fr:v013:7:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Je suis à la maison.",
+        "meaning": "Я дома."
+      }
+    },
+    {
+      "id": "fr-a1-07-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «J'ai un vélo.»?",
+      "answers": [
+        "У меня велосипед."
+      ],
+      "explanation": "J'ai un vélo. — У меня велосипед.",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [
+        "fr:v013:7:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я дома.",
+        "У меня велосипед.",
+        "Я устала."
+      ]
+    },
+    {
+      "id": "fr-a1-07-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я хотел бы кофе.",
+      "answers": [
+        "Je voudrais un café."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Je voudrais un café. — Я хотел бы кофе.",
+      "hint": "Je suis — я являюсь/нахожусь; j'ai — у меня есть. Tu es / tu as — ты есть / у тебя есть. Avoir используется и в выражении avoir faim — хотеть есть. Перед гласной je сокращается до j'. Уставшая женщина говорит fatiguée, мужчина — fatigué.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Je voudrais un café.",
+        "De l’eau, s’il vous plaît.",
+        "L’addition, s’il vous plaît.",
+        "Merci beaucoup !"
+      ]
+    }
+  ]
+}

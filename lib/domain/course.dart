@@ -76,9 +76,10 @@ class Exercise {
   final List<Vocabulary> pairs;
   final String? audio, hint;
   final String? pronunciation;
-  final String? scene, visual, introduction;
+  final String? scene, scenePronunciation, visual, introduction;
   final String character, phase;
   final StoryBeat? story;
+  final Map<String, String>? recall;
   const Exercise({
     required this.id,
     required this.type,
@@ -93,11 +94,13 @@ class Exercise {
     this.hint,
     this.pronunciation,
     this.scene,
+    this.scenePronunciation,
     this.visual,
     this.introduction,
     this.character = 'orbi',
     this.phase = '',
     this.story,
+    this.recall,
   });
   factory Exercise.fromJson(Map<String, dynamic> j) => Exercise(
     id: j['id'],
@@ -112,11 +115,13 @@ class Exercise {
     hint: j['hint'],
     pronunciation: j['pronunciation'],
     scene: j['scene'],
+    scenePronunciation: j['scenePronunciation'],
     visual: j['visual'],
     introduction: j['introduction'],
     character: j['character'] ?? 'orbi',
     phase: j['phase'] ?? '',
     story: j['story'] == null ? null : StoryBeat.fromJson(j['story']),
+    recall: j['recall'] == null ? null : Map<String, String>.from(j['recall']),
     pairs: (j['pairs'] as List? ?? [])
         .map((e) => Vocabulary.fromJson(e))
         .toList(),

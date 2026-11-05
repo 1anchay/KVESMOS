@@ -1,0 +1,280 @@
+{
+  "id": "de-a1-09",
+  "title": "Работа и учёба · порядок слов",
+  "topic": "Работа и учёба · порядок слов",
+  "order": 8,
+  "objective": "Рассказать о работе и изучаемом языке.",
+  "guide": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+  "vocabulary": [
+    {
+      "id": "de:v013:9:p0",
+      "en": "Ich lerne Deutsch.",
+      "ru": "Я учу немецкий."
+    },
+    {
+      "id": "de:v013:9:p1",
+      "en": "Heute arbeite ich zu Hause.",
+      "ru": "Сегодня я работаю дома."
+    },
+    {
+      "id": "de:v013:9:p2",
+      "en": "Wir lernen zusammen.",
+      "ru": "Мы учимся вместе."
+    },
+    {
+      "id": "de:v013:9:p3",
+      "en": "Lernst du Deutsch?",
+      "ru": "Ты учишь немецкий?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Ich lerne Deutsch.",
+      "translation": "Я учу немецкий.",
+      "explanation": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Heute arbeite ich zu Hause.",
+      "translation": "Сегодня я работаю дома.",
+      "explanation": "Heute arbeite ich zu Hause. — Сегодня я работаю дома."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Wir lernen zusammen.",
+      "translation": "Мы учимся вместе.",
+      "explanation": "Wir lernen zusammen. — Мы учимся вместе."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Lernst du Deutsch?",
+      "translation": "Ты учишь немецкий?",
+      "explanation": "Lernst du Deutsch? — Ты учишь немецкий?\nПосле Heute на втором месте стоит arbeite, затем ich.\nВерно: Heute arbeite ich zu Hause."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-09-e05",
+      "type": "dialogue",
+      "prompt": "Где Мико сегодня работает?",
+      "answers": [
+        "Дома"
+      ],
+      "explanation": "Орби: Lernst du Deutsch?\nМико: Ja. Wir lernen zusammen. Heute arbeite ich zu Hause.\nДома",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [
+        "de:v013:9:p0",
+        "de:v013:9:p1",
+        "de:v013:9:p2",
+        "de:v013:9:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Lernst du Deutsch?\nМико: Ja. Wir lernen zusammen. Heute arbeite ich zu Hause.",
+      "options": [
+        "В кафе",
+        "Дома",
+        "На улице"
+      ]
+    },
+    {
+      "id": "de-a1-09-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я учу немецкий. Выбери реплику.",
+      "answers": [
+        "Ich lerne Deutsch."
+      ],
+      "explanation": "Ich lerne Deutsch. — Я учу немецкий.",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [
+        "de:v013:9:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Wir lernen zusammen.",
+        "Ich lerne Deutsch.",
+        "Heute arbeite ich zu Hause."
+      ]
+    },
+    {
+      "id": "de-a1-09-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Сегодня я работаю дома.",
+      "answers": [
+        "Heute arbeite ich zu Hause."
+      ],
+      "explanation": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [
+        "de:v013:9:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Heute",
+        "arbeite",
+        "ich",
+        "zu",
+        "Hause"
+      ]
+    },
+    {
+      "id": "de-a1-09-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Мы учимся вместе."
+      ],
+      "explanation": "Wir lernen zusammen. — Мы учимся вместе.",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [
+        "de:v013:9:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Wir lernen zusammen.",
+      "options": [
+        "Сегодня я работаю дома.",
+        "Ты учишь немецкий?",
+        "Мы учимся вместе."
+      ]
+    },
+    {
+      "id": "de-a1-09-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Heute ich arbeite zu Hause.",
+      "answers": [
+        "Heute arbeite ich zu Hause."
+      ],
+      "explanation": "После Heute на втором месте стоит arbeite, затем ich.",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Heute ich arbeite zu Hause.",
+        "Heute arbeite ich zu Hause."
+      ]
+    },
+    {
+      "id": "de-a1-09-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [
+        "de:v013:9:p0",
+        "de:v013:9:p1",
+        "de:v013:9:p2",
+        "de:v013:9:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:9:p0",
+          "en": "Ich lerne Deutsch.",
+          "ru": "Я учу немецкий."
+        },
+        {
+          "id": "de:v013:9:p1",
+          "en": "Heute arbeite ich zu Hause.",
+          "ru": "Сегодня я работаю дома."
+        },
+        {
+          "id": "de:v013:9:p2",
+          "en": "Wir lernen zusammen.",
+          "ru": "Мы учимся вместе."
+        },
+        {
+          "id": "de:v013:9:p3",
+          "en": "Lernst du Deutsch?",
+          "ru": "Ты учишь немецкий?"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-09-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я учу немецкий.",
+      "answers": [
+        "Ich lerne Deutsch."
+      ],
+      "explanation": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [
+        "de:v013:9:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Ich lerne Deutsch.",
+        "meaning": "Я учу немецкий."
+      }
+    },
+    {
+      "id": "de-a1-09-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Ты учишь немецкий?",
+      "answers": [
+        "Lernst du Deutsch?"
+      ],
+      "explanation": "Lernst du Deutsch? — Ты учишь немецкий?",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [
+        "de:v013:9:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Lernst du Deutsch?"
+    },
+    {
+      "id": "de-a1-09-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Heute arbeite ich zu Hause.»?",
+      "answers": [
+        "Сегодня я работаю дома."
+      ],
+      "explanation": "Heute arbeite ich zu Hause. — Сегодня я работаю дома.",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [
+        "de:v013:9:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я учу немецкий.",
+        "Сегодня я работаю дома.",
+        "Ты учишь немецкий?"
+      ]
+    },
+    {
+      "id": "de-a1-09-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Мне нужна книга.",
+      "answers": [
+        "Ich brauche ein Buch."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Ich brauche ein Buch. — Мне нужна книга.",
+      "hint": "В обычном утверждении личная форма глагола стоит на втором месте: Ich lerne Deutsch. После ich у lernen окончание -e, после wir — -en: wir lernen. Heute — сегодня; Heute lerne ich Deutsch: глагол сохраняет второе место. Arbeiten — работать; ich arbeite.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich brauche einen Stift.",
+        "Ich habe eine Tasche.",
+        "Ich brauche ein Buch.",
+        "Hast du einen Stift?"
+      ]
+    }
+  ]
+}

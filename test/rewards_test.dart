@@ -191,7 +191,7 @@ void main() {
       expect((await r.session(session.id)).position, 1);
       expect(await r.setting('name'), 'Аня');
       expect(await r.setting('owner'), 'existing-account');
-      expect(await r.installed(), hasLength(52));
+      expect(await r.installed(), hasLength(100));
       expect(
         (await r.db.customSelect('PRAGMA user_version').getSingle()).read<int>(
           'user_version',

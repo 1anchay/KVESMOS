@@ -1,0 +1,280 @@
+{
+  "id": "de-a1-17",
+  "title": "Встреча · möchten",
+  "topic": "Встреча · möchten",
+  "order": 16,
+  "objective": "Предложить встречу и согласовать время.",
+  "guide": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+  "vocabulary": [
+    {
+      "id": "de:v013:17:p0",
+      "en": "Möchtest du morgen einen Kaffee trinken?",
+      "ru": "Хочешь завтра выпить кофе?"
+    },
+    {
+      "id": "de:v013:17:p1",
+      "en": "Wie wäre es am Freitag?",
+      "ru": "Как насчёт пятницы?"
+    },
+    {
+      "id": "de:v013:17:p2",
+      "en": "Um drei Uhr passt es mir.",
+      "ru": "В три часа мне подходит."
+    },
+    {
+      "id": "de:v013:17:p3",
+      "en": "Ich möchte dich am Bahnhof treffen.",
+      "ru": "Я хотел бы встретить тебя на вокзале."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Möchtest du morgen einen Kaffee trinken?",
+      "translation": "Хочешь завтра выпить кофе?",
+      "explanation": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Wie wäre es am Freitag?",
+      "translation": "Как насчёт пятницы?",
+      "explanation": "Wie wäre es am Freitag? — Как насчёт пятницы?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Um drei Uhr passt es mir.",
+      "translation": "В три часа мне подходит.",
+      "explanation": "Um drei Uhr passt es mir. — В три часа мне подходит."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Ich möchte dich am Bahnhof treffen.",
+      "translation": "Я хотел бы встретить тебя на вокзале.",
+      "explanation": "Ich möchte dich am Bahnhof treffen. — Я хотел бы встретить тебя на вокзале.\nПосле möchte нужен инфинитив treffen, который ставим в конце.\nВерно: Ich möchte dich treffen."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-17-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "В три часа мне подходит."
+      ],
+      "explanation": "Um drei Uhr passt es mir. — В три часа мне подходит.",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [
+        "de:v013:17:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Um drei Uhr passt es mir.",
+      "options": [
+        "Как насчёт пятницы?",
+        "Я хотел бы встретить тебя на вокзале.",
+        "В три часа мне подходит."
+      ]
+    },
+    {
+      "id": "de-a1-17-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Хочешь завтра выпить кофе? Выбери реплику.",
+      "answers": [
+        "Möchtest du morgen einen Kaffee trinken?"
+      ],
+      "explanation": "Möchtest du morgen einen Kaffee trinken? — Хочешь завтра выпить кофе?",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [
+        "de:v013:17:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Um drei Uhr passt es mir.",
+        "Möchtest du morgen einen Kaffee trinken?",
+        "Wie wäre es am Freitag?"
+      ]
+    },
+    {
+      "id": "de-a1-17-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [
+        "de:v013:17:p0",
+        "de:v013:17:p1",
+        "de:v013:17:p2",
+        "de:v013:17:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:17:p0",
+          "en": "Möchtest du morgen einen Kaffee trinken?",
+          "ru": "Хочешь завтра выпить кофе?"
+        },
+        {
+          "id": "de:v013:17:p1",
+          "en": "Wie wäre es am Freitag?",
+          "ru": "Как насчёт пятницы?"
+        },
+        {
+          "id": "de:v013:17:p2",
+          "en": "Um drei Uhr passt es mir.",
+          "ru": "В три часа мне подходит."
+        },
+        {
+          "id": "de:v013:17:p3",
+          "en": "Ich möchte dich am Bahnhof treffen.",
+          "ru": "Я хотел бы встретить тебя на вокзале."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-17-e05",
+      "type": "dialogue",
+      "prompt": "Когда договорились встретиться?",
+      "answers": [
+        "В пятницу в три"
+      ],
+      "explanation": "Орби: Möchtest du morgen einen Kaffee trinken?\nМико: Wie wäre es am Freitag?\nОрби: Um drei Uhr passt es mir.\nВ пятницу в три",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [
+        "de:v013:17:p0",
+        "de:v013:17:p1",
+        "de:v013:17:p2",
+        "de:v013:17:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Möchtest du morgen einen Kaffee trinken?\nМико: Wie wäre es am Freitag?\nОрби: Um drei Uhr passt es mir.",
+      "options": [
+        "Завтра в десять",
+        "В пятницу в три",
+        "В понедельник утром"
+      ]
+    },
+    {
+      "id": "de-a1-17-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Как насчёт пятницы?",
+      "answers": [
+        "Wie wäre es am Freitag?"
+      ],
+      "explanation": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [
+        "de:v013:17:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Wie",
+        "wäre",
+        "es",
+        "am",
+        "Freitag"
+      ]
+    },
+    {
+      "id": "de-a1-17-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я хотел бы встретить тебя на вокзале.",
+      "answers": [
+        "Ich möchte dich am Bahnhof treffen."
+      ],
+      "explanation": "Ich möchte dich am Bahnhof treffen. — Я хотел бы встретить тебя на вокзале.",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [
+        "de:v013:17:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Ich möchte dich am Bahnhof treffen."
+    },
+    {
+      "id": "de-a1-17-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich möchte treffe dich.",
+      "answers": [
+        "Ich möchte dich treffen."
+      ],
+      "explanation": "После möchte нужен инфинитив treffen, который ставим в конце.",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich möchte treffe dich.",
+        "Ich möchte dich treffen."
+      ]
+    },
+    {
+      "id": "de-a1-17-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Wie wäre es am Freitag?»?",
+      "answers": [
+        "Как насчёт пятницы?"
+      ],
+      "explanation": "Wie wäre es am Freitag? — Как насчёт пятницы?",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [
+        "de:v013:17:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Хочешь завтра выпить кофе?",
+        "Как насчёт пятницы?",
+        "Я хотел бы встретить тебя на вокзале."
+      ]
+    },
+    {
+      "id": "de-a1-17-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Хочешь завтра выпить кофе?",
+      "answers": [
+        "Möchtest du morgen einen Kaffee trinken?"
+      ],
+      "explanation": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [
+        "de:v013:17:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Möchtest du morgen einen Kaffee trinken?",
+        "meaning": "Хочешь завтра выпить кофе?"
+      }
+    },
+    {
+      "id": "de-a1-17-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Аптека справа.",
+      "answers": [
+        "Die Apotheke ist rechts."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Die Apotheke ist rechts. — Аптека справа.",
+      "hint": "Möchten — хотеть в вежливой форме: ich möchte, möchtest du. Wie wäre es…? — как насчёт…? Am Freitag — в пятницу, um drei Uhr — в три часа. Das passt mir — мне подходит. Kaffee trinken — выпить кофе; после möchte инфинитив в конце.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Gehen Sie geradeaus.",
+        "Gehen Sie an der Ampel nach links.",
+        "Die Apotheke ist rechts.",
+        "Der Bahnhof ist um die Ecke."
+      ]
+    }
+  ]
+}

@@ -51,6 +51,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "es-v013",
+      "title": "Самостоятельные разговоры",
+      "themes": [
+        {
+          "id": "es-v013-unit-1",
+          "title": "Ser y estar · кто и где",
+          "lessons": [
+            {
+              "id": "es-a1-07",
+              "title": "Ser y estar · кто и где",
+              "asset": "assets/courses/es-a1-07.json",
+              "order": 6
+            },
+            {
+              "id": "es-a1-08",
+              "title": "Расположение предметов",
+              "asset": "assets/courses/es-a1-08.json",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "id": "es-v013-unit-2",
+          "title": "Что есть в городе",
+          "lessons": [
+            {
+              "id": "es-a1-09",
+              "title": "Что есть в городе",
+              "asset": "assets/courses/es-a1-09.json",
+              "order": 8
+            },
+            {
+              "id": "es-a1-10",
+              "title": "Каждый день · глаголы на -ar",
+              "asset": "assets/courses/es-a1-10.json",
+              "order": 9
+            }
+          ]
+        },
+        {
+          "id": "es-v013-unit-3",
+          "title": "Еда · comer и beber",
+          "lessons": [
+            {
+              "id": "es-a1-11",
+              "title": "Еда · comer и beber",
+              "asset": "assets/courses/es-a1-11.json",
+              "order": 10
+            },
+            {
+              "id": "es-a1-12",
+              "title": "Время и расписание",
+              "asset": "assets/courses/es-a1-12.json",
+              "order": 11
+            }
+          ]
+        },
+        {
+          "id": "es-v013-unit-4",
+          "title": "На рынке · цены",
+          "lessons": [
+            {
+              "id": "es-a1-13",
+              "title": "На рынке · цены",
+              "asset": "assets/courses/es-a1-13.json",
+              "order": 12
+            },
+            {
+              "id": "es-a1-14",
+              "title": "Одежда и согласование",
+              "asset": "assets/courses/es-a1-14.json",
+              "order": 13
+            }
+          ]
+        },
+        {
+          "id": "es-v013-unit-5",
+          "title": "Планы · ir a",
+          "lessons": [
+            {
+              "id": "es-a1-15",
+              "title": "Планы · ir a",
+              "asset": "assets/courses/es-a1-15.json",
+              "order": 14
+            },
+            {
+              "id": "es-a1-16",
+              "title": "Просьбы и разрешение",
+              "asset": "assets/courses/es-a1-16.json",
+              "order": 15
+            }
+          ]
+        },
+        {
+          "id": "es-v013-unit-6",
+          "title": "Как пройти · ориентиры",
+          "lessons": [
+            {
+              "id": "es-a1-17",
+              "title": "Как пройти · ориентиры",
+              "asset": "assets/courses/es-a1-17.json",
+              "order": 16
+            },
+            {
+              "id": "es-a1-18",
+              "title": "Итог · встреча в городе",
+              "asset": "assets/courses/es-a1-18.json",
+              "order": 17
+            }
+          ]
+        }
+      ]
     }
   ]
 }

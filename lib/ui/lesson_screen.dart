@@ -68,6 +68,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   String? activePair;
   bool busy = false, finished = false, revealedAudio = false;
   bool showTeaching = false;
+  bool recallHidden = false;
+  bool rehearsal = false;
   int teachingStep = 0;
   bool? result;
   List<String> options = [];
@@ -102,6 +104,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         demo: widget.demo,
       );
       final saved = material.session;
+      rehearsal =
+          await app.repository.setting(
+            'kvesmos.session.rehearsal.v1:${saved.id}',
+          ) ==
+          'true';
       // Resolve async session state before exposing the quiz to build().
       final shouldTeach =
           !saved.done &&
@@ -222,6 +229,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     activePair = null;
     result = null;
     revealedAudio = false;
+    recallHidden = false;
     if (session!.done) {
       finished = true;
       return;
@@ -237,6 +245,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         input.text = d['text'] ?? '';
         order = List<int>.from(d['order'] ?? []);
         pairs = Map<String, String>.from(d['pairs'] ?? {});
+        recallHidden = d['recallHidden'] == true;
       }
     } catch (_) {
       input.clear();
@@ -254,7 +263,12 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           .draft(
             session!.id,
             session!.position,
-            jsonEncode({'text': input.text, 'order': order, 'pairs': pairs}),
+            jsonEncode({
+              'text': input.text,
+              'order': order,
+              'pairs': pairs,
+              'recallHidden': recallHidden,
+            }),
           );
     } catch (_) {
       if (mounted) {
@@ -279,7 +293,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     return input.text;
   }
 
-  bool get canCheck => exercise.type == ExerciseType.pairs
+  bool get canCheck => exercise.recall != null && !recallHidden
+      ? false
+      : exercise.type == ExerciseType.pairs
       ? pairs.length == exercise.pairs.length
       : answer.trim().isNotEmpty;
   Future<void> check() async {
@@ -516,6 +532,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                       child: SingleChildScrollView(
                         key: ValueKey('feedback:${e.id}:$result'),
                         child: AnswerSignal(
+                          awardedXp: rehearsal ? 0 : 10,
                           explanation: e.explanation,
                           correction: result == false
                               ? e.type == ExerciseType.pairs
@@ -559,6 +576,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       body: SafeArea(
         child: QuestionEntrance(
           questionId: e.id,
+          enabled: audio.preferences.reactions,
           child: pageBody([
             if (e.phase.isEmpty &&
                 ref
@@ -628,7 +646,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (e.pronunciation != null) ...[
+                  if (e.pronunciation != null && e.recall == null) ...[
                     Text(
                       e.pronunciation!,
                       style: Theme.of(context).textTheme.titleMedium,
@@ -675,6 +693,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         borderRadius: BorderRadius.circular(18),
                       ),
                       child: DialogueScene(
+                        pronunciation: e.scenePronunciation,
                         scene: e.scene!,
                         audio: audio,
                         reply: result == true ? answer : null,
@@ -685,7 +704,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   Text(
                     e.prompt,
                     style: e.story == null
-                        ? Theme.of(context).textTheme.titleLarge
+                        ? Theme.of(context).textTheme.headlineSmall
                         : Theme.of(context).textTheme.titleMedium,
                   ),
                   if (e.audio != null ||
@@ -731,7 +750,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             const SizedBox(height: 16),
             AbsorbPointer(
               absorbing: result != null || busy,
-              child: _answerWidget(e),
+              child: QuestionEntrance(
+                questionId: '${e.id}:$recallHidden',
+                enabled: audio.preferences.reactions,
+                child: _answerWidget(e),
+              ),
             ),
             LessonCoachCard(lesson: lesson!, exercise: e),
             const SizedBox(height: 12),
@@ -783,6 +806,30 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   }
 
   Widget _answerWidget(Exercise e) {
+    if (e.recall != null && !recallHidden) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            e.recall!['phrase']!,
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          if (e.pronunciation != null) Text(e.pronunciation!),
+          const SizedBox(height: 8),
+          Text(e.recall!['meaning']!),
+          const SizedBox(height: 16),
+          FilledButton.icon(
+            key: const Key('recall-hide'),
+            onPressed: () {
+              setState(() => recallHidden = true);
+              unawaited(saveDraft());
+            },
+            icon: const Icon(Icons.psychology_outlined),
+            label: const Text('Скрыть и вспомнить самостоятельно'),
+          ),
+        ],
+      );
+    }
     if (e.options.isNotEmpty) {
       return Column(
         children: options

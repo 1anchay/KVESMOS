@@ -1,0 +1,281 @@
+{
+  "id": "fr-a1-10",
+  "title": "На рынке · цена и количество",
+  "topic": "На рынке · цена и количество",
+  "order": 9,
+  "objective": "Узнать цену и попросить нужное количество.",
+  "guide": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+  "vocabulary": [
+    {
+      "id": "fr:v013:10:p0",
+      "en": "Combien coûtent les pommes ?",
+      "ru": "Сколько стоят яблоки?"
+    },
+    {
+      "id": "fr:v013:10:p1",
+      "en": "Je voudrais un kilo de pommes.",
+      "ru": "Я хотел бы килограмм яблок."
+    },
+    {
+      "id": "fr:v013:10:p2",
+      "en": "Ça coûte trois euros.",
+      "ru": "Это стоит три евро."
+    },
+    {
+      "id": "fr:v013:10:p3",
+      "en": "Je prends deux kilos.",
+      "ru": "Я беру два килограмма."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Combien coûtent les pommes ?",
+      "translation": "Сколько стоят яблоки?",
+      "explanation": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Je voudrais un kilo de pommes.",
+      "translation": "Я хотел бы килограмм яблок.",
+      "explanation": "Je voudrais un kilo de pommes. — Я хотел бы килограмм яблок."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Ça coûte trois euros.",
+      "translation": "Это стоит три евро.",
+      "explanation": "Ça coûte trois euros. — Это стоит три евро."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Je prends deux kilos.",
+      "translation": "Я беру два килограмма.",
+      "explanation": "Je prends deux kilos. — Я беру два килограмма.\nПосле обозначения количества используем de: un kilo de pommes.\nВерно: Je voudrais un kilo de pommes."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-10-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Сколько стоят яблоки? Выбери реплику.",
+      "answers": [
+        "Combien coûtent les pommes ?"
+      ],
+      "explanation": "Combien coûtent les pommes ? — Сколько стоят яблоки?",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [
+        "fr:v013:10:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Ça coûte trois euros.",
+        "Combien coûtent les pommes ?",
+        "Je voudrais un kilo de pommes."
+      ]
+    },
+    {
+      "id": "fr-a1-10-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Это стоит три евро."
+      ],
+      "explanation": "Ça coûte trois euros. — Это стоит три евро.",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [
+        "fr:v013:10:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Ça coûte trois euros.",
+      "options": [
+        "Я хотел бы килограмм яблок.",
+        "Я беру два килограмма.",
+        "Это стоит три евро."
+      ]
+    },
+    {
+      "id": "fr-a1-10-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я хотел бы килограмм яблок.",
+      "answers": [
+        "Je voudrais un kilo de pommes."
+      ],
+      "explanation": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [
+        "fr:v013:10:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Je",
+        "voudrais",
+        "un",
+        "kilo",
+        "de",
+        "pommes"
+      ]
+    },
+    {
+      "id": "fr-a1-10-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [
+        "fr:v013:10:p0",
+        "fr:v013:10:p1",
+        "fr:v013:10:p2",
+        "fr:v013:10:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "fr:v013:10:p0",
+          "en": "Combien coûtent les pommes ?",
+          "ru": "Сколько стоят яблоки?"
+        },
+        {
+          "id": "fr:v013:10:p1",
+          "en": "Je voudrais un kilo de pommes.",
+          "ru": "Я хотел бы килограмм яблок."
+        },
+        {
+          "id": "fr:v013:10:p2",
+          "en": "Ça coûte trois euros.",
+          "ru": "Это стоит три евро."
+        },
+        {
+          "id": "fr:v013:10:p3",
+          "en": "Je prends deux kilos.",
+          "ru": "Я беру два килограмма."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-10-e05",
+      "type": "dialogue",
+      "prompt": "Сколько килограммов берёт Мико?",
+      "answers": [
+        "Два"
+      ],
+      "explanation": "Мико: Combien coûtent les pommes ?\nОрби: Un kilo coûte trois euros.\nМико: Je prends deux kilos.\nДва",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [
+        "fr:v013:10:p0",
+        "fr:v013:10:p1",
+        "fr:v013:10:p2",
+        "fr:v013:10:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Combien coûtent les pommes ?\nОрби: Un kilo coûte trois euros.\nМико: Je prends deux kilos.",
+      "options": [
+        "Один",
+        "Два",
+        "Три"
+      ]
+    },
+    {
+      "id": "fr-a1-10-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je voudrais un kilo des pommes.",
+      "answers": [
+        "Je voudrais un kilo de pommes."
+      ],
+      "explanation": "После обозначения количества используем de: un kilo de pommes.",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Je voudrais un kilo des pommes.",
+        "Je voudrais un kilo de pommes."
+      ]
+    },
+    {
+      "id": "fr-a1-10-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я беру два килограмма.",
+      "answers": [
+        "Je prends deux kilos."
+      ],
+      "explanation": "Je prends deux kilos. — Я беру два килограмма.",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [
+        "fr:v013:10:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Je prends deux kilos."
+    },
+    {
+      "id": "fr-a1-10-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Сколько стоят яблоки?",
+      "answers": [
+        "Combien coûtent les pommes ?"
+      ],
+      "explanation": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [
+        "fr:v013:10:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Combien coûtent les pommes ?",
+        "meaning": "Сколько стоят яблоки?"
+      }
+    },
+    {
+      "id": "fr-a1-10-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Je voudrais un kilo de pommes.»?",
+      "answers": [
+        "Я хотел бы килограмм яблок."
+      ],
+      "explanation": "Je voudrais un kilo de pommes. — Я хотел бы килограмм яблок.",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [
+        "fr:v013:10:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Сколько стоят яблоки?",
+        "Я хотел бы килограмм яблок.",
+        "Я беру два килограмма."
+      ]
+    },
+    {
+      "id": "fr-a1-10-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Идите прямо.",
+      "answers": [
+        "Allez tout droit."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Allez tout droit. — Идите прямо.",
+      "hint": "Combien coûte…? — сколько стоит…? Combien coûtent…? — сколько стоят…? Un kilo de pommes — килограмм яблок: после количества используется de. Je prends — я беру. L'euro — евро; vingt euros связывает конечное t с гласной следующего слова.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Où est la gare ?",
+        "La banque est à droite.",
+        "La gare est près du café.",
+        "Allez tout droit."
+      ]
+    }
+  ]
+}

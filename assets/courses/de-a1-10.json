@@ -1,0 +1,279 @@
+{
+  "id": "de-a1-10",
+  "title": "Вопросы · wer, wo, wann",
+  "topic": "Вопросы · wer, wo, wann",
+  "order": 9,
+  "objective": "Уточнить место и время занятия.",
+  "guide": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+  "vocabulary": [
+    {
+      "id": "de:v013:10:p0",
+      "en": "Wo wohnst du?",
+      "ru": "Где ты живёшь?"
+    },
+    {
+      "id": "de:v013:10:p1",
+      "en": "Ich wohne in Berlin.",
+      "ru": "Я живу в Берлине."
+    },
+    {
+      "id": "de:v013:10:p2",
+      "en": "Wann beginnt der Kurs?",
+      "ru": "Когда начинается занятие?"
+    },
+    {
+      "id": "de:v013:10:p3",
+      "en": "Der Kurs beginnt um neun Uhr.",
+      "ru": "Занятие начинается в девять часов."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Wo wohnst du?",
+      "translation": "Где ты живёшь?",
+      "explanation": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Ich wohne in Berlin.",
+      "translation": "Я живу в Берлине.",
+      "explanation": "Ich wohne in Berlin. — Я живу в Берлине."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Wann beginnt der Kurs?",
+      "translation": "Когда начинается занятие?",
+      "explanation": "Wann beginnt der Kurs? — Когда начинается занятие?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Der Kurs beginnt um neun Uhr.",
+      "translation": "Занятие начинается в девять часов.",
+      "explanation": "Der Kurs beginnt um neun Uhr. — Занятие начинается в девять часов.\nПосле вопросительного wo ставим wohnst, затем du.\nВерно: Wo wohnst du?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-10-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Где ты живёшь? Выбери реплику.",
+      "answers": [
+        "Wo wohnst du?"
+      ],
+      "explanation": "Wo wohnst du? — Где ты живёшь?",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [
+        "de:v013:10:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Wann beginnt der Kurs?",
+        "Wo wohnst du?",
+        "Ich wohne in Berlin."
+      ]
+    },
+    {
+      "id": "de-a1-10-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Когда начинается занятие?"
+      ],
+      "explanation": "Wann beginnt der Kurs? — Когда начинается занятие?",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [
+        "de:v013:10:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Wann beginnt der Kurs?",
+      "options": [
+        "Я живу в Берлине.",
+        "Занятие начинается в девять часов.",
+        "Когда начинается занятие?"
+      ]
+    },
+    {
+      "id": "de-a1-10-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я живу в Берлине.",
+      "answers": [
+        "Ich wohne in Berlin."
+      ],
+      "explanation": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [
+        "de:v013:10:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Ich",
+        "wohne",
+        "in",
+        "Berlin"
+      ]
+    },
+    {
+      "id": "de-a1-10-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [
+        "de:v013:10:p0",
+        "de:v013:10:p1",
+        "de:v013:10:p2",
+        "de:v013:10:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:10:p0",
+          "en": "Wo wohnst du?",
+          "ru": "Где ты живёшь?"
+        },
+        {
+          "id": "de:v013:10:p1",
+          "en": "Ich wohne in Berlin.",
+          "ru": "Я живу в Берлине."
+        },
+        {
+          "id": "de:v013:10:p2",
+          "en": "Wann beginnt der Kurs?",
+          "ru": "Когда начинается занятие?"
+        },
+        {
+          "id": "de:v013:10:p3",
+          "en": "Der Kurs beginnt um neun Uhr.",
+          "ru": "Занятие начинается в девять часов."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-10-e05",
+      "type": "dialogue",
+      "prompt": "Когда начинается занятие?",
+      "answers": [
+        "В девять"
+      ],
+      "explanation": "Мико: Wann beginnt der Kurs?\nОрби: Der Kurs beginnt um neun Uhr.\nВ девять",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [
+        "de:v013:10:p0",
+        "de:v013:10:p1",
+        "de:v013:10:p2",
+        "de:v013:10:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Wann beginnt der Kurs?\nОрби: Der Kurs beginnt um neun Uhr.",
+      "options": [
+        "В одиннадцать",
+        "В девять",
+        "В полдень"
+      ]
+    },
+    {
+      "id": "de-a1-10-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wo du wohnst?",
+      "answers": [
+        "Wo wohnst du?"
+      ],
+      "explanation": "После вопросительного wo ставим wohnst, затем du.",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Wo du wohnst?",
+        "Wo wohnst du?"
+      ]
+    },
+    {
+      "id": "de-a1-10-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Занятие начинается в девять часов.",
+      "answers": [
+        "Der Kurs beginnt um neun Uhr."
+      ],
+      "explanation": "Der Kurs beginnt um neun Uhr. — Занятие начинается в девять часов.",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [
+        "de:v013:10:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Der Kurs beginnt um neun Uhr."
+    },
+    {
+      "id": "de-a1-10-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Где ты живёшь?",
+      "answers": [
+        "Wo wohnst du?"
+      ],
+      "explanation": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [
+        "de:v013:10:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Wo wohnst du?",
+        "meaning": "Где ты живёшь?"
+      }
+    },
+    {
+      "id": "de-a1-10-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Ich wohne in Berlin.»?",
+      "answers": [
+        "Я живу в Берлине."
+      ],
+      "explanation": "Ich wohne in Berlin. — Я живу в Берлине.",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [
+        "de:v013:10:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Где ты живёшь?",
+        "Я живу в Берлине.",
+        "Занятие начинается в девять часов."
+      ]
+    },
+    {
+      "id": "de-a1-10-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Ты учишь немецкий?",
+      "answers": [
+        "Lernst du Deutsch?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: Lernst du Deutsch? — Ты учишь немецкий?",
+      "hint": "Wo — где, wann — когда, wer — кто. В вопросе с вопросительным словом глагол идёт следом: Wo wohnst du? В вопросе да/нет глагол первый: Wohnst du hier? Der Kurs — курс/занятие. Beginnen — начинаться: der Kurs beginnt.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich lerne Deutsch.",
+        "Heute arbeite ich zu Hause.",
+        "Wir lernen zusammen.",
+        "Lernst du Deutsch?"
+      ]
+    }
+  ]
+}

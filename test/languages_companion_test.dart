@@ -14,12 +14,12 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUpAll(setupSqlite);
   test(
-    '52 installed lessons: separate catalogs, authored content and full scoring',
+    '100 installed lessons: separate catalogs, authored content and full scoring',
     () async {
       final r = memoryRepository();
       addTearDown(r.db.close);
       await r.initialize();
-      expect(await r.installed(), hasLength(52));
+      expect(await r.installed(), hasLength(100));
       for (final c in StudyCourse.all) {
         await r.selectCourse(c.id);
         expect(r.catalog, hasLength(c.lessons));
@@ -46,7 +46,7 @@ void main() {
         expect((await r.progress()).xp, c.lessons * 120);
         expect((await r.progress()).completed, hasLength(c.lessons));
       }
-      expect((await r.globalProgress()).xp, 6240);
+      expect((await r.globalProgress()).xp, 12000);
     },
   );
   test(
@@ -85,7 +85,7 @@ void main() {
       final before = jsonEncode((await r.allEvents()).single.toJson());
       await r.initialize();
       await r.initialize();
-      expect(await r.installed(), hasLength(51));
+      expect(await r.installed(), hasLength(99));
       expect(await r.installed(), isNot(contains('a1-20')));
       expect(jsonEncode((await r.allEvents()).single.toJson()), before);
       expect((await r.startLesson('a1-01')).session.id, old.id);

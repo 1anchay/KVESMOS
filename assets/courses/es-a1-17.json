@@ -1,0 +1,279 @@
+{
+  "id": "es-a1-17",
+  "title": "Как пройти · ориентиры",
+  "topic": "Как пройти · ориентиры",
+  "order": 16,
+  "objective": "Понять короткую инструкцию пути.",
+  "guide": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+  "vocabulary": [
+    {
+      "id": "es:v013:17:p0",
+      "en": "Siga todo recto.",
+      "ru": "Идите прямо."
+    },
+    {
+      "id": "es:v013:17:p1",
+      "en": "Gire a la derecha.",
+      "ru": "Поверните направо."
+    },
+    {
+      "id": "es:v013:17:p2",
+      "en": "La estación está al lado del hotel.",
+      "ru": "Вокзал рядом с гостиницей."
+    },
+    {
+      "id": "es:v013:17:p3",
+      "en": "El museo está frente al banco.",
+      "ru": "Музей напротив банка."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Siga todo recto.",
+      "translation": "Идите прямо.",
+      "explanation": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Gire a la derecha.",
+      "translation": "Поверните направо.",
+      "explanation": "Gire a la derecha. — Поверните направо."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "La estación está al lado del hotel.",
+      "translation": "Вокзал рядом с гостиницей.",
+      "explanation": "La estación está al lado del hotel. — Вокзал рядом с гостиницей."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "El museo está frente al banco.",
+      "translation": "Музей напротив банка.",
+      "explanation": "El museo está frente al banco. — Музей напротив банка.\nA + el образуют al: frente al banco.\nВерно: El museo está frente al banco."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-17-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Вокзал рядом с гостиницей."
+      ],
+      "explanation": "La estación está al lado del hotel. — Вокзал рядом с гостиницей.",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [
+        "es:v013:17:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "La estación está al lado del hotel.",
+      "options": [
+        "Поверните направо.",
+        "Музей напротив банка.",
+        "Вокзал рядом с гостиницей."
+      ]
+    },
+    {
+      "id": "es-a1-17-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Идите прямо. Выбери реплику.",
+      "answers": [
+        "Siga todo recto."
+      ],
+      "explanation": "Siga todo recto. — Идите прямо.",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [
+        "es:v013:17:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "La estación está al lado del hotel.",
+        "Siga todo recto.",
+        "Gire a la derecha."
+      ]
+    },
+    {
+      "id": "es-a1-17-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [
+        "es:v013:17:p0",
+        "es:v013:17:p1",
+        "es:v013:17:p2",
+        "es:v013:17:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:17:p0",
+          "en": "Siga todo recto.",
+          "ru": "Идите прямо."
+        },
+        {
+          "id": "es:v013:17:p1",
+          "en": "Gire a la derecha.",
+          "ru": "Поверните направо."
+        },
+        {
+          "id": "es:v013:17:p2",
+          "en": "La estación está al lado del hotel.",
+          "ru": "Вокзал рядом с гостиницей."
+        },
+        {
+          "id": "es:v013:17:p3",
+          "en": "El museo está frente al banco.",
+          "ru": "Музей напротив банка."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-17-e05",
+      "type": "dialogue",
+      "prompt": "Где находится вокзал?",
+      "answers": [
+        "Рядом с гостиницей"
+      ],
+      "explanation": "Орби: Siga todo recto. Gire a la derecha. La estación está al lado del hotel.\nМико: Gracias.\nРядом с гостиницей",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [
+        "es:v013:17:p0",
+        "es:v013:17:p1",
+        "es:v013:17:p2",
+        "es:v013:17:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Siga todo recto. Gire a la derecha. La estación está al lado del hotel.\nМико: Gracias.",
+      "options": [
+        "Напротив музея",
+        "Рядом с гостиницей",
+        "За аптекой"
+      ]
+    },
+    {
+      "id": "es-a1-17-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Поверните направо.",
+      "answers": [
+        "Gire a la derecha."
+      ],
+      "explanation": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [
+        "es:v013:17:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Gire",
+        "a",
+        "la",
+        "derecha"
+      ]
+    },
+    {
+      "id": "es-a1-17-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Музей напротив банка.",
+      "answers": [
+        "El museo está frente al banco."
+      ],
+      "explanation": "El museo está frente al banco. — Музей напротив банка.",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [
+        "es:v013:17:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "El museo está frente al banco."
+    },
+    {
+      "id": "es-a1-17-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: El museo está frente a el banco.",
+      "answers": [
+        "El museo está frente al banco."
+      ],
+      "explanation": "A + el образуют al: frente al banco.",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "El museo está frente a el banco.",
+        "El museo está frente al banco."
+      ]
+    },
+    {
+      "id": "es-a1-17-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Gire a la derecha.»?",
+      "answers": [
+        "Поверните направо."
+      ],
+      "explanation": "Gire a la derecha. — Поверните направо.",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [
+        "es:v013:17:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Идите прямо.",
+        "Поверните направо.",
+        "Музей напротив банка."
+      ]
+    },
+    {
+      "id": "es-a1-17-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Идите прямо.",
+      "answers": [
+        "Siga todo recto."
+      ],
+      "explanation": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [
+        "es:v013:17:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Siga todo recto.",
+        "meaning": "Идите прямо."
+      }
+    },
+    {
+      "id": "es-a1-17-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Можно открыть окно?",
+      "answers": [
+        "¿Puedo abrir la ventana?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: ¿Puedo abrir la ventana? — Можно открыть окно?",
+      "hint": "Siga — идите/продолжайте (вежливая команда), gire — поверните. Todo recto — прямо, a la derecha — направо, a la izquierda — налево. Al lado de — рядом с; frente a — напротив. La estación — вокзал/станция.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "¿Puede ayudarme, por favor?",
+        "¿Puede hablar más despacio?",
+        "¿Puedo abrir la ventana?",
+        "¿Puede repetir la dirección?"
+      ]
+    }
+  ]
+}

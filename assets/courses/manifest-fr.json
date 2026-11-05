@@ -51,6 +51,66 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fr-v013",
+      "title": "Самостоятельные разговоры",
+      "themes": [
+        {
+          "id": "fr-v013-unit-1",
+          "title": "Être et avoir · состояние и вещи",
+          "lessons": [
+            {
+              "id": "fr-a1-07",
+              "title": "Être et avoir · состояние и вещи",
+              "asset": "assets/courses/fr-a1-07.json",
+              "order": 6
+            },
+            {
+              "id": "fr-a1-08",
+              "title": "Мой день · настоящее время",
+              "asset": "assets/courses/fr-a1-08.json",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "id": "fr-v013-unit-2",
+          "title": "Где находится вокзал?",
+          "lessons": [
+            {
+              "id": "fr-a1-09",
+              "title": "Где находится вокзал?",
+              "asset": "assets/courses/fr-a1-09.json",
+              "order": 8
+            },
+            {
+              "id": "fr-a1-10",
+              "title": "На рынке · цена и количество",
+              "asset": "assets/courses/fr-a1-10.json",
+              "order": 9
+            }
+          ]
+        },
+        {
+          "id": "fr-v013-unit-3",
+          "title": "Встреча · время и отказ",
+          "lessons": [
+            {
+              "id": "fr-a1-11",
+              "title": "Встреча · время и отказ",
+              "asset": "assets/courses/fr-a1-11.json",
+              "order": 10
+            },
+            {
+              "id": "fr-a1-12",
+              "title": "Итог · день в городе",
+              "asset": "assets/courses/fr-a1-12.json",
+              "order": 11
+            }
+          ]
+        }
+      ]
     }
   ]
 }

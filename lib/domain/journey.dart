@@ -66,6 +66,14 @@ class JourneyRegion {
             'miko',
             'Учимся говорить о том, что важно.',
           ),
+          for (var i = 7; i < 10; i++)
+            JourneyRegion(
+              i,
+              ['Архив историй', 'Станция решений', 'Горизонт планов'][i - 7],
+              'Самостоятельные разговоры',
+              'orbi',
+              'Применим знания в новой ситуации.',
+            ),
         ]
       : [
           const JourneyRegion(
@@ -82,6 +90,18 @@ class JourneyRegion {
             'miko',
             'Применим слова в разговоре.',
           ),
+          for (
+            var i = 2;
+            i < (language == 'es' || language == 'de' ? 5 : 3);
+            i++
+          )
+            JourneyRegion(
+              i,
+              'Маршрут разговоров ${i - 1}',
+              'Город, встречи и планы',
+              'miko',
+              'Новые ситуации — знакомые слова.',
+            ),
         ];
   Iterable<LessonInfo> lessons(List<LessonInfo> catalog) =>
       catalog.skip(index * 4).take(4);
@@ -190,7 +210,7 @@ class Expedition {
     final end = dayKey(now);
     final days = <String>{}, lessons = <String>{};
     for (final e in {for (final e in source) e.id: e}.values) {
-      if (e.day.compareTo(end) > 0) continue;
+      if (e.day.compareTo(end) > 0 || e.data['rehearsal'] == true) continue;
       if (e.day.compareTo(week) >= 0 &&
           e.kind == 'answer' &&
           e.data['correct'] == true) {

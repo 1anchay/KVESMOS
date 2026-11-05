@@ -18,6 +18,8 @@ Future<void> showLessonPreview(
     final preview = await app.repository.previewLesson(info.id);
     if (!context.mounted) return;
     final lesson = preview.lesson, session = preview.session;
+    final rehearsal =
+        session == null && app.progress.completed.contains(info.id);
     final type = Theme.of(context).textTheme;
     final start = await showModalBottomSheet<bool>(
       context: context,
@@ -107,7 +109,11 @@ Future<void> showLessonPreview(
                     onPressed: () => Navigator.of(sheet).pop(true),
                     icon: const Icon(Icons.arrow_forward_rounded),
                     label: Text(
-                      session == null ? 'Начать урок' : 'Продолжить урок',
+                      rehearsal
+                          ? 'Повторить без новых XP'
+                          : session == null
+                          ? 'Начать урок'
+                          : 'Продолжить урок',
                     ),
                   ),
                 ),

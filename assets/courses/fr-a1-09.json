@@ -1,0 +1,280 @@
+{
+  "id": "fr-a1-09",
+  "title": "Где находится вокзал?",
+  "topic": "Где находится вокзал?",
+  "order": 8,
+  "objective": "Спросить дорогу и понять простые ориентиры.",
+  "guide": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+  "vocabulary": [
+    {
+      "id": "fr:v013:9:p0",
+      "en": "Où est la gare ?",
+      "ru": "Где вокзал?"
+    },
+    {
+      "id": "fr:v013:9:p1",
+      "en": "La banque est à droite.",
+      "ru": "Банк справа."
+    },
+    {
+      "id": "fr:v013:9:p2",
+      "en": "La gare est près du café.",
+      "ru": "Вокзал рядом с кафе."
+    },
+    {
+      "id": "fr:v013:9:p3",
+      "en": "Allez tout droit.",
+      "ru": "Идите прямо."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Où est la gare ?",
+      "translation": "Где вокзал?",
+      "explanation": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "La banque est à droite.",
+      "translation": "Банк справа.",
+      "explanation": "La banque est à droite. — Банк справа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "La gare est près du café.",
+      "translation": "Вокзал рядом с кафе.",
+      "explanation": "La gare est près du café. — Вокзал рядом с кафе."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Allez tout droit.",
+      "translation": "Идите прямо.",
+      "explanation": "Allez tout droit. — Идите прямо.\nDe и le объединяются в du; près du café — рядом с кафе.\nВерно: La gare est près du café."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-09-e05",
+      "type": "dialogue",
+      "prompt": "Какой ориентир назвал Орби?",
+      "answers": [
+        "Кафе"
+      ],
+      "explanation": "Мико: Où est la gare ?\nОрби: Allez tout droit. La gare est près du café.\nКафе",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [
+        "fr:v013:9:p0",
+        "fr:v013:9:p1",
+        "fr:v013:9:p2",
+        "fr:v013:9:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Où est la gare ?\nОрби: Allez tout droit. La gare est près du café.",
+      "options": [
+        "Школу",
+        "Кафе",
+        "Гостиницу"
+      ]
+    },
+    {
+      "id": "fr-a1-09-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Где вокзал? Выбери реплику.",
+      "answers": [
+        "Où est la gare ?"
+      ],
+      "explanation": "Où est la gare ? — Где вокзал?",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [
+        "fr:v013:9:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "La gare est près du café.",
+        "Où est la gare ?",
+        "La banque est à droite."
+      ]
+    },
+    {
+      "id": "fr-a1-09-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Банк справа.",
+      "answers": [
+        "La banque est à droite."
+      ],
+      "explanation": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [
+        "fr:v013:9:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "La",
+        "banque",
+        "est",
+        "à",
+        "droite"
+      ]
+    },
+    {
+      "id": "fr-a1-09-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Вокзал рядом с кафе."
+      ],
+      "explanation": "La gare est près du café. — Вокзал рядом с кафе.",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [
+        "fr:v013:9:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "La gare est près du café.",
+      "options": [
+        "Банк справа.",
+        "Идите прямо.",
+        "Вокзал рядом с кафе."
+      ]
+    },
+    {
+      "id": "fr-a1-09-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: La gare est près de le café.",
+      "answers": [
+        "La gare est près du café."
+      ],
+      "explanation": "De и le объединяются в du; près du café — рядом с кафе.",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "La gare est près de le café.",
+        "La gare est près du café."
+      ]
+    },
+    {
+      "id": "fr-a1-09-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [
+        "fr:v013:9:p0",
+        "fr:v013:9:p1",
+        "fr:v013:9:p2",
+        "fr:v013:9:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "fr:v013:9:p0",
+          "en": "Où est la gare ?",
+          "ru": "Где вокзал?"
+        },
+        {
+          "id": "fr:v013:9:p1",
+          "en": "La banque est à droite.",
+          "ru": "Банк справа."
+        },
+        {
+          "id": "fr:v013:9:p2",
+          "en": "La gare est près du café.",
+          "ru": "Вокзал рядом с кафе."
+        },
+        {
+          "id": "fr:v013:9:p3",
+          "en": "Allez tout droit.",
+          "ru": "Идите прямо."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-09-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Где вокзал?",
+      "answers": [
+        "Où est la gare ?"
+      ],
+      "explanation": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [
+        "fr:v013:9:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Où est la gare ?",
+        "meaning": "Где вокзал?"
+      }
+    },
+    {
+      "id": "fr-a1-09-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Идите прямо.",
+      "answers": [
+        "Allez tout droit."
+      ],
+      "explanation": "Allez tout droit. — Идите прямо.",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [
+        "fr:v013:9:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Allez tout droit."
+    },
+    {
+      "id": "fr-a1-09-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «La banque est à droite.»?",
+      "answers": [
+        "Банк справа."
+      ],
+      "explanation": "La banque est à droite. — Банк справа.",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [
+        "fr:v013:9:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Где вокзал?",
+        "Банк справа.",
+        "Идите прямо."
+      ]
+    },
+    {
+      "id": "fr-a1-09-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Мы говорим по-французски.",
+      "answers": [
+        "Nous parlons français."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Nous parlons français. — Мы говорим по-французски.",
+      "hint": "Où est…? — где находится…? La gare — вокзал, la banque — банк. À gauche — налево/слева, à droite — направо/справа. Près de — рядом с; de + le сокращается до du: près du café. Tout droit — прямо, без окончания -e.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Je travaille le matin.",
+        "J'étudie le français le soir.",
+        "Nous parlons français.",
+        "Elle travaille à Paris."
+      ]
+    }
+  ]
+}

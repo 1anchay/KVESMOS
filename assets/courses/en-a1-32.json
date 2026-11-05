@@ -1,0 +1,280 @@
+{
+  "id": "en-a1-32",
+  "title": "Поездка: went и bought",
+  "topic": "Поездка: went и bought",
+  "order": 31,
+  "objective": "Сообщить, куда вы съездили и что купили.",
+  "guide": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+  "vocabulary": [
+    {
+      "id": "en:v013:32:p0",
+      "en": "I went to London by train.",
+      "ru": "Я поехал в Лондон на поезде."
+    },
+    {
+      "id": "en:v013:32:p1",
+      "en": "I bought a return ticket.",
+      "ru": "Я купил билет туда и обратно."
+    },
+    {
+      "id": "en:v013:32:p2",
+      "en": "We took a taxi to the hotel.",
+      "ru": "Мы взяли такси до гостиницы."
+    },
+    {
+      "id": "en:v013:32:p3",
+      "en": "I didn't buy a single ticket.",
+      "ru": "Я не покупал билет в одну сторону."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "I went to London by train.",
+      "translation": "Я поехал в Лондон на поезде.",
+      "explanation": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "I bought a return ticket.",
+      "translation": "Я купил билет туда и обратно.",
+      "explanation": "I bought a return ticket. — Я купил билет туда и обратно."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "We took a taxi to the hotel.",
+      "translation": "Мы взяли такси до гостиницы.",
+      "explanation": "We took a taxi to the hotel. — Мы взяли такси до гостиницы."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "I didn't buy a single ticket.",
+      "translation": "Я не покупал билет в одну сторону.",
+      "explanation": "I didn't buy a single ticket. — Я не покупал билет в одну сторону.\nПосле didn't используем buy; bought нужно в утвердительной фразе.\nВерно: I didn't buy a single ticket."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-32-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я поехал в Лондон на поезде. Выбери реплику.",
+      "answers": [
+        "I went to London by train."
+      ],
+      "explanation": "I went to London by train. — Я поехал в Лондон на поезде.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [
+        "en:v013:32:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "We took a taxi to the hotel.",
+        "I went to London by train.",
+        "I bought a return ticket."
+      ]
+    },
+    {
+      "id": "en-a1-32-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Мы взяли такси до гостиницы."
+      ],
+      "explanation": "We took a taxi to the hotel. — Мы взяли такси до гостиницы.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [
+        "en:v013:32:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "We took a taxi to the hotel.",
+      "options": [
+        "Я купил билет туда и обратно.",
+        "Я не покупал билет в одну сторону.",
+        "Мы взяли такси до гостиницы."
+      ]
+    },
+    {
+      "id": "en-a1-32-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я купил билет туда и обратно.",
+      "answers": [
+        "I bought a return ticket."
+      ],
+      "explanation": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [
+        "en:v013:32:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "I",
+        "bought",
+        "a",
+        "return",
+        "ticket"
+      ]
+    },
+    {
+      "id": "en-a1-32-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [
+        "en:v013:32:p0",
+        "en:v013:32:p1",
+        "en:v013:32:p2",
+        "en:v013:32:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:32:p0",
+          "en": "I went to London by train.",
+          "ru": "Я поехал в Лондон на поезде."
+        },
+        {
+          "id": "en:v013:32:p1",
+          "en": "I bought a return ticket.",
+          "ru": "Я купил билет туда и обратно."
+        },
+        {
+          "id": "en:v013:32:p2",
+          "en": "We took a taxi to the hotel.",
+          "ru": "Мы взяли такси до гостиницы."
+        },
+        {
+          "id": "en:v013:32:p3",
+          "en": "I didn't buy a single ticket.",
+          "ru": "Я не покупал билет в одну сторону."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-32-e05",
+      "type": "dialogue",
+      "prompt": "Какой билет купил Орби?",
+      "answers": [
+        "Туда и обратно"
+      ],
+      "explanation": "Орби: I went to London by train. I bought a return ticket.\nМико: We took a taxi to the hotel.\nТуда и обратно",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [
+        "en:v013:32:p0",
+        "en:v013:32:p1",
+        "en:v013:32:p2",
+        "en:v013:32:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: I went to London by train. I bought a return ticket.\nМико: We took a taxi to the hotel.",
+      "options": [
+        "Только в одну сторону",
+        "Туда и обратно",
+        "Билет в музей"
+      ]
+    },
+    {
+      "id": "en-a1-32-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I didn't bought a single ticket.",
+      "answers": [
+        "I didn't buy a single ticket."
+      ],
+      "explanation": "После didn't используем buy; bought нужно в утвердительной фразе.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I didn't bought a single ticket.",
+        "I didn't buy a single ticket."
+      ]
+    },
+    {
+      "id": "en-a1-32-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я не покупал билет в одну сторону.",
+      "answers": [
+        "I didn't buy a single ticket."
+      ],
+      "explanation": "I didn't buy a single ticket. — Я не покупал билет в одну сторону.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [
+        "en:v013:32:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "I didn't buy a single ticket."
+    },
+    {
+      "id": "en-a1-32-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я поехал в Лондон на поезде.",
+      "answers": [
+        "I went to London by train."
+      ],
+      "explanation": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [
+        "en:v013:32:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "I went to London by train.",
+        "meaning": "Я поехал в Лондон на поезде."
+      }
+    },
+    {
+      "id": "en-a1-32-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «I bought a return ticket.»?",
+      "answers": [
+        "Я купил билет туда и обратно."
+      ],
+      "explanation": "I bought a return ticket. — Я купил билет туда и обратно.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [
+        "en:v013:32:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я поехал в Лондон на поезде.",
+        "Я купил билет туда и обратно.",
+        "Я не покупал билет в одну сторону."
+      ]
+    },
+    {
+      "id": "en-a1-32-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Да.",
+      "answers": [
+        "Yes, I did."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Yes, I did. — Да.",
+      "hint": "Некоторые глаголы имеют особую форму прошлого: go → went, buy → bought, take → took. В отрицании после didn't возвращаем начальную форму: didn't buy. A return ticket — билет туда и обратно.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Did you visit the museum?",
+        "I didn't visit the museum.",
+        "Did you enjoy the film?",
+        "Yes, I did."
+      ]
+    }
+  ]
+}

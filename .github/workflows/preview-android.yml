@@ -11,6 +11,7 @@ on:
       - codex/kvesmos-v010-learning-first
       - codex/kvesmos-v011-languages-companion
       - codex/kvesmos-v012-five-languages-polish
+      - codex/kvesmos-v013-learning-revolution
   workflow_dispatch:
 
 jobs:

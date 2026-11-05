@@ -1,0 +1,279 @@
+{
+  "id": "es-a1-11",
+  "title": "Еда · comer и beber",
+  "topic": "Еда · comer и beber",
+  "order": 10,
+  "objective": "Описать привычки за столом.",
+  "guide": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+  "vocabulary": [
+    {
+      "id": "es:v013:11:p0",
+      "en": "Como arroz con verduras.",
+      "ru": "Я ем рис с овощами."
+    },
+    {
+      "id": "es:v013:11:p1",
+      "en": "Bebo café sin azúcar.",
+      "ru": "Я пью кофе без сахара."
+    },
+    {
+      "id": "es:v013:11:p2",
+      "en": "¿Comes pescado?",
+      "ru": "Ты ешь рыбу?"
+    },
+    {
+      "id": "es:v013:11:p3",
+      "en": "No como carne.",
+      "ru": "Я не ем мясо."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Como arroz con verduras.",
+      "translation": "Я ем рис с овощами.",
+      "explanation": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Bebo café sin azúcar.",
+      "translation": "Я пью кофе без сахара.",
+      "explanation": "Bebo café sin azúcar. — Я пью кофе без сахара."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "¿Comes pescado?",
+      "translation": "Ты ешь рыбу?",
+      "explanation": "¿Comes pescado? — Ты ешь рыбу?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "No como carne.",
+      "translation": "Я не ем мясо.",
+      "explanation": "No como carne. — Я не ем мясо.\nПосле yo нужна форма como. Comes относится к tú.\nВерно: Yo como pescado."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-11-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Ты ешь рыбу?"
+      ],
+      "explanation": "¿Comes pescado? — Ты ешь рыбу?",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [
+        "es:v013:11:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "¿Comes pescado?",
+      "options": [
+        "Я пью кофе без сахара.",
+        "Я не ем мясо.",
+        "Ты ешь рыбу?"
+      ]
+    },
+    {
+      "id": "es-a1-11-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я ем рис с овощами. Выбери реплику.",
+      "answers": [
+        "Como arroz con verduras."
+      ],
+      "explanation": "Como arroz con verduras. — Я ем рис с овощами.",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [
+        "es:v013:11:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "¿Comes pescado?",
+        "Como arroz con verduras.",
+        "Bebo café sin azúcar."
+      ]
+    },
+    {
+      "id": "es-a1-11-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [
+        "es:v013:11:p0",
+        "es:v013:11:p1",
+        "es:v013:11:p2",
+        "es:v013:11:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:11:p0",
+          "en": "Como arroz con verduras.",
+          "ru": "Я ем рис с овощами."
+        },
+        {
+          "id": "es:v013:11:p1",
+          "en": "Bebo café sin azúcar.",
+          "ru": "Я пью кофе без сахара."
+        },
+        {
+          "id": "es:v013:11:p2",
+          "en": "¿Comes pescado?",
+          "ru": "Ты ешь рыбу?"
+        },
+        {
+          "id": "es:v013:11:p3",
+          "en": "No como carne.",
+          "ru": "Я не ем мясо."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-11-e05",
+      "type": "dialogue",
+      "prompt": "Что Мико не ест?",
+      "answers": [
+        "Мясо"
+      ],
+      "explanation": "Орби: ¿Comes pescado?\nМико: Sí. No como carne. Como arroz con verduras.\nМясо",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [
+        "es:v013:11:p0",
+        "es:v013:11:p1",
+        "es:v013:11:p2",
+        "es:v013:11:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: ¿Comes pescado?\nМико: Sí. No como carne. Como arroz con verduras.",
+      "options": [
+        "Рис",
+        "Мясо",
+        "Рыбу"
+      ]
+    },
+    {
+      "id": "es-a1-11-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я пью кофе без сахара.",
+      "answers": [
+        "Bebo café sin azúcar."
+      ],
+      "explanation": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [
+        "es:v013:11:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Bebo",
+        "café",
+        "sin",
+        "azúcar"
+      ]
+    },
+    {
+      "id": "es-a1-11-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я не ем мясо.",
+      "answers": [
+        "No como carne."
+      ],
+      "explanation": "No como carne. — Я не ем мясо.",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [
+        "es:v013:11:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "No como carne."
+    },
+    {
+      "id": "es-a1-11-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Yo comes pescado.",
+      "answers": [
+        "Yo como pescado."
+      ],
+      "explanation": "После yo нужна форма como. Comes относится к tú.",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Yo comes pescado.",
+        "Yo como pescado."
+      ]
+    },
+    {
+      "id": "es-a1-11-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Bebo café sin azúcar.»?",
+      "answers": [
+        "Я пью кофе без сахара."
+      ],
+      "explanation": "Bebo café sin azúcar. — Я пью кофе без сахара.",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [
+        "es:v013:11:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я ем рис с овощами.",
+        "Я пью кофе без сахара.",
+        "Я не ем мясо."
+      ]
+    },
+    {
+      "id": "es-a1-11-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я ем рис с овощами.",
+      "answers": [
+        "Como arroz con verduras."
+      ],
+      "explanation": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [
+        "es:v013:11:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Como arroz con verduras.",
+        "meaning": "Я ем рис с овощами."
+      }
+    },
+    {
+      "id": "es-a1-11-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я работаю по утрам.",
+      "answers": [
+        "Trabajo por la mañana."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Trabajo por la mañana. — Я работаю по утрам.",
+      "hint": "Comer — есть, beber — пить. Для yo у глаголов на -er окончание -o: como, bebo; для tú — -es: comes, bebes. Nosotros comemos — мы едим. Sin — без. No ставится перед глаголом: no bebo.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Trabajo por la mañana.",
+        "Estudio español por la tarde.",
+        "¿Hablas español?",
+        "Hablo un poco de español."
+      ]
+    }
+  ]
+}

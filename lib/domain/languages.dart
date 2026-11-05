@@ -18,7 +18,7 @@ class StudyCourse {
     '🇬🇧',
     'en-US',
     'assets/courses/manifest.json',
-    28,
+    40,
   );
   static const all = [
     english,
@@ -29,7 +29,7 @@ class StudyCourse {
       '🇪🇸',
       'es-ES',
       'assets/courses/manifest-es.json',
-      6,
+      18,
     ),
     StudyCourse(
       'ru-de',
@@ -38,7 +38,7 @@ class StudyCourse {
       '🇩🇪',
       'de-DE',
       'assets/courses/manifest-de.json',
-      6,
+      18,
     ),
     StudyCourse(
       'ru-fr',
@@ -47,7 +47,7 @@ class StudyCourse {
       '🇫🇷',
       'fr-FR',
       'assets/courses/manifest-fr.json',
-      6,
+      12,
     ),
     StudyCourse(
       'ru-zh',
@@ -56,7 +56,7 @@ class StudyCourse {
       '🇨🇳',
       'zh-CN',
       'assets/courses/manifest-zh.json',
-      6,
+      12,
     ),
   ];
   static StudyCourse byId(String? id) =>

@@ -1,0 +1,281 @@
+{
+  "id": "en-a1-30",
+  "title": "Выходные: действия в прошлом",
+  "topic": "Выходные: действия в прошлом",
+  "order": 29,
+  "objective": "Рассказать о двух завершённых действиях.",
+  "guide": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+  "vocabulary": [
+    {
+      "id": "en:v013:30:p0",
+      "en": "I visited my sister yesterday.",
+      "ru": "Вчера я навестил сестру."
+    },
+    {
+      "id": "en:v013:30:p1",
+      "en": "We watched a film last Sunday.",
+      "ru": "В прошлое воскресенье мы посмотрели фильм."
+    },
+    {
+      "id": "en:v013:30:p2",
+      "en": "I cooked dinner at home.",
+      "ru": "Я приготовил ужин дома."
+    },
+    {
+      "id": "en:v013:30:p3",
+      "en": "We walked in the park.",
+      "ru": "Мы погуляли в парке."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "I visited my sister yesterday.",
+      "translation": "Вчера я навестил сестру.",
+      "explanation": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "We watched a film last Sunday.",
+      "translation": "В прошлое воскресенье мы посмотрели фильм.",
+      "explanation": "We watched a film last Sunday. — В прошлое воскресенье мы посмотрели фильм."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "I cooked dinner at home.",
+      "translation": "Я приготовил ужин дома.",
+      "explanation": "I cooked dinner at home. — Я приготовил ужин дома."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "We walked in the park.",
+      "translation": "Мы погуляли в парке.",
+      "explanation": "We walked in the park. — Мы погуляли в парке.\nYesterday требует прошедшего времени: visited.\nВерно: Yesterday I visited my sister."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-30-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Я приготовил ужин дома."
+      ],
+      "explanation": "I cooked dinner at home. — Я приготовил ужин дома.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [
+        "en:v013:30:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "I cooked dinner at home.",
+      "options": [
+        "В прошлое воскресенье мы посмотрели фильм.",
+        "Мы погуляли в парке.",
+        "Я приготовил ужин дома."
+      ]
+    },
+    {
+      "id": "en-a1-30-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Вчера я навестил сестру. Выбери реплику.",
+      "answers": [
+        "I visited my sister yesterday."
+      ],
+      "explanation": "I visited my sister yesterday. — Вчера я навестил сестру.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [
+        "en:v013:30:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "I cooked dinner at home.",
+        "I visited my sister yesterday.",
+        "We watched a film last Sunday."
+      ]
+    },
+    {
+      "id": "en-a1-30-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [
+        "en:v013:30:p0",
+        "en:v013:30:p1",
+        "en:v013:30:p2",
+        "en:v013:30:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:30:p0",
+          "en": "I visited my sister yesterday.",
+          "ru": "Вчера я навестил сестру."
+        },
+        {
+          "id": "en:v013:30:p1",
+          "en": "We watched a film last Sunday.",
+          "ru": "В прошлое воскресенье мы посмотрели фильм."
+        },
+        {
+          "id": "en:v013:30:p2",
+          "en": "I cooked dinner at home.",
+          "ru": "Я приготовил ужин дома."
+        },
+        {
+          "id": "en:v013:30:p3",
+          "en": "We walked in the park.",
+          "ru": "Мы погуляли в парке."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-30-e05",
+      "type": "dialogue",
+      "prompt": "Что Мико сделал в прошлое воскресенье?",
+      "answers": [
+        "Посмотрел фильм"
+      ],
+      "explanation": "Орби: I visited my sister yesterday.\nМико: We watched a film last Sunday. We walked in the park.\nПосмотрел фильм",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [
+        "en:v013:30:p0",
+        "en:v013:30:p1",
+        "en:v013:30:p2",
+        "en:v013:30:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: I visited my sister yesterday.\nМико: We watched a film last Sunday. We walked in the park.",
+      "options": [
+        "Купил билет",
+        "Посмотрел фильм",
+        "Работал в офисе"
+      ]
+    },
+    {
+      "id": "en-a1-30-e03",
+      "type": "order",
+      "prompt": "Составь реплику: В прошлое воскресенье мы посмотрели фильм.",
+      "answers": [
+        "We watched a film last Sunday."
+      ],
+      "explanation": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [
+        "en:v013:30:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "We",
+        "watched",
+        "a",
+        "film",
+        "last",
+        "Sunday"
+      ]
+    },
+    {
+      "id": "en-a1-30-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Мы погуляли в парке.",
+      "answers": [
+        "We walked in the park."
+      ],
+      "explanation": "We walked in the park. — Мы погуляли в парке.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [
+        "en:v013:30:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "We walked in the park."
+    },
+    {
+      "id": "en-a1-30-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Yesterday I visit my sister.",
+      "answers": [
+        "Yesterday I visited my sister."
+      ],
+      "explanation": "Yesterday требует прошедшего времени: visited.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Yesterday I visit my sister.",
+        "Yesterday I visited my sister."
+      ]
+    },
+    {
+      "id": "en-a1-30-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «We watched a film last Sunday.»?",
+      "answers": [
+        "В прошлое воскресенье мы посмотрели фильм."
+      ],
+      "explanation": "We watched a film last Sunday. — В прошлое воскресенье мы посмотрели фильм.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [
+        "en:v013:30:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Вчера я навестил сестру.",
+        "В прошлое воскресенье мы посмотрели фильм.",
+        "Мы погуляли в парке."
+      ]
+    },
+    {
+      "id": "en-a1-30-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Вчера я навестил сестру.",
+      "answers": [
+        "I visited my sister yesterday."
+      ],
+      "explanation": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [
+        "en:v013:30:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "I visited my sister yesterday.",
+        "meaning": "Вчера я навестил сестру."
+      }
+    },
+    {
+      "id": "en-a1-30-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Мы были на станции.",
+      "answers": [
+        "We were at the station."
+      ],
+      "explanation": "Ты уже встречал эту реплику: We were at the station. — Мы были на станции.",
+      "hint": "У правильных глаголов в Past Simple появляется -ed: visit → visited, watch → watched. Yesterday и last Sunday показывают завершённое время. Окончание у visited звучит /ɪd/, у watched — /t/. Формы одинаковы для I и we.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I was at home yesterday.",
+        "We were at the station.",
+        "Were you at work?",
+        "No, I wasn't at work."
+      ]
+    }
+  ]
+}

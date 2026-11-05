@@ -7,6 +7,7 @@ comprehension distractors and an explained correction.
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,6 +39,9 @@ def build(lang, rows):
         assert 2 <= len(row['dialogue'].splitlines()) <= 4
         assert len(set(row['comprehension'])) == 3
         assert len(row['repair']) == 3 and row['repair'][0] != row['repair'][1]
+        def normalized(value):
+            return re.sub(r'[\s.,!?¿¡。！？，、]', '', value.lower().replace('’', "'"))
+        assert normalized(' '.join(row['tokens'])) == normalized(phrases[1][0]), lid
         vocab = [dict(id=f'{lang}:v013:{number}:p{i}', en=p[0], ru=p[1],
                       **({'pronunciation': p[2]} if lang == 'zh' else {}))
                  for i, p in enumerate(phrases)]
@@ -50,12 +54,16 @@ def build(lang, rows):
                       **({'pronunciation': p[2]} if lang == 'zh' else {}))
                  for i, p in enumerate(phrases)]
         # Explain the correction rule before asking the learner to apply it.
-        steps[-1]['explanation'] += '\n' + row['repair'][2]
+        steps[-1]['explanation'] += '\n' + row['repair'][2] + '\nВерно: ' + row['repair'][1]
         exercises = []
 
         def ex(kind, prompt, answer, explanation, indices=(), **kw):
+            answers = [answer]
+            if lang == 'zh' and kind in ('translate', 'speak'):
+                answers.append(kw['pronunciation'])
+                prompt += ' Можно ввести иероглифы или пиньинь с тонами.'
             exercises.append(dict(id=f'{lid}-e{len(exercises)+1:02}', type=kind,
-                prompt=prompt, answers=[answer], explanation=explanation,
+                prompt=prompt, answers=answers, explanation=explanation,
                 hint=row['guide'], wordIds=[vocab[i]['id'] for i in indices],
                 character=['orbi', 'miko', 'zig_quartz'][len(exercises) % 3],
                 phase='Новая ситуация' if len(exercises) < 4 else 'Применяем в разговоре', **kw))
@@ -73,16 +81,34 @@ def build(lang, rows):
         ex('dialogue', row['question'], row['comprehension'][0],
            row['dialogue'] + '\n' + row['comprehension'][0],
            range(4), scene=row['dialogue'],
+           **({'scenePronunciation':row['scenePronunciation']} if lang=='zh' else {}),
            options=[row['comprehension'][1], row['comprehension'][0], row['comprehension'][2]])
         ex('correct', f'Исправь одну ошибку: {row["repair"][0]}', row['repair'][1],
            row['repair'][2], options=[row['repair'][0], row['repair'][1]])
         ex('speak', f'Произнеси реплику или введи её текстом: {d[1]}', d[0],
            f'{d[0]} — {d[1]}', [3], audio=d[0], **pron(d))
-        ex('translate', f'Вспомни без вариантов: {a[1]}', a[0], row['guide'], [0], **pron(a))
+        ex('translate', f'Вспомни без вариантов: {a[1]}', a[0], row['guide'], [0],
+           recall=dict(phrase=a[0], meaning=a[1]), **pron(a))
         ex('choice', f'Что означает реплика «{b[0]}»?', b[1], f'{b[0]} — {b[1]}',
            [1], options=[a[1], b[1], d[1]], **pron(b))
-        ex('review', f'Заверши тренировку: {d[1]}', d[0],
-           'Теперь ты умеешь: ' + row['goal'], [3], options=[a[0], c[0], d[0]], **pron(d))
+        if offset:
+            old = rows[offset-1]['phrases']
+        else:
+            previous_id = f'{lang}-a1-{start:02}'
+            previous = read(ROOT / f'assets/courses/{previous_id}.json')
+            old = [(s['phrase'], s['translation']) for s in previous['teachingSteps']]
+        remembered = old[offset % len(old)]
+        ex('review', f'Мостик к прошлой теме: {remembered[1]}', remembered[0],
+           f'Ты уже встречал эту реплику: {remembered[0]} — {remembered[1]}',
+           options=list(dict.fromkeys(p[0] for p in old)))
+        # Different conversational arcs retain stable exercise IDs; a lesson's
+        # semantic material and correction are individually authored above.
+        sequences = [
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+            [1, 0, 3, 4, 2, 6, 5, 8, 7, 9],
+            [4, 0, 2, 1, 5, 3, 7, 6, 8, 9],
+        ]
+        exercises = [exercises[i] for i in sequences[offset % 3]]
         result.append(dict(id=lid, title=row['title'], topic=row['title'],
             order=number-1, objective=row['goal'], guide=row['guide'],
             vocabulary=vocab, teachingSteps=steps, exercises=exercises))

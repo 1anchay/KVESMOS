@@ -1,0 +1,282 @@
+{
+  "id": "es-a1-08",
+  "title": "Расположение предметов",
+  "topic": "Расположение предметов",
+  "order": 7,
+  "objective": "Объяснить, где находится предмет.",
+  "guide": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+  "vocabulary": [
+    {
+      "id": "es:v013:8:p0",
+      "en": "El libro está encima de la mesa.",
+      "ru": "Книга на столе."
+    },
+    {
+      "id": "es:v013:8:p1",
+      "en": "La mochila está debajo de la silla.",
+      "ru": "Рюкзак под стулом."
+    },
+    {
+      "id": "es:v013:8:p2",
+      "en": "La silla está al lado del escritorio.",
+      "ru": "Стул рядом с письменным столом."
+    },
+    {
+      "id": "es:v013:8:p3",
+      "en": "¿Dónde está mi libro?",
+      "ru": "Где моя книга?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "El libro está encima de la mesa.",
+      "translation": "Книга на столе.",
+      "explanation": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "La mochila está debajo de la silla.",
+      "translation": "Рюкзак под стулом.",
+      "explanation": "La mochila está debajo de la silla. — Рюкзак под стулом."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "La silla está al lado del escritorio.",
+      "translation": "Стул рядом с письменным столом.",
+      "explanation": "La silla está al lado del escritorio. — Стул рядом с письменным столом."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "¿Dónde está mi libro?",
+      "translation": "Где моя книга?",
+      "explanation": "¿Dónde está mi libro? — Где моя книга?\nDe + el превращаются в del.\nВерно: La silla está al lado del escritorio."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-08-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Стул рядом с письменным столом."
+      ],
+      "explanation": "La silla está al lado del escritorio. — Стул рядом с письменным столом.",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [
+        "es:v013:8:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "La silla está al lado del escritorio.",
+      "options": [
+        "Рюкзак под стулом.",
+        "Где моя книга?",
+        "Стул рядом с письменным столом."
+      ]
+    },
+    {
+      "id": "es-a1-08-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Книга на столе. Выбери реплику.",
+      "answers": [
+        "El libro está encima de la mesa."
+      ],
+      "explanation": "El libro está encima de la mesa. — Книга на столе.",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [
+        "es:v013:8:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "La silla está al lado del escritorio.",
+        "El libro está encima de la mesa.",
+        "La mochila está debajo de la silla."
+      ]
+    },
+    {
+      "id": "es-a1-08-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [
+        "es:v013:8:p0",
+        "es:v013:8:p1",
+        "es:v013:8:p2",
+        "es:v013:8:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:8:p0",
+          "en": "El libro está encima de la mesa.",
+          "ru": "Книга на столе."
+        },
+        {
+          "id": "es:v013:8:p1",
+          "en": "La mochila está debajo de la silla.",
+          "ru": "Рюкзак под стулом."
+        },
+        {
+          "id": "es:v013:8:p2",
+          "en": "La silla está al lado del escritorio.",
+          "ru": "Стул рядом с письменным столом."
+        },
+        {
+          "id": "es:v013:8:p3",
+          "en": "¿Dónde está mi libro?",
+          "ru": "Где моя книга?"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-08-e05",
+      "type": "dialogue",
+      "prompt": "Где книга Мико?",
+      "answers": [
+        "На столе"
+      ],
+      "explanation": "Мико: ¿Dónde está mi libro?\nОрби: El libro está encima de la mesa.\nНа столе",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [
+        "es:v013:8:p0",
+        "es:v013:8:p1",
+        "es:v013:8:p2",
+        "es:v013:8:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: ¿Dónde está mi libro?\nОрби: El libro está encima de la mesa.",
+      "options": [
+        "Под стулом",
+        "На столе",
+        "В рюкзаке"
+      ]
+    },
+    {
+      "id": "es-a1-08-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Рюкзак под стулом.",
+      "answers": [
+        "La mochila está debajo de la silla."
+      ],
+      "explanation": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [
+        "es:v013:8:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "La",
+        "mochila",
+        "está",
+        "debajo",
+        "de",
+        "la",
+        "silla"
+      ]
+    },
+    {
+      "id": "es-a1-08-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Где моя книга?",
+      "answers": [
+        "¿Dónde está mi libro?"
+      ],
+      "explanation": "¿Dónde está mi libro? — Где моя книга?",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [
+        "es:v013:8:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "¿Dónde está mi libro?"
+    },
+    {
+      "id": "es-a1-08-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: La silla está al lado de el escritorio.",
+      "answers": [
+        "La silla está al lado del escritorio."
+      ],
+      "explanation": "De + el превращаются в del.",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "La silla está al lado de el escritorio.",
+        "La silla está al lado del escritorio."
+      ]
+    },
+    {
+      "id": "es-a1-08-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «La mochila está debajo de la silla.»?",
+      "answers": [
+        "Рюкзак под стулом."
+      ],
+      "explanation": "La mochila está debajo de la silla. — Рюкзак под стулом.",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [
+        "es:v013:8:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Книга на столе.",
+        "Рюкзак под стулом.",
+        "Где моя книга?"
+      ]
+    },
+    {
+      "id": "es-a1-08-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Книга на столе.",
+      "answers": [
+        "El libro está encima de la mesa."
+      ],
+      "explanation": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [
+        "es:v013:8:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "El libro está encima de la mesa.",
+        "meaning": "Книга на столе."
+      }
+    },
+    {
+      "id": "es-a1-08-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я дома.",
+      "answers": [
+        "Estoy en casa."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Estoy en casa. — Я дома.",
+      "hint": "El libro — книга, la mesa — стол, la silla — стул. Está — находится (один предмет). Encima de — на/сверху, debajo de — под, al lado de — рядом. De + el объединяются в del. С la сокращения нет.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Soy profesora.",
+        "Estoy en casa.",
+        "¿Dónde estás?",
+        "Estoy cansada."
+      ]
+    }
+  ]
+}

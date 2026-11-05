@@ -1,0 +1,278 @@
+{
+  "id": "es-a1-07",
+  "title": "Ser y estar · кто и где",
+  "topic": "Ser y estar · кто и где",
+  "order": 6,
+  "objective": "Назвать профессию и местонахождение.",
+  "guide": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+  "vocabulary": [
+    {
+      "id": "es:v013:7:p0",
+      "en": "Soy profesora.",
+      "ru": "Я учительница."
+    },
+    {
+      "id": "es:v013:7:p1",
+      "en": "Estoy en casa.",
+      "ru": "Я дома."
+    },
+    {
+      "id": "es:v013:7:p2",
+      "en": "¿Dónde estás?",
+      "ru": "Где ты?"
+    },
+    {
+      "id": "es:v013:7:p3",
+      "en": "Estoy cansada.",
+      "ru": "Я устала."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Soy profesora.",
+      "translation": "Я учительница.",
+      "explanation": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Estoy en casa.",
+      "translation": "Я дома.",
+      "explanation": "Estoy en casa. — Я дома."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "¿Dónde estás?",
+      "translation": "Где ты?",
+      "explanation": "¿Dónde estás? — Где ты?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Estoy cansada.",
+      "translation": "Я устала.",
+      "explanation": "Estoy cansada. — Я устала.\nДля местонахождения человека используем estar: estoy en casa.\nВерно: Estoy en casa."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-07-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я учительница. Выбери реплику.",
+      "answers": [
+        "Soy profesora."
+      ],
+      "explanation": "Soy profesora. — Я учительница.",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [
+        "es:v013:7:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "¿Dónde estás?",
+        "Soy profesora.",
+        "Estoy en casa."
+      ]
+    },
+    {
+      "id": "es-a1-07-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Где ты?"
+      ],
+      "explanation": "¿Dónde estás? — Где ты?",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [
+        "es:v013:7:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "¿Dónde estás?",
+      "options": [
+        "Я дома.",
+        "Я устала.",
+        "Где ты?"
+      ]
+    },
+    {
+      "id": "es-a1-07-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я дома.",
+      "answers": [
+        "Estoy en casa."
+      ],
+      "explanation": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [
+        "es:v013:7:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Estoy",
+        "en",
+        "casa"
+      ]
+    },
+    {
+      "id": "es-a1-07-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [
+        "es:v013:7:p0",
+        "es:v013:7:p1",
+        "es:v013:7:p2",
+        "es:v013:7:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:7:p0",
+          "en": "Soy profesora.",
+          "ru": "Я учительница."
+        },
+        {
+          "id": "es:v013:7:p1",
+          "en": "Estoy en casa.",
+          "ru": "Я дома."
+        },
+        {
+          "id": "es:v013:7:p2",
+          "en": "¿Dónde estás?",
+          "ru": "Где ты?"
+        },
+        {
+          "id": "es:v013:7:p3",
+          "en": "Estoy cansada.",
+          "ru": "Я устала."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-07-e05",
+      "type": "dialogue",
+      "prompt": "Где Анна?",
+      "answers": [
+        "Дома"
+      ],
+      "explanation": "Орби: ¿Dónde estás?\nАнна: Estoy en casa. Estoy cansada.\nДома",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [
+        "es:v013:7:p0",
+        "es:v013:7:p1",
+        "es:v013:7:p2",
+        "es:v013:7:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: ¿Dónde estás?\nАнна: Estoy en casa. Estoy cansada.",
+      "options": [
+        "В школе",
+        "Дома",
+        "В кафе"
+      ]
+    },
+    {
+      "id": "es-a1-07-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Soy en casa.",
+      "answers": [
+        "Estoy en casa."
+      ],
+      "explanation": "Для местонахождения человека используем estar: estoy en casa.",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Soy en casa.",
+        "Estoy en casa."
+      ]
+    },
+    {
+      "id": "es-a1-07-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я устала.",
+      "answers": [
+        "Estoy cansada."
+      ],
+      "explanation": "Estoy cansada. — Я устала.",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [
+        "es:v013:7:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Estoy cansada."
+    },
+    {
+      "id": "es-a1-07-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я учительница.",
+      "answers": [
+        "Soy profesora."
+      ],
+      "explanation": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [
+        "es:v013:7:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Soy profesora.",
+        "meaning": "Я учительница."
+      }
+    },
+    {
+      "id": "es-a1-07-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Estoy en casa.»?",
+      "answers": [
+        "Я дома."
+      ],
+      "explanation": "Estoy en casa. — Я дома.",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [
+        "es:v013:7:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я учительница.",
+        "Я дома.",
+        "Я устала."
+      ]
+    },
+    {
+      "id": "es-a1-07-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я хотел бы кофе, пожалуйста.",
+      "answers": [
+        "Quisiera un café, por favor."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Quisiera un café, por favor. — Я хотел бы кофе, пожалуйста.",
+      "hint": "Ser описывает, кто человек: soy profesor — я учитель. Estar здесь указывает место или состояние: estoy en casa — я дома. Soy/eres — формы ser, estoy/estás — формы estar. Профессию обычно называем без un/una.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Quisiera un café, por favor.",
+        "Una sopa, por favor.",
+        "Agua, por favor.",
+        "La cuenta, por favor."
+      ]
+    }
+  ]
+}

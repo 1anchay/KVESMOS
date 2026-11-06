@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-21",
+  "title": "Что нравится друзьям",
+  "topic": "Что нравится друзьям",
+  "order": 20,
+  "objective": "Сказать, какие занятия и вещи нравятся.",
+  "guide": "Me gusta + одно существительное или действие; me gustan + несколько предметов.",
+  "vocabulary": [
+    {
+      "id": "es:v014:21:p0",
+      "en": "Me gusta cocinar.",
+      "ru": "Мне нравится готовить."
+    },
+    {
+      "id": "es:v014:21:p1",
+      "en": "Me gustan las películas españolas.",
+      "ru": "Мне нравятся испанские фильмы."
+    },
+    {
+      "id": "es:v014:21:p2",
+      "en": "¿Te gusta esta canción?",
+      "ru": "Тебе нравится эта песня?"
+    },
+    {
+      "id": "es:v014:21:p3",
+      "en": "A mi hermana le gusta bailar.",
+      "ru": "Моей сестре нравится танцевать."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Что нравится друзьям",
+      "phrase": "Me gusta cocinar.",
+      "translation": "Мне нравится готовить.",
+      "explanation": "Me gusta + одно существительное или действие; me gustan + несколько предметов."
+    },
+    {
+      "character": "miko",
+      "title": "Что нравится друзьям",
+      "phrase": "Me gustan las películas españolas.",
+      "translation": "Мне нравятся испанские фильмы.",
+      "explanation": "Me gustan las películas españolas. — Мне нравятся испанские фильмы."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что нравится друзьям",
+      "phrase": "¿Te gusta esta canción?",
+      "translation": "Тебе нравится эта песня?",
+      "explanation": "¿Te gusta esta canción? — Тебе нравится эта песня?"
+    },
+    {
+      "character": "orbi",
+      "title": "Что нравится друзьям",
+      "phrase": "A mi hermana le gusta bailar.",
+      "translation": "Моей сестре нравится танцевать.",
+      "explanation": "A mi hermana le gusta bailar. — Моей сестре нравится танцевать."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Me gusta cocinar.",
+      "translation": "Мне нравится готовить.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мне нравится готовить.",
+      "options": [
+        "Тебе нравится эта песня?",
+        "Мне нравится готовить.",
+        "Моей сестре нравится танцевать."
+      ],
+      "explanation": "Me gusta + одно существительное или действие; me gustan + несколько предметов."
+    },
+    {
+      "id": "apply",
+      "phrase": "Me gustan las películas españolas.",
+      "translation": "Мне нравятся испанские фильмы.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Me gustan las películas españolas.",
+      "tokens": [
+        "Me",
+        "gustan",
+        "las",
+        "películas",
+        "españolas."
+      ],
+      "character": "miko",
+      "explanation": "Me gustan las películas españolas. — Мне нравятся испанские фильмы."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-21-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Мне нравится готовить.»?",
+      "answers": [
+        "Me gusta cocinar."
+      ],
+      "explanation": "Me gusta cocinar. — Мне нравится готовить.",
+      "wordIds": [
+        "es:v014:21:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Me gustan las películas españolas.",
+        "A mi hermana le gusta bailar.",
+        "Me gusta cocinar."
+      ],
+      "hint": "Me gusta cocinar. — Мне нравится готовить."
+    },
+    {
+      "id": "es-a1-21-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мне нравятся испанские фильмы.",
+      "answers": [
+        "Me gustan las películas españolas."
+      ],
+      "explanation": "Me gusta + одно существительное или действие; me gustan + несколько предметов.",
+      "wordIds": [
+        "es:v014:21:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Me",
+        "gustan",
+        "las",
+        "películas",
+        "españolas."
+      ],
+      "hint": "Me gustan las películas españolas. — Мне нравятся испанские фильмы."
+    },
+    {
+      "id": "es-a1-21-e03",
+      "type": "dialogue",
+      "prompt": "Кому нравится танцевать?",
+      "answers": [
+        "Сестре."
+      ],
+      "explanation": "Сестре. Сказать, какие занятия и вещи нравятся.",
+      "wordIds": [
+        "es:v014:21:p0",
+        "es:v014:21:p1",
+        "es:v014:21:p2",
+        "es:v014:21:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Te gusta bailar?\nМико: A mí me gusta cocinar, pero a mi hermana le gusta bailar.",
+      "options": [
+        "Обоим одинаково.",
+        "Никому.",
+        "Сестре."
+      ]
+    },
+    {
+      "id": "es-a1-21-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Тебе нравится эта песня?"
+      ],
+      "explanation": "¿Te gusta esta canción? — Тебе нравится эта песня?",
+      "wordIds": [
+        "es:v014:21:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Te gusta esta canción?",
+      "options": [
+        "Мне нравится готовить.",
+        "Тебе нравится эта песня?",
+        "Мне нравятся испанские фильмы."
+      ],
+      "hint": "¿Te gusta esta canción? — Тебе нравится эта песня?"
+    },
+    {
+      "id": "es-a1-21-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v014:21:p0",
+        "es:v014:21:p1",
+        "es:v014:21:p2",
+        "es:v014:21:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v014:21:p0",
+          "en": "Me gusta cocinar.",
+          "ru": "Мне нравится готовить."
+        },
+        {
+          "id": "es:v014:21:p1",
+          "en": "Me gustan las películas españolas.",
+          "ru": "Мне нравятся испанские фильмы."
+        },
+        {
+          "id": "es:v014:21:p2",
+          "en": "¿Te gusta esta canción?",
+          "ru": "Тебе нравится эта песня?"
+        },
+        {
+          "id": "es:v014:21:p3",
+          "en": "A mi hermana le gusta bailar.",
+          "ru": "Моей сестре нравится танцевать."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-21-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Me gusta las películas españolas.",
+      "answers": [
+        "Me gustan las películas españolas."
+      ],
+      "explanation": "Las películas — множественное число: gustan.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Me gusta las películas españolas.",
+        "Me gustan las películas españolas."
+      ],
+      "hint": "Me gusta + одно существительное или действие; me gustan + несколько предметов."
+    },
+    {
+      "id": "es-a1-21-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Моей сестре нравится танцевать.». Можно написать вместо микрофона.",
+      "answers": [
+        "A mi hermana le gusta bailar."
+      ],
+      "explanation": "A mi hermana le gusta bailar. — Моей сестре нравится танцевать.",
+      "wordIds": [
+        "es:v014:21:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "A mi hermana le gusta bailar.",
+      "recall": {
+        "phrase": "A mi hermana le gusta bailar.",
+        "meaning": "Моей сестре нравится танцевать."
+      }
+    },
+    {
+      "id": "es-a1-21-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мне нравится готовить.",
+      "answers": [
+        "Me gusta cocinar."
+      ],
+      "explanation": "Me gusta + одно существительное или действие; me gustan + несколько предметов.",
+      "wordIds": [
+        "es:v014:21:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Me gusta cocinar.",
+        "meaning": "Мне нравится готовить."
+      }
+    },
+    {
+      "id": "es-a1-21-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я никогда не пью кофе вечером.",
+      "answers": [
+        "Nunca tomo café por la noche."
+      ],
+      "explanation": "Nunca tomo café por la noche. — Я никогда не пью кофе вечером.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Camino todos los días.",
+        "A veces trabajo en casa.",
+        "Nunca tomo café por la noche.",
+        "Los domingos descanso."
+      ]
+    }
+  ]
+}

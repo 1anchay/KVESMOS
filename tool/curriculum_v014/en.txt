@@ -1,0 +1,183 @@
+# Each block: title|goal|rule; four phrase~meaning[~pinyin] lines;
+# dialogue (two target-language lines separated by /); question|correct|distractor|distractor;
+# incorrect~correct~short explanation. Original editorial sources.
+##
+Вчера после работы|Рассказать, как прошёл вечер после работы.|После did not глагол остаётся в начальной форме: did not cook.
+I finished work at six.~Я закончил работу в шесть.
+I cooked dinner at home.~Я приготовил ужин дома.
+I did not watch TV.~Я не смотрел телевизор.
+Then I called my sister.~Потом я позвонил сестре.
+Did you cook dinner? / Yes, I cooked dinner at home.
+Где приготовили ужин?|Дома.|На работе.|У сестры.
+I did not watched TV.~I did not watch TV.~Прошедшее время уже выражено did: после него нужно watch.
+##
+Где были ключи|Описать местонахождение нескольких вещей в прошлом.|Для нескольких предметов в прошлом используем were; для одного — was.
+My keys were on the table.~Мои ключи были на столе.
+The door was open.~Дверь была открыта.
+Were your glasses in the bag?~Твои очки были в сумке?
+No, they were next to the phone.~Нет, они были рядом с телефоном.
+Were your glasses in the bag? / No, they were next to the phone.
+Где были очки?|Рядом с телефоном.|В сумке.|На двери.
+My keys was on the table.~My keys were on the table.~Keys — множественное число: нужны were, а не was.
+##
+Как прошёл выходной|Спросить о завершённой поездке и её длительности.|В вопросе о прошлом did ставится перед человеком, а основной глагол не меняется.
+Did you visit the museum?~Ты посетил музей?
+We stayed there for two hours.~Мы пробыли там два часа.
+What did you see?~Что ты увидел?
+I saw some old maps.~Я увидел несколько старых карт.
+What did you see at the museum? / I saw some old maps.
+Что увидел собеседник?|Старые карты.|Новые поезда.|Два музея.
+What did you saw?~What did you see?~После did используем see; saw употребляется в утвердительном предложении.
+##
+Небольшая история|Передать последовательность трёх событий.|First начинает последовательность, then продолжает, finally обозначает последнее событие.
+First, we missed the bus.~Сначала мы опоздали на автобус.
+Then we walked to the station.~Потом мы пошли пешком на станцию.
+Finally, we took a train.~Наконец мы сели на поезд.
+We arrived before lunch.~Мы приехали до обеда.
+Did you take a bus? / No, we missed it. Then we took a train.
+На чём в итоге поехали?|На поезде.|На автобусе.|На велосипеде.
+We taked a train.~We took a train.~Прошедшая форма take — took.
+##
+Помогу с коробками|Пообещать помощь в момент разговора.|Will с начальной формой глагола подходит для обещания или решения, принятого сейчас.
+I will carry this box.~Я понесу эту коробку.
+Will you open the door?~Ты откроешь дверь?
+I will be careful.~Я буду осторожен.
+We will finish soon.~Мы скоро закончим.
+This box is heavy. / I will carry it. Will you open the door?
+Какую помощь предложили?|Понести коробку.|Купить дверь.|Закончить завтра.
+I will carries this box.~I will carry this box.~После will нужна начальная форма carry независимо от лица.
+##
+Запись в календаре|Понять заранее согласованную встречу.|Am/is/are + глагол с -ing может обозначать уже согласованное ближайшее событие.
+I am meeting Alex tomorrow.~Я встречаюсь с Алексом завтра.
+We are having lunch at one.~Мы обедаем в час.
+Are you coming with us?~Ты идёшь с нами?
+I am working that afternoon.~Я работаю в тот день после обеда.
+Are you coming to lunch at one? / Yes, I am meeting you outside the office.
+Где договорились встретиться?|У офиса.|Внутри поезда.|Дома вечером.
+We is having lunch at one.~We are having lunch at one.~С we используем are.
+##
+План на случай дождя|Предложить простой план с условием.|После if в реальном условии о будущем используем настоящее время: if it rains.
+If it rains, we will stay home.~Если пойдёт дождь, мы останемся дома.
+We can watch a film.~Мы можем посмотреть фильм.
+If it is sunny, we will go out.~Если будет солнечно, мы пойдём гулять.
+I will check the weather.~Я проверю погоду.
+What will we do if it rains? / We will stay home and watch a film.
+Какой план на дождь?|Остаться дома и посмотреть фильм.|Гулять под дождём.|Пойти на работу.
+If it will rain, we will stay home.~If it rains, we will stay home.~После if здесь нужно настоящее rains; will остаётся в результате.
+##
+Перенос встречи|Объяснить изменение плана и предложить замену.|Cannot объясняет невозможность; instead предлагает замену.
+I cannot come on Friday.~Я не могу прийти в пятницу.
+Can we meet on Saturday instead?~Можем мы вместо этого встретиться в субботу?
+Saturday morning works for me.~Субботнее утро мне подходит.
+I will send you the address.~Я пришлю тебе адрес.
+Can we meet on Saturday instead? / Yes, Saturday morning works for me.
+Когда теперь встреча?|В субботу утром.|В пятницу вечером.|В воскресенье утром.
+Can we to meet on Saturday?~Can we meet on Saturday?~После can используем meet без to.
+##
+Уточнить подробности|Вежливо запросить информацию о занятии.|Could you tell me вводит вежливую просьбу; во вложенном where the room is порядок слов прямой.
+Could you tell me where the room is?~Не могли бы вы сказать, где комната?
+What time does the class start?~Во сколько начинается занятие?
+Do I need to bring a notebook?~Мне нужно принести тетрадь?
+The class starts at half past nine.~Занятие начинается в половине десятого.
+What time does the class start? / At half past nine. Please bring a notebook.
+Что нужно принести?|Тетрадь.|Билет.|Чашку.
+What time does the class starts?~What time does the class start?~После does у основного глагола нет окончания -s.
+##
+Дела по дому|Рассказать о необходимых домашних делах.|Have to обозначает необходимость; для he/she используем has to.
+I have to clean the kitchen.~Мне нужно убрать кухню.
+She has to wash the dishes.~Ей нужно помыть посуду.
+Do we have to do it today?~Нам нужно сделать это сегодня?
+We do not have to hurry.~Нам не нужно спешить.
+Do we have to clean the kitchen today? / Yes, but we do not have to hurry.
+Нужно ли торопиться?|Нет, торопиться не нужно.|Да, нужно очень спешить.|Убирать вообще не нужно.
+She have to wash the dishes.~She has to wash the dishes.~С she употребляем has to.
+##
+Правила библиотеки|Различать запрет и отсутствие необходимости.|Must not — запрет, do not have to — отсутствие необходимости.
+You must not eat here.~Здесь нельзя есть.
+You can use this computer.~Можно пользоваться этим компьютером.
+You do not have to book a seat.~Не нужно бронировать место.
+Please keep your phone silent.~Пожалуйста, выключите звук телефона.
+Do I have to book a seat? / No, but you must not eat in the library.
+Что запрещено?|Есть в библиотеке.|Занимать место.|Пользоваться компьютером.
+You must not to eat here.~You must not eat here.~После must not глагол стоит без to.
+##
+Инструкция к встрече|Понять короткую инструкцию из нескольких действий.|Повелительное предложение начинается с глагола; отрицательная инструкция — do not + глагол.
+Open the link in the message.~Открой ссылку в сообщении.
+Enter your name first.~Сначала введи своё имя.
+Do not close the window.~Не закрывай окно.
+Click the blue button to join.~Нажми синюю кнопку, чтобы присоединиться.
+How do I join? / Enter your name, then click the blue button.
+Что сделать сначала?|Ввести имя.|Закрыть окно.|Изменить цвет кнопки.
+Do not closes the window.~Do not close the window.~После do not используется close без окончания.
+##
+Выбрать подходящий маршрут|Сравнить маршруты по времени и удобству.|Для длинного прилагательного сравнение строится с more: more comfortable.
+The train is faster than the bus.~Поезд быстрее автобуса.
+This route is more comfortable.~Этот маршрут удобнее.
+The bus is less expensive.~Автобус дешевле.
+Which option is better for you?~Какой вариант лучше для тебя?
+The train is faster, but the bus is less expensive. / Let us take the bus and save money.
+Почему выбрали автобус?|Чтобы сэкономить.|Он быстрее поезда.|Он единственный маршрут.
+This route is comfortabler.~This route is more comfortable.~Comfortable образует сравнение с more.
+##
+Список для пикника|Различать количество исчисляемых продуктов и напитков.|How many — для счётных предметов; how much — для количества воды, еды как вещества.
+How many sandwiches do we need?~Сколько бутербродов нам нужно?
+We need a little water.~Нам нужно немного воды.
+There are a few apples in the bag.~В сумке есть несколько яблок.
+We do not have much juice.~У нас немного сока.
+How many sandwiches do we need? / Six. We also need a little water.
+Сколько нужно бутербродов?|Шесть.|Немного воды.|Ни одного.
+How much sandwiches do we need?~How many sandwiches do we need?~Sandwiches можно посчитать: спрашиваем how many.
+##
+Хватит ли времени|Сказать, достаточно ли времени и подходит ли размер.|Enough ставится перед существительным, но после прилагательного.
+We have enough time.~У нас достаточно времени.
+This bag is big enough.~Эта сумка достаточно большая.
+The box is too heavy.~Коробка слишком тяжёлая.
+Let us carry it together.~Давай понесём её вместе.
+Is this bag big enough? / Yes, but the box is too heavy for one person.
+В чём проблема коробки?|Она слишком тяжёлая.|Она слишком маленькая.|Её не хватает.
+This bag is enough big.~This bag is big enough.~После прилагательного порядок big enough.
+##
+Выбрать занятие|Сравнить предпочтения и договориться о досуге.|Prefer A to B обозначает предпочтение одного варианта другому.
+I prefer walking to running.~Я предпочитаю ходьбу бегу.
+Would you like to try painting?~Ты хочешь попробовать рисование?
+I would rather stay outside.~Я лучше останусь на улице.
+Let us take some photos.~Давай сделаем несколько фотографий.
+Would you like to try painting indoors? / I would rather stay outside and take photos.
+Что предпочитает собеседник?|Фотографировать на улице.|Рисовать в помещении.|Бегать в зале.
+I prefer walking than running.~I prefer walking to running.~С prefer сравнение связывает to, а не than.
+##
+Сообщение от соседа|Выделить просьбу и срок в коротком сообщении.|Before задаёт крайний момент: before six — до шести.
+Could you collect my parcel?~Не мог бы ты забрать мою посылку?
+The shop closes at six.~Магазин закрывается в шесть.
+Please go there before six.~Пожалуйста, сходи туда до шести.
+I will leave the code on the table.~Я оставлю код на столе.
+Could you collect my parcel before six? / Sure. Where is the code?
+До какого времени нужно забрать посылку?|До шести.|После шести.|В любое время ночью.
+The shop close at six.~The shop closes at six.~The shop — единственное число: closes.
+##
+Объяснить опоздание|Связать событие и его причину.|Because вводит причину, so — результат.
+I am late because the bus broke down.~Я опоздал, потому что автобус сломался.
+I took a taxi, so I am almost there.~Я взял такси, так что я почти на месте.
+Could you wait ten minutes?~Не мог бы ты подождать десять минут?
+Thank you for waiting.~Спасибо за ожидание.
+Why are you late? / The bus broke down, so I took a taxi.
+Почему человек опоздал?|Автобус сломался.|Он ждал посылку.|Такси приехало рано.
+Thank you for wait.~Thank you for waiting.~После for в этой конструкции используем waiting.
+##
+Бюро находок|Описать потерянную вещь и последнюю встречу с ней.|Lost — прошедшая форма lose; last saw уточняет, где вещь видели в последний раз.
+I lost my blue backpack.~Я потерял свой синий рюкзак.
+I last saw it on the train.~В последний раз я видел его в поезде.
+There is a notebook inside.~Внутри есть тетрадь.
+Can you call me if you find it?~Можете позвонить мне, если найдёте его?
+What does your backpack look like? / It is blue, and there is a notebook inside.
+Как узнать рюкзак?|Он синий, внутри тетрадь.|Он красный, внутри телефон.|Он чёрный и пустой.
+I lose my backpack yesterday.~I lost my backpack yesterday.~Yesterday указывает на прошлое: lost.
+##
+Общий план команды|Распределить задачи, срок и следующий контакт.|Will обозначает обещанную задачу; by Friday — не позже пятницы.
+I will write the short message.~Я напишу короткое сообщение.
+Can you check the details?~Можешь проверить подробности?
+We need to finish by Friday.~Нам нужно закончить к пятнице.
+Let us talk again tomorrow.~Давай снова поговорим завтра.
+I will write the message. Can you check the details? / Yes, we will finish by Friday.
+Кому досталась проверка?|Второму собеседнику.|Никому.|Только автору сообщения.
+We need finish by Friday.~We need to finish by Friday.~После need перед глаголом здесь требуется to.

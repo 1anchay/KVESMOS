@@ -111,6 +111,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fr-v014",
+      "title": "Разговоры на каждый день",
+      "themes": [
+        {
+          "id": "fr-v014-unit-1",
+          "title": "Планы на завтра",
+          "lessons": [
+            {
+              "id": "fr-a1-13",
+              "title": "Планы на завтра",
+              "asset": "assets/courses/fr-a1-13.json",
+              "order": 12
+            },
+            {
+              "id": "fr-a1-14",
+              "title": "Не сегодня",
+              "asset": "assets/courses/fr-a1-14.json",
+              "order": 13
+            }
+          ]
+        },
+        {
+          "id": "fr-v014-unit-2",
+          "title": "Продукты для завтрака",
+          "lessons": [
+            {
+              "id": "fr-a1-15",
+              "title": "Продукты для завтрака",
+              "asset": "assets/courses/fr-a1-15.json",
+              "order": 14
+            },
+            {
+              "id": "fr-a1-16",
+              "title": "Обычное утро",
+              "asset": "assets/courses/fr-a1-16.json",
+              "order": 15
+            }
+          ]
+        },
+        {
+          "id": "fr-v014-unit-3",
+          "title": "Уточнить время",
+          "lessons": [
+            {
+              "id": "fr-a1-17",
+              "title": "Уточнить время",
+              "asset": "assets/courses/fr-a1-17.json",
+              "order": 16
+            },
+            {
+              "id": "fr-a1-18",
+              "title": "Можно попросить",
+              "asset": "assets/courses/fr-a1-18.json",
+              "order": 17
+            }
+          ]
+        },
+        {
+          "id": "fr-v014-unit-4",
+          "title": "Что нужно сделать",
+          "lessons": [
+            {
+              "id": "fr-a1-19",
+              "title": "Что нужно сделать",
+              "asset": "assets/courses/fr-a1-19.json",
+              "order": 18
+            },
+            {
+              "id": "fr-a1-20",
+              "title": "Сообщение об изменении",
+              "asset": "assets/courses/fr-a1-20.json",
+              "order": 19
+            }
+          ]
+        }
+      ]
     }
   ]
 }

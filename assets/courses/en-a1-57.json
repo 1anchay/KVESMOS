@@ -1,0 +1,290 @@
+{
+  "id": "en-a1-57",
+  "title": "Сообщение от соседа",
+  "topic": "Сообщение от соседа",
+  "order": 56,
+  "objective": "Выделить просьбу и срок в коротком сообщении.",
+  "guide": "Before задаёт крайний момент: before six — до шести.",
+  "vocabulary": [
+    {
+      "id": "en:v014:57:p0",
+      "en": "Could you collect my parcel?",
+      "ru": "Не мог бы ты забрать мою посылку?"
+    },
+    {
+      "id": "en:v014:57:p1",
+      "en": "The shop closes at six.",
+      "ru": "Магазин закрывается в шесть."
+    },
+    {
+      "id": "en:v014:57:p2",
+      "en": "Please go there before six.",
+      "ru": "Пожалуйста, сходи туда до шести."
+    },
+    {
+      "id": "en:v014:57:p3",
+      "en": "I will leave the code on the table.",
+      "ru": "Я оставлю код на столе."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сообщение от соседа",
+      "phrase": "Could you collect my parcel?",
+      "translation": "Не мог бы ты забрать мою посылку?",
+      "explanation": "Before задаёт крайний момент: before six — до шести."
+    },
+    {
+      "character": "miko",
+      "title": "Сообщение от соседа",
+      "phrase": "The shop closes at six.",
+      "translation": "Магазин закрывается в шесть.",
+      "explanation": "The shop closes at six. — Магазин закрывается в шесть."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сообщение от соседа",
+      "phrase": "Please go there before six.",
+      "translation": "Пожалуйста, сходи туда до шести.",
+      "explanation": "Please go there before six. — Пожалуйста, сходи туда до шести."
+    },
+    {
+      "character": "orbi",
+      "title": "Сообщение от соседа",
+      "phrase": "I will leave the code on the table.",
+      "translation": "Я оставлю код на столе.",
+      "explanation": "I will leave the code on the table. — Я оставлю код на столе."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Could you collect my parcel?",
+      "translation": "Не мог бы ты забрать мою посылку?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Не мог бы ты забрать мою посылку?",
+      "options": [
+        "Пожалуйста, сходи туда до шести.",
+        "Не мог бы ты забрать мою посылку?",
+        "Я оставлю код на столе."
+      ],
+      "explanation": "Before задаёт крайний момент: before six — до шести."
+    },
+    {
+      "id": "apply",
+      "phrase": "The shop closes at six.",
+      "translation": "Магазин закрывается в шесть.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The shop closes at six.",
+      "tokens": [
+        "The",
+        "shop",
+        "closes",
+        "at",
+        "six."
+      ],
+      "character": "miko",
+      "explanation": "The shop closes at six. — Магазин закрывается в шесть."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-57-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Не мог бы ты забрать мою посылку?»?",
+      "answers": [
+        "Could you collect my parcel?"
+      ],
+      "explanation": "Could you collect my parcel? — Не мог бы ты забрать мою посылку?",
+      "wordIds": [
+        "en:v014:57:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The shop closes at six.",
+        "I will leave the code on the table.",
+        "Could you collect my parcel?"
+      ],
+      "hint": "Could you collect my parcel? — Не мог бы ты забрать мою посылку?"
+    },
+    {
+      "id": "en-a1-57-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Магазин закрывается в шесть.",
+      "answers": [
+        "The shop closes at six."
+      ],
+      "explanation": "Before задаёт крайний момент: before six — до шести.",
+      "wordIds": [
+        "en:v014:57:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "shop",
+        "closes",
+        "at",
+        "six."
+      ],
+      "hint": "The shop closes at six. — Магазин закрывается в шесть."
+    },
+    {
+      "id": "en-a1-57-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Пожалуйста, сходи туда до шести."
+      ],
+      "explanation": "Please go there before six. — Пожалуйста, сходи туда до шести.",
+      "wordIds": [
+        "en:v014:57:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Please go there before six.",
+      "options": [
+        "Не мог бы ты забрать мою посылку?",
+        "Пожалуйста, сходи туда до шести.",
+        "Магазин закрывается в шесть."
+      ],
+      "hint": "Please go there before six. — Пожалуйста, сходи туда до шести."
+    },
+    {
+      "id": "en-a1-57-e03",
+      "type": "dialogue",
+      "prompt": "До какого времени нужно забрать посылку?",
+      "answers": [
+        "До шести."
+      ],
+      "explanation": "До шести. Выделить просьбу и срок в коротком сообщении.",
+      "wordIds": [
+        "en:v014:57:p0",
+        "en:v014:57:p1",
+        "en:v014:57:p2",
+        "en:v014:57:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Could you collect my parcel before six?\nМико: Sure. Where is the code?",
+      "options": [
+        "После шести.",
+        "В любое время ночью.",
+        "До шести."
+      ]
+    },
+    {
+      "id": "en-a1-57-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:57:p0",
+        "en:v014:57:p1",
+        "en:v014:57:p2",
+        "en:v014:57:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:57:p0",
+          "en": "Could you collect my parcel?",
+          "ru": "Не мог бы ты забрать мою посылку?"
+        },
+        {
+          "id": "en:v014:57:p1",
+          "en": "The shop closes at six.",
+          "ru": "Магазин закрывается в шесть."
+        },
+        {
+          "id": "en:v014:57:p2",
+          "en": "Please go there before six.",
+          "ru": "Пожалуйста, сходи туда до шести."
+        },
+        {
+          "id": "en:v014:57:p3",
+          "en": "I will leave the code on the table.",
+          "ru": "Я оставлю код на столе."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-57-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: The shop close at six.",
+      "answers": [
+        "The shop closes at six."
+      ],
+      "explanation": "The shop — единственное число: closes.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "The shop close at six.",
+        "The shop closes at six."
+      ],
+      "hint": "Before задаёт крайний момент: before six — до шести."
+    },
+    {
+      "id": "en-a1-57-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я оставлю код на столе.». Можно написать вместо микрофона.",
+      "answers": [
+        "I will leave the code on the table."
+      ],
+      "explanation": "I will leave the code on the table. — Я оставлю код на столе.",
+      "wordIds": [
+        "en:v014:57:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I will leave the code on the table.",
+      "recall": {
+        "phrase": "I will leave the code on the table.",
+        "meaning": "Я оставлю код на столе."
+      }
+    },
+    {
+      "id": "en-a1-57-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Не мог бы ты забрать мою посылку?",
+      "answers": [
+        "Could you collect my parcel?"
+      ],
+      "explanation": "Before задаёт крайний момент: before six — до шести.",
+      "wordIds": [
+        "en:v014:57:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Could you collect my parcel?",
+        "meaning": "Не мог бы ты забрать мою посылку?"
+      }
+    },
+    {
+      "id": "en-a1-57-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я предпочитаю ходьбу бегу.",
+      "answers": [
+        "I prefer walking to running."
+      ],
+      "explanation": "I prefer walking to running. — Я предпочитаю ходьбу бегу.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I prefer walking to running.",
+        "Would you like to try painting?",
+        "I would rather stay outside.",
+        "Let us take some photos."
+      ]
+    }
+  ]
+}

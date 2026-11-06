@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-46",
+  "title": "Запись в календаре",
+  "topic": "Запись в календаре",
+  "order": 45,
+  "objective": "Понять заранее согласованную встречу.",
+  "guide": "Am/is/are + глагол с -ing может обозначать уже согласованное ближайшее событие.",
+  "vocabulary": [
+    {
+      "id": "en:v014:46:p0",
+      "en": "I am meeting Alex tomorrow.",
+      "ru": "Я встречаюсь с Алексом завтра."
+    },
+    {
+      "id": "en:v014:46:p1",
+      "en": "We are having lunch at one.",
+      "ru": "Мы обедаем в час."
+    },
+    {
+      "id": "en:v014:46:p2",
+      "en": "Are you coming with us?",
+      "ru": "Ты идёшь с нами?"
+    },
+    {
+      "id": "en:v014:46:p3",
+      "en": "I am working that afternoon.",
+      "ru": "Я работаю в тот день после обеда."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Запись в календаре",
+      "phrase": "I am meeting Alex tomorrow.",
+      "translation": "Я встречаюсь с Алексом завтра.",
+      "explanation": "Am/is/are + глагол с -ing может обозначать уже согласованное ближайшее событие."
+    },
+    {
+      "character": "miko",
+      "title": "Запись в календаре",
+      "phrase": "We are having lunch at one.",
+      "translation": "Мы обедаем в час.",
+      "explanation": "We are having lunch at one. — Мы обедаем в час."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Запись в календаре",
+      "phrase": "Are you coming with us?",
+      "translation": "Ты идёшь с нами?",
+      "explanation": "Are you coming with us? — Ты идёшь с нами?"
+    },
+    {
+      "character": "orbi",
+      "title": "Запись в календаре",
+      "phrase": "I am working that afternoon.",
+      "translation": "Я работаю в тот день после обеда.",
+      "explanation": "I am working that afternoon. — Я работаю в тот день после обеда."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I am meeting Alex tomorrow.",
+      "translation": "Я встречаюсь с Алексом завтра.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я встречаюсь с Алексом завтра.",
+      "options": [
+        "Ты идёшь с нами?",
+        "Я встречаюсь с Алексом завтра.",
+        "Я работаю в тот день после обеда."
+      ],
+      "explanation": "Am/is/are + глагол с -ing может обозначать уже согласованное ближайшее событие."
+    },
+    {
+      "id": "apply",
+      "phrase": "We are having lunch at one.",
+      "translation": "Мы обедаем в час.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "We are having lunch at one.",
+      "tokens": [
+        "We",
+        "are",
+        "having",
+        "lunch",
+        "at",
+        "one."
+      ],
+      "character": "miko",
+      "explanation": "We are having lunch at one. — Мы обедаем в час."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-46-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я встречаюсь с Алексом завтра.»?",
+      "answers": [
+        "I am meeting Alex tomorrow."
+      ],
+      "explanation": "I am meeting Alex tomorrow. — Я встречаюсь с Алексом завтра.",
+      "wordIds": [
+        "en:v014:46:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "We are having lunch at one.",
+        "I am working that afternoon.",
+        "I am meeting Alex tomorrow."
+      ],
+      "hint": "I am meeting Alex tomorrow. — Я встречаюсь с Алексом завтра."
+    },
+    {
+      "id": "en-a1-46-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы обедаем в час.",
+      "answers": [
+        "We are having lunch at one."
+      ],
+      "explanation": "Am/is/are + глагол с -ing может обозначать уже согласованное ближайшее событие.",
+      "wordIds": [
+        "en:v014:46:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "We",
+        "are",
+        "having",
+        "lunch",
+        "at",
+        "one."
+      ],
+      "hint": "We are having lunch at one. — Мы обедаем в час."
+    },
+    {
+      "id": "en-a1-46-e03",
+      "type": "dialogue",
+      "prompt": "Где договорились встретиться?",
+      "answers": [
+        "У офиса."
+      ],
+      "explanation": "У офиса. Понять заранее согласованную встречу.",
+      "wordIds": [
+        "en:v014:46:p0",
+        "en:v014:46:p1",
+        "en:v014:46:p2",
+        "en:v014:46:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Are you coming to lunch at one?\nМико: Yes, I am meeting you outside the office.",
+      "options": [
+        "Внутри поезда.",
+        "Дома вечером.",
+        "У офиса."
+      ]
+    },
+    {
+      "id": "en-a1-46-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ты идёшь с нами?"
+      ],
+      "explanation": "Are you coming with us? — Ты идёшь с нами?",
+      "wordIds": [
+        "en:v014:46:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Are you coming with us?",
+      "options": [
+        "Я встречаюсь с Алексом завтра.",
+        "Ты идёшь с нами?",
+        "Мы обедаем в час."
+      ],
+      "hint": "Are you coming with us? — Ты идёшь с нами?"
+    },
+    {
+      "id": "en-a1-46-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We is having lunch at one.",
+      "answers": [
+        "We are having lunch at one."
+      ],
+      "explanation": "С we используем are.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We is having lunch at one.",
+        "We are having lunch at one."
+      ],
+      "hint": "Am/is/are + глагол с -ing может обозначать уже согласованное ближайшее событие."
+    },
+    {
+      "id": "en-a1-46-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я работаю в тот день после обеда.». Можно написать вместо микрофона.",
+      "answers": [
+        "I am working that afternoon."
+      ],
+      "explanation": "I am working that afternoon. — Я работаю в тот день после обеда.",
+      "wordIds": [
+        "en:v014:46:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I am working that afternoon.",
+      "recall": {
+        "phrase": "I am working that afternoon.",
+        "meaning": "Я работаю в тот день после обеда."
+      }
+    },
+    {
+      "id": "en-a1-46-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я встречаюсь с Алексом завтра.",
+      "answers": [
+        "I am meeting Alex tomorrow."
+      ],
+      "explanation": "Am/is/are + глагол с -ing может обозначать уже согласованное ближайшее событие.",
+      "wordIds": [
+        "en:v014:46:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I am meeting Alex tomorrow.",
+        "meaning": "Я встречаюсь с Алексом завтра."
+      }
+    },
+    {
+      "id": "en-a1-46-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Ты откроешь дверь?",
+      "answers": [
+        "Will you open the door?"
+      ],
+      "explanation": "Will you open the door? — Ты откроешь дверь?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I will carry this box.",
+        "Will you open the door?",
+        "I will be careful.",
+        "We will finish soon."
+      ]
+    }
+  ]
+}

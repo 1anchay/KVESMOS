@@ -1,0 +1,249 @@
+{
+  "id": "en-a1-42",
+  "title": "Где были ключи",
+  "topic": "Где были ключи",
+  "order": 41,
+  "objective": "Описать местонахождение нескольких вещей в прошлом.",
+  "guide": "Для нескольких предметов в прошлом используем were; для одного — was.",
+  "vocabulary": [
+    {
+      "id": "en:v014:42:p0",
+      "en": "My keys were on the table.",
+      "ru": "Мои ключи были на столе."
+    },
+    {
+      "id": "en:v014:42:p1",
+      "en": "The door was open.",
+      "ru": "Дверь была открыта."
+    },
+    {
+      "id": "en:v014:42:p2",
+      "en": "Were your glasses in the bag?",
+      "ru": "Твои очки были в сумке?"
+    },
+    {
+      "id": "en:v014:42:p3",
+      "en": "No, they were next to the phone.",
+      "ru": "Нет, они были рядом с телефоном."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Где были ключи",
+      "phrase": "My keys were on the table.",
+      "translation": "Мои ключи были на столе.",
+      "explanation": "Для нескольких предметов в прошлом используем were; для одного — was."
+    },
+    {
+      "character": "miko",
+      "title": "Где были ключи",
+      "phrase": "The door was open.",
+      "translation": "Дверь была открыта.",
+      "explanation": "The door was open. — Дверь была открыта."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Где были ключи",
+      "phrase": "Were your glasses in the bag?",
+      "translation": "Твои очки были в сумке?",
+      "explanation": "Were your glasses in the bag? — Твои очки были в сумке?"
+    },
+    {
+      "character": "orbi",
+      "title": "Где были ключи",
+      "phrase": "No, they were next to the phone.",
+      "translation": "Нет, они были рядом с телефоном.",
+      "explanation": "No, they were next to the phone. — Нет, они были рядом с телефоном."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "My keys were on the table.",
+      "translation": "Мои ключи были на столе.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мои ключи были на столе.",
+      "options": [
+        "Твои очки были в сумке?",
+        "Мои ключи были на столе.",
+        "Нет, они были рядом с телефоном."
+      ],
+      "explanation": "Для нескольких предметов в прошлом используем were; для одного — was."
+    },
+    {
+      "id": "apply",
+      "phrase": "The door was open.",
+      "translation": "Дверь была открыта.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The door was open.",
+      "tokens": [
+        "The",
+        "door",
+        "was",
+        "open."
+      ],
+      "character": "miko",
+      "explanation": "The door was open. — Дверь была открыта."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-42-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Мои ключи были на столе.»?",
+      "answers": [
+        "My keys were on the table."
+      ],
+      "explanation": "My keys were on the table. — Мои ключи были на столе.",
+      "wordIds": [
+        "en:v014:42:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The door was open.",
+        "No, they were next to the phone.",
+        "My keys were on the table."
+      ],
+      "hint": "My keys were on the table. — Мои ключи были на столе."
+    },
+    {
+      "id": "en-a1-42-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Дверь была открыта.",
+      "answers": [
+        "The door was open."
+      ],
+      "explanation": "Для нескольких предметов в прошлом используем were; для одного — was.",
+      "wordIds": [
+        "en:v014:42:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "door",
+        "was",
+        "open."
+      ],
+      "hint": "The door was open. — Дверь была открыта."
+    },
+    {
+      "id": "en-a1-42-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Твои очки были в сумке?"
+      ],
+      "explanation": "Were your glasses in the bag? — Твои очки были в сумке?",
+      "wordIds": [
+        "en:v014:42:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Were your glasses in the bag?",
+      "options": [
+        "Мои ключи были на столе.",
+        "Твои очки были в сумке?",
+        "Дверь была открыта."
+      ],
+      "hint": "Were your glasses in the bag? — Твои очки были в сумке?"
+    },
+    {
+      "id": "en-a1-42-e03",
+      "type": "dialogue",
+      "prompt": "Где были очки?",
+      "answers": [
+        "Рядом с телефоном."
+      ],
+      "explanation": "Рядом с телефоном. Описать местонахождение нескольких вещей в прошлом.",
+      "wordIds": [
+        "en:v014:42:p0",
+        "en:v014:42:p1",
+        "en:v014:42:p2",
+        "en:v014:42:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Were your glasses in the bag?\nМико: No, they were next to the phone.",
+      "options": [
+        "В сумке.",
+        "На двери.",
+        "Рядом с телефоном."
+      ]
+    },
+    {
+      "id": "en-a1-42-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: My keys was on the table.",
+      "answers": [
+        "My keys were on the table."
+      ],
+      "explanation": "Keys — множественное число: нужны were, а не was.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "My keys was on the table.",
+        "My keys were on the table."
+      ],
+      "hint": "Для нескольких предметов в прошлом используем were; для одного — was."
+    },
+    {
+      "id": "en-a1-42-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Нет, они были рядом с телефоном.». Можно написать вместо микрофона.",
+      "answers": [
+        "No, they were next to the phone."
+      ],
+      "explanation": "No, they were next to the phone. — Нет, они были рядом с телефоном.",
+      "wordIds": [
+        "en:v014:42:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "No, they were next to the phone.",
+      "recall": {
+        "phrase": "No, they were next to the phone.",
+        "meaning": "Нет, они были рядом с телефоном."
+      }
+    },
+    {
+      "id": "en-a1-42-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мои ключи были на столе.",
+      "answers": [
+        "My keys were on the table."
+      ],
+      "explanation": "Для нескольких предметов в прошлом используем were; для одного — was.",
+      "wordIds": [
+        "en:v014:42:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "My keys were on the table.",
+        "meaning": "Мои ключи были на столе."
+      }
+    },
+    {
+      "id": "en-a1-42-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я приготовил ужин дома.",
+      "answers": [
+        "I cooked dinner at home."
+      ],
+      "explanation": "I cooked dinner at home. — Я приготовил ужин дома.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I finished work at six.",
+        "I cooked dinner at home.",
+        "I did not watch TV.",
+        "Then I called my sister."
+      ]
+    }
+  ]
+}

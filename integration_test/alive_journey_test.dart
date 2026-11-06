@@ -1,3 +1,4 @@
+import '../test/support.dart';
 import 'dart:ui' show FrameTiming;
 import 'dart:convert';
 import 'package:go_router/go_router.dart';
@@ -15,7 +16,6 @@ import 'package:orbitwords/data/repository.dart';
 import 'package:orbitwords/domain/course.dart';
 import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/ui/app.dart';
-import 'package:orbitwords/ui/lesson_introduction.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -74,13 +74,7 @@ void main() {
     await tap(find.text('Начать путешествие'));
     await Future<void>.delayed(const Duration(seconds: 2));
     await tap(find.byKey(const Key('today-start')));
-    for (
-      var i = 0;
-      i < 10 && find.byType(LessonIntroduction).evaluate().isNotEmpty;
-      i++
-    ) {
-      await tap(find.byKey(const Key('teaching-next')));
-    }
+    await advanceTeaching(tester);
     final material = await repo.startLesson('a1-01');
     for (final e in material.lesson.exercises) {
       debugPrint('ALIVE_STEP ${e.id}');

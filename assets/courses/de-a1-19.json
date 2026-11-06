@@ -1,0 +1,290 @@
+{
+  "id": "de-a1-19",
+  "title": "Чьи это вещи",
+  "topic": "Чьи это вещи",
+  "order": 18,
+  "objective": "Спросить о принадлежности и назвать владельца.",
+  "guide": "Mein/dein меняются по роду: mein Schlüssel, meine Tasche.",
+  "vocabulary": [
+    {
+      "id": "de:v014:19:p0",
+      "en": "Ist das dein Schlüssel?",
+      "ru": "Это твой ключ?"
+    },
+    {
+      "id": "de:v014:19:p1",
+      "en": "Nein, das ist mein Handy.",
+      "ru": "Нет, это мой телефон."
+    },
+    {
+      "id": "de:v014:19:p2",
+      "en": "Meine Tasche ist blau.",
+      "ru": "Моя сумка синяя."
+    },
+    {
+      "id": "de:v014:19:p3",
+      "en": "Sein Buch liegt hier.",
+      "ru": "Его книга лежит здесь."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Чьи это вещи",
+      "phrase": "Ist das dein Schlüssel?",
+      "translation": "Это твой ключ?",
+      "explanation": "Mein/dein меняются по роду: mein Schlüssel, meine Tasche."
+    },
+    {
+      "character": "miko",
+      "title": "Чьи это вещи",
+      "phrase": "Nein, das ist mein Handy.",
+      "translation": "Нет, это мой телефон.",
+      "explanation": "Nein, das ist mein Handy. — Нет, это мой телефон."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Чьи это вещи",
+      "phrase": "Meine Tasche ist blau.",
+      "translation": "Моя сумка синяя.",
+      "explanation": "Meine Tasche ist blau. — Моя сумка синяя."
+    },
+    {
+      "character": "orbi",
+      "title": "Чьи это вещи",
+      "phrase": "Sein Buch liegt hier.",
+      "translation": "Его книга лежит здесь.",
+      "explanation": "Sein Buch liegt hier. — Его книга лежит здесь."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ist das dein Schlüssel?",
+      "translation": "Это твой ключ?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Это твой ключ?",
+      "options": [
+        "Моя сумка синяя.",
+        "Это твой ключ?",
+        "Его книга лежит здесь."
+      ],
+      "explanation": "Mein/dein меняются по роду: mein Schlüssel, meine Tasche."
+    },
+    {
+      "id": "apply",
+      "phrase": "Nein, das ist mein Handy.",
+      "translation": "Нет, это мой телефон.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Nein, das ist mein Handy.",
+      "tokens": [
+        "Nein,",
+        "das",
+        "ist",
+        "mein",
+        "Handy."
+      ],
+      "character": "miko",
+      "explanation": "Nein, das ist mein Handy. — Нет, это мой телефон."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-19-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Это твой ключ?»?",
+      "answers": [
+        "Ist das dein Schlüssel?"
+      ],
+      "explanation": "Ist das dein Schlüssel? — Это твой ключ?",
+      "wordIds": [
+        "de:v014:19:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Nein, das ist mein Handy.",
+        "Sein Buch liegt hier.",
+        "Ist das dein Schlüssel?"
+      ],
+      "hint": "Ist das dein Schlüssel? — Это твой ключ?"
+    },
+    {
+      "id": "de-a1-19-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Нет, это мой телефон.",
+      "answers": [
+        "Nein, das ist mein Handy."
+      ],
+      "explanation": "Mein/dein меняются по роду: mein Schlüssel, meine Tasche.",
+      "wordIds": [
+        "de:v014:19:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Nein,",
+        "das",
+        "ist",
+        "mein",
+        "Handy."
+      ],
+      "hint": "Nein, das ist mein Handy. — Нет, это мой телефон."
+    },
+    {
+      "id": "de-a1-19-e03",
+      "type": "dialogue",
+      "prompt": "Кому принадлежит книга?",
+      "answers": [
+        "Максу."
+      ],
+      "explanation": "Максу. Спросить о принадлежности и назвать владельца.",
+      "wordIds": [
+        "de:v014:19:p0",
+        "de:v014:19:p1",
+        "de:v014:19:p2",
+        "de:v014:19:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Ist das deine Tasche?\nМико: Ja, meine Tasche ist blau. Das Buch gehört Max.",
+      "options": [
+        "Говорящему о сумке.",
+        "Не сказано, кому сумка.",
+        "Максу."
+      ]
+    },
+    {
+      "id": "de-a1-19-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Моя сумка синяя."
+      ],
+      "explanation": "Meine Tasche ist blau. — Моя сумка синяя.",
+      "wordIds": [
+        "de:v014:19:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Meine Tasche ist blau.",
+      "options": [
+        "Это твой ключ?",
+        "Моя сумка синяя.",
+        "Нет, это мой телефон."
+      ],
+      "hint": "Meine Tasche ist blau. — Моя сумка синяя."
+    },
+    {
+      "id": "de-a1-19-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v014:19:p0",
+        "de:v014:19:p1",
+        "de:v014:19:p2",
+        "de:v014:19:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v014:19:p0",
+          "en": "Ist das dein Schlüssel?",
+          "ru": "Это твой ключ?"
+        },
+        {
+          "id": "de:v014:19:p1",
+          "en": "Nein, das ist mein Handy.",
+          "ru": "Нет, это мой телефон."
+        },
+        {
+          "id": "de:v014:19:p2",
+          "en": "Meine Tasche ist blau.",
+          "ru": "Моя сумка синяя."
+        },
+        {
+          "id": "de:v014:19:p3",
+          "en": "Sein Buch liegt hier.",
+          "ru": "Его книга лежит здесь."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-19-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Mein Tasche ist blau.",
+      "answers": [
+        "Meine Tasche ist blau."
+      ],
+      "explanation": "Tasche женского рода: meine Tasche.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Mein Tasche ist blau.",
+        "Meine Tasche ist blau."
+      ],
+      "hint": "Mein/dein меняются по роду: mein Schlüssel, meine Tasche."
+    },
+    {
+      "id": "de-a1-19-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Его книга лежит здесь.». Можно написать вместо микрофона.",
+      "answers": [
+        "Sein Buch liegt hier."
+      ],
+      "explanation": "Sein Buch liegt hier. — Его книга лежит здесь.",
+      "wordIds": [
+        "de:v014:19:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Sein Buch liegt hier.",
+      "recall": {
+        "phrase": "Sein Buch liegt hier.",
+        "meaning": "Его книга лежит здесь."
+      }
+    },
+    {
+      "id": "de-a1-19-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Это твой ключ?",
+      "answers": [
+        "Ist das dein Schlüssel?"
+      ],
+      "explanation": "Mein/dein меняются по роду: mein Schlüssel, meine Tasche.",
+      "wordIds": [
+        "de:v014:19:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ist das dein Schlüssel?",
+        "meaning": "Это твой ключ?"
+      }
+    },
+    {
+      "id": "de-a1-19-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сегодня я еду в Берлин.",
+      "answers": [
+        "Heute fahre ich nach Berlin."
+      ],
+      "explanation": "Heute fahre ich nach Berlin. — Сегодня я еду в Берлин.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Heute fahre ich nach Berlin.",
+        "Ich muss den Zug um zehn Uhr nehmen.",
+        "Können Sie mir den Fahrplan zeigen?",
+        "Ich habe eine Fahrkarte."
+      ]
+    }
+  ]
+}

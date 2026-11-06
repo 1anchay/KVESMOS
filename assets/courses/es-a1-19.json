@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-19",
+  "title": "Утро перед работой",
+  "topic": "Утро перед работой",
+  "order": 18,
+  "objective": "Рассказать о подъёме и подготовке к работе.",
+  "guide": "Me levanto — я встаю; возвратное me стоит перед глаголом.",
+  "vocabulary": [
+    {
+      "id": "es:v014:19:p0",
+      "en": "Me levanto a las siete.",
+      "ru": "Я встаю в семь."
+    },
+    {
+      "id": "es:v014:19:p1",
+      "en": "Me ducho por la mañana.",
+      "ru": "Я принимаю душ утром."
+    },
+    {
+      "id": "es:v014:19:p2",
+      "en": "Después desayuno en casa.",
+      "ru": "Потом я завтракаю дома."
+    },
+    {
+      "id": "es:v014:19:p3",
+      "en": "Salgo de casa a las ocho.",
+      "ru": "Я выхожу из дома в восемь."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Утро перед работой",
+      "phrase": "Me levanto a las siete.",
+      "translation": "Я встаю в семь.",
+      "explanation": "Me levanto — я встаю; возвратное me стоит перед глаголом."
+    },
+    {
+      "character": "miko",
+      "title": "Утро перед работой",
+      "phrase": "Me ducho por la mañana.",
+      "translation": "Я принимаю душ утром.",
+      "explanation": "Me ducho por la mañana. — Я принимаю душ утром."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Утро перед работой",
+      "phrase": "Después desayuno en casa.",
+      "translation": "Потом я завтракаю дома.",
+      "explanation": "Después desayuno en casa. — Потом я завтракаю дома."
+    },
+    {
+      "character": "orbi",
+      "title": "Утро перед работой",
+      "phrase": "Salgo de casa a las ocho.",
+      "translation": "Я выхожу из дома в восемь.",
+      "explanation": "Salgo de casa a las ocho. — Я выхожу из дома в восемь."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Me levanto a las siete.",
+      "translation": "Я встаю в семь.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я встаю в семь.",
+      "options": [
+        "Потом я завтракаю дома.",
+        "Я встаю в семь.",
+        "Я выхожу из дома в восемь."
+      ],
+      "explanation": "Me levanto — я встаю; возвратное me стоит перед глаголом."
+    },
+    {
+      "id": "apply",
+      "phrase": "Me ducho por la mañana.",
+      "translation": "Я принимаю душ утром.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Me ducho por la mañana.",
+      "tokens": [
+        "Me",
+        "ducho",
+        "por",
+        "la",
+        "mañana."
+      ],
+      "character": "miko",
+      "explanation": "Me ducho por la mañana. — Я принимаю душ утром."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-19-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я встаю в семь.»?",
+      "answers": [
+        "Me levanto a las siete."
+      ],
+      "explanation": "Me levanto a las siete. — Я встаю в семь.",
+      "wordIds": [
+        "es:v014:19:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Me ducho por la mañana.",
+        "Salgo de casa a las ocho.",
+        "Me levanto a las siete."
+      ],
+      "hint": "Me levanto a las siete. — Я встаю в семь."
+    },
+    {
+      "id": "es-a1-19-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я принимаю душ утром.",
+      "answers": [
+        "Me ducho por la mañana."
+      ],
+      "explanation": "Me levanto — я встаю; возвратное me стоит перед глаголом.",
+      "wordIds": [
+        "es:v014:19:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Me",
+        "ducho",
+        "por",
+        "la",
+        "mañana."
+      ],
+      "hint": "Me ducho por la mañana. — Я принимаю душ утром."
+    },
+    {
+      "id": "es-a1-19-e03",
+      "type": "dialogue",
+      "prompt": "Когда человек выходит из дома?",
+      "answers": [
+        "В восемь."
+      ],
+      "explanation": "В восемь. Рассказать о подъёме и подготовке к работе.",
+      "wordIds": [
+        "es:v014:19:p0",
+        "es:v014:19:p1",
+        "es:v014:19:p2",
+        "es:v014:19:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿A qué hora te levantas?\nМико: Me levanto a las siete y salgo a las ocho.",
+      "options": [
+        "В семь.",
+        "В полдень.",
+        "В восемь."
+      ]
+    },
+    {
+      "id": "es-a1-19-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Потом я завтракаю дома."
+      ],
+      "explanation": "Después desayuno en casa. — Потом я завтракаю дома.",
+      "wordIds": [
+        "es:v014:19:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Después desayuno en casa.",
+      "options": [
+        "Я встаю в семь.",
+        "Потом я завтракаю дома.",
+        "Я принимаю душ утром."
+      ],
+      "hint": "Después desayuno en casa. — Потом я завтракаю дома."
+    },
+    {
+      "id": "es-a1-19-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v014:19:p0",
+        "es:v014:19:p1",
+        "es:v014:19:p2",
+        "es:v014:19:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v014:19:p0",
+          "en": "Me levanto a las siete.",
+          "ru": "Я встаю в семь."
+        },
+        {
+          "id": "es:v014:19:p1",
+          "en": "Me ducho por la mañana.",
+          "ru": "Я принимаю душ утром."
+        },
+        {
+          "id": "es:v014:19:p2",
+          "en": "Después desayuno en casa.",
+          "ru": "Потом я завтракаю дома."
+        },
+        {
+          "id": "es:v014:19:p3",
+          "en": "Salgo de casa a las ocho.",
+          "ru": "Я выхожу из дома в восемь."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-19-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Yo se levanto a las siete.",
+      "answers": [
+        "Yo me levanto a las siete."
+      ],
+      "explanation": "Для yo возвратная форма — me, а не se.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Yo se levanto a las siete.",
+        "Yo me levanto a las siete."
+      ],
+      "hint": "Me levanto — я встаю; возвратное me стоит перед глаголом."
+    },
+    {
+      "id": "es-a1-19-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я выхожу из дома в восемь.». Можно написать вместо микрофона.",
+      "answers": [
+        "Salgo de casa a las ocho."
+      ],
+      "explanation": "Salgo de casa a las ocho. — Я выхожу из дома в восемь.",
+      "wordIds": [
+        "es:v014:19:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Salgo de casa a las ocho.",
+      "recall": {
+        "phrase": "Salgo de casa a las ocho.",
+        "meaning": "Я выхожу из дома в восемь."
+      }
+    },
+    {
+      "id": "es-a1-19-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я встаю в семь.",
+      "answers": [
+        "Me levanto a las siete."
+      ],
+      "explanation": "Me levanto — я встаю; возвратное me стоит перед глаголом.",
+      "wordIds": [
+        "es:v014:19:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Me levanto a las siete.",
+        "meaning": "Я встаю в семь."
+      }
+    },
+    {
+      "id": "es-a1-19-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы собираемся выпить кофе после урока.",
+      "answers": [
+        "Vamos a tomar un café después de clase."
+      ],
+      "explanation": "Vamos a tomar un café después de clase. — Мы собираемся выпить кофе после урока.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Vamos a tomar un café después de clase.",
+        "La cafetería está cerca de la estación.",
+        "Quedamos aquí a las cuatro.",
+        "¿Puedes venir conmigo?"
+      ]
+    }
+  ]
+}

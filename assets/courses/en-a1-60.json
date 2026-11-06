@@ -1,0 +1,251 @@
+{
+  "id": "en-a1-60",
+  "title": "Общий план команды",
+  "topic": "Общий план команды",
+  "order": 59,
+  "objective": "Распределить задачи, срок и следующий контакт.",
+  "guide": "Will обозначает обещанную задачу; by Friday — не позже пятницы.",
+  "vocabulary": [
+    {
+      "id": "en:v014:60:p0",
+      "en": "I will write the short message.",
+      "ru": "Я напишу короткое сообщение."
+    },
+    {
+      "id": "en:v014:60:p1",
+      "en": "Can you check the details?",
+      "ru": "Можешь проверить подробности?"
+    },
+    {
+      "id": "en:v014:60:p2",
+      "en": "We need to finish by Friday.",
+      "ru": "Нам нужно закончить к пятнице."
+    },
+    {
+      "id": "en:v014:60:p3",
+      "en": "Let us talk again tomorrow.",
+      "ru": "Давай снова поговорим завтра."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Общий план команды",
+      "phrase": "I will write the short message.",
+      "translation": "Я напишу короткое сообщение.",
+      "explanation": "Will обозначает обещанную задачу; by Friday — не позже пятницы."
+    },
+    {
+      "character": "miko",
+      "title": "Общий план команды",
+      "phrase": "Can you check the details?",
+      "translation": "Можешь проверить подробности?",
+      "explanation": "Can you check the details? — Можешь проверить подробности?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Общий план команды",
+      "phrase": "We need to finish by Friday.",
+      "translation": "Нам нужно закончить к пятнице.",
+      "explanation": "We need to finish by Friday. — Нам нужно закончить к пятнице."
+    },
+    {
+      "character": "orbi",
+      "title": "Общий план команды",
+      "phrase": "Let us talk again tomorrow.",
+      "translation": "Давай снова поговорим завтра.",
+      "explanation": "Let us talk again tomorrow. — Давай снова поговорим завтра."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I will write the short message.",
+      "translation": "Я напишу короткое сообщение.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я напишу короткое сообщение.",
+      "options": [
+        "Нам нужно закончить к пятнице.",
+        "Я напишу короткое сообщение.",
+        "Давай снова поговорим завтра."
+      ],
+      "explanation": "Will обозначает обещанную задачу; by Friday — не позже пятницы."
+    },
+    {
+      "id": "apply",
+      "phrase": "Can you check the details?",
+      "translation": "Можешь проверить подробности?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Can you check the details?",
+      "tokens": [
+        "Can",
+        "you",
+        "check",
+        "the",
+        "details?"
+      ],
+      "character": "miko",
+      "explanation": "Can you check the details? — Можешь проверить подробности?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-60-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я напишу короткое сообщение.»?",
+      "answers": [
+        "I will write the short message."
+      ],
+      "explanation": "I will write the short message. — Я напишу короткое сообщение.",
+      "wordIds": [
+        "en:v014:60:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Can you check the details?",
+        "Let us talk again tomorrow.",
+        "I will write the short message."
+      ],
+      "hint": "I will write the short message. — Я напишу короткое сообщение."
+    },
+    {
+      "id": "en-a1-60-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Можешь проверить подробности?",
+      "answers": [
+        "Can you check the details?"
+      ],
+      "explanation": "Will обозначает обещанную задачу; by Friday — не позже пятницы.",
+      "wordIds": [
+        "en:v014:60:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Can",
+        "you",
+        "check",
+        "the",
+        "details?"
+      ],
+      "hint": "Can you check the details? — Можешь проверить подробности?"
+    },
+    {
+      "id": "en-a1-60-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Нам нужно закончить к пятнице."
+      ],
+      "explanation": "We need to finish by Friday. — Нам нужно закончить к пятнице.",
+      "wordIds": [
+        "en:v014:60:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "We need to finish by Friday.",
+      "options": [
+        "Я напишу короткое сообщение.",
+        "Нам нужно закончить к пятнице.",
+        "Можешь проверить подробности?"
+      ],
+      "hint": "We need to finish by Friday. — Нам нужно закончить к пятнице."
+    },
+    {
+      "id": "en-a1-60-e03",
+      "type": "dialogue",
+      "prompt": "Кому досталась проверка?",
+      "answers": [
+        "Второму собеседнику."
+      ],
+      "explanation": "Второму собеседнику. Распределить задачи, срок и следующий контакт.",
+      "wordIds": [
+        "en:v014:60:p0",
+        "en:v014:60:p1",
+        "en:v014:60:p2",
+        "en:v014:60:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: I will write the message. Can you check the details?\nМико: Yes, we will finish by Friday.",
+      "options": [
+        "Никому.",
+        "Только автору сообщения.",
+        "Второму собеседнику."
+      ]
+    },
+    {
+      "id": "en-a1-60-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We need finish by Friday.",
+      "answers": [
+        "We need to finish by Friday."
+      ],
+      "explanation": "После need перед глаголом здесь требуется to.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We need finish by Friday.",
+        "We need to finish by Friday."
+      ],
+      "hint": "Will обозначает обещанную задачу; by Friday — не позже пятницы."
+    },
+    {
+      "id": "en-a1-60-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Давай снова поговорим завтра.». Можно написать вместо микрофона.",
+      "answers": [
+        "Let us talk again tomorrow."
+      ],
+      "explanation": "Let us talk again tomorrow. — Давай снова поговорим завтра.",
+      "wordIds": [
+        "en:v014:60:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Let us talk again tomorrow.",
+      "recall": {
+        "phrase": "Let us talk again tomorrow.",
+        "meaning": "Давай снова поговорим завтра."
+      }
+    },
+    {
+      "id": "en-a1-60-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я напишу короткое сообщение.",
+      "answers": [
+        "I will write the short message."
+      ],
+      "explanation": "Will обозначает обещанную задачу; by Friday — не позже пятницы.",
+      "wordIds": [
+        "en:v014:60:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I will write the short message.",
+        "meaning": "Я напишу короткое сообщение."
+      }
+    },
+    {
+      "id": "en-a1-60-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можете позвонить мне, если найдёте его?",
+      "answers": [
+        "Can you call me if you find it?"
+      ],
+      "explanation": "Can you call me if you find it? — Можете позвонить мне, если найдёте его?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I lost my blue backpack.",
+        "I last saw it on the train.",
+        "There is a notebook inside.",
+        "Can you call me if you find it?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+##
+Чьи это вещи|Спросить о принадлежности и назвать владельца.|Mein/dein меняются по роду: mein Schlüssel, meine Tasche.
+Ist das dein Schlüssel?~Это твой ключ?
+Nein, das ist mein Handy.~Нет, это мой телефон.
+Meine Tasche ist blau.~Моя сумка синяя.
+Sein Buch liegt hier.~Его книга лежит здесь.
+Ist das deine Tasche? / Ja, meine Tasche ist blau. Das Buch gehört Max.
+Кому принадлежит книга?|Максу.|Говорящему о сумке.|Не сказано, кому сумка.
+Mein Tasche ist blau.~Meine Tasche ist blau.~Tasche женского рода: meine Tasche.
+##
+Домашние дела|Распределить простые домашние дела.|В настоящем времени wir сочетается с формой на -en; du часто имеет окончание -st.
+Ich putze die Küche.~Я убираю кухню.
+Du wäschst das Geschirr.~Ты моешь посуду.
+Wir kaufen heute ein.~Мы сегодня делаем покупки.
+Wer bringt den Müll raus?~Кто выносит мусор?
+Ich putze die Küche. Wäschst du das Geschirr? / Ja, danach kaufen wir ein.
+Что сделают после уборки?|Пойдут за покупками.|Будут учиться.|Сразу лягут спать.
+Wir kauft heute ein.~Wir kaufen heute ein.~С wir нужна форма kaufen; приставка ein остаётся в конце.
+##
+Где лежит посылка|Указать неподвижное положение вещи.|На вопрос wo? предлог in здесь требует дательного: in dem → im.
+Das Paket ist im Flur.~Посылка в коридоре.
+Der Schlüssel liegt auf dem Tisch.~Ключ лежит на столе.
+Die Jacke hängt an der Tür.~Куртка висит на двери.
+Die Schuhe sind unter dem Stuhl.~Обувь под стулом.
+Wo liegt der Schlüssel? / Auf dem Tisch im Flur, neben dem Paket.
+Где лежит ключ?|На столе в коридоре.|Под стулом.|В кармане куртки.
+Der Schlüssel liegt auf den Tisch.~Der Schlüssel liegt auf dem Tisch.~Это место, а не направление: wo? — auf dem Tisch.
+##
+Куда поставить коробку|Различить положение и направление движения.|На вопрос wohin? при перемещении используем винительный: auf den Tisch.
+Stell die Kiste auf den Tisch.~Поставь ящик на стол.
+Ich lege das Buch in die Tasche.~Я кладу книгу в сумку.
+Die Kiste steht jetzt auf dem Tisch.~Ящик теперь стоит на столе.
+Das Buch ist jetzt in der Tasche.~Книга теперь в сумке.
+Wohin soll ich die Kiste stellen? / Auf den Tisch, bitte.
+Куда поставить ящик?|На стол.|Под стул.|В сумку.
+Ich lege das Buch in der Tasche.~Ich lege das Buch in die Tasche.~Движение внутрь: wohin? — in die Tasche.
+##
+Позвоню после работы|Понять отделяемую приставку в предложении.|У anrufen приставка an в простом главном предложении уходит в конец.
+Ich rufe dich heute an.~Я позвоню тебе сегодня.
+Wann kommst du zurück?~Когда ты вернёшься?
+Ich komme um sechs zurück.~Я вернусь в шесть.
+Wir sehen heute Abend fern.~Мы сегодня вечером смотрим телевизор.
+Wann rufst du mich an? / Um sechs, wenn ich zurückkomme.
+Когда будет звонок?|В шесть.|Завтра утром.|В полночь.
+Ich anrufe dich heute.~Ich rufe dich heute an.~В главном предложении an отделяется: rufe … an.
+##
+Обязательные дела|Сказать, что необходимо сделать.|Müssen занимает второе место; основной глагол остаётся в конце в инфинитиве.
+Ich muss heute lernen.~Мне нужно сегодня учиться.
+Wir müssen früh aufstehen.~Нам нужно рано встать.
+Musst du morgen arbeiten?~Тебе нужно завтра работать?
+Ich muss noch eine E-Mail schreiben.~Мне ещё нужно написать электронное письмо.
+Musst du morgen arbeiten? / Nein, aber ich muss heute noch lernen.
+Что нужно сделать сегодня?|Поучиться.|Пойти завтра на работу.|Купить билет.
+Ich muss lerne heute.~Ich muss heute lernen.~После muss основной глагол lernen стоит в конце в инфинитиве.
+##
+Разрешено или запрещено|Спросить разрешение и понять запрет.|Dürfen обозначает разрешение, nicht dürfen — запрет.
+Darf ich hier sitzen?~Можно мне здесь сесть?
+Hier darf man nicht rauchen.~Здесь нельзя курить.
+Du darfst das Fenster öffnen.~Ты можешь открыть окно.
+Wir dürfen hier Fotos machen.~Нам разрешено здесь фотографировать.
+Darf ich hier Fotos machen? / Ja, aber Sie dürfen hier nicht rauchen.
+Что разрешено?|Фотографировать.|Курить.|Ничего.
+Darf ich hier sitze?~Darf ich hier sitzen?~После darf нужен инфинитив sitzen.
+##
+Планы на выходной|Рассказать о намерении и согласовать занятие.|Wollen обозначает желание или намерение; ich will, wir wollen.
+Ich will am Samstag wandern.~Я хочу в субботу пойти в поход.
+Wir wollen zusammen kochen.~Мы хотим готовить вместе.
+Willst du mitkommen?~Хочешь пойти с нами?
+Ich möchte lieber zu Hause bleiben.~Я бы лучше остался дома.
+Willst du am Samstag wandern? / Ich möchte lieber zu Hause bleiben und kochen.
+Что предпочитает собеседник?|Остаться дома и готовить.|Пойти в поход.|Работать весь день.
+Wir will zusammen kochen.~Wir wollen zusammen kochen.~С wir используем wollen.
+##
+Время на табло|Понять официальное время отправления.|На табло используется 24-часовое время: vierzehn Uhr dreißig — 14:30.
+Der Zug fährt um vierzehn Uhr dreißig ab.~Поезд отправляется в четырнадцать тридцать.
+Wir haben noch zehn Minuten.~У нас ещё десять минут.
+Der Zug hat fünf Minuten Verspätung.~Поезд опаздывает на пять минут.
+Bitte warten Sie an Gleis vier.~Пожалуйста, ждите у четвёртого пути.
+Hat der Zug Verspätung? / Ja, fünf Minuten. Warten Sie bitte an Gleis vier.
+Где нужно ждать?|У четвёртого пути.|У пятого пути.|У десятого пути.
+Der Zug fährt in vierzehn Uhr ab.~Der Zug fährt um vierzehn Uhr ab.~Для точного времени используется um, а не in.
+##
+Что выбрать на ужин|Сравнить предпочтения в еде.|Gern — охотно; lieber — предпочтительнее; am liebsten — больше всего.
+Ich esse gern Gemüse.~Я люблю есть овощи.
+Heute esse ich lieber Suppe.~Сегодня я лучше поем суп.
+Am liebsten trinke ich Wasser.~Больше всего я люблю пить воду.
+Was möchtest du lieber?~Что ты предпочитаешь?
+Möchtest du Salat oder Suppe? / Heute esse ich lieber Suppe.
+Что выбрал собеседник?|Суп.|Салат.|Только воду.
+Heute ich esse lieber Suppe.~Heute esse ich lieber Suppe.~Если heute стоит первым, глагол всё равно второй: heute esse ich.
+##
+Объяснить причину|Коротко объяснить отказ или опоздание.|После weil спрягаемый глагол оказывается в конце придаточного.
+Ich bleibe zu Hause, weil ich krank bin.~Я остаюсь дома, потому что болен.
+Ich komme später, weil der Bus Verspätung hat.~Я приду позже, потому что автобус опаздывает.
+Kannst du mir die Aufgabe schicken?~Можешь прислать мне задание?
+Danke für deine Hilfe.~Спасибо за твою помощь.
+Warum bleibst du zu Hause? / Weil ich krank bin. Kannst du mir die Aufgabe schicken?
+Почему человек остаётся дома?|Он болен.|Он ждёт автобус.|Он закончил задание.
+Weil ich bin krank.~Weil ich krank bin.~В придаточном с weil спрягаемый bin стоит последним.
+##
+Короткое письмо другу|Понять изменение договорённости и ответить.|Leider вводит сожаление; stattdessen — вместо этого.
+Leider kann ich heute nicht kommen.~К сожалению, я сегодня не могу прийти.
+Hast du stattdessen morgen Zeit?~У тебя вместо этого есть время завтра?
+Wir können uns vor dem Kino treffen.~Мы можем встретиться перед кинотеатром.
+Schreib mir bitte kurz zurück.~Пожалуйста, ответь мне коротко.
+Leider kann ich heute nicht kommen. Hast du morgen Zeit? / Ja, wir treffen uns vor dem Kino.
+Как изменился план?|Встреча завтра у кинотеатра.|Встреча сегодня дома.|Встреча отменена навсегда.
+Leider ich kann heute nicht kommen.~Leider kann ich heute nicht kommen.~После leider на втором месте стоит kann, затем ich.

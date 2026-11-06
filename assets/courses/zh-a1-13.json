@@ -1,0 +1,310 @@
+{
+  "id": "zh-a1-13",
+  "title": "Чья это книга",
+  "topic": "Чья это книга",
+  "order": 12,
+  "objective": "Спросить о принадлежности и различить его и её.",
+  "guide": "的 связывает владельца с вещью: 我的书 — моя книга; 他 и 她 читаются одинаково tā.",
+  "vocabulary": [
+    {
+      "id": "zh:v014:13:p0",
+      "en": "这是我的书。",
+      "ru": "Это моя книга.",
+      "pronunciation": "Zhè shì wǒ de shū."
+    },
+    {
+      "id": "zh:v014:13:p1",
+      "en": "那是她的手机。",
+      "ru": "То её телефон.",
+      "pronunciation": "Nà shì tā de shǒujī."
+    },
+    {
+      "id": "zh:v014:13:p2",
+      "en": "这是谁的杯子？",
+      "ru": "Чья это чашка?",
+      "pronunciation": "Zhè shì shéi de bēizi?"
+    },
+    {
+      "id": "zh:v014:13:p3",
+      "en": "他的包在这里。",
+      "ru": "Его сумка здесь.",
+      "pronunciation": "Tā de bāo zài zhèlǐ."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Чья это книга",
+      "phrase": "这是我的书。",
+      "translation": "Это моя книга.",
+      "explanation": "的 связывает владельца с вещью: 我的书 — моя книга; 他 и 她 читаются одинаково tā.",
+      "pronunciation": "Zhè shì wǒ de shū."
+    },
+    {
+      "character": "miko",
+      "title": "Чья это книга",
+      "phrase": "那是她的手机。",
+      "translation": "То её телефон.",
+      "explanation": "那是她的手机。 — То её телефон.",
+      "pronunciation": "Nà shì tā de shǒujī."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Чья это книга",
+      "phrase": "这是谁的杯子？",
+      "translation": "Чья это чашка?",
+      "explanation": "这是谁的杯子？ — Чья это чашка?",
+      "pronunciation": "Zhè shì shéi de bēizi?"
+    },
+    {
+      "character": "orbi",
+      "title": "Чья это книга",
+      "phrase": "他的包在这里。",
+      "translation": "Его сумка здесь.",
+      "explanation": "他的包在这里。 — Его сумка здесь.",
+      "pronunciation": "Tā de bāo zài zhèlǐ."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "这是我的书。",
+      "translation": "Это моя книга.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Это моя книга.",
+      "options": [
+        "Чья это чашка?",
+        "Это моя книга.",
+        "Его сумка здесь."
+      ],
+      "explanation": "的 связывает владельца с вещью: 我的书 — моя книга; 他 и 她 читаются одинаково tā.",
+      "pronunciation": "Zhè shì wǒ de shū."
+    },
+    {
+      "id": "apply",
+      "phrase": "那是她的手机。",
+      "translation": "То её телефон.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "那是她的手机。",
+      "tokens": [
+        "那",
+        "是",
+        "她的",
+        "手机"
+      ],
+      "character": "miko",
+      "explanation": "那是她的手机。 — То её телефон.",
+      "pronunciation": "Nà shì tā de shǒujī."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "zh-a1-13-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Это моя книга.»?",
+      "answers": [
+        "这是我的书。"
+      ],
+      "explanation": "这是我的书。 — Это моя книга.",
+      "wordIds": [
+        "zh:v014:13:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "那是她的手机。",
+        "他的包在这里。",
+        "这是我的书。"
+      ],
+      "hint": "这是我的书。 — Это моя книга.",
+      "pronunciation": "Zhè shì wǒ de shū."
+    },
+    {
+      "id": "zh-a1-13-e02",
+      "type": "order",
+      "prompt": "Собери реплику: То её телефон.",
+      "answers": [
+        "那是她的手机。"
+      ],
+      "explanation": "的 связывает владельца с вещью: 我的书 — моя книга; 他 и 她 читаются одинаково tā.",
+      "wordIds": [
+        "zh:v014:13:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "那",
+        "是",
+        "她的",
+        "手机"
+      ],
+      "hint": "那是她的手机。 — То её телефон.",
+      "pronunciation": "Nà shì tā de shǒujī."
+    },
+    {
+      "id": "zh-a1-13-e03",
+      "type": "dialogue",
+      "prompt": "Кому принадлежит чашка?",
+      "answers": [
+        "Старшей сестре говорящего."
+      ],
+      "explanation": "Старшей сестре говорящего. Спросить о принадлежности и различить его и её.",
+      "wordIds": [
+        "zh:v014:13:p0",
+        "zh:v014:13:p1",
+        "zh:v014:13:p2",
+        "zh:v014:13:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: 这是谁的杯子？\nМико: 是我姐姐的。",
+      "options": [
+        "Говорящему.",
+        "Его отцу.",
+        "Старшей сестре говорящего."
+      ],
+      "scenePronunciation": "Zhè shì shéi de bēizi?\nShì wǒ jiějie de."
+    },
+    {
+      "id": "zh-a1-13-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Чья это чашка?"
+      ],
+      "explanation": "这是谁的杯子？ — Чья это чашка?",
+      "wordIds": [
+        "zh:v014:13:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "这是谁的杯子？",
+      "options": [
+        "Это моя книга.",
+        "Чья это чашка?",
+        "То её телефон."
+      ],
+      "hint": "这是谁的杯子？ — Чья это чашка?",
+      "pronunciation": "Zhè shì shéi de bēizi?"
+    },
+    {
+      "id": "zh-a1-13-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "zh:v014:13:p0",
+        "zh:v014:13:p1",
+        "zh:v014:13:p2",
+        "zh:v014:13:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "zh:v014:13:p0",
+          "en": "这是我的书。",
+          "ru": "Это моя книга.",
+          "pronunciation": "Zhè shì wǒ de shū."
+        },
+        {
+          "id": "zh:v014:13:p1",
+          "en": "那是她的手机。",
+          "ru": "То её телефон.",
+          "pronunciation": "Nà shì tā de shǒujī."
+        },
+        {
+          "id": "zh:v014:13:p2",
+          "en": "这是谁的杯子？",
+          "ru": "Чья это чашка?",
+          "pronunciation": "Zhè shì shéi de bēizi?"
+        },
+        {
+          "id": "zh:v014:13:p3",
+          "en": "他的包在这里。",
+          "ru": "Его сумка здесь.",
+          "pronunciation": "Tā de bāo zài zhèlǐ."
+        }
+      ]
+    },
+    {
+      "id": "zh-a1-13-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: 这是我书。",
+      "answers": [
+        "这是我的书。"
+      ],
+      "explanation": "Между владельцем 我 и предметом 书 требуется 的.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "这是我书。",
+        "这是我的书。"
+      ],
+      "hint": "的 связывает владельца с вещью: 我的书 — моя книга; 他 и 她 читаются одинаково tā."
+    },
+    {
+      "id": "zh-a1-13-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Его сумка здесь.». Можно написать вместо микрофона. Можно ответить иероглифами или пиньинем с тонами.",
+      "answers": [
+        "他的包在这里。",
+        "Tā de bāo zài zhèlǐ."
+      ],
+      "explanation": "他的包在这里。 — Его сумка здесь.",
+      "wordIds": [
+        "zh:v014:13:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "他的包在这里。",
+      "recall": {
+        "phrase": "他的包在这里。",
+        "meaning": "Его сумка здесь."
+      },
+      "pronunciation": "Tā de bāo zài zhèlǐ."
+    },
+    {
+      "id": "zh-a1-13-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Это моя книга. Можно ответить иероглифами или пиньинем с тонами.",
+      "answers": [
+        "这是我的书。",
+        "Zhè shì wǒ de shū."
+      ],
+      "explanation": "的 связывает владельца с вещью: 我的书 — моя книга; 他 и 她 читаются одинаково tā.",
+      "wordIds": [
+        "zh:v014:13:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "这是我的书。",
+        "meaning": "Это моя книга."
+      },
+      "pronunciation": "Zhè shì wǒ de shū."
+    },
+    {
+      "id": "zh-a1-13-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Вчера я купил одну книгу.",
+      "answers": [
+        "我昨天买了一本书。"
+      ],
+      "explanation": "我昨天买了一本书。 — Вчера я купил одну книгу.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "我昨天买了一本书。",
+        "这本书二十块钱。",
+        "我们明天去商店。",
+        "请给我一杯茶。"
+      ]
+    }
+  ]
+}

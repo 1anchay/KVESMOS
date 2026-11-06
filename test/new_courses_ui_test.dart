@@ -13,14 +13,16 @@ import 'widget_test.dart' show flushDb;
 
 import 'package:orbitwords/domain/languages.dart';
 
-void main() {
+void main() => courseUiTests('en');
+
+void courseUiTests(String language) {
   setUpAll(setupSqlite);
   for (final id in [
-    for (var n = 21; n <= 40; n++) 'en-a1-$n',
+    for (var n = 21; n <= 60; n++) 'en-a1-$n',
     for (final lang in ['es', 'de', 'fr', 'zh'])
-      for (var n = 1; n <= (lang == 'es' || lang == 'de' ? 18 : 12); n++)
+      for (var n = 1; n <= (lang == 'es' || lang == 'de' ? 30 : 20); n++)
         '$lang-a1-${n.toString().padLeft(2, '0')}',
-  ]) {
+  ].where((id) => id.startsWith(language))) {
     testWidgets('$id completes through UI with language-specific fallback', (
       tester,
     ) async {
@@ -153,6 +155,8 @@ void main() {
           await tester.pumpAndSettle();
           await tester.enterText(find.byType(TextField), e.answers.first);
           await flushDb(tester);
+          FocusManager.instance.primaryFocus?.unfocus();
+          await tester.pumpAndSettle();
         }
         await tap(find.text('Проверить'));
         expect(app.progress.errors, 0, reason: e.id);
@@ -165,7 +169,7 @@ void main() {
         }
       }
       expect(app.progress.completed, contains(id));
-      expect(app.progress.xp, 120 + (number - 1) * 20);
+      expect(app.progress.xp, l.exercises.length * 10 + number * 20);
       expect(tester.takeException(), isNull);
       await tester.pumpWidget(const SizedBox.shrink());
       await tester.runAsync(r.db.close);

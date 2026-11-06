@@ -370,6 +370,192 @@
           ]
         }
       ]
+    },
+    {
+      "id": "en-v014",
+      "title": "Разговоры на каждый день",
+      "themes": [
+        {
+          "id": "en-v014-unit-1",
+          "title": "Вчера после работы",
+          "lessons": [
+            {
+              "id": "en-a1-41",
+              "title": "Вчера после работы",
+              "asset": "assets/courses/en-a1-41.json",
+              "order": 40
+            },
+            {
+              "id": "en-a1-42",
+              "title": "Где были ключи",
+              "asset": "assets/courses/en-a1-42.json",
+              "order": 41
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-2",
+          "title": "Как прошёл выходной",
+          "lessons": [
+            {
+              "id": "en-a1-43",
+              "title": "Как прошёл выходной",
+              "asset": "assets/courses/en-a1-43.json",
+              "order": 42
+            },
+            {
+              "id": "en-a1-44",
+              "title": "Небольшая история",
+              "asset": "assets/courses/en-a1-44.json",
+              "order": 43
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-3",
+          "title": "Помогу с коробками",
+          "lessons": [
+            {
+              "id": "en-a1-45",
+              "title": "Помогу с коробками",
+              "asset": "assets/courses/en-a1-45.json",
+              "order": 44
+            },
+            {
+              "id": "en-a1-46",
+              "title": "Запись в календаре",
+              "asset": "assets/courses/en-a1-46.json",
+              "order": 45
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-4",
+          "title": "План на случай дождя",
+          "lessons": [
+            {
+              "id": "en-a1-47",
+              "title": "План на случай дождя",
+              "asset": "assets/courses/en-a1-47.json",
+              "order": 46
+            },
+            {
+              "id": "en-a1-48",
+              "title": "Перенос встречи",
+              "asset": "assets/courses/en-a1-48.json",
+              "order": 47
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-5",
+          "title": "Уточнить подробности",
+          "lessons": [
+            {
+              "id": "en-a1-49",
+              "title": "Уточнить подробности",
+              "asset": "assets/courses/en-a1-49.json",
+              "order": 48
+            },
+            {
+              "id": "en-a1-50",
+              "title": "Дела по дому",
+              "asset": "assets/courses/en-a1-50.json",
+              "order": 49
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-6",
+          "title": "Правила библиотеки",
+          "lessons": [
+            {
+              "id": "en-a1-51",
+              "title": "Правила библиотеки",
+              "asset": "assets/courses/en-a1-51.json",
+              "order": 50
+            },
+            {
+              "id": "en-a1-52",
+              "title": "Инструкция к встрече",
+              "asset": "assets/courses/en-a1-52.json",
+              "order": 51
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-7",
+          "title": "Выбрать подходящий маршрут",
+          "lessons": [
+            {
+              "id": "en-a1-53",
+              "title": "Выбрать подходящий маршрут",
+              "asset": "assets/courses/en-a1-53.json",
+              "order": 52
+            },
+            {
+              "id": "en-a1-54",
+              "title": "Список для пикника",
+              "asset": "assets/courses/en-a1-54.json",
+              "order": 53
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-8",
+          "title": "Хватит ли времени",
+          "lessons": [
+            {
+              "id": "en-a1-55",
+              "title": "Хватит ли времени",
+              "asset": "assets/courses/en-a1-55.json",
+              "order": 54
+            },
+            {
+              "id": "en-a1-56",
+              "title": "Выбрать занятие",
+              "asset": "assets/courses/en-a1-56.json",
+              "order": 55
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-9",
+          "title": "Сообщение от соседа",
+          "lessons": [
+            {
+              "id": "en-a1-57",
+              "title": "Сообщение от соседа",
+              "asset": "assets/courses/en-a1-57.json",
+              "order": 56
+            },
+            {
+              "id": "en-a1-58",
+              "title": "Объяснить опоздание",
+              "asset": "assets/courses/en-a1-58.json",
+              "order": 57
+            }
+          ]
+        },
+        {
+          "id": "en-v014-unit-10",
+          "title": "Бюро находок",
+          "lessons": [
+            {
+              "id": "en-a1-59",
+              "title": "Бюро находок",
+              "asset": "assets/courses/en-a1-59.json",
+              "order": 58
+            },
+            {
+              "id": "en-a1-60",
+              "title": "Общий план команды",
+              "asset": "assets/courses/en-a1-60.json",
+              "order": 59
+            }
+          ]
+        }
+      ]
     }
   ]
 }

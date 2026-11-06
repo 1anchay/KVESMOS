@@ -1,0 +1,290 @@
+{
+  "id": "de-a1-25",
+  "title": "Разрешено или запрещено",
+  "topic": "Разрешено или запрещено",
+  "order": 24,
+  "objective": "Спросить разрешение и понять запрет.",
+  "guide": "Dürfen обозначает разрешение, nicht dürfen — запрет.",
+  "vocabulary": [
+    {
+      "id": "de:v014:25:p0",
+      "en": "Darf ich hier sitzen?",
+      "ru": "Можно мне здесь сесть?"
+    },
+    {
+      "id": "de:v014:25:p1",
+      "en": "Hier darf man nicht rauchen.",
+      "ru": "Здесь нельзя курить."
+    },
+    {
+      "id": "de:v014:25:p2",
+      "en": "Du darfst das Fenster öffnen.",
+      "ru": "Ты можешь открыть окно."
+    },
+    {
+      "id": "de:v014:25:p3",
+      "en": "Wir dürfen hier Fotos machen.",
+      "ru": "Нам разрешено здесь фотографировать."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Разрешено или запрещено",
+      "phrase": "Darf ich hier sitzen?",
+      "translation": "Можно мне здесь сесть?",
+      "explanation": "Dürfen обозначает разрешение, nicht dürfen — запрет."
+    },
+    {
+      "character": "miko",
+      "title": "Разрешено или запрещено",
+      "phrase": "Hier darf man nicht rauchen.",
+      "translation": "Здесь нельзя курить.",
+      "explanation": "Hier darf man nicht rauchen. — Здесь нельзя курить."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Разрешено или запрещено",
+      "phrase": "Du darfst das Fenster öffnen.",
+      "translation": "Ты можешь открыть окно.",
+      "explanation": "Du darfst das Fenster öffnen. — Ты можешь открыть окно."
+    },
+    {
+      "character": "orbi",
+      "title": "Разрешено или запрещено",
+      "phrase": "Wir dürfen hier Fotos machen.",
+      "translation": "Нам разрешено здесь фотографировать.",
+      "explanation": "Wir dürfen hier Fotos machen. — Нам разрешено здесь фотографировать."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Darf ich hier sitzen?",
+      "translation": "Можно мне здесь сесть?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Можно мне здесь сесть?",
+      "options": [
+        "Ты можешь открыть окно.",
+        "Можно мне здесь сесть?",
+        "Нам разрешено здесь фотографировать."
+      ],
+      "explanation": "Dürfen обозначает разрешение, nicht dürfen — запрет."
+    },
+    {
+      "id": "apply",
+      "phrase": "Hier darf man nicht rauchen.",
+      "translation": "Здесь нельзя курить.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Hier darf man nicht rauchen.",
+      "tokens": [
+        "Hier",
+        "darf",
+        "man",
+        "nicht",
+        "rauchen."
+      ],
+      "character": "miko",
+      "explanation": "Hier darf man nicht rauchen. — Здесь нельзя курить."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-25-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Можно мне здесь сесть?»?",
+      "answers": [
+        "Darf ich hier sitzen?"
+      ],
+      "explanation": "Darf ich hier sitzen? — Можно мне здесь сесть?",
+      "wordIds": [
+        "de:v014:25:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Hier darf man nicht rauchen.",
+        "Wir dürfen hier Fotos machen.",
+        "Darf ich hier sitzen?"
+      ],
+      "hint": "Darf ich hier sitzen? — Можно мне здесь сесть?"
+    },
+    {
+      "id": "de-a1-25-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Здесь нельзя курить.",
+      "answers": [
+        "Hier darf man nicht rauchen."
+      ],
+      "explanation": "Dürfen обозначает разрешение, nicht dürfen — запрет.",
+      "wordIds": [
+        "de:v014:25:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Hier",
+        "darf",
+        "man",
+        "nicht",
+        "rauchen."
+      ],
+      "hint": "Hier darf man nicht rauchen. — Здесь нельзя курить."
+    },
+    {
+      "id": "de-a1-25-e03",
+      "type": "dialogue",
+      "prompt": "Что разрешено?",
+      "answers": [
+        "Фотографировать."
+      ],
+      "explanation": "Фотографировать. Спросить разрешение и понять запрет.",
+      "wordIds": [
+        "de:v014:25:p0",
+        "de:v014:25:p1",
+        "de:v014:25:p2",
+        "de:v014:25:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Darf ich hier Fotos machen?\nМико: Ja, aber Sie dürfen hier nicht rauchen.",
+      "options": [
+        "Курить.",
+        "Ничего.",
+        "Фотографировать."
+      ]
+    },
+    {
+      "id": "de-a1-25-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ты можешь открыть окно."
+      ],
+      "explanation": "Du darfst das Fenster öffnen. — Ты можешь открыть окно.",
+      "wordIds": [
+        "de:v014:25:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Du darfst das Fenster öffnen.",
+      "options": [
+        "Можно мне здесь сесть?",
+        "Ты можешь открыть окно.",
+        "Здесь нельзя курить."
+      ],
+      "hint": "Du darfst das Fenster öffnen. — Ты можешь открыть окно."
+    },
+    {
+      "id": "de-a1-25-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v014:25:p0",
+        "de:v014:25:p1",
+        "de:v014:25:p2",
+        "de:v014:25:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v014:25:p0",
+          "en": "Darf ich hier sitzen?",
+          "ru": "Можно мне здесь сесть?"
+        },
+        {
+          "id": "de:v014:25:p1",
+          "en": "Hier darf man nicht rauchen.",
+          "ru": "Здесь нельзя курить."
+        },
+        {
+          "id": "de:v014:25:p2",
+          "en": "Du darfst das Fenster öffnen.",
+          "ru": "Ты можешь открыть окно."
+        },
+        {
+          "id": "de:v014:25:p3",
+          "en": "Wir dürfen hier Fotos machen.",
+          "ru": "Нам разрешено здесь фотографировать."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-25-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Darf ich hier sitze?",
+      "answers": [
+        "Darf ich hier sitzen?"
+      ],
+      "explanation": "После darf нужен инфинитив sitzen.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Darf ich hier sitze?",
+        "Darf ich hier sitzen?"
+      ],
+      "hint": "Dürfen обозначает разрешение, nicht dürfen — запрет."
+    },
+    {
+      "id": "de-a1-25-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Нам разрешено здесь фотографировать.». Можно написать вместо микрофона.",
+      "answers": [
+        "Wir dürfen hier Fotos machen."
+      ],
+      "explanation": "Wir dürfen hier Fotos machen. — Нам разрешено здесь фотографировать.",
+      "wordIds": [
+        "de:v014:25:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir dürfen hier Fotos machen.",
+      "recall": {
+        "phrase": "Wir dürfen hier Fotos machen.",
+        "meaning": "Нам разрешено здесь фотографировать."
+      }
+    },
+    {
+      "id": "de-a1-25-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Можно мне здесь сесть?",
+      "answers": [
+        "Darf ich hier sitzen?"
+      ],
+      "explanation": "Dürfen обозначает разрешение, nicht dürfen — запрет.",
+      "wordIds": [
+        "de:v014:25:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Darf ich hier sitzen?",
+        "meaning": "Можно мне здесь сесть?"
+      }
+    },
+    {
+      "id": "de-a1-25-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Тебе нужно завтра работать?",
+      "answers": [
+        "Musst du morgen arbeiten?"
+      ],
+      "explanation": "Musst du morgen arbeiten? — Тебе нужно завтра работать?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich muss heute lernen.",
+        "Wir müssen früh aufstehen.",
+        "Musst du morgen arbeiten?",
+        "Ich muss noch eine E-Mail schreiben."
+      ]
+    }
+  ]
+}

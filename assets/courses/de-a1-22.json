@@ -1,0 +1,255 @@
+{
+  "id": "de-a1-22",
+  "title": "Куда поставить коробку",
+  "topic": "Куда поставить коробку",
+  "order": 21,
+  "objective": "Различить положение и направление движения.",
+  "guide": "На вопрос wohin? при перемещении используем винительный: auf den Tisch.",
+  "vocabulary": [
+    {
+      "id": "de:v014:22:p0",
+      "en": "Stell die Kiste auf den Tisch.",
+      "ru": "Поставь ящик на стол."
+    },
+    {
+      "id": "de:v014:22:p1",
+      "en": "Ich lege das Buch in die Tasche.",
+      "ru": "Я кладу книгу в сумку."
+    },
+    {
+      "id": "de:v014:22:p2",
+      "en": "Die Kiste steht jetzt auf dem Tisch.",
+      "ru": "Ящик теперь стоит на столе."
+    },
+    {
+      "id": "de:v014:22:p3",
+      "en": "Das Buch ist jetzt in der Tasche.",
+      "ru": "Книга теперь в сумке."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Куда поставить коробку",
+      "phrase": "Stell die Kiste auf den Tisch.",
+      "translation": "Поставь ящик на стол.",
+      "explanation": "На вопрос wohin? при перемещении используем винительный: auf den Tisch."
+    },
+    {
+      "character": "miko",
+      "title": "Куда поставить коробку",
+      "phrase": "Ich lege das Buch in die Tasche.",
+      "translation": "Я кладу книгу в сумку.",
+      "explanation": "Ich lege das Buch in die Tasche. — Я кладу книгу в сумку."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Куда поставить коробку",
+      "phrase": "Die Kiste steht jetzt auf dem Tisch.",
+      "translation": "Ящик теперь стоит на столе.",
+      "explanation": "Die Kiste steht jetzt auf dem Tisch. — Ящик теперь стоит на столе."
+    },
+    {
+      "character": "orbi",
+      "title": "Куда поставить коробку",
+      "phrase": "Das Buch ist jetzt in der Tasche.",
+      "translation": "Книга теперь в сумке.",
+      "explanation": "Das Buch ist jetzt in der Tasche. — Книга теперь в сумке."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Stell die Kiste auf den Tisch.",
+      "translation": "Поставь ящик на стол.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Поставь ящик на стол.",
+      "options": [
+        "Ящик теперь стоит на столе.",
+        "Поставь ящик на стол.",
+        "Книга теперь в сумке."
+      ],
+      "explanation": "На вопрос wohin? при перемещении используем винительный: auf den Tisch."
+    },
+    {
+      "id": "apply",
+      "phrase": "Ich lege das Buch in die Tasche.",
+      "translation": "Я кладу книгу в сумку.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Ich lege das Buch in die Tasche.",
+      "tokens": [
+        "Ich",
+        "lege",
+        "das",
+        "Buch",
+        "in",
+        "die",
+        "Tasche."
+      ],
+      "character": "miko",
+      "explanation": "Ich lege das Buch in die Tasche. — Я кладу книгу в сумку."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-22-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Поставь ящик на стол.»?",
+      "answers": [
+        "Stell die Kiste auf den Tisch."
+      ],
+      "explanation": "Stell die Kiste auf den Tisch. — Поставь ящик на стол.",
+      "wordIds": [
+        "de:v014:22:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Ich lege das Buch in die Tasche.",
+        "Das Buch ist jetzt in der Tasche.",
+        "Stell die Kiste auf den Tisch."
+      ],
+      "hint": "Stell die Kiste auf den Tisch. — Поставь ящик на стол."
+    },
+    {
+      "id": "de-a1-22-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я кладу книгу в сумку.",
+      "answers": [
+        "Ich lege das Buch in die Tasche."
+      ],
+      "explanation": "На вопрос wohin? при перемещении используем винительный: auf den Tisch.",
+      "wordIds": [
+        "de:v014:22:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Ich",
+        "lege",
+        "das",
+        "Buch",
+        "in",
+        "die",
+        "Tasche."
+      ],
+      "hint": "Ich lege das Buch in die Tasche. — Я кладу книгу в сумку."
+    },
+    {
+      "id": "de-a1-22-e03",
+      "type": "dialogue",
+      "prompt": "Куда поставить ящик?",
+      "answers": [
+        "На стол."
+      ],
+      "explanation": "На стол. Различить положение и направление движения.",
+      "wordIds": [
+        "de:v014:22:p0",
+        "de:v014:22:p1",
+        "de:v014:22:p2",
+        "de:v014:22:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Wohin soll ich die Kiste stellen?\nМико: Auf den Tisch, bitte.",
+      "options": [
+        "Под стул.",
+        "В сумку.",
+        "На стол."
+      ]
+    },
+    {
+      "id": "de-a1-22-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ящик теперь стоит на столе."
+      ],
+      "explanation": "Die Kiste steht jetzt auf dem Tisch. — Ящик теперь стоит на столе.",
+      "wordIds": [
+        "de:v014:22:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Die Kiste steht jetzt auf dem Tisch.",
+      "options": [
+        "Поставь ящик на стол.",
+        "Ящик теперь стоит на столе.",
+        "Я кладу книгу в сумку."
+      ],
+      "hint": "Die Kiste steht jetzt auf dem Tisch. — Ящик теперь стоит на столе."
+    },
+    {
+      "id": "de-a1-22-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich lege das Buch in der Tasche.",
+      "answers": [
+        "Ich lege das Buch in die Tasche."
+      ],
+      "explanation": "Движение внутрь: wohin? — in die Tasche.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich lege das Buch in der Tasche.",
+        "Ich lege das Buch in die Tasche."
+      ],
+      "hint": "На вопрос wohin? при перемещении используем винительный: auf den Tisch."
+    },
+    {
+      "id": "de-a1-22-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Книга теперь в сумке.». Можно написать вместо микрофона.",
+      "answers": [
+        "Das Buch ist jetzt in der Tasche."
+      ],
+      "explanation": "Das Buch ist jetzt in der Tasche. — Книга теперь в сумке.",
+      "wordIds": [
+        "de:v014:22:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Das Buch ist jetzt in der Tasche.",
+      "recall": {
+        "phrase": "Das Buch ist jetzt in der Tasche.",
+        "meaning": "Книга теперь в сумке."
+      }
+    },
+    {
+      "id": "de-a1-22-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Поставь ящик на стол.",
+      "answers": [
+        "Stell die Kiste auf den Tisch."
+      ],
+      "explanation": "На вопрос wohin? при перемещении используем винительный: auf den Tisch.",
+      "wordIds": [
+        "de:v014:22:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Stell die Kiste auf den Tisch.",
+        "meaning": "Поставь ящик на стол."
+      }
+    },
+    {
+      "id": "de-a1-22-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Обувь под стулом.",
+      "answers": [
+        "Die Schuhe sind unter dem Stuhl."
+      ],
+      "explanation": "Die Schuhe sind unter dem Stuhl. — Обувь под стулом.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Das Paket ist im Flur.",
+        "Der Schlüssel liegt auf dem Tisch.",
+        "Die Jacke hängt an der Tür.",
+        "Die Schuhe sind unter dem Stuhl."
+      ]
+    }
+  ]
+}

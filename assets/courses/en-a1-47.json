@@ -1,0 +1,290 @@
+{
+  "id": "en-a1-47",
+  "title": "План на случай дождя",
+  "topic": "План на случай дождя",
+  "order": 46,
+  "objective": "Предложить простой план с условием.",
+  "guide": "После if в реальном условии о будущем используем настоящее время: if it rains.",
+  "vocabulary": [
+    {
+      "id": "en:v014:47:p0",
+      "en": "If it rains, we will stay home.",
+      "ru": "Если пойдёт дождь, мы останемся дома."
+    },
+    {
+      "id": "en:v014:47:p1",
+      "en": "We can watch a film.",
+      "ru": "Мы можем посмотреть фильм."
+    },
+    {
+      "id": "en:v014:47:p2",
+      "en": "If it is sunny, we will go out.",
+      "ru": "Если будет солнечно, мы пойдём гулять."
+    },
+    {
+      "id": "en:v014:47:p3",
+      "en": "I will check the weather.",
+      "ru": "Я проверю погоду."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "План на случай дождя",
+      "phrase": "If it rains, we will stay home.",
+      "translation": "Если пойдёт дождь, мы останемся дома.",
+      "explanation": "После if в реальном условии о будущем используем настоящее время: if it rains."
+    },
+    {
+      "character": "miko",
+      "title": "План на случай дождя",
+      "phrase": "We can watch a film.",
+      "translation": "Мы можем посмотреть фильм.",
+      "explanation": "We can watch a film. — Мы можем посмотреть фильм."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "План на случай дождя",
+      "phrase": "If it is sunny, we will go out.",
+      "translation": "Если будет солнечно, мы пойдём гулять.",
+      "explanation": "If it is sunny, we will go out. — Если будет солнечно, мы пойдём гулять."
+    },
+    {
+      "character": "orbi",
+      "title": "План на случай дождя",
+      "phrase": "I will check the weather.",
+      "translation": "Я проверю погоду.",
+      "explanation": "I will check the weather. — Я проверю погоду."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "If it rains, we will stay home.",
+      "translation": "Если пойдёт дождь, мы останемся дома.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Если пойдёт дождь, мы останемся дома.",
+      "options": [
+        "Если будет солнечно, мы пойдём гулять.",
+        "Если пойдёт дождь, мы останемся дома.",
+        "Я проверю погоду."
+      ],
+      "explanation": "После if в реальном условии о будущем используем настоящее время: if it rains."
+    },
+    {
+      "id": "apply",
+      "phrase": "We can watch a film.",
+      "translation": "Мы можем посмотреть фильм.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "We can watch a film.",
+      "tokens": [
+        "We",
+        "can",
+        "watch",
+        "a",
+        "film."
+      ],
+      "character": "miko",
+      "explanation": "We can watch a film. — Мы можем посмотреть фильм."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-47-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Если пойдёт дождь, мы останемся дома.»?",
+      "answers": [
+        "If it rains, we will stay home."
+      ],
+      "explanation": "If it rains, we will stay home. — Если пойдёт дождь, мы останемся дома.",
+      "wordIds": [
+        "en:v014:47:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "We can watch a film.",
+        "I will check the weather.",
+        "If it rains, we will stay home."
+      ],
+      "hint": "If it rains, we will stay home. — Если пойдёт дождь, мы останемся дома."
+    },
+    {
+      "id": "en-a1-47-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы можем посмотреть фильм.",
+      "answers": [
+        "We can watch a film."
+      ],
+      "explanation": "После if в реальном условии о будущем используем настоящее время: if it rains.",
+      "wordIds": [
+        "en:v014:47:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "We",
+        "can",
+        "watch",
+        "a",
+        "film."
+      ],
+      "hint": "We can watch a film. — Мы можем посмотреть фильм."
+    },
+    {
+      "id": "en-a1-47-e03",
+      "type": "dialogue",
+      "prompt": "Какой план на дождь?",
+      "answers": [
+        "Остаться дома и посмотреть фильм."
+      ],
+      "explanation": "Остаться дома и посмотреть фильм. Предложить простой план с условием.",
+      "wordIds": [
+        "en:v014:47:p0",
+        "en:v014:47:p1",
+        "en:v014:47:p2",
+        "en:v014:47:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: What will we do if it rains?\nМико: We will stay home and watch a film.",
+      "options": [
+        "Гулять под дождём.",
+        "Пойти на работу.",
+        "Остаться дома и посмотреть фильм."
+      ]
+    },
+    {
+      "id": "en-a1-47-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Если будет солнечно, мы пойдём гулять."
+      ],
+      "explanation": "If it is sunny, we will go out. — Если будет солнечно, мы пойдём гулять.",
+      "wordIds": [
+        "en:v014:47:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "If it is sunny, we will go out.",
+      "options": [
+        "Если пойдёт дождь, мы останемся дома.",
+        "Если будет солнечно, мы пойдём гулять.",
+        "Мы можем посмотреть фильм."
+      ],
+      "hint": "If it is sunny, we will go out. — Если будет солнечно, мы пойдём гулять."
+    },
+    {
+      "id": "en-a1-47-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:47:p0",
+        "en:v014:47:p1",
+        "en:v014:47:p2",
+        "en:v014:47:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:47:p0",
+          "en": "If it rains, we will stay home.",
+          "ru": "Если пойдёт дождь, мы останемся дома."
+        },
+        {
+          "id": "en:v014:47:p1",
+          "en": "We can watch a film.",
+          "ru": "Мы можем посмотреть фильм."
+        },
+        {
+          "id": "en:v014:47:p2",
+          "en": "If it is sunny, we will go out.",
+          "ru": "Если будет солнечно, мы пойдём гулять."
+        },
+        {
+          "id": "en:v014:47:p3",
+          "en": "I will check the weather.",
+          "ru": "Я проверю погоду."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-47-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: If it will rain, we will stay home.",
+      "answers": [
+        "If it rains, we will stay home."
+      ],
+      "explanation": "После if здесь нужно настоящее rains; will остаётся в результате.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "If it will rain, we will stay home.",
+        "If it rains, we will stay home."
+      ],
+      "hint": "После if в реальном условии о будущем используем настоящее время: if it rains."
+    },
+    {
+      "id": "en-a1-47-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я проверю погоду.». Можно написать вместо микрофона.",
+      "answers": [
+        "I will check the weather."
+      ],
+      "explanation": "I will check the weather. — Я проверю погоду.",
+      "wordIds": [
+        "en:v014:47:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I will check the weather.",
+      "recall": {
+        "phrase": "I will check the weather.",
+        "meaning": "Я проверю погоду."
+      }
+    },
+    {
+      "id": "en-a1-47-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Если пойдёт дождь, мы останемся дома.",
+      "answers": [
+        "If it rains, we will stay home."
+      ],
+      "explanation": "После if в реальном условии о будущем используем настоящее время: if it rains.",
+      "wordIds": [
+        "en:v014:47:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "If it rains, we will stay home.",
+        "meaning": "Если пойдёт дождь, мы останемся дома."
+      }
+    },
+    {
+      "id": "en-a1-47-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Ты идёшь с нами?",
+      "answers": [
+        "Are you coming with us?"
+      ],
+      "explanation": "Are you coming with us? — Ты идёшь с нами?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I am meeting Alex tomorrow.",
+        "We are having lunch at one.",
+        "Are you coming with us?",
+        "I am working that afternoon."
+      ]
+    }
+  ]
+}

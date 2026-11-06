@@ -1,0 +1,72 @@
+##
+Планы на завтра|Рассказать о ближайшем намерении.|Aller + инфинитив выражает ближайший план: je vais préparer.
+Je vais préparer le dîner.~Я собираюсь приготовить ужин.
+Nous allons inviter Léa.~Мы собираемся пригласить Леа.
+Tu vas venir demain ?~Ты придёшь завтра?
+Je vais apporter du pain.~Я принесу хлеб.
+Tu vas venir dîner demain ? / Oui, je vais apporter du pain.
+Что принесёт гость?|Хлеб.|Ужин целиком.|Цветы.
+Je vais prépare le dîner.~Je vais préparer le dîner.~После vais нужен инфинитив préparer.
+##
+Не сегодня|Вежливо отказаться и объяснить причину.|В письменном отрицании ne… pas окружает глагол; перед гласной ne становится n'.
+Je ne travaille pas aujourd'hui.~Я сегодня не работаю.
+Je n'ai pas de voiture.~У меня нет машины.
+Nous ne sommes pas libres ce soir.~Мы не свободны сегодня вечером.
+Je ne peux pas venir.~Я не могу прийти.
+Tu viens en voiture ? / Non, je n'ai pas de voiture. Je prends le bus.
+На чём едет собеседник?|На автобусе.|На своей машине.|На поезде.
+Je ne ai pas de voiture.~Je n'ai pas de voiture.~Перед ai используем сокращение n'.
+##
+Продукты для завтрака|Назвать количество продуктов.|После меры или количества используется de: un litre de lait, beaucoup de fruits.
+Il faut un litre de lait.~Нужен литр молока.
+Je prends deux kilos de pommes.~Я беру два килограмма яблок.
+Nous avons beaucoup de pain.~У нас много хлеба.
+Il reste un peu de fromage.~Осталось немного сыра.
+Est-ce qu'il faut du pain ? / Non, nous avons beaucoup de pain. Il faut du lait.
+Что нужно купить?|Молоко.|Ещё хлеб.|Только сыр.
+Je prends deux kilos des pommes.~Je prends deux kilos de pommes.~После kilos количество продукта вводится через de.
+##
+Обычное утро|Рассказать о распорядке и последовательности действий.|В возвратной форме je сочетается с me: je me lève.
+Je me lève à sept heures.~Я встаю в семь часов.
+Je prends le petit-déjeuner.~Я завтракаю.
+Ensuite, je vais au travail.~Затем я иду на работу.
+Je rentre à la maison à six heures.~Я возвращаюсь домой в шесть часов.
+À quelle heure tu te lèves ? / À sept heures. Ensuite, je prends le petit-déjeuner.
+Что происходит после подъёма?|Завтрак.|Возвращение домой.|Ужин.
+Je se lève à sept heures.~Je me lève à sept heures.~Для je выбираем me, а не se.
+##
+Уточнить время|Назвать точное время и понять половину часа.|Et demie добавляет полчаса; moins le quart означает без четверти.
+Le rendez-vous est à neuf heures et demie.~Встреча в половине десятого.
+Il est dix heures moins le quart.~Сейчас без четверти десять.
+Nous avons encore quinze minutes.~У нас ещё пятнадцать минут.
+Le train part à dix heures.~Поезд отправляется в десять.
+Il est dix heures moins le quart. Le train part à dix heures. / Nous avons encore quinze minutes.
+Сколько времени до поезда?|Пятнадцать минут.|Полчаса.|Час.
+Le train part en dix heures.~Le train part à dix heures.~Точное время отправления вводится через à.
+##
+Можно попросить|Вежливо попросить действие и предложить помощь.|Pouvoir + инфинитив обозначает возможность; pouvez-vous — вежливый вопрос.
+Pouvez-vous ouvrir la fenêtre ?~Можете открыть окно?
+Je peux vous aider.~Я могу вам помочь.
+Tu peux répéter, s'il te plaît ?~Можешь повторить, пожалуйста?
+Nous pouvons attendre ici.~Мы можем подождать здесь.
+Pouvez-vous ouvrir la fenêtre ? / Oui, bien sûr. Vous pouvez attendre ici.
+Что попросили сделать?|Открыть окно.|Закрыть дверь.|Уйти на улицу.
+Je peux vous aide.~Je peux vous aider.~После peux нужна начальная форма aider.
+##
+Что нужно сделать|Понять необходимое действие в инструкции.|Il faut + инфинитив выражает необходимость без указания конкретного человека.
+Il faut remplir ce formulaire.~Нужно заполнить эту анкету.
+Il faut écrire votre nom ici.~Нужно написать ваше имя здесь.
+Vous devez signer en bas.~Вы должны подписать внизу.
+Il ne faut pas oublier la date.~Нельзя забыть дату.
+Où dois-je signer ? / En bas du formulaire. Il faut aussi écrire la date.
+Что ещё нужно указать?|Дату.|Цену.|Время поезда.
+Il faut remplissez ce formulaire.~Il faut remplir ce formulaire.~После il faut используется инфинитив remplir.
+##
+Сообщение об изменении|Понять новую договорённость и подтвердить её.|Devant — перед объектом, près de — рядом с ним; à demain — до завтра.
+Je vais arriver un peu en retard.~Я немного опоздаю.
+Attends-moi devant la gare.~Подожди меня перед вокзалом.
+On peut prendre un café près de la gare.~Мы можем выпить кофе рядом с вокзалом.
+Merci de me prévenir.~Спасибо, что предупредил меня.
+Je vais arriver un peu en retard. / D'accord, je t'attends devant la gare.
+Где будут ждать?|Перед вокзалом.|Внутри поезда.|У дома.
+Je vais arrive un peu en retard.~Je vais arriver un peu en retard.~В ближайшем будущем после vais требуется arriver.

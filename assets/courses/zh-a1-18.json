@@ -1,0 +1,267 @@
+{
+  "id": "zh-a1-18",
+  "title": "Выбрать из двух",
+  "topic": "Выбрать из двух",
+  "order": 17,
+  "objective": "Предложить выбор напитка, времени или транспорта.",
+  "guide": "还是 связывает варианты вопроса; такой вопрос не требует 吗.",
+  "vocabulary": [
+    {
+      "id": "zh:v014:18:p0",
+      "en": "你喝茶还是咖啡？",
+      "ru": "Ты будешь чай или кофе?",
+      "pronunciation": "Nǐ hē chá háishi kāfēi?"
+    },
+    {
+      "id": "zh:v014:18:p1",
+      "en": "我想喝茶。",
+      "ru": "Я хочу чай.",
+      "pronunciation": "Wǒ xiǎng hē chá."
+    },
+    {
+      "id": "zh:v014:18:p2",
+      "en": "我们今天去还是明天去？",
+      "ru": "Мы пойдём сегодня или завтра?",
+      "pronunciation": "Wǒmen jīntiān qù háishi míngtiān qù?"
+    },
+    {
+      "id": "zh:v014:18:p3",
+      "en": "坐地铁还是坐公共汽车？",
+      "ru": "Поедем на метро или на автобусе?",
+      "pronunciation": "Zuò dìtiě háishi zuò gōnggòng qìchē?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Выбрать из двух",
+      "phrase": "你喝茶还是咖啡？",
+      "translation": "Ты будешь чай или кофе?",
+      "explanation": "还是 связывает варианты вопроса; такой вопрос не требует 吗.",
+      "pronunciation": "Nǐ hē chá háishi kāfēi?"
+    },
+    {
+      "character": "miko",
+      "title": "Выбрать из двух",
+      "phrase": "我想喝茶。",
+      "translation": "Я хочу чай.",
+      "explanation": "我想喝茶。 — Я хочу чай.",
+      "pronunciation": "Wǒ xiǎng hē chá."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Выбрать из двух",
+      "phrase": "我们今天去还是明天去？",
+      "translation": "Мы пойдём сегодня или завтра?",
+      "explanation": "我们今天去还是明天去？ — Мы пойдём сегодня или завтра?",
+      "pronunciation": "Wǒmen jīntiān qù háishi míngtiān qù?"
+    },
+    {
+      "character": "orbi",
+      "title": "Выбрать из двух",
+      "phrase": "坐地铁还是坐公共汽车？",
+      "translation": "Поедем на метро или на автобусе?",
+      "explanation": "坐地铁还是坐公共汽车？ — Поедем на метро или на автобусе?",
+      "pronunciation": "Zuò dìtiě háishi zuò gōnggòng qìchē?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "你喝茶还是咖啡？",
+      "translation": "Ты будешь чай или кофе?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Ты будешь чай или кофе?",
+      "options": [
+        "Мы пойдём сегодня или завтра?",
+        "Ты будешь чай или кофе?",
+        "Поедем на метро или на автобусе?"
+      ],
+      "explanation": "还是 связывает варианты вопроса; такой вопрос не требует 吗.",
+      "pronunciation": "Nǐ hē chá háishi kāfēi?"
+    },
+    {
+      "id": "apply",
+      "phrase": "我想喝茶。",
+      "translation": "Я хочу чай.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "我想喝茶。",
+      "tokens": [
+        "我",
+        "想",
+        "喝",
+        "茶"
+      ],
+      "character": "miko",
+      "explanation": "我想喝茶。 — Я хочу чай.",
+      "pronunciation": "Wǒ xiǎng hē chá."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "zh-a1-18-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Ты будешь чай или кофе?»?",
+      "answers": [
+        "你喝茶还是咖啡？"
+      ],
+      "explanation": "你喝茶还是咖啡？ — Ты будешь чай или кофе?",
+      "wordIds": [
+        "zh:v014:18:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "我想喝茶。",
+        "坐地铁还是坐公共汽车？",
+        "你喝茶还是咖啡？"
+      ],
+      "hint": "你喝茶还是咖啡？ — Ты будешь чай или кофе?",
+      "pronunciation": "Nǐ hē chá háishi kāfēi?"
+    },
+    {
+      "id": "zh-a1-18-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я хочу чай.",
+      "answers": [
+        "我想喝茶。"
+      ],
+      "explanation": "还是 связывает варианты вопроса; такой вопрос не требует 吗.",
+      "wordIds": [
+        "zh:v014:18:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "我",
+        "想",
+        "喝",
+        "茶"
+      ],
+      "hint": "我想喝茶。 — Я хочу чай.",
+      "pronunciation": "Wǒ xiǎng hē chá."
+    },
+    {
+      "id": "zh-a1-18-e03",
+      "type": "dialogue",
+      "prompt": "Что выбрали?",
+      "answers": [
+        "Чай."
+      ],
+      "explanation": "Чай. Предложить выбор напитка, времени или транспорта.",
+      "wordIds": [
+        "zh:v014:18:p0",
+        "zh:v014:18:p1",
+        "zh:v014:18:p2",
+        "zh:v014:18:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: 你喝茶还是咖啡？\nМико: 茶，谢谢。我晚上不喝咖啡。",
+      "options": [
+        "Кофе.",
+        "Оба напитка.",
+        "Чай."
+      ],
+      "scenePronunciation": "Nǐ hē chá háishi kāfēi?\nChá, xièxie. Wǒ wǎnshang bù hē kāfēi."
+    },
+    {
+      "id": "zh-a1-18-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы пойдём сегодня или завтра?"
+      ],
+      "explanation": "我们今天去还是明天去？ — Мы пойдём сегодня или завтра?",
+      "wordIds": [
+        "zh:v014:18:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "我们今天去还是明天去？",
+      "options": [
+        "Ты будешь чай или кофе?",
+        "Мы пойдём сегодня или завтра?",
+        "Я хочу чай."
+      ],
+      "hint": "我们今天去还是明天去？ — Мы пойдём сегодня или завтра?",
+      "pronunciation": "Wǒmen jīntiān qù háishi míngtiān qù?"
+    },
+    {
+      "id": "zh-a1-18-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: 你喝茶还是咖啡吗？",
+      "answers": [
+        "你喝茶还是咖啡？"
+      ],
+      "explanation": "В вопросе выбора с 还是 частица 吗 не нужна.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "你喝茶还是咖啡吗？",
+        "你喝茶还是咖啡？"
+      ],
+      "hint": "还是 связывает варианты вопроса; такой вопрос не требует 吗."
+    },
+    {
+      "id": "zh-a1-18-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Поедем на метро или на автобусе?». Можно написать вместо микрофона. Можно ответить иероглифами или пиньинем с тонами.",
+      "answers": [
+        "坐地铁还是坐公共汽车？",
+        "Zuò dìtiě háishi zuò gōnggòng qìchē?"
+      ],
+      "explanation": "坐地铁还是坐公共汽车？ — Поедем на метро или на автобусе?",
+      "wordIds": [
+        "zh:v014:18:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "坐地铁还是坐公共汽车？",
+      "recall": {
+        "phrase": "坐地铁还是坐公共汽车？",
+        "meaning": "Поедем на метро или на автобусе?"
+      },
+      "pronunciation": "Zuò dìtiě háishi zuò gōnggòng qìchē?"
+    },
+    {
+      "id": "zh-a1-18-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Ты будешь чай или кофе? Можно ответить иероглифами или пиньинем с тонами.",
+      "answers": [
+        "你喝茶还是咖啡？",
+        "Nǐ hē chá háishi kāfēi?"
+      ],
+      "explanation": "还是 связывает варианты вопроса; такой вопрос не требует 吗.",
+      "wordIds": [
+        "zh:v014:18:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "你喝茶还是咖啡？",
+        "meaning": "Ты будешь чай или кофе?"
+      },
+      "pronunciation": "Nǐ hē chá háishi kāfēi?"
+    },
+    {
+      "id": "zh-a1-18-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сколько стоит эта одежда?",
+      "answers": [
+        "这件衣服多少钱？"
+      ],
+      "explanation": "这件衣服多少钱？ — Сколько стоит эта одежда?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "我想买两本书。",
+        "这件衣服多少钱？",
+        "请给我三个苹果。",
+        "我要一杯热水。"
+      ]
+    }
+  ]
+}

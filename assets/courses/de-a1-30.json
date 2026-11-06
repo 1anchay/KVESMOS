@@ -1,0 +1,251 @@
+{
+  "id": "de-a1-30",
+  "title": "Короткое письмо другу",
+  "topic": "Короткое письмо другу",
+  "order": 29,
+  "objective": "Понять изменение договорённости и ответить.",
+  "guide": "Leider вводит сожаление; stattdessen — вместо этого.",
+  "vocabulary": [
+    {
+      "id": "de:v014:30:p0",
+      "en": "Leider kann ich heute nicht kommen.",
+      "ru": "К сожалению, я сегодня не могу прийти."
+    },
+    {
+      "id": "de:v014:30:p1",
+      "en": "Hast du stattdessen morgen Zeit?",
+      "ru": "У тебя вместо этого есть время завтра?"
+    },
+    {
+      "id": "de:v014:30:p2",
+      "en": "Wir können uns vor dem Kino treffen.",
+      "ru": "Мы можем встретиться перед кинотеатром."
+    },
+    {
+      "id": "de:v014:30:p3",
+      "en": "Schreib mir bitte kurz zurück.",
+      "ru": "Пожалуйста, ответь мне коротко."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Короткое письмо другу",
+      "phrase": "Leider kann ich heute nicht kommen.",
+      "translation": "К сожалению, я сегодня не могу прийти.",
+      "explanation": "Leider вводит сожаление; stattdessen — вместо этого."
+    },
+    {
+      "character": "miko",
+      "title": "Короткое письмо другу",
+      "phrase": "Hast du stattdessen morgen Zeit?",
+      "translation": "У тебя вместо этого есть время завтра?",
+      "explanation": "Hast du stattdessen morgen Zeit? — У тебя вместо этого есть время завтра?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Короткое письмо другу",
+      "phrase": "Wir können uns vor dem Kino treffen.",
+      "translation": "Мы можем встретиться перед кинотеатром.",
+      "explanation": "Wir können uns vor dem Kino treffen. — Мы можем встретиться перед кинотеатром."
+    },
+    {
+      "character": "orbi",
+      "title": "Короткое письмо другу",
+      "phrase": "Schreib mir bitte kurz zurück.",
+      "translation": "Пожалуйста, ответь мне коротко.",
+      "explanation": "Schreib mir bitte kurz zurück. — Пожалуйста, ответь мне коротко."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Leider kann ich heute nicht kommen.",
+      "translation": "К сожалению, я сегодня не могу прийти.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "К сожалению, я сегодня не могу прийти.",
+      "options": [
+        "Мы можем встретиться перед кинотеатром.",
+        "К сожалению, я сегодня не могу прийти.",
+        "Пожалуйста, ответь мне коротко."
+      ],
+      "explanation": "Leider вводит сожаление; stattdessen — вместо этого."
+    },
+    {
+      "id": "apply",
+      "phrase": "Hast du stattdessen morgen Zeit?",
+      "translation": "У тебя вместо этого есть время завтра?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Hast du stattdessen morgen Zeit?",
+      "tokens": [
+        "Hast",
+        "du",
+        "stattdessen",
+        "morgen",
+        "Zeit?"
+      ],
+      "character": "miko",
+      "explanation": "Hast du stattdessen morgen Zeit? — У тебя вместо этого есть время завтра?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-30-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «К сожалению, я сегодня не могу прийти.»?",
+      "answers": [
+        "Leider kann ich heute nicht kommen."
+      ],
+      "explanation": "Leider kann ich heute nicht kommen. — К сожалению, я сегодня не могу прийти.",
+      "wordIds": [
+        "de:v014:30:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Hast du stattdessen morgen Zeit?",
+        "Schreib mir bitte kurz zurück.",
+        "Leider kann ich heute nicht kommen."
+      ],
+      "hint": "Leider kann ich heute nicht kommen. — К сожалению, я сегодня не могу прийти."
+    },
+    {
+      "id": "de-a1-30-e02",
+      "type": "order",
+      "prompt": "Собери реплику: У тебя вместо этого есть время завтра?",
+      "answers": [
+        "Hast du stattdessen morgen Zeit?"
+      ],
+      "explanation": "Leider вводит сожаление; stattdessen — вместо этого.",
+      "wordIds": [
+        "de:v014:30:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Hast",
+        "du",
+        "stattdessen",
+        "morgen",
+        "Zeit?"
+      ],
+      "hint": "Hast du stattdessen morgen Zeit? — У тебя вместо этого есть время завтра?"
+    },
+    {
+      "id": "de-a1-30-e03",
+      "type": "dialogue",
+      "prompt": "Как изменился план?",
+      "answers": [
+        "Встреча завтра у кинотеатра."
+      ],
+      "explanation": "Встреча завтра у кинотеатра. Понять изменение договорённости и ответить.",
+      "wordIds": [
+        "de:v014:30:p0",
+        "de:v014:30:p1",
+        "de:v014:30:p2",
+        "de:v014:30:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Leider kann ich heute nicht kommen. Hast du morgen Zeit?\nМико: Ja, wir treffen uns vor dem Kino.",
+      "options": [
+        "Встреча сегодня дома.",
+        "Встреча отменена навсегда.",
+        "Встреча завтра у кинотеатра."
+      ]
+    },
+    {
+      "id": "de-a1-30-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы можем встретиться перед кинотеатром."
+      ],
+      "explanation": "Wir können uns vor dem Kino treffen. — Мы можем встретиться перед кинотеатром.",
+      "wordIds": [
+        "de:v014:30:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir können uns vor dem Kino treffen.",
+      "options": [
+        "К сожалению, я сегодня не могу прийти.",
+        "Мы можем встретиться перед кинотеатром.",
+        "У тебя вместо этого есть время завтра?"
+      ],
+      "hint": "Wir können uns vor dem Kino treffen. — Мы можем встретиться перед кинотеатром."
+    },
+    {
+      "id": "de-a1-30-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Leider ich kann heute nicht kommen.",
+      "answers": [
+        "Leider kann ich heute nicht kommen."
+      ],
+      "explanation": "После leider на втором месте стоит kann, затем ich.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Leider ich kann heute nicht kommen.",
+        "Leider kann ich heute nicht kommen."
+      ],
+      "hint": "Leider вводит сожаление; stattdessen — вместо этого."
+    },
+    {
+      "id": "de-a1-30-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Пожалуйста, ответь мне коротко.». Можно написать вместо микрофона.",
+      "answers": [
+        "Schreib mir bitte kurz zurück."
+      ],
+      "explanation": "Schreib mir bitte kurz zurück. — Пожалуйста, ответь мне коротко.",
+      "wordIds": [
+        "de:v014:30:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Schreib mir bitte kurz zurück.",
+      "recall": {
+        "phrase": "Schreib mir bitte kurz zurück.",
+        "meaning": "Пожалуйста, ответь мне коротко."
+      }
+    },
+    {
+      "id": "de-a1-30-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: К сожалению, я сегодня не могу прийти.",
+      "answers": [
+        "Leider kann ich heute nicht kommen."
+      ],
+      "explanation": "Leider вводит сожаление; stattdessen — вместо этого.",
+      "wordIds": [
+        "de:v014:30:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Leider kann ich heute nicht kommen.",
+        "meaning": "К сожалению, я сегодня не могу прийти."
+      }
+    },
+    {
+      "id": "de-a1-30-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Спасибо за твою помощь.",
+      "answers": [
+        "Danke für deine Hilfe."
+      ],
+      "explanation": "Danke für deine Hilfe. — Спасибо за твою помощь.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich bleibe zu Hause, weil ich krank bin.",
+        "Ich komme später, weil der Bus Verspätung hat.",
+        "Kannst du mir die Aufgabe schicken?",
+        "Danke für deine Hilfe."
+      ]
+    }
+  ]
+}

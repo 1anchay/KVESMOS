@@ -1,0 +1,251 @@
+{
+  "id": "en-a1-54",
+  "title": "Список для пикника",
+  "topic": "Список для пикника",
+  "order": 53,
+  "objective": "Различать количество исчисляемых продуктов и напитков.",
+  "guide": "How many — для счётных предметов; how much — для количества воды, еды как вещества.",
+  "vocabulary": [
+    {
+      "id": "en:v014:54:p0",
+      "en": "How many sandwiches do we need?",
+      "ru": "Сколько бутербродов нам нужно?"
+    },
+    {
+      "id": "en:v014:54:p1",
+      "en": "We need a little water.",
+      "ru": "Нам нужно немного воды."
+    },
+    {
+      "id": "en:v014:54:p2",
+      "en": "There are a few apples in the bag.",
+      "ru": "В сумке есть несколько яблок."
+    },
+    {
+      "id": "en:v014:54:p3",
+      "en": "We do not have much juice.",
+      "ru": "У нас немного сока."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Список для пикника",
+      "phrase": "How many sandwiches do we need?",
+      "translation": "Сколько бутербродов нам нужно?",
+      "explanation": "How many — для счётных предметов; how much — для количества воды, еды как вещества."
+    },
+    {
+      "character": "miko",
+      "title": "Список для пикника",
+      "phrase": "We need a little water.",
+      "translation": "Нам нужно немного воды.",
+      "explanation": "We need a little water. — Нам нужно немного воды."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Список для пикника",
+      "phrase": "There are a few apples in the bag.",
+      "translation": "В сумке есть несколько яблок.",
+      "explanation": "There are a few apples in the bag. — В сумке есть несколько яблок."
+    },
+    {
+      "character": "orbi",
+      "title": "Список для пикника",
+      "phrase": "We do not have much juice.",
+      "translation": "У нас немного сока.",
+      "explanation": "We do not have much juice. — У нас немного сока."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "How many sandwiches do we need?",
+      "translation": "Сколько бутербродов нам нужно?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Сколько бутербродов нам нужно?",
+      "options": [
+        "В сумке есть несколько яблок.",
+        "Сколько бутербродов нам нужно?",
+        "У нас немного сока."
+      ],
+      "explanation": "How many — для счётных предметов; how much — для количества воды, еды как вещества."
+    },
+    {
+      "id": "apply",
+      "phrase": "We need a little water.",
+      "translation": "Нам нужно немного воды.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "We need a little water.",
+      "tokens": [
+        "We",
+        "need",
+        "a",
+        "little",
+        "water."
+      ],
+      "character": "miko",
+      "explanation": "We need a little water. — Нам нужно немного воды."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-54-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Сколько бутербродов нам нужно?»?",
+      "answers": [
+        "How many sandwiches do we need?"
+      ],
+      "explanation": "How many sandwiches do we need? — Сколько бутербродов нам нужно?",
+      "wordIds": [
+        "en:v014:54:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "We need a little water.",
+        "We do not have much juice.",
+        "How many sandwiches do we need?"
+      ],
+      "hint": "How many sandwiches do we need? — Сколько бутербродов нам нужно?"
+    },
+    {
+      "id": "en-a1-54-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Нам нужно немного воды.",
+      "answers": [
+        "We need a little water."
+      ],
+      "explanation": "How many — для счётных предметов; how much — для количества воды, еды как вещества.",
+      "wordIds": [
+        "en:v014:54:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "We",
+        "need",
+        "a",
+        "little",
+        "water."
+      ],
+      "hint": "We need a little water. — Нам нужно немного воды."
+    },
+    {
+      "id": "en-a1-54-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "В сумке есть несколько яблок."
+      ],
+      "explanation": "There are a few apples in the bag. — В сумке есть несколько яблок.",
+      "wordIds": [
+        "en:v014:54:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "There are a few apples in the bag.",
+      "options": [
+        "Сколько бутербродов нам нужно?",
+        "В сумке есть несколько яблок.",
+        "Нам нужно немного воды."
+      ],
+      "hint": "There are a few apples in the bag. — В сумке есть несколько яблок."
+    },
+    {
+      "id": "en-a1-54-e03",
+      "type": "dialogue",
+      "prompt": "Сколько нужно бутербродов?",
+      "answers": [
+        "Шесть."
+      ],
+      "explanation": "Шесть. Различать количество исчисляемых продуктов и напитков.",
+      "wordIds": [
+        "en:v014:54:p0",
+        "en:v014:54:p1",
+        "en:v014:54:p2",
+        "en:v014:54:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: How many sandwiches do we need?\nМико: Six. We also need a little water.",
+      "options": [
+        "Немного воды.",
+        "Ни одного.",
+        "Шесть."
+      ]
+    },
+    {
+      "id": "en-a1-54-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: How much sandwiches do we need?",
+      "answers": [
+        "How many sandwiches do we need?"
+      ],
+      "explanation": "Sandwiches можно посчитать: спрашиваем how many.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "How much sandwiches do we need?",
+        "How many sandwiches do we need?"
+      ],
+      "hint": "How many — для счётных предметов; how much — для количества воды, еды как вещества."
+    },
+    {
+      "id": "en-a1-54-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «У нас немного сока.». Можно написать вместо микрофона.",
+      "answers": [
+        "We do not have much juice."
+      ],
+      "explanation": "We do not have much juice. — У нас немного сока.",
+      "wordIds": [
+        "en:v014:54:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "We do not have much juice.",
+      "recall": {
+        "phrase": "We do not have much juice.",
+        "meaning": "У нас немного сока."
+      }
+    },
+    {
+      "id": "en-a1-54-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Сколько бутербродов нам нужно?",
+      "answers": [
+        "How many sandwiches do we need?"
+      ],
+      "explanation": "How many — для счётных предметов; how much — для количества воды, еды как вещества.",
+      "wordIds": [
+        "en:v014:54:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "How many sandwiches do we need?",
+        "meaning": "Сколько бутербродов нам нужно?"
+      }
+    },
+    {
+      "id": "en-a1-54-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Этот маршрут удобнее.",
+      "answers": [
+        "This route is more comfortable."
+      ],
+      "explanation": "This route is more comfortable. — Этот маршрут удобнее.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "The train is faster than the bus.",
+        "This route is more comfortable.",
+        "The bus is less expensive.",
+        "Which option is better for you?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-23",
+  "title": "Приглашение на ужин",
+  "topic": "Приглашение на ужин",
+  "order": 22,
+  "objective": "Пригласить друга и объяснить отказ.",
+  "guide": "¿Quieres + глагол? — предложение; puedo/no puedo — могу/не могу.",
+  "vocabulary": [
+    {
+      "id": "es:v014:23:p0",
+      "en": "¿Quieres cenar con nosotros?",
+      "ru": "Хочешь поужинать с нами?"
+    },
+    {
+      "id": "es:v014:23:p1",
+      "en": "Hoy no puedo, lo siento.",
+      "ru": "Сегодня не могу, извини."
+    },
+    {
+      "id": "es:v014:23:p2",
+      "en": "¿Puedes venir el sábado?",
+      "ru": "Можешь прийти в субботу?"
+    },
+    {
+      "id": "es:v014:23:p3",
+      "en": "Sí, llevo una ensalada.",
+      "ru": "Да, я принесу салат."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Приглашение на ужин",
+      "phrase": "¿Quieres cenar con nosotros?",
+      "translation": "Хочешь поужинать с нами?",
+      "explanation": "¿Quieres + глагол? — предложение; puedo/no puedo — могу/не могу."
+    },
+    {
+      "character": "miko",
+      "title": "Приглашение на ужин",
+      "phrase": "Hoy no puedo, lo siento.",
+      "translation": "Сегодня не могу, извини.",
+      "explanation": "Hoy no puedo, lo siento. — Сегодня не могу, извини."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Приглашение на ужин",
+      "phrase": "¿Puedes venir el sábado?",
+      "translation": "Можешь прийти в субботу?",
+      "explanation": "¿Puedes venir el sábado? — Можешь прийти в субботу?"
+    },
+    {
+      "character": "orbi",
+      "title": "Приглашение на ужин",
+      "phrase": "Sí, llevo una ensalada.",
+      "translation": "Да, я принесу салат.",
+      "explanation": "Sí, llevo una ensalada. — Да, я принесу салат."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "¿Quieres cenar con nosotros?",
+      "translation": "Хочешь поужинать с нами?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Хочешь поужинать с нами?",
+      "options": [
+        "Можешь прийти в субботу?",
+        "Хочешь поужинать с нами?",
+        "Да, я принесу салат."
+      ],
+      "explanation": "¿Quieres + глагол? — предложение; puedo/no puedo — могу/не могу."
+    },
+    {
+      "id": "apply",
+      "phrase": "Hoy no puedo, lo siento.",
+      "translation": "Сегодня не могу, извини.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Hoy no puedo, lo siento.",
+      "tokens": [
+        "Hoy",
+        "no",
+        "puedo,",
+        "lo",
+        "siento."
+      ],
+      "character": "miko",
+      "explanation": "Hoy no puedo, lo siento. — Сегодня не могу, извини."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-23-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Хочешь поужинать с нами?»?",
+      "answers": [
+        "¿Quieres cenar con nosotros?"
+      ],
+      "explanation": "¿Quieres cenar con nosotros? — Хочешь поужинать с нами?",
+      "wordIds": [
+        "es:v014:23:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Hoy no puedo, lo siento.",
+        "Sí, llevo una ensalada.",
+        "¿Quieres cenar con nosotros?"
+      ],
+      "hint": "¿Quieres cenar con nosotros? — Хочешь поужинать с нами?"
+    },
+    {
+      "id": "es-a1-23-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Сегодня не могу, извини.",
+      "answers": [
+        "Hoy no puedo, lo siento."
+      ],
+      "explanation": "¿Quieres + глагол? — предложение; puedo/no puedo — могу/не могу.",
+      "wordIds": [
+        "es:v014:23:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Hoy",
+        "no",
+        "puedo,",
+        "lo",
+        "siento."
+      ],
+      "hint": "Hoy no puedo, lo siento. — Сегодня не могу, извини."
+    },
+    {
+      "id": "es-a1-23-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Можешь прийти в субботу?"
+      ],
+      "explanation": "¿Puedes venir el sábado? — Можешь прийти в субботу?",
+      "wordIds": [
+        "es:v014:23:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Puedes venir el sábado?",
+      "options": [
+        "Хочешь поужинать с нами?",
+        "Можешь прийти в субботу?",
+        "Сегодня не могу, извини."
+      ],
+      "hint": "¿Puedes venir el sábado? — Можешь прийти в субботу?"
+    },
+    {
+      "id": "es-a1-23-e03",
+      "type": "dialogue",
+      "prompt": "Когда гость предлагает встретиться?",
+      "answers": [
+        "В субботу."
+      ],
+      "explanation": "В субботу. Пригласить друга и объяснить отказ.",
+      "wordIds": [
+        "es:v014:23:p0",
+        "es:v014:23:p1",
+        "es:v014:23:p2",
+        "es:v014:23:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Quieres cenar con nosotros hoy?\nМико: Hoy no puedo. ¿El sábado está bien?",
+      "options": [
+        "Сегодня утром.",
+        "В воскресенье.",
+        "В субботу."
+      ]
+    },
+    {
+      "id": "es-a1-23-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v014:23:p0",
+        "es:v014:23:p1",
+        "es:v014:23:p2",
+        "es:v014:23:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v014:23:p0",
+          "en": "¿Quieres cenar con nosotros?",
+          "ru": "Хочешь поужинать с нами?"
+        },
+        {
+          "id": "es:v014:23:p1",
+          "en": "Hoy no puedo, lo siento.",
+          "ru": "Сегодня не могу, извини."
+        },
+        {
+          "id": "es:v014:23:p2",
+          "en": "¿Puedes venir el sábado?",
+          "ru": "Можешь прийти в субботу?"
+        },
+        {
+          "id": "es:v014:23:p3",
+          "en": "Sí, llevo una ensalada.",
+          "ru": "Да, я принесу салат."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-23-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: ¿Quieres cenas con nosotros?",
+      "answers": [
+        "¿Quieres cenar con nosotros?"
+      ],
+      "explanation": "После quieres действие стоит в инфинитиве cenar.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "¿Quieres cenas con nosotros?",
+        "¿Quieres cenar con nosotros?"
+      ],
+      "hint": "¿Quieres + глагол? — предложение; puedo/no puedo — могу/не могу."
+    },
+    {
+      "id": "es-a1-23-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Да, я принесу салат.». Можно написать вместо микрофона.",
+      "answers": [
+        "Sí, llevo una ensalada."
+      ],
+      "explanation": "Sí, llevo una ensalada. — Да, я принесу салат.",
+      "wordIds": [
+        "es:v014:23:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Sí, llevo una ensalada.",
+      "recall": {
+        "phrase": "Sí, llevo una ensalada.",
+        "meaning": "Да, я принесу салат."
+      }
+    },
+    {
+      "id": "es-a1-23-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Хочешь поужинать с нами?",
+      "answers": [
+        "¿Quieres cenar con nosotros?"
+      ],
+      "explanation": "¿Quieres + глагол? — предложение; puedo/no puedo — могу/не могу.",
+      "wordIds": [
+        "es:v014:23:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "¿Quieres cenar con nosotros?",
+        "meaning": "Хочешь поужинать с нами?"
+      }
+    },
+    {
+      "id": "es-a1-23-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мне нужно сегодня учиться.",
+      "answers": [
+        "Tengo que estudiar hoy."
+      ],
+      "explanation": "Tengo que estudiar hoy. — Мне нужно сегодня учиться.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Tengo que estudiar hoy.",
+        "Tenemos que comprar pan.",
+        "¿Tienes que trabajar mañana?",
+        "No tengo que salir ahora."
+      ]
+    }
+  ]
+}

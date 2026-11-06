@@ -1,0 +1,22 @@
+{
+  "settings": {
+    "before": 118,
+    "after": 179,
+    "changedOrMissingOldRows": 0
+  },
+  "lesson_packs": {
+    "before": 100,
+    "after": 160,
+    "changedOrMissingOldRows": 0
+  },
+  "sessions": {
+    "before": 4,
+    "after": 4,
+    "changedOrMissingOldRows": 0
+  },
+  "events": {
+    "before": 13,
+    "after": 13,
+    "changedOrMissingOldRows": 0
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "id": "es-a1-28",
+  "title": "Погода меняет план",
+  "topic": "Погода меняет план",
+  "order": 27,
+  "objective": "Объяснить выбор занятия погодой.",
+  "guide": "О погоде часто говорят hace frío/calor; дождь — llueve.",
+  "vocabulary": [
+    {
+      "id": "es:v014:28:p0",
+      "en": "Hoy hace mucho frío.",
+      "ru": "Сегодня очень холодно."
+    },
+    {
+      "id": "es:v014:28:p1",
+      "en": "Está lloviendo.",
+      "ru": "Сейчас идёт дождь."
+    },
+    {
+      "id": "es:v014:28:p2",
+      "en": "Prefiero quedarme en casa.",
+      "ru": "Я предпочитаю остаться дома."
+    },
+    {
+      "id": "es:v014:28:p3",
+      "en": "Mañana podemos salir.",
+      "ru": "Завтра мы можем пойти гулять."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Погода меняет план",
+      "phrase": "Hoy hace mucho frío.",
+      "translation": "Сегодня очень холодно.",
+      "explanation": "О погоде часто говорят hace frío/calor; дождь — llueve."
+    },
+    {
+      "character": "miko",
+      "title": "Погода меняет план",
+      "phrase": "Está lloviendo.",
+      "translation": "Сейчас идёт дождь.",
+      "explanation": "Está lloviendo. — Сейчас идёт дождь."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Погода меняет план",
+      "phrase": "Prefiero quedarme en casa.",
+      "translation": "Я предпочитаю остаться дома.",
+      "explanation": "Prefiero quedarme en casa. — Я предпочитаю остаться дома."
+    },
+    {
+      "character": "orbi",
+      "title": "Погода меняет план",
+      "phrase": "Mañana podemos salir.",
+      "translation": "Завтра мы можем пойти гулять.",
+      "explanation": "Mañana podemos salir. — Завтра мы можем пойти гулять."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Hoy hace mucho frío.",
+      "translation": "Сегодня очень холодно.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Сегодня очень холодно.",
+      "options": [
+        "Я предпочитаю остаться дома.",
+        "Сегодня очень холодно.",
+        "Завтра мы можем пойти гулять."
+      ],
+      "explanation": "О погоде часто говорят hace frío/calor; дождь — llueve."
+    },
+    {
+      "id": "apply",
+      "phrase": "Está lloviendo.",
+      "translation": "Сейчас идёт дождь.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Está lloviendo.",
+      "tokens": [
+        "Está",
+        "lloviendo."
+      ],
+      "character": "miko",
+      "explanation": "Está lloviendo. — Сейчас идёт дождь."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-28-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Сегодня очень холодно.»?",
+      "answers": [
+        "Hoy hace mucho frío."
+      ],
+      "explanation": "Hoy hace mucho frío. — Сегодня очень холодно.",
+      "wordIds": [
+        "es:v014:28:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Está lloviendo.",
+        "Mañana podemos salir.",
+        "Hoy hace mucho frío."
+      ],
+      "hint": "Hoy hace mucho frío. — Сегодня очень холодно."
+    },
+    {
+      "id": "es-a1-28-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Сейчас идёт дождь.",
+      "answers": [
+        "Está lloviendo."
+      ],
+      "explanation": "О погоде часто говорят hace frío/calor; дождь — llueve.",
+      "wordIds": [
+        "es:v014:28:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Está",
+        "lloviendo."
+      ],
+      "hint": "Está lloviendo. — Сейчас идёт дождь."
+    },
+    {
+      "id": "es-a1-28-e03",
+      "type": "dialogue",
+      "prompt": "Почему не идут в парк?",
+      "answers": [
+        "Холодно и идёт дождь."
+      ],
+      "explanation": "Холодно и идёт дождь. Объяснить выбор занятия погодой.",
+      "wordIds": [
+        "es:v014:28:p0",
+        "es:v014:28:p1",
+        "es:v014:28:p2",
+        "es:v014:28:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Vamos al parque?\nМико: Hoy hace frío y está lloviendo. Prefiero quedarme en casa.",
+      "options": [
+        "Парк далеко.",
+        "Завтра работа.",
+        "Холодно и идёт дождь."
+      ]
+    },
+    {
+      "id": "es-a1-28-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я предпочитаю остаться дома."
+      ],
+      "explanation": "Prefiero quedarme en casa. — Я предпочитаю остаться дома.",
+      "wordIds": [
+        "es:v014:28:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Prefiero quedarme en casa.",
+      "options": [
+        "Сегодня очень холодно.",
+        "Я предпочитаю остаться дома.",
+        "Сейчас идёт дождь."
+      ],
+      "hint": "Prefiero quedarme en casa. — Я предпочитаю остаться дома."
+    },
+    {
+      "id": "es-a1-28-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Hoy es mucho frío.",
+      "answers": [
+        "Hoy hace mucho frío."
+      ],
+      "explanation": "Для погоды «холодно» используем hace frío.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Hoy es mucho frío.",
+        "Hoy hace mucho frío."
+      ],
+      "hint": "О погоде часто говорят hace frío/calor; дождь — llueve."
+    },
+    {
+      "id": "es-a1-28-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Завтра мы можем пойти гулять.». Можно написать вместо микрофона.",
+      "answers": [
+        "Mañana podemos salir."
+      ],
+      "explanation": "Mañana podemos salir. — Завтра мы можем пойти гулять.",
+      "wordIds": [
+        "es:v014:28:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Mañana podemos salir.",
+      "recall": {
+        "phrase": "Mañana podemos salir.",
+        "meaning": "Завтра мы можем пойти гулять."
+      }
+    },
+    {
+      "id": "es-a1-28-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Сегодня очень холодно.",
+      "answers": [
+        "Hoy hace mucho frío."
+      ],
+      "explanation": "О погоде часто говорят hace frío/calor; дождь — llueve.",
+      "wordIds": [
+        "es:v014:28:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Hoy hace mucho frío.",
+        "meaning": "Сегодня очень холодно."
+      }
+    },
+    {
+      "id": "es-a1-28-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мне нужна бутылка воды.",
+      "answers": [
+        "Necesito una botella de agua."
+      ],
+      "explanation": "Necesito una botella de agua. — Мне нужна бутылка воды.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Quiero medio kilo de tomates.",
+        "Necesito una botella de agua.",
+        "¿Tiene pan integral?",
+        "Eso es todo, gracias."
+      ]
+    }
+  ]
+}

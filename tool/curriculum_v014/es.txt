@@ -1,0 +1,108 @@
+##
+Утро перед работой|Рассказать о подъёме и подготовке к работе.|Me levanto — я встаю; возвратное me стоит перед глаголом.
+Me levanto a las siete.~Я встаю в семь.
+Me ducho por la mañana.~Я принимаю душ утром.
+Después desayuno en casa.~Потом я завтракаю дома.
+Salgo de casa a las ocho.~Я выхожу из дома в восемь.
+¿A qué hora te levantas? / Me levanto a las siete y salgo a las ocho.
+Когда человек выходит из дома?|В восемь.|В семь.|В полдень.
+Yo se levanto a las siete.~Yo me levanto a las siete.~Для yo возвратная форма — me, а не se.
+##
+Не каждый день|Описать частоту привычных занятий.|Todos los días — каждый день; nunca перед глаголом уже выражает отрицание.
+Camino todos los días.~Я гуляю каждый день.
+A veces trabajo en casa.~Иногда я работаю дома.
+Nunca tomo café por la noche.~Я никогда не пью кофе вечером.
+Los domingos descanso.~По воскресеньям я отдыхаю.
+¿Trabajas en casa todos los días? / No, solo a veces. Los domingos descanso.
+Как часто человек работает дома?|Иногда.|Каждый день.|Каждое воскресенье.
+Yo caminas todos los días.~Yo camino todos los días.~С yo глагол caminar имеет форму camino.
+##
+Что нравится друзьям|Сказать, какие занятия и вещи нравятся.|Me gusta + одно существительное или действие; me gustan + несколько предметов.
+Me gusta cocinar.~Мне нравится готовить.
+Me gustan las películas españolas.~Мне нравятся испанские фильмы.
+¿Te gusta esta canción?~Тебе нравится эта песня?
+A mi hermana le gusta bailar.~Моей сестре нравится танцевать.
+¿Te gusta bailar? / A mí me gusta cocinar, pero a mi hermana le gusta bailar.
+Кому нравится танцевать?|Сестре.|Обоим одинаково.|Никому.
+Me gusta las películas españolas.~Me gustan las películas españolas.~Las películas — множественное число: gustan.
+##
+Нужно сделать сегодня|Объяснить личную обязанность.|Tener que + глагол обозначает необходимость: tengo que estudiar.
+Tengo que estudiar hoy.~Мне нужно сегодня учиться.
+Tenemos que comprar pan.~Нам нужно купить хлеб.
+¿Tienes que trabajar mañana?~Тебе нужно завтра работать?
+No tengo que salir ahora.~Мне не нужно сейчас выходить.
+¿Tienes que trabajar mañana? / No, pero tengo que estudiar hoy.
+Что нужно сделать сегодня?|Поучиться.|Пойти на работу завтра.|Уехать прямо сейчас.
+Tengo estudiar hoy.~Tengo que estudiar hoy.~Между tengo и действием требуется que.
+##
+Приглашение на ужин|Пригласить друга и объяснить отказ.|¿Quieres + глагол? — предложение; puedo/no puedo — могу/не могу.
+¿Quieres cenar con nosotros?~Хочешь поужинать с нами?
+Hoy no puedo, lo siento.~Сегодня не могу, извини.
+¿Puedes venir el sábado?~Можешь прийти в субботу?
+Sí, llevo una ensalada.~Да, я принесу салат.
+¿Quieres cenar con nosotros hoy? / Hoy no puedo. ¿El sábado está bien?
+Когда гость предлагает встретиться?|В субботу.|Сегодня утром.|В воскресенье.
+¿Quieres cenas con nosotros?~¿Quieres cenar con nosotros?~После quieres действие стоит в инфинитиве cenar.
+##
+Часы работы|Понять расписание учреждения.|De… a… задаёт промежуток; abre/cierra — открывается/закрывается.
+La biblioteca abre a las nueve.~Библиотека открывается в девять.
+Cierra a las seis de la tarde.~Она закрывается в шесть вечера.
+Está abierta de lunes a viernes.~Она открыта с понедельника по пятницу.
+El domingo está cerrada.~В воскресенье она закрыта.
+¿La biblioteca abre el domingo? / No, está abierta de lunes a viernes.
+В какой день библиотека закрыта?|В воскресенье.|В понедельник.|В пятницу.
+La biblioteca está abierto.~La biblioteca está abierta.~Biblioteca — женского рода: abierta.
+##
+Сколько длится дорога|Спросить о длительности поездки.|Cuánto tarda спрашивает о затраченном времени, cuánto cuesta — о цене.
+¿Cuánto tarda el autobús?~Сколько времени идёт автобус?
+El viaje dura veinte minutos.~Поездка длится двадцать минут.
+La estación está cerca.~Станция находится близко.
+Podemos ir a pie.~Мы можем пойти пешком.
+¿Cuánto dura el viaje en autobús? / Veinte minutos, pero podemos ir a pie.
+Что значит veinte minutos?|Длительность поездки.|Цена билета.|Время отправления.
+El viaje duran veinte minutos.~El viaje dura veinte minutos.~El viaje — единственное число: dura.
+##
+Плохая связь|Попросить собеседника повторить информацию.|¿Puedes repetir? — просьба повторить; más despacio — медленнее.
+No te oigo bien.~Я тебя плохо слышу.
+¿Puedes repetir la dirección?~Можешь повторить адрес?
+Habla más despacio, por favor.~Говори медленнее, пожалуйста.
+Te envío un mensaje.~Я отправлю тебе сообщение.
+No te oigo bien. ¿Puedes repetir la dirección? / Mejor te envío un mensaje.
+Как передадут адрес?|Сообщением.|Только на бумаге.|Через продавца.
+¿Puedes repites la dirección?~¿Puedes repetir la dirección?~После puedes используем инфинитив repetir.
+##
+Покупки для обеда|Заказать вес и количество продуктов.|После kilo, botella и litro продукт присоединяется через de.
+Quiero medio kilo de tomates.~Я хочу полкило помидоров.
+Necesito una botella de agua.~Мне нужна бутылка воды.
+¿Tiene pan integral?~У вас есть цельнозерновой хлеб?
+Eso es todo, gracias.~Это всё, спасибо.
+¿Cuántos tomates quiere? / Medio kilo y una botella de agua, por favor.
+Сколько помидоров попросили?|Полкило.|Одну бутылку.|Два килограмма.
+Quiero medio kilo tomates.~Quiero medio kilo de tomates.~После меры medio kilo нужен предлог de.
+##
+Погода меняет план|Объяснить выбор занятия погодой.|О погоде часто говорят hace frío/calor; дождь — llueve.
+Hoy hace mucho frío.~Сегодня очень холодно.
+Está lloviendo.~Сейчас идёт дождь.
+Prefiero quedarme en casa.~Я предпочитаю остаться дома.
+Mañana podemos salir.~Завтра мы можем пойти гулять.
+¿Vamos al parque? / Hoy hace frío y está lloviendo. Prefiero quedarme en casa.
+Почему не идут в парк?|Холодно и идёт дождь.|Парк далеко.|Завтра работа.
+Hoy es mucho frío.~Hoy hace mucho frío.~Для погоды «холодно» используем hace frío.
+##
+Пересадка в метро|Уточнить линию, пересадку и выход.|Tener que + cambiar обозначает необходимость пересадки.
+Tengo que cambiar de línea.~Мне нужно пересесть на другую линию.
+¿Dónde está la línea dos?~Где вторая линия?
+Baja en la próxima estación.~Выйди на следующей станции.
+La salida está a la derecha.~Выход находится справа.
+¿Dónde tengo que cambiar de línea? / En la próxima estación. Busca la línea dos.
+Где сделать пересадку?|На следующей станции.|У выхода из дома.|Через две станции.
+La salida están a la derecha.~La salida está a la derecha.~La salida — единственное число: está.
+##
+Сообщение о встрече|Прочитать сообщение и подтвердить место и время.|Nos vemos — увидимся; delante de — перед, снаружи у объекта.
+Nos vemos delante del cine.~Увидимся перед кинотеатром.
+Voy a llegar diez minutos tarde.~Я опоздаю на десять минут.
+Te espero junto a la entrada.~Я подожду тебя у входа.
+Gracias por avisar.~Спасибо, что предупредил.
+Voy a llegar diez minutos tarde. / No pasa nada. Te espero junto a la entrada del cine.
+Где будет ждать собеседник?|У входа в кинотеатр.|На станции.|Внутри магазина.
+Voy llegar diez minutos tarde.~Voy a llegar diez minutos tarde.~В конструкции ближайшего будущего ir a требуется a.

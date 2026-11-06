@@ -1,0 +1,288 @@
+{
+  "id": "de-a1-23",
+  "title": "Позвоню после работы",
+  "topic": "Позвоню после работы",
+  "order": 22,
+  "objective": "Понять отделяемую приставку в предложении.",
+  "guide": "У anrufen приставка an в простом главном предложении уходит в конец.",
+  "vocabulary": [
+    {
+      "id": "de:v014:23:p0",
+      "en": "Ich rufe dich heute an.",
+      "ru": "Я позвоню тебе сегодня."
+    },
+    {
+      "id": "de:v014:23:p1",
+      "en": "Wann kommst du zurück?",
+      "ru": "Когда ты вернёшься?"
+    },
+    {
+      "id": "de:v014:23:p2",
+      "en": "Ich komme um sechs zurück.",
+      "ru": "Я вернусь в шесть."
+    },
+    {
+      "id": "de:v014:23:p3",
+      "en": "Wir sehen heute Abend fern.",
+      "ru": "Мы сегодня вечером смотрим телевизор."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Позвоню после работы",
+      "phrase": "Ich rufe dich heute an.",
+      "translation": "Я позвоню тебе сегодня.",
+      "explanation": "У anrufen приставка an в простом главном предложении уходит в конец."
+    },
+    {
+      "character": "miko",
+      "title": "Позвоню после работы",
+      "phrase": "Wann kommst du zurück?",
+      "translation": "Когда ты вернёшься?",
+      "explanation": "Wann kommst du zurück? — Когда ты вернёшься?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Позвоню после работы",
+      "phrase": "Ich komme um sechs zurück.",
+      "translation": "Я вернусь в шесть.",
+      "explanation": "Ich komme um sechs zurück. — Я вернусь в шесть."
+    },
+    {
+      "character": "orbi",
+      "title": "Позвоню после работы",
+      "phrase": "Wir sehen heute Abend fern.",
+      "translation": "Мы сегодня вечером смотрим телевизор.",
+      "explanation": "Wir sehen heute Abend fern. — Мы сегодня вечером смотрим телевизор."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich rufe dich heute an.",
+      "translation": "Я позвоню тебе сегодня.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я позвоню тебе сегодня.",
+      "options": [
+        "Я вернусь в шесть.",
+        "Я позвоню тебе сегодня.",
+        "Мы сегодня вечером смотрим телевизор."
+      ],
+      "explanation": "У anrufen приставка an в простом главном предложении уходит в конец."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wann kommst du zurück?",
+      "translation": "Когда ты вернёшься?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wann kommst du zurück?",
+      "tokens": [
+        "Wann",
+        "kommst",
+        "du",
+        "zurück?"
+      ],
+      "character": "miko",
+      "explanation": "Wann kommst du zurück? — Когда ты вернёшься?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-23-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я позвоню тебе сегодня.»?",
+      "answers": [
+        "Ich rufe dich heute an."
+      ],
+      "explanation": "Ich rufe dich heute an. — Я позвоню тебе сегодня.",
+      "wordIds": [
+        "de:v014:23:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wann kommst du zurück?",
+        "Wir sehen heute Abend fern.",
+        "Ich rufe dich heute an."
+      ],
+      "hint": "Ich rufe dich heute an. — Я позвоню тебе сегодня."
+    },
+    {
+      "id": "de-a1-23-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Когда ты вернёшься?",
+      "answers": [
+        "Wann kommst du zurück?"
+      ],
+      "explanation": "У anrufen приставка an в простом главном предложении уходит в конец.",
+      "wordIds": [
+        "de:v014:23:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wann",
+        "kommst",
+        "du",
+        "zurück?"
+      ],
+      "hint": "Wann kommst du zurück? — Когда ты вернёшься?"
+    },
+    {
+      "id": "de-a1-23-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я вернусь в шесть."
+      ],
+      "explanation": "Ich komme um sechs zurück. — Я вернусь в шесть.",
+      "wordIds": [
+        "de:v014:23:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ich komme um sechs zurück.",
+      "options": [
+        "Я позвоню тебе сегодня.",
+        "Я вернусь в шесть.",
+        "Когда ты вернёшься?"
+      ],
+      "hint": "Ich komme um sechs zurück. — Я вернусь в шесть."
+    },
+    {
+      "id": "de-a1-23-e03",
+      "type": "dialogue",
+      "prompt": "Когда будет звонок?",
+      "answers": [
+        "В шесть."
+      ],
+      "explanation": "В шесть. Понять отделяемую приставку в предложении.",
+      "wordIds": [
+        "de:v014:23:p0",
+        "de:v014:23:p1",
+        "de:v014:23:p2",
+        "de:v014:23:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Wann rufst du mich an?\nМико: Um sechs, wenn ich zurückkomme.",
+      "options": [
+        "Завтра утром.",
+        "В полночь.",
+        "В шесть."
+      ]
+    },
+    {
+      "id": "de-a1-23-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v014:23:p0",
+        "de:v014:23:p1",
+        "de:v014:23:p2",
+        "de:v014:23:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v014:23:p0",
+          "en": "Ich rufe dich heute an.",
+          "ru": "Я позвоню тебе сегодня."
+        },
+        {
+          "id": "de:v014:23:p1",
+          "en": "Wann kommst du zurück?",
+          "ru": "Когда ты вернёшься?"
+        },
+        {
+          "id": "de:v014:23:p2",
+          "en": "Ich komme um sechs zurück.",
+          "ru": "Я вернусь в шесть."
+        },
+        {
+          "id": "de:v014:23:p3",
+          "en": "Wir sehen heute Abend fern.",
+          "ru": "Мы сегодня вечером смотрим телевизор."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-23-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich anrufe dich heute.",
+      "answers": [
+        "Ich rufe dich heute an."
+      ],
+      "explanation": "В главном предложении an отделяется: rufe … an.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich anrufe dich heute.",
+        "Ich rufe dich heute an."
+      ],
+      "hint": "У anrufen приставка an в простом главном предложении уходит в конец."
+    },
+    {
+      "id": "de-a1-23-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы сегодня вечером смотрим телевизор.». Можно написать вместо микрофона.",
+      "answers": [
+        "Wir sehen heute Abend fern."
+      ],
+      "explanation": "Wir sehen heute Abend fern. — Мы сегодня вечером смотрим телевизор.",
+      "wordIds": [
+        "de:v014:23:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir sehen heute Abend fern.",
+      "recall": {
+        "phrase": "Wir sehen heute Abend fern.",
+        "meaning": "Мы сегодня вечером смотрим телевизор."
+      }
+    },
+    {
+      "id": "de-a1-23-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я позвоню тебе сегодня.",
+      "answers": [
+        "Ich rufe dich heute an."
+      ],
+      "explanation": "У anrufen приставка an в простом главном предложении уходит в конец.",
+      "wordIds": [
+        "de:v014:23:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich rufe dich heute an.",
+        "meaning": "Я позвоню тебе сегодня."
+      }
+    },
+    {
+      "id": "de-a1-23-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Поставь ящик на стол.",
+      "answers": [
+        "Stell die Kiste auf den Tisch."
+      ],
+      "explanation": "Stell die Kiste auf den Tisch. — Поставь ящик на стол.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Stell die Kiste auf den Tisch.",
+        "Ich lege das Buch in die Tasche.",
+        "Die Kiste steht jetzt auf dem Tisch.",
+        "Das Buch ist jetzt in der Tasche."
+      ]
+    }
+  ]
+}

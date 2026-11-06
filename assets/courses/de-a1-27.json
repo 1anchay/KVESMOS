@@ -1,0 +1,290 @@
+{
+  "id": "de-a1-27",
+  "title": "Время на табло",
+  "topic": "Время на табло",
+  "order": 26,
+  "objective": "Понять официальное время отправления.",
+  "guide": "На табло используется 24-часовое время: vierzehn Uhr dreißig — 14:30.",
+  "vocabulary": [
+    {
+      "id": "de:v014:27:p0",
+      "en": "Der Zug fährt um vierzehn Uhr dreißig ab.",
+      "ru": "Поезд отправляется в четырнадцать тридцать."
+    },
+    {
+      "id": "de:v014:27:p1",
+      "en": "Wir haben noch zehn Minuten.",
+      "ru": "У нас ещё десять минут."
+    },
+    {
+      "id": "de:v014:27:p2",
+      "en": "Der Zug hat fünf Minuten Verspätung.",
+      "ru": "Поезд опаздывает на пять минут."
+    },
+    {
+      "id": "de:v014:27:p3",
+      "en": "Bitte warten Sie an Gleis vier.",
+      "ru": "Пожалуйста, ждите у четвёртого пути."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Время на табло",
+      "phrase": "Der Zug fährt um vierzehn Uhr dreißig ab.",
+      "translation": "Поезд отправляется в четырнадцать тридцать.",
+      "explanation": "На табло используется 24-часовое время: vierzehn Uhr dreißig — 14:30."
+    },
+    {
+      "character": "miko",
+      "title": "Время на табло",
+      "phrase": "Wir haben noch zehn Minuten.",
+      "translation": "У нас ещё десять минут.",
+      "explanation": "Wir haben noch zehn Minuten. — У нас ещё десять минут."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Время на табло",
+      "phrase": "Der Zug hat fünf Minuten Verspätung.",
+      "translation": "Поезд опаздывает на пять минут.",
+      "explanation": "Der Zug hat fünf Minuten Verspätung. — Поезд опаздывает на пять минут."
+    },
+    {
+      "character": "orbi",
+      "title": "Время на табло",
+      "phrase": "Bitte warten Sie an Gleis vier.",
+      "translation": "Пожалуйста, ждите у четвёртого пути.",
+      "explanation": "Bitte warten Sie an Gleis vier. — Пожалуйста, ждите у четвёртого пути."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Der Zug fährt um vierzehn Uhr dreißig ab.",
+      "translation": "Поезд отправляется в четырнадцать тридцать.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Поезд отправляется в четырнадцать тридцать.",
+      "options": [
+        "Поезд опаздывает на пять минут.",
+        "Поезд отправляется в четырнадцать тридцать.",
+        "Пожалуйста, ждите у четвёртого пути."
+      ],
+      "explanation": "На табло используется 24-часовое время: vierzehn Uhr dreißig — 14:30."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wir haben noch zehn Minuten.",
+      "translation": "У нас ещё десять минут.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wir haben noch zehn Minuten.",
+      "tokens": [
+        "Wir",
+        "haben",
+        "noch",
+        "zehn",
+        "Minuten."
+      ],
+      "character": "miko",
+      "explanation": "Wir haben noch zehn Minuten. — У нас ещё десять минут."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-27-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Поезд отправляется в четырнадцать тридцать.»?",
+      "answers": [
+        "Der Zug fährt um vierzehn Uhr dreißig ab."
+      ],
+      "explanation": "Der Zug fährt um vierzehn Uhr dreißig ab. — Поезд отправляется в четырнадцать тридцать.",
+      "wordIds": [
+        "de:v014:27:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wir haben noch zehn Minuten.",
+        "Bitte warten Sie an Gleis vier.",
+        "Der Zug fährt um vierzehn Uhr dreißig ab."
+      ],
+      "hint": "Der Zug fährt um vierzehn Uhr dreißig ab. — Поезд отправляется в четырнадцать тридцать."
+    },
+    {
+      "id": "de-a1-27-e02",
+      "type": "order",
+      "prompt": "Собери реплику: У нас ещё десять минут.",
+      "answers": [
+        "Wir haben noch zehn Minuten."
+      ],
+      "explanation": "На табло используется 24-часовое время: vierzehn Uhr dreißig — 14:30.",
+      "wordIds": [
+        "de:v014:27:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wir",
+        "haben",
+        "noch",
+        "zehn",
+        "Minuten."
+      ],
+      "hint": "Wir haben noch zehn Minuten. — У нас ещё десять минут."
+    },
+    {
+      "id": "de-a1-27-e03",
+      "type": "dialogue",
+      "prompt": "Где нужно ждать?",
+      "answers": [
+        "У четвёртого пути."
+      ],
+      "explanation": "У четвёртого пути. Понять официальное время отправления.",
+      "wordIds": [
+        "de:v014:27:p0",
+        "de:v014:27:p1",
+        "de:v014:27:p2",
+        "de:v014:27:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Hat der Zug Verspätung?\nМико: Ja, fünf Minuten. Warten Sie bitte an Gleis vier.",
+      "options": [
+        "У пятого пути.",
+        "У десятого пути.",
+        "У четвёртого пути."
+      ]
+    },
+    {
+      "id": "de-a1-27-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Поезд опаздывает на пять минут."
+      ],
+      "explanation": "Der Zug hat fünf Minuten Verspätung. — Поезд опаздывает на пять минут.",
+      "wordIds": [
+        "de:v014:27:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Der Zug hat fünf Minuten Verspätung.",
+      "options": [
+        "Поезд отправляется в четырнадцать тридцать.",
+        "Поезд опаздывает на пять минут.",
+        "У нас ещё десять минут."
+      ],
+      "hint": "Der Zug hat fünf Minuten Verspätung. — Поезд опаздывает на пять минут."
+    },
+    {
+      "id": "de-a1-27-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v014:27:p0",
+        "de:v014:27:p1",
+        "de:v014:27:p2",
+        "de:v014:27:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v014:27:p0",
+          "en": "Der Zug fährt um vierzehn Uhr dreißig ab.",
+          "ru": "Поезд отправляется в четырнадцать тридцать."
+        },
+        {
+          "id": "de:v014:27:p1",
+          "en": "Wir haben noch zehn Minuten.",
+          "ru": "У нас ещё десять минут."
+        },
+        {
+          "id": "de:v014:27:p2",
+          "en": "Der Zug hat fünf Minuten Verspätung.",
+          "ru": "Поезд опаздывает на пять минут."
+        },
+        {
+          "id": "de:v014:27:p3",
+          "en": "Bitte warten Sie an Gleis vier.",
+          "ru": "Пожалуйста, ждите у четвёртого пути."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-27-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Der Zug fährt in vierzehn Uhr ab.",
+      "answers": [
+        "Der Zug fährt um vierzehn Uhr ab."
+      ],
+      "explanation": "Для точного времени используется um, а не in.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Der Zug fährt in vierzehn Uhr ab.",
+        "Der Zug fährt um vierzehn Uhr ab."
+      ],
+      "hint": "На табло используется 24-часовое время: vierzehn Uhr dreißig — 14:30."
+    },
+    {
+      "id": "de-a1-27-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Пожалуйста, ждите у четвёртого пути.». Можно написать вместо микрофона.",
+      "answers": [
+        "Bitte warten Sie an Gleis vier."
+      ],
+      "explanation": "Bitte warten Sie an Gleis vier. — Пожалуйста, ждите у четвёртого пути.",
+      "wordIds": [
+        "de:v014:27:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Bitte warten Sie an Gleis vier.",
+      "recall": {
+        "phrase": "Bitte warten Sie an Gleis vier.",
+        "meaning": "Пожалуйста, ждите у четвёртого пути."
+      }
+    },
+    {
+      "id": "de-a1-27-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Поезд отправляется в четырнадцать тридцать.",
+      "answers": [
+        "Der Zug fährt um vierzehn Uhr dreißig ab."
+      ],
+      "explanation": "На табло используется 24-часовое время: vierzehn Uhr dreißig — 14:30.",
+      "wordIds": [
+        "de:v014:27:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Der Zug fährt um vierzehn Uhr dreißig ab.",
+        "meaning": "Поезд отправляется в четырнадцать тридцать."
+      }
+    },
+    {
+      "id": "de-a1-27-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я хочу в субботу пойти в поход.",
+      "answers": [
+        "Ich will am Samstag wandern."
+      ],
+      "explanation": "Ich will am Samstag wandern. — Я хочу в субботу пойти в поход.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich will am Samstag wandern.",
+        "Wir wollen zusammen kochen.",
+        "Willst du mitkommen?",
+        "Ich möchte lieber zu Hause bleiben."
+      ]
+    }
+  ]
+}

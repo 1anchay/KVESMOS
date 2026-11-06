@@ -1,0 +1,251 @@
+{
+  "id": "de-a1-28",
+  "title": "Что выбрать на ужин",
+  "topic": "Что выбрать на ужин",
+  "order": 27,
+  "objective": "Сравнить предпочтения в еде.",
+  "guide": "Gern — охотно; lieber — предпочтительнее; am liebsten — больше всего.",
+  "vocabulary": [
+    {
+      "id": "de:v014:28:p0",
+      "en": "Ich esse gern Gemüse.",
+      "ru": "Я люблю есть овощи."
+    },
+    {
+      "id": "de:v014:28:p1",
+      "en": "Heute esse ich lieber Suppe.",
+      "ru": "Сегодня я лучше поем суп."
+    },
+    {
+      "id": "de:v014:28:p2",
+      "en": "Am liebsten trinke ich Wasser.",
+      "ru": "Больше всего я люблю пить воду."
+    },
+    {
+      "id": "de:v014:28:p3",
+      "en": "Was möchtest du lieber?",
+      "ru": "Что ты предпочитаешь?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Что выбрать на ужин",
+      "phrase": "Ich esse gern Gemüse.",
+      "translation": "Я люблю есть овощи.",
+      "explanation": "Gern — охотно; lieber — предпочтительнее; am liebsten — больше всего."
+    },
+    {
+      "character": "miko",
+      "title": "Что выбрать на ужин",
+      "phrase": "Heute esse ich lieber Suppe.",
+      "translation": "Сегодня я лучше поем суп.",
+      "explanation": "Heute esse ich lieber Suppe. — Сегодня я лучше поем суп."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что выбрать на ужин",
+      "phrase": "Am liebsten trinke ich Wasser.",
+      "translation": "Больше всего я люблю пить воду.",
+      "explanation": "Am liebsten trinke ich Wasser. — Больше всего я люблю пить воду."
+    },
+    {
+      "character": "orbi",
+      "title": "Что выбрать на ужин",
+      "phrase": "Was möchtest du lieber?",
+      "translation": "Что ты предпочитаешь?",
+      "explanation": "Was möchtest du lieber? — Что ты предпочитаешь?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich esse gern Gemüse.",
+      "translation": "Я люблю есть овощи.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я люблю есть овощи.",
+      "options": [
+        "Больше всего я люблю пить воду.",
+        "Я люблю есть овощи.",
+        "Что ты предпочитаешь?"
+      ],
+      "explanation": "Gern — охотно; lieber — предпочтительнее; am liebsten — больше всего."
+    },
+    {
+      "id": "apply",
+      "phrase": "Heute esse ich lieber Suppe.",
+      "translation": "Сегодня я лучше поем суп.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Heute esse ich lieber Suppe.",
+      "tokens": [
+        "Heute",
+        "esse",
+        "ich",
+        "lieber",
+        "Suppe."
+      ],
+      "character": "miko",
+      "explanation": "Heute esse ich lieber Suppe. — Сегодня я лучше поем суп."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-28-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я люблю есть овощи.»?",
+      "answers": [
+        "Ich esse gern Gemüse."
+      ],
+      "explanation": "Ich esse gern Gemüse. — Я люблю есть овощи.",
+      "wordIds": [
+        "de:v014:28:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Heute esse ich lieber Suppe.",
+        "Was möchtest du lieber?",
+        "Ich esse gern Gemüse."
+      ],
+      "hint": "Ich esse gern Gemüse. — Я люблю есть овощи."
+    },
+    {
+      "id": "de-a1-28-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Сегодня я лучше поем суп.",
+      "answers": [
+        "Heute esse ich lieber Suppe."
+      ],
+      "explanation": "Gern — охотно; lieber — предпочтительнее; am liebsten — больше всего.",
+      "wordIds": [
+        "de:v014:28:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Heute",
+        "esse",
+        "ich",
+        "lieber",
+        "Suppe."
+      ],
+      "hint": "Heute esse ich lieber Suppe. — Сегодня я лучше поем суп."
+    },
+    {
+      "id": "de-a1-28-e03",
+      "type": "dialogue",
+      "prompt": "Что выбрал собеседник?",
+      "answers": [
+        "Суп."
+      ],
+      "explanation": "Суп. Сравнить предпочтения в еде.",
+      "wordIds": [
+        "de:v014:28:p0",
+        "de:v014:28:p1",
+        "de:v014:28:p2",
+        "de:v014:28:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Möchtest du Salat oder Suppe?\nМико: Heute esse ich lieber Suppe.",
+      "options": [
+        "Салат.",
+        "Только воду.",
+        "Суп."
+      ]
+    },
+    {
+      "id": "de-a1-28-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Больше всего я люблю пить воду."
+      ],
+      "explanation": "Am liebsten trinke ich Wasser. — Больше всего я люблю пить воду.",
+      "wordIds": [
+        "de:v014:28:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Am liebsten trinke ich Wasser.",
+      "options": [
+        "Я люблю есть овощи.",
+        "Больше всего я люблю пить воду.",
+        "Сегодня я лучше поем суп."
+      ],
+      "hint": "Am liebsten trinke ich Wasser. — Больше всего я люблю пить воду."
+    },
+    {
+      "id": "de-a1-28-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Heute ich esse lieber Suppe.",
+      "answers": [
+        "Heute esse ich lieber Suppe."
+      ],
+      "explanation": "Если heute стоит первым, глагол всё равно второй: heute esse ich.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Heute ich esse lieber Suppe.",
+        "Heute esse ich lieber Suppe."
+      ],
+      "hint": "Gern — охотно; lieber — предпочтительнее; am liebsten — больше всего."
+    },
+    {
+      "id": "de-a1-28-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Что ты предпочитаешь?». Можно написать вместо микрофона.",
+      "answers": [
+        "Was möchtest du lieber?"
+      ],
+      "explanation": "Was möchtest du lieber? — Что ты предпочитаешь?",
+      "wordIds": [
+        "de:v014:28:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Was möchtest du lieber?",
+      "recall": {
+        "phrase": "Was möchtest du lieber?",
+        "meaning": "Что ты предпочитаешь?"
+      }
+    },
+    {
+      "id": "de-a1-28-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я люблю есть овощи.",
+      "answers": [
+        "Ich esse gern Gemüse."
+      ],
+      "explanation": "Gern — охотно; lieber — предпочтительнее; am liebsten — больше всего.",
+      "wordIds": [
+        "de:v014:28:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich esse gern Gemüse.",
+        "meaning": "Я люблю есть овощи."
+      }
+    },
+    {
+      "id": "de-a1-28-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: У нас ещё десять минут.",
+      "answers": [
+        "Wir haben noch zehn Minuten."
+      ],
+      "explanation": "Wir haben noch zehn Minuten. — У нас ещё десять минут.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Der Zug fährt um vierzehn Uhr dreißig ab.",
+        "Wir haben noch zehn Minuten.",
+        "Der Zug hat fünf Minuten Verspätung.",
+        "Bitte warten Sie an Gleis vier."
+      ]
+    }
+  ]
+}

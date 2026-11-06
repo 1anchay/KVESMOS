@@ -1,0 +1,249 @@
+{
+  "id": "fr-a1-20",
+  "title": "Сообщение об изменении",
+  "topic": "Сообщение об изменении",
+  "order": 19,
+  "objective": "Понять новую договорённость и подтвердить её.",
+  "guide": "Devant — перед объектом, près de — рядом с ним; à demain — до завтра.",
+  "vocabulary": [
+    {
+      "id": "fr:v014:20:p0",
+      "en": "Je vais arriver un peu en retard.",
+      "ru": "Я немного опоздаю."
+    },
+    {
+      "id": "fr:v014:20:p1",
+      "en": "Attends-moi devant la gare.",
+      "ru": "Подожди меня перед вокзалом."
+    },
+    {
+      "id": "fr:v014:20:p2",
+      "en": "On peut prendre un café près de la gare.",
+      "ru": "Мы можем выпить кофе рядом с вокзалом."
+    },
+    {
+      "id": "fr:v014:20:p3",
+      "en": "Merci de me prévenir.",
+      "ru": "Спасибо, что предупредил меня."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сообщение об изменении",
+      "phrase": "Je vais arriver un peu en retard.",
+      "translation": "Я немного опоздаю.",
+      "explanation": "Devant — перед объектом, près de — рядом с ним; à demain — до завтра."
+    },
+    {
+      "character": "miko",
+      "title": "Сообщение об изменении",
+      "phrase": "Attends-moi devant la gare.",
+      "translation": "Подожди меня перед вокзалом.",
+      "explanation": "Attends-moi devant la gare. — Подожди меня перед вокзалом."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сообщение об изменении",
+      "phrase": "On peut prendre un café près de la gare.",
+      "translation": "Мы можем выпить кофе рядом с вокзалом.",
+      "explanation": "On peut prendre un café près de la gare. — Мы можем выпить кофе рядом с вокзалом."
+    },
+    {
+      "character": "orbi",
+      "title": "Сообщение об изменении",
+      "phrase": "Merci de me prévenir.",
+      "translation": "Спасибо, что предупредил меня.",
+      "explanation": "Merci de me prévenir. — Спасибо, что предупредил меня."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je vais arriver un peu en retard.",
+      "translation": "Я немного опоздаю.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я немного опоздаю.",
+      "options": [
+        "Мы можем выпить кофе рядом с вокзалом.",
+        "Я немного опоздаю.",
+        "Спасибо, что предупредил меня."
+      ],
+      "explanation": "Devant — перед объектом, près de — рядом с ним; à demain — до завтра."
+    },
+    {
+      "id": "apply",
+      "phrase": "Attends-moi devant la gare.",
+      "translation": "Подожди меня перед вокзалом.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Attends-moi devant la gare.",
+      "tokens": [
+        "Attends-moi",
+        "devant",
+        "la",
+        "gare."
+      ],
+      "character": "miko",
+      "explanation": "Attends-moi devant la gare. — Подожди меня перед вокзалом."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-20-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я немного опоздаю.»?",
+      "answers": [
+        "Je vais arriver un peu en retard."
+      ],
+      "explanation": "Je vais arriver un peu en retard. — Я немного опоздаю.",
+      "wordIds": [
+        "fr:v014:20:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Attends-moi devant la gare.",
+        "Merci de me prévenir.",
+        "Je vais arriver un peu en retard."
+      ],
+      "hint": "Je vais arriver un peu en retard. — Я немного опоздаю."
+    },
+    {
+      "id": "fr-a1-20-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Подожди меня перед вокзалом.",
+      "answers": [
+        "Attends-moi devant la gare."
+      ],
+      "explanation": "Devant — перед объектом, près de — рядом с ним; à demain — до завтра.",
+      "wordIds": [
+        "fr:v014:20:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Attends-moi",
+        "devant",
+        "la",
+        "gare."
+      ],
+      "hint": "Attends-moi devant la gare. — Подожди меня перед вокзалом."
+    },
+    {
+      "id": "fr-a1-20-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы можем выпить кофе рядом с вокзалом."
+      ],
+      "explanation": "On peut prendre un café près de la gare. — Мы можем выпить кофе рядом с вокзалом.",
+      "wordIds": [
+        "fr:v014:20:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "On peut prendre un café près de la gare.",
+      "options": [
+        "Я немного опоздаю.",
+        "Мы можем выпить кофе рядом с вокзалом.",
+        "Подожди меня перед вокзалом."
+      ],
+      "hint": "On peut prendre un café près de la gare. — Мы можем выпить кофе рядом с вокзалом."
+    },
+    {
+      "id": "fr-a1-20-e03",
+      "type": "dialogue",
+      "prompt": "Где будут ждать?",
+      "answers": [
+        "Перед вокзалом."
+      ],
+      "explanation": "Перед вокзалом. Понять новую договорённость и подтвердить её.",
+      "wordIds": [
+        "fr:v014:20:p0",
+        "fr:v014:20:p1",
+        "fr:v014:20:p2",
+        "fr:v014:20:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Je vais arriver un peu en retard.\nМико: D'accord, je t'attends devant la gare.",
+      "options": [
+        "Внутри поезда.",
+        "У дома.",
+        "Перед вокзалом."
+      ]
+    },
+    {
+      "id": "fr-a1-20-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je vais arrive un peu en retard.",
+      "answers": [
+        "Je vais arriver un peu en retard."
+      ],
+      "explanation": "В ближайшем будущем после vais требуется arriver.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je vais arrive un peu en retard.",
+        "Je vais arriver un peu en retard."
+      ],
+      "hint": "Devant — перед объектом, près de — рядом с ним; à demain — до завтра."
+    },
+    {
+      "id": "fr-a1-20-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Спасибо, что предупредил меня.». Можно написать вместо микрофона.",
+      "answers": [
+        "Merci de me prévenir."
+      ],
+      "explanation": "Merci de me prévenir. — Спасибо, что предупредил меня.",
+      "wordIds": [
+        "fr:v014:20:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Merci de me prévenir.",
+      "recall": {
+        "phrase": "Merci de me prévenir.",
+        "meaning": "Спасибо, что предупредил меня."
+      }
+    },
+    {
+      "id": "fr-a1-20-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я немного опоздаю.",
+      "answers": [
+        "Je vais arriver un peu en retard."
+      ],
+      "explanation": "Devant — перед объектом, près de — рядом с ним; à demain — до завтра.",
+      "wordIds": [
+        "fr:v014:20:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je vais arriver un peu en retard.",
+        "meaning": "Я немного опоздаю."
+      }
+    },
+    {
+      "id": "fr-a1-20-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Нельзя забыть дату.",
+      "answers": [
+        "Il ne faut pas oublier la date."
+      ],
+      "explanation": "Il ne faut pas oublier la date. — Нельзя забыть дату.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Il faut remplir ce formulaire.",
+        "Il faut écrire votre nom ici.",
+        "Vous devez signer en bas.",
+        "Il ne faut pas oublier la date."
+      ]
+    }
+  ]
+}

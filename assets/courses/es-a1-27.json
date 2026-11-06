@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-27",
+  "title": "Покупки для обеда",
+  "topic": "Покупки для обеда",
+  "order": 26,
+  "objective": "Заказать вес и количество продуктов.",
+  "guide": "После kilo, botella и litro продукт присоединяется через de.",
+  "vocabulary": [
+    {
+      "id": "es:v014:27:p0",
+      "en": "Quiero medio kilo de tomates.",
+      "ru": "Я хочу полкило помидоров."
+    },
+    {
+      "id": "es:v014:27:p1",
+      "en": "Necesito una botella de agua.",
+      "ru": "Мне нужна бутылка воды."
+    },
+    {
+      "id": "es:v014:27:p2",
+      "en": "¿Tiene pan integral?",
+      "ru": "У вас есть цельнозерновой хлеб?"
+    },
+    {
+      "id": "es:v014:27:p3",
+      "en": "Eso es todo, gracias.",
+      "ru": "Это всё, спасибо."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Покупки для обеда",
+      "phrase": "Quiero medio kilo de tomates.",
+      "translation": "Я хочу полкило помидоров.",
+      "explanation": "После kilo, botella и litro продукт присоединяется через de."
+    },
+    {
+      "character": "miko",
+      "title": "Покупки для обеда",
+      "phrase": "Necesito una botella de agua.",
+      "translation": "Мне нужна бутылка воды.",
+      "explanation": "Necesito una botella de agua. — Мне нужна бутылка воды."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Покупки для обеда",
+      "phrase": "¿Tiene pan integral?",
+      "translation": "У вас есть цельнозерновой хлеб?",
+      "explanation": "¿Tiene pan integral? — У вас есть цельнозерновой хлеб?"
+    },
+    {
+      "character": "orbi",
+      "title": "Покупки для обеда",
+      "phrase": "Eso es todo, gracias.",
+      "translation": "Это всё, спасибо.",
+      "explanation": "Eso es todo, gracias. — Это всё, спасибо."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Quiero medio kilo de tomates.",
+      "translation": "Я хочу полкило помидоров.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хочу полкило помидоров.",
+      "options": [
+        "У вас есть цельнозерновой хлеб?",
+        "Я хочу полкило помидоров.",
+        "Это всё, спасибо."
+      ],
+      "explanation": "После kilo, botella и litro продукт присоединяется через de."
+    },
+    {
+      "id": "apply",
+      "phrase": "Necesito una botella de agua.",
+      "translation": "Мне нужна бутылка воды.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Necesito una botella de agua.",
+      "tokens": [
+        "Necesito",
+        "una",
+        "botella",
+        "de",
+        "agua."
+      ],
+      "character": "miko",
+      "explanation": "Necesito una botella de agua. — Мне нужна бутылка воды."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-27-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хочу полкило помидоров.»?",
+      "answers": [
+        "Quiero medio kilo de tomates."
+      ],
+      "explanation": "Quiero medio kilo de tomates. — Я хочу полкило помидоров.",
+      "wordIds": [
+        "es:v014:27:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Necesito una botella de agua.",
+        "Eso es todo, gracias.",
+        "Quiero medio kilo de tomates."
+      ],
+      "hint": "Quiero medio kilo de tomates. — Я хочу полкило помидоров."
+    },
+    {
+      "id": "es-a1-27-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мне нужна бутылка воды.",
+      "answers": [
+        "Necesito una botella de agua."
+      ],
+      "explanation": "После kilo, botella и litro продукт присоединяется через de.",
+      "wordIds": [
+        "es:v014:27:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Necesito",
+        "una",
+        "botella",
+        "de",
+        "agua."
+      ],
+      "hint": "Necesito una botella de agua. — Мне нужна бутылка воды."
+    },
+    {
+      "id": "es-a1-27-e03",
+      "type": "dialogue",
+      "prompt": "Сколько помидоров попросили?",
+      "answers": [
+        "Полкило."
+      ],
+      "explanation": "Полкило. Заказать вес и количество продуктов.",
+      "wordIds": [
+        "es:v014:27:p0",
+        "es:v014:27:p1",
+        "es:v014:27:p2",
+        "es:v014:27:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Cuántos tomates quiere?\nМико: Medio kilo y una botella de agua, por favor.",
+      "options": [
+        "Одну бутылку.",
+        "Два килограмма.",
+        "Полкило."
+      ]
+    },
+    {
+      "id": "es-a1-27-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "У вас есть цельнозерновой хлеб?"
+      ],
+      "explanation": "¿Tiene pan integral? — У вас есть цельнозерновой хлеб?",
+      "wordIds": [
+        "es:v014:27:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Tiene pan integral?",
+      "options": [
+        "Я хочу полкило помидоров.",
+        "У вас есть цельнозерновой хлеб?",
+        "Мне нужна бутылка воды."
+      ],
+      "hint": "¿Tiene pan integral? — У вас есть цельнозерновой хлеб?"
+    },
+    {
+      "id": "es-a1-27-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v014:27:p0",
+        "es:v014:27:p1",
+        "es:v014:27:p2",
+        "es:v014:27:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v014:27:p0",
+          "en": "Quiero medio kilo de tomates.",
+          "ru": "Я хочу полкило помидоров."
+        },
+        {
+          "id": "es:v014:27:p1",
+          "en": "Necesito una botella de agua.",
+          "ru": "Мне нужна бутылка воды."
+        },
+        {
+          "id": "es:v014:27:p2",
+          "en": "¿Tiene pan integral?",
+          "ru": "У вас есть цельнозерновой хлеб?"
+        },
+        {
+          "id": "es:v014:27:p3",
+          "en": "Eso es todo, gracias.",
+          "ru": "Это всё, спасибо."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-27-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Quiero medio kilo tomates.",
+      "answers": [
+        "Quiero medio kilo de tomates."
+      ],
+      "explanation": "После меры medio kilo нужен предлог de.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Quiero medio kilo tomates.",
+        "Quiero medio kilo de tomates."
+      ],
+      "hint": "После kilo, botella и litro продукт присоединяется через de."
+    },
+    {
+      "id": "es-a1-27-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Это всё, спасибо.». Можно написать вместо микрофона.",
+      "answers": [
+        "Eso es todo, gracias."
+      ],
+      "explanation": "Eso es todo, gracias. — Это всё, спасибо.",
+      "wordIds": [
+        "es:v014:27:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Eso es todo, gracias.",
+      "recall": {
+        "phrase": "Eso es todo, gracias.",
+        "meaning": "Это всё, спасибо."
+      }
+    },
+    {
+      "id": "es-a1-27-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хочу полкило помидоров.",
+      "answers": [
+        "Quiero medio kilo de tomates."
+      ],
+      "explanation": "После kilo, botella и litro продукт присоединяется через de.",
+      "wordIds": [
+        "es:v014:27:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Quiero medio kilo de tomates.",
+        "meaning": "Я хочу полкило помидоров."
+      }
+    },
+    {
+      "id": "es-a1-27-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я тебя плохо слышу.",
+      "answers": [
+        "No te oigo bien."
+      ],
+      "explanation": "No te oigo bien. — Я тебя плохо слышу.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "No te oigo bien.",
+        "¿Puedes repetir la dirección?",
+        "Habla más despacio, por favor.",
+        "Te envío un mensaje."
+      ]
+    }
+  ]
+}

@@ -14,39 +14,48 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUpAll(setupSqlite);
   test(
-    '100 installed lessons: separate catalogs, authored content and full scoring',
+    '160 installed lessons: separate catalogs, authored content and full scoring',
     () async {
       final r = memoryRepository();
       addTearDown(r.db.close);
       await r.initialize();
-      expect(await r.installed(), hasLength(100));
+      expect(await r.installed(), hasLength(160));
       for (final c in StudyCourse.all) {
+        var expectedXp = 0;
         await r.selectCourse(c.id);
         expect(r.catalog, hasLength(c.lessons));
         for (final info in r.catalog) {
           final run = await r.startLesson(info.id), lesson = run.lesson;
-          expect(lesson.exercises, hasLength(10));
+          expect(lesson.exercises, hasLength(greaterThanOrEqualTo(8)));
           expect(lesson.teachingSteps.length, greaterThanOrEqualTo(3));
           expect(lesson.objective, isNotEmpty);
+          expectedXp += 20;
           expect(
             lesson.exercises.map((e) => e.type).toSet().length,
             greaterThanOrEqualTo(7),
           );
-          for (var i = 0; i < 10; i++) {
+          for (var i = 0; i < lesson.exercises.length; i++) {
             final e = lesson.exercises[i];
+            expectedXp += 10;
             expect(
               e.wordIds.every((id) => id.startsWith('${c.language}:')),
               true,
             );
             expect(e.answers, isNotEmpty);
             expect(e.explanation, isNotEmpty);
-            await r.answer(run.session.id, i, e, e.answers.first, total: 10);
+            await r.answer(
+              run.session.id,
+              i,
+              e,
+              e.answers.first,
+              total: lesson.exercises.length,
+            );
           }
         }
-        expect((await r.progress()).xp, c.lessons * 120);
+        expect((await r.progress()).xp, expectedXp);
         expect((await r.progress()).completed, hasLength(c.lessons));
       }
-      expect((await r.globalProgress()).xp, 12000);
+      expect((await r.globalProgress()).xp, 18300);
     },
   );
   test(
@@ -85,7 +94,7 @@ void main() {
       final before = jsonEncode((await r.allEvents()).single.toJson());
       await r.initialize();
       await r.initialize();
-      expect(await r.installed(), hasLength(99));
+      expect(await r.installed(), hasLength(159));
       expect(await r.installed(), isNot(contains('a1-20')));
       expect(jsonEncode((await r.allEvents()).single.toJson()), before);
       expect((await r.startLesson('a1-01')).session.id, old.id);
@@ -118,7 +127,7 @@ void main() {
           0,
           run.lesson.exercises.first,
           run.lesson.exercises.first.answers.first,
-          total: 10,
+          total: run.lesson.exercises.length,
         );
         await r.draft(run.session.id, 1, c.id);
         expect((await r.progress()).xp, 10);

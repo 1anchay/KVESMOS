@@ -1,0 +1,249 @@
+{
+  "id": "de-a1-24",
+  "title": "Обязательные дела",
+  "topic": "Обязательные дела",
+  "order": 23,
+  "objective": "Сказать, что необходимо сделать.",
+  "guide": "Müssen занимает второе место; основной глагол остаётся в конце в инфинитиве.",
+  "vocabulary": [
+    {
+      "id": "de:v014:24:p0",
+      "en": "Ich muss heute lernen.",
+      "ru": "Мне нужно сегодня учиться."
+    },
+    {
+      "id": "de:v014:24:p1",
+      "en": "Wir müssen früh aufstehen.",
+      "ru": "Нам нужно рано встать."
+    },
+    {
+      "id": "de:v014:24:p2",
+      "en": "Musst du morgen arbeiten?",
+      "ru": "Тебе нужно завтра работать?"
+    },
+    {
+      "id": "de:v014:24:p3",
+      "en": "Ich muss noch eine E-Mail schreiben.",
+      "ru": "Мне ещё нужно написать электронное письмо."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Обязательные дела",
+      "phrase": "Ich muss heute lernen.",
+      "translation": "Мне нужно сегодня учиться.",
+      "explanation": "Müssen занимает второе место; основной глагол остаётся в конце в инфинитиве."
+    },
+    {
+      "character": "miko",
+      "title": "Обязательные дела",
+      "phrase": "Wir müssen früh aufstehen.",
+      "translation": "Нам нужно рано встать.",
+      "explanation": "Wir müssen früh aufstehen. — Нам нужно рано встать."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Обязательные дела",
+      "phrase": "Musst du morgen arbeiten?",
+      "translation": "Тебе нужно завтра работать?",
+      "explanation": "Musst du morgen arbeiten? — Тебе нужно завтра работать?"
+    },
+    {
+      "character": "orbi",
+      "title": "Обязательные дела",
+      "phrase": "Ich muss noch eine E-Mail schreiben.",
+      "translation": "Мне ещё нужно написать электронное письмо.",
+      "explanation": "Ich muss noch eine E-Mail schreiben. — Мне ещё нужно написать электронное письмо."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich muss heute lernen.",
+      "translation": "Мне нужно сегодня учиться.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мне нужно сегодня учиться.",
+      "options": [
+        "Тебе нужно завтра работать?",
+        "Мне нужно сегодня учиться.",
+        "Мне ещё нужно написать электронное письмо."
+      ],
+      "explanation": "Müssen занимает второе место; основной глагол остаётся в конце в инфинитиве."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wir müssen früh aufstehen.",
+      "translation": "Нам нужно рано встать.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wir müssen früh aufstehen.",
+      "tokens": [
+        "Wir",
+        "müssen",
+        "früh",
+        "aufstehen."
+      ],
+      "character": "miko",
+      "explanation": "Wir müssen früh aufstehen. — Нам нужно рано встать."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-24-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Мне нужно сегодня учиться.»?",
+      "answers": [
+        "Ich muss heute lernen."
+      ],
+      "explanation": "Ich muss heute lernen. — Мне нужно сегодня учиться.",
+      "wordIds": [
+        "de:v014:24:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wir müssen früh aufstehen.",
+        "Ich muss noch eine E-Mail schreiben.",
+        "Ich muss heute lernen."
+      ],
+      "hint": "Ich muss heute lernen. — Мне нужно сегодня учиться."
+    },
+    {
+      "id": "de-a1-24-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Нам нужно рано встать.",
+      "answers": [
+        "Wir müssen früh aufstehen."
+      ],
+      "explanation": "Müssen занимает второе место; основной глагол остаётся в конце в инфинитиве.",
+      "wordIds": [
+        "de:v014:24:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wir",
+        "müssen",
+        "früh",
+        "aufstehen."
+      ],
+      "hint": "Wir müssen früh aufstehen. — Нам нужно рано встать."
+    },
+    {
+      "id": "de-a1-24-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно сделать сегодня?",
+      "answers": [
+        "Поучиться."
+      ],
+      "explanation": "Поучиться. Сказать, что необходимо сделать.",
+      "wordIds": [
+        "de:v014:24:p0",
+        "de:v014:24:p1",
+        "de:v014:24:p2",
+        "de:v014:24:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Musst du morgen arbeiten?\nМико: Nein, aber ich muss heute noch lernen.",
+      "options": [
+        "Пойти завтра на работу.",
+        "Купить билет.",
+        "Поучиться."
+      ]
+    },
+    {
+      "id": "de-a1-24-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Тебе нужно завтра работать?"
+      ],
+      "explanation": "Musst du morgen arbeiten? — Тебе нужно завтра работать?",
+      "wordIds": [
+        "de:v014:24:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Musst du morgen arbeiten?",
+      "options": [
+        "Мне нужно сегодня учиться.",
+        "Тебе нужно завтра работать?",
+        "Нам нужно рано встать."
+      ],
+      "hint": "Musst du morgen arbeiten? — Тебе нужно завтра работать?"
+    },
+    {
+      "id": "de-a1-24-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich muss lerne heute.",
+      "answers": [
+        "Ich muss heute lernen."
+      ],
+      "explanation": "После muss основной глагол lernen стоит в конце в инфинитиве.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich muss lerne heute.",
+        "Ich muss heute lernen."
+      ],
+      "hint": "Müssen занимает второе место; основной глагол остаётся в конце в инфинитиве."
+    },
+    {
+      "id": "de-a1-24-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мне ещё нужно написать электронное письмо.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ich muss noch eine E-Mail schreiben."
+      ],
+      "explanation": "Ich muss noch eine E-Mail schreiben. — Мне ещё нужно написать электронное письмо.",
+      "wordIds": [
+        "de:v014:24:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Ich muss noch eine E-Mail schreiben.",
+      "recall": {
+        "phrase": "Ich muss noch eine E-Mail schreiben.",
+        "meaning": "Мне ещё нужно написать электронное письмо."
+      }
+    },
+    {
+      "id": "de-a1-24-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мне нужно сегодня учиться.",
+      "answers": [
+        "Ich muss heute lernen."
+      ],
+      "explanation": "Müssen занимает второе место; основной глагол остаётся в конце в инфинитиве.",
+      "wordIds": [
+        "de:v014:24:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich muss heute lernen.",
+        "meaning": "Мне нужно сегодня учиться."
+      }
+    },
+    {
+      "id": "de-a1-24-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Когда ты вернёшься?",
+      "answers": [
+        "Wann kommst du zurück?"
+      ],
+      "explanation": "Wann kommst du zurück? — Когда ты вернёшься?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich rufe dich heute an.",
+        "Wann kommst du zurück?",
+        "Ich komme um sechs zurück.",
+        "Wir sehen heute Abend fern."
+      ]
+    }
+  ]
+}

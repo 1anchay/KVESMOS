@@ -3,6 +3,7 @@ import 'package:drift/drift.dart';
 import 'package:flutter/services.dart';
 import 'package:uuid/uuid.dart';
 import '../domain/course.dart';
+import '../domain/intro_activity.dart';
 import '../domain/languages.dart';
 import '../domain/progress.dart';
 import 'database.dart';
@@ -213,8 +214,10 @@ class LearningRepository {
         updatedMaterials.containsKey(id)) {
       final raw = updatedMaterials[id]!;
       final material = Lesson.fromJson(jsonDecode(raw));
-      if (material.id != id || material.exercises.length != 10) {
-        throw StateError('Демонстрационный пакет повреждён.');
+      if (material.id != id ||
+          material.exercises.length < 8 ||
+          material.exercises.length > 12) {
+        throw StateError('Учебный пакет повреждён.');
       }
       await setSetting(key, raw);
       return (lesson: material, session: session);
@@ -262,6 +265,23 @@ class LearningRepository {
 
   Future<void> saveTeachingStep(String sessionId, int step) =>
       setSetting('kvesmos.lesson.teaching.step.v1:$sessionId', '$step');
+
+  Future<IntroDraft> introDraft(String sessionId) async {
+    final raw = await setting('kvesmos.lesson.intro.v2:$sessionId');
+    if (raw != null) {
+      try {
+        return IntroDraft.fromJson(jsonDecode(raw));
+      } catch (_) {
+        /* Legacy fallback. */
+      }
+    }
+    return IntroDraft(index: await teachingStep(sessionId));
+  }
+
+  Future<void> saveIntroDraft(String sessionId, IntroDraft draft) => setSetting(
+    'kvesmos.lesson.intro.v2:$sessionId',
+    jsonEncode(draft.toJson()),
+  );
 
   Future<void> draft(String sessionId, int position, String value) =>
       (db.update(db.sessions)..where(

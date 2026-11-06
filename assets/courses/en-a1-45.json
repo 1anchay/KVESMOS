@@ -1,0 +1,290 @@
+{
+  "id": "en-a1-45",
+  "title": "Помогу с коробками",
+  "topic": "Помогу с коробками",
+  "order": 44,
+  "objective": "Пообещать помощь в момент разговора.",
+  "guide": "Will с начальной формой глагола подходит для обещания или решения, принятого сейчас.",
+  "vocabulary": [
+    {
+      "id": "en:v014:45:p0",
+      "en": "I will carry this box.",
+      "ru": "Я понесу эту коробку."
+    },
+    {
+      "id": "en:v014:45:p1",
+      "en": "Will you open the door?",
+      "ru": "Ты откроешь дверь?"
+    },
+    {
+      "id": "en:v014:45:p2",
+      "en": "I will be careful.",
+      "ru": "Я буду осторожен."
+    },
+    {
+      "id": "en:v014:45:p3",
+      "en": "We will finish soon.",
+      "ru": "Мы скоро закончим."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Помогу с коробками",
+      "phrase": "I will carry this box.",
+      "translation": "Я понесу эту коробку.",
+      "explanation": "Will с начальной формой глагола подходит для обещания или решения, принятого сейчас."
+    },
+    {
+      "character": "miko",
+      "title": "Помогу с коробками",
+      "phrase": "Will you open the door?",
+      "translation": "Ты откроешь дверь?",
+      "explanation": "Will you open the door? — Ты откроешь дверь?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Помогу с коробками",
+      "phrase": "I will be careful.",
+      "translation": "Я буду осторожен.",
+      "explanation": "I will be careful. — Я буду осторожен."
+    },
+    {
+      "character": "orbi",
+      "title": "Помогу с коробками",
+      "phrase": "We will finish soon.",
+      "translation": "Мы скоро закончим.",
+      "explanation": "We will finish soon. — Мы скоро закончим."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I will carry this box.",
+      "translation": "Я понесу эту коробку.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я понесу эту коробку.",
+      "options": [
+        "Я буду осторожен.",
+        "Я понесу эту коробку.",
+        "Мы скоро закончим."
+      ],
+      "explanation": "Will с начальной формой глагола подходит для обещания или решения, принятого сейчас."
+    },
+    {
+      "id": "apply",
+      "phrase": "Will you open the door?",
+      "translation": "Ты откроешь дверь?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Will you open the door?",
+      "tokens": [
+        "Will",
+        "you",
+        "open",
+        "the",
+        "door?"
+      ],
+      "character": "miko",
+      "explanation": "Will you open the door? — Ты откроешь дверь?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-45-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я понесу эту коробку.»?",
+      "answers": [
+        "I will carry this box."
+      ],
+      "explanation": "I will carry this box. — Я понесу эту коробку.",
+      "wordIds": [
+        "en:v014:45:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Will you open the door?",
+        "We will finish soon.",
+        "I will carry this box."
+      ],
+      "hint": "I will carry this box. — Я понесу эту коробку."
+    },
+    {
+      "id": "en-a1-45-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Ты откроешь дверь?",
+      "answers": [
+        "Will you open the door?"
+      ],
+      "explanation": "Will с начальной формой глагола подходит для обещания или решения, принятого сейчас.",
+      "wordIds": [
+        "en:v014:45:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Will",
+        "you",
+        "open",
+        "the",
+        "door?"
+      ],
+      "hint": "Will you open the door? — Ты откроешь дверь?"
+    },
+    {
+      "id": "en-a1-45-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я буду осторожен."
+      ],
+      "explanation": "I will be careful. — Я буду осторожен.",
+      "wordIds": [
+        "en:v014:45:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I will be careful.",
+      "options": [
+        "Я понесу эту коробку.",
+        "Я буду осторожен.",
+        "Ты откроешь дверь?"
+      ],
+      "hint": "I will be careful. — Я буду осторожен."
+    },
+    {
+      "id": "en-a1-45-e03",
+      "type": "dialogue",
+      "prompt": "Какую помощь предложили?",
+      "answers": [
+        "Понести коробку."
+      ],
+      "explanation": "Понести коробку. Пообещать помощь в момент разговора.",
+      "wordIds": [
+        "en:v014:45:p0",
+        "en:v014:45:p1",
+        "en:v014:45:p2",
+        "en:v014:45:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: This box is heavy.\nМико: I will carry it. Will you open the door?",
+      "options": [
+        "Купить дверь.",
+        "Закончить завтра.",
+        "Понести коробку."
+      ]
+    },
+    {
+      "id": "en-a1-45-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:45:p0",
+        "en:v014:45:p1",
+        "en:v014:45:p2",
+        "en:v014:45:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:45:p0",
+          "en": "I will carry this box.",
+          "ru": "Я понесу эту коробку."
+        },
+        {
+          "id": "en:v014:45:p1",
+          "en": "Will you open the door?",
+          "ru": "Ты откроешь дверь?"
+        },
+        {
+          "id": "en:v014:45:p2",
+          "en": "I will be careful.",
+          "ru": "Я буду осторожен."
+        },
+        {
+          "id": "en:v014:45:p3",
+          "en": "We will finish soon.",
+          "ru": "Мы скоро закончим."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-45-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I will carries this box.",
+      "answers": [
+        "I will carry this box."
+      ],
+      "explanation": "После will нужна начальная форма carry независимо от лица.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I will carries this box.",
+        "I will carry this box."
+      ],
+      "hint": "Will с начальной формой глагола подходит для обещания или решения, принятого сейчас."
+    },
+    {
+      "id": "en-a1-45-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы скоро закончим.». Можно написать вместо микрофона.",
+      "answers": [
+        "We will finish soon."
+      ],
+      "explanation": "We will finish soon. — Мы скоро закончим.",
+      "wordIds": [
+        "en:v014:45:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "We will finish soon.",
+      "recall": {
+        "phrase": "We will finish soon.",
+        "meaning": "Мы скоро закончим."
+      }
+    },
+    {
+      "id": "en-a1-45-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я понесу эту коробку.",
+      "answers": [
+        "I will carry this box."
+      ],
+      "explanation": "Will с начальной формой глагола подходит для обещания или решения, принятого сейчас.",
+      "wordIds": [
+        "en:v014:45:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I will carry this box.",
+        "meaning": "Я понесу эту коробку."
+      }
+    },
+    {
+      "id": "en-a1-45-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сначала мы опоздали на автобус.",
+      "answers": [
+        "First, we missed the bus."
+      ],
+      "explanation": "First, we missed the bus. — Сначала мы опоздали на автобус.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "First, we missed the bus.",
+        "Then we walked to the station.",
+        "Finally, we took a train.",
+        "We arrived before lunch."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "id": "fr-a1-15",
+  "title": "Продукты для завтрака",
+  "topic": "Продукты для завтрака",
+  "order": 14,
+  "objective": "Назвать количество продуктов.",
+  "guide": "После меры или количества используется de: un litre de lait, beaucoup de fruits.",
+  "vocabulary": [
+    {
+      "id": "fr:v014:15:p0",
+      "en": "Il faut un litre de lait.",
+      "ru": "Нужен литр молока."
+    },
+    {
+      "id": "fr:v014:15:p1",
+      "en": "Je prends deux kilos de pommes.",
+      "ru": "Я беру два килограмма яблок."
+    },
+    {
+      "id": "fr:v014:15:p2",
+      "en": "Nous avons beaucoup de pain.",
+      "ru": "У нас много хлеба."
+    },
+    {
+      "id": "fr:v014:15:p3",
+      "en": "Il reste un peu de fromage.",
+      "ru": "Осталось немного сыра."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Продукты для завтрака",
+      "phrase": "Il faut un litre de lait.",
+      "translation": "Нужен литр молока.",
+      "explanation": "После меры или количества используется de: un litre de lait, beaucoup de fruits."
+    },
+    {
+      "character": "miko",
+      "title": "Продукты для завтрака",
+      "phrase": "Je prends deux kilos de pommes.",
+      "translation": "Я беру два килограмма яблок.",
+      "explanation": "Je prends deux kilos de pommes. — Я беру два килограмма яблок."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Продукты для завтрака",
+      "phrase": "Nous avons beaucoup de pain.",
+      "translation": "У нас много хлеба.",
+      "explanation": "Nous avons beaucoup de pain. — У нас много хлеба."
+    },
+    {
+      "character": "orbi",
+      "title": "Продукты для завтрака",
+      "phrase": "Il reste un peu de fromage.",
+      "translation": "Осталось немного сыра.",
+      "explanation": "Il reste un peu de fromage. — Осталось немного сыра."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Il faut un litre de lait.",
+      "translation": "Нужен литр молока.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Нужен литр молока.",
+      "options": [
+        "У нас много хлеба.",
+        "Нужен литр молока.",
+        "Осталось немного сыра."
+      ],
+      "explanation": "После меры или количества используется de: un litre de lait, beaucoup de fruits."
+    },
+    {
+      "id": "apply",
+      "phrase": "Je prends deux kilos de pommes.",
+      "translation": "Я беру два килограмма яблок.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Je prends deux kilos de pommes.",
+      "tokens": [
+        "Je",
+        "prends",
+        "deux",
+        "kilos",
+        "de",
+        "pommes."
+      ],
+      "character": "miko",
+      "explanation": "Je prends deux kilos de pommes. — Я беру два килограмма яблок."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-15-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Нужен литр молока.»?",
+      "answers": [
+        "Il faut un litre de lait."
+      ],
+      "explanation": "Il faut un litre de lait. — Нужен литр молока.",
+      "wordIds": [
+        "fr:v014:15:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Je prends deux kilos de pommes.",
+        "Il reste un peu de fromage.",
+        "Il faut un litre de lait."
+      ],
+      "hint": "Il faut un litre de lait. — Нужен литр молока."
+    },
+    {
+      "id": "fr-a1-15-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я беру два килограмма яблок.",
+      "answers": [
+        "Je prends deux kilos de pommes."
+      ],
+      "explanation": "После меры или количества используется de: un litre de lait, beaucoup de fruits.",
+      "wordIds": [
+        "fr:v014:15:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Je",
+        "prends",
+        "deux",
+        "kilos",
+        "de",
+        "pommes."
+      ],
+      "hint": "Je prends deux kilos de pommes. — Я беру два килограмма яблок."
+    },
+    {
+      "id": "fr-a1-15-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно купить?",
+      "answers": [
+        "Молоко."
+      ],
+      "explanation": "Молоко. Назвать количество продуктов.",
+      "wordIds": [
+        "fr:v014:15:p0",
+        "fr:v014:15:p1",
+        "fr:v014:15:p2",
+        "fr:v014:15:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Est-ce qu'il faut du pain ?\nМико: Non, nous avons beaucoup de pain. Il faut du lait.",
+      "options": [
+        "Ещё хлеб.",
+        "Только сыр.",
+        "Молоко."
+      ]
+    },
+    {
+      "id": "fr-a1-15-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "У нас много хлеба."
+      ],
+      "explanation": "Nous avons beaucoup de pain. — У нас много хлеба.",
+      "wordIds": [
+        "fr:v014:15:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Nous avons beaucoup de pain.",
+      "options": [
+        "Нужен литр молока.",
+        "У нас много хлеба.",
+        "Я беру два килограмма яблок."
+      ],
+      "hint": "Nous avons beaucoup de pain. — У нас много хлеба."
+    },
+    {
+      "id": "fr-a1-15-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v014:15:p0",
+        "fr:v014:15:p1",
+        "fr:v014:15:p2",
+        "fr:v014:15:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v014:15:p0",
+          "en": "Il faut un litre de lait.",
+          "ru": "Нужен литр молока."
+        },
+        {
+          "id": "fr:v014:15:p1",
+          "en": "Je prends deux kilos de pommes.",
+          "ru": "Я беру два килограмма яблок."
+        },
+        {
+          "id": "fr:v014:15:p2",
+          "en": "Nous avons beaucoup de pain.",
+          "ru": "У нас много хлеба."
+        },
+        {
+          "id": "fr:v014:15:p3",
+          "en": "Il reste un peu de fromage.",
+          "ru": "Осталось немного сыра."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-15-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je prends deux kilos des pommes.",
+      "answers": [
+        "Je prends deux kilos de pommes."
+      ],
+      "explanation": "После kilos количество продукта вводится через de.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je prends deux kilos des pommes.",
+        "Je prends deux kilos de pommes."
+      ],
+      "hint": "После меры или количества используется de: un litre de lait, beaucoup de fruits."
+    },
+    {
+      "id": "fr-a1-15-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Осталось немного сыра.». Можно написать вместо микрофона.",
+      "answers": [
+        "Il reste un peu de fromage."
+      ],
+      "explanation": "Il reste un peu de fromage. — Осталось немного сыра.",
+      "wordIds": [
+        "fr:v014:15:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Il reste un peu de fromage.",
+      "recall": {
+        "phrase": "Il reste un peu de fromage.",
+        "meaning": "Осталось немного сыра."
+      }
+    },
+    {
+      "id": "fr-a1-15-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Нужен литр молока.",
+      "answers": [
+        "Il faut un litre de lait."
+      ],
+      "explanation": "После меры или количества используется de: un litre de lait, beaucoup de fruits.",
+      "wordIds": [
+        "fr:v014:15:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Il faut un litre de lait.",
+        "meaning": "Нужен литр молока."
+      }
+    },
+    {
+      "id": "fr-a1-15-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы не свободны сегодня вечером.",
+      "answers": [
+        "Nous ne sommes pas libres ce soir."
+      ],
+      "explanation": "Nous ne sommes pas libres ce soir. — Мы не свободны сегодня вечером.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je ne travaille pas aujourd'hui.",
+        "Je n'ai pas de voiture.",
+        "Nous ne sommes pas libres ce soir.",
+        "Je ne peux pas venir."
+      ]
+    }
+  ]
+}

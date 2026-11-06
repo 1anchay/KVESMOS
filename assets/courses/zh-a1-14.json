@@ -1,0 +1,265 @@
+{
+  "id": "zh-a1-14",
+  "title": "Есть и нет",
+  "topic": "Есть и нет",
+  "order": 13,
+  "objective": "Сообщить о наличии и отсутствии предмета.",
+  "guide": "Отрицание 有 — 没有, а не 不有; 有 также вводит предмет в месте.",
+  "vocabulary": [
+    {
+      "id": "zh:v014:14:p0",
+      "en": "我有一辆自行车。",
+      "ru": "У меня есть велосипед.",
+      "pronunciation": "Wǒ yǒu yí liàng zìxíngchē."
+    },
+    {
+      "id": "zh:v014:14:p1",
+      "en": "我没有汽车。",
+      "ru": "У меня нет машины.",
+      "pronunciation": "Wǒ méiyǒu qìchē."
+    },
+    {
+      "id": "zh:v014:14:p2",
+      "en": "房间里有一张桌子。",
+      "ru": "В комнате есть стол.",
+      "pronunciation": "Fángjiān lǐ yǒu yì zhāng zhuōzi."
+    },
+    {
+      "id": "zh:v014:14:p3",
+      "en": "你有时间吗？",
+      "ru": "У тебя есть время?",
+      "pronunciation": "Nǐ yǒu shíjiān ma?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Есть и нет",
+      "phrase": "我有一辆自行车。",
+      "translation": "У меня есть велосипед.",
+      "explanation": "Отрицание 有 — 没有, а не 不有; 有 также вводит предмет в месте.",
+      "pronunciation": "Wǒ yǒu yí liàng zìxíngchē."
+    },
+    {
+      "character": "miko",
+      "title": "Есть и нет",
+      "phrase": "我没有汽车。",
+      "translation": "У меня нет машины.",
+      "explanation": "我没有汽车。 — У меня нет машины.",
+      "pronunciation": "Wǒ méiyǒu qìchē."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Есть и нет",
+      "phrase": "房间里有一张桌子。",
+      "translation": "В комнате есть стол.",
+      "explanation": "房间里有一张桌子。 — В комнате есть стол.",
+      "pronunciation": "Fángjiān lǐ yǒu yì zhāng zhuōzi."
+    },
+    {
+      "character": "orbi",
+      "title": "Есть и нет",
+      "phrase": "你有时间吗？",
+      "translation": "У тебя есть время?",
+      "explanation": "你有时间吗？ — У тебя есть время?",
+      "pronunciation": "Nǐ yǒu shíjiān ma?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "我有一辆自行车。",
+      "translation": "У меня есть велосипед.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "У меня есть велосипед.",
+      "options": [
+        "В комнате есть стол.",
+        "У меня есть велосипед.",
+        "У тебя есть время?"
+      ],
+      "explanation": "Отрицание 有 — 没有, а не 不有; 有 также вводит предмет в месте.",
+      "pronunciation": "Wǒ yǒu yí liàng zìxíngchē."
+    },
+    {
+      "id": "apply",
+      "phrase": "我没有汽车。",
+      "translation": "У меня нет машины.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "我没有汽车。",
+      "tokens": [
+        "我",
+        "没有",
+        "汽车"
+      ],
+      "character": "miko",
+      "explanation": "我没有汽车。 — У меня нет машины.",
+      "pronunciation": "Wǒ méiyǒu qìchē."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "zh-a1-14-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «У меня есть велосипед.»?",
+      "answers": [
+        "我有一辆自行车。"
+      ],
+      "explanation": "我有一辆自行车。 — У меня есть велосипед.",
+      "wordIds": [
+        "zh:v014:14:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "我没有汽车。",
+        "你有时间吗？",
+        "我有一辆自行车。"
+      ],
+      "hint": "我有一辆自行车。 — У меня есть велосипед.",
+      "pronunciation": "Wǒ yǒu yí liàng zìxíngchē."
+    },
+    {
+      "id": "zh-a1-14-e02",
+      "type": "order",
+      "prompt": "Собери реплику: У меня нет машины.",
+      "answers": [
+        "我没有汽车。"
+      ],
+      "explanation": "Отрицание 有 — 没有, а не 不有; 有 также вводит предмет в месте.",
+      "wordIds": [
+        "zh:v014:14:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "我",
+        "没有",
+        "汽车"
+      ],
+      "hint": "我没有汽车。 — У меня нет машины.",
+      "pronunciation": "Wǒ méiyǒu qìchē."
+    },
+    {
+      "id": "zh-a1-14-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "В комнате есть стол."
+      ],
+      "explanation": "房间里有一张桌子。 — В комнате есть стол.",
+      "wordIds": [
+        "zh:v014:14:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "房间里有一张桌子。",
+      "options": [
+        "У меня есть велосипед.",
+        "В комнате есть стол.",
+        "У меня нет машины."
+      ],
+      "hint": "房间里有一张桌子。 — В комнате есть стол.",
+      "pronunciation": "Fángjiān lǐ yǒu yì zhāng zhuōzi."
+    },
+    {
+      "id": "zh-a1-14-e03",
+      "type": "dialogue",
+      "prompt": "Какой транспорт есть у собеседника?",
+      "answers": [
+        "Велосипед."
+      ],
+      "explanation": "Велосипед. Сообщить о наличии и отсутствии предмета.",
+      "wordIds": [
+        "zh:v014:14:p0",
+        "zh:v014:14:p1",
+        "zh:v014:14:p2",
+        "zh:v014:14:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: 你有汽车吗？\nМико: 没有，我有一辆自行车。",
+      "options": [
+        "Машина.",
+        "Автобус.",
+        "Велосипед."
+      ],
+      "scenePronunciation": "Nǐ yǒu qìchē ma?\nMéiyǒu, wǒ yǒu yí liàng zìxíngchē."
+    },
+    {
+      "id": "zh-a1-14-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: 我不有汽车。",
+      "answers": [
+        "我没有汽车。"
+      ],
+      "explanation": "У 有 отрицательная форма 没有.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "我不有汽车。",
+        "我没有汽车。"
+      ],
+      "hint": "Отрицание 有 — 没有, а не 不有; 有 также вводит предмет в месте."
+    },
+    {
+      "id": "zh-a1-14-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «У тебя есть время?». Можно написать вместо микрофона. Можно ответить иероглифами или пиньинем с тонами.",
+      "answers": [
+        "你有时间吗？",
+        "Nǐ yǒu shíjiān ma?"
+      ],
+      "explanation": "你有时间吗？ — У тебя есть время?",
+      "wordIds": [
+        "zh:v014:14:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "你有时间吗？",
+      "recall": {
+        "phrase": "你有时间吗？",
+        "meaning": "У тебя есть время?"
+      },
+      "pronunciation": "Nǐ yǒu shíjiān ma?"
+    },
+    {
+      "id": "zh-a1-14-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: У меня есть велосипед. Можно ответить иероглифами или пиньинем с тонами.",
+      "answers": [
+        "我有一辆自行车。",
+        "Wǒ yǒu yí liàng zìxíngchē."
+      ],
+      "explanation": "Отрицание 有 — 没有, а не 不有; 有 также вводит предмет в месте.",
+      "wordIds": [
+        "zh:v014:14:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "我有一辆自行车。",
+        "meaning": "У меня есть велосипед."
+      },
+      "pronunciation": "Wǒ yǒu yí liàng zìxíngchē."
+    },
+    {
+      "id": "zh-a1-14-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: То её телефон.",
+      "answers": [
+        "那是她的手机。"
+      ],
+      "explanation": "那是她的手机。 — То её телефон.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "这是我的书。",
+        "那是她的手机。",
+        "这是谁的杯子？",
+        "他的包在这里。"
+      ]
+    }
+  ]
+}

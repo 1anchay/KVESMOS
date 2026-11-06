@@ -111,6 +111,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "zh-v014",
+      "title": "Разговоры на каждый день",
+      "themes": [
+        {
+          "id": "zh-v014-unit-1",
+          "title": "Чья это книга",
+          "lessons": [
+            {
+              "id": "zh-a1-13",
+              "title": "Чья это книга",
+              "asset": "assets/courses/zh-a1-13.json",
+              "order": 12
+            },
+            {
+              "id": "zh-a1-14",
+              "title": "Есть и нет",
+              "asset": "assets/courses/zh-a1-14.json",
+              "order": 13
+            }
+          ]
+        },
+        {
+          "id": "zh-v014-unit-2",
+          "title": "Дата и день недели",
+          "lessons": [
+            {
+              "id": "zh-a1-15",
+              "title": "Дата и день недели",
+              "asset": "assets/courses/zh-a1-15.json",
+              "order": 14
+            },
+            {
+              "id": "zh-a1-16",
+              "title": "Каждый день и иногда",
+              "asset": "assets/courses/zh-a1-16.json",
+              "order": 15
+            }
+          ]
+        },
+        {
+          "id": "zh-v014-unit-3",
+          "title": "Считаем покупки",
+          "lessons": [
+            {
+              "id": "zh-a1-17",
+              "title": "Считаем покупки",
+              "asset": "assets/courses/zh-a1-17.json",
+              "order": 16
+            },
+            {
+              "id": "zh-a1-18",
+              "title": "Выбрать из двух",
+              "asset": "assets/courses/zh-a1-18.json",
+              "order": 17
+            }
+          ]
+        },
+        {
+          "id": "zh-v014-unit-4",
+          "title": "Объяснить свой выбор",
+          "lessons": [
+            {
+              "id": "zh-a1-19",
+              "title": "Объяснить свой выбор",
+              "asset": "assets/courses/zh-a1-19.json",
+              "order": 18
+            },
+            {
+              "id": "zh-a1-20",
+              "title": "Сообщение перед встречей",
+              "asset": "assets/courses/zh-a1-20.json",
+              "order": 19
+            }
+          ]
+        }
+      ]
     }
   ]
 }

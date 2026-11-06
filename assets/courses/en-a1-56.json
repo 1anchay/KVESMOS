@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-56",
+  "title": "Выбрать занятие",
+  "topic": "Выбрать занятие",
+  "order": 55,
+  "objective": "Сравнить предпочтения и договориться о досуге.",
+  "guide": "Prefer A to B обозначает предпочтение одного варианта другому.",
+  "vocabulary": [
+    {
+      "id": "en:v014:56:p0",
+      "en": "I prefer walking to running.",
+      "ru": "Я предпочитаю ходьбу бегу."
+    },
+    {
+      "id": "en:v014:56:p1",
+      "en": "Would you like to try painting?",
+      "ru": "Ты хочешь попробовать рисование?"
+    },
+    {
+      "id": "en:v014:56:p2",
+      "en": "I would rather stay outside.",
+      "ru": "Я лучше останусь на улице."
+    },
+    {
+      "id": "en:v014:56:p3",
+      "en": "Let us take some photos.",
+      "ru": "Давай сделаем несколько фотографий."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Выбрать занятие",
+      "phrase": "I prefer walking to running.",
+      "translation": "Я предпочитаю ходьбу бегу.",
+      "explanation": "Prefer A to B обозначает предпочтение одного варианта другому."
+    },
+    {
+      "character": "miko",
+      "title": "Выбрать занятие",
+      "phrase": "Would you like to try painting?",
+      "translation": "Ты хочешь попробовать рисование?",
+      "explanation": "Would you like to try painting? — Ты хочешь попробовать рисование?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Выбрать занятие",
+      "phrase": "I would rather stay outside.",
+      "translation": "Я лучше останусь на улице.",
+      "explanation": "I would rather stay outside. — Я лучше останусь на улице."
+    },
+    {
+      "character": "orbi",
+      "title": "Выбрать занятие",
+      "phrase": "Let us take some photos.",
+      "translation": "Давай сделаем несколько фотографий.",
+      "explanation": "Let us take some photos. — Давай сделаем несколько фотографий."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I prefer walking to running.",
+      "translation": "Я предпочитаю ходьбу бегу.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я предпочитаю ходьбу бегу.",
+      "options": [
+        "Я лучше останусь на улице.",
+        "Я предпочитаю ходьбу бегу.",
+        "Давай сделаем несколько фотографий."
+      ],
+      "explanation": "Prefer A to B обозначает предпочтение одного варианта другому."
+    },
+    {
+      "id": "apply",
+      "phrase": "Would you like to try painting?",
+      "translation": "Ты хочешь попробовать рисование?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Would you like to try painting?",
+      "tokens": [
+        "Would",
+        "you",
+        "like",
+        "to",
+        "try",
+        "painting?"
+      ],
+      "character": "miko",
+      "explanation": "Would you like to try painting? — Ты хочешь попробовать рисование?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-56-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я предпочитаю ходьбу бегу.»?",
+      "answers": [
+        "I prefer walking to running."
+      ],
+      "explanation": "I prefer walking to running. — Я предпочитаю ходьбу бегу.",
+      "wordIds": [
+        "en:v014:56:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Would you like to try painting?",
+        "Let us take some photos.",
+        "I prefer walking to running."
+      ],
+      "hint": "I prefer walking to running. — Я предпочитаю ходьбу бегу."
+    },
+    {
+      "id": "en-a1-56-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Ты хочешь попробовать рисование?",
+      "answers": [
+        "Would you like to try painting?"
+      ],
+      "explanation": "Prefer A to B обозначает предпочтение одного варианта другому.",
+      "wordIds": [
+        "en:v014:56:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Would",
+        "you",
+        "like",
+        "to",
+        "try",
+        "painting?"
+      ],
+      "hint": "Would you like to try painting? — Ты хочешь попробовать рисование?"
+    },
+    {
+      "id": "en-a1-56-e03",
+      "type": "dialogue",
+      "prompt": "Что предпочитает собеседник?",
+      "answers": [
+        "Фотографировать на улице."
+      ],
+      "explanation": "Фотографировать на улице. Сравнить предпочтения и договориться о досуге.",
+      "wordIds": [
+        "en:v014:56:p0",
+        "en:v014:56:p1",
+        "en:v014:56:p2",
+        "en:v014:56:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Would you like to try painting indoors?\nМико: I would rather stay outside and take photos.",
+      "options": [
+        "Рисовать в помещении.",
+        "Бегать в зале.",
+        "Фотографировать на улице."
+      ]
+    },
+    {
+      "id": "en-a1-56-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я лучше останусь на улице."
+      ],
+      "explanation": "I would rather stay outside. — Я лучше останусь на улице.",
+      "wordIds": [
+        "en:v014:56:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I would rather stay outside.",
+      "options": [
+        "Я предпочитаю ходьбу бегу.",
+        "Я лучше останусь на улице.",
+        "Ты хочешь попробовать рисование?"
+      ],
+      "hint": "I would rather stay outside. — Я лучше останусь на улице."
+    },
+    {
+      "id": "en-a1-56-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I prefer walking than running.",
+      "answers": [
+        "I prefer walking to running."
+      ],
+      "explanation": "С prefer сравнение связывает to, а не than.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I prefer walking than running.",
+        "I prefer walking to running."
+      ],
+      "hint": "Prefer A to B обозначает предпочтение одного варианта другому."
+    },
+    {
+      "id": "en-a1-56-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Давай сделаем несколько фотографий.». Можно написать вместо микрофона.",
+      "answers": [
+        "Let us take some photos."
+      ],
+      "explanation": "Let us take some photos. — Давай сделаем несколько фотографий.",
+      "wordIds": [
+        "en:v014:56:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Let us take some photos.",
+      "recall": {
+        "phrase": "Let us take some photos.",
+        "meaning": "Давай сделаем несколько фотографий."
+      }
+    },
+    {
+      "id": "en-a1-56-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я предпочитаю ходьбу бегу.",
+      "answers": [
+        "I prefer walking to running."
+      ],
+      "explanation": "Prefer A to B обозначает предпочтение одного варианта другому.",
+      "wordIds": [
+        "en:v014:56:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I prefer walking to running.",
+        "meaning": "Я предпочитаю ходьбу бегу."
+      }
+    },
+    {
+      "id": "en-a1-56-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Давай понесём её вместе.",
+      "answers": [
+        "Let us carry it together."
+      ],
+      "explanation": "Let us carry it together. — Давай понесём её вместе.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We have enough time.",
+        "This bag is big enough.",
+        "The box is too heavy.",
+        "Let us carry it together."
+      ]
+    }
+  ]
+}

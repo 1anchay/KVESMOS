@@ -9,7 +9,6 @@ import 'package:orbitwords/core/controller.dart';
 import 'package:orbitwords/domain/course.dart';
 import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/ui/app.dart';
-import 'package:orbitwords/ui/lesson_introduction.dart';
 import 'package:orbitwords/ui/lesson_effects.dart';
 import 'package:orbitwords/ui/mission_checkpoint.dart';
 import 'support.dart';
@@ -148,13 +147,7 @@ void main() {
           router.go('/lesson/a1-01');
           await flushDb(tester);
           await capture('intro');
-          for (
-            var i = 0;
-            i < 12 && find.byType(LessonIntroduction).evaluate().isNotEmpty;
-            i++
-          ) {
-            await tap(find.byKey(const Key('teaching-next')));
-          }
+          await advanceTeaching(tester);
           final material = await tester.runAsync(
             () => repo.startLesson('a1-01'),
           );

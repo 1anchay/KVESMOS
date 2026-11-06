@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/database.dart';
 import '../domain/course.dart';
+import '../domain/intro_activity.dart';
 import '../domain/languages.dart';
 import '../domain/progress.dart';
 import '../domain/learning_recap.dart';
@@ -15,6 +16,7 @@ import 'design.dart';
 import 'lesson_effects.dart';
 import 'lesson_coach.dart';
 import 'lesson_introduction.dart';
+import 'lesson_reference.dart';
 import 'dialogue_scene.dart';
 import 'character_moment.dart';
 import 'speech_source.dart';
@@ -71,6 +73,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   bool recallHidden = false;
   bool rehearsal = false;
   int teachingStep = 0;
+  IntroDraft? introDraft;
   bool? result;
   List<String> options = [];
   List<int> tokenPool = [];
@@ -112,8 +115,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       // Resolve async session state before exposing the quiz to build().
       final shouldTeach =
           !saved.done &&
+          !rehearsal &&
           saved.position == 0 &&
-          material.lesson.teachingSteps.isNotEmpty &&
+          material.lesson.guidedIntroduction.isNotEmpty &&
           !await app.repository.hasTeachingSeen(saved.id);
       final summary = saved.done ? await _readSummary(saved.id) : null;
       final recap = LearningRecap.fromEvents(
@@ -123,6 +127,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       final savedTeachingStep = shouldTeach
           ? await app.repository.teachingStep(saved.id)
           : 0;
+      final savedIntro = shouldTeach
+          ? await app.repository.introDraft(saved.id)
+          : null;
       if (!mounted) return;
       // Map notices must not follow the student and cover lesson navigation.
       ScaffoldMessenger.of(context).clearSnackBars();
@@ -130,6 +137,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       session = saved;
       showTeaching = shouldTeach;
       teachingStep = savedTeachingStep;
+      introDraft = savedIntro;
       lessonResult = summary;
       consecutiveCorrect = recap.streak;
       bestCombo = recap.best;
@@ -204,7 +212,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       if (!mounted) return;
       lesson = material.lesson;
       session = material.session;
-      showTeaching = material.lesson.teachingSteps.isNotEmpty;
+      showTeaching = material.lesson.guidedIntroduction.isNotEmpty;
+      introDraft = null;
       teachingStep = 0;
       consecutiveCorrect = 0;
       bestCombo = 0;
@@ -455,6 +464,14 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         lesson: lesson!,
         audio: audio,
         initialStep: teachingStep,
+        initialDraft: introDraft,
+        onDraft: (draft) async {
+          await ref
+              .read(appProvider)
+              .repository
+              .saveIntroDraft(session!.id, draft);
+          introDraft = draft;
+        },
         onClose: () => context.go('/'),
         onStep: (step) async {
           await ref
@@ -499,7 +516,29 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           'Шаг ${session!.position + 1} из ${lesson!.exercises.length}',
           style: Theme.of(context).textTheme.titleMedium,
         ),
-        actions: const [LessonAudioToggle(), SizedBox(width: 8)],
+        actions: [
+          IconButton(
+            tooltip: 'Справочник',
+            icon: const Icon(Icons.menu_book_outlined),
+            onPressed: () => showLessonReference(
+              context,
+              lesson!,
+              onTry: lesson!.guidedIntroduction.isEmpty
+                  ? null
+                  : () async {
+                      await saveDraft();
+                      if (!mounted) return;
+                      setState(() {
+                        introDraft = null;
+                        teachingStep = 0;
+                        showTeaching = true;
+                      });
+                    },
+            ),
+          ),
+          const LessonAudioToggle(),
+          const SizedBox(width: 8),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(16),
           child: Padding(

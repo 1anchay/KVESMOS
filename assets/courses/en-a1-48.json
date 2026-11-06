@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-48",
+  "title": "Перенос встречи",
+  "topic": "Перенос встречи",
+  "order": 47,
+  "objective": "Объяснить изменение плана и предложить замену.",
+  "guide": "Cannot объясняет невозможность; instead предлагает замену.",
+  "vocabulary": [
+    {
+      "id": "en:v014:48:p0",
+      "en": "I cannot come on Friday.",
+      "ru": "Я не могу прийти в пятницу."
+    },
+    {
+      "id": "en:v014:48:p1",
+      "en": "Can we meet on Saturday instead?",
+      "ru": "Можем мы вместо этого встретиться в субботу?"
+    },
+    {
+      "id": "en:v014:48:p2",
+      "en": "Saturday morning works for me.",
+      "ru": "Субботнее утро мне подходит."
+    },
+    {
+      "id": "en:v014:48:p3",
+      "en": "I will send you the address.",
+      "ru": "Я пришлю тебе адрес."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Перенос встречи",
+      "phrase": "I cannot come on Friday.",
+      "translation": "Я не могу прийти в пятницу.",
+      "explanation": "Cannot объясняет невозможность; instead предлагает замену."
+    },
+    {
+      "character": "miko",
+      "title": "Перенос встречи",
+      "phrase": "Can we meet on Saturday instead?",
+      "translation": "Можем мы вместо этого встретиться в субботу?",
+      "explanation": "Can we meet on Saturday instead? — Можем мы вместо этого встретиться в субботу?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Перенос встречи",
+      "phrase": "Saturday morning works for me.",
+      "translation": "Субботнее утро мне подходит.",
+      "explanation": "Saturday morning works for me. — Субботнее утро мне подходит."
+    },
+    {
+      "character": "orbi",
+      "title": "Перенос встречи",
+      "phrase": "I will send you the address.",
+      "translation": "Я пришлю тебе адрес.",
+      "explanation": "I will send you the address. — Я пришлю тебе адрес."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I cannot come on Friday.",
+      "translation": "Я не могу прийти в пятницу.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я не могу прийти в пятницу.",
+      "options": [
+        "Субботнее утро мне подходит.",
+        "Я не могу прийти в пятницу.",
+        "Я пришлю тебе адрес."
+      ],
+      "explanation": "Cannot объясняет невозможность; instead предлагает замену."
+    },
+    {
+      "id": "apply",
+      "phrase": "Can we meet on Saturday instead?",
+      "translation": "Можем мы вместо этого встретиться в субботу?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Can we meet on Saturday instead?",
+      "tokens": [
+        "Can",
+        "we",
+        "meet",
+        "on",
+        "Saturday",
+        "instead?"
+      ],
+      "character": "miko",
+      "explanation": "Can we meet on Saturday instead? — Можем мы вместо этого встретиться в субботу?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-48-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я не могу прийти в пятницу.»?",
+      "answers": [
+        "I cannot come on Friday."
+      ],
+      "explanation": "I cannot come on Friday. — Я не могу прийти в пятницу.",
+      "wordIds": [
+        "en:v014:48:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Can we meet on Saturday instead?",
+        "I will send you the address.",
+        "I cannot come on Friday."
+      ],
+      "hint": "I cannot come on Friday. — Я не могу прийти в пятницу."
+    },
+    {
+      "id": "en-a1-48-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Можем мы вместо этого встретиться в субботу?",
+      "answers": [
+        "Can we meet on Saturday instead?"
+      ],
+      "explanation": "Cannot объясняет невозможность; instead предлагает замену.",
+      "wordIds": [
+        "en:v014:48:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Can",
+        "we",
+        "meet",
+        "on",
+        "Saturday",
+        "instead?"
+      ],
+      "hint": "Can we meet on Saturday instead? — Можем мы вместо этого встретиться в субботу?"
+    },
+    {
+      "id": "en-a1-48-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Субботнее утро мне подходит."
+      ],
+      "explanation": "Saturday morning works for me. — Субботнее утро мне подходит.",
+      "wordIds": [
+        "en:v014:48:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Saturday morning works for me.",
+      "options": [
+        "Я не могу прийти в пятницу.",
+        "Субботнее утро мне подходит.",
+        "Можем мы вместо этого встретиться в субботу?"
+      ],
+      "hint": "Saturday morning works for me. — Субботнее утро мне подходит."
+    },
+    {
+      "id": "en-a1-48-e03",
+      "type": "dialogue",
+      "prompt": "Когда теперь встреча?",
+      "answers": [
+        "В субботу утром."
+      ],
+      "explanation": "В субботу утром. Объяснить изменение плана и предложить замену.",
+      "wordIds": [
+        "en:v014:48:p0",
+        "en:v014:48:p1",
+        "en:v014:48:p2",
+        "en:v014:48:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Can we meet on Saturday instead?\nМико: Yes, Saturday morning works for me.",
+      "options": [
+        "В пятницу вечером.",
+        "В воскресенье утром.",
+        "В субботу утром."
+      ]
+    },
+    {
+      "id": "en-a1-48-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Can we to meet on Saturday?",
+      "answers": [
+        "Can we meet on Saturday?"
+      ],
+      "explanation": "После can используем meet без to.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Can we to meet on Saturday?",
+        "Can we meet on Saturday?"
+      ],
+      "hint": "Cannot объясняет невозможность; instead предлагает замену."
+    },
+    {
+      "id": "en-a1-48-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я пришлю тебе адрес.». Можно написать вместо микрофона.",
+      "answers": [
+        "I will send you the address."
+      ],
+      "explanation": "I will send you the address. — Я пришлю тебе адрес.",
+      "wordIds": [
+        "en:v014:48:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I will send you the address.",
+      "recall": {
+        "phrase": "I will send you the address.",
+        "meaning": "Я пришлю тебе адрес."
+      }
+    },
+    {
+      "id": "en-a1-48-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я не могу прийти в пятницу.",
+      "answers": [
+        "I cannot come on Friday."
+      ],
+      "explanation": "Cannot объясняет невозможность; instead предлагает замену.",
+      "wordIds": [
+        "en:v014:48:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I cannot come on Friday.",
+        "meaning": "Я не могу прийти в пятницу."
+      }
+    },
+    {
+      "id": "en-a1-48-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я проверю погоду.",
+      "answers": [
+        "I will check the weather."
+      ],
+      "explanation": "I will check the weather. — Я проверю погоду.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "If it rains, we will stay home.",
+        "We can watch a film.",
+        "If it is sunny, we will go out.",
+        "I will check the weather."
+      ]
+    }
+  ]
+}

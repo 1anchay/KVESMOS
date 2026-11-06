@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-50",
+  "title": "Дела по дому",
+  "topic": "Дела по дому",
+  "order": 49,
+  "objective": "Рассказать о необходимых домашних делах.",
+  "guide": "Have to обозначает необходимость; для he/she используем has to.",
+  "vocabulary": [
+    {
+      "id": "en:v014:50:p0",
+      "en": "I have to clean the kitchen.",
+      "ru": "Мне нужно убрать кухню."
+    },
+    {
+      "id": "en:v014:50:p1",
+      "en": "She has to wash the dishes.",
+      "ru": "Ей нужно помыть посуду."
+    },
+    {
+      "id": "en:v014:50:p2",
+      "en": "Do we have to do it today?",
+      "ru": "Нам нужно сделать это сегодня?"
+    },
+    {
+      "id": "en:v014:50:p3",
+      "en": "We do not have to hurry.",
+      "ru": "Нам не нужно спешить."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Дела по дому",
+      "phrase": "I have to clean the kitchen.",
+      "translation": "Мне нужно убрать кухню.",
+      "explanation": "Have to обозначает необходимость; для he/she используем has to."
+    },
+    {
+      "character": "miko",
+      "title": "Дела по дому",
+      "phrase": "She has to wash the dishes.",
+      "translation": "Ей нужно помыть посуду.",
+      "explanation": "She has to wash the dishes. — Ей нужно помыть посуду."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Дела по дому",
+      "phrase": "Do we have to do it today?",
+      "translation": "Нам нужно сделать это сегодня?",
+      "explanation": "Do we have to do it today? — Нам нужно сделать это сегодня?"
+    },
+    {
+      "character": "orbi",
+      "title": "Дела по дому",
+      "phrase": "We do not have to hurry.",
+      "translation": "Нам не нужно спешить.",
+      "explanation": "We do not have to hurry. — Нам не нужно спешить."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I have to clean the kitchen.",
+      "translation": "Мне нужно убрать кухню.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мне нужно убрать кухню.",
+      "options": [
+        "Нам нужно сделать это сегодня?",
+        "Мне нужно убрать кухню.",
+        "Нам не нужно спешить."
+      ],
+      "explanation": "Have to обозначает необходимость; для he/she используем has to."
+    },
+    {
+      "id": "apply",
+      "phrase": "She has to wash the dishes.",
+      "translation": "Ей нужно помыть посуду.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "She has to wash the dishes.",
+      "tokens": [
+        "She",
+        "has",
+        "to",
+        "wash",
+        "the",
+        "dishes."
+      ],
+      "character": "miko",
+      "explanation": "She has to wash the dishes. — Ей нужно помыть посуду."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-50-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Мне нужно убрать кухню.»?",
+      "answers": [
+        "I have to clean the kitchen."
+      ],
+      "explanation": "I have to clean the kitchen. — Мне нужно убрать кухню.",
+      "wordIds": [
+        "en:v014:50:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "She has to wash the dishes.",
+        "We do not have to hurry.",
+        "I have to clean the kitchen."
+      ],
+      "hint": "I have to clean the kitchen. — Мне нужно убрать кухню."
+    },
+    {
+      "id": "en-a1-50-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Ей нужно помыть посуду.",
+      "answers": [
+        "She has to wash the dishes."
+      ],
+      "explanation": "Have to обозначает необходимость; для he/she используем has to.",
+      "wordIds": [
+        "en:v014:50:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "She",
+        "has",
+        "to",
+        "wash",
+        "the",
+        "dishes."
+      ],
+      "hint": "She has to wash the dishes. — Ей нужно помыть посуду."
+    },
+    {
+      "id": "en-a1-50-e03",
+      "type": "dialogue",
+      "prompt": "Нужно ли торопиться?",
+      "answers": [
+        "Нет, торопиться не нужно."
+      ],
+      "explanation": "Нет, торопиться не нужно. Рассказать о необходимых домашних делах.",
+      "wordIds": [
+        "en:v014:50:p0",
+        "en:v014:50:p1",
+        "en:v014:50:p2",
+        "en:v014:50:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Do we have to clean the kitchen today?\nМико: Yes, but we do not have to hurry.",
+      "options": [
+        "Да, нужно очень спешить.",
+        "Убирать вообще не нужно.",
+        "Нет, торопиться не нужно."
+      ]
+    },
+    {
+      "id": "en-a1-50-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Нам нужно сделать это сегодня?"
+      ],
+      "explanation": "Do we have to do it today? — Нам нужно сделать это сегодня?",
+      "wordIds": [
+        "en:v014:50:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Do we have to do it today?",
+      "options": [
+        "Мне нужно убрать кухню.",
+        "Нам нужно сделать это сегодня?",
+        "Ей нужно помыть посуду."
+      ],
+      "hint": "Do we have to do it today? — Нам нужно сделать это сегодня?"
+    },
+    {
+      "id": "en-a1-50-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: She have to wash the dishes.",
+      "answers": [
+        "She has to wash the dishes."
+      ],
+      "explanation": "С she употребляем has to.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "She have to wash the dishes.",
+        "She has to wash the dishes."
+      ],
+      "hint": "Have to обозначает необходимость; для he/she используем has to."
+    },
+    {
+      "id": "en-a1-50-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Нам не нужно спешить.». Можно написать вместо микрофона.",
+      "answers": [
+        "We do not have to hurry."
+      ],
+      "explanation": "We do not have to hurry. — Нам не нужно спешить.",
+      "wordIds": [
+        "en:v014:50:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "We do not have to hurry.",
+      "recall": {
+        "phrase": "We do not have to hurry.",
+        "meaning": "Нам не нужно спешить."
+      }
+    },
+    {
+      "id": "en-a1-50-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мне нужно убрать кухню.",
+      "answers": [
+        "I have to clean the kitchen."
+      ],
+      "explanation": "Have to обозначает необходимость; для he/she используем has to.",
+      "wordIds": [
+        "en:v014:50:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I have to clean the kitchen.",
+        "meaning": "Мне нужно убрать кухню."
+      }
+    },
+    {
+      "id": "en-a1-50-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Во сколько начинается занятие?",
+      "answers": [
+        "What time does the class start?"
+      ],
+      "explanation": "What time does the class start? — Во сколько начинается занятие?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Could you tell me where the room is?",
+        "What time does the class start?",
+        "Do I need to bring a notebook?",
+        "The class starts at half past nine."
+      ]
+    }
+  ]
+}

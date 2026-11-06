@@ -1,3 +1,5 @@
+import 'intro_activity.dart';
+
 /// A tiny teaching beat before the learner is asked to recall the phrase.
 class LessonTeachingStep {
   final String character, title, phrase, translation, explanation;
@@ -135,6 +137,10 @@ class Lesson {
   final List<Exercise> exercises;
   final List<Vocabulary> vocabulary;
   final List<LessonTeachingStep> teachingSteps;
+  final List<IntroActivity> introActivities;
+  List<IntroActivity> get guidedIntroduction => introActivities.isNotEmpty
+      ? introActivities
+      : IntroActivity.fromTeaching(teachingSteps);
   const Lesson({
     required this.id,
     required this.title,
@@ -144,6 +150,7 @@ class Lesson {
     required this.exercises,
     required this.vocabulary,
     this.teachingSteps = const [],
+    this.introActivities = const [],
     this.objective,
   });
   factory Lesson.fromJson(Map<String, dynamic> j) => Lesson(
@@ -152,6 +159,9 @@ class Lesson {
     topic: j['topic'],
     guide: j['guide'],
     objective: j['objective'],
+    introActivities: (j['introActivities'] as List? ?? [])
+        .map((e) => IntroActivity.fromJson(Map<String, dynamic>.from(e)))
+        .toList(),
     order: j['order'],
     exercises: (j['exercises'] as List)
         .map((e) => Exercise.fromJson(e))

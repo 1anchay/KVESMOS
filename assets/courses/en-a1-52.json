@@ -1,0 +1,249 @@
+{
+  "id": "en-a1-52",
+  "title": "Инструкция к встрече",
+  "topic": "Инструкция к встрече",
+  "order": 51,
+  "objective": "Понять короткую инструкцию из нескольких действий.",
+  "guide": "Повелительное предложение начинается с глагола; отрицательная инструкция — do not + глагол.",
+  "vocabulary": [
+    {
+      "id": "en:v014:52:p0",
+      "en": "Open the link in the message.",
+      "ru": "Открой ссылку в сообщении."
+    },
+    {
+      "id": "en:v014:52:p1",
+      "en": "Enter your name first.",
+      "ru": "Сначала введи своё имя."
+    },
+    {
+      "id": "en:v014:52:p2",
+      "en": "Do not close the window.",
+      "ru": "Не закрывай окно."
+    },
+    {
+      "id": "en:v014:52:p3",
+      "en": "Click the blue button to join.",
+      "ru": "Нажми синюю кнопку, чтобы присоединиться."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Инструкция к встрече",
+      "phrase": "Open the link in the message.",
+      "translation": "Открой ссылку в сообщении.",
+      "explanation": "Повелительное предложение начинается с глагола; отрицательная инструкция — do not + глагол."
+    },
+    {
+      "character": "miko",
+      "title": "Инструкция к встрече",
+      "phrase": "Enter your name first.",
+      "translation": "Сначала введи своё имя.",
+      "explanation": "Enter your name first. — Сначала введи своё имя."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Инструкция к встрече",
+      "phrase": "Do not close the window.",
+      "translation": "Не закрывай окно.",
+      "explanation": "Do not close the window. — Не закрывай окно."
+    },
+    {
+      "character": "orbi",
+      "title": "Инструкция к встрече",
+      "phrase": "Click the blue button to join.",
+      "translation": "Нажми синюю кнопку, чтобы присоединиться.",
+      "explanation": "Click the blue button to join. — Нажми синюю кнопку, чтобы присоединиться."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Open the link in the message.",
+      "translation": "Открой ссылку в сообщении.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Открой ссылку в сообщении.",
+      "options": [
+        "Не закрывай окно.",
+        "Открой ссылку в сообщении.",
+        "Нажми синюю кнопку, чтобы присоединиться."
+      ],
+      "explanation": "Повелительное предложение начинается с глагола; отрицательная инструкция — do not + глагол."
+    },
+    {
+      "id": "apply",
+      "phrase": "Enter your name first.",
+      "translation": "Сначала введи своё имя.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Enter your name first.",
+      "tokens": [
+        "Enter",
+        "your",
+        "name",
+        "first."
+      ],
+      "character": "miko",
+      "explanation": "Enter your name first. — Сначала введи своё имя."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-52-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Открой ссылку в сообщении.»?",
+      "answers": [
+        "Open the link in the message."
+      ],
+      "explanation": "Open the link in the message. — Открой ссылку в сообщении.",
+      "wordIds": [
+        "en:v014:52:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Enter your name first.",
+        "Click the blue button to join.",
+        "Open the link in the message."
+      ],
+      "hint": "Open the link in the message. — Открой ссылку в сообщении."
+    },
+    {
+      "id": "en-a1-52-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Сначала введи своё имя.",
+      "answers": [
+        "Enter your name first."
+      ],
+      "explanation": "Повелительное предложение начинается с глагола; отрицательная инструкция — do not + глагол.",
+      "wordIds": [
+        "en:v014:52:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Enter",
+        "your",
+        "name",
+        "first."
+      ],
+      "hint": "Enter your name first. — Сначала введи своё имя."
+    },
+    {
+      "id": "en-a1-52-e03",
+      "type": "dialogue",
+      "prompt": "Что сделать сначала?",
+      "answers": [
+        "Ввести имя."
+      ],
+      "explanation": "Ввести имя. Понять короткую инструкцию из нескольких действий.",
+      "wordIds": [
+        "en:v014:52:p0",
+        "en:v014:52:p1",
+        "en:v014:52:p2",
+        "en:v014:52:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: How do I join?\nМико: Enter your name, then click the blue button.",
+      "options": [
+        "Закрыть окно.",
+        "Изменить цвет кнопки.",
+        "Ввести имя."
+      ]
+    },
+    {
+      "id": "en-a1-52-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Не закрывай окно."
+      ],
+      "explanation": "Do not close the window. — Не закрывай окно.",
+      "wordIds": [
+        "en:v014:52:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Do not close the window.",
+      "options": [
+        "Открой ссылку в сообщении.",
+        "Не закрывай окно.",
+        "Сначала введи своё имя."
+      ],
+      "hint": "Do not close the window. — Не закрывай окно."
+    },
+    {
+      "id": "en-a1-52-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Do not closes the window.",
+      "answers": [
+        "Do not close the window."
+      ],
+      "explanation": "После do not используется close без окончания.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Do not closes the window.",
+        "Do not close the window."
+      ],
+      "hint": "Повелительное предложение начинается с глагола; отрицательная инструкция — do not + глагол."
+    },
+    {
+      "id": "en-a1-52-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Нажми синюю кнопку, чтобы присоединиться.». Можно написать вместо микрофона.",
+      "answers": [
+        "Click the blue button to join."
+      ],
+      "explanation": "Click the blue button to join. — Нажми синюю кнопку, чтобы присоединиться.",
+      "wordIds": [
+        "en:v014:52:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Click the blue button to join.",
+      "recall": {
+        "phrase": "Click the blue button to join.",
+        "meaning": "Нажми синюю кнопку, чтобы присоединиться."
+      }
+    },
+    {
+      "id": "en-a1-52-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Открой ссылку в сообщении.",
+      "answers": [
+        "Open the link in the message."
+      ],
+      "explanation": "Повелительное предложение начинается с глагола; отрицательная инструкция — do not + глагол.",
+      "wordIds": [
+        "en:v014:52:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Open the link in the message.",
+        "meaning": "Открой ссылку в сообщении."
+      }
+    },
+    {
+      "id": "en-a1-52-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Пожалуйста, выключите звук телефона.",
+      "answers": [
+        "Please keep your phone silent."
+      ],
+      "explanation": "Please keep your phone silent. — Пожалуйста, выключите звук телефона.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "You must not eat here.",
+        "You can use this computer.",
+        "You do not have to book a seat.",
+        "Please keep your phone silent."
+      ]
+    }
+  ]
+}

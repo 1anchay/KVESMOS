@@ -165,6 +165,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "de-v014",
+      "title": "Разговоры на каждый день",
+      "themes": [
+        {
+          "id": "de-v014-unit-1",
+          "title": "Чьи это вещи",
+          "lessons": [
+            {
+              "id": "de-a1-19",
+              "title": "Чьи это вещи",
+              "asset": "assets/courses/de-a1-19.json",
+              "order": 18
+            },
+            {
+              "id": "de-a1-20",
+              "title": "Домашние дела",
+              "asset": "assets/courses/de-a1-20.json",
+              "order": 19
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-2",
+          "title": "Где лежит посылка",
+          "lessons": [
+            {
+              "id": "de-a1-21",
+              "title": "Где лежит посылка",
+              "asset": "assets/courses/de-a1-21.json",
+              "order": 20
+            },
+            {
+              "id": "de-a1-22",
+              "title": "Куда поставить коробку",
+              "asset": "assets/courses/de-a1-22.json",
+              "order": 21
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-3",
+          "title": "Позвоню после работы",
+          "lessons": [
+            {
+              "id": "de-a1-23",
+              "title": "Позвоню после работы",
+              "asset": "assets/courses/de-a1-23.json",
+              "order": 22
+            },
+            {
+              "id": "de-a1-24",
+              "title": "Обязательные дела",
+              "asset": "assets/courses/de-a1-24.json",
+              "order": 23
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-4",
+          "title": "Разрешено или запрещено",
+          "lessons": [
+            {
+              "id": "de-a1-25",
+              "title": "Разрешено или запрещено",
+              "asset": "assets/courses/de-a1-25.json",
+              "order": 24
+            },
+            {
+              "id": "de-a1-26",
+              "title": "Планы на выходной",
+              "asset": "assets/courses/de-a1-26.json",
+              "order": 25
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-5",
+          "title": "Время на табло",
+          "lessons": [
+            {
+              "id": "de-a1-27",
+              "title": "Время на табло",
+              "asset": "assets/courses/de-a1-27.json",
+              "order": 26
+            },
+            {
+              "id": "de-a1-28",
+              "title": "Что выбрать на ужин",
+              "asset": "assets/courses/de-a1-28.json",
+              "order": 27
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-6",
+          "title": "Объяснить причину",
+          "lessons": [
+            {
+              "id": "de-a1-29",
+              "title": "Объяснить причину",
+              "asset": "assets/courses/de-a1-29.json",
+              "order": 28
+            },
+            {
+              "id": "de-a1-30",
+              "title": "Короткое письмо другу",
+              "asset": "assets/courses/de-a1-30.json",
+              "order": 29
+            }
+          ]
+        }
+      ]
     }
   ]
 }

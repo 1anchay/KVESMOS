@@ -1,0 +1,249 @@
+{
+  "id": "fr-a1-18",
+  "title": "Можно попросить",
+  "topic": "Можно попросить",
+  "order": 17,
+  "objective": "Вежливо попросить действие и предложить помощь.",
+  "guide": "Pouvoir + инфинитив обозначает возможность; pouvez-vous — вежливый вопрос.",
+  "vocabulary": [
+    {
+      "id": "fr:v014:18:p0",
+      "en": "Pouvez-vous ouvrir la fenêtre ?",
+      "ru": "Можете открыть окно?"
+    },
+    {
+      "id": "fr:v014:18:p1",
+      "en": "Je peux vous aider.",
+      "ru": "Я могу вам помочь."
+    },
+    {
+      "id": "fr:v014:18:p2",
+      "en": "Tu peux répéter, s'il te plaît ?",
+      "ru": "Можешь повторить, пожалуйста?"
+    },
+    {
+      "id": "fr:v014:18:p3",
+      "en": "Nous pouvons attendre ici.",
+      "ru": "Мы можем подождать здесь."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Можно попросить",
+      "phrase": "Pouvez-vous ouvrir la fenêtre ?",
+      "translation": "Можете открыть окно?",
+      "explanation": "Pouvoir + инфинитив обозначает возможность; pouvez-vous — вежливый вопрос."
+    },
+    {
+      "character": "miko",
+      "title": "Можно попросить",
+      "phrase": "Je peux vous aider.",
+      "translation": "Я могу вам помочь.",
+      "explanation": "Je peux vous aider. — Я могу вам помочь."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Можно попросить",
+      "phrase": "Tu peux répéter, s'il te plaît ?",
+      "translation": "Можешь повторить, пожалуйста?",
+      "explanation": "Tu peux répéter, s'il te plaît ? — Можешь повторить, пожалуйста?"
+    },
+    {
+      "character": "orbi",
+      "title": "Можно попросить",
+      "phrase": "Nous pouvons attendre ici.",
+      "translation": "Мы можем подождать здесь.",
+      "explanation": "Nous pouvons attendre ici. — Мы можем подождать здесь."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Pouvez-vous ouvrir la fenêtre ?",
+      "translation": "Можете открыть окно?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Можете открыть окно?",
+      "options": [
+        "Можешь повторить, пожалуйста?",
+        "Можете открыть окно?",
+        "Мы можем подождать здесь."
+      ],
+      "explanation": "Pouvoir + инфинитив обозначает возможность; pouvez-vous — вежливый вопрос."
+    },
+    {
+      "id": "apply",
+      "phrase": "Je peux vous aider.",
+      "translation": "Я могу вам помочь.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Je peux vous aider.",
+      "tokens": [
+        "Je",
+        "peux",
+        "vous",
+        "aider."
+      ],
+      "character": "miko",
+      "explanation": "Je peux vous aider. — Я могу вам помочь."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-18-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Можете открыть окно?»?",
+      "answers": [
+        "Pouvez-vous ouvrir la fenêtre ?"
+      ],
+      "explanation": "Pouvez-vous ouvrir la fenêtre ? — Можете открыть окно?",
+      "wordIds": [
+        "fr:v014:18:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Je peux vous aider.",
+        "Nous pouvons attendre ici.",
+        "Pouvez-vous ouvrir la fenêtre ?"
+      ],
+      "hint": "Pouvez-vous ouvrir la fenêtre ? — Можете открыть окно?"
+    },
+    {
+      "id": "fr-a1-18-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я могу вам помочь.",
+      "answers": [
+        "Je peux vous aider."
+      ],
+      "explanation": "Pouvoir + инфинитив обозначает возможность; pouvez-vous — вежливый вопрос.",
+      "wordIds": [
+        "fr:v014:18:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Je",
+        "peux",
+        "vous",
+        "aider."
+      ],
+      "hint": "Je peux vous aider. — Я могу вам помочь."
+    },
+    {
+      "id": "fr-a1-18-e03",
+      "type": "dialogue",
+      "prompt": "Что попросили сделать?",
+      "answers": [
+        "Открыть окно."
+      ],
+      "explanation": "Открыть окно. Вежливо попросить действие и предложить помощь.",
+      "wordIds": [
+        "fr:v014:18:p0",
+        "fr:v014:18:p1",
+        "fr:v014:18:p2",
+        "fr:v014:18:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Pouvez-vous ouvrir la fenêtre ?\nМико: Oui, bien sûr. Vous pouvez attendre ici.",
+      "options": [
+        "Закрыть дверь.",
+        "Уйти на улицу.",
+        "Открыть окно."
+      ]
+    },
+    {
+      "id": "fr-a1-18-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Можешь повторить, пожалуйста?"
+      ],
+      "explanation": "Tu peux répéter, s'il te plaît ? — Можешь повторить, пожалуйста?",
+      "wordIds": [
+        "fr:v014:18:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Tu peux répéter, s'il te plaît ?",
+      "options": [
+        "Можете открыть окно?",
+        "Можешь повторить, пожалуйста?",
+        "Я могу вам помочь."
+      ],
+      "hint": "Tu peux répéter, s'il te plaît ? — Можешь повторить, пожалуйста?"
+    },
+    {
+      "id": "fr-a1-18-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je peux vous aide.",
+      "answers": [
+        "Je peux vous aider."
+      ],
+      "explanation": "После peux нужна начальная форма aider.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je peux vous aide.",
+        "Je peux vous aider."
+      ],
+      "hint": "Pouvoir + инфинитив обозначает возможность; pouvez-vous — вежливый вопрос."
+    },
+    {
+      "id": "fr-a1-18-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы можем подождать здесь.». Можно написать вместо микрофона.",
+      "answers": [
+        "Nous pouvons attendre ici."
+      ],
+      "explanation": "Nous pouvons attendre ici. — Мы можем подождать здесь.",
+      "wordIds": [
+        "fr:v014:18:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Nous pouvons attendre ici.",
+      "recall": {
+        "phrase": "Nous pouvons attendre ici.",
+        "meaning": "Мы можем подождать здесь."
+      }
+    },
+    {
+      "id": "fr-a1-18-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Можете открыть окно?",
+      "answers": [
+        "Pouvez-vous ouvrir la fenêtre ?"
+      ],
+      "explanation": "Pouvoir + инфинитив обозначает возможность; pouvez-vous — вежливый вопрос.",
+      "wordIds": [
+        "fr:v014:18:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Pouvez-vous ouvrir la fenêtre ?",
+        "meaning": "Можете открыть окно?"
+      }
+    },
+    {
+      "id": "fr-a1-18-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сейчас без четверти десять.",
+      "answers": [
+        "Il est dix heures moins le quart."
+      ],
+      "explanation": "Il est dix heures moins le quart. — Сейчас без четверти десять.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Le rendez-vous est à neuf heures et demie.",
+        "Il est dix heures moins le quart.",
+        "Nous avons encore quinze minutes.",
+        "Le train part à dix heures."
+      ]
+    }
+  ]
+}

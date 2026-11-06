@@ -1,0 +1,290 @@
+{
+  "id": "en-a1-41",
+  "title": "Вчера после работы",
+  "topic": "Вчера после работы",
+  "order": 40,
+  "objective": "Рассказать, как прошёл вечер после работы.",
+  "guide": "После did not глагол остаётся в начальной форме: did not cook.",
+  "vocabulary": [
+    {
+      "id": "en:v014:41:p0",
+      "en": "I finished work at six.",
+      "ru": "Я закончил работу в шесть."
+    },
+    {
+      "id": "en:v014:41:p1",
+      "en": "I cooked dinner at home.",
+      "ru": "Я приготовил ужин дома."
+    },
+    {
+      "id": "en:v014:41:p2",
+      "en": "I did not watch TV.",
+      "ru": "Я не смотрел телевизор."
+    },
+    {
+      "id": "en:v014:41:p3",
+      "en": "Then I called my sister.",
+      "ru": "Потом я позвонил сестре."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Вчера после работы",
+      "phrase": "I finished work at six.",
+      "translation": "Я закончил работу в шесть.",
+      "explanation": "После did not глагол остаётся в начальной форме: did not cook."
+    },
+    {
+      "character": "miko",
+      "title": "Вчера после работы",
+      "phrase": "I cooked dinner at home.",
+      "translation": "Я приготовил ужин дома.",
+      "explanation": "I cooked dinner at home. — Я приготовил ужин дома."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вчера после работы",
+      "phrase": "I did not watch TV.",
+      "translation": "Я не смотрел телевизор.",
+      "explanation": "I did not watch TV. — Я не смотрел телевизор."
+    },
+    {
+      "character": "orbi",
+      "title": "Вчера после работы",
+      "phrase": "Then I called my sister.",
+      "translation": "Потом я позвонил сестре.",
+      "explanation": "Then I called my sister. — Потом я позвонил сестре."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I finished work at six.",
+      "translation": "Я закончил работу в шесть.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я закончил работу в шесть.",
+      "options": [
+        "Я не смотрел телевизор.",
+        "Я закончил работу в шесть.",
+        "Потом я позвонил сестре."
+      ],
+      "explanation": "После did not глагол остаётся в начальной форме: did not cook."
+    },
+    {
+      "id": "apply",
+      "phrase": "I cooked dinner at home.",
+      "translation": "Я приготовил ужин дома.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I cooked dinner at home.",
+      "tokens": [
+        "I",
+        "cooked",
+        "dinner",
+        "at",
+        "home."
+      ],
+      "character": "miko",
+      "explanation": "I cooked dinner at home. — Я приготовил ужин дома."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-41-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я закончил работу в шесть.»?",
+      "answers": [
+        "I finished work at six."
+      ],
+      "explanation": "I finished work at six. — Я закончил работу в шесть.",
+      "wordIds": [
+        "en:v014:41:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I cooked dinner at home.",
+        "Then I called my sister.",
+        "I finished work at six."
+      ],
+      "hint": "I finished work at six. — Я закончил работу в шесть."
+    },
+    {
+      "id": "en-a1-41-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я приготовил ужин дома.",
+      "answers": [
+        "I cooked dinner at home."
+      ],
+      "explanation": "После did not глагол остаётся в начальной форме: did not cook.",
+      "wordIds": [
+        "en:v014:41:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I",
+        "cooked",
+        "dinner",
+        "at",
+        "home."
+      ],
+      "hint": "I cooked dinner at home. — Я приготовил ужин дома."
+    },
+    {
+      "id": "en-a1-41-e03",
+      "type": "dialogue",
+      "prompt": "Где приготовили ужин?",
+      "answers": [
+        "Дома."
+      ],
+      "explanation": "Дома. Рассказать, как прошёл вечер после работы.",
+      "wordIds": [
+        "en:v014:41:p0",
+        "en:v014:41:p1",
+        "en:v014:41:p2",
+        "en:v014:41:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Did you cook dinner?\nМико: Yes, I cooked dinner at home.",
+      "options": [
+        "На работе.",
+        "У сестры.",
+        "Дома."
+      ]
+    },
+    {
+      "id": "en-a1-41-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я не смотрел телевизор."
+      ],
+      "explanation": "I did not watch TV. — Я не смотрел телевизор.",
+      "wordIds": [
+        "en:v014:41:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I did not watch TV.",
+      "options": [
+        "Я закончил работу в шесть.",
+        "Я не смотрел телевизор.",
+        "Я приготовил ужин дома."
+      ],
+      "hint": "I did not watch TV. — Я не смотрел телевизор."
+    },
+    {
+      "id": "en-a1-41-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:41:p0",
+        "en:v014:41:p1",
+        "en:v014:41:p2",
+        "en:v014:41:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:41:p0",
+          "en": "I finished work at six.",
+          "ru": "Я закончил работу в шесть."
+        },
+        {
+          "id": "en:v014:41:p1",
+          "en": "I cooked dinner at home.",
+          "ru": "Я приготовил ужин дома."
+        },
+        {
+          "id": "en:v014:41:p2",
+          "en": "I did not watch TV.",
+          "ru": "Я не смотрел телевизор."
+        },
+        {
+          "id": "en:v014:41:p3",
+          "en": "Then I called my sister.",
+          "ru": "Потом я позвонил сестре."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-41-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I did not watched TV.",
+      "answers": [
+        "I did not watch TV."
+      ],
+      "explanation": "Прошедшее время уже выражено did: после него нужно watch.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I did not watched TV.",
+        "I did not watch TV."
+      ],
+      "hint": "После did not глагол остаётся в начальной форме: did not cook."
+    },
+    {
+      "id": "en-a1-41-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Потом я позвонил сестре.». Можно написать вместо микрофона.",
+      "answers": [
+        "Then I called my sister."
+      ],
+      "explanation": "Then I called my sister. — Потом я позвонил сестре.",
+      "wordIds": [
+        "en:v014:41:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Then I called my sister.",
+      "recall": {
+        "phrase": "Then I called my sister.",
+        "meaning": "Потом я позвонил сестре."
+      }
+    },
+    {
+      "id": "en-a1-41-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я закончил работу в шесть.",
+      "answers": [
+        "I finished work at six."
+      ],
+      "explanation": "После did not глагол остаётся в начальной форме: did not cook.",
+      "wordIds": [
+        "en:v014:41:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I finished work at six.",
+        "meaning": "Я закончил работу в шесть."
+      }
+    },
+    {
+      "id": "en-a1-41-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Вчера мы сходили в музей.",
+      "answers": [
+        "Yesterday we went to a museum."
+      ],
+      "explanation": "Yesterday we went to a museum. — Вчера мы сходили в музей.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Yesterday we went to a museum.",
+        "The hotel was quiet and comfortable.",
+        "Could you book a taxi for tomorrow?",
+        "We're going to leave after breakfast."
+      ]
+    }
+  ]
+}

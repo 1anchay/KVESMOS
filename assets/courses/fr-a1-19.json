@@ -1,0 +1,292 @@
+{
+  "id": "fr-a1-19",
+  "title": "Что нужно сделать",
+  "topic": "Что нужно сделать",
+  "order": 18,
+  "objective": "Понять необходимое действие в инструкции.",
+  "guide": "Il faut + инфинитив выражает необходимость без указания конкретного человека.",
+  "vocabulary": [
+    {
+      "id": "fr:v014:19:p0",
+      "en": "Il faut remplir ce formulaire.",
+      "ru": "Нужно заполнить эту анкету."
+    },
+    {
+      "id": "fr:v014:19:p1",
+      "en": "Il faut écrire votre nom ici.",
+      "ru": "Нужно написать ваше имя здесь."
+    },
+    {
+      "id": "fr:v014:19:p2",
+      "en": "Vous devez signer en bas.",
+      "ru": "Вы должны подписать внизу."
+    },
+    {
+      "id": "fr:v014:19:p3",
+      "en": "Il ne faut pas oublier la date.",
+      "ru": "Нельзя забыть дату."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Что нужно сделать",
+      "phrase": "Il faut remplir ce formulaire.",
+      "translation": "Нужно заполнить эту анкету.",
+      "explanation": "Il faut + инфинитив выражает необходимость без указания конкретного человека."
+    },
+    {
+      "character": "miko",
+      "title": "Что нужно сделать",
+      "phrase": "Il faut écrire votre nom ici.",
+      "translation": "Нужно написать ваше имя здесь.",
+      "explanation": "Il faut écrire votre nom ici. — Нужно написать ваше имя здесь."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что нужно сделать",
+      "phrase": "Vous devez signer en bas.",
+      "translation": "Вы должны подписать внизу.",
+      "explanation": "Vous devez signer en bas. — Вы должны подписать внизу."
+    },
+    {
+      "character": "orbi",
+      "title": "Что нужно сделать",
+      "phrase": "Il ne faut pas oublier la date.",
+      "translation": "Нельзя забыть дату.",
+      "explanation": "Il ne faut pas oublier la date. — Нельзя забыть дату."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Il faut remplir ce formulaire.",
+      "translation": "Нужно заполнить эту анкету.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Нужно заполнить эту анкету.",
+      "options": [
+        "Вы должны подписать внизу.",
+        "Нужно заполнить эту анкету.",
+        "Нельзя забыть дату."
+      ],
+      "explanation": "Il faut + инфинитив выражает необходимость без указания конкретного человека."
+    },
+    {
+      "id": "apply",
+      "phrase": "Il faut écrire votre nom ici.",
+      "translation": "Нужно написать ваше имя здесь.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Il faut écrire votre nom ici.",
+      "tokens": [
+        "Il",
+        "faut",
+        "écrire",
+        "votre",
+        "nom",
+        "ici."
+      ],
+      "character": "miko",
+      "explanation": "Il faut écrire votre nom ici. — Нужно написать ваше имя здесь."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-19-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Нужно заполнить эту анкету.»?",
+      "answers": [
+        "Il faut remplir ce formulaire."
+      ],
+      "explanation": "Il faut remplir ce formulaire. — Нужно заполнить эту анкету.",
+      "wordIds": [
+        "fr:v014:19:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Il faut écrire votre nom ici.",
+        "Il ne faut pas oublier la date.",
+        "Il faut remplir ce formulaire."
+      ],
+      "hint": "Il faut remplir ce formulaire. — Нужно заполнить эту анкету."
+    },
+    {
+      "id": "fr-a1-19-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Нужно написать ваше имя здесь.",
+      "answers": [
+        "Il faut écrire votre nom ici."
+      ],
+      "explanation": "Il faut + инфинитив выражает необходимость без указания конкретного человека.",
+      "wordIds": [
+        "fr:v014:19:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Il",
+        "faut",
+        "écrire",
+        "votre",
+        "nom",
+        "ici."
+      ],
+      "hint": "Il faut écrire votre nom ici. — Нужно написать ваше имя здесь."
+    },
+    {
+      "id": "fr-a1-19-e03",
+      "type": "dialogue",
+      "prompt": "Что ещё нужно указать?",
+      "answers": [
+        "Дату."
+      ],
+      "explanation": "Дату. Понять необходимое действие в инструкции.",
+      "wordIds": [
+        "fr:v014:19:p0",
+        "fr:v014:19:p1",
+        "fr:v014:19:p2",
+        "fr:v014:19:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Où dois-je signer ?\nМико: En bas du formulaire. Il faut aussi écrire la date.",
+      "options": [
+        "Цену.",
+        "Время поезда.",
+        "Дату."
+      ]
+    },
+    {
+      "id": "fr-a1-19-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Вы должны подписать внизу."
+      ],
+      "explanation": "Vous devez signer en bas. — Вы должны подписать внизу.",
+      "wordIds": [
+        "fr:v014:19:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Vous devez signer en bas.",
+      "options": [
+        "Нужно заполнить эту анкету.",
+        "Вы должны подписать внизу.",
+        "Нужно написать ваше имя здесь."
+      ],
+      "hint": "Vous devez signer en bas. — Вы должны подписать внизу."
+    },
+    {
+      "id": "fr-a1-19-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v014:19:p0",
+        "fr:v014:19:p1",
+        "fr:v014:19:p2",
+        "fr:v014:19:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v014:19:p0",
+          "en": "Il faut remplir ce formulaire.",
+          "ru": "Нужно заполнить эту анкету."
+        },
+        {
+          "id": "fr:v014:19:p1",
+          "en": "Il faut écrire votre nom ici.",
+          "ru": "Нужно написать ваше имя здесь."
+        },
+        {
+          "id": "fr:v014:19:p2",
+          "en": "Vous devez signer en bas.",
+          "ru": "Вы должны подписать внизу."
+        },
+        {
+          "id": "fr:v014:19:p3",
+          "en": "Il ne faut pas oublier la date.",
+          "ru": "Нельзя забыть дату."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-19-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Il faut remplissez ce formulaire.",
+      "answers": [
+        "Il faut remplir ce formulaire."
+      ],
+      "explanation": "После il faut используется инфинитив remplir.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Il faut remplissez ce formulaire.",
+        "Il faut remplir ce formulaire."
+      ],
+      "hint": "Il faut + инфинитив выражает необходимость без указания конкретного человека."
+    },
+    {
+      "id": "fr-a1-19-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Нельзя забыть дату.». Можно написать вместо микрофона.",
+      "answers": [
+        "Il ne faut pas oublier la date."
+      ],
+      "explanation": "Il ne faut pas oublier la date. — Нельзя забыть дату.",
+      "wordIds": [
+        "fr:v014:19:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Il ne faut pas oublier la date.",
+      "recall": {
+        "phrase": "Il ne faut pas oublier la date.",
+        "meaning": "Нельзя забыть дату."
+      }
+    },
+    {
+      "id": "fr-a1-19-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Нужно заполнить эту анкету.",
+      "answers": [
+        "Il faut remplir ce formulaire."
+      ],
+      "explanation": "Il faut + инфинитив выражает необходимость без указания конкретного человека.",
+      "wordIds": [
+        "fr:v014:19:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Il faut remplir ce formulaire.",
+        "meaning": "Нужно заполнить эту анкету."
+      }
+    },
+    {
+      "id": "fr-a1-19-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можешь повторить, пожалуйста?",
+      "answers": [
+        "Tu peux répéter, s'il te plaît ?"
+      ],
+      "explanation": "Tu peux répéter, s'il te plaît ? — Можешь повторить, пожалуйста?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Pouvez-vous ouvrir la fenêtre ?",
+        "Je peux vous aider.",
+        "Tu peux répéter, s'il te plaît ?",
+        "Nous pouvons attendre ici."
+      ]
+    }
+  ]
+}

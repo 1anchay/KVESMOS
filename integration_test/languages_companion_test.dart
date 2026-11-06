@@ -1,3 +1,4 @@
+import '../test/support.dart';
 // Run only on the dedicated QA emulator; preserve and restore its app data.
 import 'dart:io';
 import 'package:flutter/material.dart';
@@ -11,7 +12,6 @@ import 'package:orbitwords/data/repository.dart';
 import 'package:orbitwords/domain/course.dart';
 import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/ui/app.dart';
-import 'package:orbitwords/ui/lesson_introduction.dart';
 import 'package:go_router/go_router.dart';
 
 Future<void> marker(String value) async {
@@ -92,13 +92,7 @@ void main() {
           await Future<void>.delayed(const Duration(seconds: 5));
           await tester.pumpAndSettle();
         }
-        for (
-          var i = 0;
-          i < 10 && find.byType(LessonIntroduction).evaluate().isNotEmpty;
-          i++
-        ) {
-          await tap(find.byKey(const Key('teaching-next')));
-        }
+        await advanceTeaching(tester);
         final material = await repo.startLesson(
           language == 'en' ? 'a1-01' : '$language-a1-01',
         );

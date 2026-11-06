@@ -1,0 +1,292 @@
+{
+  "id": "en-a1-49",
+  "title": "Уточнить подробности",
+  "topic": "Уточнить подробности",
+  "order": 48,
+  "objective": "Вежливо запросить информацию о занятии.",
+  "guide": "Could you tell me вводит вежливую просьбу; во вложенном where the room is порядок слов прямой.",
+  "vocabulary": [
+    {
+      "id": "en:v014:49:p0",
+      "en": "Could you tell me where the room is?",
+      "ru": "Не могли бы вы сказать, где комната?"
+    },
+    {
+      "id": "en:v014:49:p1",
+      "en": "What time does the class start?",
+      "ru": "Во сколько начинается занятие?"
+    },
+    {
+      "id": "en:v014:49:p2",
+      "en": "Do I need to bring a notebook?",
+      "ru": "Мне нужно принести тетрадь?"
+    },
+    {
+      "id": "en:v014:49:p3",
+      "en": "The class starts at half past nine.",
+      "ru": "Занятие начинается в половине десятого."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Уточнить подробности",
+      "phrase": "Could you tell me where the room is?",
+      "translation": "Не могли бы вы сказать, где комната?",
+      "explanation": "Could you tell me вводит вежливую просьбу; во вложенном where the room is порядок слов прямой."
+    },
+    {
+      "character": "miko",
+      "title": "Уточнить подробности",
+      "phrase": "What time does the class start?",
+      "translation": "Во сколько начинается занятие?",
+      "explanation": "What time does the class start? — Во сколько начинается занятие?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Уточнить подробности",
+      "phrase": "Do I need to bring a notebook?",
+      "translation": "Мне нужно принести тетрадь?",
+      "explanation": "Do I need to bring a notebook? — Мне нужно принести тетрадь?"
+    },
+    {
+      "character": "orbi",
+      "title": "Уточнить подробности",
+      "phrase": "The class starts at half past nine.",
+      "translation": "Занятие начинается в половине десятого.",
+      "explanation": "The class starts at half past nine. — Занятие начинается в половине десятого."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Could you tell me where the room is?",
+      "translation": "Не могли бы вы сказать, где комната?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Не могли бы вы сказать, где комната?",
+      "options": [
+        "Мне нужно принести тетрадь?",
+        "Не могли бы вы сказать, где комната?",
+        "Занятие начинается в половине десятого."
+      ],
+      "explanation": "Could you tell me вводит вежливую просьбу; во вложенном where the room is порядок слов прямой."
+    },
+    {
+      "id": "apply",
+      "phrase": "What time does the class start?",
+      "translation": "Во сколько начинается занятие?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "What time does the class start?",
+      "tokens": [
+        "What",
+        "time",
+        "does",
+        "the",
+        "class",
+        "start?"
+      ],
+      "character": "miko",
+      "explanation": "What time does the class start? — Во сколько начинается занятие?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-49-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Не могли бы вы сказать, где комната?»?",
+      "answers": [
+        "Could you tell me where the room is?"
+      ],
+      "explanation": "Could you tell me where the room is? — Не могли бы вы сказать, где комната?",
+      "wordIds": [
+        "en:v014:49:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "What time does the class start?",
+        "The class starts at half past nine.",
+        "Could you tell me where the room is?"
+      ],
+      "hint": "Could you tell me where the room is? — Не могли бы вы сказать, где комната?"
+    },
+    {
+      "id": "en-a1-49-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Во сколько начинается занятие?",
+      "answers": [
+        "What time does the class start?"
+      ],
+      "explanation": "Could you tell me вводит вежливую просьбу; во вложенном where the room is порядок слов прямой.",
+      "wordIds": [
+        "en:v014:49:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "What",
+        "time",
+        "does",
+        "the",
+        "class",
+        "start?"
+      ],
+      "hint": "What time does the class start? — Во сколько начинается занятие?"
+    },
+    {
+      "id": "en-a1-49-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно принести?",
+      "answers": [
+        "Тетрадь."
+      ],
+      "explanation": "Тетрадь. Вежливо запросить информацию о занятии.",
+      "wordIds": [
+        "en:v014:49:p0",
+        "en:v014:49:p1",
+        "en:v014:49:p2",
+        "en:v014:49:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: What time does the class start?\nМико: At half past nine. Please bring a notebook.",
+      "options": [
+        "Билет.",
+        "Чашку.",
+        "Тетрадь."
+      ]
+    },
+    {
+      "id": "en-a1-49-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мне нужно принести тетрадь?"
+      ],
+      "explanation": "Do I need to bring a notebook? — Мне нужно принести тетрадь?",
+      "wordIds": [
+        "en:v014:49:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Do I need to bring a notebook?",
+      "options": [
+        "Не могли бы вы сказать, где комната?",
+        "Мне нужно принести тетрадь?",
+        "Во сколько начинается занятие?"
+      ],
+      "hint": "Do I need to bring a notebook? — Мне нужно принести тетрадь?"
+    },
+    {
+      "id": "en-a1-49-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:49:p0",
+        "en:v014:49:p1",
+        "en:v014:49:p2",
+        "en:v014:49:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:49:p0",
+          "en": "Could you tell me where the room is?",
+          "ru": "Не могли бы вы сказать, где комната?"
+        },
+        {
+          "id": "en:v014:49:p1",
+          "en": "What time does the class start?",
+          "ru": "Во сколько начинается занятие?"
+        },
+        {
+          "id": "en:v014:49:p2",
+          "en": "Do I need to bring a notebook?",
+          "ru": "Мне нужно принести тетрадь?"
+        },
+        {
+          "id": "en:v014:49:p3",
+          "en": "The class starts at half past nine.",
+          "ru": "Занятие начинается в половине десятого."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-49-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: What time does the class starts?",
+      "answers": [
+        "What time does the class start?"
+      ],
+      "explanation": "После does у основного глагола нет окончания -s.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "What time does the class starts?",
+        "What time does the class start?"
+      ],
+      "hint": "Could you tell me вводит вежливую просьбу; во вложенном where the room is порядок слов прямой."
+    },
+    {
+      "id": "en-a1-49-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Занятие начинается в половине десятого.». Можно написать вместо микрофона.",
+      "answers": [
+        "The class starts at half past nine."
+      ],
+      "explanation": "The class starts at half past nine. — Занятие начинается в половине десятого.",
+      "wordIds": [
+        "en:v014:49:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "The class starts at half past nine.",
+      "recall": {
+        "phrase": "The class starts at half past nine.",
+        "meaning": "Занятие начинается в половине десятого."
+      }
+    },
+    {
+      "id": "en-a1-49-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Не могли бы вы сказать, где комната?",
+      "answers": [
+        "Could you tell me where the room is?"
+      ],
+      "explanation": "Could you tell me вводит вежливую просьбу; во вложенном where the room is порядок слов прямой.",
+      "wordIds": [
+        "en:v014:49:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Could you tell me where the room is?",
+        "meaning": "Не могли бы вы сказать, где комната?"
+      }
+    },
+    {
+      "id": "en-a1-49-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я не могу прийти в пятницу.",
+      "answers": [
+        "I cannot come on Friday."
+      ],
+      "explanation": "I cannot come on Friday. — Я не могу прийти в пятницу.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I cannot come on Friday.",
+        "Can we meet on Saturday instead?",
+        "Saturday morning works for me.",
+        "I will send you the address."
+      ]
+    }
+  ]
+}

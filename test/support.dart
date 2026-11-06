@@ -8,21 +8,64 @@ import 'package:sqlite3/open.dart';
 import 'package:orbitwords/data/database.dart';
 import 'package:orbitwords/data/repository.dart';
 import 'package:orbitwords/ui/lesson_introduction.dart';
+import 'package:orbitwords/ui/galaxy_components.dart';
 
-/// Advance each teaching card through the same buttons a student uses.
+/// Perform the ungraded actions through the same controls as a learner.
 Future<void> advanceTeaching(WidgetTester tester) async {
-  for (var step = 0; step < 12; step++) {
+  for (var step = 0; step < 40; step++) {
     if (find.byType(LessonIntroduction).evaluate().isEmpty) return;
-    final target = find.byKey(const Key('teaching-next'));
-    expect(target, findsOneWidget);
     await tester.pumpAndSettle();
-    await tester.tap(target);
+    final intro = tester.widget<LessonIntroduction>(
+      find.byType(LessonIntroduction),
+    );
+    final next = find.byKey(const Key('teaching-next'));
+    final button = tester.widget<FilledButton>(next);
+    if (find
+        .descendant(of: next, matching: find.text('Проверить'))
+        .evaluate()
+        .isNotEmpty) {
+      final activity = intro.lesson.guidedIntroduction.firstWhere(
+        (a) => find.text(a.phrase).evaluate().isNotEmpty,
+      );
+      if (activity.tokens.isEmpty) {
+        final index = activity.options.indexOf(activity.answer);
+        final option = find.byKey(ValueKey('intro-option-$index'));
+        if (tester.widget<AnswerTile>(option).selected) {
+          await tester.tap(next);
+          await tester.runAsync(
+            () => Future<void>.delayed(const Duration(milliseconds: 60)),
+          );
+          await tester.pumpAndSettle();
+          continue;
+        }
+        await tester.ensureVisible(option);
+        await tester.pumpAndSettle();
+        await tester.tap(option);
+      } else {
+        var added = false;
+        for (var i = 0; i < activity.tokens.length; i++) {
+          final token = find.byKey(ValueKey('intro-token-$i'));
+          if (tester.widget<ActionChip>(token).onPressed == null) continue;
+          await tester.ensureVisible(token);
+          await tester.pumpAndSettle();
+          await tester.tap(token);
+          added = true;
+          await tester.runAsync(
+            () => Future<void>.delayed(const Duration(milliseconds: 30)),
+          );
+          await tester.pumpAndSettle();
+        }
+        if (!added) await tester.tap(next);
+      }
+    } else if (button.onPressed != null) {
+      await tester.tap(next);
+    }
     await tester.runAsync(
-      () => Future<void>.delayed(const Duration(milliseconds: 120)),
+      () => Future<void>.delayed(const Duration(milliseconds: 60)),
     );
     await tester.pumpAndSettle();
   }
-  fail('Teaching introduction never completed');
+  fail('Interactive introduction never completed');
 }
 
 void setupSqlite() {

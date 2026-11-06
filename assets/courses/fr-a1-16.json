@@ -1,0 +1,249 @@
+{
+  "id": "fr-a1-16",
+  "title": "Обычное утро",
+  "topic": "Обычное утро",
+  "order": 15,
+  "objective": "Рассказать о распорядке и последовательности действий.",
+  "guide": "В возвратной форме je сочетается с me: je me lève.",
+  "vocabulary": [
+    {
+      "id": "fr:v014:16:p0",
+      "en": "Je me lève à sept heures.",
+      "ru": "Я встаю в семь часов."
+    },
+    {
+      "id": "fr:v014:16:p1",
+      "en": "Je prends le petit-déjeuner.",
+      "ru": "Я завтракаю."
+    },
+    {
+      "id": "fr:v014:16:p2",
+      "en": "Ensuite, je vais au travail.",
+      "ru": "Затем я иду на работу."
+    },
+    {
+      "id": "fr:v014:16:p3",
+      "en": "Je rentre à la maison à six heures.",
+      "ru": "Я возвращаюсь домой в шесть часов."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Обычное утро",
+      "phrase": "Je me lève à sept heures.",
+      "translation": "Я встаю в семь часов.",
+      "explanation": "В возвратной форме je сочетается с me: je me lève."
+    },
+    {
+      "character": "miko",
+      "title": "Обычное утро",
+      "phrase": "Je prends le petit-déjeuner.",
+      "translation": "Я завтракаю.",
+      "explanation": "Je prends le petit-déjeuner. — Я завтракаю."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Обычное утро",
+      "phrase": "Ensuite, je vais au travail.",
+      "translation": "Затем я иду на работу.",
+      "explanation": "Ensuite, je vais au travail. — Затем я иду на работу."
+    },
+    {
+      "character": "orbi",
+      "title": "Обычное утро",
+      "phrase": "Je rentre à la maison à six heures.",
+      "translation": "Я возвращаюсь домой в шесть часов.",
+      "explanation": "Je rentre à la maison à six heures. — Я возвращаюсь домой в шесть часов."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je me lève à sept heures.",
+      "translation": "Я встаю в семь часов.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я встаю в семь часов.",
+      "options": [
+        "Затем я иду на работу.",
+        "Я встаю в семь часов.",
+        "Я возвращаюсь домой в шесть часов."
+      ],
+      "explanation": "В возвратной форме je сочетается с me: je me lève."
+    },
+    {
+      "id": "apply",
+      "phrase": "Je prends le petit-déjeuner.",
+      "translation": "Я завтракаю.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Je prends le petit-déjeuner.",
+      "tokens": [
+        "Je",
+        "prends",
+        "le",
+        "petit-déjeuner."
+      ],
+      "character": "miko",
+      "explanation": "Je prends le petit-déjeuner. — Я завтракаю."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-16-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я встаю в семь часов.»?",
+      "answers": [
+        "Je me lève à sept heures."
+      ],
+      "explanation": "Je me lève à sept heures. — Я встаю в семь часов.",
+      "wordIds": [
+        "fr:v014:16:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Je prends le petit-déjeuner.",
+        "Je rentre à la maison à six heures.",
+        "Je me lève à sept heures."
+      ],
+      "hint": "Je me lève à sept heures. — Я встаю в семь часов."
+    },
+    {
+      "id": "fr-a1-16-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я завтракаю.",
+      "answers": [
+        "Je prends le petit-déjeuner."
+      ],
+      "explanation": "В возвратной форме je сочетается с me: je me lève.",
+      "wordIds": [
+        "fr:v014:16:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Je",
+        "prends",
+        "le",
+        "petit-déjeuner."
+      ],
+      "hint": "Je prends le petit-déjeuner. — Я завтракаю."
+    },
+    {
+      "id": "fr-a1-16-e03",
+      "type": "dialogue",
+      "prompt": "Что происходит после подъёма?",
+      "answers": [
+        "Завтрак."
+      ],
+      "explanation": "Завтрак. Рассказать о распорядке и последовательности действий.",
+      "wordIds": [
+        "fr:v014:16:p0",
+        "fr:v014:16:p1",
+        "fr:v014:16:p2",
+        "fr:v014:16:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: À quelle heure tu te lèves ?\nМико: À sept heures. Ensuite, je prends le petit-déjeuner.",
+      "options": [
+        "Возвращение домой.",
+        "Ужин.",
+        "Завтрак."
+      ]
+    },
+    {
+      "id": "fr-a1-16-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Затем я иду на работу."
+      ],
+      "explanation": "Ensuite, je vais au travail. — Затем я иду на работу.",
+      "wordIds": [
+        "fr:v014:16:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ensuite, je vais au travail.",
+      "options": [
+        "Я встаю в семь часов.",
+        "Затем я иду на работу.",
+        "Я завтракаю."
+      ],
+      "hint": "Ensuite, je vais au travail. — Затем я иду на работу."
+    },
+    {
+      "id": "fr-a1-16-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je se lève à sept heures.",
+      "answers": [
+        "Je me lève à sept heures."
+      ],
+      "explanation": "Для je выбираем me, а не se.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je se lève à sept heures.",
+        "Je me lève à sept heures."
+      ],
+      "hint": "В возвратной форме je сочетается с me: je me lève."
+    },
+    {
+      "id": "fr-a1-16-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я возвращаюсь домой в шесть часов.». Можно написать вместо микрофона.",
+      "answers": [
+        "Je rentre à la maison à six heures."
+      ],
+      "explanation": "Je rentre à la maison à six heures. — Я возвращаюсь домой в шесть часов.",
+      "wordIds": [
+        "fr:v014:16:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Je rentre à la maison à six heures.",
+      "recall": {
+        "phrase": "Je rentre à la maison à six heures.",
+        "meaning": "Я возвращаюсь домой в шесть часов."
+      }
+    },
+    {
+      "id": "fr-a1-16-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я встаю в семь часов.",
+      "answers": [
+        "Je me lève à sept heures."
+      ],
+      "explanation": "В возвратной форме je сочетается с me: je me lève.",
+      "wordIds": [
+        "fr:v014:16:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je me lève à sept heures.",
+        "meaning": "Я встаю в семь часов."
+      }
+    },
+    {
+      "id": "fr-a1-16-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Осталось немного сыра.",
+      "answers": [
+        "Il reste un peu de fromage."
+      ],
+      "explanation": "Il reste un peu de fromage. — Осталось немного сыра.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Il faut un litre de lait.",
+        "Je prends deux kilos de pommes.",
+        "Nous avons beaucoup de pain.",
+        "Il reste un peu de fromage."
+      ]
+    }
+  ]
+}

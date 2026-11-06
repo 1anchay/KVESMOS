@@ -165,6 +165,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "es-v014",
+      "title": "Разговоры на каждый день",
+      "themes": [
+        {
+          "id": "es-v014-unit-1",
+          "title": "Утро перед работой",
+          "lessons": [
+            {
+              "id": "es-a1-19",
+              "title": "Утро перед работой",
+              "asset": "assets/courses/es-a1-19.json",
+              "order": 18
+            },
+            {
+              "id": "es-a1-20",
+              "title": "Не каждый день",
+              "asset": "assets/courses/es-a1-20.json",
+              "order": 19
+            }
+          ]
+        },
+        {
+          "id": "es-v014-unit-2",
+          "title": "Что нравится друзьям",
+          "lessons": [
+            {
+              "id": "es-a1-21",
+              "title": "Что нравится друзьям",
+              "asset": "assets/courses/es-a1-21.json",
+              "order": 20
+            },
+            {
+              "id": "es-a1-22",
+              "title": "Нужно сделать сегодня",
+              "asset": "assets/courses/es-a1-22.json",
+              "order": 21
+            }
+          ]
+        },
+        {
+          "id": "es-v014-unit-3",
+          "title": "Приглашение на ужин",
+          "lessons": [
+            {
+              "id": "es-a1-23",
+              "title": "Приглашение на ужин",
+              "asset": "assets/courses/es-a1-23.json",
+              "order": 22
+            },
+            {
+              "id": "es-a1-24",
+              "title": "Часы работы",
+              "asset": "assets/courses/es-a1-24.json",
+              "order": 23
+            }
+          ]
+        },
+        {
+          "id": "es-v014-unit-4",
+          "title": "Сколько длится дорога",
+          "lessons": [
+            {
+              "id": "es-a1-25",
+              "title": "Сколько длится дорога",
+              "asset": "assets/courses/es-a1-25.json",
+              "order": 24
+            },
+            {
+              "id": "es-a1-26",
+              "title": "Плохая связь",
+              "asset": "assets/courses/es-a1-26.json",
+              "order": 25
+            }
+          ]
+        },
+        {
+          "id": "es-v014-unit-5",
+          "title": "Покупки для обеда",
+          "lessons": [
+            {
+              "id": "es-a1-27",
+              "title": "Покупки для обеда",
+              "asset": "assets/courses/es-a1-27.json",
+              "order": 26
+            },
+            {
+              "id": "es-a1-28",
+              "title": "Погода меняет план",
+              "asset": "assets/courses/es-a1-28.json",
+              "order": 27
+            }
+          ]
+        },
+        {
+          "id": "es-v014-unit-6",
+          "title": "Пересадка в метро",
+          "lessons": [
+            {
+              "id": "es-a1-29",
+              "title": "Пересадка в метро",
+              "asset": "assets/courses/es-a1-29.json",
+              "order": 28
+            },
+            {
+              "id": "es-a1-30",
+              "title": "Сообщение о встрече",
+              "asset": "assets/courses/es-a1-30.json",
+              "order": 29
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -39,15 +39,28 @@ class LessonProgress extends StatelessWidget {
       tween: Tween(end: total == 0 ? 0 : (done / total).clamp(0, 1)),
       duration: MediaQuery.disableAnimationsOf(context)
           ? Duration.zero
-          : const Duration(milliseconds: 320),
+          : const Duration(milliseconds: 240),
       curve: Curves.easeOutCubic,
-      builder: (context, value, _) => ClipRRect(
-        borderRadius: BorderRadius.circular(12),
-        child: LinearProgressIndicator(
-          value: value,
-          minHeight: 14,
-          color: Theme.of(context).colorScheme.primary,
-          backgroundColor: Theme.of(context).colorScheme.outlineVariant,
+      builder: (context, value, _) => ExcludeSemantics(
+        child: Row(
+          children: [
+            for (var i = 0; i < total.clamp(1, 24); i++) ...[
+              if (i > 0) const SizedBox(width: 3),
+              Expanded(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5),
+                  child: LinearProgressIndicator(
+                    value: (value * total.clamp(1, 24) - i).clamp(0, 1),
+                    minHeight: 12,
+                    color: Theme.of(context).colorScheme.primary,
+                    backgroundColor: Theme.of(
+                      context,
+                    ).colorScheme.outlineVariant,
+                  ),
+                ),
+              ),
+            ],
+          ],
         ),
       ),
     ),

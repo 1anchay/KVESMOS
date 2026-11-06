@@ -1,0 +1,290 @@
+{
+  "id": "en-a1-51",
+  "title": "Правила библиотеки",
+  "topic": "Правила библиотеки",
+  "order": 50,
+  "objective": "Различать запрет и отсутствие необходимости.",
+  "guide": "Must not — запрет, do not have to — отсутствие необходимости.",
+  "vocabulary": [
+    {
+      "id": "en:v014:51:p0",
+      "en": "You must not eat here.",
+      "ru": "Здесь нельзя есть."
+    },
+    {
+      "id": "en:v014:51:p1",
+      "en": "You can use this computer.",
+      "ru": "Можно пользоваться этим компьютером."
+    },
+    {
+      "id": "en:v014:51:p2",
+      "en": "You do not have to book a seat.",
+      "ru": "Не нужно бронировать место."
+    },
+    {
+      "id": "en:v014:51:p3",
+      "en": "Please keep your phone silent.",
+      "ru": "Пожалуйста, выключите звук телефона."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Правила библиотеки",
+      "phrase": "You must not eat here.",
+      "translation": "Здесь нельзя есть.",
+      "explanation": "Must not — запрет, do not have to — отсутствие необходимости."
+    },
+    {
+      "character": "miko",
+      "title": "Правила библиотеки",
+      "phrase": "You can use this computer.",
+      "translation": "Можно пользоваться этим компьютером.",
+      "explanation": "You can use this computer. — Можно пользоваться этим компьютером."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Правила библиотеки",
+      "phrase": "You do not have to book a seat.",
+      "translation": "Не нужно бронировать место.",
+      "explanation": "You do not have to book a seat. — Не нужно бронировать место."
+    },
+    {
+      "character": "orbi",
+      "title": "Правила библиотеки",
+      "phrase": "Please keep your phone silent.",
+      "translation": "Пожалуйста, выключите звук телефона.",
+      "explanation": "Please keep your phone silent. — Пожалуйста, выключите звук телефона."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "You must not eat here.",
+      "translation": "Здесь нельзя есть.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Здесь нельзя есть.",
+      "options": [
+        "Не нужно бронировать место.",
+        "Здесь нельзя есть.",
+        "Пожалуйста, выключите звук телефона."
+      ],
+      "explanation": "Must not — запрет, do not have to — отсутствие необходимости."
+    },
+    {
+      "id": "apply",
+      "phrase": "You can use this computer.",
+      "translation": "Можно пользоваться этим компьютером.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "You can use this computer.",
+      "tokens": [
+        "You",
+        "can",
+        "use",
+        "this",
+        "computer."
+      ],
+      "character": "miko",
+      "explanation": "You can use this computer. — Можно пользоваться этим компьютером."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-51-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Здесь нельзя есть.»?",
+      "answers": [
+        "You must not eat here."
+      ],
+      "explanation": "You must not eat here. — Здесь нельзя есть.",
+      "wordIds": [
+        "en:v014:51:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "You can use this computer.",
+        "Please keep your phone silent.",
+        "You must not eat here."
+      ],
+      "hint": "You must not eat here. — Здесь нельзя есть."
+    },
+    {
+      "id": "en-a1-51-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Можно пользоваться этим компьютером.",
+      "answers": [
+        "You can use this computer."
+      ],
+      "explanation": "Must not — запрет, do not have to — отсутствие необходимости.",
+      "wordIds": [
+        "en:v014:51:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "You",
+        "can",
+        "use",
+        "this",
+        "computer."
+      ],
+      "hint": "You can use this computer. — Можно пользоваться этим компьютером."
+    },
+    {
+      "id": "en-a1-51-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Не нужно бронировать место."
+      ],
+      "explanation": "You do not have to book a seat. — Не нужно бронировать место.",
+      "wordIds": [
+        "en:v014:51:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "You do not have to book a seat.",
+      "options": [
+        "Здесь нельзя есть.",
+        "Не нужно бронировать место.",
+        "Можно пользоваться этим компьютером."
+      ],
+      "hint": "You do not have to book a seat. — Не нужно бронировать место."
+    },
+    {
+      "id": "en-a1-51-e03",
+      "type": "dialogue",
+      "prompt": "Что запрещено?",
+      "answers": [
+        "Есть в библиотеке."
+      ],
+      "explanation": "Есть в библиотеке. Различать запрет и отсутствие необходимости.",
+      "wordIds": [
+        "en:v014:51:p0",
+        "en:v014:51:p1",
+        "en:v014:51:p2",
+        "en:v014:51:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Do I have to book a seat?\nМико: No, but you must not eat in the library.",
+      "options": [
+        "Занимать место.",
+        "Пользоваться компьютером.",
+        "Есть в библиотеке."
+      ]
+    },
+    {
+      "id": "en-a1-51-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:51:p0",
+        "en:v014:51:p1",
+        "en:v014:51:p2",
+        "en:v014:51:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:51:p0",
+          "en": "You must not eat here.",
+          "ru": "Здесь нельзя есть."
+        },
+        {
+          "id": "en:v014:51:p1",
+          "en": "You can use this computer.",
+          "ru": "Можно пользоваться этим компьютером."
+        },
+        {
+          "id": "en:v014:51:p2",
+          "en": "You do not have to book a seat.",
+          "ru": "Не нужно бронировать место."
+        },
+        {
+          "id": "en:v014:51:p3",
+          "en": "Please keep your phone silent.",
+          "ru": "Пожалуйста, выключите звук телефона."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-51-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: You must not to eat here.",
+      "answers": [
+        "You must not eat here."
+      ],
+      "explanation": "После must not глагол стоит без to.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "You must not to eat here.",
+        "You must not eat here."
+      ],
+      "hint": "Must not — запрет, do not have to — отсутствие необходимости."
+    },
+    {
+      "id": "en-a1-51-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Пожалуйста, выключите звук телефона.». Можно написать вместо микрофона.",
+      "answers": [
+        "Please keep your phone silent."
+      ],
+      "explanation": "Please keep your phone silent. — Пожалуйста, выключите звук телефона.",
+      "wordIds": [
+        "en:v014:51:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Please keep your phone silent.",
+      "recall": {
+        "phrase": "Please keep your phone silent.",
+        "meaning": "Пожалуйста, выключите звук телефона."
+      }
+    },
+    {
+      "id": "en-a1-51-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Здесь нельзя есть.",
+      "answers": [
+        "You must not eat here."
+      ],
+      "explanation": "Must not — запрет, do not have to — отсутствие необходимости.",
+      "wordIds": [
+        "en:v014:51:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "You must not eat here.",
+        "meaning": "Здесь нельзя есть."
+      }
+    },
+    {
+      "id": "en-a1-51-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Нам нужно сделать это сегодня?",
+      "answers": [
+        "Do we have to do it today?"
+      ],
+      "explanation": "Do we have to do it today? — Нам нужно сделать это сегодня?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I have to clean the kitchen.",
+        "She has to wash the dishes.",
+        "Do we have to do it today?",
+        "We do not have to hurry."
+      ]
+    }
+  ]
+}

@@ -11,8 +11,8 @@ void main() {
     final r = memoryRepository();
     addTearDown(r.db.close);
     await r.initialize();
-    expect(await r.installed(), hasLength(100));
-    expect(r.catalog, hasLength(40));
+    expect(await r.installed(), hasLength(160));
+    expect(r.catalog, hasLength(60));
     expect(
       r.vocabulary.keys
           .where((id) => !id.startsWith('es:') && !id.startsWith('de:'))
@@ -153,7 +153,7 @@ void main() {
       await r.setSetting('name', 'Anna');
       await r.uninstall('a1-01');
       await r.initialize();
-      expect(await r.installed(), hasLength(99));
+      expect(await r.installed(), hasLength(159));
       await expectLater(r.lesson('a1-01'), throwsStateError);
       await r.install(r.catalog.first);
       expect((await r.lesson('a1-01')).id, 'a1-01');

@@ -1,0 +1,292 @@
+{
+  "id": "de-a1-21",
+  "title": "Где лежит посылка",
+  "topic": "Где лежит посылка",
+  "order": 20,
+  "objective": "Указать неподвижное положение вещи.",
+  "guide": "На вопрос wo? предлог in здесь требует дательного: in dem → im.",
+  "vocabulary": [
+    {
+      "id": "de:v014:21:p0",
+      "en": "Das Paket ist im Flur.",
+      "ru": "Посылка в коридоре."
+    },
+    {
+      "id": "de:v014:21:p1",
+      "en": "Der Schlüssel liegt auf dem Tisch.",
+      "ru": "Ключ лежит на столе."
+    },
+    {
+      "id": "de:v014:21:p2",
+      "en": "Die Jacke hängt an der Tür.",
+      "ru": "Куртка висит на двери."
+    },
+    {
+      "id": "de:v014:21:p3",
+      "en": "Die Schuhe sind unter dem Stuhl.",
+      "ru": "Обувь под стулом."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Где лежит посылка",
+      "phrase": "Das Paket ist im Flur.",
+      "translation": "Посылка в коридоре.",
+      "explanation": "На вопрос wo? предлог in здесь требует дательного: in dem → im."
+    },
+    {
+      "character": "miko",
+      "title": "Где лежит посылка",
+      "phrase": "Der Schlüssel liegt auf dem Tisch.",
+      "translation": "Ключ лежит на столе.",
+      "explanation": "Der Schlüssel liegt auf dem Tisch. — Ключ лежит на столе."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Где лежит посылка",
+      "phrase": "Die Jacke hängt an der Tür.",
+      "translation": "Куртка висит на двери.",
+      "explanation": "Die Jacke hängt an der Tür. — Куртка висит на двери."
+    },
+    {
+      "character": "orbi",
+      "title": "Где лежит посылка",
+      "phrase": "Die Schuhe sind unter dem Stuhl.",
+      "translation": "Обувь под стулом.",
+      "explanation": "Die Schuhe sind unter dem Stuhl. — Обувь под стулом."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Das Paket ist im Flur.",
+      "translation": "Посылка в коридоре.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Посылка в коридоре.",
+      "options": [
+        "Куртка висит на двери.",
+        "Посылка в коридоре.",
+        "Обувь под стулом."
+      ],
+      "explanation": "На вопрос wo? предлог in здесь требует дательного: in dem → im."
+    },
+    {
+      "id": "apply",
+      "phrase": "Der Schlüssel liegt auf dem Tisch.",
+      "translation": "Ключ лежит на столе.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Der Schlüssel liegt auf dem Tisch.",
+      "tokens": [
+        "Der",
+        "Schlüssel",
+        "liegt",
+        "auf",
+        "dem",
+        "Tisch."
+      ],
+      "character": "miko",
+      "explanation": "Der Schlüssel liegt auf dem Tisch. — Ключ лежит на столе."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-21-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Посылка в коридоре.»?",
+      "answers": [
+        "Das Paket ist im Flur."
+      ],
+      "explanation": "Das Paket ist im Flur. — Посылка в коридоре.",
+      "wordIds": [
+        "de:v014:21:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Der Schlüssel liegt auf dem Tisch.",
+        "Die Schuhe sind unter dem Stuhl.",
+        "Das Paket ist im Flur."
+      ],
+      "hint": "Das Paket ist im Flur. — Посылка в коридоре."
+    },
+    {
+      "id": "de-a1-21-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Ключ лежит на столе.",
+      "answers": [
+        "Der Schlüssel liegt auf dem Tisch."
+      ],
+      "explanation": "На вопрос wo? предлог in здесь требует дательного: in dem → im.",
+      "wordIds": [
+        "de:v014:21:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Der",
+        "Schlüssel",
+        "liegt",
+        "auf",
+        "dem",
+        "Tisch."
+      ],
+      "hint": "Der Schlüssel liegt auf dem Tisch. — Ключ лежит на столе."
+    },
+    {
+      "id": "de-a1-21-e03",
+      "type": "dialogue",
+      "prompt": "Где лежит ключ?",
+      "answers": [
+        "На столе в коридоре."
+      ],
+      "explanation": "На столе в коридоре. Указать неподвижное положение вещи.",
+      "wordIds": [
+        "de:v014:21:p0",
+        "de:v014:21:p1",
+        "de:v014:21:p2",
+        "de:v014:21:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Wo liegt der Schlüssel?\nМико: Auf dem Tisch im Flur, neben dem Paket.",
+      "options": [
+        "Под стулом.",
+        "В кармане куртки.",
+        "На столе в коридоре."
+      ]
+    },
+    {
+      "id": "de-a1-21-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Куртка висит на двери."
+      ],
+      "explanation": "Die Jacke hängt an der Tür. — Куртка висит на двери.",
+      "wordIds": [
+        "de:v014:21:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Die Jacke hängt an der Tür.",
+      "options": [
+        "Посылка в коридоре.",
+        "Куртка висит на двери.",
+        "Ключ лежит на столе."
+      ],
+      "hint": "Die Jacke hängt an der Tür. — Куртка висит на двери."
+    },
+    {
+      "id": "de-a1-21-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v014:21:p0",
+        "de:v014:21:p1",
+        "de:v014:21:p2",
+        "de:v014:21:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v014:21:p0",
+          "en": "Das Paket ist im Flur.",
+          "ru": "Посылка в коридоре."
+        },
+        {
+          "id": "de:v014:21:p1",
+          "en": "Der Schlüssel liegt auf dem Tisch.",
+          "ru": "Ключ лежит на столе."
+        },
+        {
+          "id": "de:v014:21:p2",
+          "en": "Die Jacke hängt an der Tür.",
+          "ru": "Куртка висит на двери."
+        },
+        {
+          "id": "de:v014:21:p3",
+          "en": "Die Schuhe sind unter dem Stuhl.",
+          "ru": "Обувь под стулом."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-21-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Der Schlüssel liegt auf den Tisch.",
+      "answers": [
+        "Der Schlüssel liegt auf dem Tisch."
+      ],
+      "explanation": "Это место, а не направление: wo? — auf dem Tisch.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Der Schlüssel liegt auf den Tisch.",
+        "Der Schlüssel liegt auf dem Tisch."
+      ],
+      "hint": "На вопрос wo? предлог in здесь требует дательного: in dem → im."
+    },
+    {
+      "id": "de-a1-21-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Обувь под стулом.». Можно написать вместо микрофона.",
+      "answers": [
+        "Die Schuhe sind unter dem Stuhl."
+      ],
+      "explanation": "Die Schuhe sind unter dem Stuhl. — Обувь под стулом.",
+      "wordIds": [
+        "de:v014:21:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Die Schuhe sind unter dem Stuhl.",
+      "recall": {
+        "phrase": "Die Schuhe sind unter dem Stuhl.",
+        "meaning": "Обувь под стулом."
+      }
+    },
+    {
+      "id": "de-a1-21-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Посылка в коридоре.",
+      "answers": [
+        "Das Paket ist im Flur."
+      ],
+      "explanation": "На вопрос wo? предлог in здесь требует дательного: in dem → im.",
+      "wordIds": [
+        "de:v014:21:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Das Paket ist im Flur.",
+        "meaning": "Посылка в коридоре."
+      }
+    },
+    {
+      "id": "de-a1-21-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы сегодня делаем покупки.",
+      "answers": [
+        "Wir kaufen heute ein."
+      ],
+      "explanation": "Wir kaufen heute ein. — Мы сегодня делаем покупки.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich putze die Küche.",
+        "Du wäschst das Geschirr.",
+        "Wir kaufen heute ein.",
+        "Wer bringt den Müll raus?"
+      ]
+    }
+  ]
+}

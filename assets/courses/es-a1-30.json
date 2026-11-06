@@ -1,0 +1,253 @@
+{
+  "id": "es-a1-30",
+  "title": "Сообщение о встрече",
+  "topic": "Сообщение о встрече",
+  "order": 29,
+  "objective": "Прочитать сообщение и подтвердить место и время.",
+  "guide": "Nos vemos — увидимся; delante de — перед, снаружи у объекта.",
+  "vocabulary": [
+    {
+      "id": "es:v014:30:p0",
+      "en": "Nos vemos delante del cine.",
+      "ru": "Увидимся перед кинотеатром."
+    },
+    {
+      "id": "es:v014:30:p1",
+      "en": "Voy a llegar diez minutos tarde.",
+      "ru": "Я опоздаю на десять минут."
+    },
+    {
+      "id": "es:v014:30:p2",
+      "en": "Te espero junto a la entrada.",
+      "ru": "Я подожду тебя у входа."
+    },
+    {
+      "id": "es:v014:30:p3",
+      "en": "Gracias por avisar.",
+      "ru": "Спасибо, что предупредил."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сообщение о встрече",
+      "phrase": "Nos vemos delante del cine.",
+      "translation": "Увидимся перед кинотеатром.",
+      "explanation": "Nos vemos — увидимся; delante de — перед, снаружи у объекта."
+    },
+    {
+      "character": "miko",
+      "title": "Сообщение о встрече",
+      "phrase": "Voy a llegar diez minutos tarde.",
+      "translation": "Я опоздаю на десять минут.",
+      "explanation": "Voy a llegar diez minutos tarde. — Я опоздаю на десять минут."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сообщение о встрече",
+      "phrase": "Te espero junto a la entrada.",
+      "translation": "Я подожду тебя у входа.",
+      "explanation": "Te espero junto a la entrada. — Я подожду тебя у входа."
+    },
+    {
+      "character": "orbi",
+      "title": "Сообщение о встрече",
+      "phrase": "Gracias por avisar.",
+      "translation": "Спасибо, что предупредил.",
+      "explanation": "Gracias por avisar. — Спасибо, что предупредил."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Nos vemos delante del cine.",
+      "translation": "Увидимся перед кинотеатром.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Увидимся перед кинотеатром.",
+      "options": [
+        "Я подожду тебя у входа.",
+        "Увидимся перед кинотеатром.",
+        "Спасибо, что предупредил."
+      ],
+      "explanation": "Nos vemos — увидимся; delante de — перед, снаружи у объекта."
+    },
+    {
+      "id": "apply",
+      "phrase": "Voy a llegar diez minutos tarde.",
+      "translation": "Я опоздаю на десять минут.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Voy a llegar diez minutos tarde.",
+      "tokens": [
+        "Voy",
+        "a",
+        "llegar",
+        "diez",
+        "minutos",
+        "tarde."
+      ],
+      "character": "miko",
+      "explanation": "Voy a llegar diez minutos tarde. — Я опоздаю на десять минут."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-30-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Увидимся перед кинотеатром.»?",
+      "answers": [
+        "Nos vemos delante del cine."
+      ],
+      "explanation": "Nos vemos delante del cine. — Увидимся перед кинотеатром.",
+      "wordIds": [
+        "es:v014:30:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Voy a llegar diez minutos tarde.",
+        "Gracias por avisar.",
+        "Nos vemos delante del cine."
+      ],
+      "hint": "Nos vemos delante del cine. — Увидимся перед кинотеатром."
+    },
+    {
+      "id": "es-a1-30-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я опоздаю на десять минут.",
+      "answers": [
+        "Voy a llegar diez minutos tarde."
+      ],
+      "explanation": "Nos vemos — увидимся; delante de — перед, снаружи у объекта.",
+      "wordIds": [
+        "es:v014:30:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Voy",
+        "a",
+        "llegar",
+        "diez",
+        "minutos",
+        "tarde."
+      ],
+      "hint": "Voy a llegar diez minutos tarde. — Я опоздаю на десять минут."
+    },
+    {
+      "id": "es-a1-30-e03",
+      "type": "dialogue",
+      "prompt": "Где будет ждать собеседник?",
+      "answers": [
+        "У входа в кинотеатр."
+      ],
+      "explanation": "У входа в кинотеатр. Прочитать сообщение и подтвердить место и время.",
+      "wordIds": [
+        "es:v014:30:p0",
+        "es:v014:30:p1",
+        "es:v014:30:p2",
+        "es:v014:30:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Voy a llegar diez minutos tarde.\nМико: No pasa nada. Te espero junto a la entrada del cine.",
+      "options": [
+        "На станции.",
+        "Внутри магазина.",
+        "У входа в кинотеатр."
+      ]
+    },
+    {
+      "id": "es-a1-30-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я подожду тебя у входа."
+      ],
+      "explanation": "Te espero junto a la entrada. — Я подожду тебя у входа.",
+      "wordIds": [
+        "es:v014:30:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Te espero junto a la entrada.",
+      "options": [
+        "Увидимся перед кинотеатром.",
+        "Я подожду тебя у входа.",
+        "Я опоздаю на десять минут."
+      ],
+      "hint": "Te espero junto a la entrada. — Я подожду тебя у входа."
+    },
+    {
+      "id": "es-a1-30-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Voy llegar diez minutos tarde.",
+      "answers": [
+        "Voy a llegar diez minutos tarde."
+      ],
+      "explanation": "В конструкции ближайшего будущего ir a требуется a.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Voy llegar diez minutos tarde.",
+        "Voy a llegar diez minutos tarde."
+      ],
+      "hint": "Nos vemos — увидимся; delante de — перед, снаружи у объекта."
+    },
+    {
+      "id": "es-a1-30-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Спасибо, что предупредил.». Можно написать вместо микрофона.",
+      "answers": [
+        "Gracias por avisar."
+      ],
+      "explanation": "Gracias por avisar. — Спасибо, что предупредил.",
+      "wordIds": [
+        "es:v014:30:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Gracias por avisar.",
+      "recall": {
+        "phrase": "Gracias por avisar.",
+        "meaning": "Спасибо, что предупредил."
+      }
+    },
+    {
+      "id": "es-a1-30-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Увидимся перед кинотеатром.",
+      "answers": [
+        "Nos vemos delante del cine."
+      ],
+      "explanation": "Nos vemos — увидимся; delante de — перед, снаружи у объекта.",
+      "wordIds": [
+        "es:v014:30:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Nos vemos delante del cine.",
+        "meaning": "Увидимся перед кинотеатром."
+      }
+    },
+    {
+      "id": "es-a1-30-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Выход находится справа.",
+      "answers": [
+        "La salida está a la derecha."
+      ],
+      "explanation": "La salida está a la derecha. — Выход находится справа.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Tengo que cambiar de línea.",
+        "¿Dónde está la línea dos?",
+        "Baja en la próxima estación.",
+        "La salida está a la derecha."
+      ]
+    }
+  ]
+}

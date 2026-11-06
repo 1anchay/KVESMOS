@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-29",
+  "title": "Пересадка в метро",
+  "topic": "Пересадка в метро",
+  "order": 28,
+  "objective": "Уточнить линию, пересадку и выход.",
+  "guide": "Tener que + cambiar обозначает необходимость пересадки.",
+  "vocabulary": [
+    {
+      "id": "es:v014:29:p0",
+      "en": "Tengo que cambiar de línea.",
+      "ru": "Мне нужно пересесть на другую линию."
+    },
+    {
+      "id": "es:v014:29:p1",
+      "en": "¿Dónde está la línea dos?",
+      "ru": "Где вторая линия?"
+    },
+    {
+      "id": "es:v014:29:p2",
+      "en": "Baja en la próxima estación.",
+      "ru": "Выйди на следующей станции."
+    },
+    {
+      "id": "es:v014:29:p3",
+      "en": "La salida está a la derecha.",
+      "ru": "Выход находится справа."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Пересадка в метро",
+      "phrase": "Tengo que cambiar de línea.",
+      "translation": "Мне нужно пересесть на другую линию.",
+      "explanation": "Tener que + cambiar обозначает необходимость пересадки."
+    },
+    {
+      "character": "miko",
+      "title": "Пересадка в метро",
+      "phrase": "¿Dónde está la línea dos?",
+      "translation": "Где вторая линия?",
+      "explanation": "¿Dónde está la línea dos? — Где вторая линия?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Пересадка в метро",
+      "phrase": "Baja en la próxima estación.",
+      "translation": "Выйди на следующей станции.",
+      "explanation": "Baja en la próxima estación. — Выйди на следующей станции."
+    },
+    {
+      "character": "orbi",
+      "title": "Пересадка в метро",
+      "phrase": "La salida está a la derecha.",
+      "translation": "Выход находится справа.",
+      "explanation": "La salida está a la derecha. — Выход находится справа."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Tengo que cambiar de línea.",
+      "translation": "Мне нужно пересесть на другую линию.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мне нужно пересесть на другую линию.",
+      "options": [
+        "Выйди на следующей станции.",
+        "Мне нужно пересесть на другую линию.",
+        "Выход находится справа."
+      ],
+      "explanation": "Tener que + cambiar обозначает необходимость пересадки."
+    },
+    {
+      "id": "apply",
+      "phrase": "¿Dónde está la línea dos?",
+      "translation": "Где вторая линия?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "¿Dónde está la línea dos?",
+      "tokens": [
+        "¿Dónde",
+        "está",
+        "la",
+        "línea",
+        "dos?"
+      ],
+      "character": "miko",
+      "explanation": "¿Dónde está la línea dos? — Где вторая линия?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-29-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Мне нужно пересесть на другую линию.»?",
+      "answers": [
+        "Tengo que cambiar de línea."
+      ],
+      "explanation": "Tengo que cambiar de línea. — Мне нужно пересесть на другую линию.",
+      "wordIds": [
+        "es:v014:29:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "¿Dónde está la línea dos?",
+        "La salida está a la derecha.",
+        "Tengo que cambiar de línea."
+      ],
+      "hint": "Tengo que cambiar de línea. — Мне нужно пересесть на другую линию."
+    },
+    {
+      "id": "es-a1-29-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Где вторая линия?",
+      "answers": [
+        "¿Dónde está la línea dos?"
+      ],
+      "explanation": "Tener que + cambiar обозначает необходимость пересадки.",
+      "wordIds": [
+        "es:v014:29:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "¿Dónde",
+        "está",
+        "la",
+        "línea",
+        "dos?"
+      ],
+      "hint": "¿Dónde está la línea dos? — Где вторая линия?"
+    },
+    {
+      "id": "es-a1-29-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Выйди на следующей станции."
+      ],
+      "explanation": "Baja en la próxima estación. — Выйди на следующей станции.",
+      "wordIds": [
+        "es:v014:29:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Baja en la próxima estación.",
+      "options": [
+        "Мне нужно пересесть на другую линию.",
+        "Выйди на следующей станции.",
+        "Где вторая линия?"
+      ],
+      "hint": "Baja en la próxima estación. — Выйди на следующей станции."
+    },
+    {
+      "id": "es-a1-29-e03",
+      "type": "dialogue",
+      "prompt": "Где сделать пересадку?",
+      "answers": [
+        "На следующей станции."
+      ],
+      "explanation": "На следующей станции. Уточнить линию, пересадку и выход.",
+      "wordIds": [
+        "es:v014:29:p0",
+        "es:v014:29:p1",
+        "es:v014:29:p2",
+        "es:v014:29:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Dónde tengo que cambiar de línea?\nМико: En la próxima estación. Busca la línea dos.",
+      "options": [
+        "У выхода из дома.",
+        "Через две станции.",
+        "На следующей станции."
+      ]
+    },
+    {
+      "id": "es-a1-29-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v014:29:p0",
+        "es:v014:29:p1",
+        "es:v014:29:p2",
+        "es:v014:29:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v014:29:p0",
+          "en": "Tengo que cambiar de línea.",
+          "ru": "Мне нужно пересесть на другую линию."
+        },
+        {
+          "id": "es:v014:29:p1",
+          "en": "¿Dónde está la línea dos?",
+          "ru": "Где вторая линия?"
+        },
+        {
+          "id": "es:v014:29:p2",
+          "en": "Baja en la próxima estación.",
+          "ru": "Выйди на следующей станции."
+        },
+        {
+          "id": "es:v014:29:p3",
+          "en": "La salida está a la derecha.",
+          "ru": "Выход находится справа."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-29-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: La salida están a la derecha.",
+      "answers": [
+        "La salida está a la derecha."
+      ],
+      "explanation": "La salida — единственное число: está.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "La salida están a la derecha.",
+        "La salida está a la derecha."
+      ],
+      "hint": "Tener que + cambiar обозначает необходимость пересадки."
+    },
+    {
+      "id": "es-a1-29-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Выход находится справа.». Можно написать вместо микрофона.",
+      "answers": [
+        "La salida está a la derecha."
+      ],
+      "explanation": "La salida está a la derecha. — Выход находится справа.",
+      "wordIds": [
+        "es:v014:29:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "La salida está a la derecha.",
+      "recall": {
+        "phrase": "La salida está a la derecha.",
+        "meaning": "Выход находится справа."
+      }
+    },
+    {
+      "id": "es-a1-29-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мне нужно пересесть на другую линию.",
+      "answers": [
+        "Tengo que cambiar de línea."
+      ],
+      "explanation": "Tener que + cambiar обозначает необходимость пересадки.",
+      "wordIds": [
+        "es:v014:29:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Tengo que cambiar de línea.",
+        "meaning": "Мне нужно пересесть на другую линию."
+      }
+    },
+    {
+      "id": "es-a1-29-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я предпочитаю остаться дома.",
+      "answers": [
+        "Prefiero quedarme en casa."
+      ],
+      "explanation": "Prefiero quedarme en casa. — Я предпочитаю остаться дома.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Hoy hace mucho frío.",
+        "Está lloviendo.",
+        "Prefiero quedarme en casa.",
+        "Mañana podemos salir."
+      ]
+    }
+  ]
+}

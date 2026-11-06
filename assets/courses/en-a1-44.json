@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-44",
+  "title": "Небольшая история",
+  "topic": "Небольшая история",
+  "order": 43,
+  "objective": "Передать последовательность трёх событий.",
+  "guide": "First начинает последовательность, then продолжает, finally обозначает последнее событие.",
+  "vocabulary": [
+    {
+      "id": "en:v014:44:p0",
+      "en": "First, we missed the bus.",
+      "ru": "Сначала мы опоздали на автобус."
+    },
+    {
+      "id": "en:v014:44:p1",
+      "en": "Then we walked to the station.",
+      "ru": "Потом мы пошли пешком на станцию."
+    },
+    {
+      "id": "en:v014:44:p2",
+      "en": "Finally, we took a train.",
+      "ru": "Наконец мы сели на поезд."
+    },
+    {
+      "id": "en:v014:44:p3",
+      "en": "We arrived before lunch.",
+      "ru": "Мы приехали до обеда."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Небольшая история",
+      "phrase": "First, we missed the bus.",
+      "translation": "Сначала мы опоздали на автобус.",
+      "explanation": "First начинает последовательность, then продолжает, finally обозначает последнее событие."
+    },
+    {
+      "character": "miko",
+      "title": "Небольшая история",
+      "phrase": "Then we walked to the station.",
+      "translation": "Потом мы пошли пешком на станцию.",
+      "explanation": "Then we walked to the station. — Потом мы пошли пешком на станцию."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Небольшая история",
+      "phrase": "Finally, we took a train.",
+      "translation": "Наконец мы сели на поезд.",
+      "explanation": "Finally, we took a train. — Наконец мы сели на поезд."
+    },
+    {
+      "character": "orbi",
+      "title": "Небольшая история",
+      "phrase": "We arrived before lunch.",
+      "translation": "Мы приехали до обеда.",
+      "explanation": "We arrived before lunch. — Мы приехали до обеда."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "First, we missed the bus.",
+      "translation": "Сначала мы опоздали на автобус.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Сначала мы опоздали на автобус.",
+      "options": [
+        "Наконец мы сели на поезд.",
+        "Сначала мы опоздали на автобус.",
+        "Мы приехали до обеда."
+      ],
+      "explanation": "First начинает последовательность, then продолжает, finally обозначает последнее событие."
+    },
+    {
+      "id": "apply",
+      "phrase": "Then we walked to the station.",
+      "translation": "Потом мы пошли пешком на станцию.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Then we walked to the station.",
+      "tokens": [
+        "Then",
+        "we",
+        "walked",
+        "to",
+        "the",
+        "station."
+      ],
+      "character": "miko",
+      "explanation": "Then we walked to the station. — Потом мы пошли пешком на станцию."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-44-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Сначала мы опоздали на автобус.»?",
+      "answers": [
+        "First, we missed the bus."
+      ],
+      "explanation": "First, we missed the bus. — Сначала мы опоздали на автобус.",
+      "wordIds": [
+        "en:v014:44:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Then we walked to the station.",
+        "We arrived before lunch.",
+        "First, we missed the bus."
+      ],
+      "hint": "First, we missed the bus. — Сначала мы опоздали на автобус."
+    },
+    {
+      "id": "en-a1-44-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Потом мы пошли пешком на станцию.",
+      "answers": [
+        "Then we walked to the station."
+      ],
+      "explanation": "First начинает последовательность, then продолжает, finally обозначает последнее событие.",
+      "wordIds": [
+        "en:v014:44:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Then",
+        "we",
+        "walked",
+        "to",
+        "the",
+        "station."
+      ],
+      "hint": "Then we walked to the station. — Потом мы пошли пешком на станцию."
+    },
+    {
+      "id": "en-a1-44-e03",
+      "type": "dialogue",
+      "prompt": "На чём в итоге поехали?",
+      "answers": [
+        "На поезде."
+      ],
+      "explanation": "На поезде. Передать последовательность трёх событий.",
+      "wordIds": [
+        "en:v014:44:p0",
+        "en:v014:44:p1",
+        "en:v014:44:p2",
+        "en:v014:44:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Did you take a bus?\nМико: No, we missed it. Then we took a train.",
+      "options": [
+        "На автобусе.",
+        "На велосипеде.",
+        "На поезде."
+      ]
+    },
+    {
+      "id": "en-a1-44-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Наконец мы сели на поезд."
+      ],
+      "explanation": "Finally, we took a train. — Наконец мы сели на поезд.",
+      "wordIds": [
+        "en:v014:44:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Finally, we took a train.",
+      "options": [
+        "Сначала мы опоздали на автобус.",
+        "Наконец мы сели на поезд.",
+        "Потом мы пошли пешком на станцию."
+      ],
+      "hint": "Finally, we took a train. — Наконец мы сели на поезд."
+    },
+    {
+      "id": "en-a1-44-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We taked a train.",
+      "answers": [
+        "We took a train."
+      ],
+      "explanation": "Прошедшая форма take — took.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We taked a train.",
+        "We took a train."
+      ],
+      "hint": "First начинает последовательность, then продолжает, finally обозначает последнее событие."
+    },
+    {
+      "id": "en-a1-44-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы приехали до обеда.». Можно написать вместо микрофона.",
+      "answers": [
+        "We arrived before lunch."
+      ],
+      "explanation": "We arrived before lunch. — Мы приехали до обеда.",
+      "wordIds": [
+        "en:v014:44:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "We arrived before lunch.",
+      "recall": {
+        "phrase": "We arrived before lunch.",
+        "meaning": "Мы приехали до обеда."
+      }
+    },
+    {
+      "id": "en-a1-44-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Сначала мы опоздали на автобус.",
+      "answers": [
+        "First, we missed the bus."
+      ],
+      "explanation": "First начинает последовательность, then продолжает, finally обозначает последнее событие.",
+      "wordIds": [
+        "en:v014:44:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "First, we missed the bus.",
+        "meaning": "Сначала мы опоздали на автобус."
+      }
+    },
+    {
+      "id": "en-a1-44-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я увидел несколько старых карт.",
+      "answers": [
+        "I saw some old maps."
+      ],
+      "explanation": "I saw some old maps. — Я увидел несколько старых карт.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Did you visit the museum?",
+        "We stayed there for two hours.",
+        "What did you see?",
+        "I saw some old maps."
+      ]
+    }
+  ]
+}

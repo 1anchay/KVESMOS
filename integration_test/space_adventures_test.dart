@@ -1,3 +1,4 @@
+import '../test/support.dart';
 // Dedicated QA emulator only. Uses an isolated in-memory fixture; the runner
 // may clear its package. Back up and restore the QA install around this test.
 import 'dart:convert';
@@ -16,7 +17,6 @@ import 'package:orbitwords/domain/space_adventures.dart';
 import 'package:orbitwords/domain/course.dart';
 import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/ui/app.dart';
-import 'package:orbitwords/ui/lesson_introduction.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -58,13 +58,7 @@ void main() {
       final router = GoRouter.of(tester.element(find.byType(OrbitShell)));
       router.go('/lesson/a1-01');
       await tester.pumpAndSettle();
-      for (
-        var i = 0;
-        i < 12 && find.byType(LessonIntroduction).evaluate().isNotEmpty;
-        i++
-      ) {
-        await tap(find.byKey(const Key('teaching-next')));
-      }
+      await advanceTeaching(tester);
       final material = await repo.startLesson('a1-01');
       for (final e in material.lesson.exercises) {
         if (e.options.isNotEmpty) {

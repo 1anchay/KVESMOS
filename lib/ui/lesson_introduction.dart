@@ -156,7 +156,7 @@ class _LessonIntroductionState extends State<LessonIntroduction> {
   Widget build(BuildContext context) {
     final a = activity;
     final theme = Theme.of(context);
-    final reveal = action['reveal'] == true || solved;
+    final reveal = action['reveal'] == true;
     final pool = List<int>.generate(
       a.tokens.length,
       (i) => i,

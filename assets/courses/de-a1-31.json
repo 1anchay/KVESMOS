@@ -1,0 +1,290 @@
+{
+  "id": "de-a1-31",
+  "title": "Обменять куртку",
+  "topic": "Покупки и бронирование",
+  "order": 30,
+  "objective": "Объяснить проблему с покупкой и попросить обмен.",
+  "guide": "Ich möchte… — вежливое желание. Umtauschen — глагол для обмена покупки; после möchte он стоит в конце в инфинитиве.",
+  "vocabulary": [
+    {
+      "id": "de:v015:31:p0",
+      "en": "Ich möchte diese Jacke umtauschen.",
+      "ru": "Я хотел бы обменять эту куртку."
+    },
+    {
+      "id": "de:v015:31:p1",
+      "en": "Die Jacke ist zu klein.",
+      "ru": "Куртка слишком маленькая."
+    },
+    {
+      "id": "de:v015:31:p2",
+      "en": "Haben Sie eine größere Größe?",
+      "ru": "У вас есть размер побольше?"
+    },
+    {
+      "id": "de:v015:31:p3",
+      "en": "Hier ist der Kassenbon.",
+      "ru": "Вот кассовый чек."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Обменять куртку",
+      "phrase": "Ich möchte diese Jacke umtauschen.",
+      "translation": "Я хотел бы обменять эту куртку.",
+      "explanation": "Ich möchte… — вежливое желание. Umtauschen — глагол для обмена покупки; после möchte он стоит в конце в инфинитиве."
+    },
+    {
+      "character": "miko",
+      "title": "Обменять куртку",
+      "phrase": "Die Jacke ist zu klein.",
+      "translation": "Куртка слишком маленькая.",
+      "explanation": "Die Jacke ist zu klein. — Куртка слишком маленькая."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Обменять куртку",
+      "phrase": "Haben Sie eine größere Größe?",
+      "translation": "У вас есть размер побольше?",
+      "explanation": "Haben Sie eine größere Größe? — У вас есть размер побольше?"
+    },
+    {
+      "character": "orbi",
+      "title": "Обменять куртку",
+      "phrase": "Hier ist der Kassenbon.",
+      "translation": "Вот кассовый чек.",
+      "explanation": "Hier ist der Kassenbon. — Вот кассовый чек."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich möchte diese Jacke umtauschen.",
+      "translation": "Я хотел бы обменять эту куртку.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы обменять эту куртку.",
+      "options": [
+        "У вас есть размер побольше?",
+        "Я хотел бы обменять эту куртку.",
+        "Вот кассовый чек."
+      ],
+      "explanation": "Ich möchte… — вежливое желание. Umtauschen — глагол для обмена покупки; после möchte он стоит в конце в инфинитиве."
+    },
+    {
+      "id": "apply",
+      "phrase": "Die Jacke ist zu klein.",
+      "translation": "Куртка слишком маленькая.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Die Jacke ist zu klein.",
+      "tokens": [
+        "Die",
+        "Jacke",
+        "ist",
+        "zu",
+        "klein."
+      ],
+      "character": "miko",
+      "explanation": "Die Jacke ist zu klein. — Куртка слишком маленькая."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-31-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы обменять эту куртку.»?",
+      "answers": [
+        "Ich möchte diese Jacke umtauschen."
+      ],
+      "explanation": "Ich möchte diese Jacke umtauschen. — Я хотел бы обменять эту куртку.",
+      "wordIds": [
+        "de:v015:31:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Die Jacke ist zu klein.",
+        "Hier ist der Kassenbon.",
+        "Ich möchte diese Jacke umtauschen."
+      ],
+      "hint": "Ich möchte diese Jacke umtauschen. — Я хотел бы обменять эту куртку."
+    },
+    {
+      "id": "de-a1-31-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Куртка слишком маленькая.",
+      "answers": [
+        "Die Jacke ist zu klein."
+      ],
+      "explanation": "Ich möchte… — вежливое желание. Umtauschen — глагол для обмена покупки; после möchte он стоит в конце в инфинитиве.",
+      "wordIds": [
+        "de:v015:31:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Die",
+        "Jacke",
+        "ist",
+        "zu",
+        "klein."
+      ],
+      "hint": "Die Jacke ist zu klein. — Куртка слишком маленькая."
+    },
+    {
+      "id": "de-a1-31-e03",
+      "type": "dialogue",
+      "prompt": "Что продавец просит показать?",
+      "answers": [
+        "Кассовый чек."
+      ],
+      "explanation": "В диалоге: Ich möchte diese Jacke umtauschen. Sie ist zu klein. / Haben Sie den Kassenbon dabei? Поэтому: Кассовый чек.",
+      "wordIds": [
+        "de:v015:31:p0",
+        "de:v015:31:p1",
+        "de:v015:31:p2",
+        "de:v015:31:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Ich möchte diese Jacke umtauschen. Sie ist zu klein.\nМико: Haben Sie den Kassenbon dabei?",
+      "options": [
+        "Билет.",
+        "Адрес гостиницы.",
+        "Кассовый чек."
+      ]
+    },
+    {
+      "id": "de-a1-31-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "У вас есть размер побольше?"
+      ],
+      "explanation": "Haben Sie eine größere Größe? — У вас есть размер побольше?",
+      "wordIds": [
+        "de:v015:31:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Haben Sie eine größere Größe?",
+      "options": [
+        "Я хотел бы обменять эту куртку.",
+        "У вас есть размер побольше?",
+        "Куртка слишком маленькая."
+      ],
+      "hint": "Haben Sie eine größere Größe? — У вас есть размер побольше?"
+    },
+    {
+      "id": "de-a1-31-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v015:31:p0",
+        "de:v015:31:p1",
+        "de:v015:31:p2",
+        "de:v015:31:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v015:31:p0",
+          "en": "Ich möchte diese Jacke umtauschen.",
+          "ru": "Я хотел бы обменять эту куртку."
+        },
+        {
+          "id": "de:v015:31:p1",
+          "en": "Die Jacke ist zu klein.",
+          "ru": "Куртка слишком маленькая."
+        },
+        {
+          "id": "de:v015:31:p2",
+          "en": "Haben Sie eine größere Größe?",
+          "ru": "У вас есть размер побольше?"
+        },
+        {
+          "id": "de:v015:31:p3",
+          "en": "Hier ist der Kassenbon.",
+          "ru": "Вот кассовый чек."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-31-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich möchte diese Jacke tausche um.",
+      "answers": [
+        "Ich möchte diese Jacke umtauschen."
+      ],
+      "explanation": "После möchte нужен цельный инфинитив umtauschen в конце.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich möchte diese Jacke tausche um.",
+        "Ich möchte diese Jacke umtauschen."
+      ],
+      "hint": "Ich möchte… — вежливое желание. Umtauschen — глагол для обмена покупки; после möchte он стоит в конце в инфинитиве."
+    },
+    {
+      "id": "de-a1-31-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Вот кассовый чек.». Можно написать вместо микрофона.",
+      "answers": [
+        "Hier ist der Kassenbon."
+      ],
+      "explanation": "Hier ist der Kassenbon. — Вот кассовый чек.",
+      "wordIds": [
+        "de:v015:31:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Hier ist der Kassenbon.",
+      "recall": {
+        "phrase": "Hier ist der Kassenbon.",
+        "meaning": "Вот кассовый чек."
+      }
+    },
+    {
+      "id": "de-a1-31-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы обменять эту куртку.",
+      "answers": [
+        "Ich möchte diese Jacke umtauschen."
+      ],
+      "explanation": "Ich möchte… — вежливое желание. Umtauschen — глагол для обмена покупки; после möchte он стоит в конце в инфинитиве.",
+      "wordIds": [
+        "de:v015:31:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich möchte diese Jacke umtauschen.",
+        "meaning": "Я хотел бы обменять эту куртку."
+      }
+    },
+    {
+      "id": "de-a1-31-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: К сожалению, я сегодня не могу прийти.",
+      "answers": [
+        "Leider kann ich heute nicht kommen."
+      ],
+      "explanation": "Leider kann ich heute nicht kommen. — К сожалению, я сегодня не могу прийти.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Leider kann ich heute nicht kommen.",
+        "Hast du stattdessen morgen Zeit?",
+        "Wir können uns vor dem Kino treffen.",
+        "Schreib mir bitte kurz zurück."
+      ]
+    }
+  ]
+}

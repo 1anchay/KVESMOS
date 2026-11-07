@@ -1,0 +1,251 @@
+{
+  "id": "fr-a1-26",
+  "title": "Увидел и сделал",
+  "topic": "Прошлое с avoir",
+  "order": 25,
+  "objective": "Использовать частые неправильные причастия.",
+  "guide": "Prendre → pris, faire → fait, voir → vu. Вспомогательный avoir остаётся спрягаемым: j'ai, nous avons.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:26:p0",
+      "en": "J'ai pris le train de huit heures.",
+      "ru": "Я сел на восьмичасовой поезд."
+    },
+    {
+      "id": "fr:v015:26:p1",
+      "en": "Nous avons fait les courses.",
+      "ru": "Мы сходили за покупками."
+    },
+    {
+      "id": "fr:v015:26:p2",
+      "en": "Tu as vu ce film ?",
+      "ru": "Ты видел этот фильм?"
+    },
+    {
+      "id": "fr:v015:26:p3",
+      "en": "Elle a lu ton message.",
+      "ru": "Она прочитала твоё сообщение."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Увидел и сделал",
+      "phrase": "J'ai pris le train de huit heures.",
+      "translation": "Я сел на восьмичасовой поезд.",
+      "explanation": "Prendre → pris, faire → fait, voir → vu. Вспомогательный avoir остаётся спрягаемым: j'ai, nous avons."
+    },
+    {
+      "character": "miko",
+      "title": "Увидел и сделал",
+      "phrase": "Nous avons fait les courses.",
+      "translation": "Мы сходили за покупками.",
+      "explanation": "Nous avons fait les courses. — Мы сходили за покупками."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Увидел и сделал",
+      "phrase": "Tu as vu ce film ?",
+      "translation": "Ты видел этот фильм?",
+      "explanation": "Tu as vu ce film ? — Ты видел этот фильм?"
+    },
+    {
+      "character": "orbi",
+      "title": "Увидел и сделал",
+      "phrase": "Elle a lu ton message.",
+      "translation": "Она прочитала твоё сообщение.",
+      "explanation": "Elle a lu ton message. — Она прочитала твоё сообщение."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "J'ai pris le train de huit heures.",
+      "translation": "Я сел на восьмичасовой поезд.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я сел на восьмичасовой поезд.",
+      "options": [
+        "Ты видел этот фильм?",
+        "Я сел на восьмичасовой поезд.",
+        "Она прочитала твоё сообщение."
+      ],
+      "explanation": "Prendre → pris, faire → fait, voir → vu. Вспомогательный avoir остаётся спрягаемым: j'ai, nous avons."
+    },
+    {
+      "id": "apply",
+      "phrase": "Nous avons fait les courses.",
+      "translation": "Мы сходили за покупками.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Nous avons fait les courses.",
+      "tokens": [
+        "Nous",
+        "avons",
+        "fait",
+        "les",
+        "courses."
+      ],
+      "character": "miko",
+      "explanation": "Nous avons fait les courses. — Мы сходили за покупками."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-26-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы купили хлеб.",
+      "answers": [
+        "Nous avons acheté du pain."
+      ],
+      "explanation": "Nous avons acheté du pain. — Мы купили хлеб.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Hier, j'ai visité le musée.",
+        "Nous avons acheté du pain.",
+        "Tu as terminé ton travail ?",
+        "Elle a téléphoné à sa sœur."
+      ]
+    },
+    {
+      "id": "fr-a1-26-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я сел на восьмичасовой поезд.»?",
+      "answers": [
+        "J'ai pris le train de huit heures."
+      ],
+      "explanation": "J'ai pris le train de huit heures. — Я сел на восьмичасовой поезд.",
+      "wordIds": [
+        "fr:v015:26:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Nous avons fait les courses.",
+        "Elle a lu ton message.",
+        "J'ai pris le train de huit heures."
+      ],
+      "hint": "J'ai pris le train de huit heures. — Я сел на восьмичасовой поезд."
+    },
+    {
+      "id": "fr-a1-26-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Мы сходили за покупками.",
+      "answers": [
+        "Nous avons fait les courses."
+      ],
+      "explanation": "Prendre → pris, faire → fait, voir → vu. Вспомогательный avoir остаётся спрягаемым: j'ai, nous avons.",
+      "wordIds": [
+        "fr:v015:26:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Nous",
+        "avons",
+        "fait",
+        "les",
+        "courses."
+      ],
+      "hint": "Nous avons fait les courses. — Мы сходили за покупками."
+    },
+    {
+      "id": "fr-a1-26-e04",
+      "type": "dialogue",
+      "prompt": "Что собеседник сделал сначала?",
+      "answers": [
+        "Сходил за покупками."
+      ],
+      "explanation": "В диалоге: Tu as vu ce film hier ? / Non, j'ai fait les courses, puis j'ai lu ton message. Поэтому: Сходил за покупками.",
+      "wordIds": [
+        "fr:v015:26:p0",
+        "fr:v015:26:p1",
+        "fr:v015:26:p2",
+        "fr:v015:26:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Tu as vu ce film hier ?\nМико: Non, j'ai fait les courses, puis j'ai lu ton message.",
+      "options": [
+        "Посмотрел фильм.",
+        "Прочитал сообщение.",
+        "Сходил за покупками."
+      ]
+    },
+    {
+      "id": "fr-a1-26-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ты видел этот фильм?"
+      ],
+      "explanation": "Tu as vu ce film ? — Ты видел этот фильм?",
+      "wordIds": [
+        "fr:v015:26:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Tu as vu ce film ?",
+      "options": [
+        "Я сел на восьмичасовой поезд.",
+        "Ты видел этот фильм?",
+        "Мы сходили за покупками."
+      ],
+      "hint": "Tu as vu ce film ? — Ты видел этот фильм?"
+    },
+    {
+      "id": "fr-a1-26-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: J'ai prend le train.",
+      "answers": [
+        "J'ai pris le train."
+      ],
+      "explanation": "После ai требуется причастие pris от prendre.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "J'ai prend le train.",
+        "J'ai pris le train."
+      ],
+      "hint": "Prendre → pris, faire → fait, voir → vu. Вспомогательный avoir остаётся спрягаемым: j'ai, nous avons."
+    },
+    {
+      "id": "fr-a1-26-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Она прочитала твоё сообщение.». Можно написать вместо микрофона.",
+      "answers": [
+        "Elle a lu ton message."
+      ],
+      "explanation": "Elle a lu ton message. — Она прочитала твоё сообщение.",
+      "wordIds": [
+        "fr:v015:26:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Elle a lu ton message.",
+      "recall": {
+        "phrase": "Elle a lu ton message.",
+        "meaning": "Она прочитала твоё сообщение."
+      }
+    },
+    {
+      "id": "fr-a1-26-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я сел на восьмичасовой поезд.",
+      "answers": [
+        "J'ai pris le train de huit heures."
+      ],
+      "explanation": "Prendre → pris, faire → fait, voir → vu. Вспомогательный avoir остаётся спрягаемым: j'ai, nous avons.",
+      "wordIds": [
+        "fr:v015:26:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "J'ai pris le train de huit heures.",
+        "meaning": "Я сел на восьмичасовой поезд."
+      }
+    }
+  ]
+}

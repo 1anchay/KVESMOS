@@ -1,0 +1,292 @@
+{
+  "id": "de-a1-33",
+  "title": "В гостинице",
+  "topic": "Приезд и помощь",
+  "order": 32,
+  "objective": "Заселиться и спросить о времени выезда.",
+  "guide": "Für zwei Nächte обозначает срок брони. В вопросе Bis wann…? уточняем крайний срок.",
+  "vocabulary": [
+    {
+      "id": "de:v015:33:p0",
+      "en": "Ich habe ein Zimmer für zwei Nächte gebucht.",
+      "ru": "Я забронировал номер на две ночи."
+    },
+    {
+      "id": "de:v015:33:p1",
+      "en": "Ist das Frühstück im Preis enthalten?",
+      "ru": "Завтрак входит в стоимость?"
+    },
+    {
+      "id": "de:v015:33:p2",
+      "en": "Bis wann müssen wir auschecken?",
+      "ru": "До какого времени нам нужно выехать?"
+    },
+    {
+      "id": "de:v015:33:p3",
+      "en": "Könnten wir ein ruhiges Zimmer bekommen?",
+      "ru": "Можно нам получить тихий номер?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "В гостинице",
+      "phrase": "Ich habe ein Zimmer für zwei Nächte gebucht.",
+      "translation": "Я забронировал номер на две ночи.",
+      "explanation": "Für zwei Nächte обозначает срок брони. В вопросе Bis wann…? уточняем крайний срок."
+    },
+    {
+      "character": "miko",
+      "title": "В гостинице",
+      "phrase": "Ist das Frühstück im Preis enthalten?",
+      "translation": "Завтрак входит в стоимость?",
+      "explanation": "Ist das Frühstück im Preis enthalten? — Завтрак входит в стоимость?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "В гостинице",
+      "phrase": "Bis wann müssen wir auschecken?",
+      "translation": "До какого времени нам нужно выехать?",
+      "explanation": "Bis wann müssen wir auschecken? — До какого времени нам нужно выехать?"
+    },
+    {
+      "character": "orbi",
+      "title": "В гостинице",
+      "phrase": "Könnten wir ein ruhiges Zimmer bekommen?",
+      "translation": "Можно нам получить тихий номер?",
+      "explanation": "Könnten wir ein ruhiges Zimmer bekommen? — Можно нам получить тихий номер?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich habe ein Zimmer für zwei Nächte gebucht.",
+      "translation": "Я забронировал номер на две ночи.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я забронировал номер на две ночи.",
+      "options": [
+        "До какого времени нам нужно выехать?",
+        "Я забронировал номер на две ночи.",
+        "Можно нам получить тихий номер?"
+      ],
+      "explanation": "Für zwei Nächte обозначает срок брони. В вопросе Bis wann…? уточняем крайний срок."
+    },
+    {
+      "id": "apply",
+      "phrase": "Ist das Frühstück im Preis enthalten?",
+      "translation": "Завтрак входит в стоимость?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Ist das Frühstück im Preis enthalten?",
+      "tokens": [
+        "Ist",
+        "das",
+        "Frühstück",
+        "im",
+        "Preis",
+        "enthalten?"
+      ],
+      "character": "miko",
+      "explanation": "Ist das Frühstück im Preis enthalten? — Завтрак входит в стоимость?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-33-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы придём вдвоём.",
+      "answers": [
+        "Wir kommen zu zweit."
+      ],
+      "explanation": "Wir kommen zu zweit. — Мы придём вдвоём.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ich möchte einen Tisch reservieren.",
+        "Haben Sie um sieben Uhr einen Tisch frei?",
+        "Wir kommen zu zweit.",
+        "Die Reservierung ist auf den Namen Weber."
+      ]
+    },
+    {
+      "id": "de-a1-33-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я забронировал номер на две ночи.»?",
+      "answers": [
+        "Ich habe ein Zimmer für zwei Nächte gebucht."
+      ],
+      "explanation": "Ich habe ein Zimmer für zwei Nächte gebucht. — Я забронировал номер на две ночи.",
+      "wordIds": [
+        "de:v015:33:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Ist das Frühstück im Preis enthalten?",
+        "Könnten wir ein ruhiges Zimmer bekommen?",
+        "Ich habe ein Zimmer für zwei Nächte gebucht."
+      ],
+      "hint": "Ich habe ein Zimmer für zwei Nächte gebucht. — Я забронировал номер на две ночи."
+    },
+    {
+      "id": "de-a1-33-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Завтрак входит в стоимость?",
+      "answers": [
+        "Ist das Frühstück im Preis enthalten?"
+      ],
+      "explanation": "Für zwei Nächte обозначает срок брони. В вопросе Bis wann…? уточняем крайний срок.",
+      "wordIds": [
+        "de:v015:33:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Ist",
+        "das",
+        "Frühstück",
+        "im",
+        "Preis",
+        "enthalten?"
+      ],
+      "hint": "Ist das Frühstück im Preis enthalten? — Завтрак входит в стоимость?"
+    },
+    {
+      "id": "de-a1-33-e04",
+      "type": "dialogue",
+      "prompt": "Когда начинается завтрак?",
+      "answers": [
+        "В семь."
+      ],
+      "explanation": "В диалоге: Ist das Frühstück im Preis enthalten? / Ja, es gibt Frühstück ab sieben Uhr. Auschecken müssen Sie bis elf Uhr. Поэтому: В семь.",
+      "wordIds": [
+        "de:v015:33:p0",
+        "de:v015:33:p1",
+        "de:v015:33:p2",
+        "de:v015:33:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Ist das Frühstück im Preis enthalten?\nМико: Ja, es gibt Frühstück ab sieben Uhr. Auschecken müssen Sie bis elf Uhr.",
+      "options": [
+        "В одиннадцать.",
+        "В двенадцать.",
+        "В семь."
+      ]
+    },
+    {
+      "id": "de-a1-33-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "До какого времени нам нужно выехать?"
+      ],
+      "explanation": "Bis wann müssen wir auschecken? — До какого времени нам нужно выехать?",
+      "wordIds": [
+        "de:v015:33:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Bis wann müssen wir auschecken?",
+      "options": [
+        "Я забронировал номер на две ночи.",
+        "До какого времени нам нужно выехать?",
+        "Завтрак входит в стоимость?"
+      ],
+      "hint": "Bis wann müssen wir auschecken? — До какого времени нам нужно выехать?"
+    },
+    {
+      "id": "de-a1-33-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v015:33:p0",
+        "de:v015:33:p1",
+        "de:v015:33:p2",
+        "de:v015:33:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v015:33:p0",
+          "en": "Ich habe ein Zimmer für zwei Nächte gebucht.",
+          "ru": "Я забронировал номер на две ночи."
+        },
+        {
+          "id": "de:v015:33:p1",
+          "en": "Ist das Frühstück im Preis enthalten?",
+          "ru": "Завтрак входит в стоимость?"
+        },
+        {
+          "id": "de:v015:33:p2",
+          "en": "Bis wann müssen wir auschecken?",
+          "ru": "До какого времени нам нужно выехать?"
+        },
+        {
+          "id": "de:v015:33:p3",
+          "en": "Könnten wir ein ruhiges Zimmer bekommen?",
+          "ru": "Можно нам получить тихий номер?"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-33-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Bis wann wir müssen auschecken?",
+      "answers": [
+        "Bis wann müssen wir auschecken?"
+      ],
+      "explanation": "После вопросительной группы Bis wann стоит спрягаемый müssen, затем wir.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Bis wann wir müssen auschecken?",
+        "Bis wann müssen wir auschecken?"
+      ],
+      "hint": "Für zwei Nächte обозначает срок брони. В вопросе Bis wann…? уточняем крайний срок."
+    },
+    {
+      "id": "de-a1-33-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Можно нам получить тихий номер?». Можно написать вместо микрофона.",
+      "answers": [
+        "Könnten wir ein ruhiges Zimmer bekommen?"
+      ],
+      "explanation": "Könnten wir ein ruhiges Zimmer bekommen? — Можно нам получить тихий номер?",
+      "wordIds": [
+        "de:v015:33:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Könnten wir ein ruhiges Zimmer bekommen?",
+      "recall": {
+        "phrase": "Könnten wir ein ruhiges Zimmer bekommen?",
+        "meaning": "Можно нам получить тихий номер?"
+      }
+    },
+    {
+      "id": "de-a1-33-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я забронировал номер на две ночи.",
+      "answers": [
+        "Ich habe ein Zimmer für zwei Nächte gebucht."
+      ],
+      "explanation": "Für zwei Nächte обозначает срок брони. В вопросе Bis wann…? уточняем крайний срок.",
+      "wordIds": [
+        "de:v015:33:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich habe ein Zimmer für zwei Nächte gebucht.",
+        "meaning": "Я забронировал номер на две ночи."
+      }
+    }
+  ]
+}

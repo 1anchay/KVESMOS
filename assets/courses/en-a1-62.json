@@ -1,0 +1,249 @@
+{
+  "id": "en-a1-62",
+  "title": "Где моя посылка",
+  "topic": "Покупки и доставка",
+  "order": 61,
+  "objective": "Уточнить срок доставки и сообщить о задержке.",
+  "guide": "Hasn't arrived yet — «ещё не пришла»: важен результат к настоящему моменту. Arrive здесь употребляется с has, а не is.",
+  "vocabulary": [
+    {
+      "id": "en:v015:62:p0",
+      "en": "My parcel hasn't arrived yet.",
+      "ru": "Моя посылка ещё не пришла."
+    },
+    {
+      "id": "en:v015:62:p1",
+      "en": "When will it arrive?",
+      "ru": "Когда она придёт?"
+    },
+    {
+      "id": "en:v015:62:p2",
+      "en": "The address is correct.",
+      "ru": "Адрес правильный."
+    },
+    {
+      "id": "en:v015:62:p3",
+      "en": "Could you check the tracking number?",
+      "ru": "Не могли бы вы проверить номер отслеживания?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Где моя посылка",
+      "phrase": "My parcel hasn't arrived yet.",
+      "translation": "Моя посылка ещё не пришла.",
+      "explanation": "Hasn't arrived yet — «ещё не пришла»: важен результат к настоящему моменту. Arrive здесь употребляется с has, а не is."
+    },
+    {
+      "character": "miko",
+      "title": "Где моя посылка",
+      "phrase": "When will it arrive?",
+      "translation": "Когда она придёт?",
+      "explanation": "When will it arrive? — Когда она придёт?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Где моя посылка",
+      "phrase": "The address is correct.",
+      "translation": "Адрес правильный.",
+      "explanation": "The address is correct. — Адрес правильный."
+    },
+    {
+      "character": "orbi",
+      "title": "Где моя посылка",
+      "phrase": "Could you check the tracking number?",
+      "translation": "Не могли бы вы проверить номер отслеживания?",
+      "explanation": "Could you check the tracking number? — Не могли бы вы проверить номер отслеживания?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "My parcel hasn't arrived yet.",
+      "translation": "Моя посылка ещё не пришла.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Моя посылка ещё не пришла.",
+      "options": [
+        "Адрес правильный.",
+        "Моя посылка ещё не пришла.",
+        "Не могли бы вы проверить номер отслеживания?"
+      ],
+      "explanation": "Hasn't arrived yet — «ещё не пришла»: важен результат к настоящему моменту. Arrive здесь употребляется с has, а не is."
+    },
+    {
+      "id": "apply",
+      "phrase": "When will it arrive?",
+      "translation": "Когда она придёт?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "When will it arrive?",
+      "tokens": [
+        "When",
+        "will",
+        "it",
+        "arrive?"
+      ],
+      "character": "miko",
+      "explanation": "When will it arrive? — Когда она придёт?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-62-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Адрес правильный."
+      ],
+      "explanation": "The address is correct. — Адрес правильный.",
+      "wordIds": [
+        "en:v015:62:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "The address is correct.",
+      "options": [
+        "Моя посылка ещё не пришла.",
+        "Адрес правильный.",
+        "Когда она придёт?"
+      ],
+      "hint": "The address is correct. — Адрес правильный."
+    },
+    {
+      "id": "en-a1-62-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Когда она придёт?",
+      "answers": [
+        "When will it arrive?"
+      ],
+      "explanation": "Hasn't arrived yet — «ещё не пришла»: важен результат к настоящему моменту. Arrive здесь употребляется с has, а не is.",
+      "wordIds": [
+        "en:v015:62:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "When",
+        "will",
+        "it",
+        "arrive?"
+      ],
+      "hint": "When will it arrive? — Когда она придёт?"
+    },
+    {
+      "id": "en-a1-62-e03",
+      "type": "dialogue",
+      "prompt": "Когда обещают доставить посылку?",
+      "answers": [
+        "Завтра."
+      ],
+      "explanation": "В диалоге: My parcel hasn't arrived yet. / I'm sorry. It will arrive tomorrow. Поэтому: Завтра.",
+      "wordIds": [
+        "en:v015:62:p0",
+        "en:v015:62:p1",
+        "en:v015:62:p2",
+        "en:v015:62:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: My parcel hasn't arrived yet.\nМико: I'm sorry. It will arrive tomorrow.",
+      "options": [
+        "Сегодня утром.",
+        "Через месяц.",
+        "Завтра."
+      ]
+    },
+    {
+      "id": "en-a1-62-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Моя посылка ещё не пришла.»?",
+      "answers": [
+        "My parcel hasn't arrived yet."
+      ],
+      "explanation": "My parcel hasn't arrived yet. — Моя посылка ещё не пришла.",
+      "wordIds": [
+        "en:v015:62:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "When will it arrive?",
+        "Could you check the tracking number?",
+        "My parcel hasn't arrived yet."
+      ],
+      "hint": "My parcel hasn't arrived yet. — Моя посылка ещё не пришла."
+    },
+    {
+      "id": "en-a1-62-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: My parcel haven't arrived yet.",
+      "answers": [
+        "My parcel hasn't arrived yet."
+      ],
+      "explanation": "Parcel — единственное число, поэтому hasn't. Yet обычно стоит в конце вопроса или отрицания.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "My parcel haven't arrived yet.",
+        "My parcel hasn't arrived yet."
+      ],
+      "hint": "Hasn't arrived yet — «ещё не пришла»: важен результат к настоящему моменту. Arrive здесь употребляется с has, а не is."
+    },
+    {
+      "id": "en-a1-62-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Не могли бы вы проверить номер отслеживания?». Можно написать вместо микрофона.",
+      "answers": [
+        "Could you check the tracking number?"
+      ],
+      "explanation": "Could you check the tracking number? — Не могли бы вы проверить номер отслеживания?",
+      "wordIds": [
+        "en:v015:62:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Could you check the tracking number?",
+      "recall": {
+        "phrase": "Could you check the tracking number?",
+        "meaning": "Не могли бы вы проверить номер отслеживания?"
+      }
+    },
+    {
+      "id": "en-a1-62-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Моя посылка ещё не пришла.",
+      "answers": [
+        "My parcel hasn't arrived yet."
+      ],
+      "explanation": "Hasn't arrived yet — «ещё не пришла»: важен результат к настоящему моменту. Arrive здесь употребляется с has, а не is.",
+      "wordIds": [
+        "en:v015:62:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "My parcel hasn't arrived yet.",
+        "meaning": "Моя посылка ещё не пришла."
+      }
+    },
+    {
+      "id": "en-a1-62-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Эта куртка слишком маленькая.",
+      "answers": [
+        "This jacket is too small."
+      ],
+      "explanation": "This jacket is too small. — Эта куртка слишком маленькая.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Could I return this jacket?",
+        "This jacket is too small.",
+        "Do you have a larger size?",
+        "I still have the receipt."
+      ]
+    }
+  ]
+}

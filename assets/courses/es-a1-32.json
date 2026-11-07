@@ -1,0 +1,255 @@
+{
+  "id": "es-a1-32",
+  "title": "Забронировать столик",
+  "topic": "Покупки и бронирование",
+  "order": 31,
+  "objective": "Уточнить время и число гостей при бронировании.",
+  "guide": "Para + число людей обозначает, на кого бронь. A las + час указывает время встречи.",
+  "vocabulary": [
+    {
+      "id": "es:v015:32:p0",
+      "en": "Quisiera reservar una mesa para dos.",
+      "ru": "Я хотел бы забронировать столик на двоих."
+    },
+    {
+      "id": "es:v015:32:p1",
+      "en": "¿Hay una mesa libre a las ocho?",
+      "ru": "Есть свободный столик в восемь?"
+    },
+    {
+      "id": "es:v015:32:p2",
+      "en": "La reserva está a nombre de Ana.",
+      "ru": "Бронь на имя Аны."
+    },
+    {
+      "id": "es:v015:32:p3",
+      "en": "Preferimos una mesa junto a la ventana.",
+      "ru": "Мы предпочитаем столик у окна."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Забронировать столик",
+      "phrase": "Quisiera reservar una mesa para dos.",
+      "translation": "Я хотел бы забронировать столик на двоих.",
+      "explanation": "Para + число людей обозначает, на кого бронь. A las + час указывает время встречи."
+    },
+    {
+      "character": "miko",
+      "title": "Забронировать столик",
+      "phrase": "¿Hay una mesa libre a las ocho?",
+      "translation": "Есть свободный столик в восемь?",
+      "explanation": "¿Hay una mesa libre a las ocho? — Есть свободный столик в восемь?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Забронировать столик",
+      "phrase": "La reserva está a nombre de Ana.",
+      "translation": "Бронь на имя Аны.",
+      "explanation": "La reserva está a nombre de Ana. — Бронь на имя Аны."
+    },
+    {
+      "character": "orbi",
+      "title": "Забронировать столик",
+      "phrase": "Preferimos una mesa junto a la ventana.",
+      "translation": "Мы предпочитаем столик у окна.",
+      "explanation": "Preferimos una mesa junto a la ventana. — Мы предпочитаем столик у окна."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Quisiera reservar una mesa para dos.",
+      "translation": "Я хотел бы забронировать столик на двоих.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы забронировать столик на двоих.",
+      "options": [
+        "Бронь на имя Аны.",
+        "Я хотел бы забронировать столик на двоих.",
+        "Мы предпочитаем столик у окна."
+      ],
+      "explanation": "Para + число людей обозначает, на кого бронь. A las + час указывает время встречи."
+    },
+    {
+      "id": "apply",
+      "phrase": "¿Hay una mesa libre a las ocho?",
+      "translation": "Есть свободный столик в восемь?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "¿Hay una mesa libre a las ocho?",
+      "tokens": [
+        "¿Hay",
+        "una",
+        "mesa",
+        "libre",
+        "a",
+        "las",
+        "ocho?"
+      ],
+      "character": "miko",
+      "explanation": "¿Hay una mesa libre a las ocho? — Есть свободный столик в восемь?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-32-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Бронь на имя Аны."
+      ],
+      "explanation": "La reserva está a nombre de Ana. — Бронь на имя Аны.",
+      "wordIds": [
+        "es:v015:32:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "La reserva está a nombre de Ana.",
+      "options": [
+        "Я хотел бы забронировать столик на двоих.",
+        "Бронь на имя Аны.",
+        "Есть свободный столик в восемь?"
+      ],
+      "hint": "La reserva está a nombre de Ana. — Бронь на имя Аны."
+    },
+    {
+      "id": "es-a1-32-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Есть свободный столик в восемь?",
+      "answers": [
+        "¿Hay una mesa libre a las ocho?"
+      ],
+      "explanation": "Para + число людей обозначает, на кого бронь. A las + час указывает время встречи.",
+      "wordIds": [
+        "es:v015:32:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "¿Hay",
+        "una",
+        "mesa",
+        "libre",
+        "a",
+        "las",
+        "ocho?"
+      ],
+      "hint": "¿Hay una mesa libre a las ocho? — Есть свободный столик в восемь?"
+    },
+    {
+      "id": "es-a1-32-e03",
+      "type": "dialogue",
+      "prompt": "На какое время есть свободный столик?",
+      "answers": [
+        "На девять."
+      ],
+      "explanation": "В диалоге: ¿Hay una mesa libre a las ocho? / A las ocho no, pero tenemos una a las nueve. Поэтому: На девять.",
+      "wordIds": [
+        "es:v015:32:p0",
+        "es:v015:32:p1",
+        "es:v015:32:p2",
+        "es:v015:32:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Hay una mesa libre a las ocho?\nМико: A las ocho no, pero tenemos una a las nueve.",
+      "options": [
+        "На восемь.",
+        "На семь.",
+        "На девять."
+      ]
+    },
+    {
+      "id": "es-a1-32-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы забронировать столик на двоих.»?",
+      "answers": [
+        "Quisiera reservar una mesa para dos."
+      ],
+      "explanation": "Quisiera reservar una mesa para dos. — Я хотел бы забронировать столик на двоих.",
+      "wordIds": [
+        "es:v015:32:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "¿Hay una mesa libre a las ocho?",
+        "Preferimos una mesa junto a la ventana.",
+        "Quisiera reservar una mesa para dos."
+      ],
+      "hint": "Quisiera reservar una mesa para dos. — Я хотел бы забронировать столик на двоих."
+    },
+    {
+      "id": "es-a1-32-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: ¿Hay una mesa libre a los ocho?",
+      "answers": [
+        "¿Hay una mesa libre a las ocho?"
+      ],
+      "explanation": "Для времени с horas используем женское las: a las ocho.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "¿Hay una mesa libre a los ocho?",
+        "¿Hay una mesa libre a las ocho?"
+      ],
+      "hint": "Para + число людей обозначает, на кого бронь. A las + час указывает время встречи."
+    },
+    {
+      "id": "es-a1-32-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы предпочитаем столик у окна.». Можно написать вместо микрофона.",
+      "answers": [
+        "Preferimos una mesa junto a la ventana."
+      ],
+      "explanation": "Preferimos una mesa junto a la ventana. — Мы предпочитаем столик у окна.",
+      "wordIds": [
+        "es:v015:32:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Preferimos una mesa junto a la ventana.",
+      "recall": {
+        "phrase": "Preferimos una mesa junto a la ventana.",
+        "meaning": "Мы предпочитаем столик у окна."
+      }
+    },
+    {
+      "id": "es-a1-32-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы забронировать столик на двоих.",
+      "answers": [
+        "Quisiera reservar una mesa para dos."
+      ],
+      "explanation": "Para + число людей обозначает, на кого бронь. A las + час указывает время встречи.",
+      "wordIds": [
+        "es:v015:32:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Quisiera reservar una mesa para dos.",
+        "meaning": "Я хотел бы забронировать столик на двоих."
+      }
+    },
+    {
+      "id": "es-a1-32-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Эта рубашка мне мала.",
+      "answers": [
+        "Esta camisa me queda pequeña."
+      ],
+      "explanation": "Esta camisa me queda pequeña. — Эта рубашка мне мала.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Quisiera cambiar esta camisa.",
+        "Esta camisa me queda pequeña.",
+        "¿Tiene una talla más grande?",
+        "Aquí está el recibo."
+      ]
+    }
+  ]
+}

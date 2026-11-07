@@ -1,0 +1,257 @@
+{
+  "id": "es-a1-40",
+  "title": "Выбрать подходящий вариант",
+  "topic": "Привычки и выбор",
+  "order": 39,
+  "objective": "Выразить предпочтение и сравнить предложения.",
+  "guide": "Preferir меняет e на ie в prefiero/prefieres/prefiere; nosotros preferimos сохраняет e. Más… que означает «более… чем».",
+  "vocabulary": [
+    {
+      "id": "es:v015:40:p0",
+      "en": "Prefiero viajar en tren.",
+      "ru": "Я предпочитаю путешествовать на поезде."
+    },
+    {
+      "id": "es:v015:40:p1",
+      "en": "Este hotel es más tranquilo que el otro.",
+      "ru": "Этот отель тише другого."
+    },
+    {
+      "id": "es:v015:40:p2",
+      "en": "¿Qué opción prefieres?",
+      "ru": "Какой вариант ты предпочитаешь?"
+    },
+    {
+      "id": "es:v015:40:p3",
+      "en": "Preferimos salir temprano.",
+      "ru": "Мы предпочитаем выехать рано."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Выбрать подходящий вариант",
+      "phrase": "Prefiero viajar en tren.",
+      "translation": "Я предпочитаю путешествовать на поезде.",
+      "explanation": "Preferir меняет e на ie в prefiero/prefieres/prefiere; nosotros preferimos сохраняет e. Más… que означает «более… чем»."
+    },
+    {
+      "character": "miko",
+      "title": "Выбрать подходящий вариант",
+      "phrase": "Este hotel es más tranquilo que el otro.",
+      "translation": "Этот отель тише другого.",
+      "explanation": "Este hotel es más tranquilo que el otro. — Этот отель тише другого."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Выбрать подходящий вариант",
+      "phrase": "¿Qué opción prefieres?",
+      "translation": "Какой вариант ты предпочитаешь?",
+      "explanation": "¿Qué opción prefieres? — Какой вариант ты предпочитаешь?"
+    },
+    {
+      "character": "orbi",
+      "title": "Выбрать подходящий вариант",
+      "phrase": "Preferimos salir temprano.",
+      "translation": "Мы предпочитаем выехать рано.",
+      "explanation": "Preferimos salir temprano. — Мы предпочитаем выехать рано."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Prefiero viajar en tren.",
+      "translation": "Я предпочитаю путешествовать на поезде.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я предпочитаю путешествовать на поезде.",
+      "options": [
+        "Какой вариант ты предпочитаешь?",
+        "Я предпочитаю путешествовать на поезде.",
+        "Мы предпочитаем выехать рано."
+      ],
+      "explanation": "Preferir меняет e на ie в prefiero/prefieres/prefiere; nosotros preferimos сохраняет e. Más… que означает «более… чем»."
+    },
+    {
+      "id": "apply",
+      "phrase": "Este hotel es más tranquilo que el otro.",
+      "translation": "Этот отель тише другого.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Este hotel es más tranquilo que el otro.",
+      "tokens": [
+        "Este",
+        "hotel",
+        "es",
+        "más",
+        "tranquilo",
+        "que",
+        "el",
+        "otro."
+      ],
+      "character": "miko",
+      "explanation": "Este hotel es más tranquilo que el otro. — Этот отель тише другого."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-40-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я предпочитаю путешествовать на поезде.»?",
+      "answers": [
+        "Prefiero viajar en tren."
+      ],
+      "explanation": "Prefiero viajar en tren. — Я предпочитаю путешествовать на поезде.",
+      "wordIds": [
+        "es:v015:40:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Este hotel es más tranquilo que el otro.",
+        "Preferimos salir temprano.",
+        "Prefiero viajar en tren."
+      ],
+      "hint": "Prefiero viajar en tren. — Я предпочитаю путешествовать на поезде."
+    },
+    {
+      "id": "es-a1-40-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Этот отель тише другого.",
+      "answers": [
+        "Este hotel es más tranquilo que el otro."
+      ],
+      "explanation": "Preferir меняет e на ie в prefiero/prefieres/prefiere; nosotros preferimos сохраняет e. Más… que означает «более… чем».",
+      "wordIds": [
+        "es:v015:40:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Este",
+        "hotel",
+        "es",
+        "más",
+        "tranquilo",
+        "que",
+        "el",
+        "otro."
+      ],
+      "hint": "Este hotel es más tranquilo que el otro. — Этот отель тише другого."
+    },
+    {
+      "id": "es-a1-40-e03",
+      "type": "dialogue",
+      "prompt": "Почему собеседник выбирает поезд?",
+      "answers": [
+        "Он удобнее автобуса."
+      ],
+      "explanation": "В диалоге: ¿Qué opción prefieres, el tren o el autobús? / Prefiero el tren. Es más cómodo que el autobús. Поэтому: Он удобнее автобуса.",
+      "wordIds": [
+        "es:v015:40:p0",
+        "es:v015:40:p1",
+        "es:v015:40:p2",
+        "es:v015:40:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Qué opción prefieres, el tren o el autobús?\nМико: Prefiero el tren. Es más cómodo que el autobús.",
+      "options": [
+        "Он дешевле самолёта.",
+        "Он отправляется позже.",
+        "Он удобнее автобуса."
+      ]
+    },
+    {
+      "id": "es-a1-40-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Какой вариант ты предпочитаешь?"
+      ],
+      "explanation": "¿Qué opción prefieres? — Какой вариант ты предпочитаешь?",
+      "wordIds": [
+        "es:v015:40:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Qué opción prefieres?",
+      "options": [
+        "Я предпочитаю путешествовать на поезде.",
+        "Какой вариант ты предпочитаешь?",
+        "Этот отель тише другого."
+      ],
+      "hint": "¿Qué opción prefieres? — Какой вариант ты предпочитаешь?"
+    },
+    {
+      "id": "es-a1-40-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Yo prefero viajar en tren.",
+      "answers": [
+        "Yo prefiero viajar en tren."
+      ],
+      "explanation": "В форме yo глагол preferir меняет e на ie: prefiero.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Yo prefero viajar en tren.",
+        "Yo prefiero viajar en tren."
+      ],
+      "hint": "Preferir меняет e на ie в prefiero/prefieres/prefiere; nosotros preferimos сохраняет e. Más… que означает «более… чем»."
+    },
+    {
+      "id": "es-a1-40-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы предпочитаем выехать рано.». Можно написать вместо микрофона.",
+      "answers": [
+        "Preferimos salir temprano."
+      ],
+      "explanation": "Preferimos salir temprano. — Мы предпочитаем выехать рано.",
+      "wordIds": [
+        "es:v015:40:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Preferimos salir temprano.",
+      "recall": {
+        "phrase": "Preferimos salir temprano.",
+        "meaning": "Мы предпочитаем выехать рано."
+      }
+    },
+    {
+      "id": "es-a1-40-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я предпочитаю путешествовать на поезде.",
+      "answers": [
+        "Prefiero viajar en tren."
+      ],
+      "explanation": "Preferir меняет e на ie в prefiero/prefieres/prefiere; nosotros preferimos сохраняет e. Más… que означает «более… чем».",
+      "wordIds": [
+        "es:v015:40:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Prefiero viajar en tren.",
+        "meaning": "Я предпочитаю путешествовать на поезде."
+      }
+    },
+    {
+      "id": "es-a1-40-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Вчера я поехал на автобусе.",
+      "answers": [
+        "Ayer tomé el autobús."
+      ],
+      "explanation": "Ayer tomé el autobús. — Вчера я поехал на автобусе.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Normalmente voy a pie.",
+        "Ayer tomé el autobús.",
+        "Siempre desayuno en casa.",
+        "El lunes desayuné en una cafetería."
+      ]
+    }
+  ]
+}

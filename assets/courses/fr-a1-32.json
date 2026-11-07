@@ -1,0 +1,253 @@
+{
+  "id": "fr-a1-32",
+  "title": "Сообщение друзьям",
+  "topic": "Причины и новости",
+  "order": 31,
+  "objective": "Составить короткий рассказ о поездке и плане.",
+  "guide": "Объединяем Passé composé для событий, imparfait для погоды и aller + инфинитив для ближайшего плана.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:32:p0",
+      "en": "Léa et moi, nous sommes arrivées hier.",
+      "ru": "Мы с Леа приехали вчера."
+    },
+    {
+      "id": "fr:v015:32:p1",
+      "en": "Il faisait beau à notre arrivée.",
+      "ru": "Когда мы приехали, погода была хорошая."
+    },
+    {
+      "id": "fr:v015:32:p2",
+      "en": "Nous avons déjà visité le centre-ville.",
+      "ru": "Мы уже осмотрели центр города."
+    },
+    {
+      "id": "fr:v015:32:p3",
+      "en": "Demain, nous allons prendre le bateau.",
+      "ru": "Завтра мы собираемся отправиться на лодке."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сообщение друзьям",
+      "phrase": "Léa et moi, nous sommes arrivées hier.",
+      "translation": "Мы с Леа приехали вчера.",
+      "explanation": "Объединяем Passé composé для событий, imparfait для погоды и aller + инфинитив для ближайшего плана."
+    },
+    {
+      "character": "miko",
+      "title": "Сообщение друзьям",
+      "phrase": "Il faisait beau à notre arrivée.",
+      "translation": "Когда мы приехали, погода была хорошая.",
+      "explanation": "Il faisait beau à notre arrivée. — Когда мы приехали, погода была хорошая."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сообщение друзьям",
+      "phrase": "Nous avons déjà visité le centre-ville.",
+      "translation": "Мы уже осмотрели центр города.",
+      "explanation": "Nous avons déjà visité le centre-ville. — Мы уже осмотрели центр города."
+    },
+    {
+      "character": "orbi",
+      "title": "Сообщение друзьям",
+      "phrase": "Demain, nous allons prendre le bateau.",
+      "translation": "Завтра мы собираемся отправиться на лодке.",
+      "explanation": "Demain, nous allons prendre le bateau. — Завтра мы собираемся отправиться на лодке."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Léa et moi, nous sommes arrivées hier.",
+      "translation": "Мы с Леа приехали вчера.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мы с Леа приехали вчера.",
+      "options": [
+        "Мы уже осмотрели центр города.",
+        "Мы с Леа приехали вчера.",
+        "Завтра мы собираемся отправиться на лодке."
+      ],
+      "explanation": "Объединяем Passé composé для событий, imparfait для погоды и aller + инфинитив для ближайшего плана."
+    },
+    {
+      "id": "apply",
+      "phrase": "Il faisait beau à notre arrivée.",
+      "translation": "Когда мы приехали, погода была хорошая.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Il faisait beau à notre arrivée.",
+      "tokens": [
+        "Il",
+        "faisait",
+        "beau",
+        "à",
+        "notre",
+        "arrivée."
+      ],
+      "character": "miko",
+      "explanation": "Il faisait beau à notre arrivée. — Когда мы приехали, погода была хорошая."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-32-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Она едет на поезде, потому что это удобно.",
+      "answers": [
+        "Elle prend le train parce que c'est pratique."
+      ],
+      "explanation": "Elle prend le train parce que c'est pratique. — Она едет на поезде, потому что это удобно.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Je voyage pour découvrir de nouveaux endroits.",
+        "Je reste ici parce qu'il pleut.",
+        "Nous apprenons le français pour parler avec nos amis.",
+        "Elle prend le train parce que c'est pratique."
+      ]
+    },
+    {
+      "id": "fr-a1-32-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Мы с Леа приехали вчера.»?",
+      "answers": [
+        "Léa et moi, nous sommes arrivées hier."
+      ],
+      "explanation": "Léa et moi, nous sommes arrivées hier. — Мы с Леа приехали вчера.",
+      "wordIds": [
+        "fr:v015:32:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Il faisait beau à notre arrivée.",
+        "Demain, nous allons prendre le bateau.",
+        "Léa et moi, nous sommes arrivées hier."
+      ],
+      "hint": "Léa et moi, nous sommes arrivées hier. — Мы с Леа приехали вчера."
+    },
+    {
+      "id": "fr-a1-32-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Когда мы приехали, погода была хорошая.",
+      "answers": [
+        "Il faisait beau à notre arrivée."
+      ],
+      "explanation": "Объединяем Passé composé для событий, imparfait для погоды и aller + инфинитив для ближайшего плана.",
+      "wordIds": [
+        "fr:v015:32:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Il",
+        "faisait",
+        "beau",
+        "à",
+        "notre",
+        "arrivée."
+      ],
+      "hint": "Il faisait beau à notre arrivée. — Когда мы приехали, погода была хорошая."
+    },
+    {
+      "id": "fr-a1-32-e04",
+      "type": "dialogue",
+      "prompt": "Что путешественницы планируют на завтра?",
+      "answers": [
+        "Поездку на лодке."
+      ],
+      "explanation": "В диалоге: Vous avez déjà visité le centre-ville ? / Oui. Il faisait beau aujourd'hui. Demain, nous allons prendre le bateau. Поэтому: Поездку на лодке.",
+      "wordIds": [
+        "fr:v015:32:p0",
+        "fr:v015:32:p1",
+        "fr:v015:32:p2",
+        "fr:v015:32:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Vous avez déjà visité le centre-ville ?\nМико: Oui. Il faisait beau aujourd'hui. Demain, nous allons prendre le bateau.",
+      "options": [
+        "Посещение центра города.",
+        "Возвращение домой.",
+        "Поездку на лодке."
+      ]
+    },
+    {
+      "id": "fr-a1-32-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы уже осмотрели центр города."
+      ],
+      "explanation": "Nous avons déjà visité le centre-ville. — Мы уже осмотрели центр города.",
+      "wordIds": [
+        "fr:v015:32:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Nous avons déjà visité le centre-ville.",
+      "options": [
+        "Мы с Леа приехали вчера.",
+        "Мы уже осмотрели центр города.",
+        "Когда мы приехали, погода была хорошая."
+      ],
+      "hint": "Nous avons déjà visité le centre-ville. — Мы уже осмотрели центр города."
+    },
+    {
+      "id": "fr-a1-32-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Nous allons prenons le bateau.",
+      "answers": [
+        "Nous allons prendre le bateau."
+      ],
+      "explanation": "После allons для ближайшего плана нужен инфинитив prendre.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Nous allons prenons le bateau.",
+        "Nous allons prendre le bateau."
+      ],
+      "hint": "Объединяем Passé composé для событий, imparfait для погоды и aller + инфинитив для ближайшего плана."
+    },
+    {
+      "id": "fr-a1-32-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Завтра мы собираемся отправиться на лодке.». Можно написать вместо микрофона.",
+      "answers": [
+        "Demain, nous allons prendre le bateau."
+      ],
+      "explanation": "Demain, nous allons prendre le bateau. — Завтра мы собираемся отправиться на лодке.",
+      "wordIds": [
+        "fr:v015:32:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Demain, nous allons prendre le bateau.",
+      "recall": {
+        "phrase": "Demain, nous allons prendre le bateau.",
+        "meaning": "Завтра мы собираемся отправиться на лодке."
+      }
+    },
+    {
+      "id": "fr-a1-32-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мы с Леа приехали вчера.",
+      "answers": [
+        "Léa et moi, nous sommes arrivées hier."
+      ],
+      "explanation": "Объединяем Passé composé для событий, imparfait для погоды и aller + инфинитив для ближайшего плана.",
+      "wordIds": [
+        "fr:v015:32:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Léa et moi, nous sommes arrivées hier.",
+        "meaning": "Мы с Леа приехали вчера."
+      }
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import 'unit_mastery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -133,6 +134,13 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             GoRoute(
               path: '/galaxy',
               builder: (_, _) => pageBody([const AdventureMap()]),
+            ),
+            GoRoute(
+              path: '/mastery/:unit',
+              builder: (_, state) => UnitMasteryPage(
+                key: ValueKey('${app.course.id}:${state.uri}'),
+                unitId: state.pathParameters['unit']!,
+              ),
             ),
             GoRoute(path: '/training', builder: (_, _) => const PracticeHub()),
             GoRoute(

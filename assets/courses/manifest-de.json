@@ -279,6 +279,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "de-v015",
+      "title": "Самостоятельное общение",
+      "themes": [
+        {
+          "id": "de-v015-unit-1",
+          "title": "Покупки и бронирование",
+          "lessons": [
+            {
+              "id": "de-a1-31",
+              "title": "Обменять куртку",
+              "asset": "assets/courses/de-a1-31.json",
+              "order": 30
+            },
+            {
+              "id": "de-a1-32",
+              "title": "Столик на вечер",
+              "asset": "assets/courses/de-a1-32.json",
+              "order": 31
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-2",
+          "title": "Приезд и помощь",
+          "lessons": [
+            {
+              "id": "de-a1-33",
+              "title": "В гостинице",
+              "asset": "assets/courses/de-a1-33.json",
+              "order": 32
+            },
+            {
+              "id": "de-a1-34",
+              "title": "Кому я отправляю",
+              "asset": "assets/courses/de-a1-34.json",
+              "order": 33
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-3",
+          "title": "Прошлое: Perfekt",
+          "lessons": [
+            {
+              "id": "de-a1-35",
+              "title": "Что я сделал",
+              "asset": "assets/courses/de-a1-35.json",
+              "order": 34
+            },
+            {
+              "id": "de-a1-36",
+              "title": "Как прошла дорога",
+              "asset": "assets/courses/de-a1-36.json",
+              "order": 35
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-4",
+          "title": "Вопросы о прошлом",
+          "lessons": [
+            {
+              "id": "de-a1-37",
+              "title": "Вопрос о вчерашнем дне",
+              "asset": "assets/courses/de-a1-37.json",
+              "order": 36
+            },
+            {
+              "id": "de-a1-38",
+              "title": "Каким был день",
+              "asset": "assets/courses/de-a1-38.json",
+              "order": 37
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-5",
+          "title": "Вежливые действия",
+          "lessons": [
+            {
+              "id": "de-a1-39",
+              "title": "Вежливое пожелание",
+              "asset": "assets/courses/de-a1-39.json",
+              "order": 38
+            },
+            {
+              "id": "de-a1-40",
+              "title": "Короткая инструкция",
+              "asset": "assets/courses/de-a1-40.json",
+              "order": 39
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-6",
+          "title": "Мысли и новости",
+          "lessons": [
+            {
+              "id": "de-a1-41",
+              "title": "Сказать, что я думаю",
+              "asset": "assets/courses/de-a1-41.json",
+              "order": 40
+            },
+            {
+              "id": "de-a1-42",
+              "title": "Весточка из поездки",
+              "asset": "assets/courses/de-a1-42.json",
+              "order": 41
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -44,6 +44,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   int adventuresToday = 0;
   ExplorerRecords records = const ExplorerRecords();
   Set<String> installed = {};
+  Set<String> masteredUnits = {};
   int goal = 50;
   String name = 'Исследователь', startingLevel = 'С нуля';
   ThemeMode theme = ThemeMode.system;
@@ -153,6 +154,18 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   }
 
   Future<void> refresh() async {
+    final stamps = await repository.settingsWithPrefix(
+      'kvesmos.mastery.v1:${course.id}:',
+    );
+    masteredUnits = stamps.keys
+        .where((key) => key.endsWith(':stamp'))
+        .map(
+          (key) => key.substring(
+            'kvesmos.mastery.v1:${course.id}:'.length,
+            key.length - ':stamp'.length,
+          ),
+        )
+        .toSet();
     final events = await repository.allEvents();
     completedAdventures = events
         .where((e) => e.kind == 'adventure_complete')

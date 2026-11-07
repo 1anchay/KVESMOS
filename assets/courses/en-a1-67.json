@@ -1,0 +1,288 @@
+{
+  "id": "en-a1-67",
+  "title": "Ты когда-нибудь был там",
+  "topic": "Опыт и результат",
+  "order": 66,
+  "objective": "Спросить об опыте без указания точной даты.",
+  "guide": "Have you ever been…? спрашивает об опыте до настоящего момента. Been to — побывал и вернулся; точную дату здесь не называем.",
+  "vocabulary": [
+    {
+      "id": "en:v015:67:p0",
+      "en": "Have you ever been to London?",
+      "ru": "Ты когда-нибудь был в Лондоне?"
+    },
+    {
+      "id": "en:v015:67:p1",
+      "en": "I've never tried surfing.",
+      "ru": "Я никогда не пробовал сёрфинг."
+    },
+    {
+      "id": "en:v015:67:p2",
+      "en": "I've been there twice.",
+      "ru": "Я был там дважды."
+    },
+    {
+      "id": "en:v015:67:p3",
+      "en": "We haven't visited that museum.",
+      "ru": "Мы не посещали тот музей."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Ты когда-нибудь был там",
+      "phrase": "Have you ever been to London?",
+      "translation": "Ты когда-нибудь был в Лондоне?",
+      "explanation": "Have you ever been…? спрашивает об опыте до настоящего момента. Been to — побывал и вернулся; точную дату здесь не называем."
+    },
+    {
+      "character": "miko",
+      "title": "Ты когда-нибудь был там",
+      "phrase": "I've never tried surfing.",
+      "translation": "Я никогда не пробовал сёрфинг.",
+      "explanation": "I've never tried surfing. — Я никогда не пробовал сёрфинг."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Ты когда-нибудь был там",
+      "phrase": "I've been there twice.",
+      "translation": "Я был там дважды.",
+      "explanation": "I've been there twice. — Я был там дважды."
+    },
+    {
+      "character": "orbi",
+      "title": "Ты когда-нибудь был там",
+      "phrase": "We haven't visited that museum.",
+      "translation": "Мы не посещали тот музей.",
+      "explanation": "We haven't visited that museum. — Мы не посещали тот музей."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Have you ever been to London?",
+      "translation": "Ты когда-нибудь был в Лондоне?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Ты когда-нибудь был в Лондоне?",
+      "options": [
+        "Я был там дважды.",
+        "Ты когда-нибудь был в Лондоне?",
+        "Мы не посещали тот музей."
+      ],
+      "explanation": "Have you ever been…? спрашивает об опыте до настоящего момента. Been to — побывал и вернулся; точную дату здесь не называем."
+    },
+    {
+      "id": "apply",
+      "phrase": "I've never tried surfing.",
+      "translation": "Я никогда не пробовал сёрфинг.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I've never tried surfing.",
+      "tokens": [
+        "I've",
+        "never",
+        "tried",
+        "surfing."
+      ],
+      "character": "miko",
+      "explanation": "I've never tried surfing. — Я никогда не пробовал сёрфинг."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-67-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Ты когда-нибудь был в Лондоне?»?",
+      "answers": [
+        "Have you ever been to London?"
+      ],
+      "explanation": "Have you ever been to London? — Ты когда-нибудь был в Лондоне?",
+      "wordIds": [
+        "en:v015:67:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I've never tried surfing.",
+        "We haven't visited that museum.",
+        "Have you ever been to London?"
+      ],
+      "hint": "Have you ever been to London? — Ты когда-нибудь был в Лондоне?"
+    },
+    {
+      "id": "en-a1-67-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я никогда не пробовал сёрфинг.",
+      "answers": [
+        "I've never tried surfing."
+      ],
+      "explanation": "Have you ever been…? спрашивает об опыте до настоящего момента. Been to — побывал и вернулся; точную дату здесь не называем.",
+      "wordIds": [
+        "en:v015:67:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I've",
+        "never",
+        "tried",
+        "surfing."
+      ],
+      "hint": "I've never tried surfing. — Я никогда не пробовал сёрфинг."
+    },
+    {
+      "id": "en-a1-67-e03",
+      "type": "dialogue",
+      "prompt": "Что собеседник ещё не делал?",
+      "answers": [
+        "Не посещал тот музей."
+      ],
+      "explanation": "В диалоге: Have you ever been to London? / Yes, I've been there twice, but I haven't visited that museum. Поэтому: Не посещал тот музей.",
+      "wordIds": [
+        "en:v015:67:p0",
+        "en:v015:67:p1",
+        "en:v015:67:p2",
+        "en:v015:67:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Have you ever been to London?\nМико: Yes, I've been there twice, but I haven't visited that museum.",
+      "options": [
+        "Ни разу не был в Лондоне.",
+        "Не ездил туда дважды.",
+        "Не посещал тот музей."
+      ]
+    },
+    {
+      "id": "en-a1-67-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я был там дважды."
+      ],
+      "explanation": "I've been there twice. — Я был там дважды.",
+      "wordIds": [
+        "en:v015:67:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I've been there twice.",
+      "options": [
+        "Ты когда-нибудь был в Лондоне?",
+        "Я был там дважды.",
+        "Я никогда не пробовал сёрфинг."
+      ],
+      "hint": "I've been there twice. — Я был там дважды."
+    },
+    {
+      "id": "en-a1-67-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v015:67:p0",
+        "en:v015:67:p1",
+        "en:v015:67:p2",
+        "en:v015:67:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v015:67:p0",
+          "en": "Have you ever been to London?",
+          "ru": "Ты когда-нибудь был в Лондоне?"
+        },
+        {
+          "id": "en:v015:67:p1",
+          "en": "I've never tried surfing.",
+          "ru": "Я никогда не пробовал сёрфинг."
+        },
+        {
+          "id": "en:v015:67:p2",
+          "en": "I've been there twice.",
+          "ru": "Я был там дважды."
+        },
+        {
+          "id": "en:v015:67:p3",
+          "en": "We haven't visited that museum.",
+          "ru": "Мы не посещали тот музей."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-67-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Have you ever be to London?",
+      "answers": [
+        "Have you ever been to London?"
+      ],
+      "explanation": "После have в Present Perfect нужна третья форма: be → been.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Have you ever be to London?",
+        "Have you ever been to London?"
+      ],
+      "hint": "Have you ever been…? спрашивает об опыте до настоящего момента. Been to — побывал и вернулся; точную дату здесь не называем."
+    },
+    {
+      "id": "en-a1-67-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы не посещали тот музей.». Можно написать вместо микрофона.",
+      "answers": [
+        "We haven't visited that museum."
+      ],
+      "explanation": "We haven't visited that museum. — Мы не посещали тот музей.",
+      "wordIds": [
+        "en:v015:67:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "We haven't visited that museum.",
+      "recall": {
+        "phrase": "We haven't visited that museum.",
+        "meaning": "Мы не посещали тот музей."
+      }
+    },
+    {
+      "id": "en-a1-67-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Ты когда-нибудь был в Лондоне?",
+      "answers": [
+        "Have you ever been to London?"
+      ],
+      "explanation": "Have you ever been…? спрашивает об опыте до настоящего момента. Been to — побывал и вернулся; точную дату здесь не называем.",
+      "wordIds": [
+        "en:v015:67:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Have you ever been to London?",
+        "meaning": "Ты когда-нибудь был в Лондоне?"
+      }
+    },
+    {
+      "id": "en-a1-67-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Как давно вы так себя чувствуете?",
+      "answers": [
+        "How long have you felt like this?"
+      ],
+      "explanation": "How long have you felt like this? — Как давно вы так себя чувствуете?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I've had a headache for two days.",
+        "I've felt tired since Monday.",
+        "How long have you felt like this?",
+        "I'd like to speak to a doctor."
+      ]
+    }
+  ]
+}

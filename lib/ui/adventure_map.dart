@@ -34,12 +34,16 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
     final current = catalog
         .where((l) => !app.progress.completed.contains(l.id))
         .firstOrNull;
-    final regions = JourneyRegion.forCourse(app.course.language);
+    final regions = JourneyRegion.forCourse(
+      app.course.language,
+      catalog: app.repository.catalog,
+    );
     final region =
         regions[(selected ??
                 JourneyRegion.forOrder(
                   current?.order ?? catalog.last.order,
                   language: app.course.language,
+                  catalog: app.repository.catalog,
                 ).index)
             .clamp(0, regions.length - 1)];
     final lessons = region.lessons(catalog).toList();
@@ -82,6 +86,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                             JourneyRegion.forOrder(
                               current?.order ?? catalog.last.order,
                               language: app.course.language,
+                              catalog: app.repository.catalog,
                             ).index
                       ? Icons.lock_outline
                       : Icons.public,
@@ -118,6 +123,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                         JourneyRegion.forOrder(
                           current?.order ?? catalog.last.order,
                           language: app.course.language,
+                          catalog: app.repository.catalog,
                         ).index)
                       Padding(
                         padding: const EdgeInsets.only(top: 8),
@@ -196,6 +202,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                 () => selected = JourneyRegion.forOrder(
                   current.order,
                   language: app.course.language,
+                  catalog: app.repository.catalog,
                 ).index,
               );
               WidgetsBinding.instance.addPostFrameCallback((_) {

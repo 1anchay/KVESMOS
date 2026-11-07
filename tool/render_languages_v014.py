@@ -18,6 +18,7 @@ from piper import PiperVoice, SynthesisConfig
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--report-version', default='v014', choices=['v014','v015'])
 parser.add_argument('--model-dir', type=Path, required=True)
 args = parser.parse_args()
 manifest_path = ROOT/'assets/audio/voices/manifest.json'
@@ -83,5 +84,5 @@ for lang, model in [('es','es_ES-sharvard-medium'),('de','de_DE-thorsten-medium'
         print(lang,i+1,'/',len(texts),text,flush=True)
     stats[locale]=dict(phrases=len(texts),files=len(texts)*2,model=model,modelSha256=hashlib.sha256(model_path.read_bytes()).hexdigest(),configSha256=hashlib.sha256(Path(str(model_path)+'.json').read_bytes()).hexdigest())
 manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(ROOT/'docs/audio/voice-v014-checksums.json').write_text(json.dumps(dict(engine='piper-tts 1.8.0',voices=stats,files=checks),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/f'docs/audio/voice-{args.report_version}-checksums.json').write_text(json.dumps(dict(engine='piper-tts 1.8.0',voices=stats,files=checks),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(stats),flush=True)

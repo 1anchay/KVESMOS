@@ -1,0 +1,251 @@
+{
+  "id": "en-a1-64",
+  "title": "Объявление в аэропорту",
+  "topic": "В дороге",
+  "order": 63,
+  "objective": "Понять изменение выхода на посадку.",
+  "guide": "Has changed сообщает о произошедшем изменении, важном сейчас. Go to + место указывает направление.",
+  "vocabulary": [
+    {
+      "id": "en:v015:64:p0",
+      "en": "The gate has changed.",
+      "ru": "Выход на посадку изменился."
+    },
+    {
+      "id": "en:v015:64:p1",
+      "en": "Please go to gate twelve.",
+      "ru": "Пожалуйста, пройдите к выходу двенадцать."
+    },
+    {
+      "id": "en:v015:64:p2",
+      "en": "Boarding starts in ten minutes.",
+      "ru": "Посадка начинается через десять минут."
+    },
+    {
+      "id": "en:v015:64:p3",
+      "en": "Our flight is delayed.",
+      "ru": "Наш рейс задерживается."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Объявление в аэропорту",
+      "phrase": "The gate has changed.",
+      "translation": "Выход на посадку изменился.",
+      "explanation": "Has changed сообщает о произошедшем изменении, важном сейчас. Go to + место указывает направление."
+    },
+    {
+      "character": "miko",
+      "title": "Объявление в аэропорту",
+      "phrase": "Please go to gate twelve.",
+      "translation": "Пожалуйста, пройдите к выходу двенадцать.",
+      "explanation": "Please go to gate twelve. — Пожалуйста, пройдите к выходу двенадцать."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Объявление в аэропорту",
+      "phrase": "Boarding starts in ten minutes.",
+      "translation": "Посадка начинается через десять минут.",
+      "explanation": "Boarding starts in ten minutes. — Посадка начинается через десять минут."
+    },
+    {
+      "character": "orbi",
+      "title": "Объявление в аэропорту",
+      "phrase": "Our flight is delayed.",
+      "translation": "Наш рейс задерживается.",
+      "explanation": "Our flight is delayed. — Наш рейс задерживается."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "The gate has changed.",
+      "translation": "Выход на посадку изменился.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Выход на посадку изменился.",
+      "options": [
+        "Посадка начинается через десять минут.",
+        "Выход на посадку изменился.",
+        "Наш рейс задерживается."
+      ],
+      "explanation": "Has changed сообщает о произошедшем изменении, важном сейчас. Go to + место указывает направление."
+    },
+    {
+      "id": "apply",
+      "phrase": "Please go to gate twelve.",
+      "translation": "Пожалуйста, пройдите к выходу двенадцать.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Please go to gate twelve.",
+      "tokens": [
+        "Please",
+        "go",
+        "to",
+        "gate",
+        "twelve."
+      ],
+      "character": "miko",
+      "explanation": "Please go to gate twelve. — Пожалуйста, пройдите к выходу двенадцать."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-64-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Выход на посадку изменился.»?",
+      "answers": [
+        "The gate has changed."
+      ],
+      "explanation": "The gate has changed. — Выход на посадку изменился.",
+      "wordIds": [
+        "en:v015:64:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Please go to gate twelve.",
+        "Our flight is delayed.",
+        "The gate has changed."
+      ],
+      "hint": "The gate has changed. — Выход на посадку изменился."
+    },
+    {
+      "id": "en-a1-64-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Пожалуйста, пройдите к выходу двенадцать.",
+      "answers": [
+        "Please go to gate twelve."
+      ],
+      "explanation": "Has changed сообщает о произошедшем изменении, важном сейчас. Go to + место указывает направление.",
+      "wordIds": [
+        "en:v015:64:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Please",
+        "go",
+        "to",
+        "gate",
+        "twelve."
+      ],
+      "hint": "Please go to gate twelve. — Пожалуйста, пройдите к выходу двенадцать."
+    },
+    {
+      "id": "en-a1-64-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно сделать пассажирам?",
+      "answers": [
+        "Пройти к выходу двенадцать."
+      ],
+      "explanation": "В диалоге: Our flight is delayed. Has the gate changed? / Yes. Please go to gate twelve. Поэтому: Пройти к выходу двенадцать.",
+      "wordIds": [
+        "en:v015:64:p0",
+        "en:v015:64:p1",
+        "en:v015:64:p2",
+        "en:v015:64:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Our flight is delayed. Has the gate changed?\nМико: Yes. Please go to gate twelve.",
+      "options": [
+        "Забрать багаж.",
+        "Уйти из аэропорта.",
+        "Пройти к выходу двенадцать."
+      ]
+    },
+    {
+      "id": "en-a1-64-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Посадка начинается через десять минут."
+      ],
+      "explanation": "Boarding starts in ten minutes. — Посадка начинается через десять минут.",
+      "wordIds": [
+        "en:v015:64:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Boarding starts in ten minutes.",
+      "options": [
+        "Выход на посадку изменился.",
+        "Посадка начинается через десять минут.",
+        "Пожалуйста, пройдите к выходу двенадцать."
+      ],
+      "hint": "Boarding starts in ten minutes. — Посадка начинается через десять минут."
+    },
+    {
+      "id": "en-a1-64-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Boarding start in ten minutes.",
+      "answers": [
+        "Boarding starts in ten minutes."
+      ],
+      "explanation": "Boarding — единственное число: в Present Simple добавляем -s к starts.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Boarding start in ten minutes.",
+        "Boarding starts in ten minutes."
+      ],
+      "hint": "Has changed сообщает о произошедшем изменении, важном сейчас. Go to + место указывает направление."
+    },
+    {
+      "id": "en-a1-64-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Наш рейс задерживается.». Можно написать вместо микрофона.",
+      "answers": [
+        "Our flight is delayed."
+      ],
+      "explanation": "Our flight is delayed. — Наш рейс задерживается.",
+      "wordIds": [
+        "en:v015:64:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Our flight is delayed.",
+      "recall": {
+        "phrase": "Our flight is delayed.",
+        "meaning": "Наш рейс задерживается."
+      }
+    },
+    {
+      "id": "en-a1-64-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Выход на посадку изменился.",
+      "answers": [
+        "The gate has changed."
+      ],
+      "explanation": "Has changed сообщает о произошедшем изменении, важном сейчас. Go to + место указывает направление.",
+      "wordIds": [
+        "en:v015:64:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "The gate has changed.",
+        "meaning": "Выход на посадку изменился."
+      }
+    },
+    {
+      "id": "en-a1-64-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можно мне тихий номер?",
+      "answers": [
+        "Could I have a quiet room?"
+      ],
+      "explanation": "Could I have a quiet room? — Можно мне тихий номер?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I have a reservation under the name Lee.",
+        "Is breakfast included?",
+        "What time is check-out?",
+        "Could I have a quiet room?"
+      ]
+    }
+  ]
+}

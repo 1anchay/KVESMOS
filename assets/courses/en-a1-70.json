@@ -1,0 +1,249 @@
+{
+  "id": "en-a1-70",
+  "title": "Когда это случилось",
+  "topic": "Уточнения и события",
+  "order": 69,
+  "objective": "Связать действие в процессе с коротким событием.",
+  "guide": "Was/were + -ing задаёт фон в прошлом; Past Simple называет событие: I was cooking when you called.",
+  "vocabulary": [
+    {
+      "id": "en:v015:70:p0",
+      "en": "I was cooking when you called.",
+      "ru": "Я готовил, когда ты позвонил."
+    },
+    {
+      "id": "en:v015:70:p1",
+      "en": "We were waiting outside.",
+      "ru": "Мы ждали на улице."
+    },
+    {
+      "id": "en:v015:70:p2",
+      "en": "What were you doing at eight?",
+      "ru": "Что ты делал в восемь?"
+    },
+    {
+      "id": "en:v015:70:p3",
+      "en": "It started raining while we were walking.",
+      "ru": "Начался дождь, пока мы гуляли."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Когда это случилось",
+      "phrase": "I was cooking when you called.",
+      "translation": "Я готовил, когда ты позвонил.",
+      "explanation": "Was/were + -ing задаёт фон в прошлом; Past Simple называет событие: I was cooking when you called."
+    },
+    {
+      "character": "miko",
+      "title": "Когда это случилось",
+      "phrase": "We were waiting outside.",
+      "translation": "Мы ждали на улице.",
+      "explanation": "We were waiting outside. — Мы ждали на улице."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Когда это случилось",
+      "phrase": "What were you doing at eight?",
+      "translation": "Что ты делал в восемь?",
+      "explanation": "What were you doing at eight? — Что ты делал в восемь?"
+    },
+    {
+      "character": "orbi",
+      "title": "Когда это случилось",
+      "phrase": "It started raining while we were walking.",
+      "translation": "Начался дождь, пока мы гуляли.",
+      "explanation": "It started raining while we were walking. — Начался дождь, пока мы гуляли."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I was cooking when you called.",
+      "translation": "Я готовил, когда ты позвонил.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я готовил, когда ты позвонил.",
+      "options": [
+        "Что ты делал в восемь?",
+        "Я готовил, когда ты позвонил.",
+        "Начался дождь, пока мы гуляли."
+      ],
+      "explanation": "Was/were + -ing задаёт фон в прошлом; Past Simple называет событие: I was cooking when you called."
+    },
+    {
+      "id": "apply",
+      "phrase": "We were waiting outside.",
+      "translation": "Мы ждали на улице.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "We were waiting outside.",
+      "tokens": [
+        "We",
+        "were",
+        "waiting",
+        "outside."
+      ],
+      "character": "miko",
+      "explanation": "We were waiting outside. — Мы ждали на улице."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-70-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я готовил, когда ты позвонил.»?",
+      "answers": [
+        "I was cooking when you called."
+      ],
+      "explanation": "I was cooking when you called. — Я готовил, когда ты позвонил.",
+      "wordIds": [
+        "en:v015:70:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "We were waiting outside.",
+        "It started raining while we were walking.",
+        "I was cooking when you called."
+      ],
+      "hint": "I was cooking when you called. — Я готовил, когда ты позвонил."
+    },
+    {
+      "id": "en-a1-70-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы ждали на улице.",
+      "answers": [
+        "We were waiting outside."
+      ],
+      "explanation": "Was/were + -ing задаёт фон в прошлом; Past Simple называет событие: I was cooking when you called.",
+      "wordIds": [
+        "en:v015:70:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "We",
+        "were",
+        "waiting",
+        "outside."
+      ],
+      "hint": "We were waiting outside. — Мы ждали на улице."
+    },
+    {
+      "id": "en-a1-70-e03",
+      "type": "dialogue",
+      "prompt": "Почему собеседник не ответил на звонок?",
+      "answers": [
+        "Он готовил."
+      ],
+      "explanation": "В диалоге: What were you doing at eight? / I was cooking when you called, so I couldn't answer. Поэтому: Он готовил.",
+      "wordIds": [
+        "en:v015:70:p0",
+        "en:v015:70:p1",
+        "en:v015:70:p2",
+        "en:v015:70:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: What were you doing at eight?\nМико: I was cooking when you called, so I couldn't answer.",
+      "options": [
+        "Он спал.",
+        "Он гулял под дождём.",
+        "Он готовил."
+      ]
+    },
+    {
+      "id": "en-a1-70-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Что ты делал в восемь?"
+      ],
+      "explanation": "What were you doing at eight? — Что ты делал в восемь?",
+      "wordIds": [
+        "en:v015:70:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "What were you doing at eight?",
+      "options": [
+        "Я готовил, когда ты позвонил.",
+        "Что ты делал в восемь?",
+        "Мы ждали на улице."
+      ],
+      "hint": "What were you doing at eight? — Что ты делал в восемь?"
+    },
+    {
+      "id": "en-a1-70-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We was waiting outside.",
+      "answers": [
+        "We were waiting outside."
+      ],
+      "explanation": "С we используется were. Was сочетается с I, he, she и it.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We was waiting outside.",
+        "We were waiting outside."
+      ],
+      "hint": "Was/were + -ing задаёт фон в прошлом; Past Simple называет событие: I was cooking when you called."
+    },
+    {
+      "id": "en-a1-70-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Начался дождь, пока мы гуляли.». Можно написать вместо микрофона.",
+      "answers": [
+        "It started raining while we were walking."
+      ],
+      "explanation": "It started raining while we were walking. — Начался дождь, пока мы гуляли.",
+      "wordIds": [
+        "en:v015:70:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "It started raining while we were walking.",
+      "recall": {
+        "phrase": "It started raining while we were walking.",
+        "meaning": "Начался дождь, пока мы гуляли."
+      }
+    },
+    {
+      "id": "en-a1-70-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я готовил, когда ты позвонил.",
+      "answers": [
+        "I was cooking when you called."
+      ],
+      "explanation": "Was/were + -ing задаёт фон в прошлом; Past Simple называет событие: I was cooking when you called.",
+      "wordIds": [
+        "en:v015:70:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I was cooking when you called.",
+        "meaning": "Я готовил, когда ты позвонил."
+      }
+    },
+    {
+      "id": "en-a1-70-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мне нужна непромокаемая сумка.",
+      "answers": [
+        "I need a bag that is waterproof."
+      ],
+      "explanation": "I need a bag that is waterproof. — Мне нужна непромокаемая сумка.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "This is the book that I bought yesterday.",
+        "I need a bag that is waterproof.",
+        "The café which opens early is nearby.",
+        "Is this the key that you lost?"
+      ]
+    }
+  ]
+}

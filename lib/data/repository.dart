@@ -283,6 +283,13 @@ class LearningRepository {
     jsonEncode(draft.toJson()),
   );
 
+  Future<Map<String, String>> settingsWithPrefix(String prefix) async => {
+    for (final row in await (db.select(
+      db.settings,
+    )..where((t) => t.key.like('$prefix%'))).get())
+      row.key: row.value,
+  };
+
   Future<void> draft(String sessionId, int position, String value) =>
       (db.update(db.sessions)..where(
             (t) =>

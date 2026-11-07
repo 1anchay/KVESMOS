@@ -13,11 +13,13 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 checks = json.loads((ROOT / 'docs/audio/voice-pack-checksums.json').read_text(encoding='utf-8'))
-extra = ROOT / 'docs/audio/voice-v014-checksums.json'
+extra = ROOT / 'docs/audio/voice-v015-checksums.json'
+if not extra.exists(): extra = ROOT / 'docs/audio/voice-v014-checksums.json'
 if not extra.exists(): extra = ROOT / 'docs/audio/voice-v013-checksums.json'
 if not extra.exists(): extra = ROOT / 'docs/audio/voice-v012-checksums.json'
 if extra.exists(): checks['files'] += json.loads(extra.read_text(encoding='utf-8'))['files']
-english = ROOT / 'docs/audio/voice-en-v014-checksums.json'
+english = ROOT / 'docs/audio/voice-en-v015-checksums.json'
+if not english.exists(): english = ROOT / 'docs/audio/voice-en-v014-checksums.json'
 if not english.exists(): english = ROOT / 'docs/audio/voice-en-v013-checksums.json'
 if english.exists(): checks['files'] += json.loads(english.read_text(encoding='utf-8'))['files']
 manifest = json.loads((ROOT / 'assets/audio/voices/manifest.json').read_text(encoding='utf-8'))

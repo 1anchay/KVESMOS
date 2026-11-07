@@ -49,76 +49,101 @@ class JourneyRegion {
       'Пора в путешествие. Ты уже многое умеешь!',
     ),
   ];
-  static List<JourneyRegion> forCourse(String language) => language == 'en'
-      ? [
-          ...all,
-          const JourneyRegion(
-            5,
-            'Орбита повседневности',
-            'Время, покупки, транспорт и дом',
-            'orbi',
-            'Новые слова для реальных ситуаций.',
+  static List<JourneyRegion> forCourse(
+    String language, {
+    List<LessonInfo>? catalog,
+  }) {
+    if (catalog != null) {
+      return [
+        for (var offset = 0; offset < catalog.length; offset += 4)
+          JourneyRegion(
+            offset ~/ 4,
+            catalog[offset].topic ==
+                    catalog[(offset + 3).clamp(0, catalog.length - 1)].topic
+                ? catalog[offset].topic
+                : '${catalog[offset].topic} · ${catalog[(offset + 3).clamp(0, catalog.length - 1)].topic}',
+            '${catalog.skip(offset).take(4).length} коротких занятия',
+            ['orbi', 'miko', 'zig_quartz'][(offset ~/ 4) % 3],
+            'Пройдём тему и соберём своё созвездие знаний.',
           ),
-          const JourneyRegion(
-            6,
-            'Планета заботы',
-            'Погода, хобби, самочувствие и эмоции',
-            'miko',
-            'Учимся говорить о том, что важно.',
-          ),
-          for (var i = 7; i < 15; i++)
-            JourneyRegion(
-              i,
-              [
-                'Архив историй',
-                'Станция решений',
-                'Горизонт планов',
-                'Истории дня',
-                'Планы вместе',
-                'Полезные правила',
-                'Взвешенный выбор',
-                'Связь с друзьями',
-              ][i - 7],
-              'Самостоятельные разговоры',
+      ];
+    }
+    return language == 'en'
+        ? [
+            ...all,
+            const JourneyRegion(
+              5,
+              'Орбита повседневности',
+              'Время, покупки, транспорт и дом',
               'orbi',
-              'Применим знания в новой ситуации.',
+              'Новые слова для реальных ситуаций.',
             ),
-        ]
-      : [
-          const JourneyRegion(
-            0,
-            'Первые разговоры',
-            'Знакомство, предметы и числа',
-            'orbi',
-            'Начнём с понятных выражений.',
-          ),
-          const JourneyRegion(
-            1,
-            'Близкие и встречи',
-            'Семья и заказ в кафе',
-            'miko',
-            'Применим слова в разговоре.',
-          ),
-          for (
-            var i = 2;
-            i < (language == 'es' || language == 'de' ? 8 : 5);
-            i++
-          )
-            JourneyRegion(
-              i,
-              'Маршрут разговоров ${i - 1}',
-              'Город, встречи и планы',
+            const JourneyRegion(
+              6,
+              'Планета заботы',
+              'Погода, хобби, самочувствие и эмоции',
               'miko',
-              'Новые ситуации — знакомые слова.',
+              'Учимся говорить о том, что важно.',
             ),
-        ];
+            for (var i = 7; i < 15; i++)
+              JourneyRegion(
+                i,
+                [
+                  'Архив историй',
+                  'Станция решений',
+                  'Горизонт планов',
+                  'Истории дня',
+                  'Планы вместе',
+                  'Полезные правила',
+                  'Взвешенный выбор',
+                  'Связь с друзьями',
+                ][i - 7],
+                'Самостоятельные разговоры',
+                'orbi',
+                'Применим знания в новой ситуации.',
+              ),
+          ]
+        : [
+            const JourneyRegion(
+              0,
+              'Первые разговоры',
+              'Знакомство, предметы и числа',
+              'orbi',
+              'Начнём с понятных выражений.',
+            ),
+            const JourneyRegion(
+              1,
+              'Близкие и встречи',
+              'Семья и заказ в кафе',
+              'miko',
+              'Применим слова в разговоре.',
+            ),
+            for (
+              var i = 2;
+              i < (language == 'es' || language == 'de' ? 8 : 5);
+              i++
+            )
+              JourneyRegion(
+                i,
+                'Маршрут разговоров ${i - 1}',
+                'Город, встречи и планы',
+                'miko',
+                'Новые ситуации — знакомые слова.',
+              ),
+          ];
+  }
+
   Iterable<LessonInfo> lessons(List<LessonInfo> catalog) =>
       catalog.skip(index * 4).take(4);
   bool complete(Set<String> done, List<LessonInfo> catalog) =>
       lessons(catalog).isNotEmpty &&
       lessons(catalog).every((l) => done.contains(l.id));
-  static JourneyRegion forOrder(int order, {String language = 'en'}) {
-    final regions = forCourse(language);
+  static JourneyRegion forOrder(
+    int order, {
+    String language = 'en',
+    List<LessonInfo>? catalog,
+  }) {
+    final regions = forCourse(language, catalog: catalog);
     return regions[(order ~/ 4).clamp(0, regions.length - 1)];
   }
 }

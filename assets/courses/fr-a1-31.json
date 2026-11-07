@@ -1,0 +1,292 @@
+{
+  "id": "fr-a1-31",
+  "title": "Зачем и почему",
+  "topic": "Причины и новости",
+  "order": 30,
+  "objective": "Различать цель и причину действия.",
+  "guide": "Pour + инфинитив выражает цель: pour apprendre. Parce que + предложение объясняет причину: parce que j'aime…",
+  "vocabulary": [
+    {
+      "id": "fr:v015:31:p0",
+      "en": "Je voyage pour découvrir de nouveaux endroits.",
+      "ru": "Я путешествую, чтобы открывать новые места."
+    },
+    {
+      "id": "fr:v015:31:p1",
+      "en": "Je reste ici parce qu'il pleut.",
+      "ru": "Я остаюсь здесь, потому что идёт дождь."
+    },
+    {
+      "id": "fr:v015:31:p2",
+      "en": "Nous apprenons le français pour parler avec nos amis.",
+      "ru": "Мы учим французский, чтобы говорить с друзьями."
+    },
+    {
+      "id": "fr:v015:31:p3",
+      "en": "Elle prend le train parce que c'est pratique.",
+      "ru": "Она едет на поезде, потому что это удобно."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Зачем и почему",
+      "phrase": "Je voyage pour découvrir de nouveaux endroits.",
+      "translation": "Я путешествую, чтобы открывать новые места.",
+      "explanation": "Pour + инфинитив выражает цель: pour apprendre. Parce que + предложение объясняет причину: parce que j'aime…"
+    },
+    {
+      "character": "miko",
+      "title": "Зачем и почему",
+      "phrase": "Je reste ici parce qu'il pleut.",
+      "translation": "Я остаюсь здесь, потому что идёт дождь.",
+      "explanation": "Je reste ici parce qu'il pleut. — Я остаюсь здесь, потому что идёт дождь."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Зачем и почему",
+      "phrase": "Nous apprenons le français pour parler avec nos amis.",
+      "translation": "Мы учим французский, чтобы говорить с друзьями.",
+      "explanation": "Nous apprenons le français pour parler avec nos amis. — Мы учим французский, чтобы говорить с друзьями."
+    },
+    {
+      "character": "orbi",
+      "title": "Зачем и почему",
+      "phrase": "Elle prend le train parce que c'est pratique.",
+      "translation": "Она едет на поезде, потому что это удобно.",
+      "explanation": "Elle prend le train parce que c'est pratique. — Она едет на поезде, потому что это удобно."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je voyage pour découvrir de nouveaux endroits.",
+      "translation": "Я путешествую, чтобы открывать новые места.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я путешествую, чтобы открывать новые места.",
+      "options": [
+        "Мы учим французский, чтобы говорить с друзьями.",
+        "Я путешествую, чтобы открывать новые места.",
+        "Она едет на поезде, потому что это удобно."
+      ],
+      "explanation": "Pour + инфинитив выражает цель: pour apprendre. Parce que + предложение объясняет причину: parce que j'aime…"
+    },
+    {
+      "id": "apply",
+      "phrase": "Je reste ici parce qu'il pleut.",
+      "translation": "Я остаюсь здесь, потому что идёт дождь.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Je reste ici parce qu'il pleut.",
+      "tokens": [
+        "Je",
+        "reste",
+        "ici",
+        "parce",
+        "qu'il",
+        "pleut."
+      ],
+      "character": "miko",
+      "explanation": "Je reste ici parce qu'il pleut. — Я остаюсь здесь, потому что идёт дождь."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-31-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы учим французский, чтобы говорить с друзьями."
+      ],
+      "explanation": "Nous apprenons le français pour parler avec nos amis. — Мы учим французский, чтобы говорить с друзьями.",
+      "wordIds": [
+        "fr:v015:31:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Nous apprenons le français pour parler avec nos amis.",
+      "options": [
+        "Я путешествую, чтобы открывать новые места.",
+        "Мы учим французский, чтобы говорить с друзьями.",
+        "Я остаюсь здесь, потому что идёт дождь."
+      ],
+      "hint": "Nous apprenons le français pour parler avec nos amis. — Мы учим французский, чтобы говорить с друзьями."
+    },
+    {
+      "id": "fr-a1-31-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я остаюсь здесь, потому что идёт дождь.",
+      "answers": [
+        "Je reste ici parce qu'il pleut."
+      ],
+      "explanation": "Pour + инфинитив выражает цель: pour apprendre. Parce que + предложение объясняет причину: parce que j'aime…",
+      "wordIds": [
+        "fr:v015:31:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Je",
+        "reste",
+        "ici",
+        "parce",
+        "qu'il",
+        "pleut."
+      ],
+      "hint": "Je reste ici parce qu'il pleut. — Я остаюсь здесь, потому что идёт дождь."
+    },
+    {
+      "id": "fr-a1-31-e03",
+      "type": "dialogue",
+      "prompt": "Зачем собеседник учит французский?",
+      "answers": [
+        "Чтобы говорить с друзьями."
+      ],
+      "explanation": "В диалоге: Pourquoi tu apprends le français ? / Pour parler avec mes amis. Ils habitent à Lyon. Поэтому: Чтобы говорить с друзьями.",
+      "wordIds": [
+        "fr:v015:31:p0",
+        "fr:v015:31:p1",
+        "fr:v015:31:p2",
+        "fr:v015:31:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Pourquoi tu apprends le français ?\nМико: Pour parler avec mes amis. Ils habitent à Lyon.",
+      "options": [
+        "Чтобы купить билеты.",
+        "Чтобы работать в гостинице.",
+        "Чтобы говорить с друзьями."
+      ]
+    },
+    {
+      "id": "fr-a1-31-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я путешествую, чтобы открывать новые места.»?",
+      "answers": [
+        "Je voyage pour découvrir de nouveaux endroits."
+      ],
+      "explanation": "Je voyage pour découvrir de nouveaux endroits. — Я путешествую, чтобы открывать новые места.",
+      "wordIds": [
+        "fr:v015:31:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Je reste ici parce qu'il pleut.",
+        "Elle prend le train parce que c'est pratique.",
+        "Je voyage pour découvrir de nouveaux endroits."
+      ],
+      "hint": "Je voyage pour découvrir de nouveaux endroits. — Я путешествую, чтобы открывать новые места."
+    },
+    {
+      "id": "fr-a1-31-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v015:31:p0",
+        "fr:v015:31:p1",
+        "fr:v015:31:p2",
+        "fr:v015:31:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v015:31:p0",
+          "en": "Je voyage pour découvrir de nouveaux endroits.",
+          "ru": "Я путешествую, чтобы открывать новые места."
+        },
+        {
+          "id": "fr:v015:31:p1",
+          "en": "Je reste ici parce qu'il pleut.",
+          "ru": "Я остаюсь здесь, потому что идёт дождь."
+        },
+        {
+          "id": "fr:v015:31:p2",
+          "en": "Nous apprenons le français pour parler avec nos amis.",
+          "ru": "Мы учим французский, чтобы говорить с друзьями."
+        },
+        {
+          "id": "fr:v015:31:p3",
+          "en": "Elle prend le train parce que c'est pratique.",
+          "ru": "Она едет на поезде, потому что это удобно."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-31-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je reste ici pour il pleut.",
+      "answers": [
+        "Je reste ici parce qu'il pleut."
+      ],
+      "explanation": "Причина с подлежащим и глаголом вводится через parce que. Pour здесь потребовал бы инфинитив и обозначал бы цель.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je reste ici pour il pleut.",
+        "Je reste ici parce qu'il pleut."
+      ],
+      "hint": "Pour + инфинитив выражает цель: pour apprendre. Parce que + предложение объясняет причину: parce que j'aime…"
+    },
+    {
+      "id": "fr-a1-31-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Она едет на поезде, потому что это удобно.». Можно написать вместо микрофона.",
+      "answers": [
+        "Elle prend le train parce que c'est pratique."
+      ],
+      "explanation": "Elle prend le train parce que c'est pratique. — Она едет на поезде, потому что это удобно.",
+      "wordIds": [
+        "fr:v015:31:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Elle prend le train parce que c'est pratique.",
+      "recall": {
+        "phrase": "Elle prend le train parce que c'est pratique.",
+        "meaning": "Она едет на поезде, потому что это удобно."
+      }
+    },
+    {
+      "id": "fr-a1-31-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я путешествую, чтобы открывать новые места.",
+      "answers": [
+        "Je voyage pour découvrir de nouveaux endroits."
+      ],
+      "explanation": "Pour + инфинитив выражает цель: pour apprendre. Parce que + предложение объясняет причину: parce que j'aime…",
+      "wordIds": [
+        "fr:v015:31:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je voyage pour découvrir de nouveaux endroits.",
+        "meaning": "Я путешествую, чтобы открывать новые места."
+      }
+    },
+    {
+      "id": "fr-a1-31-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Поезд такой же быстрый, как автобус.",
+      "answers": [
+        "Le train est aussi rapide que le bus."
+      ],
+      "explanation": "Le train est aussi rapide que le bus. — Поезд такой же быстрый, как автобус.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ce trajet est plus court que l'autre.",
+        "Cette chambre est moins chère.",
+        "Le train est aussi rapide que le bus.",
+        "Cette valise est plus légère que la mienne."
+      ]
+    }
+  ]
+}

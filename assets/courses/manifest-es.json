@@ -279,6 +279,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "es-v015",
+      "title": "Самостоятельное общение",
+      "themes": [
+        {
+          "id": "es-v015-unit-1",
+          "title": "Покупки и бронирование",
+          "lessons": [
+            {
+              "id": "es-a1-31",
+              "title": "Обменять покупку",
+              "asset": "assets/courses/es-a1-31.json",
+              "order": 30
+            },
+            {
+              "id": "es-a1-32",
+              "title": "Забронировать столик",
+              "asset": "assets/courses/es-a1-32.json",
+              "order": 31
+            }
+          ]
+        },
+        {
+          "id": "es-v015-unit-2",
+          "title": "В гостях и дома",
+          "lessons": [
+            {
+              "id": "es-a1-33",
+              "title": "Заселиться в отель",
+              "asset": "assets/courses/es-a1-33.json",
+              "order": 32
+            },
+            {
+              "id": "es-a1-34",
+              "title": "Наша семья и наши вещи",
+              "asset": "assets/courses/es-a1-34.json",
+              "order": 33
+            }
+          ]
+        },
+        {
+          "id": "es-v015-unit-3",
+          "title": "Прошлое: первые шаги",
+          "lessons": [
+            {
+              "id": "es-a1-35",
+              "title": "Где я был вчера",
+              "asset": "assets/courses/es-a1-35.json",
+              "order": 34
+            },
+            {
+              "id": "es-a1-36",
+              "title": "Что сделал вчера",
+              "asset": "assets/courses/es-a1-36.json",
+              "order": 35
+            }
+          ]
+        },
+        {
+          "id": "es-v015-unit-4",
+          "title": "Поездки и события",
+          "lessons": [
+            {
+              "id": "es-a1-37",
+              "title": "Куда ездили",
+              "asset": "assets/courses/es-a1-37.json",
+              "order": 36
+            },
+            {
+              "id": "es-a1-38",
+              "title": "Как прошёл день",
+              "asset": "assets/courses/es-a1-38.json",
+              "order": 37
+            }
+          ]
+        },
+        {
+          "id": "es-v015-unit-5",
+          "title": "Привычки и выбор",
+          "lessons": [
+            {
+              "id": "es-a1-39",
+              "title": "Обычно и вчера",
+              "asset": "assets/courses/es-a1-39.json",
+              "order": 38
+            },
+            {
+              "id": "es-a1-40",
+              "title": "Выбрать подходящий вариант",
+              "asset": "assets/courses/es-a1-40.json",
+              "order": 39
+            }
+          ]
+        },
+        {
+          "id": "es-v015-unit-6",
+          "title": "Просьбы и сообщения",
+          "lessons": [
+            {
+              "id": "es-a1-41",
+              "title": "Кому отправить сообщение",
+              "asset": "assets/courses/es-a1-41.json",
+              "order": 40
+            },
+            {
+              "id": "es-a1-42",
+              "title": "Уточнить бронь письмом",
+              "asset": "assets/courses/es-a1-42.json",
+              "order": 41
+            }
+          ]
+        }
+      ]
     }
   ]
 }

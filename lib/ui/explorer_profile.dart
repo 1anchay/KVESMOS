@@ -205,7 +205,10 @@ class ExplorerProfile extends ConsumerWidget {
         const ExplorerActivity(),
         const SizedBox(height: 24),
         const CollectionHeading('Маршрут A1', 'Освоенные области'),
-        for (final region in JourneyRegion.forCourse(app.course.language))
+        for (final region in JourneyRegion.forCourse(
+          app.course.language,
+          catalog: app.repository.catalog,
+        ))
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: CollectionPanel(

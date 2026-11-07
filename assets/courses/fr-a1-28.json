@@ -1,0 +1,253 @@
+{
+  "id": "fr-a1-28",
+  "title": "Что случилось вчера",
+  "topic": "Движение и вопросы",
+  "order": 27,
+  "objective": "Спросить о прошлом и отрицать завершённое действие.",
+  "guide": "В Passé composé отрицание ne… pas окружает вспомогательный глагол: je n'ai pas compris. Причастие стоит после pas.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:28:p0",
+      "en": "Qu'est-ce que tu as fait hier ?",
+      "ru": "Что ты делал вчера?"
+    },
+    {
+      "id": "fr:v015:28:p1",
+      "en": "Je n'ai pas compris la question.",
+      "ru": "Я не понял вопрос."
+    },
+    {
+      "id": "fr:v015:28:p2",
+      "en": "Vous avez trouvé vos clés ?",
+      "ru": "Вы нашли свои ключи?"
+    },
+    {
+      "id": "fr:v015:28:p3",
+      "en": "Elle n'est pas venue ce matin.",
+      "ru": "Она не пришла сегодня утром."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Что случилось вчера",
+      "phrase": "Qu'est-ce que tu as fait hier ?",
+      "translation": "Что ты делал вчера?",
+      "explanation": "В Passé composé отрицание ne… pas окружает вспомогательный глагол: je n'ai pas compris. Причастие стоит после pas."
+    },
+    {
+      "character": "miko",
+      "title": "Что случилось вчера",
+      "phrase": "Je n'ai pas compris la question.",
+      "translation": "Я не понял вопрос.",
+      "explanation": "Je n'ai pas compris la question. — Я не понял вопрос."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что случилось вчера",
+      "phrase": "Vous avez trouvé vos clés ?",
+      "translation": "Вы нашли свои ключи?",
+      "explanation": "Vous avez trouvé vos clés ? — Вы нашли свои ключи?"
+    },
+    {
+      "character": "orbi",
+      "title": "Что случилось вчера",
+      "phrase": "Elle n'est pas venue ce matin.",
+      "translation": "Она не пришла сегодня утром.",
+      "explanation": "Elle n'est pas venue ce matin. — Она не пришла сегодня утром."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Qu'est-ce que tu as fait hier ?",
+      "translation": "Что ты делал вчера?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Что ты делал вчера?",
+      "options": [
+        "Вы нашли свои ключи?",
+        "Что ты делал вчера?",
+        "Она не пришла сегодня утром."
+      ],
+      "explanation": "В Passé composé отрицание ne… pas окружает вспомогательный глагол: je n'ai pas compris. Причастие стоит после pas."
+    },
+    {
+      "id": "apply",
+      "phrase": "Je n'ai pas compris la question.",
+      "translation": "Я не понял вопрос.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Je n'ai pas compris la question.",
+      "tokens": [
+        "Je",
+        "n'ai",
+        "pas",
+        "compris",
+        "la",
+        "question."
+      ],
+      "character": "miko",
+      "explanation": "Je n'ai pas compris la question. — Я не понял вопрос."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-28-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Вы нашли свои ключи?"
+      ],
+      "explanation": "Vous avez trouvé vos clés ? — Вы нашли свои ключи?",
+      "wordIds": [
+        "fr:v015:28:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Vous avez trouvé vos clés ?",
+      "options": [
+        "Что ты делал вчера?",
+        "Вы нашли свои ключи?",
+        "Я не понял вопрос."
+      ],
+      "hint": "Vous avez trouvé vos clés ? — Вы нашли свои ключи?"
+    },
+    {
+      "id": "fr-a1-28-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я не понял вопрос.",
+      "answers": [
+        "Je n'ai pas compris la question."
+      ],
+      "explanation": "В Passé composé отрицание ne… pas окружает вспомогательный глагол: je n'ai pas compris. Причастие стоит после pas.",
+      "wordIds": [
+        "fr:v015:28:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Je",
+        "n'ai",
+        "pas",
+        "compris",
+        "la",
+        "question."
+      ],
+      "hint": "Je n'ai pas compris la question. — Я не понял вопрос."
+    },
+    {
+      "id": "fr-a1-28-e03",
+      "type": "dialogue",
+      "prompt": "Где оказались ключи?",
+      "answers": [
+        "В сумке."
+      ],
+      "explanation": "В диалоге: Vous avez trouvé vos clés ? / Oui, elles étaient dans mon sac. Je les ai trouvées ce matin. Поэтому: В сумке.",
+      "wordIds": [
+        "fr:v015:28:p0",
+        "fr:v015:28:p1",
+        "fr:v015:28:p2",
+        "fr:v015:28:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Vous avez trouvé vos clés ?\nМико: Oui, elles étaient dans mon sac. Je les ai trouvées ce matin.",
+      "options": [
+        "В гостинице.",
+        "На вокзале.",
+        "В сумке."
+      ]
+    },
+    {
+      "id": "fr-a1-28-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Что ты делал вчера?»?",
+      "answers": [
+        "Qu'est-ce que tu as fait hier ?"
+      ],
+      "explanation": "Qu'est-ce que tu as fait hier ? — Что ты делал вчера?",
+      "wordIds": [
+        "fr:v015:28:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Je n'ai pas compris la question.",
+        "Elle n'est pas venue ce matin.",
+        "Qu'est-ce que tu as fait hier ?"
+      ],
+      "hint": "Qu'est-ce que tu as fait hier ? — Что ты делал вчера?"
+    },
+    {
+      "id": "fr-a1-28-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je n'ai compris pas la question.",
+      "answers": [
+        "Je n'ai pas compris la question."
+      ],
+      "explanation": "Pas ставится после вспомогательного ai, перед compris.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je n'ai compris pas la question.",
+        "Je n'ai pas compris la question."
+      ],
+      "hint": "В Passé composé отрицание ne… pas окружает вспомогательный глагол: je n'ai pas compris. Причастие стоит после pas."
+    },
+    {
+      "id": "fr-a1-28-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Она не пришла сегодня утром.». Можно написать вместо микрофона.",
+      "answers": [
+        "Elle n'est pas venue ce matin."
+      ],
+      "explanation": "Elle n'est pas venue ce matin. — Она не пришла сегодня утром.",
+      "wordIds": [
+        "fr:v015:28:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Elle n'est pas venue ce matin.",
+      "recall": {
+        "phrase": "Elle n'est pas venue ce matin.",
+        "meaning": "Она не пришла сегодня утром."
+      }
+    },
+    {
+      "id": "fr-a1-28-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Что ты делал вчера?",
+      "answers": [
+        "Qu'est-ce que tu as fait hier ?"
+      ],
+      "explanation": "В Passé composé отрицание ne… pas окружает вспомогательный глагол: je n'ai pas compris. Причастие стоит после pas.",
+      "wordIds": [
+        "fr:v015:28:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Qu'est-ce que tu as fait hier ?",
+        "meaning": "Что ты делал вчера?"
+      }
+    },
+    {
+      "id": "fr-a1-28-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Они уехали рано.",
+      "answers": [
+        "Elles sont parties tôt."
+      ],
+      "explanation": "Elles sont parties tôt. — Они уехали рано.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Elle est arrivée hier soir.",
+        "Ils sont allés à la plage.",
+        "Il est rentré à la maison.",
+        "Elles sont parties tôt."
+      ]
+    }
+  ]
+}

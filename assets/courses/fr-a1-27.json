@@ -1,0 +1,292 @@
+{
+  "id": "fr-a1-27",
+  "title": "Приехали и вернулись",
+  "topic": "Движение и вопросы",
+  "order": 26,
+  "objective": "Использовать être в рассказе о перемещении.",
+  "guide": "Aller, arriver и rentrer здесь образуют Passé composé с être. Причастие согласуется с подлежащим: elle est arrivée, ils sont arrivés.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:27:p0",
+      "en": "Elle est arrivée hier soir.",
+      "ru": "Она приехала вчера вечером."
+    },
+    {
+      "id": "fr:v015:27:p1",
+      "en": "Ils sont allés à la plage.",
+      "ru": "Они ходили на пляж."
+    },
+    {
+      "id": "fr:v015:27:p2",
+      "en": "Il est rentré à la maison.",
+      "ru": "Он вернулся домой."
+    },
+    {
+      "id": "fr:v015:27:p3",
+      "en": "Elles sont parties tôt.",
+      "ru": "Они уехали рано."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Приехали и вернулись",
+      "phrase": "Elle est arrivée hier soir.",
+      "translation": "Она приехала вчера вечером.",
+      "explanation": "Aller, arriver и rentrer здесь образуют Passé composé с être. Причастие согласуется с подлежащим: elle est arrivée, ils sont arrivés."
+    },
+    {
+      "character": "miko",
+      "title": "Приехали и вернулись",
+      "phrase": "Ils sont allés à la plage.",
+      "translation": "Они ходили на пляж.",
+      "explanation": "Ils sont allés à la plage. — Они ходили на пляж."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Приехали и вернулись",
+      "phrase": "Il est rentré à la maison.",
+      "translation": "Он вернулся домой.",
+      "explanation": "Il est rentré à la maison. — Он вернулся домой."
+    },
+    {
+      "character": "orbi",
+      "title": "Приехали и вернулись",
+      "phrase": "Elles sont parties tôt.",
+      "translation": "Они уехали рано.",
+      "explanation": "Elles sont parties tôt. — Они уехали рано."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Elle est arrivée hier soir.",
+      "translation": "Она приехала вчера вечером.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Она приехала вчера вечером.",
+      "options": [
+        "Он вернулся домой.",
+        "Она приехала вчера вечером.",
+        "Они уехали рано."
+      ],
+      "explanation": "Aller, arriver и rentrer здесь образуют Passé composé с être. Причастие согласуется с подлежащим: elle est arrivée, ils sont arrivés."
+    },
+    {
+      "id": "apply",
+      "phrase": "Ils sont allés à la plage.",
+      "translation": "Они ходили на пляж.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Ils sont allés à la plage.",
+      "tokens": [
+        "Ils",
+        "sont",
+        "allés",
+        "à",
+        "la",
+        "plage."
+      ],
+      "character": "miko",
+      "explanation": "Ils sont allés à la plage. — Они ходили на пляж."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-27-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Она приехала вчера вечером.»?",
+      "answers": [
+        "Elle est arrivée hier soir."
+      ],
+      "explanation": "Elle est arrivée hier soir. — Она приехала вчера вечером.",
+      "wordIds": [
+        "fr:v015:27:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Ils sont allés à la plage.",
+        "Elles sont parties tôt.",
+        "Elle est arrivée hier soir."
+      ],
+      "hint": "Elle est arrivée hier soir. — Она приехала вчера вечером."
+    },
+    {
+      "id": "fr-a1-27-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Они ходили на пляж.",
+      "answers": [
+        "Ils sont allés à la plage."
+      ],
+      "explanation": "Aller, arriver и rentrer здесь образуют Passé composé с être. Причастие согласуется с подлежащим: elle est arrivée, ils sont arrivés.",
+      "wordIds": [
+        "fr:v015:27:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Ils",
+        "sont",
+        "allés",
+        "à",
+        "la",
+        "plage."
+      ],
+      "hint": "Ils sont allés à la plage. — Они ходили на пляж."
+    },
+    {
+      "id": "fr-a1-27-e03",
+      "type": "dialogue",
+      "prompt": "Когда приехала Леа?",
+      "answers": [
+        "Вчера вечером."
+      ],
+      "explanation": "В диалоге: Léa est arrivée ce matin ? / Non, elle est arrivée hier soir. Elle est allée à l'hôtel. Поэтому: Вчера вечером.",
+      "wordIds": [
+        "fr:v015:27:p0",
+        "fr:v015:27:p1",
+        "fr:v015:27:p2",
+        "fr:v015:27:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Léa est arrivée ce matin ?\nМико: Non, elle est arrivée hier soir. Elle est allée à l'hôtel.",
+      "options": [
+        "Сегодня утром.",
+        "Вчера утром.",
+        "Вчера вечером."
+      ]
+    },
+    {
+      "id": "fr-a1-27-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Он вернулся домой."
+      ],
+      "explanation": "Il est rentré à la maison. — Он вернулся домой.",
+      "wordIds": [
+        "fr:v015:27:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Il est rentré à la maison.",
+      "options": [
+        "Она приехала вчера вечером.",
+        "Он вернулся домой.",
+        "Они ходили на пляж."
+      ],
+      "hint": "Il est rentré à la maison. — Он вернулся домой."
+    },
+    {
+      "id": "fr-a1-27-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v015:27:p0",
+        "fr:v015:27:p1",
+        "fr:v015:27:p2",
+        "fr:v015:27:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v015:27:p0",
+          "en": "Elle est arrivée hier soir.",
+          "ru": "Она приехала вчера вечером."
+        },
+        {
+          "id": "fr:v015:27:p1",
+          "en": "Ils sont allés à la plage.",
+          "ru": "Они ходили на пляж."
+        },
+        {
+          "id": "fr:v015:27:p2",
+          "en": "Il est rentré à la maison.",
+          "ru": "Он вернулся домой."
+        },
+        {
+          "id": "fr:v015:27:p3",
+          "en": "Elles sont parties tôt.",
+          "ru": "Они уехали рано."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-27-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Elle est arrivé hier soir.",
+      "answers": [
+        "Elle est arrivée hier soir."
+      ],
+      "explanation": "С être причастие согласуется с elle: arrivée с -e.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Elle est arrivé hier soir.",
+        "Elle est arrivée hier soir."
+      ],
+      "hint": "Aller, arriver и rentrer здесь образуют Passé composé с être. Причастие согласуется с подлежащим: elle est arrivée, ils sont arrivés."
+    },
+    {
+      "id": "fr-a1-27-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Они уехали рано.». Можно написать вместо микрофона.",
+      "answers": [
+        "Elles sont parties tôt."
+      ],
+      "explanation": "Elles sont parties tôt. — Они уехали рано.",
+      "wordIds": [
+        "fr:v015:27:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Elles sont parties tôt.",
+      "recall": {
+        "phrase": "Elles sont parties tôt.",
+        "meaning": "Они уехали рано."
+      }
+    },
+    {
+      "id": "fr-a1-27-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Она приехала вчера вечером.",
+      "answers": [
+        "Elle est arrivée hier soir."
+      ],
+      "explanation": "Aller, arriver и rentrer здесь образуют Passé composé с être. Причастие согласуется с подлежащим: elle est arrivée, ils sont arrivés.",
+      "wordIds": [
+        "fr:v015:27:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Elle est arrivée hier soir.",
+        "meaning": "Она приехала вчера вечером."
+      }
+    },
+    {
+      "id": "fr-a1-27-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Ты видел этот фильм?",
+      "answers": [
+        "Tu as vu ce film ?"
+      ],
+      "explanation": "Tu as vu ce film ? — Ты видел этот фильм?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "J'ai pris le train de huit heures.",
+        "Nous avons fait les courses.",
+        "Tu as vu ce film ?",
+        "Elle a lu ton message."
+      ]
+    }
+  ]
+}

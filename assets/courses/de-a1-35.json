@@ -1,0 +1,290 @@
+{
+  "id": "de-a1-35",
+  "title": "Что я сделал",
+  "topic": "Прошлое: Perfekt",
+  "order": 34,
+  "objective": "Сообщить о завершённом действии с haben.",
+  "guide": "Perfekt часто используется в разговоре о прошлом: haben + Partizip II в конце. Machen → gemacht, kaufen → gekauft.",
+  "vocabulary": [
+    {
+      "id": "de:v015:35:p0",
+      "en": "Ich habe gestern gekocht.",
+      "ru": "Вчера я готовил."
+    },
+    {
+      "id": "de:v015:35:p1",
+      "en": "Wir haben frisches Brot gekauft.",
+      "ru": "Мы купили свежий хлеб."
+    },
+    {
+      "id": "de:v015:35:p2",
+      "en": "Hast du die Rechnung bezahlt?",
+      "ru": "Ты оплатил счёт?"
+    },
+    {
+      "id": "de:v015:35:p3",
+      "en": "Sie hat lange gewartet.",
+      "ru": "Она долго ждала."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Что я сделал",
+      "phrase": "Ich habe gestern gekocht.",
+      "translation": "Вчера я готовил.",
+      "explanation": "Perfekt часто используется в разговоре о прошлом: haben + Partizip II в конце. Machen → gemacht, kaufen → gekauft."
+    },
+    {
+      "character": "miko",
+      "title": "Что я сделал",
+      "phrase": "Wir haben frisches Brot gekauft.",
+      "translation": "Мы купили свежий хлеб.",
+      "explanation": "Wir haben frisches Brot gekauft. — Мы купили свежий хлеб."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что я сделал",
+      "phrase": "Hast du die Rechnung bezahlt?",
+      "translation": "Ты оплатил счёт?",
+      "explanation": "Hast du die Rechnung bezahlt? — Ты оплатил счёт?"
+    },
+    {
+      "character": "orbi",
+      "title": "Что я сделал",
+      "phrase": "Sie hat lange gewartet.",
+      "translation": "Она долго ждала.",
+      "explanation": "Sie hat lange gewartet. — Она долго ждала."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich habe gestern gekocht.",
+      "translation": "Вчера я готовил.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Вчера я готовил.",
+      "options": [
+        "Ты оплатил счёт?",
+        "Вчера я готовил.",
+        "Она долго ждала."
+      ],
+      "explanation": "Perfekt часто используется в разговоре о прошлом: haben + Partizip II в конце. Machen → gemacht, kaufen → gekauft."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wir haben frisches Brot gekauft.",
+      "translation": "Мы купили свежий хлеб.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wir haben frisches Brot gekauft.",
+      "tokens": [
+        "Wir",
+        "haben",
+        "frisches",
+        "Brot",
+        "gekauft."
+      ],
+      "character": "miko",
+      "explanation": "Wir haben frisches Brot gekauft. — Мы купили свежий хлеб."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-35-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ты оплатил счёт?"
+      ],
+      "explanation": "Hast du die Rechnung bezahlt? — Ты оплатил счёт?",
+      "wordIds": [
+        "de:v015:35:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Hast du die Rechnung bezahlt?",
+      "options": [
+        "Вчера я готовил.",
+        "Ты оплатил счёт?",
+        "Мы купили свежий хлеб."
+      ],
+      "hint": "Hast du die Rechnung bezahlt? — Ты оплатил счёт?"
+    },
+    {
+      "id": "de-a1-35-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы купили свежий хлеб.",
+      "answers": [
+        "Wir haben frisches Brot gekauft."
+      ],
+      "explanation": "Perfekt часто используется в разговоре о прошлом: haben + Partizip II в конце. Machen → gemacht, kaufen → gekauft.",
+      "wordIds": [
+        "de:v015:35:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wir",
+        "haben",
+        "frisches",
+        "Brot",
+        "gekauft."
+      ],
+      "hint": "Wir haben frisches Brot gekauft. — Мы купили свежий хлеб."
+    },
+    {
+      "id": "de-a1-35-e03",
+      "type": "dialogue",
+      "prompt": "Что собеседник сделал после оплаты счёта?",
+      "answers": [
+        "Купил хлеб."
+      ],
+      "explanation": "В диалоге: Hast du die Rechnung bezahlt? / Ja, ich habe sie schon bezahlt. Danach habe ich Brot gekauft. Поэтому: Купил хлеб.",
+      "wordIds": [
+        "de:v015:35:p0",
+        "de:v015:35:p1",
+        "de:v015:35:p2",
+        "de:v015:35:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Hast du die Rechnung bezahlt?\nМико: Ja, ich habe sie schon bezahlt. Danach habe ich Brot gekauft.",
+      "options": [
+        "Приготовил ужин.",
+        "Долго ждал.",
+        "Купил хлеб."
+      ]
+    },
+    {
+      "id": "de-a1-35-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Вчера я готовил.»?",
+      "answers": [
+        "Ich habe gestern gekocht."
+      ],
+      "explanation": "Ich habe gestern gekocht. — Вчера я готовил.",
+      "wordIds": [
+        "de:v015:35:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Wir haben frisches Brot gekauft.",
+        "Sie hat lange gewartet.",
+        "Ich habe gestern gekocht."
+      ],
+      "hint": "Ich habe gestern gekocht. — Вчера я готовил."
+    },
+    {
+      "id": "de-a1-35-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v015:35:p0",
+        "de:v015:35:p1",
+        "de:v015:35:p2",
+        "de:v015:35:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v015:35:p0",
+          "en": "Ich habe gestern gekocht.",
+          "ru": "Вчера я готовил."
+        },
+        {
+          "id": "de:v015:35:p1",
+          "en": "Wir haben frisches Brot gekauft.",
+          "ru": "Мы купили свежий хлеб."
+        },
+        {
+          "id": "de:v015:35:p2",
+          "en": "Hast du die Rechnung bezahlt?",
+          "ru": "Ты оплатил счёт?"
+        },
+        {
+          "id": "de:v015:35:p3",
+          "en": "Sie hat lange gewartet.",
+          "ru": "Она долго ждала."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-35-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich habe gestern kochen.",
+      "answers": [
+        "Ich habe gestern gekocht."
+      ],
+      "explanation": "В Perfekt после habe нужен Partizip II gekocht, а не инфинитив kochen.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich habe gestern kochen.",
+        "Ich habe gestern gekocht."
+      ],
+      "hint": "Perfekt часто используется в разговоре о прошлом: haben + Partizip II в конце. Machen → gemacht, kaufen → gekauft."
+    },
+    {
+      "id": "de-a1-35-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Она долго ждала.». Можно написать вместо микрофона.",
+      "answers": [
+        "Sie hat lange gewartet."
+      ],
+      "explanation": "Sie hat lange gewartet. — Она долго ждала.",
+      "wordIds": [
+        "de:v015:35:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Sie hat lange gewartet.",
+      "recall": {
+        "phrase": "Sie hat lange gewartet.",
+        "meaning": "Она долго ждала."
+      }
+    },
+    {
+      "id": "de-a1-35-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Вчера я готовил.",
+      "answers": [
+        "Ich habe gestern gekocht."
+      ],
+      "explanation": "Perfekt часто используется в разговоре о прошлом: haben + Partizip II в конце. Machen → gemacht, kaufen → gekauft.",
+      "wordIds": [
+        "de:v015:35:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich habe gestern gekocht.",
+        "meaning": "Вчера я готовил."
+      }
+    },
+    {
+      "id": "de-a1-35-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я отправляю своей подруге адрес.",
+      "answers": [
+        "Ich schicke meiner Freundin die Adresse."
+      ],
+      "explanation": "Ich schicke meiner Freundin die Adresse. — Я отправляю своей подруге адрес.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich schicke meiner Freundin die Adresse.",
+        "Er gibt dem Kind ein Buch.",
+        "Wir zeigen dem Gast das Zimmer.",
+        "Kannst du mir den Schlüssel geben?"
+      ]
+    }
+  ]
+}

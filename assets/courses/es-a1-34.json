@@ -1,0 +1,249 @@
+{
+  "id": "es-a1-34",
+  "title": "Наша семья и наши вещи",
+  "topic": "В гостях и дома",
+  "order": 33,
+  "objective": "Использовать притяжательные слова с разными существительными.",
+  "guide": "Nuestro/nuestra/nuestros/nuestras согласуется с тем, что принадлежит, а не с владельцем. Su может означать «его», «её» или «их» — помогает контекст.",
+  "vocabulary": [
+    {
+      "id": "es:v015:34:p0",
+      "en": "Nuestra hija estudia en Madrid.",
+      "ru": "Наша дочь учится в Мадриде."
+    },
+    {
+      "id": "es:v015:34:p1",
+      "en": "Nuestros amigos viven cerca.",
+      "ru": "Наши друзья живут рядом."
+    },
+    {
+      "id": "es:v015:34:p2",
+      "en": "Este es su hermano.",
+      "ru": "Это её брат."
+    },
+    {
+      "id": "es:v015:34:p3",
+      "en": "¿Dónde están nuestras llaves?",
+      "ru": "Где наши ключи?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Наша семья и наши вещи",
+      "phrase": "Nuestra hija estudia en Madrid.",
+      "translation": "Наша дочь учится в Мадриде.",
+      "explanation": "Nuestro/nuestra/nuestros/nuestras согласуется с тем, что принадлежит, а не с владельцем. Su может означать «его», «её» или «их» — помогает контекст."
+    },
+    {
+      "character": "miko",
+      "title": "Наша семья и наши вещи",
+      "phrase": "Nuestros amigos viven cerca.",
+      "translation": "Наши друзья живут рядом.",
+      "explanation": "Nuestros amigos viven cerca. — Наши друзья живут рядом."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Наша семья и наши вещи",
+      "phrase": "Este es su hermano.",
+      "translation": "Это её брат.",
+      "explanation": "Este es su hermano. — Это её брат."
+    },
+    {
+      "character": "orbi",
+      "title": "Наша семья и наши вещи",
+      "phrase": "¿Dónde están nuestras llaves?",
+      "translation": "Где наши ключи?",
+      "explanation": "¿Dónde están nuestras llaves? — Где наши ключи?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Nuestra hija estudia en Madrid.",
+      "translation": "Наша дочь учится в Мадриде.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Наша дочь учится в Мадриде.",
+      "options": [
+        "Это её брат.",
+        "Наша дочь учится в Мадриде.",
+        "Где наши ключи?"
+      ],
+      "explanation": "Nuestro/nuestra/nuestros/nuestras согласуется с тем, что принадлежит, а не с владельцем. Su может означать «его», «её» или «их» — помогает контекст."
+    },
+    {
+      "id": "apply",
+      "phrase": "Nuestros amigos viven cerca.",
+      "translation": "Наши друзья живут рядом.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Nuestros amigos viven cerca.",
+      "tokens": [
+        "Nuestros",
+        "amigos",
+        "viven",
+        "cerca."
+      ],
+      "character": "miko",
+      "explanation": "Nuestros amigos viven cerca. — Наши друзья живут рядом."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-34-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Наша дочь учится в Мадриде.»?",
+      "answers": [
+        "Nuestra hija estudia en Madrid."
+      ],
+      "explanation": "Nuestra hija estudia en Madrid. — Наша дочь учится в Мадриде.",
+      "wordIds": [
+        "es:v015:34:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Nuestros amigos viven cerca.",
+        "¿Dónde están nuestras llaves?",
+        "Nuestra hija estudia en Madrid."
+      ],
+      "hint": "Nuestra hija estudia en Madrid. — Наша дочь учится в Мадриде."
+    },
+    {
+      "id": "es-a1-34-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Наши друзья живут рядом.",
+      "answers": [
+        "Nuestros amigos viven cerca."
+      ],
+      "explanation": "Nuestro/nuestra/nuestros/nuestras согласуется с тем, что принадлежит, а не с владельцем. Su может означать «его», «её» или «их» — помогает контекст.",
+      "wordIds": [
+        "es:v015:34:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Nuestros",
+        "amigos",
+        "viven",
+        "cerca."
+      ],
+      "hint": "Nuestros amigos viven cerca. — Наши друзья живут рядом."
+    },
+    {
+      "id": "es-a1-34-e03",
+      "type": "dialogue",
+      "prompt": "Где живут друзья?",
+      "answers": [
+        "Рядом, у парка."
+      ],
+      "explanation": "В диалоге: ¿Tus amigos viven lejos? / No, nuestros amigos viven cerca, junto al parque. Поэтому: Рядом, у парка.",
+      "wordIds": [
+        "es:v015:34:p0",
+        "es:v015:34:p1",
+        "es:v015:34:p2",
+        "es:v015:34:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Tus amigos viven lejos?\nМико: No, nuestros amigos viven cerca, junto al parque.",
+      "options": [
+        "Далеко от города.",
+        "В самом парке.",
+        "Рядом, у парка."
+      ]
+    },
+    {
+      "id": "es-a1-34-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Это её брат."
+      ],
+      "explanation": "Este es su hermano. — Это её брат.",
+      "wordIds": [
+        "es:v015:34:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Este es su hermano.",
+      "options": [
+        "Наша дочь учится в Мадриде.",
+        "Это её брат.",
+        "Наши друзья живут рядом."
+      ],
+      "hint": "Este es su hermano. — Это её брат."
+    },
+    {
+      "id": "es-a1-34-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Nuestro hija estudia en Madrid.",
+      "answers": [
+        "Nuestra hija estudia en Madrid."
+      ],
+      "explanation": "Hija — женского рода, поэтому nuestra.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Nuestro hija estudia en Madrid.",
+        "Nuestra hija estudia en Madrid."
+      ],
+      "hint": "Nuestro/nuestra/nuestros/nuestras согласуется с тем, что принадлежит, а не с владельцем. Su может означать «его», «её» или «их» — помогает контекст."
+    },
+    {
+      "id": "es-a1-34-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Где наши ключи?». Можно написать вместо микрофона.",
+      "answers": [
+        "¿Dónde están nuestras llaves?"
+      ],
+      "explanation": "¿Dónde están nuestras llaves? — Где наши ключи?",
+      "wordIds": [
+        "es:v015:34:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "¿Dónde están nuestras llaves?",
+      "recall": {
+        "phrase": "¿Dónde están nuestras llaves?",
+        "meaning": "Где наши ключи?"
+      }
+    },
+    {
+      "id": "es-a1-34-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Наша дочь учится в Мадриде.",
+      "answers": [
+        "Nuestra hija estudia en Madrid."
+      ],
+      "explanation": "Nuestro/nuestra/nuestros/nuestras согласуется с тем, что принадлежит, а не с владельцем. Su может означать «его», «её» или «их» — помогает контекст.",
+      "wordIds": [
+        "es:v015:34:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Nuestra hija estudia en Madrid.",
+        "meaning": "Наша дочь учится в Мадриде."
+      }
+    },
+    {
+      "id": "es-a1-34-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Завтрак включён?",
+      "answers": [
+        "¿Está incluido el desayuno?"
+      ],
+      "explanation": "¿Está incluido el desayuno? — Завтрак включён?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Tengo una reserva para dos noches.",
+        "¿A qué hora empieza el desayuno?",
+        "Necesitamos una habitación doble.",
+        "¿Está incluido el desayuno?"
+      ]
+    }
+  ]
+}

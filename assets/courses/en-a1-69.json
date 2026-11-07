@@ -1,0 +1,294 @@
+{
+  "id": "en-a1-69",
+  "title": "Какой именно предмет",
+  "topic": "Уточнения и события",
+  "order": 68,
+  "objective": "Уточнить, о каком предмете идёт речь.",
+  "guide": "That или which связывает предмет с пояснением: the book that I bought. После определяемого предмета ставим уточняющую часть.",
+  "vocabulary": [
+    {
+      "id": "en:v015:69:p0",
+      "en": "This is the book that I bought yesterday.",
+      "ru": "Это книга, которую я купил вчера."
+    },
+    {
+      "id": "en:v015:69:p1",
+      "en": "I need a bag that is waterproof.",
+      "ru": "Мне нужна непромокаемая сумка."
+    },
+    {
+      "id": "en:v015:69:p2",
+      "en": "The café which opens early is nearby.",
+      "ru": "Кафе, которое открывается рано, находится рядом."
+    },
+    {
+      "id": "en:v015:69:p3",
+      "en": "Is this the key that you lost?",
+      "ru": "Это ключ, который ты потерял?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Какой именно предмет",
+      "phrase": "This is the book that I bought yesterday.",
+      "translation": "Это книга, которую я купил вчера.",
+      "explanation": "That или which связывает предмет с пояснением: the book that I bought. После определяемого предмета ставим уточняющую часть."
+    },
+    {
+      "character": "miko",
+      "title": "Какой именно предмет",
+      "phrase": "I need a bag that is waterproof.",
+      "translation": "Мне нужна непромокаемая сумка.",
+      "explanation": "I need a bag that is waterproof. — Мне нужна непромокаемая сумка."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Какой именно предмет",
+      "phrase": "The café which opens early is nearby.",
+      "translation": "Кафе, которое открывается рано, находится рядом.",
+      "explanation": "The café which opens early is nearby. — Кафе, которое открывается рано, находится рядом."
+    },
+    {
+      "character": "orbi",
+      "title": "Какой именно предмет",
+      "phrase": "Is this the key that you lost?",
+      "translation": "Это ключ, который ты потерял?",
+      "explanation": "Is this the key that you lost? — Это ключ, который ты потерял?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "This is the book that I bought yesterday.",
+      "translation": "Это книга, которую я купил вчера.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Это книга, которую я купил вчера.",
+      "options": [
+        "Кафе, которое открывается рано, находится рядом.",
+        "Это книга, которую я купил вчера.",
+        "Это ключ, который ты потерял?"
+      ],
+      "explanation": "That или which связывает предмет с пояснением: the book that I bought. После определяемого предмета ставим уточняющую часть."
+    },
+    {
+      "id": "apply",
+      "phrase": "I need a bag that is waterproof.",
+      "translation": "Мне нужна непромокаемая сумка.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I need a bag that is waterproof.",
+      "tokens": [
+        "I",
+        "need",
+        "a",
+        "bag",
+        "that",
+        "is",
+        "waterproof."
+      ],
+      "character": "miko",
+      "explanation": "I need a bag that is waterproof. — Мне нужна непромокаемая сумка."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-69-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я уже собрал сумку.",
+      "answers": [
+        "I've already packed my bag."
+      ],
+      "explanation": "I've already packed my bag. — Я уже собрал сумку.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "I've already packed my bag.",
+        "Have you bought the tickets yet?",
+        "We haven't booked a taxi yet.",
+        "I've just sent the message."
+      ]
+    },
+    {
+      "id": "en-a1-69-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Это книга, которую я купил вчера.»?",
+      "answers": [
+        "This is the book that I bought yesterday."
+      ],
+      "explanation": "This is the book that I bought yesterday. — Это книга, которую я купил вчера.",
+      "wordIds": [
+        "en:v015:69:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I need a bag that is waterproof.",
+        "Is this the key that you lost?",
+        "This is the book that I bought yesterday."
+      ],
+      "hint": "This is the book that I bought yesterday. — Это книга, которую я купил вчера."
+    },
+    {
+      "id": "en-a1-69-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Мне нужна непромокаемая сумка.",
+      "answers": [
+        "I need a bag that is waterproof."
+      ],
+      "explanation": "That или which связывает предмет с пояснением: the book that I bought. После определяемого предмета ставим уточняющую часть.",
+      "wordIds": [
+        "en:v015:69:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I",
+        "need",
+        "a",
+        "bag",
+        "that",
+        "is",
+        "waterproof."
+      ],
+      "hint": "I need a bag that is waterproof. — Мне нужна непромокаемая сумка."
+    },
+    {
+      "id": "en-a1-69-e04",
+      "type": "dialogue",
+      "prompt": "Почему найденный ключ не подходит?",
+      "answers": [
+        "У потерянного ключа красная бирка."
+      ],
+      "explanation": "В диалоге: Is this the key that you lost? / No, my key has a red label. This one has a blue label. Поэтому: У потерянного ключа красная бирка.",
+      "wordIds": [
+        "en:v015:69:p0",
+        "en:v015:69:p1",
+        "en:v015:69:p2",
+        "en:v015:69:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Is this the key that you lost?\nМико: No, my key has a red label. This one has a blue label.",
+      "options": [
+        "Он слишком большой.",
+        "На нём нет бирки.",
+        "У потерянного ключа красная бирка."
+      ]
+    },
+    {
+      "id": "en-a1-69-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Кафе, которое открывается рано, находится рядом."
+      ],
+      "explanation": "The café which opens early is nearby. — Кафе, которое открывается рано, находится рядом.",
+      "wordIds": [
+        "en:v015:69:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "The café which opens early is nearby.",
+      "options": [
+        "Это книга, которую я купил вчера.",
+        "Кафе, которое открывается рано, находится рядом.",
+        "Мне нужна непромокаемая сумка."
+      ],
+      "hint": "The café which opens early is nearby. — Кафе, которое открывается рано, находится рядом."
+    },
+    {
+      "id": "en-a1-69-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v015:69:p0",
+        "en:v015:69:p1",
+        "en:v015:69:p2",
+        "en:v015:69:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v015:69:p0",
+          "en": "This is the book that I bought yesterday.",
+          "ru": "Это книга, которую я купил вчера."
+        },
+        {
+          "id": "en:v015:69:p1",
+          "en": "I need a bag that is waterproof.",
+          "ru": "Мне нужна непромокаемая сумка."
+        },
+        {
+          "id": "en:v015:69:p2",
+          "en": "The café which opens early is nearby.",
+          "ru": "Кафе, которое открывается рано, находится рядом."
+        },
+        {
+          "id": "en:v015:69:p3",
+          "en": "Is this the key that you lost?",
+          "ru": "Это ключ, который ты потерял?"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-69-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I need a bag that are waterproof.",
+      "answers": [
+        "I need a bag that is waterproof."
+      ],
+      "explanation": "That относится к одной сумке, поэтому is.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I need a bag that are waterproof.",
+        "I need a bag that is waterproof."
+      ],
+      "hint": "That или which связывает предмет с пояснением: the book that I bought. После определяемого предмета ставим уточняющую часть."
+    },
+    {
+      "id": "en-a1-69-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Это ключ, который ты потерял?». Можно написать вместо микрофона.",
+      "answers": [
+        "Is this the key that you lost?"
+      ],
+      "explanation": "Is this the key that you lost? — Это ключ, который ты потерял?",
+      "wordIds": [
+        "en:v015:69:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Is this the key that you lost?",
+      "recall": {
+        "phrase": "Is this the key that you lost?",
+        "meaning": "Это ключ, который ты потерял?"
+      }
+    },
+    {
+      "id": "en-a1-69-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Это книга, которую я купил вчера.",
+      "answers": [
+        "This is the book that I bought yesterday."
+      ],
+      "explanation": "That или which связывает предмет с пояснением: the book that I bought. После определяемого предмета ставим уточняющую часть.",
+      "wordIds": [
+        "en:v015:69:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "This is the book that I bought yesterday.",
+        "meaning": "Это книга, которую я купил вчера."
+      }
+    }
+  ]
+}

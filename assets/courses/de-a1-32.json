@@ -1,0 +1,257 @@
+{
+  "id": "de-a1-32",
+  "title": "Столик на вечер",
+  "topic": "Покупки и бронирование",
+  "order": 31,
+  "objective": "Забронировать столик и уточнить время.",
+  "guide": "Für zwei Personen — на двоих. Um + время: um sieben Uhr. Auf den Namen… — на имя…",
+  "vocabulary": [
+    {
+      "id": "de:v015:32:p0",
+      "en": "Ich möchte einen Tisch reservieren.",
+      "ru": "Я хотел бы забронировать столик."
+    },
+    {
+      "id": "de:v015:32:p1",
+      "en": "Haben Sie um sieben Uhr einen Tisch frei?",
+      "ru": "У вас есть свободный столик в семь?"
+    },
+    {
+      "id": "de:v015:32:p2",
+      "en": "Wir kommen zu zweit.",
+      "ru": "Мы придём вдвоём."
+    },
+    {
+      "id": "de:v015:32:p3",
+      "en": "Die Reservierung ist auf den Namen Weber.",
+      "ru": "Бронь на имя Вебер."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Столик на вечер",
+      "phrase": "Ich möchte einen Tisch reservieren.",
+      "translation": "Я хотел бы забронировать столик.",
+      "explanation": "Für zwei Personen — на двоих. Um + время: um sieben Uhr. Auf den Namen… — на имя…"
+    },
+    {
+      "character": "miko",
+      "title": "Столик на вечер",
+      "phrase": "Haben Sie um sieben Uhr einen Tisch frei?",
+      "translation": "У вас есть свободный столик в семь?",
+      "explanation": "Haben Sie um sieben Uhr einen Tisch frei? — У вас есть свободный столик в семь?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Столик на вечер",
+      "phrase": "Wir kommen zu zweit.",
+      "translation": "Мы придём вдвоём.",
+      "explanation": "Wir kommen zu zweit. — Мы придём вдвоём."
+    },
+    {
+      "character": "orbi",
+      "title": "Столик на вечер",
+      "phrase": "Die Reservierung ist auf den Namen Weber.",
+      "translation": "Бронь на имя Вебер.",
+      "explanation": "Die Reservierung ist auf den Namen Weber. — Бронь на имя Вебер."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich möchte einen Tisch reservieren.",
+      "translation": "Я хотел бы забронировать столик.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы забронировать столик.",
+      "options": [
+        "Мы придём вдвоём.",
+        "Я хотел бы забронировать столик.",
+        "Бронь на имя Вебер."
+      ],
+      "explanation": "Für zwei Personen — на двоих. Um + время: um sieben Uhr. Auf den Namen… — на имя…"
+    },
+    {
+      "id": "apply",
+      "phrase": "Haben Sie um sieben Uhr einen Tisch frei?",
+      "translation": "У вас есть свободный столик в семь?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Haben Sie um sieben Uhr einen Tisch frei?",
+      "tokens": [
+        "Haben",
+        "Sie",
+        "um",
+        "sieben",
+        "Uhr",
+        "einen",
+        "Tisch",
+        "frei?"
+      ],
+      "character": "miko",
+      "explanation": "Haben Sie um sieben Uhr einen Tisch frei? — У вас есть свободный столик в семь?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-32-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы придём вдвоём."
+      ],
+      "explanation": "Wir kommen zu zweit. — Мы придём вдвоём.",
+      "wordIds": [
+        "de:v015:32:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Wir kommen zu zweit.",
+      "options": [
+        "Я хотел бы забронировать столик.",
+        "Мы придём вдвоём.",
+        "У вас есть свободный столик в семь?"
+      ],
+      "hint": "Wir kommen zu zweit. — Мы придём вдвоём."
+    },
+    {
+      "id": "de-a1-32-e02",
+      "type": "order",
+      "prompt": "Собери реплику: У вас есть свободный столик в семь?",
+      "answers": [
+        "Haben Sie um sieben Uhr einen Tisch frei?"
+      ],
+      "explanation": "Für zwei Personen — на двоих. Um + время: um sieben Uhr. Auf den Namen… — на имя…",
+      "wordIds": [
+        "de:v015:32:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Haben",
+        "Sie",
+        "um",
+        "sieben",
+        "Uhr",
+        "einen",
+        "Tisch",
+        "frei?"
+      ],
+      "hint": "Haben Sie um sieben Uhr einen Tisch frei? — У вас есть свободный столик в семь?"
+    },
+    {
+      "id": "de-a1-32-e03",
+      "type": "dialogue",
+      "prompt": "Во сколько есть свободный столик?",
+      "answers": [
+        "В восемь."
+      ],
+      "explanation": "В диалоге: Haben Sie um sieben Uhr einen Tisch für zwei Personen frei? / Erst um acht Uhr. Passt das für Sie? Поэтому: В восемь.",
+      "wordIds": [
+        "de:v015:32:p0",
+        "de:v015:32:p1",
+        "de:v015:32:p2",
+        "de:v015:32:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Haben Sie um sieben Uhr einen Tisch für zwei Personen frei?\nМико: Erst um acht Uhr. Passt das für Sie?",
+      "options": [
+        "В семь.",
+        "В шесть.",
+        "В восемь."
+      ]
+    },
+    {
+      "id": "de-a1-32-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы забронировать столик.»?",
+      "answers": [
+        "Ich möchte einen Tisch reservieren."
+      ],
+      "explanation": "Ich möchte einen Tisch reservieren. — Я хотел бы забронировать столик.",
+      "wordIds": [
+        "de:v015:32:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Haben Sie um sieben Uhr einen Tisch frei?",
+        "Die Reservierung ist auf den Namen Weber.",
+        "Ich möchte einen Tisch reservieren."
+      ],
+      "hint": "Ich möchte einen Tisch reservieren. — Я хотел бы забронировать столик."
+    },
+    {
+      "id": "de-a1-32-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich möchte ein Tisch reservieren.",
+      "answers": [
+        "Ich möchte einen Tisch reservieren."
+      ],
+      "explanation": "Tisch — мужского рода; прямое дополнение здесь требует einen Tisch.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich möchte ein Tisch reservieren.",
+        "Ich möchte einen Tisch reservieren."
+      ],
+      "hint": "Für zwei Personen — на двоих. Um + время: um sieben Uhr. Auf den Namen… — на имя…"
+    },
+    {
+      "id": "de-a1-32-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Бронь на имя Вебер.». Можно написать вместо микрофона.",
+      "answers": [
+        "Die Reservierung ist auf den Namen Weber."
+      ],
+      "explanation": "Die Reservierung ist auf den Namen Weber. — Бронь на имя Вебер.",
+      "wordIds": [
+        "de:v015:32:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Die Reservierung ist auf den Namen Weber.",
+      "recall": {
+        "phrase": "Die Reservierung ist auf den Namen Weber.",
+        "meaning": "Бронь на имя Вебер."
+      }
+    },
+    {
+      "id": "de-a1-32-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы забронировать столик.",
+      "answers": [
+        "Ich möchte einen Tisch reservieren."
+      ],
+      "explanation": "Für zwei Personen — на двоих. Um + время: um sieben Uhr. Auf den Namen… — на имя…",
+      "wordIds": [
+        "de:v015:32:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich möchte einen Tisch reservieren.",
+        "meaning": "Я хотел бы забронировать столик."
+      }
+    },
+    {
+      "id": "de-a1-32-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Куртка слишком маленькая.",
+      "answers": [
+        "Die Jacke ist zu klein."
+      ],
+      "explanation": "Die Jacke ist zu klein. — Куртка слишком маленькая.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich möchte diese Jacke umtauschen.",
+        "Die Jacke ist zu klein.",
+        "Haben Sie eine größere Größe?",
+        "Hier ist der Kassenbon."
+      ]
+    }
+  ]
+}

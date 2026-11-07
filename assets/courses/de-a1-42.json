@@ -1,0 +1,253 @@
+{
+  "id": "de-a1-42",
+  "title": "Весточка из поездки",
+  "topic": "Мысли и новости",
+  "order": 41,
+  "objective": "Объединить прошлое, впечатление и план.",
+  "guide": "Для событий используем знакомое Perfekt, для состояния war; после morgen можно поставить план в Präsens. В главном предложении глагол сохраняет второе место.",
+  "vocabulary": [
+    {
+      "id": "de:v015:42:p0",
+      "en": "Wir sind gestern in Köln angekommen.",
+      "ru": "Вчера мы приехали в Кёльн."
+    },
+    {
+      "id": "de:v015:42:p1",
+      "en": "Das Hotel war leicht zu finden.",
+      "ru": "Гостиницу было легко найти."
+    },
+    {
+      "id": "de:v015:42:p2",
+      "en": "Wir haben schon den Dom besucht.",
+      "ru": "Мы уже посетили собор."
+    },
+    {
+      "id": "de:v015:42:p3",
+      "en": "Morgen möchten wir am Rhein spazieren gehen.",
+      "ru": "Завтра мы хотели бы погулять у Рейна."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Весточка из поездки",
+      "phrase": "Wir sind gestern in Köln angekommen.",
+      "translation": "Вчера мы приехали в Кёльн.",
+      "explanation": "Для событий используем знакомое Perfekt, для состояния war; после morgen можно поставить план в Präsens. В главном предложении глагол сохраняет второе место."
+    },
+    {
+      "character": "miko",
+      "title": "Весточка из поездки",
+      "phrase": "Das Hotel war leicht zu finden.",
+      "translation": "Гостиницу было легко найти.",
+      "explanation": "Das Hotel war leicht zu finden. — Гостиницу было легко найти."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Весточка из поездки",
+      "phrase": "Wir haben schon den Dom besucht.",
+      "translation": "Мы уже посетили собор.",
+      "explanation": "Wir haben schon den Dom besucht. — Мы уже посетили собор."
+    },
+    {
+      "character": "orbi",
+      "title": "Весточка из поездки",
+      "phrase": "Morgen möchten wir am Rhein spazieren gehen.",
+      "translation": "Завтра мы хотели бы погулять у Рейна.",
+      "explanation": "Morgen möchten wir am Rhein spazieren gehen. — Завтра мы хотели бы погулять у Рейна."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Wir sind gestern in Köln angekommen.",
+      "translation": "Вчера мы приехали в Кёльн.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Вчера мы приехали в Кёльн.",
+      "options": [
+        "Мы уже посетили собор.",
+        "Вчера мы приехали в Кёльн.",
+        "Завтра мы хотели бы погулять у Рейна."
+      ],
+      "explanation": "Для событий используем знакомое Perfekt, для состояния war; после morgen можно поставить план в Präsens. В главном предложении глагол сохраняет второе место."
+    },
+    {
+      "id": "apply",
+      "phrase": "Das Hotel war leicht zu finden.",
+      "translation": "Гостиницу было легко найти.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Das Hotel war leicht zu finden.",
+      "tokens": [
+        "Das",
+        "Hotel",
+        "war",
+        "leicht",
+        "zu",
+        "finden."
+      ],
+      "character": "miko",
+      "explanation": "Das Hotel war leicht zu finden. — Гостиницу было легко найти."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-42-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я надеюсь, что всё пройдёт хорошо.",
+      "answers": [
+        "Ich hoffe, dass alles gut geht."
+      ],
+      "explanation": "Ich hoffe, dass alles gut geht. — Я надеюсь, что всё пройдёт хорошо.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ich glaube, dass der Bus bald kommt.",
+        "Sie sagt, dass sie morgen Zeit hat.",
+        "Wir wissen, dass der Laden geschlossen ist.",
+        "Ich hoffe, dass alles gut geht."
+      ]
+    },
+    {
+      "id": "de-a1-42-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Вчера мы приехали в Кёльн.»?",
+      "answers": [
+        "Wir sind gestern in Köln angekommen."
+      ],
+      "explanation": "Wir sind gestern in Köln angekommen. — Вчера мы приехали в Кёльн.",
+      "wordIds": [
+        "de:v015:42:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Das Hotel war leicht zu finden.",
+        "Morgen möchten wir am Rhein spazieren gehen.",
+        "Wir sind gestern in Köln angekommen."
+      ],
+      "hint": "Wir sind gestern in Köln angekommen. — Вчера мы приехали в Кёльн."
+    },
+    {
+      "id": "de-a1-42-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Гостиницу было легко найти.",
+      "answers": [
+        "Das Hotel war leicht zu finden."
+      ],
+      "explanation": "Для событий используем знакомое Perfekt, для состояния war; после morgen можно поставить план в Präsens. В главном предложении глагол сохраняет второе место.",
+      "wordIds": [
+        "de:v015:42:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Das",
+        "Hotel",
+        "war",
+        "leicht",
+        "zu",
+        "finden."
+      ],
+      "hint": "Das Hotel war leicht zu finden. — Гостиницу было легко найти."
+    },
+    {
+      "id": "de-a1-42-e04",
+      "type": "dialogue",
+      "prompt": "Что путешественники планируют на завтра?",
+      "answers": [
+        "Прогулку у Рейна."
+      ],
+      "explanation": "В диалоге: Habt ihr den Dom schon besucht? / Ja, heute Vormittag. Morgen möchten wir am Rhein spazieren gehen. Поэтому: Прогулку у Рейна.",
+      "wordIds": [
+        "de:v015:42:p0",
+        "de:v015:42:p1",
+        "de:v015:42:p2",
+        "de:v015:42:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Habt ihr den Dom schon besucht?\nМико: Ja, heute Vormittag. Morgen möchten wir am Rhein spazieren gehen.",
+      "options": [
+        "Посещение собора.",
+        "Поиск гостиницы.",
+        "Прогулку у Рейна."
+      ]
+    },
+    {
+      "id": "de-a1-42-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы уже посетили собор."
+      ],
+      "explanation": "Wir haben schon den Dom besucht. — Мы уже посетили собор.",
+      "wordIds": [
+        "de:v015:42:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir haben schon den Dom besucht.",
+      "options": [
+        "Вчера мы приехали в Кёльн.",
+        "Мы уже посетили собор.",
+        "Гостиницу было легко найти."
+      ],
+      "hint": "Wir haben schon den Dom besucht. — Мы уже посетили собор."
+    },
+    {
+      "id": "de-a1-42-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wir haben gestern in Köln angekommen.",
+      "answers": [
+        "Wir sind gestern in Köln angekommen."
+      ],
+      "explanation": "Ankommen образует Perfekt с sein: wir sind angekommen.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Wir haben gestern in Köln angekommen.",
+        "Wir sind gestern in Köln angekommen."
+      ],
+      "hint": "Для событий используем знакомое Perfekt, для состояния war; после morgen можно поставить план в Präsens. В главном предложении глагол сохраняет второе место."
+    },
+    {
+      "id": "de-a1-42-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Завтра мы хотели бы погулять у Рейна.». Можно написать вместо микрофона.",
+      "answers": [
+        "Morgen möchten wir am Rhein spazieren gehen."
+      ],
+      "explanation": "Morgen möchten wir am Rhein spazieren gehen. — Завтра мы хотели бы погулять у Рейна.",
+      "wordIds": [
+        "de:v015:42:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Morgen möchten wir am Rhein spazieren gehen.",
+      "recall": {
+        "phrase": "Morgen möchten wir am Rhein spazieren gehen.",
+        "meaning": "Завтра мы хотели бы погулять у Рейна."
+      }
+    },
+    {
+      "id": "de-a1-42-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Вчера мы приехали в Кёльн.",
+      "answers": [
+        "Wir sind gestern in Köln angekommen."
+      ],
+      "explanation": "Для событий используем знакомое Perfekt, для состояния war; после morgen можно поставить план в Präsens. В главном предложении глагол сохраняет второе место.",
+      "wordIds": [
+        "de:v015:42:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Wir sind gestern in Köln angekommen.",
+        "meaning": "Вчера мы приехали в Кёльн."
+      }
+    }
+  ]
+}

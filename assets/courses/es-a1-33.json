@@ -1,0 +1,292 @@
+{
+  "id": "es-a1-33",
+  "title": "Заселиться в отель",
+  "topic": "В гостях и дома",
+  "order": 32,
+  "objective": "Сообщить о брони и узнать время завтрака.",
+  "guide": "Una habitación doble — двухместный номер. ¿A qué hora…? спрашивает о времени события.",
+  "vocabulary": [
+    {
+      "id": "es:v015:33:p0",
+      "en": "Tengo una reserva para dos noches.",
+      "ru": "У меня бронь на две ночи."
+    },
+    {
+      "id": "es:v015:33:p1",
+      "en": "¿A qué hora empieza el desayuno?",
+      "ru": "Во сколько начинается завтрак?"
+    },
+    {
+      "id": "es:v015:33:p2",
+      "en": "Necesitamos una habitación doble.",
+      "ru": "Нам нужен двухместный номер."
+    },
+    {
+      "id": "es:v015:33:p3",
+      "en": "¿Está incluido el desayuno?",
+      "ru": "Завтрак включён?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Заселиться в отель",
+      "phrase": "Tengo una reserva para dos noches.",
+      "translation": "У меня бронь на две ночи.",
+      "explanation": "Una habitación doble — двухместный номер. ¿A qué hora…? спрашивает о времени события."
+    },
+    {
+      "character": "miko",
+      "title": "Заселиться в отель",
+      "phrase": "¿A qué hora empieza el desayuno?",
+      "translation": "Во сколько начинается завтрак?",
+      "explanation": "¿A qué hora empieza el desayuno? — Во сколько начинается завтрак?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Заселиться в отель",
+      "phrase": "Necesitamos una habitación doble.",
+      "translation": "Нам нужен двухместный номер.",
+      "explanation": "Necesitamos una habitación doble. — Нам нужен двухместный номер."
+    },
+    {
+      "character": "orbi",
+      "title": "Заселиться в отель",
+      "phrase": "¿Está incluido el desayuno?",
+      "translation": "Завтрак включён?",
+      "explanation": "¿Está incluido el desayuno? — Завтрак включён?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Tengo una reserva para dos noches.",
+      "translation": "У меня бронь на две ночи.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "У меня бронь на две ночи.",
+      "options": [
+        "Нам нужен двухместный номер.",
+        "У меня бронь на две ночи.",
+        "Завтрак включён?"
+      ],
+      "explanation": "Una habitación doble — двухместный номер. ¿A qué hora…? спрашивает о времени события."
+    },
+    {
+      "id": "apply",
+      "phrase": "¿A qué hora empieza el desayuno?",
+      "translation": "Во сколько начинается завтрак?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "¿A qué hora empieza el desayuno?",
+      "tokens": [
+        "¿A",
+        "qué",
+        "hora",
+        "empieza",
+        "el",
+        "desayuno?"
+      ],
+      "character": "miko",
+      "explanation": "¿A qué hora empieza el desayuno? — Во сколько начинается завтрак?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-33-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Бронь на имя Аны.",
+      "answers": [
+        "La reserva está a nombre de Ana."
+      ],
+      "explanation": "La reserva está a nombre de Ana. — Бронь на имя Аны.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Quisiera reservar una mesa para dos.",
+        "¿Hay una mesa libre a las ocho?",
+        "La reserva está a nombre de Ana.",
+        "Preferimos una mesa junto a la ventana."
+      ]
+    },
+    {
+      "id": "es-a1-33-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «У меня бронь на две ночи.»?",
+      "answers": [
+        "Tengo una reserva para dos noches."
+      ],
+      "explanation": "Tengo una reserva para dos noches. — У меня бронь на две ночи.",
+      "wordIds": [
+        "es:v015:33:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "¿A qué hora empieza el desayuno?",
+        "¿Está incluido el desayuno?",
+        "Tengo una reserva para dos noches."
+      ],
+      "hint": "Tengo una reserva para dos noches. — У меня бронь на две ночи."
+    },
+    {
+      "id": "es-a1-33-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Во сколько начинается завтрак?",
+      "answers": [
+        "¿A qué hora empieza el desayuno?"
+      ],
+      "explanation": "Una habitación doble — двухместный номер. ¿A qué hora…? спрашивает о времени события.",
+      "wordIds": [
+        "es:v015:33:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "¿A",
+        "qué",
+        "hora",
+        "empieza",
+        "el",
+        "desayuno?"
+      ],
+      "hint": "¿A qué hora empieza el desayuno? — Во сколько начинается завтрак?"
+    },
+    {
+      "id": "es-a1-33-e04",
+      "type": "dialogue",
+      "prompt": "Когда заканчивается завтрак?",
+      "answers": [
+        "В десять."
+      ],
+      "explanation": "В диалоге: ¿Está incluido el desayuno? / Sí. Empieza a las siete y termina a las diez. Поэтому: В десять.",
+      "wordIds": [
+        "es:v015:33:p0",
+        "es:v015:33:p1",
+        "es:v015:33:p2",
+        "es:v015:33:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: ¿Está incluido el desayuno?\nМико: Sí. Empieza a las siete y termina a las diez.",
+      "options": [
+        "В семь.",
+        "В двенадцать.",
+        "В десять."
+      ]
+    },
+    {
+      "id": "es-a1-33-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Нам нужен двухместный номер."
+      ],
+      "explanation": "Necesitamos una habitación doble. — Нам нужен двухместный номер.",
+      "wordIds": [
+        "es:v015:33:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Necesitamos una habitación doble.",
+      "options": [
+        "У меня бронь на две ночи.",
+        "Нам нужен двухместный номер.",
+        "Во сколько начинается завтрак?"
+      ],
+      "hint": "Necesitamos una habitación doble. — Нам нужен двухместный номер."
+    },
+    {
+      "id": "es-a1-33-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v015:33:p0",
+        "es:v015:33:p1",
+        "es:v015:33:p2",
+        "es:v015:33:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v015:33:p0",
+          "en": "Tengo una reserva para dos noches.",
+          "ru": "У меня бронь на две ночи."
+        },
+        {
+          "id": "es:v015:33:p1",
+          "en": "¿A qué hora empieza el desayuno?",
+          "ru": "Во сколько начинается завтрак?"
+        },
+        {
+          "id": "es:v015:33:p2",
+          "en": "Necesitamos una habitación doble.",
+          "ru": "Нам нужен двухместный номер."
+        },
+        {
+          "id": "es:v015:33:p3",
+          "en": "¿Está incluido el desayuno?",
+          "ru": "Завтрак включён?"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-33-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Necesitamos un habitación doble.",
+      "answers": [
+        "Necesitamos una habitación doble."
+      ],
+      "explanation": "Habitación — женского рода: una habitación.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Necesitamos un habitación doble.",
+        "Necesitamos una habitación doble."
+      ],
+      "hint": "Una habitación doble — двухместный номер. ¿A qué hora…? спрашивает о времени события."
+    },
+    {
+      "id": "es-a1-33-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Завтрак включён?». Можно написать вместо микрофона.",
+      "answers": [
+        "¿Está incluido el desayuno?"
+      ],
+      "explanation": "¿Está incluido el desayuno? — Завтрак включён?",
+      "wordIds": [
+        "es:v015:33:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Está incluido el desayuno?",
+      "recall": {
+        "phrase": "¿Está incluido el desayuno?",
+        "meaning": "Завтрак включён?"
+      }
+    },
+    {
+      "id": "es-a1-33-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: У меня бронь на две ночи.",
+      "answers": [
+        "Tengo una reserva para dos noches."
+      ],
+      "explanation": "Una habitación doble — двухместный номер. ¿A qué hora…? спрашивает о времени события.",
+      "wordIds": [
+        "es:v015:33:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Tengo una reserva para dos noches.",
+        "meaning": "У меня бронь на две ночи."
+      }
+    }
+  ]
+}

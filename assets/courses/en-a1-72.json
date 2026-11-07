@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-72",
+  "title": "Сообщение из поездки",
+  "topic": "Просьбы и новости",
+  "order": 71,
+  "objective": "Связно сообщить о прибытии, опыте и ближайшем плане.",
+  "guide": "Соединяем знакомые формы: arrived yesterday — законченное прошлое; have already… — результат сейчас; going to — план.",
+  "vocabulary": [
+    {
+      "id": "en:v015:72:p0",
+      "en": "We arrived yesterday afternoon.",
+      "ru": "Мы приехали вчера днём."
+    },
+    {
+      "id": "en:v015:72:p1",
+      "en": "We've already explored the old town.",
+      "ru": "Мы уже осмотрели старый город."
+    },
+    {
+      "id": "en:v015:72:p2",
+      "en": "The hotel is quieter than we expected.",
+      "ru": "В гостинице тише, чем мы ожидали."
+    },
+    {
+      "id": "en:v015:72:p3",
+      "en": "Tomorrow we're going to visit the museum.",
+      "ru": "Завтра мы собираемся посетить музей."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сообщение из поездки",
+      "phrase": "We arrived yesterday afternoon.",
+      "translation": "Мы приехали вчера днём.",
+      "explanation": "Соединяем знакомые формы: arrived yesterday — законченное прошлое; have already… — результат сейчас; going to — план."
+    },
+    {
+      "character": "miko",
+      "title": "Сообщение из поездки",
+      "phrase": "We've already explored the old town.",
+      "translation": "Мы уже осмотрели старый город.",
+      "explanation": "We've already explored the old town. — Мы уже осмотрели старый город."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сообщение из поездки",
+      "phrase": "The hotel is quieter than we expected.",
+      "translation": "В гостинице тише, чем мы ожидали.",
+      "explanation": "The hotel is quieter than we expected. — В гостинице тише, чем мы ожидали."
+    },
+    {
+      "character": "orbi",
+      "title": "Сообщение из поездки",
+      "phrase": "Tomorrow we're going to visit the museum.",
+      "translation": "Завтра мы собираемся посетить музей.",
+      "explanation": "Tomorrow we're going to visit the museum. — Завтра мы собираемся посетить музей."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "We arrived yesterday afternoon.",
+      "translation": "Мы приехали вчера днём.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мы приехали вчера днём.",
+      "options": [
+        "В гостинице тише, чем мы ожидали.",
+        "Мы приехали вчера днём.",
+        "Завтра мы собираемся посетить музей."
+      ],
+      "explanation": "Соединяем знакомые формы: arrived yesterday — законченное прошлое; have already… — результат сейчас; going to — план."
+    },
+    {
+      "id": "apply",
+      "phrase": "We've already explored the old town.",
+      "translation": "Мы уже осмотрели старый город.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "We've already explored the old town.",
+      "tokens": [
+        "We've",
+        "already",
+        "explored",
+        "the",
+        "old",
+        "town."
+      ],
+      "character": "miko",
+      "explanation": "We've already explored the old town. — Мы уже осмотрели старый город."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-72-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Она попросила нас принести воду.",
+      "answers": [
+        "She asked us to bring water."
+      ],
+      "explanation": "She asked us to bring water. — Она попросила нас принести воду.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Could you ask Leo to call me?",
+        "Please tell her to wait here.",
+        "I asked him not to be late.",
+        "She asked us to bring water."
+      ]
+    },
+    {
+      "id": "en-a1-72-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Мы приехали вчера днём.»?",
+      "answers": [
+        "We arrived yesterday afternoon."
+      ],
+      "explanation": "We arrived yesterday afternoon. — Мы приехали вчера днём.",
+      "wordIds": [
+        "en:v015:72:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "We've already explored the old town.",
+        "Tomorrow we're going to visit the museum.",
+        "We arrived yesterday afternoon."
+      ],
+      "hint": "We arrived yesterday afternoon. — Мы приехали вчера днём."
+    },
+    {
+      "id": "en-a1-72-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Мы уже осмотрели старый город.",
+      "answers": [
+        "We've already explored the old town."
+      ],
+      "explanation": "Соединяем знакомые формы: arrived yesterday — законченное прошлое; have already… — результат сейчас; going to — план.",
+      "wordIds": [
+        "en:v015:72:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "We've",
+        "already",
+        "explored",
+        "the",
+        "old",
+        "town."
+      ],
+      "hint": "We've already explored the old town. — Мы уже осмотрели старый город."
+    },
+    {
+      "id": "en-a1-72-e04",
+      "type": "dialogue",
+      "prompt": "Куда путешественники собираются завтра?",
+      "answers": [
+        "В музей."
+      ],
+      "explanation": "В диалоге: Have you visited the museum yet? / Not yet. We explored the old town today, and we're going to visit the museum tomorrow. Поэтому: В музей.",
+      "wordIds": [
+        "en:v015:72:p0",
+        "en:v015:72:p1",
+        "en:v015:72:p2",
+        "en:v015:72:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Have you visited the museum yet?\nМико: Not yet. We explored the old town today, and we're going to visit the museum tomorrow.",
+      "options": [
+        "В старый город.",
+        "В аэропорт.",
+        "В музей."
+      ]
+    },
+    {
+      "id": "en-a1-72-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "В гостинице тише, чем мы ожидали."
+      ],
+      "explanation": "The hotel is quieter than we expected. — В гостинице тише, чем мы ожидали.",
+      "wordIds": [
+        "en:v015:72:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "The hotel is quieter than we expected.",
+      "options": [
+        "Мы приехали вчера днём.",
+        "В гостинице тише, чем мы ожидали.",
+        "Мы уже осмотрели старый город."
+      ],
+      "hint": "The hotel is quieter than we expected. — В гостинице тише, чем мы ожидали."
+    },
+    {
+      "id": "en-a1-72-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We've already explore the old town.",
+      "answers": [
+        "We've already explored the old town."
+      ],
+      "explanation": "После have нужна третья форма: у explore она образуется добавлением -d.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We've already explore the old town.",
+        "We've already explored the old town."
+      ],
+      "hint": "Соединяем знакомые формы: arrived yesterday — законченное прошлое; have already… — результат сейчас; going to — план."
+    },
+    {
+      "id": "en-a1-72-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Завтра мы собираемся посетить музей.». Можно написать вместо микрофона.",
+      "answers": [
+        "Tomorrow we're going to visit the museum."
+      ],
+      "explanation": "Tomorrow we're going to visit the museum. — Завтра мы собираемся посетить музей.",
+      "wordIds": [
+        "en:v015:72:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Tomorrow we're going to visit the museum.",
+      "recall": {
+        "phrase": "Tomorrow we're going to visit the museum.",
+        "meaning": "Завтра мы собираемся посетить музей."
+      }
+    },
+    {
+      "id": "en-a1-72-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мы приехали вчера днём.",
+      "answers": [
+        "We arrived yesterday afternoon."
+      ],
+      "explanation": "Соединяем знакомые формы: arrived yesterday — законченное прошлое; have already… — результат сейчас; going to — план.",
+      "wordIds": [
+        "en:v015:72:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "We arrived yesterday afternoon.",
+        "meaning": "Мы приехали вчера днём."
+      }
+    }
+  ]
+}

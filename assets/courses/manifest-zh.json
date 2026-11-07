@@ -189,6 +189,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "zh-v015",
+      "title": "Самостоятельное общение",
+      "themes": [
+        {
+          "id": "zh-v015-unit-1",
+          "title": "Обмен и бронирование",
+          "lessons": [
+            {
+              "id": "zh-a1-21",
+              "title": "Обменять одежду",
+              "asset": "assets/courses/zh-a1-21.json",
+              "order": 20
+            },
+            {
+              "id": "zh-a1-22",
+              "title": "Бронь на две ночи",
+              "asset": "assets/courses/zh-a1-22.json",
+              "order": 21
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-2",
+          "title": "Уже и сейчас",
+          "lessons": [
+            {
+              "id": "zh-a1-23",
+              "title": "Уже сделано",
+              "asset": "assets/courses/zh-a1-23.json",
+              "order": 22
+            },
+            {
+              "id": "zh-a1-24",
+              "title": "Прямо сейчас",
+              "asset": "assets/courses/zh-a1-24.json",
+              "order": 23
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-3",
+          "title": "Завершение и ожидание",
+          "lessons": [
+            {
+              "id": "zh-a1-25",
+              "title": "Довести до конца",
+              "asset": "assets/courses/zh-a1-25.json",
+              "order": 24
+            },
+            {
+              "id": "zh-a1-26",
+              "title": "Ещё не успел",
+              "asset": "assets/courses/zh-a1-26.json",
+              "order": 25
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-4",
+          "title": "Опыт и сравнение",
+          "lessons": [
+            {
+              "id": "zh-a1-27",
+              "title": "Был ли такой опыт",
+              "asset": "assets/courses/zh-a1-27.json",
+              "order": 26
+            },
+            {
+              "id": "zh-a1-28",
+              "title": "Сравнить два варианта",
+              "asset": "assets/courses/zh-a1-28.json",
+              "order": 27
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-5",
+          "title": "Скоро и по порядку",
+          "lessons": [
+            {
+              "id": "zh-a1-29",
+              "title": "Скоро начнётся",
+              "asset": "assets/courses/zh-a1-29.json",
+              "order": 28
+            },
+            {
+              "id": "zh-a1-30",
+              "title": "Сначала и потом",
+              "asset": "assets/courses/zh-a1-30.json",
+              "order": 29
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-6",
+          "title": "Результат и новости",
+          "lessons": [
+            {
+              "id": "zh-a1-31",
+              "title": "Понял и нашёл",
+              "asset": "assets/courses/zh-a1-31.json",
+              "order": 30
+            },
+            {
+              "id": "zh-a1-32",
+              "title": "Новости из поездки",
+              "asset": "assets/courses/zh-a1-32.json",
+              "order": 31
+            }
+          ]
+        }
+      ]
     }
   ]
 }

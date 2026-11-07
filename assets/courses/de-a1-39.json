@@ -1,0 +1,290 @@
+{
+  "id": "de-a1-39",
+  "title": "Вежливое пожелание",
+  "topic": "Вежливые действия",
+  "order": 38,
+  "objective": "Выразить желание и попросить о помощи.",
+  "guide": "Ich würde gern + инфинитив выражает пожелание. Könnten Sie…? — вежливая просьба; основной инфинитив остаётся в конце.",
+  "vocabulary": [
+    {
+      "id": "de:v015:39:p0",
+      "en": "Ich würde gern am Fenster sitzen.",
+      "ru": "Я хотел бы сидеть у окна."
+    },
+    {
+      "id": "de:v015:39:p1",
+      "en": "Könnten Sie mir bitte helfen?",
+      "ru": "Не могли бы вы мне помочь?"
+    },
+    {
+      "id": "de:v015:39:p2",
+      "en": "Wir würden gern früher ankommen.",
+      "ru": "Мы хотели бы приехать раньше."
+    },
+    {
+      "id": "de:v015:39:p3",
+      "en": "Ich hätte gern ein Glas Wasser.",
+      "ru": "Я хотел бы стакан воды."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Вежливое пожелание",
+      "phrase": "Ich würde gern am Fenster sitzen.",
+      "translation": "Я хотел бы сидеть у окна.",
+      "explanation": "Ich würde gern + инфинитив выражает пожелание. Könnten Sie…? — вежливая просьба; основной инфинитив остаётся в конце."
+    },
+    {
+      "character": "miko",
+      "title": "Вежливое пожелание",
+      "phrase": "Könnten Sie mir bitte helfen?",
+      "translation": "Не могли бы вы мне помочь?",
+      "explanation": "Könnten Sie mir bitte helfen? — Не могли бы вы мне помочь?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вежливое пожелание",
+      "phrase": "Wir würden gern früher ankommen.",
+      "translation": "Мы хотели бы приехать раньше.",
+      "explanation": "Wir würden gern früher ankommen. — Мы хотели бы приехать раньше."
+    },
+    {
+      "character": "orbi",
+      "title": "Вежливое пожелание",
+      "phrase": "Ich hätte gern ein Glas Wasser.",
+      "translation": "Я хотел бы стакан воды.",
+      "explanation": "Ich hätte gern ein Glas Wasser. — Я хотел бы стакан воды."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich würde gern am Fenster sitzen.",
+      "translation": "Я хотел бы сидеть у окна.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы сидеть у окна.",
+      "options": [
+        "Мы хотели бы приехать раньше.",
+        "Я хотел бы сидеть у окна.",
+        "Я хотел бы стакан воды."
+      ],
+      "explanation": "Ich würde gern + инфинитив выражает пожелание. Könnten Sie…? — вежливая просьба; основной инфинитив остаётся в конце."
+    },
+    {
+      "id": "apply",
+      "phrase": "Könnten Sie mir bitte helfen?",
+      "translation": "Не могли бы вы мне помочь?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Könnten Sie mir bitte helfen?",
+      "tokens": [
+        "Könnten",
+        "Sie",
+        "mir",
+        "bitte",
+        "helfen?"
+      ],
+      "character": "miko",
+      "explanation": "Könnten Sie mir bitte helfen? — Не могли бы вы мне помочь?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-39-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Вчера я был очень уставшим.",
+      "answers": [
+        "Ich war gestern sehr müde."
+      ],
+      "explanation": "Ich war gestern sehr müde. — Вчера я был очень уставшим.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ich war gestern sehr müde.",
+        "Wir hatten keine Zeit.",
+        "Das Wetter war schön.",
+        "Hattest du am Montag frei?"
+      ]
+    },
+    {
+      "id": "de-a1-39-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы сидеть у окна.»?",
+      "answers": [
+        "Ich würde gern am Fenster sitzen."
+      ],
+      "explanation": "Ich würde gern am Fenster sitzen. — Я хотел бы сидеть у окна.",
+      "wordIds": [
+        "de:v015:39:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Könnten Sie mir bitte helfen?",
+        "Ich hätte gern ein Glas Wasser.",
+        "Ich würde gern am Fenster sitzen."
+      ],
+      "hint": "Ich würde gern am Fenster sitzen. — Я хотел бы сидеть у окна."
+    },
+    {
+      "id": "de-a1-39-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Не могли бы вы мне помочь?",
+      "answers": [
+        "Könnten Sie mir bitte helfen?"
+      ],
+      "explanation": "Ich würde gern + инфинитив выражает пожелание. Könnten Sie…? — вежливая просьба; основной инфинитив остаётся в конце.",
+      "wordIds": [
+        "de:v015:39:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Könnten",
+        "Sie",
+        "mir",
+        "bitte",
+        "helfen?"
+      ],
+      "hint": "Könnten Sie mir bitte helfen? — Не могли бы вы мне помочь?"
+    },
+    {
+      "id": "de-a1-39-e04",
+      "type": "dialogue",
+      "prompt": "Где хочет сидеть собеседник?",
+      "answers": [
+        "У окна."
+      ],
+      "explanation": "В диалоге: Ich würde gern am Fenster sitzen. / Natürlich. Dieser Platz ist noch frei. Поэтому: У окна.",
+      "wordIds": [
+        "de:v015:39:p0",
+        "de:v015:39:p1",
+        "de:v015:39:p2",
+        "de:v015:39:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Ich würde gern am Fenster sitzen.\nМико: Natürlich. Dieser Platz ist noch frei.",
+      "options": [
+        "У двери.",
+        "В другой комнате.",
+        "У окна."
+      ]
+    },
+    {
+      "id": "de-a1-39-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы хотели бы приехать раньше."
+      ],
+      "explanation": "Wir würden gern früher ankommen. — Мы хотели бы приехать раньше.",
+      "wordIds": [
+        "de:v015:39:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir würden gern früher ankommen.",
+      "options": [
+        "Я хотел бы сидеть у окна.",
+        "Мы хотели бы приехать раньше.",
+        "Не могли бы вы мне помочь?"
+      ],
+      "hint": "Wir würden gern früher ankommen. — Мы хотели бы приехать раньше."
+    },
+    {
+      "id": "de-a1-39-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v015:39:p0",
+        "de:v015:39:p1",
+        "de:v015:39:p2",
+        "de:v015:39:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v015:39:p0",
+          "en": "Ich würde gern am Fenster sitzen.",
+          "ru": "Я хотел бы сидеть у окна."
+        },
+        {
+          "id": "de:v015:39:p1",
+          "en": "Könnten Sie mir bitte helfen?",
+          "ru": "Не могли бы вы мне помочь?"
+        },
+        {
+          "id": "de:v015:39:p2",
+          "en": "Wir würden gern früher ankommen.",
+          "ru": "Мы хотели бы приехать раньше."
+        },
+        {
+          "id": "de:v015:39:p3",
+          "en": "Ich hätte gern ein Glas Wasser.",
+          "ru": "Я хотел бы стакан воды."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-39-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wir würde gern früher ankommen.",
+      "answers": [
+        "Wir würden gern früher ankommen."
+      ],
+      "explanation": "С wir нужна форма würden; würde сочетается с ich, er, sie или es.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Wir würde gern früher ankommen.",
+        "Wir würden gern früher ankommen."
+      ],
+      "hint": "Ich würde gern + инфинитив выражает пожелание. Könnten Sie…? — вежливая просьба; основной инфинитив остаётся в конце."
+    },
+    {
+      "id": "de-a1-39-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я хотел бы стакан воды.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ich hätte gern ein Glas Wasser."
+      ],
+      "explanation": "Ich hätte gern ein Glas Wasser. — Я хотел бы стакан воды.",
+      "wordIds": [
+        "de:v015:39:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ich hätte gern ein Glas Wasser.",
+      "recall": {
+        "phrase": "Ich hätte gern ein Glas Wasser.",
+        "meaning": "Я хотел бы стакан воды."
+      }
+    },
+    {
+      "id": "de-a1-39-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы сидеть у окна.",
+      "answers": [
+        "Ich würde gern am Fenster sitzen."
+      ],
+      "explanation": "Ich würde gern + инфинитив выражает пожелание. Könnten Sie…? — вежливая просьба; основной инфинитив остаётся в конце.",
+      "wordIds": [
+        "de:v015:39:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich würde gern am Fenster sitzen.",
+        "meaning": "Я хотел бы сидеть у окна."
+      }
+    }
+  ]
+}

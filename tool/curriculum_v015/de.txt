@@ -1,0 +1,108 @@
+##
+Обменять куртку|Объяснить проблему с покупкой и попросить обмен.|Ich möchte… — вежливое желание. Umtauschen — глагол для обмена покупки; после möchte он стоит в конце в инфинитиве.
+Ich möchte diese Jacke umtauschen.~Я хотел бы обменять эту куртку.
+Die Jacke ist zu klein.~Куртка слишком маленькая.
+Haben Sie eine größere Größe?~У вас есть размер побольше?
+Hier ist der Kassenbon.~Вот кассовый чек.
+Ich möchte diese Jacke umtauschen. Sie ist zu klein. / Haben Sie den Kassenbon dabei?
+Что продавец просит показать?|Кассовый чек.|Билет.|Адрес гостиницы.
+Ich möchte diese Jacke tausche um.~Ich möchte diese Jacke umtauschen.~После möchte нужен цельный инфинитив umtauschen в конце.
+##
+Столик на вечер|Забронировать столик и уточнить время.|Für zwei Personen — на двоих. Um + время: um sieben Uhr. Auf den Namen… — на имя…
+Ich möchte einen Tisch reservieren.~Я хотел бы забронировать столик.
+Haben Sie um sieben Uhr einen Tisch frei?~У вас есть свободный столик в семь?
+Wir kommen zu zweit.~Мы придём вдвоём.
+Die Reservierung ist auf den Namen Weber.~Бронь на имя Вебер.
+Haben Sie um sieben Uhr einen Tisch für zwei Personen frei? / Erst um acht Uhr. Passt das für Sie?
+Во сколько есть свободный столик?|В восемь.|В семь.|В шесть.
+Ich möchte ein Tisch reservieren.~Ich möchte einen Tisch reservieren.~Tisch — мужского рода; прямое дополнение здесь требует einen Tisch.
+##
+В гостинице|Заселиться и спросить о времени выезда.|Für zwei Nächte обозначает срок брони. В вопросе Bis wann…? уточняем крайний срок.
+Ich habe ein Zimmer für zwei Nächte gebucht.~Я забронировал номер на две ночи.
+Ist das Frühstück im Preis enthalten?~Завтрак входит в стоимость?
+Bis wann müssen wir auschecken?~До какого времени нам нужно выехать?
+Könnten wir ein ruhiges Zimmer bekommen?~Можно нам получить тихий номер?
+Ist das Frühstück im Preis enthalten? / Ja, es gibt Frühstück ab sieben Uhr. Auschecken müssen Sie bis elf Uhr.
+Когда начинается завтрак?|В семь.|В одиннадцать.|В двенадцать.
+Bis wann wir müssen auschecken?~Bis wann müssen wir auschecken?~После вопросительной группы Bis wann стоит спрягаемый müssen, затем wir.
+##
+Кому я отправляю|Различать получателя и предмет в простых фразах.|Dativ обозначает получателя: dem Freund, der Freundin. Akkusativ обозначает предмет: die Adresse, den Schlüssel.
+Ich schicke meiner Freundin die Adresse.~Я отправляю своей подруге адрес.
+Er gibt dem Kind ein Buch.~Он даёт ребёнку книгу.
+Wir zeigen dem Gast das Zimmer.~Мы показываем гостю номер.
+Kannst du mir den Schlüssel geben?~Можешь дать мне ключ?
+Kannst du mir die Adresse schicken? / Ja, ich schicke dir die Adresse heute Abend.
+Когда будет отправлен адрес?|Сегодня вечером.|Завтра утром.|Через неделю.
+Er gibt das Kind ein Buch.~Er gibt dem Kind ein Buch.~Ребёнок — получатель: das Kind становится dem Kind. Книга остаётся ein Buch.
+##
+Что я сделал|Сообщить о завершённом действии с haben.|Perfekt часто используется в разговоре о прошлом: haben + Partizip II в конце. Machen → gemacht, kaufen → gekauft.
+Ich habe gestern gekocht.~Вчера я готовил.
+Wir haben frisches Brot gekauft.~Мы купили свежий хлеб.
+Hast du die Rechnung bezahlt?~Ты оплатил счёт?
+Sie hat lange gewartet.~Она долго ждала.
+Hast du die Rechnung bezahlt? / Ja, ich habe sie schon bezahlt. Danach habe ich Brot gekauft.
+Что собеседник сделал после оплаты счёта?|Купил хлеб.|Приготовил ужин.|Долго ждал.
+Ich habe gestern kochen.~Ich habe gestern gekocht.~В Perfekt после habe нужен Partizip II gekocht, а не инфинитив kochen.
+##
+Как прошла дорога|Использовать sein с перемещением в прошлом.|При перемещении многие глаголы образуют Perfekt с sein: ich bin gefahren, wir sind angekommen. Приставка an остаётся в angekommen.
+Ich bin mit dem Zug gefahren.~Я ехал на поезде.
+Wir sind um acht Uhr angekommen.~Мы приехали в восемь.
+Bist du zu Fuß gegangen?~Ты пошёл пешком?
+Sie ist gestern nach Berlin geflogen.~Она вчера полетела в Берлин.
+Seid ihr mit dem Bus gefahren? / Nein, wir sind mit dem Zug gefahren und um acht Uhr angekommen.
+Как путешественники добрались?|На поезде.|На автобусе.|Пешком.
+Ich habe mit dem Zug gefahren.~Ich bin mit dem Zug gefahren.~Fahren при перемещении образует Perfekt с sein: ich bin gefahren.
+##
+Вопрос о вчерашнем дне|Задавать вопросы о прошлом и отрицать завершённое действие.|В вопросе с wo/was/wann вспомогательный глагол идёт после вопросительного слова, а Partizip II — в конце.
+Was hast du gestern gemacht?~Что ты делал вчера?
+Wann seid ihr angekommen?~Когда вы приехали?
+Ich habe die Nachricht nicht gelesen.~Я не прочитал сообщение.
+Wo hast du den Schlüssel gefunden?~Где ты нашёл ключ?
+Wo hast du den Schlüssel gefunden? / In meiner Tasche. Ich habe ihn gestern dort gefunden.
+Где нашёлся ключ?|В сумке.|В поезде.|На столе.
+Was du hast gestern gemacht?~Was hast du gestern gemacht?~После was в вопросе стоит hast, затем подлежащее du.
+##
+Каким был день|Использовать war и hatte для прошлого состояния.|В разговоре sein и haben часто ставят в Präteritum: ich war — я был, ich hatte — у меня было; wir waren, wir hatten.
+Ich war gestern sehr müde.~Вчера я был очень уставшим.
+Wir hatten keine Zeit.~У нас не было времени.
+Das Wetter war schön.~Погода была хорошая.
+Hattest du am Montag frei?~У тебя был выходной в понедельник?
+Hattest du am Montag frei? / Ja, aber ich war sehr müde und bin zu Hause geblieben.
+Как собеседник провёл выходной?|Остался дома.|Поехал в Берлин.|Работал весь день.
+Wir hatte keine Zeit.~Wir hatten keine Zeit.~С wir прошедшая форма haben — hatten.
+##
+Вежливое пожелание|Выразить желание и попросить о помощи.|Ich würde gern + инфинитив выражает пожелание. Könnten Sie…? — вежливая просьба; основной инфинитив остаётся в конце.
+Ich würde gern am Fenster sitzen.~Я хотел бы сидеть у окна.
+Könnten Sie mir bitte helfen?~Не могли бы вы мне помочь?
+Wir würden gern früher ankommen.~Мы хотели бы приехать раньше.
+Ich hätte gern ein Glas Wasser.~Я хотел бы стакан воды.
+Ich würde gern am Fenster sitzen. / Natürlich. Dieser Platz ist noch frei.
+Где хочет сидеть собеседник?|У окна.|У двери.|В другой комнате.
+Wir würde gern früher ankommen.~Wir würden gern früher ankommen.~С wir нужна форма würden; würde сочетается с ich, er, sie или es.
+##
+Короткая инструкция|Понять и составить вежливую последовательность действий.|В обращении на Sie повелительная форма начинается с глагола: Öffnen Sie… Отделяемая приставка остаётся в конце: Füllen Sie… aus.
+Öffnen Sie bitte das Fenster.~Откройте, пожалуйста, окно.
+Füllen Sie bitte dieses Formular aus.~Заполните, пожалуйста, этот бланк.
+Unterschreiben Sie bitte hier.~Распишитесь, пожалуйста, здесь.
+Warten Sie einen Moment.~Подождите минутку.
+Was soll ich zuerst machen? / Füllen Sie bitte dieses Formular aus. Unterschreiben Sie danach hier.
+Что нужно сделать сначала?|Заполнить бланк.|Поставить подпись.|Открыть окно.
+Füllen Sie bitte aus dieses Formular.~Füllen Sie bitte dieses Formular aus.~Отделяемая приставка aus стоит в конце предложения.
+##
+Сказать, что я думаю|Соединить мнение и сообщение через dass.|После dass спрягаемый глагол уходит в конец придаточного: Ich glaube, dass der Bus kommt. Перед dass ставится запятая.
+Ich glaube, dass der Bus bald kommt.~Я думаю, что автобус скоро придёт.
+Sie sagt, dass sie morgen Zeit hat.~Она говорит, что завтра у неё есть время.
+Wir wissen, dass der Laden geschlossen ist.~Мы знаем, что магазин закрыт.
+Ich hoffe, dass alles gut geht.~Я надеюсь, что всё пройдёт хорошо.
+Hat Lea morgen Zeit? / Ja, sie sagt, dass sie morgen Zeit hat. Heute arbeitet sie lange.
+Когда у Леа есть свободное время?|Завтра.|Сегодня утром.|Сегодня весь день.
+Ich glaube, dass der Bus kommt bald.~Ich glaube, dass der Bus bald kommt.~В придаточном с dass спрягаемый kommt ставится в конец.
+##
+Весточка из поездки|Объединить прошлое, впечатление и план.|Для событий используем знакомое Perfekt, для состояния war; после morgen можно поставить план в Präsens. В главном предложении глагол сохраняет второе место.
+Wir sind gestern in Köln angekommen.~Вчера мы приехали в Кёльн.
+Das Hotel war leicht zu finden.~Гостиницу было легко найти.
+Wir haben schon den Dom besucht.~Мы уже посетили собор.
+Morgen möchten wir am Rhein spazieren gehen.~Завтра мы хотели бы погулять у Рейна.
+Habt ihr den Dom schon besucht? / Ja, heute Vormittag. Morgen möchten wir am Rhein spazieren gehen.
+Что путешественники планируют на завтра?|Прогулку у Рейна.|Посещение собора.|Поиск гостиницы.
+Wir haben gestern in Köln angekommen.~Wir sind gestern in Köln angekommen.~Ankommen образует Perfekt с sein: wir sind angekommen.

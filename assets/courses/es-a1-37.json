@@ -1,0 +1,292 @@
+{
+  "id": "es-a1-37",
+  "title": "Куда ездили",
+  "topic": "Поездки и события",
+  "order": 36,
+  "objective": "Рассказать о поездке с формами fui и fuimos.",
+  "guide": "Fui и fuimos — формы ir в законченном прошлом. A обозначает направление; a + el сокращается до al.",
+  "vocabulary": [
+    {
+      "id": "es:v015:37:p0",
+      "en": "El domingo fui al museo.",
+      "ru": "В воскресенье я ходил в музей."
+    },
+    {
+      "id": "es:v015:37:p1",
+      "en": "Fuimos a la playa en autobús.",
+      "ru": "Мы ездили на пляж на автобусе."
+    },
+    {
+      "id": "es:v015:37:p2",
+      "en": "¿Fuiste al concierto?",
+      "ru": "Ты ходил на концерт?"
+    },
+    {
+      "id": "es:v015:37:p3",
+      "en": "Después volvimos a casa.",
+      "ru": "Потом мы вернулись домой."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Куда ездили",
+      "phrase": "El domingo fui al museo.",
+      "translation": "В воскресенье я ходил в музей.",
+      "explanation": "Fui и fuimos — формы ir в законченном прошлом. A обозначает направление; a + el сокращается до al."
+    },
+    {
+      "character": "miko",
+      "title": "Куда ездили",
+      "phrase": "Fuimos a la playa en autobús.",
+      "translation": "Мы ездили на пляж на автобусе.",
+      "explanation": "Fuimos a la playa en autobús. — Мы ездили на пляж на автобусе."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Куда ездили",
+      "phrase": "¿Fuiste al concierto?",
+      "translation": "Ты ходил на концерт?",
+      "explanation": "¿Fuiste al concierto? — Ты ходил на концерт?"
+    },
+    {
+      "character": "orbi",
+      "title": "Куда ездили",
+      "phrase": "Después volvimos a casa.",
+      "translation": "Потом мы вернулись домой.",
+      "explanation": "Después volvimos a casa. — Потом мы вернулись домой."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "El domingo fui al museo.",
+      "translation": "В воскресенье я ходил в музей.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "В воскресенье я ходил в музей.",
+      "options": [
+        "Ты ходил на концерт?",
+        "В воскресенье я ходил в музей.",
+        "Потом мы вернулись домой."
+      ],
+      "explanation": "Fui и fuimos — формы ir в законченном прошлом. A обозначает направление; a + el сокращается до al."
+    },
+    {
+      "id": "apply",
+      "phrase": "Fuimos a la playa en autobús.",
+      "translation": "Мы ездили на пляж на автобусе.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Fuimos a la playa en autobús.",
+      "tokens": [
+        "Fuimos",
+        "a",
+        "la",
+        "playa",
+        "en",
+        "autobús."
+      ],
+      "character": "miko",
+      "explanation": "Fuimos a la playa en autobús. — Мы ездили на пляж на автобусе."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-37-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «В воскресенье я ходил в музей.»?",
+      "answers": [
+        "El domingo fui al museo."
+      ],
+      "explanation": "El domingo fui al museo. — В воскресенье я ходил в музей.",
+      "wordIds": [
+        "es:v015:37:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Fuimos a la playa en autobús.",
+        "Después volvimos a casa.",
+        "El domingo fui al museo."
+      ],
+      "hint": "El domingo fui al museo. — В воскресенье я ходил в музей."
+    },
+    {
+      "id": "es-a1-37-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы ездили на пляж на автобусе.",
+      "answers": [
+        "Fuimos a la playa en autobús."
+      ],
+      "explanation": "Fui и fuimos — формы ir в законченном прошлом. A обозначает направление; a + el сокращается до al.",
+      "wordIds": [
+        "es:v015:37:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Fuimos",
+        "a",
+        "la",
+        "playa",
+        "en",
+        "autobús."
+      ],
+      "hint": "Fuimos a la playa en autobús. — Мы ездили на пляж на автобусе."
+    },
+    {
+      "id": "es-a1-37-e03",
+      "type": "dialogue",
+      "prompt": "Где был собеседник в воскресенье?",
+      "answers": [
+        "В музее."
+      ],
+      "explanation": "В диалоге: ¿Fuiste al concierto el domingo? / No, fui al museo. Después volví a casa. Поэтому: В музее.",
+      "wordIds": [
+        "es:v015:37:p0",
+        "es:v015:37:p1",
+        "es:v015:37:p2",
+        "es:v015:37:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Fuiste al concierto el domingo?\nМико: No, fui al museo. Después volví a casa.",
+      "options": [
+        "На концерте.",
+        "На пляже.",
+        "В музее."
+      ]
+    },
+    {
+      "id": "es-a1-37-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ты ходил на концерт?"
+      ],
+      "explanation": "¿Fuiste al concierto? — Ты ходил на концерт?",
+      "wordIds": [
+        "es:v015:37:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Fuiste al concierto?",
+      "options": [
+        "В воскресенье я ходил в музей.",
+        "Ты ходил на концерт?",
+        "Мы ездили на пляж на автобусе."
+      ],
+      "hint": "¿Fuiste al concierto? — Ты ходил на концерт?"
+    },
+    {
+      "id": "es-a1-37-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v015:37:p0",
+        "es:v015:37:p1",
+        "es:v015:37:p2",
+        "es:v015:37:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v015:37:p0",
+          "en": "El domingo fui al museo.",
+          "ru": "В воскресенье я ходил в музей."
+        },
+        {
+          "id": "es:v015:37:p1",
+          "en": "Fuimos a la playa en autobús.",
+          "ru": "Мы ездили на пляж на автобусе."
+        },
+        {
+          "id": "es:v015:37:p2",
+          "en": "¿Fuiste al concierto?",
+          "ru": "Ты ходил на концерт?"
+        },
+        {
+          "id": "es:v015:37:p3",
+          "en": "Después volvimos a casa.",
+          "ru": "Потом мы вернулись домой."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-37-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Fuimos a el museo.",
+      "answers": [
+        "Fuimos al museo."
+      ],
+      "explanation": "Предлог a с артиклем el сокращается до al.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Fuimos a el museo.",
+        "Fuimos al museo."
+      ],
+      "hint": "Fui и fuimos — формы ir в законченном прошлом. A обозначает направление; a + el сокращается до al."
+    },
+    {
+      "id": "es-a1-37-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Потом мы вернулись домой.». Можно написать вместо микрофона.",
+      "answers": [
+        "Después volvimos a casa."
+      ],
+      "explanation": "Después volvimos a casa. — Потом мы вернулись домой.",
+      "wordIds": [
+        "es:v015:37:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Después volvimos a casa.",
+      "recall": {
+        "phrase": "Después volvimos a casa.",
+        "meaning": "Потом мы вернулись домой."
+      }
+    },
+    {
+      "id": "es-a1-37-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: В воскресенье я ходил в музей.",
+      "answers": [
+        "El domingo fui al museo."
+      ],
+      "explanation": "Fui и fuimos — формы ir в законченном прошлом. A обозначает направление; a + el сокращается до al.",
+      "wordIds": [
+        "es:v015:37:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "El domingo fui al museo.",
+        "meaning": "В воскресенье я ходил в музей."
+      }
+    },
+    {
+      "id": "es-a1-37-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Днём я написал сообщение.",
+      "answers": [
+        "Escribí un mensaje por la tarde."
+      ],
+      "explanation": "Escribí un mensaje por la tarde. — Днём я написал сообщение.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ayer compré fruta.",
+        "Comí con una amiga.",
+        "Escribí un mensaje por la tarde.",
+        "¿Terminaste el trabajo?"
+      ]
+    }
+  ]
+}

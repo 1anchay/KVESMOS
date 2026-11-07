@@ -13,6 +13,7 @@ on:
       - codex/kvesmos-v012-five-languages-polish
       - codex/kvesmos-v013-learning-revolution
       - codex/kvesmos-v014-learning-experience
+      - codex/kvesmos-v015-road-to-1
   workflow_dispatch:
 
 jobs:

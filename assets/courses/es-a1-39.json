@@ -1,0 +1,288 @@
+{
+  "id": "es-a1-39",
+  "title": "Обычно и вчера",
+  "topic": "Привычки и выбор",
+  "order": 38,
+  "objective": "Различать привычку и отдельное действие в прошлом.",
+  "guide": "Normalmente сочетается с настоящим, ayer — с законченным прошлым. Сравни: voy — иду обычно, fui — сходил.",
+  "vocabulary": [
+    {
+      "id": "es:v015:39:p0",
+      "en": "Normalmente voy a pie.",
+      "ru": "Обычно я хожу пешком."
+    },
+    {
+      "id": "es:v015:39:p1",
+      "en": "Ayer tomé el autobús.",
+      "ru": "Вчера я поехал на автобусе."
+    },
+    {
+      "id": "es:v015:39:p2",
+      "en": "Siempre desayuno en casa.",
+      "ru": "Я всегда завтракаю дома."
+    },
+    {
+      "id": "es:v015:39:p3",
+      "en": "El lunes desayuné en una cafetería.",
+      "ru": "В понедельник я позавтракал в кафе."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Обычно и вчера",
+      "phrase": "Normalmente voy a pie.",
+      "translation": "Обычно я хожу пешком.",
+      "explanation": "Normalmente сочетается с настоящим, ayer — с законченным прошлым. Сравни: voy — иду обычно, fui — сходил."
+    },
+    {
+      "character": "miko",
+      "title": "Обычно и вчера",
+      "phrase": "Ayer tomé el autobús.",
+      "translation": "Вчера я поехал на автобусе.",
+      "explanation": "Ayer tomé el autobús. — Вчера я поехал на автобусе."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Обычно и вчера",
+      "phrase": "Siempre desayuno en casa.",
+      "translation": "Я всегда завтракаю дома.",
+      "explanation": "Siempre desayuno en casa. — Я всегда завтракаю дома."
+    },
+    {
+      "character": "orbi",
+      "title": "Обычно и вчера",
+      "phrase": "El lunes desayuné en una cafetería.",
+      "translation": "В понедельник я позавтракал в кафе.",
+      "explanation": "El lunes desayuné en una cafetería. — В понедельник я позавтракал в кафе."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Normalmente voy a pie.",
+      "translation": "Обычно я хожу пешком.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Обычно я хожу пешком.",
+      "options": [
+        "Я всегда завтракаю дома.",
+        "Обычно я хожу пешком.",
+        "В понедельник я позавтракал в кафе."
+      ],
+      "explanation": "Normalmente сочетается с настоящим, ayer — с законченным прошлым. Сравни: voy — иду обычно, fui — сходил."
+    },
+    {
+      "id": "apply",
+      "phrase": "Ayer tomé el autobús.",
+      "translation": "Вчера я поехал на автобусе.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Ayer tomé el autobús.",
+      "tokens": [
+        "Ayer",
+        "tomé",
+        "el",
+        "autobús."
+      ],
+      "character": "miko",
+      "explanation": "Ayer tomé el autobús. — Вчера я поехал на автобусе."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-39-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Что ты делал вчера?",
+      "answers": [
+        "¿Qué hiciste ayer?"
+      ],
+      "explanation": "¿Qué hiciste ayer? — Что ты делал вчера?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "¿Qué hiciste ayer?",
+        "Hice la cena para mi familia.",
+        "Tuve una reunión por la mañana.",
+        "No tuve tiempo para llamar."
+      ]
+    },
+    {
+      "id": "es-a1-39-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Обычно я хожу пешком.»?",
+      "answers": [
+        "Normalmente voy a pie."
+      ],
+      "explanation": "Normalmente voy a pie. — Обычно я хожу пешком.",
+      "wordIds": [
+        "es:v015:39:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Ayer tomé el autobús.",
+        "El lunes desayuné en una cafetería.",
+        "Normalmente voy a pie."
+      ],
+      "hint": "Normalmente voy a pie. — Обычно я хожу пешком."
+    },
+    {
+      "id": "es-a1-39-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Вчера я поехал на автобусе.",
+      "answers": [
+        "Ayer tomé el autobús."
+      ],
+      "explanation": "Normalmente сочетается с настоящим, ayer — с законченным прошлым. Сравни: voy — иду обычно, fui — сходил.",
+      "wordIds": [
+        "es:v015:39:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Ayer",
+        "tomé",
+        "el",
+        "autobús."
+      ],
+      "hint": "Ayer tomé el autobús. — Вчера я поехал на автобусе."
+    },
+    {
+      "id": "es-a1-39-e04",
+      "type": "dialogue",
+      "prompt": "Чем отличался понедельник?",
+      "answers": [
+        "Завтрак был в кафе."
+      ],
+      "explanation": "В диалоге: ¿Siempre desayunas en casa? / Normalmente sí, pero el lunes desayuné en una cafetería. Поэтому: Завтрак был в кафе.",
+      "wordIds": [
+        "es:v015:39:p0",
+        "es:v015:39:p1",
+        "es:v015:39:p2",
+        "es:v015:39:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: ¿Siempre desayunas en casa?\nМико: Normalmente sí, pero el lunes desayuné en una cafetería.",
+      "options": [
+        "Завтрака не было.",
+        "Завтрак был дома, как всегда.",
+        "Завтрак был в кафе."
+      ]
+    },
+    {
+      "id": "es-a1-39-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я всегда завтракаю дома."
+      ],
+      "explanation": "Siempre desayuno en casa. — Я всегда завтракаю дома.",
+      "wordIds": [
+        "es:v015:39:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Siempre desayuno en casa.",
+      "options": [
+        "Обычно я хожу пешком.",
+        "Я всегда завтракаю дома.",
+        "Вчера я поехал на автобусе."
+      ],
+      "hint": "Siempre desayuno en casa. — Я всегда завтракаю дома."
+    },
+    {
+      "id": "es-a1-39-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v015:39:p0",
+        "es:v015:39:p1",
+        "es:v015:39:p2",
+        "es:v015:39:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v015:39:p0",
+          "en": "Normalmente voy a pie.",
+          "ru": "Обычно я хожу пешком."
+        },
+        {
+          "id": "es:v015:39:p1",
+          "en": "Ayer tomé el autobús.",
+          "ru": "Вчера я поехал на автобусе."
+        },
+        {
+          "id": "es:v015:39:p2",
+          "en": "Siempre desayuno en casa.",
+          "ru": "Я всегда завтракаю дома."
+        },
+        {
+          "id": "es:v015:39:p3",
+          "en": "El lunes desayuné en una cafetería.",
+          "ru": "В понедельник я позавтракал в кафе."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-39-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ayer tomo el autobús.",
+      "answers": [
+        "Ayer tomé el autobús."
+      ],
+      "explanation": "Для законченного действия с ayer нужна прошедшая форма tomé.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ayer tomo el autobús.",
+        "Ayer tomé el autobús."
+      ],
+      "hint": "Normalmente сочетается с настоящим, ayer — с законченным прошлым. Сравни: voy — иду обычно, fui — сходил."
+    },
+    {
+      "id": "es-a1-39-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «В понедельник я позавтракал в кафе.». Можно написать вместо микрофона.",
+      "answers": [
+        "El lunes desayuné en una cafetería."
+      ],
+      "explanation": "El lunes desayuné en una cafetería. — В понедельник я позавтракал в кафе.",
+      "wordIds": [
+        "es:v015:39:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "El lunes desayuné en una cafetería.",
+      "recall": {
+        "phrase": "El lunes desayuné en una cafetería.",
+        "meaning": "В понедельник я позавтракал в кафе."
+      }
+    },
+    {
+      "id": "es-a1-39-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Обычно я хожу пешком.",
+      "answers": [
+        "Normalmente voy a pie."
+      ],
+      "explanation": "Normalmente сочетается с настоящим, ayer — с законченным прошлым. Сравни: voy — иду обычно, fui — сходил.",
+      "wordIds": [
+        "es:v015:39:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Normalmente voy a pie.",
+        "meaning": "Обычно я хожу пешком."
+      }
+    }
+  ]
+}

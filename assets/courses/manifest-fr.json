@@ -189,6 +189,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fr-v015",
+      "title": "Самостоятельное общение",
+      "themes": [
+        {
+          "id": "fr-v015-unit-1",
+          "title": "Покупки и бронирование",
+          "lessons": [
+            {
+              "id": "fr-a1-21",
+              "title": "Обменять одежду",
+              "asset": "assets/courses/fr-a1-21.json",
+              "order": 20
+            },
+            {
+              "id": "fr-a1-22",
+              "title": "Столик на двоих",
+              "asset": "assets/courses/fr-a1-22.json",
+              "order": 21
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-2",
+          "title": "Номер и вещи",
+          "lessons": [
+            {
+              "id": "fr-a1-23",
+              "title": "На ресепшене",
+              "asset": "assets/courses/fr-a1-23.json",
+              "order": 22
+            },
+            {
+              "id": "fr-a1-24",
+              "title": "Этот, эта и эти",
+              "asset": "assets/courses/fr-a1-24.json",
+              "order": 23
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-3",
+          "title": "Прошлое с avoir",
+          "lessons": [
+            {
+              "id": "fr-a1-25",
+              "title": "Вчерашние дела",
+              "asset": "assets/courses/fr-a1-25.json",
+              "order": 24
+            },
+            {
+              "id": "fr-a1-26",
+              "title": "Увидел и сделал",
+              "asset": "assets/courses/fr-a1-26.json",
+              "order": 25
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-4",
+          "title": "Движение и вопросы",
+          "lessons": [
+            {
+              "id": "fr-a1-27",
+              "title": "Приехали и вернулись",
+              "asset": "assets/courses/fr-a1-27.json",
+              "order": 26
+            },
+            {
+              "id": "fr-a1-28",
+              "title": "Что случилось вчера",
+              "asset": "assets/courses/fr-a1-28.json",
+              "order": 27
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-5",
+          "title": "Фон и сравнение",
+          "lessons": [
+            {
+              "id": "fr-a1-29",
+              "title": "Каким всё было",
+              "asset": "assets/courses/fr-a1-29.json",
+              "order": 28
+            },
+            {
+              "id": "fr-a1-30",
+              "title": "Сравнить варианты",
+              "asset": "assets/courses/fr-a1-30.json",
+              "order": 29
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-6",
+          "title": "Причины и новости",
+          "lessons": [
+            {
+              "id": "fr-a1-31",
+              "title": "Зачем и почему",
+              "asset": "assets/courses/fr-a1-31.json",
+              "order": 30
+            },
+            {
+              "id": "fr-a1-32",
+              "title": "Сообщение друзьям",
+              "asset": "assets/courses/fr-a1-32.json",
+              "order": 31
+            }
+          ]
+        }
+      ]
     }
   ]
 }

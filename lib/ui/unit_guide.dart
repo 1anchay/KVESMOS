@@ -50,7 +50,12 @@ class UnitGuidePage extends ConsumerWidget {
                 children: [
                   CircleAvatar(
                     radius: 19,
-                    child: unit.mastered(app.progress)
+                    child: app.masteredUnits.contains(unit.id)
+                        ? const Icon(
+                            Icons.auto_awesome,
+                            semanticLabel: 'Созвездие темы открыто',
+                          )
+                        : unit.mastered(app.progress)
                         ? const Icon(Icons.check_rounded)
                         : Text('${units.indexOf(unit) + 1}'),
                   ),
@@ -112,11 +117,10 @@ class UnitGuidePage extends ConsumerWidget {
                   'Уроки пройдены. Вспомни реплики без вариантов и проверь, что осталось в памяти.',
                 ),
                 TextButton.icon(
-                  onPressed: () => context.go(
-                    '/practice/words?unit=${unit.lessons.map((l) => l.id).join(',')}',
-                  ),
+                  onPressed: () =>
+                      context.go('/mastery/${Uri.encodeComponent(unit.id)}'),
                   icon: const Icon(Icons.psychology_outlined),
-                  label: const Text('Контрольная точка · вспомнить тему'),
+                  label: const Text('Мастерство · собрать созвездие'),
                 ),
               ],
             ],

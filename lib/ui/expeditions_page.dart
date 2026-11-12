@@ -56,7 +56,10 @@ class _ExpeditionsPageState extends ConsumerState<ExpeditionsPage> {
         'Каждая печать — за уроки области выбранного языка. Экспедиции и награды общие для всех языков.',
       ),
       const SizedBox(height: 20),
-      for (final region in JourneyRegion.forCourse(app.course.language)) ...[
+      for (final region in JourneyRegion.forCourse(
+        app.course.language,
+        catalog: app.repository.catalog,
+      )) ...[
         FlightPanel(
           accent: region.complete(
             app.progress.completed,

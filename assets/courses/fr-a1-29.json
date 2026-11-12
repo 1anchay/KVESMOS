@@ -1,0 +1,290 @@
+{
+  "id": "fr-a1-29",
+  "title": "Каким всё было",
+  "topic": "Фон и сравнение",
+  "order": 28,
+  "objective": "Описать прошлое состояние через étais и avais.",
+  "guide": "Imparfait задаёт фон и привычное состояние: j'étais — я был, j'avais — у меня было. Это не отдельное завершённое событие.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:29:p0",
+      "en": "Quand j'étais petit, j'habitais à Nice.",
+      "ru": "Когда я был маленьким, я жил в Ницце."
+    },
+    {
+      "id": "fr:v015:29:p1",
+      "en": "Nous avions un petit jardin.",
+      "ru": "У нас был маленький сад."
+    },
+    {
+      "id": "fr:v015:29:p2",
+      "en": "Il faisait froid ce jour-là.",
+      "ru": "В тот день было холодно."
+    },
+    {
+      "id": "fr:v015:29:p3",
+      "en": "J'avais beaucoup de temps libre.",
+      "ru": "У меня было много свободного времени."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Каким всё было",
+      "phrase": "Quand j'étais petit, j'habitais à Nice.",
+      "translation": "Когда я был маленьким, я жил в Ницце.",
+      "explanation": "Imparfait задаёт фон и привычное состояние: j'étais — я был, j'avais — у меня было. Это не отдельное завершённое событие."
+    },
+    {
+      "character": "miko",
+      "title": "Каким всё было",
+      "phrase": "Nous avions un petit jardin.",
+      "translation": "У нас был маленький сад.",
+      "explanation": "Nous avions un petit jardin. — У нас был маленький сад."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Каким всё было",
+      "phrase": "Il faisait froid ce jour-là.",
+      "translation": "В тот день было холодно.",
+      "explanation": "Il faisait froid ce jour-là. — В тот день было холодно."
+    },
+    {
+      "character": "orbi",
+      "title": "Каким всё было",
+      "phrase": "J'avais beaucoup de temps libre.",
+      "translation": "У меня было много свободного времени.",
+      "explanation": "J'avais beaucoup de temps libre. — У меня было много свободного времени."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Quand j'étais petit, j'habitais à Nice.",
+      "translation": "Когда я был маленьким, я жил в Ницце.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Когда я был маленьким, я жил в Ницце.",
+      "options": [
+        "В тот день было холодно.",
+        "Когда я был маленьким, я жил в Ницце.",
+        "У меня было много свободного времени."
+      ],
+      "explanation": "Imparfait задаёт фон и привычное состояние: j'étais — я был, j'avais — у меня было. Это не отдельное завершённое событие."
+    },
+    {
+      "id": "apply",
+      "phrase": "Nous avions un petit jardin.",
+      "translation": "У нас был маленький сад.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Nous avions un petit jardin.",
+      "tokens": [
+        "Nous",
+        "avions",
+        "un",
+        "petit",
+        "jardin."
+      ],
+      "character": "miko",
+      "explanation": "Nous avions un petit jardin. — У нас был маленький сад."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-29-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Что ты делал вчера?",
+      "answers": [
+        "Qu'est-ce que tu as fait hier ?"
+      ],
+      "explanation": "Qu'est-ce que tu as fait hier ? — Что ты делал вчера?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Qu'est-ce que tu as fait hier ?",
+        "Je n'ai pas compris la question.",
+        "Vous avez trouvé vos clés ?",
+        "Elle n'est pas venue ce matin."
+      ]
+    },
+    {
+      "id": "fr-a1-29-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Когда я был маленьким, я жил в Ницце.»?",
+      "answers": [
+        "Quand j'étais petit, j'habitais à Nice."
+      ],
+      "explanation": "Quand j'étais petit, j'habitais à Nice. — Когда я был маленьким, я жил в Ницце.",
+      "wordIds": [
+        "fr:v015:29:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Nous avions un petit jardin.",
+        "J'avais beaucoup de temps libre.",
+        "Quand j'étais petit, j'habitais à Nice."
+      ],
+      "hint": "Quand j'étais petit, j'habitais à Nice. — Когда я был маленьким, я жил в Ницце."
+    },
+    {
+      "id": "fr-a1-29-e03",
+      "type": "order",
+      "prompt": "Собери реплику: У нас был маленький сад.",
+      "answers": [
+        "Nous avions un petit jardin."
+      ],
+      "explanation": "Imparfait задаёт фон и привычное состояние: j'étais — я был, j'avais — у меня было. Это не отдельное завершённое событие.",
+      "wordIds": [
+        "fr:v015:29:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Nous",
+        "avions",
+        "un",
+        "petit",
+        "jardin."
+      ],
+      "hint": "Nous avions un petit jardin. — У нас был маленький сад."
+    },
+    {
+      "id": "fr-a1-29-e04",
+      "type": "dialogue",
+      "prompt": "Что было у дома собеседника?",
+      "answers": [
+        "Маленький сад."
+      ],
+      "explanation": "В диалоге: Tu habitais à Nice quand tu étais petit ? / Oui, nous avions une maison avec un petit jardin. Поэтому: Маленький сад.",
+      "wordIds": [
+        "fr:v015:29:p0",
+        "fr:v015:29:p1",
+        "fr:v015:29:p2",
+        "fr:v015:29:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Tu habitais à Nice quand tu étais petit ?\nМико: Oui, nous avions une maison avec un petit jardin.",
+      "options": [
+        "Большой бассейн.",
+        "Железнодорожная станция.",
+        "Маленький сад."
+      ]
+    },
+    {
+      "id": "fr-a1-29-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "В тот день было холодно."
+      ],
+      "explanation": "Il faisait froid ce jour-là. — В тот день было холодно.",
+      "wordIds": [
+        "fr:v015:29:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Il faisait froid ce jour-là.",
+      "options": [
+        "Когда я был маленьким, я жил в Ницце.",
+        "В тот день было холодно.",
+        "У нас был маленький сад."
+      ],
+      "hint": "Il faisait froid ce jour-là. — В тот день было холодно."
+    },
+    {
+      "id": "fr-a1-29-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v015:29:p0",
+        "fr:v015:29:p1",
+        "fr:v015:29:p2",
+        "fr:v015:29:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v015:29:p0",
+          "en": "Quand j'étais petit, j'habitais à Nice.",
+          "ru": "Когда я был маленьким, я жил в Ницце."
+        },
+        {
+          "id": "fr:v015:29:p1",
+          "en": "Nous avions un petit jardin.",
+          "ru": "У нас был маленький сад."
+        },
+        {
+          "id": "fr:v015:29:p2",
+          "en": "Il faisait froid ce jour-là.",
+          "ru": "В тот день было холодно."
+        },
+        {
+          "id": "fr:v015:29:p3",
+          "en": "J'avais beaucoup de temps libre.",
+          "ru": "У меня было много свободного времени."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-29-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Nous avait un petit jardin.",
+      "answers": [
+        "Nous avions un petit jardin."
+      ],
+      "explanation": "С nous в Imparfait используется avions; avait относится к il/elle/on.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Nous avait un petit jardin.",
+        "Nous avions un petit jardin."
+      ],
+      "hint": "Imparfait задаёт фон и привычное состояние: j'étais — я был, j'avais — у меня было. Это не отдельное завершённое событие."
+    },
+    {
+      "id": "fr-a1-29-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «У меня было много свободного времени.». Можно написать вместо микрофона.",
+      "answers": [
+        "J'avais beaucoup de temps libre."
+      ],
+      "explanation": "J'avais beaucoup de temps libre. — У меня было много свободного времени.",
+      "wordIds": [
+        "fr:v015:29:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "J'avais beaucoup de temps libre.",
+      "recall": {
+        "phrase": "J'avais beaucoup de temps libre.",
+        "meaning": "У меня было много свободного времени."
+      }
+    },
+    {
+      "id": "fr-a1-29-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Когда я был маленьким, я жил в Ницце.",
+      "answers": [
+        "Quand j'étais petit, j'habitais à Nice."
+      ],
+      "explanation": "Imparfait задаёт фон и привычное состояние: j'étais — я был, j'avais — у меня было. Это не отдельное завершённое событие.",
+      "wordIds": [
+        "fr:v015:29:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Quand j'étais petit, j'habitais à Nice.",
+        "meaning": "Когда я был маленьким, я жил в Ницце."
+      }
+    }
+  ]
+}

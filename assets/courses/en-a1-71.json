@@ -1,0 +1,292 @@
+{
+  "id": "en-a1-71",
+  "title": "Передать просьбу",
+  "topic": "Просьбы и новости",
+  "order": 70,
+  "objective": "Попросить другого человека выполнить действие.",
+  "guide": "Ask someone to do something — попросить кого-то сделать что-то. Отрицательная просьба: ask someone not to…",
+  "vocabulary": [
+    {
+      "id": "en:v015:71:p0",
+      "en": "Could you ask Leo to call me?",
+      "ru": "Не могли бы вы попросить Лео позвонить мне?"
+    },
+    {
+      "id": "en:v015:71:p1",
+      "en": "Please tell her to wait here.",
+      "ru": "Пожалуйста, скажите ей подождать здесь."
+    },
+    {
+      "id": "en:v015:71:p2",
+      "en": "I asked him not to be late.",
+      "ru": "Я попросил его не опаздывать."
+    },
+    {
+      "id": "en:v015:71:p3",
+      "en": "She asked us to bring water.",
+      "ru": "Она попросила нас принести воду."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Передать просьбу",
+      "phrase": "Could you ask Leo to call me?",
+      "translation": "Не могли бы вы попросить Лео позвонить мне?",
+      "explanation": "Ask someone to do something — попросить кого-то сделать что-то. Отрицательная просьба: ask someone not to…"
+    },
+    {
+      "character": "miko",
+      "title": "Передать просьбу",
+      "phrase": "Please tell her to wait here.",
+      "translation": "Пожалуйста, скажите ей подождать здесь.",
+      "explanation": "Please tell her to wait here. — Пожалуйста, скажите ей подождать здесь."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Передать просьбу",
+      "phrase": "I asked him not to be late.",
+      "translation": "Я попросил его не опаздывать.",
+      "explanation": "I asked him not to be late. — Я попросил его не опаздывать."
+    },
+    {
+      "character": "orbi",
+      "title": "Передать просьбу",
+      "phrase": "She asked us to bring water.",
+      "translation": "Она попросила нас принести воду.",
+      "explanation": "She asked us to bring water. — Она попросила нас принести воду."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Could you ask Leo to call me?",
+      "translation": "Не могли бы вы попросить Лео позвонить мне?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Не могли бы вы попросить Лео позвонить мне?",
+      "options": [
+        "Я попросил его не опаздывать.",
+        "Не могли бы вы попросить Лео позвонить мне?",
+        "Она попросила нас принести воду."
+      ],
+      "explanation": "Ask someone to do something — попросить кого-то сделать что-то. Отрицательная просьба: ask someone not to…"
+    },
+    {
+      "id": "apply",
+      "phrase": "Please tell her to wait here.",
+      "translation": "Пожалуйста, скажите ей подождать здесь.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Please tell her to wait here.",
+      "tokens": [
+        "Please",
+        "tell",
+        "her",
+        "to",
+        "wait",
+        "here."
+      ],
+      "character": "miko",
+      "explanation": "Please tell her to wait here. — Пожалуйста, скажите ей подождать здесь."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-71-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я попросил его не опаздывать."
+      ],
+      "explanation": "I asked him not to be late. — Я попросил его не опаздывать.",
+      "wordIds": [
+        "en:v015:71:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "I asked him not to be late.",
+      "options": [
+        "Не могли бы вы попросить Лео позвонить мне?",
+        "Я попросил его не опаздывать.",
+        "Пожалуйста, скажите ей подождать здесь."
+      ],
+      "hint": "I asked him not to be late. — Я попросил его не опаздывать."
+    },
+    {
+      "id": "en-a1-71-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Пожалуйста, скажите ей подождать здесь.",
+      "answers": [
+        "Please tell her to wait here."
+      ],
+      "explanation": "Ask someone to do something — попросить кого-то сделать что-то. Отрицательная просьба: ask someone not to…",
+      "wordIds": [
+        "en:v015:71:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Please",
+        "tell",
+        "her",
+        "to",
+        "wait",
+        "here."
+      ],
+      "hint": "Please tell her to wait here. — Пожалуйста, скажите ей подождать здесь."
+    },
+    {
+      "id": "en-a1-71-e03",
+      "type": "dialogue",
+      "prompt": "Какую просьбу нужно передать Лео?",
+      "answers": [
+        "Позвонить собеседнику."
+      ],
+      "explanation": "В диалоге: Could you ask Leo to call me? / Of course. Should I ask him to call this evening? Поэтому: Позвонить собеседнику.",
+      "wordIds": [
+        "en:v015:71:p0",
+        "en:v015:71:p1",
+        "en:v015:71:p2",
+        "en:v015:71:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Could you ask Leo to call me?\nМико: Of course. Should I ask him to call this evening?",
+      "options": [
+        "Принести воду.",
+        "Подождать на улице.",
+        "Позвонить собеседнику."
+      ]
+    },
+    {
+      "id": "en-a1-71-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Не могли бы вы попросить Лео позвонить мне?»?",
+      "answers": [
+        "Could you ask Leo to call me?"
+      ],
+      "explanation": "Could you ask Leo to call me? — Не могли бы вы попросить Лео позвонить мне?",
+      "wordIds": [
+        "en:v015:71:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Please tell her to wait here.",
+        "She asked us to bring water.",
+        "Could you ask Leo to call me?"
+      ],
+      "hint": "Could you ask Leo to call me? — Не могли бы вы попросить Лео позвонить мне?"
+    },
+    {
+      "id": "en-a1-71-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v015:71:p0",
+        "en:v015:71:p1",
+        "en:v015:71:p2",
+        "en:v015:71:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v015:71:p0",
+          "en": "Could you ask Leo to call me?",
+          "ru": "Не могли бы вы попросить Лео позвонить мне?"
+        },
+        {
+          "id": "en:v015:71:p1",
+          "en": "Please tell her to wait here.",
+          "ru": "Пожалуйста, скажите ей подождать здесь."
+        },
+        {
+          "id": "en:v015:71:p2",
+          "en": "I asked him not to be late.",
+          "ru": "Я попросил его не опаздывать."
+        },
+        {
+          "id": "en:v015:71:p3",
+          "en": "She asked us to bring water.",
+          "ru": "Она попросила нас принести воду."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-71-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Please tell her wait here.",
+      "answers": [
+        "Please tell her to wait here."
+      ],
+      "explanation": "После tell her перед действием нужно to: tell her to wait.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Please tell her wait here.",
+        "Please tell her to wait here."
+      ],
+      "hint": "Ask someone to do something — попросить кого-то сделать что-то. Отрицательная просьба: ask someone not to…"
+    },
+    {
+      "id": "en-a1-71-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Она попросила нас принести воду.». Можно написать вместо микрофона.",
+      "answers": [
+        "She asked us to bring water."
+      ],
+      "explanation": "She asked us to bring water. — Она попросила нас принести воду.",
+      "wordIds": [
+        "en:v015:71:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "She asked us to bring water.",
+      "recall": {
+        "phrase": "She asked us to bring water.",
+        "meaning": "Она попросила нас принести воду."
+      }
+    },
+    {
+      "id": "en-a1-71-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Не могли бы вы попросить Лео позвонить мне?",
+      "answers": [
+        "Could you ask Leo to call me?"
+      ],
+      "explanation": "Ask someone to do something — попросить кого-то сделать что-то. Отрицательная просьба: ask someone not to…",
+      "wordIds": [
+        "en:v015:71:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Could you ask Leo to call me?",
+        "meaning": "Не могли бы вы попросить Лео позвонить мне?"
+      }
+    },
+    {
+      "id": "en-a1-71-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Что ты делал в восемь?",
+      "answers": [
+        "What were you doing at eight?"
+      ],
+      "explanation": "What were you doing at eight? — Что ты делал в восемь?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I was cooking when you called.",
+        "We were waiting outside.",
+        "What were you doing at eight?",
+        "It started raining while we were walking."
+      ]
+    }
+  ]
+}

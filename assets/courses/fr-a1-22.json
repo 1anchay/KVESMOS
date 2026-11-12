@@ -1,0 +1,259 @@
+{
+  "id": "fr-a1-22",
+  "title": "Столик на двоих",
+  "topic": "Покупки и бронирование",
+  "order": 21,
+  "objective": "Забронировать столик и проверить время.",
+  "guide": "Pour deux personnes — на двоих. À + время обозначает час встречи, au nom de — имя в бронировании.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:22:p0",
+      "en": "Je voudrais réserver une table pour deux.",
+      "ru": "Я хотел бы забронировать столик на двоих."
+    },
+    {
+      "id": "fr:v015:22:p1",
+      "en": "Vous avez une table libre à vingt heures ?",
+      "ru": "У вас есть свободный столик в двадцать часов?"
+    },
+    {
+      "id": "fr:v015:22:p2",
+      "en": "La réservation est au nom de Martin.",
+      "ru": "Бронь на имя Мартен."
+    },
+    {
+      "id": "fr:v015:22:p3",
+      "en": "Nous préférons une table près de la fenêtre.",
+      "ru": "Мы предпочитаем столик у окна."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Столик на двоих",
+      "phrase": "Je voudrais réserver une table pour deux.",
+      "translation": "Я хотел бы забронировать столик на двоих.",
+      "explanation": "Pour deux personnes — на двоих. À + время обозначает час встречи, au nom de — имя в бронировании."
+    },
+    {
+      "character": "miko",
+      "title": "Столик на двоих",
+      "phrase": "Vous avez une table libre à vingt heures ?",
+      "translation": "У вас есть свободный столик в двадцать часов?",
+      "explanation": "Vous avez une table libre à vingt heures ? — У вас есть свободный столик в двадцать часов?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Столик на двоих",
+      "phrase": "La réservation est au nom de Martin.",
+      "translation": "Бронь на имя Мартен.",
+      "explanation": "La réservation est au nom de Martin. — Бронь на имя Мартен."
+    },
+    {
+      "character": "orbi",
+      "title": "Столик на двоих",
+      "phrase": "Nous préférons une table près de la fenêtre.",
+      "translation": "Мы предпочитаем столик у окна.",
+      "explanation": "Nous préférons une table près de la fenêtre. — Мы предпочитаем столик у окна."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je voudrais réserver une table pour deux.",
+      "translation": "Я хотел бы забронировать столик на двоих.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы забронировать столик на двоих.",
+      "options": [
+        "Бронь на имя Мартен.",
+        "Я хотел бы забронировать столик на двоих.",
+        "Мы предпочитаем столик у окна."
+      ],
+      "explanation": "Pour deux personnes — на двоих. À + время обозначает час встречи, au nom de — имя в бронировании."
+    },
+    {
+      "id": "apply",
+      "phrase": "Vous avez une table libre à vingt heures ?",
+      "translation": "У вас есть свободный столик в двадцать часов?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Vous avez une table libre à vingt heures ?",
+      "tokens": [
+        "Vous",
+        "avez",
+        "une",
+        "table",
+        "libre",
+        "à",
+        "vingt",
+        "heures",
+        "?"
+      ],
+      "character": "miko",
+      "explanation": "Vous avez une table libre à vingt heures ? — У вас есть свободный столик в двадцать часов?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-22-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Бронь на имя Мартен."
+      ],
+      "explanation": "La réservation est au nom de Martin. — Бронь на имя Мартен.",
+      "wordIds": [
+        "fr:v015:22:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "La réservation est au nom de Martin.",
+      "options": [
+        "Я хотел бы забронировать столик на двоих.",
+        "Бронь на имя Мартен.",
+        "У вас есть свободный столик в двадцать часов?"
+      ],
+      "hint": "La réservation est au nom de Martin. — Бронь на имя Мартен."
+    },
+    {
+      "id": "fr-a1-22-e02",
+      "type": "order",
+      "prompt": "Собери реплику: У вас есть свободный столик в двадцать часов?",
+      "answers": [
+        "Vous avez une table libre à vingt heures ?"
+      ],
+      "explanation": "Pour deux personnes — на двоих. À + время обозначает час встречи, au nom de — имя в бронировании.",
+      "wordIds": [
+        "fr:v015:22:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Vous",
+        "avez",
+        "une",
+        "table",
+        "libre",
+        "à",
+        "vingt",
+        "heures",
+        "?"
+      ],
+      "hint": "Vous avez une table libre à vingt heures ? — У вас есть свободный столик в двадцать часов?"
+    },
+    {
+      "id": "fr-a1-22-e03",
+      "type": "dialogue",
+      "prompt": "На какое время предлагают столик?",
+      "answers": [
+        "На двадцать один час."
+      ],
+      "explanation": "В диалоге: Vous avez une table libre à vingt heures ? / À vingt heures, non. Mais nous avons une table à vingt et une heures. Поэтому: На двадцать один час.",
+      "wordIds": [
+        "fr:v015:22:p0",
+        "fr:v015:22:p1",
+        "fr:v015:22:p2",
+        "fr:v015:22:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Vous avez une table libre à vingt heures ?\nМико: À vingt heures, non. Mais nous avons une table à vingt et une heures.",
+      "options": [
+        "На двадцать часов.",
+        "На девятнадцать часов.",
+        "На двадцать один час."
+      ]
+    },
+    {
+      "id": "fr-a1-22-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы забронировать столик на двоих.»?",
+      "answers": [
+        "Je voudrais réserver une table pour deux."
+      ],
+      "explanation": "Je voudrais réserver une table pour deux. — Я хотел бы забронировать столик на двоих.",
+      "wordIds": [
+        "fr:v015:22:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Vous avez une table libre à vingt heures ?",
+        "Nous préférons une table près de la fenêtre.",
+        "Je voudrais réserver une table pour deux."
+      ],
+      "hint": "Je voudrais réserver une table pour deux. — Я хотел бы забронировать столик на двоих."
+    },
+    {
+      "id": "fr-a1-22-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je voudrais réserve une table.",
+      "answers": [
+        "Je voudrais réserver une table."
+      ],
+      "explanation": "После voudrais нужен инфинитив réserver.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je voudrais réserve une table.",
+        "Je voudrais réserver une table."
+      ],
+      "hint": "Pour deux personnes — на двоих. À + время обозначает час встречи, au nom de — имя в бронировании."
+    },
+    {
+      "id": "fr-a1-22-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы предпочитаем столик у окна.». Можно написать вместо микрофона.",
+      "answers": [
+        "Nous préférons une table près de la fenêtre."
+      ],
+      "explanation": "Nous préférons une table près de la fenêtre. — Мы предпочитаем столик у окна.",
+      "wordIds": [
+        "fr:v015:22:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Nous préférons une table près de la fenêtre.",
+      "recall": {
+        "phrase": "Nous préférons une table près de la fenêtre.",
+        "meaning": "Мы предпочитаем столик у окна."
+      }
+    },
+    {
+      "id": "fr-a1-22-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы забронировать столик на двоих.",
+      "answers": [
+        "Je voudrais réserver une table pour deux."
+      ],
+      "explanation": "Pour deux personnes — на двоих. À + время обозначает час встречи, au nom de — имя в бронировании.",
+      "wordIds": [
+        "fr:v015:22:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je voudrais réserver une table pour deux.",
+        "meaning": "Я хотел бы забронировать столик на двоих."
+      }
+    },
+    {
+      "id": "fr-a1-22-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Эта рубашка слишком маленькая.",
+      "answers": [
+        "Cette chemise est trop petite."
+      ],
+      "explanation": "Cette chemise est trop petite. — Эта рубашка слишком маленькая.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je voudrais échanger cette chemise.",
+        "Cette chemise est trop petite.",
+        "Vous avez une taille plus grande ?",
+        "J'ai gardé le ticket de caisse."
+      ]
+    }
+  ]
+}

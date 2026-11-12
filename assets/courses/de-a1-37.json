@@ -1,0 +1,288 @@
+{
+  "id": "de-a1-37",
+  "title": "Вопрос о вчерашнем дне",
+  "topic": "Вопросы о прошлом",
+  "order": 36,
+  "objective": "Задавать вопросы о прошлом и отрицать завершённое действие.",
+  "guide": "В вопросе с wo/was/wann вспомогательный глагол идёт после вопросительного слова, а Partizip II — в конце.",
+  "vocabulary": [
+    {
+      "id": "de:v015:37:p0",
+      "en": "Was hast du gestern gemacht?",
+      "ru": "Что ты делал вчера?"
+    },
+    {
+      "id": "de:v015:37:p1",
+      "en": "Wann seid ihr angekommen?",
+      "ru": "Когда вы приехали?"
+    },
+    {
+      "id": "de:v015:37:p2",
+      "en": "Ich habe die Nachricht nicht gelesen.",
+      "ru": "Я не прочитал сообщение."
+    },
+    {
+      "id": "de:v015:37:p3",
+      "en": "Wo hast du den Schlüssel gefunden?",
+      "ru": "Где ты нашёл ключ?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Вопрос о вчерашнем дне",
+      "phrase": "Was hast du gestern gemacht?",
+      "translation": "Что ты делал вчера?",
+      "explanation": "В вопросе с wo/was/wann вспомогательный глагол идёт после вопросительного слова, а Partizip II — в конце."
+    },
+    {
+      "character": "miko",
+      "title": "Вопрос о вчерашнем дне",
+      "phrase": "Wann seid ihr angekommen?",
+      "translation": "Когда вы приехали?",
+      "explanation": "Wann seid ihr angekommen? — Когда вы приехали?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вопрос о вчерашнем дне",
+      "phrase": "Ich habe die Nachricht nicht gelesen.",
+      "translation": "Я не прочитал сообщение.",
+      "explanation": "Ich habe die Nachricht nicht gelesen. — Я не прочитал сообщение."
+    },
+    {
+      "character": "orbi",
+      "title": "Вопрос о вчерашнем дне",
+      "phrase": "Wo hast du den Schlüssel gefunden?",
+      "translation": "Где ты нашёл ключ?",
+      "explanation": "Wo hast du den Schlüssel gefunden? — Где ты нашёл ключ?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Was hast du gestern gemacht?",
+      "translation": "Что ты делал вчера?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Что ты делал вчера?",
+      "options": [
+        "Я не прочитал сообщение.",
+        "Что ты делал вчера?",
+        "Где ты нашёл ключ?"
+      ],
+      "explanation": "В вопросе с wo/was/wann вспомогательный глагол идёт после вопросительного слова, а Partizip II — в конце."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wann seid ihr angekommen?",
+      "translation": "Когда вы приехали?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wann seid ihr angekommen?",
+      "tokens": [
+        "Wann",
+        "seid",
+        "ihr",
+        "angekommen?"
+      ],
+      "character": "miko",
+      "explanation": "Wann seid ihr angekommen? — Когда вы приехали?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-37-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Что ты делал вчера?»?",
+      "answers": [
+        "Was hast du gestern gemacht?"
+      ],
+      "explanation": "Was hast du gestern gemacht? — Что ты делал вчера?",
+      "wordIds": [
+        "de:v015:37:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wann seid ihr angekommen?",
+        "Wo hast du den Schlüssel gefunden?",
+        "Was hast du gestern gemacht?"
+      ],
+      "hint": "Was hast du gestern gemacht? — Что ты делал вчера?"
+    },
+    {
+      "id": "de-a1-37-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Когда вы приехали?",
+      "answers": [
+        "Wann seid ihr angekommen?"
+      ],
+      "explanation": "В вопросе с wo/was/wann вспомогательный глагол идёт после вопросительного слова, а Partizip II — в конце.",
+      "wordIds": [
+        "de:v015:37:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wann",
+        "seid",
+        "ihr",
+        "angekommen?"
+      ],
+      "hint": "Wann seid ihr angekommen? — Когда вы приехали?"
+    },
+    {
+      "id": "de-a1-37-e03",
+      "type": "dialogue",
+      "prompt": "Где нашёлся ключ?",
+      "answers": [
+        "В сумке."
+      ],
+      "explanation": "В диалоге: Wo hast du den Schlüssel gefunden? / In meiner Tasche. Ich habe ihn gestern dort gefunden. Поэтому: В сумке.",
+      "wordIds": [
+        "de:v015:37:p0",
+        "de:v015:37:p1",
+        "de:v015:37:p2",
+        "de:v015:37:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Wo hast du den Schlüssel gefunden?\nМико: In meiner Tasche. Ich habe ihn gestern dort gefunden.",
+      "options": [
+        "В поезде.",
+        "На столе.",
+        "В сумке."
+      ]
+    },
+    {
+      "id": "de-a1-37-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я не прочитал сообщение."
+      ],
+      "explanation": "Ich habe die Nachricht nicht gelesen. — Я не прочитал сообщение.",
+      "wordIds": [
+        "de:v015:37:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ich habe die Nachricht nicht gelesen.",
+      "options": [
+        "Что ты делал вчера?",
+        "Я не прочитал сообщение.",
+        "Когда вы приехали?"
+      ],
+      "hint": "Ich habe die Nachricht nicht gelesen. — Я не прочитал сообщение."
+    },
+    {
+      "id": "de-a1-37-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v015:37:p0",
+        "de:v015:37:p1",
+        "de:v015:37:p2",
+        "de:v015:37:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v015:37:p0",
+          "en": "Was hast du gestern gemacht?",
+          "ru": "Что ты делал вчера?"
+        },
+        {
+          "id": "de:v015:37:p1",
+          "en": "Wann seid ihr angekommen?",
+          "ru": "Когда вы приехали?"
+        },
+        {
+          "id": "de:v015:37:p2",
+          "en": "Ich habe die Nachricht nicht gelesen.",
+          "ru": "Я не прочитал сообщение."
+        },
+        {
+          "id": "de:v015:37:p3",
+          "en": "Wo hast du den Schlüssel gefunden?",
+          "ru": "Где ты нашёл ключ?"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-37-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Was du hast gestern gemacht?",
+      "answers": [
+        "Was hast du gestern gemacht?"
+      ],
+      "explanation": "После was в вопросе стоит hast, затем подлежащее du.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Was du hast gestern gemacht?",
+        "Was hast du gestern gemacht?"
+      ],
+      "hint": "В вопросе с wo/was/wann вспомогательный глагол идёт после вопросительного слова, а Partizip II — в конце."
+    },
+    {
+      "id": "de-a1-37-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Где ты нашёл ключ?». Можно написать вместо микрофона.",
+      "answers": [
+        "Wo hast du den Schlüssel gefunden?"
+      ],
+      "explanation": "Wo hast du den Schlüssel gefunden? — Где ты нашёл ключ?",
+      "wordIds": [
+        "de:v015:37:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wo hast du den Schlüssel gefunden?",
+      "recall": {
+        "phrase": "Wo hast du den Schlüssel gefunden?",
+        "meaning": "Где ты нашёл ключ?"
+      }
+    },
+    {
+      "id": "de-a1-37-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Что ты делал вчера?",
+      "answers": [
+        "Was hast du gestern gemacht?"
+      ],
+      "explanation": "В вопросе с wo/was/wann вспомогательный глагол идёт после вопросительного слова, а Partizip II — в конце.",
+      "wordIds": [
+        "de:v015:37:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Was hast du gestern gemacht?",
+        "meaning": "Что ты делал вчера?"
+      }
+    },
+    {
+      "id": "de-a1-37-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Ты пошёл пешком?",
+      "answers": [
+        "Bist du zu Fuß gegangen?"
+      ],
+      "explanation": "Bist du zu Fuß gegangen? — Ты пошёл пешком?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich bin mit dem Zug gefahren.",
+        "Wir sind um acht Uhr angekommen.",
+        "Bist du zu Fuß gegangen?",
+        "Sie ist gestern nach Berlin geflogen."
+      ]
+    }
+  ]
+}

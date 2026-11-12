@@ -556,6 +556,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": "en-v015",
+      "title": "Самостоятельное общение",
+      "themes": [
+        {
+          "id": "en-v015-unit-1",
+          "title": "Покупки и доставка",
+          "lessons": [
+            {
+              "id": "en-a1-61",
+              "title": "Вернуть покупку",
+              "asset": "assets/courses/en-a1-61.json",
+              "order": 60
+            },
+            {
+              "id": "en-a1-62",
+              "title": "Где моя посылка",
+              "asset": "assets/courses/en-a1-62.json",
+              "order": 61
+            }
+          ]
+        },
+        {
+          "id": "en-v015-unit-2",
+          "title": "В дороге",
+          "lessons": [
+            {
+              "id": "en-a1-63",
+              "title": "На стойке гостиницы",
+              "asset": "assets/courses/en-a1-63.json",
+              "order": 62
+            },
+            {
+              "id": "en-a1-64",
+              "title": "Объявление в аэропорту",
+              "asset": "assets/courses/en-a1-64.json",
+              "order": 63
+            }
+          ]
+        },
+        {
+          "id": "en-v015-unit-3",
+          "title": "Время и самочувствие",
+          "lessons": [
+            {
+              "id": "en-a1-65",
+              "title": "Записаться на приём",
+              "asset": "assets/courses/en-a1-65.json",
+              "order": 64
+            },
+            {
+              "id": "en-a1-66",
+              "title": "Как давно это длится",
+              "asset": "assets/courses/en-a1-66.json",
+              "order": 65
+            }
+          ]
+        },
+        {
+          "id": "en-v015-unit-4",
+          "title": "Опыт и результат",
+          "lessons": [
+            {
+              "id": "en-a1-67",
+              "title": "Ты когда-нибудь был там",
+              "asset": "assets/courses/en-a1-67.json",
+              "order": 66
+            },
+            {
+              "id": "en-a1-68",
+              "title": "Уже готово или ещё нет",
+              "asset": "assets/courses/en-a1-68.json",
+              "order": 67
+            }
+          ]
+        },
+        {
+          "id": "en-v015-unit-5",
+          "title": "Уточнения и события",
+          "lessons": [
+            {
+              "id": "en-a1-69",
+              "title": "Какой именно предмет",
+              "asset": "assets/courses/en-a1-69.json",
+              "order": 68
+            },
+            {
+              "id": "en-a1-70",
+              "title": "Когда это случилось",
+              "asset": "assets/courses/en-a1-70.json",
+              "order": 69
+            }
+          ]
+        },
+        {
+          "id": "en-v015-unit-6",
+          "title": "Просьбы и новости",
+          "lessons": [
+            {
+              "id": "en-a1-71",
+              "title": "Передать просьбу",
+              "asset": "assets/courses/en-a1-71.json",
+              "order": 70
+            },
+            {
+              "id": "en-a1-72",
+              "title": "Сообщение из поездки",
+              "asset": "assets/courses/en-a1-72.json",
+              "order": 71
+            }
+          ]
+        }
+      ]
     }
   ]
 }

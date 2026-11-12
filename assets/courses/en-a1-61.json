@@ -1,0 +1,290 @@
+{
+  "id": "en-a1-61",
+  "title": "Вернуть покупку",
+  "topic": "Покупки и доставка",
+  "order": 60,
+  "objective": "Объяснить причину возврата и попросить другой размер.",
+  "guide": "Could I…? — вежливая просьба. Too small означает «слишком маленький», а не просто small.",
+  "vocabulary": [
+    {
+      "id": "en:v015:61:p0",
+      "en": "Could I return this jacket?",
+      "ru": "Можно вернуть эту куртку?"
+    },
+    {
+      "id": "en:v015:61:p1",
+      "en": "This jacket is too small.",
+      "ru": "Эта куртка слишком маленькая."
+    },
+    {
+      "id": "en:v015:61:p2",
+      "en": "Do you have a larger size?",
+      "ru": "У вас есть размер побольше?"
+    },
+    {
+      "id": "en:v015:61:p3",
+      "en": "I still have the receipt.",
+      "ru": "У меня ещё есть чек."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Вернуть покупку",
+      "phrase": "Could I return this jacket?",
+      "translation": "Можно вернуть эту куртку?",
+      "explanation": "Could I…? — вежливая просьба. Too small означает «слишком маленький», а не просто small."
+    },
+    {
+      "character": "miko",
+      "title": "Вернуть покупку",
+      "phrase": "This jacket is too small.",
+      "translation": "Эта куртка слишком маленькая.",
+      "explanation": "This jacket is too small. — Эта куртка слишком маленькая."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вернуть покупку",
+      "phrase": "Do you have a larger size?",
+      "translation": "У вас есть размер побольше?",
+      "explanation": "Do you have a larger size? — У вас есть размер побольше?"
+    },
+    {
+      "character": "orbi",
+      "title": "Вернуть покупку",
+      "phrase": "I still have the receipt.",
+      "translation": "У меня ещё есть чек.",
+      "explanation": "I still have the receipt. — У меня ещё есть чек."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Could I return this jacket?",
+      "translation": "Можно вернуть эту куртку?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Можно вернуть эту куртку?",
+      "options": [
+        "У вас есть размер побольше?",
+        "Можно вернуть эту куртку?",
+        "У меня ещё есть чек."
+      ],
+      "explanation": "Could I…? — вежливая просьба. Too small означает «слишком маленький», а не просто small."
+    },
+    {
+      "id": "apply",
+      "phrase": "This jacket is too small.",
+      "translation": "Эта куртка слишком маленькая.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "This jacket is too small.",
+      "tokens": [
+        "This",
+        "jacket",
+        "is",
+        "too",
+        "small."
+      ],
+      "character": "miko",
+      "explanation": "This jacket is too small. — Эта куртка слишком маленькая."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-61-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Можно вернуть эту куртку?»?",
+      "answers": [
+        "Could I return this jacket?"
+      ],
+      "explanation": "Could I return this jacket? — Можно вернуть эту куртку?",
+      "wordIds": [
+        "en:v015:61:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "This jacket is too small.",
+        "I still have the receipt.",
+        "Could I return this jacket?"
+      ],
+      "hint": "Could I return this jacket? — Можно вернуть эту куртку?"
+    },
+    {
+      "id": "en-a1-61-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Эта куртка слишком маленькая.",
+      "answers": [
+        "This jacket is too small."
+      ],
+      "explanation": "Could I…? — вежливая просьба. Too small означает «слишком маленький», а не просто small.",
+      "wordIds": [
+        "en:v015:61:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "This",
+        "jacket",
+        "is",
+        "too",
+        "small."
+      ],
+      "hint": "This jacket is too small. — Эта куртка слишком маленькая."
+    },
+    {
+      "id": "en-a1-61-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно показать для возврата?",
+      "answers": [
+        "Чек."
+      ],
+      "explanation": "В диалоге: Could I return this jacket? It's too small. / Of course. Do you have the receipt? Поэтому: Чек.",
+      "wordIds": [
+        "en:v015:61:p0",
+        "en:v015:61:p1",
+        "en:v015:61:p2",
+        "en:v015:61:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Could I return this jacket? It's too small.\nМико: Of course. Do you have the receipt?",
+      "options": [
+        "Билет.",
+        "Паспорт друга.",
+        "Чек."
+      ]
+    },
+    {
+      "id": "en-a1-61-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "У вас есть размер побольше?"
+      ],
+      "explanation": "Do you have a larger size? — У вас есть размер побольше?",
+      "wordIds": [
+        "en:v015:61:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Do you have a larger size?",
+      "options": [
+        "Можно вернуть эту куртку?",
+        "У вас есть размер побольше?",
+        "Эта куртка слишком маленькая."
+      ],
+      "hint": "Do you have a larger size? — У вас есть размер побольше?"
+    },
+    {
+      "id": "en-a1-61-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v015:61:p0",
+        "en:v015:61:p1",
+        "en:v015:61:p2",
+        "en:v015:61:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v015:61:p0",
+          "en": "Could I return this jacket?",
+          "ru": "Можно вернуть эту куртку?"
+        },
+        {
+          "id": "en:v015:61:p1",
+          "en": "This jacket is too small.",
+          "ru": "Эта куртка слишком маленькая."
+        },
+        {
+          "id": "en:v015:61:p2",
+          "en": "Do you have a larger size?",
+          "ru": "У вас есть размер побольше?"
+        },
+        {
+          "id": "en:v015:61:p3",
+          "en": "I still have the receipt.",
+          "ru": "У меня ещё есть чек."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-61-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: This jacket are too small.",
+      "answers": [
+        "This jacket is too small."
+      ],
+      "explanation": "Одна куртка — this jacket is. Are используется с множественным числом.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "This jacket are too small.",
+        "This jacket is too small."
+      ],
+      "hint": "Could I…? — вежливая просьба. Too small означает «слишком маленький», а не просто small."
+    },
+    {
+      "id": "en-a1-61-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «У меня ещё есть чек.». Можно написать вместо микрофона.",
+      "answers": [
+        "I still have the receipt."
+      ],
+      "explanation": "I still have the receipt. — У меня ещё есть чек.",
+      "wordIds": [
+        "en:v015:61:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I still have the receipt.",
+      "recall": {
+        "phrase": "I still have the receipt.",
+        "meaning": "У меня ещё есть чек."
+      }
+    },
+    {
+      "id": "en-a1-61-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Можно вернуть эту куртку?",
+      "answers": [
+        "Could I return this jacket?"
+      ],
+      "explanation": "Could I…? — вежливая просьба. Too small означает «слишком маленький», а не просто small.",
+      "wordIds": [
+        "en:v015:61:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Could I return this jacket?",
+        "meaning": "Можно вернуть эту куртку?"
+      }
+    },
+    {
+      "id": "en-a1-61-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я напишу короткое сообщение.",
+      "answers": [
+        "I will write the short message."
+      ],
+      "explanation": "I will write the short message. — Я напишу короткое сообщение.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I will write the short message.",
+        "Can you check the details?",
+        "We need to finish by Friday.",
+        "Let us talk again tomorrow."
+      ]
+    }
+  ]
+}

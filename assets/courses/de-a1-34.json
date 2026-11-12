@@ -1,0 +1,253 @@
+{
+  "id": "de-a1-34",
+  "title": "Кому я отправляю",
+  "topic": "Приезд и помощь",
+  "order": 33,
+  "objective": "Различать получателя и предмет в простых фразах.",
+  "guide": "Dativ обозначает получателя: dem Freund, der Freundin. Akkusativ обозначает предмет: die Adresse, den Schlüssel.",
+  "vocabulary": [
+    {
+      "id": "de:v015:34:p0",
+      "en": "Ich schicke meiner Freundin die Adresse.",
+      "ru": "Я отправляю своей подруге адрес."
+    },
+    {
+      "id": "de:v015:34:p1",
+      "en": "Er gibt dem Kind ein Buch.",
+      "ru": "Он даёт ребёнку книгу."
+    },
+    {
+      "id": "de:v015:34:p2",
+      "en": "Wir zeigen dem Gast das Zimmer.",
+      "ru": "Мы показываем гостю номер."
+    },
+    {
+      "id": "de:v015:34:p3",
+      "en": "Kannst du mir den Schlüssel geben?",
+      "ru": "Можешь дать мне ключ?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Кому я отправляю",
+      "phrase": "Ich schicke meiner Freundin die Adresse.",
+      "translation": "Я отправляю своей подруге адрес.",
+      "explanation": "Dativ обозначает получателя: dem Freund, der Freundin. Akkusativ обозначает предмет: die Adresse, den Schlüssel."
+    },
+    {
+      "character": "miko",
+      "title": "Кому я отправляю",
+      "phrase": "Er gibt dem Kind ein Buch.",
+      "translation": "Он даёт ребёнку книгу.",
+      "explanation": "Er gibt dem Kind ein Buch. — Он даёт ребёнку книгу."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Кому я отправляю",
+      "phrase": "Wir zeigen dem Gast das Zimmer.",
+      "translation": "Мы показываем гостю номер.",
+      "explanation": "Wir zeigen dem Gast das Zimmer. — Мы показываем гостю номер."
+    },
+    {
+      "character": "orbi",
+      "title": "Кому я отправляю",
+      "phrase": "Kannst du mir den Schlüssel geben?",
+      "translation": "Можешь дать мне ключ?",
+      "explanation": "Kannst du mir den Schlüssel geben? — Можешь дать мне ключ?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich schicke meiner Freundin die Adresse.",
+      "translation": "Я отправляю своей подруге адрес.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я отправляю своей подруге адрес.",
+      "options": [
+        "Мы показываем гостю номер.",
+        "Я отправляю своей подруге адрес.",
+        "Можешь дать мне ключ?"
+      ],
+      "explanation": "Dativ обозначает получателя: dem Freund, der Freundin. Akkusativ обозначает предмет: die Adresse, den Schlüssel."
+    },
+    {
+      "id": "apply",
+      "phrase": "Er gibt dem Kind ein Buch.",
+      "translation": "Он даёт ребёнку книгу.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Er gibt dem Kind ein Buch.",
+      "tokens": [
+        "Er",
+        "gibt",
+        "dem",
+        "Kind",
+        "ein",
+        "Buch."
+      ],
+      "character": "miko",
+      "explanation": "Er gibt dem Kind ein Buch. — Он даёт ребёнку книгу."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-34-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я отправляю своей подруге адрес.»?",
+      "answers": [
+        "Ich schicke meiner Freundin die Adresse."
+      ],
+      "explanation": "Ich schicke meiner Freundin die Adresse. — Я отправляю своей подруге адрес.",
+      "wordIds": [
+        "de:v015:34:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Er gibt dem Kind ein Buch.",
+        "Kannst du mir den Schlüssel geben?",
+        "Ich schicke meiner Freundin die Adresse."
+      ],
+      "hint": "Ich schicke meiner Freundin die Adresse. — Я отправляю своей подруге адрес."
+    },
+    {
+      "id": "de-a1-34-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Он даёт ребёнку книгу.",
+      "answers": [
+        "Er gibt dem Kind ein Buch."
+      ],
+      "explanation": "Dativ обозначает получателя: dem Freund, der Freundin. Akkusativ обозначает предмет: die Adresse, den Schlüssel.",
+      "wordIds": [
+        "de:v015:34:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Er",
+        "gibt",
+        "dem",
+        "Kind",
+        "ein",
+        "Buch."
+      ],
+      "hint": "Er gibt dem Kind ein Buch. — Он даёт ребёнку книгу."
+    },
+    {
+      "id": "de-a1-34-e03",
+      "type": "dialogue",
+      "prompt": "Когда будет отправлен адрес?",
+      "answers": [
+        "Сегодня вечером."
+      ],
+      "explanation": "В диалоге: Kannst du mir die Adresse schicken? / Ja, ich schicke dir die Adresse heute Abend. Поэтому: Сегодня вечером.",
+      "wordIds": [
+        "de:v015:34:p0",
+        "de:v015:34:p1",
+        "de:v015:34:p2",
+        "de:v015:34:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Kannst du mir die Adresse schicken?\nМико: Ja, ich schicke dir die Adresse heute Abend.",
+      "options": [
+        "Завтра утром.",
+        "Через неделю.",
+        "Сегодня вечером."
+      ]
+    },
+    {
+      "id": "de-a1-34-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы показываем гостю номер."
+      ],
+      "explanation": "Wir zeigen dem Gast das Zimmer. — Мы показываем гостю номер.",
+      "wordIds": [
+        "de:v015:34:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir zeigen dem Gast das Zimmer.",
+      "options": [
+        "Я отправляю своей подруге адрес.",
+        "Мы показываем гостю номер.",
+        "Он даёт ребёнку книгу."
+      ],
+      "hint": "Wir zeigen dem Gast das Zimmer. — Мы показываем гостю номер."
+    },
+    {
+      "id": "de-a1-34-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Er gibt das Kind ein Buch.",
+      "answers": [
+        "Er gibt dem Kind ein Buch."
+      ],
+      "explanation": "Ребёнок — получатель: das Kind становится dem Kind. Книга остаётся ein Buch.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Er gibt das Kind ein Buch.",
+        "Er gibt dem Kind ein Buch."
+      ],
+      "hint": "Dativ обозначает получателя: dem Freund, der Freundin. Akkusativ обозначает предмет: die Adresse, den Schlüssel."
+    },
+    {
+      "id": "de-a1-34-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Можешь дать мне ключ?». Можно написать вместо микрофона.",
+      "answers": [
+        "Kannst du mir den Schlüssel geben?"
+      ],
+      "explanation": "Kannst du mir den Schlüssel geben? — Можешь дать мне ключ?",
+      "wordIds": [
+        "de:v015:34:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Kannst du mir den Schlüssel geben?",
+      "recall": {
+        "phrase": "Kannst du mir den Schlüssel geben?",
+        "meaning": "Можешь дать мне ключ?"
+      }
+    },
+    {
+      "id": "de-a1-34-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я отправляю своей подруге адрес.",
+      "answers": [
+        "Ich schicke meiner Freundin die Adresse."
+      ],
+      "explanation": "Dativ обозначает получателя: dem Freund, der Freundin. Akkusativ обозначает предмет: die Adresse, den Schlüssel.",
+      "wordIds": [
+        "de:v015:34:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich schicke meiner Freundin die Adresse.",
+        "meaning": "Я отправляю своей подруге адрес."
+      }
+    },
+    {
+      "id": "de-a1-34-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можно нам получить тихий номер?",
+      "answers": [
+        "Könnten wir ein ruhiges Zimmer bekommen?"
+      ],
+      "explanation": "Könnten wir ein ruhiges Zimmer bekommen? — Можно нам получить тихий номер?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich habe ein Zimmer für zwei Nächte gebucht.",
+        "Ist das Frühstück im Preis enthalten?",
+        "Bis wann müssen wir auschecken?",
+        "Könnten wir ein ruhiges Zimmer bekommen?"
+      ]
+    }
+  ]
+}

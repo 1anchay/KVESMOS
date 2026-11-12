@@ -20,6 +20,11 @@ void main() {
         'de-a1-19',
         'fr-a1-13',
         'zh-a1-13',
+        'en-a1-61',
+        'es-a1-31',
+        'de-a1-31',
+        'fr-a1-21',
+        'zh-a1-21',
       ]) {
         testWidgets(
           'interactive intro $id ${small ? 320 : 390} ${dark ? 'dark' : 'light'}',
@@ -39,7 +44,7 @@ void main() {
             );
             IntroDraft? saved;
             await tester.runAsync(() async {
-              await Directory('test-output/v014').create(recursive: true);
+              await Directory('test-output/v015').create(recursive: true);
               await loadPreviewFonts();
             });
             await tester.pumpWidget(
@@ -86,7 +91,7 @@ void main() {
             await tester.runAsync(
               () => capturePreview(
                 boundary,
-                'v014/intro-$id-${dark ? 'dark' : 'light'}-${small ? 320 : 390}',
+                'v015/intro-$id-${dark ? 'dark' : 'light'}-${small ? 320 : 390}',
               ),
             );
             await tester.ensureVisible(option);

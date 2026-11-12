@@ -1,0 +1,249 @@
+{
+  "id": "es-a1-36",
+  "title": "Что сделал вчера",
+  "topic": "Прошлое: первые шаги",
+  "order": 35,
+  "objective": "Рассказать о законченных действиях с правильными глаголами.",
+  "guide": "В прошедшем времени yo: hablar → hablé, comer → comí, vivir → viví. Ударение на последнем слоге важно.",
+  "vocabulary": [
+    {
+      "id": "es:v015:36:p0",
+      "en": "Ayer compré fruta.",
+      "ru": "Вчера я купил фрукты."
+    },
+    {
+      "id": "es:v015:36:p1",
+      "en": "Comí con una amiga.",
+      "ru": "Я поел с подругой."
+    },
+    {
+      "id": "es:v015:36:p2",
+      "en": "Escribí un mensaje por la tarde.",
+      "ru": "Днём я написал сообщение."
+    },
+    {
+      "id": "es:v015:36:p3",
+      "en": "¿Terminaste el trabajo?",
+      "ru": "Ты закончил работу?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Что сделал вчера",
+      "phrase": "Ayer compré fruta.",
+      "translation": "Вчера я купил фрукты.",
+      "explanation": "В прошедшем времени yo: hablar → hablé, comer → comí, vivir → viví. Ударение на последнем слоге важно."
+    },
+    {
+      "character": "miko",
+      "title": "Что сделал вчера",
+      "phrase": "Comí con una amiga.",
+      "translation": "Я поел с подругой.",
+      "explanation": "Comí con una amiga. — Я поел с подругой."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что сделал вчера",
+      "phrase": "Escribí un mensaje por la tarde.",
+      "translation": "Днём я написал сообщение.",
+      "explanation": "Escribí un mensaje por la tarde. — Днём я написал сообщение."
+    },
+    {
+      "character": "orbi",
+      "title": "Что сделал вчера",
+      "phrase": "¿Terminaste el trabajo?",
+      "translation": "Ты закончил работу?",
+      "explanation": "¿Terminaste el trabajo? — Ты закончил работу?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ayer compré fruta.",
+      "translation": "Вчера я купил фрукты.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Вчера я купил фрукты.",
+      "options": [
+        "Днём я написал сообщение.",
+        "Вчера я купил фрукты.",
+        "Ты закончил работу?"
+      ],
+      "explanation": "В прошедшем времени yo: hablar → hablé, comer → comí, vivir → viví. Ударение на последнем слоге важно."
+    },
+    {
+      "id": "apply",
+      "phrase": "Comí con una amiga.",
+      "translation": "Я поел с подругой.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Comí con una amiga.",
+      "tokens": [
+        "Comí",
+        "con",
+        "una",
+        "amiga."
+      ],
+      "character": "miko",
+      "explanation": "Comí con una amiga. — Я поел с подругой."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-36-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Утром мы были на рынке.",
+      "answers": [
+        "Estuvimos en el mercado por la mañana."
+      ],
+      "explanation": "Estuvimos en el mercado por la mañana. — Утром мы были на рынке.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ayer estuve en casa.",
+        "Estuvimos en el mercado por la mañana.",
+        "¿Dónde estuviste el sábado?",
+        "La tienda estuvo cerrada ayer."
+      ]
+    },
+    {
+      "id": "es-a1-36-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Вчера я купил фрукты.»?",
+      "answers": [
+        "Ayer compré fruta."
+      ],
+      "explanation": "Ayer compré fruta. — Вчера я купил фрукты.",
+      "wordIds": [
+        "es:v015:36:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Comí con una amiga.",
+        "¿Terminaste el trabajo?",
+        "Ayer compré fruta."
+      ],
+      "hint": "Ayer compré fruta. — Вчера я купил фрукты."
+    },
+    {
+      "id": "es-a1-36-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Я поел с подругой.",
+      "answers": [
+        "Comí con una amiga."
+      ],
+      "explanation": "В прошедшем времени yo: hablar → hablé, comer → comí, vivir → viví. Ударение на последнем слоге важно.",
+      "wordIds": [
+        "es:v015:36:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Comí",
+        "con",
+        "una",
+        "amiga."
+      ],
+      "hint": "Comí con una amiga. — Я поел с подругой."
+    },
+    {
+      "id": "es-a1-36-e04",
+      "type": "dialogue",
+      "prompt": "Когда была закончена работа?",
+      "answers": [
+        "Утром."
+      ],
+      "explanation": "В диалоге: ¿Terminaste el trabajo? / Sí, lo terminé por la mañana. Por la tarde escribí un mensaje a Luis. Поэтому: Утром.",
+      "wordIds": [
+        "es:v015:36:p0",
+        "es:v015:36:p1",
+        "es:v015:36:p2",
+        "es:v015:36:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: ¿Terminaste el trabajo?\nМико: Sí, lo terminé por la mañana. Por la tarde escribí un mensaje a Luis.",
+      "options": [
+        "Днём.",
+        "Поздно ночью.",
+        "Утром."
+      ]
+    },
+    {
+      "id": "es-a1-36-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Днём я написал сообщение."
+      ],
+      "explanation": "Escribí un mensaje por la tarde. — Днём я написал сообщение.",
+      "wordIds": [
+        "es:v015:36:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Escribí un mensaje por la tarde.",
+      "options": [
+        "Вчера я купил фрукты.",
+        "Днём я написал сообщение.",
+        "Я поел с подругой."
+      ],
+      "hint": "Escribí un mensaje por la tarde. — Днём я написал сообщение."
+    },
+    {
+      "id": "es-a1-36-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ayer yo compro fruta.",
+      "answers": [
+        "Ayer yo compré fruta."
+      ],
+      "explanation": "Ayer задаёт законченное прошлое. Для yo нужна форма compré, а compro — настоящее.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ayer yo compro fruta.",
+        "Ayer yo compré fruta."
+      ],
+      "hint": "В прошедшем времени yo: hablar → hablé, comer → comí, vivir → viví. Ударение на последнем слоге важно."
+    },
+    {
+      "id": "es-a1-36-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Ты закончил работу?». Можно написать вместо микрофона.",
+      "answers": [
+        "¿Terminaste el trabajo?"
+      ],
+      "explanation": "¿Terminaste el trabajo? — Ты закончил работу?",
+      "wordIds": [
+        "es:v015:36:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "¿Terminaste el trabajo?",
+      "recall": {
+        "phrase": "¿Terminaste el trabajo?",
+        "meaning": "Ты закончил работу?"
+      }
+    },
+    {
+      "id": "es-a1-36-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Вчера я купил фрукты.",
+      "answers": [
+        "Ayer compré fruta."
+      ],
+      "explanation": "В прошедшем времени yo: hablar → hablé, comer → comí, vivir → viví. Ударение на последнем слоге важно.",
+      "wordIds": [
+        "es:v015:36:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ayer compré fruta.",
+        "meaning": "Вчера я купил фрукты."
+      }
+    }
+  ]
+}

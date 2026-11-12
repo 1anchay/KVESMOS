@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-41",
+  "title": "Кому отправить сообщение",
+  "topic": "Просьбы и сообщения",
+  "order": 40,
+  "objective": "Понять короткие дополнения me и te.",
+  "guide": "Me означает «мне/меня», te — «тебе/тебя». Перед спрягаемым глаголом: te llamo, me ayudas.",
+  "vocabulary": [
+    {
+      "id": "es:v015:41:p0",
+      "en": "Te llamo esta tarde.",
+      "ru": "Я позвоню тебе сегодня днём."
+    },
+    {
+      "id": "es:v015:41:p1",
+      "en": "¿Me ayudas con la reserva?",
+      "ru": "Поможешь мне с бронированием?"
+    },
+    {
+      "id": "es:v015:41:p2",
+      "en": "Te envío la dirección.",
+      "ru": "Я отправляю тебе адрес."
+    },
+    {
+      "id": "es:v015:41:p3",
+      "en": "¿Me puedes mandar el mensaje?",
+      "ru": "Можешь прислать мне сообщение?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Кому отправить сообщение",
+      "phrase": "Te llamo esta tarde.",
+      "translation": "Я позвоню тебе сегодня днём.",
+      "explanation": "Me означает «мне/меня», te — «тебе/тебя». Перед спрягаемым глаголом: te llamo, me ayudas."
+    },
+    {
+      "character": "miko",
+      "title": "Кому отправить сообщение",
+      "phrase": "¿Me ayudas con la reserva?",
+      "translation": "Поможешь мне с бронированием?",
+      "explanation": "¿Me ayudas con la reserva? — Поможешь мне с бронированием?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Кому отправить сообщение",
+      "phrase": "Te envío la dirección.",
+      "translation": "Я отправляю тебе адрес.",
+      "explanation": "Te envío la dirección. — Я отправляю тебе адрес."
+    },
+    {
+      "character": "orbi",
+      "title": "Кому отправить сообщение",
+      "phrase": "¿Me puedes mandar el mensaje?",
+      "translation": "Можешь прислать мне сообщение?",
+      "explanation": "¿Me puedes mandar el mensaje? — Можешь прислать мне сообщение?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Te llamo esta tarde.",
+      "translation": "Я позвоню тебе сегодня днём.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я позвоню тебе сегодня днём.",
+      "options": [
+        "Я отправляю тебе адрес.",
+        "Я позвоню тебе сегодня днём.",
+        "Можешь прислать мне сообщение?"
+      ],
+      "explanation": "Me означает «мне/меня», te — «тебе/тебя». Перед спрягаемым глаголом: te llamo, me ayudas."
+    },
+    {
+      "id": "apply",
+      "phrase": "¿Me ayudas con la reserva?",
+      "translation": "Поможешь мне с бронированием?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "¿Me ayudas con la reserva?",
+      "tokens": [
+        "¿Me",
+        "ayudas",
+        "con",
+        "la",
+        "reserva?"
+      ],
+      "character": "miko",
+      "explanation": "¿Me ayudas con la reserva? — Поможешь мне с бронированием?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-41-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я отправляю тебе адрес."
+      ],
+      "explanation": "Te envío la dirección. — Я отправляю тебе адрес.",
+      "wordIds": [
+        "es:v015:41:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Te envío la dirección.",
+      "options": [
+        "Я позвоню тебе сегодня днём.",
+        "Я отправляю тебе адрес.",
+        "Поможешь мне с бронированием?"
+      ],
+      "hint": "Te envío la dirección. — Я отправляю тебе адрес."
+    },
+    {
+      "id": "es-a1-41-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Поможешь мне с бронированием?",
+      "answers": [
+        "¿Me ayudas con la reserva?"
+      ],
+      "explanation": "Me означает «мне/меня», te — «тебе/тебя». Перед спрягаемым глаголом: te llamo, me ayudas.",
+      "wordIds": [
+        "es:v015:41:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "¿Me",
+        "ayudas",
+        "con",
+        "la",
+        "reserva?"
+      ],
+      "hint": "¿Me ayudas con la reserva? — Поможешь мне с бронированием?"
+    },
+    {
+      "id": "es-a1-41-e03",
+      "type": "dialogue",
+      "prompt": "Что собеседник отправит сейчас?",
+      "answers": [
+        "Адрес."
+      ],
+      "explanation": "В диалоге: ¿Me puedes mandar la dirección? / Claro. Te envío la dirección ahora y te llamo esta tarde. Поэтому: Адрес.",
+      "wordIds": [
+        "es:v015:41:p0",
+        "es:v015:41:p1",
+        "es:v015:41:p2",
+        "es:v015:41:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Me puedes mandar la dirección?\nМико: Claro. Te envío la dirección ahora y te llamo esta tarde.",
+      "options": [
+        "Билет.",
+        "Чек.",
+        "Адрес."
+      ]
+    },
+    {
+      "id": "es-a1-41-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я позвоню тебе сегодня днём.»?",
+      "answers": [
+        "Te llamo esta tarde."
+      ],
+      "explanation": "Te llamo esta tarde. — Я позвоню тебе сегодня днём.",
+      "wordIds": [
+        "es:v015:41:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "¿Me ayudas con la reserva?",
+        "¿Me puedes mandar el mensaje?",
+        "Te llamo esta tarde."
+      ],
+      "hint": "Te llamo esta tarde. — Я позвоню тебе сегодня днём."
+    },
+    {
+      "id": "es-a1-41-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v015:41:p0",
+        "es:v015:41:p1",
+        "es:v015:41:p2",
+        "es:v015:41:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v015:41:p0",
+          "en": "Te llamo esta tarde.",
+          "ru": "Я позвоню тебе сегодня днём."
+        },
+        {
+          "id": "es:v015:41:p1",
+          "en": "¿Me ayudas con la reserva?",
+          "ru": "Поможешь мне с бронированием?"
+        },
+        {
+          "id": "es:v015:41:p2",
+          "en": "Te envío la dirección.",
+          "ru": "Я отправляю тебе адрес."
+        },
+        {
+          "id": "es:v015:41:p3",
+          "en": "¿Me puedes mandar el mensaje?",
+          "ru": "Можешь прислать мне сообщение?"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-41-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Te yo llamo esta tarde.",
+      "answers": [
+        "Yo te llamo esta tarde."
+      ],
+      "explanation": "Дополнение te ставим непосредственно перед llamo; явное yo, если нужно, стоит раньше.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Te yo llamo esta tarde.",
+        "Yo te llamo esta tarde."
+      ],
+      "hint": "Me означает «мне/меня», te — «тебе/тебя». Перед спрягаемым глаголом: te llamo, me ayudas."
+    },
+    {
+      "id": "es-a1-41-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Можешь прислать мне сообщение?». Можно написать вместо микрофона.",
+      "answers": [
+        "¿Me puedes mandar el mensaje?"
+      ],
+      "explanation": "¿Me puedes mandar el mensaje? — Можешь прислать мне сообщение?",
+      "wordIds": [
+        "es:v015:41:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Me puedes mandar el mensaje?",
+      "recall": {
+        "phrase": "¿Me puedes mandar el mensaje?",
+        "meaning": "Можешь прислать мне сообщение?"
+      }
+    },
+    {
+      "id": "es-a1-41-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я позвоню тебе сегодня днём.",
+      "answers": [
+        "Te llamo esta tarde."
+      ],
+      "explanation": "Me означает «мне/меня», te — «тебе/тебя». Перед спрягаемым глаголом: te llamo, me ayudas.",
+      "wordIds": [
+        "es:v015:41:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Te llamo esta tarde.",
+        "meaning": "Я позвоню тебе сегодня днём."
+      }
+    },
+    {
+      "id": "es-a1-41-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Какой вариант ты предпочитаешь?",
+      "answers": [
+        "¿Qué opción prefieres?"
+      ],
+      "explanation": "¿Qué opción prefieres? — Какой вариант ты предпочитаешь?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Prefiero viajar en tren.",
+        "Este hotel es más tranquilo que el otro.",
+        "¿Qué opción prefieres?",
+        "Preferimos salir temprano."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-31",
+  "title": "Обменять покупку",
+  "topic": "Покупки и бронирование",
+  "order": 30,
+  "objective": "Попросить обмен и объяснить проблему с размером.",
+  "guide": "Quisiera — вежливое «я хотел бы». Me queda pequeño значит «мне мало»; прилагательное согласуется с предметом.",
+  "vocabulary": [
+    {
+      "id": "es:v015:31:p0",
+      "en": "Quisiera cambiar esta camisa.",
+      "ru": "Я хотел бы обменять эту рубашку."
+    },
+    {
+      "id": "es:v015:31:p1",
+      "en": "Esta camisa me queda pequeña.",
+      "ru": "Эта рубашка мне мала."
+    },
+    {
+      "id": "es:v015:31:p2",
+      "en": "¿Tiene una talla más grande?",
+      "ru": "У вас есть размер побольше?"
+    },
+    {
+      "id": "es:v015:31:p3",
+      "en": "Aquí está el recibo.",
+      "ru": "Вот чек."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Обменять покупку",
+      "phrase": "Quisiera cambiar esta camisa.",
+      "translation": "Я хотел бы обменять эту рубашку.",
+      "explanation": "Quisiera — вежливое «я хотел бы». Me queda pequeño значит «мне мало»; прилагательное согласуется с предметом."
+    },
+    {
+      "character": "miko",
+      "title": "Обменять покупку",
+      "phrase": "Esta camisa me queda pequeña.",
+      "translation": "Эта рубашка мне мала.",
+      "explanation": "Esta camisa me queda pequeña. — Эта рубашка мне мала."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Обменять покупку",
+      "phrase": "¿Tiene una talla más grande?",
+      "translation": "У вас есть размер побольше?",
+      "explanation": "¿Tiene una talla más grande? — У вас есть размер побольше?"
+    },
+    {
+      "character": "orbi",
+      "title": "Обменять покупку",
+      "phrase": "Aquí está el recibo.",
+      "translation": "Вот чек.",
+      "explanation": "Aquí está el recibo. — Вот чек."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Quisiera cambiar esta camisa.",
+      "translation": "Я хотел бы обменять эту рубашку.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы обменять эту рубашку.",
+      "options": [
+        "У вас есть размер побольше?",
+        "Я хотел бы обменять эту рубашку.",
+        "Вот чек."
+      ],
+      "explanation": "Quisiera — вежливое «я хотел бы». Me queda pequeño значит «мне мало»; прилагательное согласуется с предметом."
+    },
+    {
+      "id": "apply",
+      "phrase": "Esta camisa me queda pequeña.",
+      "translation": "Эта рубашка мне мала.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Esta camisa me queda pequeña.",
+      "tokens": [
+        "Esta",
+        "camisa",
+        "me",
+        "queda",
+        "pequeña."
+      ],
+      "character": "miko",
+      "explanation": "Esta camisa me queda pequeña. — Эта рубашка мне мала."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-31-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы обменять эту рубашку.»?",
+      "answers": [
+        "Quisiera cambiar esta camisa."
+      ],
+      "explanation": "Quisiera cambiar esta camisa. — Я хотел бы обменять эту рубашку.",
+      "wordIds": [
+        "es:v015:31:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Esta camisa me queda pequeña.",
+        "Aquí está el recibo.",
+        "Quisiera cambiar esta camisa."
+      ],
+      "hint": "Quisiera cambiar esta camisa. — Я хотел бы обменять эту рубашку."
+    },
+    {
+      "id": "es-a1-31-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Эта рубашка мне мала.",
+      "answers": [
+        "Esta camisa me queda pequeña."
+      ],
+      "explanation": "Quisiera — вежливое «я хотел бы». Me queda pequeño значит «мне мало»; прилагательное согласуется с предметом.",
+      "wordIds": [
+        "es:v015:31:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Esta",
+        "camisa",
+        "me",
+        "queda",
+        "pequeña."
+      ],
+      "hint": "Esta camisa me queda pequeña. — Эта рубашка мне мала."
+    },
+    {
+      "id": "es-a1-31-e03",
+      "type": "dialogue",
+      "prompt": "Почему покупатель хочет обменять рубашку?",
+      "answers": [
+        "Она ему мала."
+      ],
+      "explanation": "В диалоге: Esta camisa me queda pequeña. ¿Tiene una talla más grande? / Sí. ¿Tiene el recibo? Поэтому: Она ему мала.",
+      "wordIds": [
+        "es:v015:31:p0",
+        "es:v015:31:p1",
+        "es:v015:31:p2",
+        "es:v015:31:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Esta camisa me queda pequeña. ¿Tiene una talla más grande?\nМико: Sí. ¿Tiene el recibo?",
+      "options": [
+        "Она слишком дорогая.",
+        "Ему не нравится цвет.",
+        "Она ему мала."
+      ]
+    },
+    {
+      "id": "es-a1-31-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "У вас есть размер побольше?"
+      ],
+      "explanation": "¿Tiene una talla más grande? — У вас есть размер побольше?",
+      "wordIds": [
+        "es:v015:31:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Tiene una talla más grande?",
+      "options": [
+        "Я хотел бы обменять эту рубашку.",
+        "У вас есть размер побольше?",
+        "Эта рубашка мне мала."
+      ],
+      "hint": "¿Tiene una talla más grande? — У вас есть размер побольше?"
+    },
+    {
+      "id": "es-a1-31-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v015:31:p0",
+        "es:v015:31:p1",
+        "es:v015:31:p2",
+        "es:v015:31:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v015:31:p0",
+          "en": "Quisiera cambiar esta camisa.",
+          "ru": "Я хотел бы обменять эту рубашку."
+        },
+        {
+          "id": "es:v015:31:p1",
+          "en": "Esta camisa me queda pequeña.",
+          "ru": "Эта рубашка мне мала."
+        },
+        {
+          "id": "es:v015:31:p2",
+          "en": "¿Tiene una talla más grande?",
+          "ru": "У вас есть размер побольше?"
+        },
+        {
+          "id": "es:v015:31:p3",
+          "en": "Aquí está el recibo.",
+          "ru": "Вот чек."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-31-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Esta camisa me queda pequeño.",
+      "answers": [
+        "Esta camisa me queda pequeña."
+      ],
+      "explanation": "Camisa — женского рода, поэтому pequeña.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Esta camisa me queda pequeño.",
+        "Esta camisa me queda pequeña."
+      ],
+      "hint": "Quisiera — вежливое «я хотел бы». Me queda pequeño значит «мне мало»; прилагательное согласуется с предметом."
+    },
+    {
+      "id": "es-a1-31-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Вот чек.». Можно написать вместо микрофона.",
+      "answers": [
+        "Aquí está el recibo."
+      ],
+      "explanation": "Aquí está el recibo. — Вот чек.",
+      "wordIds": [
+        "es:v015:31:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Aquí está el recibo.",
+      "recall": {
+        "phrase": "Aquí está el recibo.",
+        "meaning": "Вот чек."
+      }
+    },
+    {
+      "id": "es-a1-31-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы обменять эту рубашку.",
+      "answers": [
+        "Quisiera cambiar esta camisa."
+      ],
+      "explanation": "Quisiera — вежливое «я хотел бы». Me queda pequeño значит «мне мало»; прилагательное согласуется с предметом.",
+      "wordIds": [
+        "es:v015:31:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Quisiera cambiar esta camisa.",
+        "meaning": "Я хотел бы обменять эту рубашку."
+      }
+    },
+    {
+      "id": "es-a1-31-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Увидимся перед кинотеатром.",
+      "answers": [
+        "Nos vemos delante del cine."
+      ],
+      "explanation": "Nos vemos delante del cine. — Увидимся перед кинотеатром.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Nos vemos delante del cine.",
+        "Voy a llegar diez minutos tarde.",
+        "Te espero junto a la entrada.",
+        "Gracias por avisar."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "id": "de-a1-41",
+  "title": "Сказать, что я думаю",
+  "topic": "Мысли и новости",
+  "order": 40,
+  "objective": "Соединить мнение и сообщение через dass.",
+  "guide": "После dass спрягаемый глагол уходит в конец придаточного: Ich glaube, dass der Bus kommt. Перед dass ставится запятая.",
+  "vocabulary": [
+    {
+      "id": "de:v015:41:p0",
+      "en": "Ich glaube, dass der Bus bald kommt.",
+      "ru": "Я думаю, что автобус скоро придёт."
+    },
+    {
+      "id": "de:v015:41:p1",
+      "en": "Sie sagt, dass sie morgen Zeit hat.",
+      "ru": "Она говорит, что завтра у неё есть время."
+    },
+    {
+      "id": "de:v015:41:p2",
+      "en": "Wir wissen, dass der Laden geschlossen ist.",
+      "ru": "Мы знаем, что магазин закрыт."
+    },
+    {
+      "id": "de:v015:41:p3",
+      "en": "Ich hoffe, dass alles gut geht.",
+      "ru": "Я надеюсь, что всё пройдёт хорошо."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сказать, что я думаю",
+      "phrase": "Ich glaube, dass der Bus bald kommt.",
+      "translation": "Я думаю, что автобус скоро придёт.",
+      "explanation": "После dass спрягаемый глагол уходит в конец придаточного: Ich glaube, dass der Bus kommt. Перед dass ставится запятая."
+    },
+    {
+      "character": "miko",
+      "title": "Сказать, что я думаю",
+      "phrase": "Sie sagt, dass sie morgen Zeit hat.",
+      "translation": "Она говорит, что завтра у неё есть время.",
+      "explanation": "Sie sagt, dass sie morgen Zeit hat. — Она говорит, что завтра у неё есть время."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сказать, что я думаю",
+      "phrase": "Wir wissen, dass der Laden geschlossen ist.",
+      "translation": "Мы знаем, что магазин закрыт.",
+      "explanation": "Wir wissen, dass der Laden geschlossen ist. — Мы знаем, что магазин закрыт."
+    },
+    {
+      "character": "orbi",
+      "title": "Сказать, что я думаю",
+      "phrase": "Ich hoffe, dass alles gut geht.",
+      "translation": "Я надеюсь, что всё пройдёт хорошо.",
+      "explanation": "Ich hoffe, dass alles gut geht. — Я надеюсь, что всё пройдёт хорошо."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich glaube, dass der Bus bald kommt.",
+      "translation": "Я думаю, что автобус скоро придёт.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я думаю, что автобус скоро придёт.",
+      "options": [
+        "Мы знаем, что магазин закрыт.",
+        "Я думаю, что автобус скоро придёт.",
+        "Я надеюсь, что всё пройдёт хорошо."
+      ],
+      "explanation": "После dass спрягаемый глагол уходит в конец придаточного: Ich glaube, dass der Bus kommt. Перед dass ставится запятая."
+    },
+    {
+      "id": "apply",
+      "phrase": "Sie sagt, dass sie morgen Zeit hat.",
+      "translation": "Она говорит, что завтра у неё есть время.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Sie sagt, dass sie morgen Zeit hat.",
+      "tokens": [
+        "Sie",
+        "sagt,",
+        "dass",
+        "sie",
+        "morgen",
+        "Zeit",
+        "hat."
+      ],
+      "character": "miko",
+      "explanation": "Sie sagt, dass sie morgen Zeit hat. — Она говорит, что завтра у неё есть время."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-41-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы знаем, что магазин закрыт."
+      ],
+      "explanation": "Wir wissen, dass der Laden geschlossen ist. — Мы знаем, что магазин закрыт.",
+      "wordIds": [
+        "de:v015:41:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Wir wissen, dass der Laden geschlossen ist.",
+      "options": [
+        "Я думаю, что автобус скоро придёт.",
+        "Мы знаем, что магазин закрыт.",
+        "Она говорит, что завтра у неё есть время."
+      ],
+      "hint": "Wir wissen, dass der Laden geschlossen ist. — Мы знаем, что магазин закрыт."
+    },
+    {
+      "id": "de-a1-41-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Она говорит, что завтра у неё есть время.",
+      "answers": [
+        "Sie sagt, dass sie morgen Zeit hat."
+      ],
+      "explanation": "После dass спрягаемый глагол уходит в конец придаточного: Ich glaube, dass der Bus kommt. Перед dass ставится запятая.",
+      "wordIds": [
+        "de:v015:41:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Sie",
+        "sagt,",
+        "dass",
+        "sie",
+        "morgen",
+        "Zeit",
+        "hat."
+      ],
+      "hint": "Sie sagt, dass sie morgen Zeit hat. — Она говорит, что завтра у неё есть время."
+    },
+    {
+      "id": "de-a1-41-e03",
+      "type": "dialogue",
+      "prompt": "Когда у Леа есть свободное время?",
+      "answers": [
+        "Завтра."
+      ],
+      "explanation": "В диалоге: Hat Lea morgen Zeit? / Ja, sie sagt, dass sie morgen Zeit hat. Heute arbeitet sie lange. Поэтому: Завтра.",
+      "wordIds": [
+        "de:v015:41:p0",
+        "de:v015:41:p1",
+        "de:v015:41:p2",
+        "de:v015:41:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Hat Lea morgen Zeit?\nМико: Ja, sie sagt, dass sie morgen Zeit hat. Heute arbeitet sie lange.",
+      "options": [
+        "Сегодня утром.",
+        "Сегодня весь день.",
+        "Завтра."
+      ]
+    },
+    {
+      "id": "de-a1-41-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я думаю, что автобус скоро придёт.»?",
+      "answers": [
+        "Ich glaube, dass der Bus bald kommt."
+      ],
+      "explanation": "Ich glaube, dass der Bus bald kommt. — Я думаю, что автобус скоро придёт.",
+      "wordIds": [
+        "de:v015:41:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Sie sagt, dass sie morgen Zeit hat.",
+        "Ich hoffe, dass alles gut geht.",
+        "Ich glaube, dass der Bus bald kommt."
+      ],
+      "hint": "Ich glaube, dass der Bus bald kommt. — Я думаю, что автобус скоро придёт."
+    },
+    {
+      "id": "de-a1-41-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v015:41:p0",
+        "de:v015:41:p1",
+        "de:v015:41:p2",
+        "de:v015:41:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v015:41:p0",
+          "en": "Ich glaube, dass der Bus bald kommt.",
+          "ru": "Я думаю, что автобус скоро придёт."
+        },
+        {
+          "id": "de:v015:41:p1",
+          "en": "Sie sagt, dass sie morgen Zeit hat.",
+          "ru": "Она говорит, что завтра у неё есть время."
+        },
+        {
+          "id": "de:v015:41:p2",
+          "en": "Wir wissen, dass der Laden geschlossen ist.",
+          "ru": "Мы знаем, что магазин закрыт."
+        },
+        {
+          "id": "de:v015:41:p3",
+          "en": "Ich hoffe, dass alles gut geht.",
+          "ru": "Я надеюсь, что всё пройдёт хорошо."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-41-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich glaube, dass der Bus kommt bald.",
+      "answers": [
+        "Ich glaube, dass der Bus bald kommt."
+      ],
+      "explanation": "В придаточном с dass спрягаемый kommt ставится в конец.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich glaube, dass der Bus kommt bald.",
+        "Ich glaube, dass der Bus bald kommt."
+      ],
+      "hint": "После dass спрягаемый глагол уходит в конец придаточного: Ich glaube, dass der Bus kommt. Перед dass ставится запятая."
+    },
+    {
+      "id": "de-a1-41-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я надеюсь, что всё пройдёт хорошо.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ich hoffe, dass alles gut geht."
+      ],
+      "explanation": "Ich hoffe, dass alles gut geht. — Я надеюсь, что всё пройдёт хорошо.",
+      "wordIds": [
+        "de:v015:41:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ich hoffe, dass alles gut geht.",
+      "recall": {
+        "phrase": "Ich hoffe, dass alles gut geht.",
+        "meaning": "Я надеюсь, что всё пройдёт хорошо."
+      }
+    },
+    {
+      "id": "de-a1-41-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я думаю, что автобус скоро придёт.",
+      "answers": [
+        "Ich glaube, dass der Bus bald kommt."
+      ],
+      "explanation": "После dass спрягаемый глагол уходит в конец придаточного: Ich glaube, dass der Bus kommt. Перед dass ставится запятая.",
+      "wordIds": [
+        "de:v015:41:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich glaube, dass der Bus bald kommt.",
+        "meaning": "Я думаю, что автобус скоро придёт."
+      }
+    },
+    {
+      "id": "de-a1-41-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Распишитесь, пожалуйста, здесь.",
+      "answers": [
+        "Unterschreiben Sie bitte hier."
+      ],
+      "explanation": "Unterschreiben Sie bitte hier. — Распишитесь, пожалуйста, здесь.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Öffnen Sie bitte das Fenster.",
+        "Füllen Sie bitte dieses Formular aus.",
+        "Unterschreiben Sie bitte hier.",
+        "Warten Sie einen Moment."
+      ]
+    }
+  ]
+}

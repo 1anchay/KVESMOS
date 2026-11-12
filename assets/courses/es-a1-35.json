@@ -1,0 +1,294 @@
+{
+  "id": "es-a1-35",
+  "title": "Где я был вчера",
+  "topic": "Прошлое: первые шаги",
+  "order": 34,
+  "objective": "Сообщить о месте и состоянии в законченный период прошлого.",
+  "guide": "Estuve — «я был» от estar для завершённого периода. Estuvimos — «мы были». Вопрос «где?» — ¿dónde?",
+  "vocabulary": [
+    {
+      "id": "es:v015:35:p0",
+      "en": "Ayer estuve en casa.",
+      "ru": "Вчера я был дома."
+    },
+    {
+      "id": "es:v015:35:p1",
+      "en": "Estuvimos en el mercado por la mañana.",
+      "ru": "Утром мы были на рынке."
+    },
+    {
+      "id": "es:v015:35:p2",
+      "en": "¿Dónde estuviste el sábado?",
+      "ru": "Где ты был в субботу?"
+    },
+    {
+      "id": "es:v015:35:p3",
+      "en": "La tienda estuvo cerrada ayer.",
+      "ru": "Вчера магазин был закрыт."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Где я был вчера",
+      "phrase": "Ayer estuve en casa.",
+      "translation": "Вчера я был дома.",
+      "explanation": "Estuve — «я был» от estar для завершённого периода. Estuvimos — «мы были». Вопрос «где?» — ¿dónde?"
+    },
+    {
+      "character": "miko",
+      "title": "Где я был вчера",
+      "phrase": "Estuvimos en el mercado por la mañana.",
+      "translation": "Утром мы были на рынке.",
+      "explanation": "Estuvimos en el mercado por la mañana. — Утром мы были на рынке."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Где я был вчера",
+      "phrase": "¿Dónde estuviste el sábado?",
+      "translation": "Где ты был в субботу?",
+      "explanation": "¿Dónde estuviste el sábado? — Где ты был в субботу?"
+    },
+    {
+      "character": "orbi",
+      "title": "Где я был вчера",
+      "phrase": "La tienda estuvo cerrada ayer.",
+      "translation": "Вчера магазин был закрыт.",
+      "explanation": "La tienda estuvo cerrada ayer. — Вчера магазин был закрыт."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ayer estuve en casa.",
+      "translation": "Вчера я был дома.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Вчера я был дома.",
+      "options": [
+        "Где ты был в субботу?",
+        "Вчера я был дома.",
+        "Вчера магазин был закрыт."
+      ],
+      "explanation": "Estuve — «я был» от estar для завершённого периода. Estuvimos — «мы были». Вопрос «где?» — ¿dónde?"
+    },
+    {
+      "id": "apply",
+      "phrase": "Estuvimos en el mercado por la mañana.",
+      "translation": "Утром мы были на рынке.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Estuvimos en el mercado por la mañana.",
+      "tokens": [
+        "Estuvimos",
+        "en",
+        "el",
+        "mercado",
+        "por",
+        "la",
+        "mañana."
+      ],
+      "character": "miko",
+      "explanation": "Estuvimos en el mercado por la mañana. — Утром мы были на рынке."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-35-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Где ты был в субботу?"
+      ],
+      "explanation": "¿Dónde estuviste el sábado? — Где ты был в субботу?",
+      "wordIds": [
+        "es:v015:35:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "¿Dónde estuviste el sábado?",
+      "options": [
+        "Вчера я был дома.",
+        "Где ты был в субботу?",
+        "Утром мы были на рынке."
+      ],
+      "hint": "¿Dónde estuviste el sábado? — Где ты был в субботу?"
+    },
+    {
+      "id": "es-a1-35-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Утром мы были на рынке.",
+      "answers": [
+        "Estuvimos en el mercado por la mañana."
+      ],
+      "explanation": "Estuve — «я был» от estar для завершённого периода. Estuvimos — «мы были». Вопрос «где?» — ¿dónde?",
+      "wordIds": [
+        "es:v015:35:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Estuvimos",
+        "en",
+        "el",
+        "mercado",
+        "por",
+        "la",
+        "mañana."
+      ],
+      "hint": "Estuvimos en el mercado por la mañana. — Утром мы были на рынке."
+    },
+    {
+      "id": "es-a1-35-e03",
+      "type": "dialogue",
+      "prompt": "Почему собеседник не пошёл в магазин?",
+      "answers": [
+        "Магазин был закрыт."
+      ],
+      "explanation": "В диалоге: ¿Dónde estuviste el sábado? / Estuve en casa. La tienda estuvo cerrada ese día. Поэтому: Магазин был закрыт.",
+      "wordIds": [
+        "es:v015:35:p0",
+        "es:v015:35:p1",
+        "es:v015:35:p2",
+        "es:v015:35:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Dónde estuviste el sábado?\nМико: Estuve en casa. La tienda estuvo cerrada ese día.",
+      "options": [
+        "Он был на рынке весь день.",
+        "Он уехал из города.",
+        "Магазин был закрыт."
+      ]
+    },
+    {
+      "id": "es-a1-35-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Вчера я был дома.»?",
+      "answers": [
+        "Ayer estuve en casa."
+      ],
+      "explanation": "Ayer estuve en casa. — Вчера я был дома.",
+      "wordIds": [
+        "es:v015:35:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Estuvimos en el mercado por la mañana.",
+        "La tienda estuvo cerrada ayer.",
+        "Ayer estuve en casa."
+      ],
+      "hint": "Ayer estuve en casa. — Вчера я был дома."
+    },
+    {
+      "id": "es-a1-35-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v015:35:p0",
+        "es:v015:35:p1",
+        "es:v015:35:p2",
+        "es:v015:35:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v015:35:p0",
+          "en": "Ayer estuve en casa.",
+          "ru": "Вчера я был дома."
+        },
+        {
+          "id": "es:v015:35:p1",
+          "en": "Estuvimos en el mercado por la mañana.",
+          "ru": "Утром мы были на рынке."
+        },
+        {
+          "id": "es:v015:35:p2",
+          "en": "¿Dónde estuviste el sábado?",
+          "ru": "Где ты был в субботу?"
+        },
+        {
+          "id": "es:v015:35:p3",
+          "en": "La tienda estuvo cerrada ayer.",
+          "ru": "Вчера магазин был закрыт."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-35-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ayer yo estuvo en casa.",
+      "answers": [
+        "Ayer yo estuve en casa."
+      ],
+      "explanation": "Yo требует формы estuve; estuvo относится к él, ella или usted.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ayer yo estuvo en casa.",
+        "Ayer yo estuve en casa."
+      ],
+      "hint": "Estuve — «я был» от estar для завершённого периода. Estuvimos — «мы были». Вопрос «где?» — ¿dónde?"
+    },
+    {
+      "id": "es-a1-35-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Вчера магазин был закрыт.». Можно написать вместо микрофона.",
+      "answers": [
+        "La tienda estuvo cerrada ayer."
+      ],
+      "explanation": "La tienda estuvo cerrada ayer. — Вчера магазин был закрыт.",
+      "wordIds": [
+        "es:v015:35:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "La tienda estuvo cerrada ayer.",
+      "recall": {
+        "phrase": "La tienda estuvo cerrada ayer.",
+        "meaning": "Вчера магазин был закрыт."
+      }
+    },
+    {
+      "id": "es-a1-35-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Вчера я был дома.",
+      "answers": [
+        "Ayer estuve en casa."
+      ],
+      "explanation": "Estuve — «я был» от estar для завершённого периода. Estuvimos — «мы были». Вопрос «где?» — ¿dónde?",
+      "wordIds": [
+        "es:v015:35:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ayer estuve en casa.",
+        "meaning": "Вчера я был дома."
+      }
+    },
+    {
+      "id": "es-a1-35-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Наша дочь учится в Мадриде.",
+      "answers": [
+        "Nuestra hija estudia en Madrid."
+      ],
+      "explanation": "Nuestra hija estudia en Madrid. — Наша дочь учится в Мадриде.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Nuestra hija estudia en Madrid.",
+        "Nuestros amigos viven cerca.",
+        "Este es su hermano.",
+        "¿Dónde están nuestras llaves?"
+      ]
+    }
+  ]
+}

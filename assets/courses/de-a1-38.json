@@ -1,0 +1,249 @@
+{
+  "id": "de-a1-38",
+  "title": "Каким был день",
+  "topic": "Вопросы о прошлом",
+  "order": 37,
+  "objective": "Использовать war и hatte для прошлого состояния.",
+  "guide": "В разговоре sein и haben часто ставят в Präteritum: ich war — я был, ich hatte — у меня было; wir waren, wir hatten.",
+  "vocabulary": [
+    {
+      "id": "de:v015:38:p0",
+      "en": "Ich war gestern sehr müde.",
+      "ru": "Вчера я был очень уставшим."
+    },
+    {
+      "id": "de:v015:38:p1",
+      "en": "Wir hatten keine Zeit.",
+      "ru": "У нас не было времени."
+    },
+    {
+      "id": "de:v015:38:p2",
+      "en": "Das Wetter war schön.",
+      "ru": "Погода была хорошая."
+    },
+    {
+      "id": "de:v015:38:p3",
+      "en": "Hattest du am Montag frei?",
+      "ru": "У тебя был выходной в понедельник?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Каким был день",
+      "phrase": "Ich war gestern sehr müde.",
+      "translation": "Вчера я был очень уставшим.",
+      "explanation": "В разговоре sein и haben часто ставят в Präteritum: ich war — я был, ich hatte — у меня было; wir waren, wir hatten."
+    },
+    {
+      "character": "miko",
+      "title": "Каким был день",
+      "phrase": "Wir hatten keine Zeit.",
+      "translation": "У нас не было времени.",
+      "explanation": "Wir hatten keine Zeit. — У нас не было времени."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Каким был день",
+      "phrase": "Das Wetter war schön.",
+      "translation": "Погода была хорошая.",
+      "explanation": "Das Wetter war schön. — Погода была хорошая."
+    },
+    {
+      "character": "orbi",
+      "title": "Каким был день",
+      "phrase": "Hattest du am Montag frei?",
+      "translation": "У тебя был выходной в понедельник?",
+      "explanation": "Hattest du am Montag frei? — У тебя был выходной в понедельник?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich war gestern sehr müde.",
+      "translation": "Вчера я был очень уставшим.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Вчера я был очень уставшим.",
+      "options": [
+        "Погода была хорошая.",
+        "Вчера я был очень уставшим.",
+        "У тебя был выходной в понедельник?"
+      ],
+      "explanation": "В разговоре sein и haben часто ставят в Präteritum: ich war — я был, ich hatte — у меня было; wir waren, wir hatten."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wir hatten keine Zeit.",
+      "translation": "У нас не было времени.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wir hatten keine Zeit.",
+      "tokens": [
+        "Wir",
+        "hatten",
+        "keine",
+        "Zeit."
+      ],
+      "character": "miko",
+      "explanation": "Wir hatten keine Zeit. — У нас не было времени."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-38-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Погода была хорошая."
+      ],
+      "explanation": "Das Wetter war schön. — Погода была хорошая.",
+      "wordIds": [
+        "de:v015:38:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Das Wetter war schön.",
+      "options": [
+        "Вчера я был очень уставшим.",
+        "Погода была хорошая.",
+        "У нас не было времени."
+      ],
+      "hint": "Das Wetter war schön. — Погода была хорошая."
+    },
+    {
+      "id": "de-a1-38-e02",
+      "type": "order",
+      "prompt": "Собери реплику: У нас не было времени.",
+      "answers": [
+        "Wir hatten keine Zeit."
+      ],
+      "explanation": "В разговоре sein и haben часто ставят в Präteritum: ich war — я был, ich hatte — у меня было; wir waren, wir hatten.",
+      "wordIds": [
+        "de:v015:38:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wir",
+        "hatten",
+        "keine",
+        "Zeit."
+      ],
+      "hint": "Wir hatten keine Zeit. — У нас не было времени."
+    },
+    {
+      "id": "de-a1-38-e03",
+      "type": "dialogue",
+      "prompt": "Как собеседник провёл выходной?",
+      "answers": [
+        "Остался дома."
+      ],
+      "explanation": "В диалоге: Hattest du am Montag frei? / Ja, aber ich war sehr müde und bin zu Hause geblieben. Поэтому: Остался дома.",
+      "wordIds": [
+        "de:v015:38:p0",
+        "de:v015:38:p1",
+        "de:v015:38:p2",
+        "de:v015:38:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Hattest du am Montag frei?\nМико: Ja, aber ich war sehr müde und bin zu Hause geblieben.",
+      "options": [
+        "Поехал в Берлин.",
+        "Работал весь день.",
+        "Остался дома."
+      ]
+    },
+    {
+      "id": "de-a1-38-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Вчера я был очень уставшим.»?",
+      "answers": [
+        "Ich war gestern sehr müde."
+      ],
+      "explanation": "Ich war gestern sehr müde. — Вчера я был очень уставшим.",
+      "wordIds": [
+        "de:v015:38:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Wir hatten keine Zeit.",
+        "Hattest du am Montag frei?",
+        "Ich war gestern sehr müde."
+      ],
+      "hint": "Ich war gestern sehr müde. — Вчера я был очень уставшим."
+    },
+    {
+      "id": "de-a1-38-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wir hatte keine Zeit.",
+      "answers": [
+        "Wir hatten keine Zeit."
+      ],
+      "explanation": "С wir прошедшая форма haben — hatten.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Wir hatte keine Zeit.",
+        "Wir hatten keine Zeit."
+      ],
+      "hint": "В разговоре sein и haben часто ставят в Präteritum: ich war — я был, ich hatte — у меня было; wir waren, wir hatten."
+    },
+    {
+      "id": "de-a1-38-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «У тебя был выходной в понедельник?». Можно написать вместо микрофона.",
+      "answers": [
+        "Hattest du am Montag frei?"
+      ],
+      "explanation": "Hattest du am Montag frei? — У тебя был выходной в понедельник?",
+      "wordIds": [
+        "de:v015:38:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Hattest du am Montag frei?",
+      "recall": {
+        "phrase": "Hattest du am Montag frei?",
+        "meaning": "У тебя был выходной в понедельник?"
+      }
+    },
+    {
+      "id": "de-a1-38-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Вчера я был очень уставшим.",
+      "answers": [
+        "Ich war gestern sehr müde."
+      ],
+      "explanation": "В разговоре sein и haben часто ставят в Präteritum: ich war — я был, ich hatte — у меня было; wir waren, wir hatten.",
+      "wordIds": [
+        "de:v015:38:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich war gestern sehr müde.",
+        "meaning": "Вчера я был очень уставшим."
+      }
+    },
+    {
+      "id": "de-a1-38-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Где ты нашёл ключ?",
+      "answers": [
+        "Wo hast du den Schlüssel gefunden?"
+      ],
+      "explanation": "Wo hast du den Schlüssel gefunden? — Где ты нашёл ключ?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Was hast du gestern gemacht?",
+        "Wann seid ihr angekommen?",
+        "Ich habe die Nachricht nicht gelesen.",
+        "Wo hast du den Schlüssel gefunden?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "id": "fr-a1-24",
+  "title": "Этот, эта и эти",
+  "topic": "Номер и вещи",
+  "order": 23,
+  "objective": "Выбирать указательное слово по роду и числу.",
+  "guide": "Ce — мужской род перед согласной, cet — перед гласной или немым h, cette — женский род, ces — множественное число.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:24:p0",
+      "en": "Ce train va à Lyon.",
+      "ru": "Этот поезд идёт в Лион."
+    },
+    {
+      "id": "fr:v015:24:p1",
+      "en": "Cette valise est légère.",
+      "ru": "Этот чемодан лёгкий."
+    },
+    {
+      "id": "fr:v015:24:p2",
+      "en": "Cet hôtel est près de la gare.",
+      "ru": "Эта гостиница рядом с вокзалом."
+    },
+    {
+      "id": "fr:v015:24:p3",
+      "en": "Ces billets sont pour demain.",
+      "ru": "Эти билеты на завтра."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Этот, эта и эти",
+      "phrase": "Ce train va à Lyon.",
+      "translation": "Этот поезд идёт в Лион.",
+      "explanation": "Ce — мужской род перед согласной, cet — перед гласной или немым h, cette — женский род, ces — множественное число."
+    },
+    {
+      "character": "miko",
+      "title": "Этот, эта и эти",
+      "phrase": "Cette valise est légère.",
+      "translation": "Этот чемодан лёгкий.",
+      "explanation": "Cette valise est légère. — Этот чемодан лёгкий."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Этот, эта и эти",
+      "phrase": "Cet hôtel est près de la gare.",
+      "translation": "Эта гостиница рядом с вокзалом.",
+      "explanation": "Cet hôtel est près de la gare. — Эта гостиница рядом с вокзалом."
+    },
+    {
+      "character": "orbi",
+      "title": "Этот, эта и эти",
+      "phrase": "Ces billets sont pour demain.",
+      "translation": "Эти билеты на завтра.",
+      "explanation": "Ces billets sont pour demain. — Эти билеты на завтра."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ce train va à Lyon.",
+      "translation": "Этот поезд идёт в Лион.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Этот поезд идёт в Лион.",
+      "options": [
+        "Эта гостиница рядом с вокзалом.",
+        "Этот поезд идёт в Лион.",
+        "Эти билеты на завтра."
+      ],
+      "explanation": "Ce — мужской род перед согласной, cet — перед гласной или немым h, cette — женский род, ces — множественное число."
+    },
+    {
+      "id": "apply",
+      "phrase": "Cette valise est légère.",
+      "translation": "Этот чемодан лёгкий.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Cette valise est légère.",
+      "tokens": [
+        "Cette",
+        "valise",
+        "est",
+        "légère."
+      ],
+      "character": "miko",
+      "explanation": "Cette valise est légère. — Этот чемодан лёгкий."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-24-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Этот поезд идёт в Лион.»?",
+      "answers": [
+        "Ce train va à Lyon."
+      ],
+      "explanation": "Ce train va à Lyon. — Этот поезд идёт в Лион.",
+      "wordIds": [
+        "fr:v015:24:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Cette valise est légère.",
+        "Ces billets sont pour demain.",
+        "Ce train va à Lyon."
+      ],
+      "hint": "Ce train va à Lyon. — Этот поезд идёт в Лион."
+    },
+    {
+      "id": "fr-a1-24-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Этот чемодан лёгкий.",
+      "answers": [
+        "Cette valise est légère."
+      ],
+      "explanation": "Ce — мужской род перед согласной, cet — перед гласной или немым h, cette — женский род, ces — множественное число.",
+      "wordIds": [
+        "fr:v015:24:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Cette",
+        "valise",
+        "est",
+        "légère."
+      ],
+      "hint": "Cette valise est légère. — Этот чемодан лёгкий."
+    },
+    {
+      "id": "fr-a1-24-e03",
+      "type": "dialogue",
+      "prompt": "На какой день билеты?",
+      "answers": [
+        "На завтра."
+      ],
+      "explanation": "В диалоге: Ces billets sont pour aujourd'hui ? / Non, ils sont pour demain. Ce train part à neuf heures. Поэтому: На завтра.",
+      "wordIds": [
+        "fr:v015:24:p0",
+        "fr:v015:24:p1",
+        "fr:v015:24:p2",
+        "fr:v015:24:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Ces billets sont pour aujourd'hui ?\nМико: Non, ils sont pour demain. Ce train part à neuf heures.",
+      "options": [
+        "На сегодня.",
+        "На вчера.",
+        "На завтра."
+      ]
+    },
+    {
+      "id": "fr-a1-24-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Эта гостиница рядом с вокзалом."
+      ],
+      "explanation": "Cet hôtel est près de la gare. — Эта гостиница рядом с вокзалом.",
+      "wordIds": [
+        "fr:v015:24:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Cet hôtel est près de la gare.",
+      "options": [
+        "Этот поезд идёт в Лион.",
+        "Эта гостиница рядом с вокзалом.",
+        "Этот чемодан лёгкий."
+      ],
+      "hint": "Cet hôtel est près de la gare. — Эта гостиница рядом с вокзалом."
+    },
+    {
+      "id": "fr-a1-24-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ce hôtel est près de la gare.",
+      "answers": [
+        "Cet hôtel est près de la gare."
+      ],
+      "explanation": "Перед немым h в hôtel используется cet, а не ce.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ce hôtel est près de la gare.",
+        "Cet hôtel est près de la gare."
+      ],
+      "hint": "Ce — мужской род перед согласной, cet — перед гласной или немым h, cette — женский род, ces — множественное число."
+    },
+    {
+      "id": "fr-a1-24-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Эти билеты на завтра.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ces billets sont pour demain."
+      ],
+      "explanation": "Ces billets sont pour demain. — Эти билеты на завтра.",
+      "wordIds": [
+        "fr:v015:24:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Ces billets sont pour demain.",
+      "recall": {
+        "phrase": "Ces billets sont pour demain.",
+        "meaning": "Эти билеты на завтра."
+      }
+    },
+    {
+      "id": "fr-a1-24-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Этот поезд идёт в Лион.",
+      "answers": [
+        "Ce train va à Lyon."
+      ],
+      "explanation": "Ce — мужской род перед согласной, cet — перед гласной или немым h, cette — женский род, ces — множественное число.",
+      "wordIds": [
+        "fr:v015:24:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ce train va à Lyon.",
+        "meaning": "Этот поезд идёт в Лион."
+      }
+    },
+    {
+      "id": "fr-a1-24-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы хотели бы тихий номер.",
+      "answers": [
+        "Nous voudrions une chambre calme."
+      ],
+      "explanation": "Nous voudrions une chambre calme. — Мы хотели бы тихий номер.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "J'ai une réservation pour deux nuits.",
+        "Le petit-déjeuner est compris ?",
+        "À quelle heure faut-il quitter la chambre ?",
+        "Nous voudrions une chambre calme."
+      ]
+    }
+  ]
+}

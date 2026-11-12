@@ -7,6 +7,8 @@ import '../domain/course.dart';
 import '../domain/progress.dart';
 import '../domain/today.dart';
 import '../domain/journey.dart';
+import '../domain/learning_unit.dart';
+import 'mastery_stamp.dart';
 import 'journey_planet.dart';
 import 'adventure_map.dart';
 import 'character_moment.dart';
@@ -39,11 +41,15 @@ class FlightCompletion extends StatelessWidget {
     final region = JourneyRegion.forOrder(
       lesson.order,
       language: app.course.language,
+      catalog: app.repository.catalog,
     );
     final regionDone = region.complete(
       app.progress.completed,
       app.repository.catalog,
     );
+    final unit = LearningUnit.fromCatalog(
+      app.repository.catalog,
+    ).where((u) => u.lessons.any((l) => l.id == lesson.id)).firstOrNull;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -119,6 +125,28 @@ class FlightCompletion extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
+          if (unit != null && unit.mastered(app.progress)) ...[
+            FlightPanel(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (app.masteredUnits.contains(unit.id))
+                    const MasteryStamp(size: 48),
+                  Text('Тема пройдена: ${unit.title}', style: type.titleMedium),
+                  const Text(
+                    'Хочешь проверить себя без подсказок? Собери созвездие знакомых реплик. Это необязательный шаг.',
+                  ),
+                  TextButton.icon(
+                    onPressed: () =>
+                        context.go('/mastery/${Uri.encodeComponent(unit.id)}'),
+                    icon: const Icon(Icons.auto_awesome_outlined),
+                    label: const Text('Проверка мастерства'),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+          ],
           FlightPanel(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,10 +222,11 @@ class FlightCompletion extends StatelessWidget {
                       region.index <
                               JourneyRegion.forCourse(
                                     app.course.language,
+                                    catalog: app.repository.catalog,
                                   ).length -
                                   1
-                          ? 'Новая область открыта: ${JourneyRegion.forCourse(app.course.language)[region.index + 1].title}. Печать уже в паспорте.'
-                          : 'Все пять печатей собраны. Вводный маршрут пройден — продолжай закреплять слова.',
+                          ? 'Новая область открыта: ${JourneyRegion.forCourse(app.course.language, catalog: app.repository.catalog)[region.index + 1].title}. Печать уже в паспорте.'
+                          : 'Все области этого курса исследованы. Продолжай закреплять знакомые слова и собирать созвездия тем.',
                     ),
                     TextButton(
                       onPressed: () => context.go('/map'),

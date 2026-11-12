@@ -6,6 +6,8 @@ import '../data/practice_repository.dart';
 import 'design.dart';
 import 'flight_components.dart';
 import 'character_moment.dart';
+import 'today_page.dart';
+import '../domain/journey.dart';
 
 const practiceLabels = {
   PracticeMode.words: (
@@ -46,6 +48,11 @@ class PracticeHub extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final app = ref.watch(appProvider);
     final theme = Theme.of(context).textTheme;
+    final due = personalPractice(
+      app.repository.vocabulary.values,
+      app.progress,
+      app.repository.now(),
+    );
     return pageBody([
       const CharacterMoment(characterId: 'miko', size: 80, animate: false),
       Text('Тренировочная орбита', style: theme.headlineMedium),
@@ -56,6 +63,18 @@ class PracticeHub extends ConsumerWidget {
             ? 'После первого занятия здесь появится знакомый материал.'
             : 'Знакомых слов и фраз: ${app.progress.words.length}. Сначала возвращаем те, которым нужно внимание.',
       ),
+      const SizedBox(height: 16),
+      FilledButton.icon(
+        onPressed: () =>
+            context.go(due.isEmpty ? nextLessonRoute(app) : '/practice'),
+        icon: Icon(due.isEmpty ? Icons.play_arrow : Icons.bolt_outlined),
+        label: Text(
+          due.isEmpty
+              ? 'Следующий урок · 3–5 минут'
+              : 'Разминка: ${due.length} реплики по расписанию',
+        ),
+      ),
+      if (due.isNotEmpty) Text(due.first.reason),
       for (final entry in practiceLabels.entries) ...[
         const SizedBox(height: 12),
         FlightPanel(

@@ -6,8 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../services/account_deletion.dart';
 import '../core/controller.dart';
+import '../core/rustore_release.dart';
 import '../domain/course.dart';
 import '../domain/progress.dart';
 import '../domain/learning_recap.dart';
@@ -1074,8 +1076,32 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
         'Размер текста следует настройке устройства. При отключении системных анимаций эффекты сокращаются. Микрофон необязателен; для речи есть текстовый режим.',
       ),
       const SectionTitle('Конфиденциальность'),
+      if (rustoreRelease)
+        TextButton(
+          onPressed: () async {
+            try {
+              if (await launchUrl(
+                Uri.parse(rustorePrivacyUrl),
+                mode: LaunchMode.externalApplication,
+              )) {
+                return;
+              }
+            } catch (_) {
+              // A browser may be missing or disabled by device policy.
+            }
+            if (context.mounted) {
+              showMessage(
+                context,
+                'Откройте политику в браузере: $rustorePrivacyUrl',
+              );
+            }
+          },
+          child: const Text('Политика конфиденциальности'),
+        ),
       const Text(
-        'Без рекламы и аналитических SDK. Локально сохраняются ответы, XP и настройки. При включении синхронизации история обучения и email хранятся в Supabase. Аудиозаписи приложение не сохраняет. Системные голосовые службы могут обрабатывать речь по правилам вашей ОС.',
+        rustoreRelease
+            ? 'Прогресс и настройки хранятся на устройстве. Версия RuStore работает без аккаунта. Аудиозаписи приложение не сохраняет.'
+            : 'Без рекламы и аналитических SDK. Локально сохраняются ответы, XP и настройки. При включении синхронизации история обучения и email хранятся в Supabase. Аудиозаписи приложение не сохраняет. Системные голосовые службы могут обрабатывать речь по правилам вашей ОС.',
       ),
       const SizedBox(height: 16),
       OutlinedButton(

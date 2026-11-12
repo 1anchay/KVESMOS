@@ -9,6 +9,7 @@ android/local.properties
 android/key.properties
 *.jks
 *.keystore
+*.p12
 .env
 ios/Pods/
 ios/.symlinks/

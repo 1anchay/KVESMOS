@@ -1,4 +1,4 @@
-name: Android Release Audit (unsigned)
+name: RuStore APK Audit
 on:
   push:
     branches: [release/kvesmos-1.0-android]
@@ -20,11 +20,10 @@ jobs:
       - run: flutter pub get
       - run: dart format --output=none --set-exit-if-changed lib test
       - run: flutter analyze
-      - run: flutter build apk --release --target lib/main.dart
-      - run: flutter build appbundle --release --target lib/main.dart
+      - run: flutter build apk --release --target lib/main.dart --dart-define=KVESMOS_RUSTORE=true
       - name: Audit unsigned packaging and 64-bit ELF alignment
         run: |
-          python3 tool/audit_release.py build/app/outputs/flutter-apk/app-release.apk build/app/outputs/bundle/release/app-release.aab --output build/release-audit.json
+          python3 tool/audit_release.py build/app/outputs/flutter-apk/app-release.apk --output build/release-audit.json
           "$ANDROID_HOME/build-tools/36.0.0/zipalign" -c -P 16 4 build/app/outputs/flutter-apk/app-release.apk
           "$ANDROID_HOME/build-tools/36.0.0/aapt2" dump badging build/app/outputs/flutter-apk/app-release.apk > build/release-package.txt
           grep -F "package: name='dev.orbitwords.orbitwords' versionCode='18' versionName='1.0.0'" build/release-package.txt
@@ -35,10 +34,9 @@ jobs:
           printf '%s\n' "$GITHUB_SHA" > build/release-source-sha.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: KVESMOS-1.0-UNSIGNED-NOT-FOR-PUBLICATION
+          name: KVESMOS-1.0-RuStore-UNSIGNED
           path: |
             build/app/outputs/flutter-apk/app-release.apk
-            build/app/outputs/bundle/release/app-release.aab
             build/release-audit.json
             build/release-package.txt
             build/release-source-sha.txt

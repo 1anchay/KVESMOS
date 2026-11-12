@@ -63,7 +63,7 @@ class ProgressSnapshot {
   final Map<String, WordProgress> words = {};
   int get level => 1 + xp ~/ 250;
   int streak(DateTime today) {
-    var cursor = DateTime(today.year, today.month, today.day);
+    var cursor = DateTime.utc(today.year, today.month, today.day);
     if (!dailyXp.containsKey(dayKey(cursor))) {
       cursor = cursor.subtract(const Duration(days: 1));
     }

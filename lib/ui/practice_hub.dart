@@ -87,6 +87,18 @@ class PracticeHub extends ConsumerWidget {
             onTap: () => context.go('/practice/${entry.key.name}'),
           ),
         ),
+        if (entry.key == PracticeMode.words)
+          OutlinedButton.icon(
+            onPressed: () => context.go('/pictures'),
+            icon: const Icon(Icons.image_outlined),
+            label: const Text('Слова по картинкам'),
+          ),
+        if (entry.key == PracticeMode.dialogue)
+          OutlinedButton.icon(
+            onPressed: () => context.go('/conversations'),
+            icon: const Icon(Icons.forum_outlined),
+            label: const Text('Разговоры с экипажем'),
+          ),
       ],
       const SizedBox(height: 16),
       OutlinedButton.icon(

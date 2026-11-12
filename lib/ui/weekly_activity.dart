@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import '../core/controller.dart';
 import '../domain/progress.dart';
+import '../domain/activity_calendar.dart';
 import 'design.dart';
 
 class WeeklyActivity extends StatelessWidget {
@@ -9,11 +10,9 @@ class WeeklyActivity extends StatelessWidget {
   const WeeklyActivity(this.app, {super.key});
   @override
   Widget build(BuildContext context) {
-    final days = List.generate(
-      7,
-      (i) => DateTime.now().subtract(Duration(days: 6 - i)),
-    );
-    final xp = days.map((d) => app.progress.dailyXp[dayKey(d)] ?? 0).toList();
+    final activity = activityDays(app.progress, app.repository.now(), 7);
+    final days = activity.map((d) => d.date).toList();
+    final xp = activity.map((d) => d.xp).toList();
     final maxXp = max(app.goal, xp.reduce(max));
     return Card(
       child: Padding(

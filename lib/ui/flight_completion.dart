@@ -8,6 +8,7 @@ import '../domain/progress.dart';
 import '../domain/today.dart';
 import '../domain/journey.dart';
 import '../domain/learning_unit.dart';
+import '../data/conversation_repository.dart';
 import 'mastery_stamp.dart';
 import 'journey_planet.dart';
 import 'adventure_map.dart';
@@ -125,6 +126,31 @@ class FlightCompletion extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
+          if (summary.errors >= 2)
+            OutlinedButton.icon(
+              onPressed: () => context.go(
+                '/practice/mistakes?unit=${Uri.encodeQueryComponent(lesson.id)}',
+              ),
+              icon: const Icon(Icons.refresh_rounded),
+              label: const Text('Повторить трудные слова урока'),
+            ),
+          FutureBuilder<List<Conversation>>(
+            future: Conversation.load(),
+            builder: (context, snapshot) {
+              final scene = snapshot.data
+                  ?.where((s) => s.prerequisite == lesson.id)
+                  .firstOrNull;
+              if (scene == null ||
+                  !app.progress.completed.contains(lesson.id)) {
+                return const SizedBox.shrink();
+              }
+              return OutlinedButton.icon(
+                onPressed: () => context.go('/conversation/${scene.id}'),
+                icon: const Icon(Icons.forum_outlined),
+                label: Text('Разговор · ${scene.title}'),
+              );
+            },
+          ),
           if (unit != null && unit.mastered(app.progress)) ...[
             FlightPanel(
               child: Column(

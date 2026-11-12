@@ -378,8 +378,9 @@ class LearningRepository {
   });
   Future<void> review(
     Vocabulary word,
-    String input,
-  ) => db.transaction(() async {
+    String input, {
+    bool credit = true,
+  }) => db.transaction(() async {
     final day = dayKey(now());
     final previous = (await allEvents())
         .where(
@@ -397,6 +398,7 @@ class LearningRepository {
         'session': previous?.data['session'] ?? 'review:v2:$day:${word.id}',
         'exercise': 'review:${word.id}',
         'correct': normalizeAnswer(input) == normalizeAnswer(word.en),
+        if (!credit) 'rehearsal': true,
         'words': [word.id],
       }),
     );

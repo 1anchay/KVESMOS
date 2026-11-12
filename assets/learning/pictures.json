@@ -1,0 +1,1333 @@
+[
+  {
+    "id": "book",
+    "meaning": "книга",
+    "languages": {
+      "en": {
+        "forms": [
+          "book"
+        ],
+        "lesson": "a1-03",
+        "wordId": "en:book"
+      },
+      "es": {
+        "forms": [
+          "el libro"
+        ],
+        "lesson": "es-a1-03",
+        "wordId": "es:el_libro"
+      },
+      "de": {
+        "forms": [
+          "das Buch"
+        ],
+        "lesson": "de-a1-03",
+        "wordId": "de:das_buch"
+      },
+      "fr": {
+        "forms": [
+          "le livre"
+        ],
+        "lesson": "fr-a1-04",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "书"
+        ],
+        "lesson": "zh-a1-04",
+        "wordId": "zh:l4-w1",
+        "pinyin": [
+          "shū"
+        ]
+      }
+    }
+  },
+  {
+    "id": "table",
+    "meaning": "стол",
+    "languages": {
+      "en": {
+        "forms": [
+          "table"
+        ],
+        "lesson": "a1-12",
+        "wordId": "en:table"
+      },
+      "es": {
+        "forms": [
+          "la mesa"
+        ],
+        "lesson": "es-a1-03",
+        "wordId": "es:la_mesa"
+      },
+      "de": {
+        "forms": [
+          "der Tisch"
+        ],
+        "lesson": "de-a1-03",
+        "wordId": "de:der_tisch"
+      },
+      "fr": {
+        "forms": [
+          "la table"
+        ],
+        "lesson": "fr-a1-04",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "桌子"
+        ],
+        "lesson": "zh-a1-07",
+        "wordId": null,
+        "pinyin": [
+          "zhuōzi"
+        ]
+      }
+    }
+  },
+  {
+    "id": "house",
+    "meaning": "дом",
+    "languages": {
+      "en": {
+        "forms": [
+          "house"
+        ],
+        "lesson": "a1-04",
+        "wordId": "en:house"
+      },
+      "es": {
+        "forms": [
+          "la casa"
+        ],
+        "lesson": "es-a1-03",
+        "wordId": "es:la_casa"
+      },
+      "de": {
+        "forms": [
+          "das Haus"
+        ],
+        "lesson": "de-a1-07",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la maison"
+        ],
+        "lesson": "fr-a1-07",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "家"
+        ],
+        "lesson": "zh-a1-07",
+        "wordId": null,
+        "pinyin": [
+          "jiā"
+        ]
+      }
+    }
+  },
+  {
+    "id": "bag",
+    "meaning": "сумка",
+    "languages": {
+      "en": {
+        "forms": [
+          "bag"
+        ],
+        "lesson": "a1-03",
+        "wordId": "en:bag"
+      },
+      "es": {
+        "forms": [
+          "la bolsa"
+        ],
+        "lesson": "es-a1-08",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "die Tasche"
+        ],
+        "lesson": "de-a1-08",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "le sac"
+        ],
+        "lesson": "fr-a1-04",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "包"
+        ],
+        "lesson": "zh-a1-13",
+        "wordId": null,
+        "pinyin": [
+          "bāo"
+        ]
+      }
+    }
+  },
+  {
+    "id": "bicycle",
+    "meaning": "велосипед",
+    "languages": {
+      "en": {
+        "forms": [
+          "bicycle",
+          "bike"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "la bicicleta"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "das Fahrrad"
+        ],
+        "lesson": "de-a1-07",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "le vélo"
+        ],
+        "lesson": "fr-a1-07",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "自行车"
+        ],
+        "lesson": "zh-a1-14",
+        "wordId": null,
+        "pinyin": [
+          "zìxíngchē"
+        ]
+      }
+    }
+  },
+  {
+    "id": "car",
+    "meaning": "машина",
+    "languages": {
+      "en": {
+        "forms": [
+          "car"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "el coche",
+          "el carro"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "das Auto"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la voiture"
+        ],
+        "lesson": "fr-a1-14",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "汽车"
+        ],
+        "lesson": "zh-a1-14",
+        "wordId": null,
+        "pinyin": [
+          "qìchē"
+        ]
+      }
+    }
+  },
+  {
+    "id": "phone",
+    "meaning": "мобильный телефон",
+    "languages": {
+      "en": {
+        "forms": [
+          "phone",
+          "mobile phone"
+        ],
+        "lesson": "en-a1-42",
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "el teléfono"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "das Handy"
+        ],
+        "lesson": "de-a1-19",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "le téléphone"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "手机"
+        ],
+        "lesson": "zh-a1-13",
+        "wordId": null,
+        "pinyin": [
+          "shǒujī"
+        ]
+      }
+    }
+  },
+  {
+    "id": "apple",
+    "meaning": "яблоко",
+    "languages": {
+      "en": {
+        "forms": [
+          "apple"
+        ],
+        "lesson": "en-a1-54",
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "la manzana"
+        ],
+        "lesson": "es-a1-13",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "der Apfel"
+        ],
+        "lesson": "de-a1-13",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la pomme"
+        ],
+        "lesson": "fr-a1-10",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "苹果"
+        ],
+        "lesson": "zh-a1-09",
+        "wordId": null,
+        "pinyin": [
+          "píngguǒ"
+        ]
+      }
+    }
+  },
+  {
+    "id": "water",
+    "meaning": "вода",
+    "languages": {
+      "en": {
+        "forms": [
+          "water"
+        ],
+        "lesson": "a1-10",
+        "wordId": "en:water"
+      },
+      "es": {
+        "forms": [
+          "el agua"
+        ],
+        "lesson": "es-a1-06",
+        "wordId": "es:agua"
+      },
+      "de": {
+        "forms": [
+          "das Wasser"
+        ],
+        "lesson": "de-a1-06",
+        "wordId": "de:wasser"
+      },
+      "fr": {
+        "forms": [
+          "l'eau"
+        ],
+        "lesson": "fr-a1-06",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "水"
+        ],
+        "lesson": "zh-a1-06",
+        "wordId": "zh:l6-w2",
+        "pinyin": [
+          "shuǐ"
+        ]
+      }
+    }
+  },
+  {
+    "id": "tea",
+    "meaning": "чай",
+    "languages": {
+      "en": {
+        "forms": [
+          "tea"
+        ],
+        "lesson": "a1-10",
+        "wordId": "en:tea"
+      },
+      "es": {
+        "forms": [
+          "el té"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "der Tee"
+        ],
+        "lesson": "de-a1-12",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "le thé"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "茶"
+        ],
+        "lesson": "zh-a1-06",
+        "wordId": "zh:l6-w1",
+        "pinyin": [
+          "chá"
+        ]
+      }
+    }
+  },
+  {
+    "id": "coffee",
+    "meaning": "кофе",
+    "languages": {
+      "en": {
+        "forms": [
+          "coffee"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "el café"
+        ],
+        "lesson": "es-a1-06",
+        "wordId": "es:café"
+      },
+      "de": {
+        "forms": [
+          "der Kaffee"
+        ],
+        "lesson": "de-a1-06",
+        "wordId": "de:kaffee"
+      },
+      "fr": {
+        "forms": [
+          "le café"
+        ],
+        "lesson": "fr-a1-06",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "咖啡"
+        ],
+        "lesson": "zh-a1-16",
+        "wordId": null,
+        "pinyin": [
+          "kāfēi"
+        ]
+      }
+    }
+  },
+  {
+    "id": "train",
+    "meaning": "поезд",
+    "languages": {
+      "en": {
+        "forms": [
+          "train"
+        ],
+        "lesson": "a1-17",
+        "wordId": "en:train"
+      },
+      "es": {
+        "forms": [
+          "el tren"
+        ],
+        "lesson": "es-a1-40",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "der Zug"
+        ],
+        "lesson": "de-a1-14",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "le train"
+        ],
+        "lesson": "fr-a1-17",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "火车"
+        ],
+        "lesson": "zh-a1-29",
+        "wordId": null,
+        "pinyin": [
+          "huǒchē"
+        ]
+      }
+    }
+  },
+  {
+    "id": "bus",
+    "meaning": "автобус",
+    "languages": {
+      "en": {
+        "forms": [
+          "bus"
+        ],
+        "lesson": "a1-17",
+        "wordId": "en:bus"
+      },
+      "es": {
+        "forms": [
+          "el autobús"
+        ],
+        "lesson": "es-a1-25",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "der Bus"
+        ],
+        "lesson": "de-a1-29",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "le bus"
+        ],
+        "lesson": "fr-a1-30",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "公共汽车"
+        ],
+        "lesson": "zh-a1-18",
+        "wordId": null,
+        "pinyin": [
+          "gōnggòng qìchē"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ticket",
+    "meaning": "билет",
+    "languages": {
+      "en": {
+        "forms": [
+          "ticket"
+        ],
+        "lesson": "a1-17",
+        "wordId": "en:ticket"
+      },
+      "es": {
+        "forms": [
+          "el billete",
+          "el boleto"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "die Fahrkarte"
+        ],
+        "lesson": "de-a1-14",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "le billet"
+        ],
+        "lesson": "fr-a1-12",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "票"
+        ],
+        "lesson": "zh-a1-21",
+        "wordId": null,
+        "pinyin": [
+          "piào"
+        ]
+      }
+    }
+  },
+  {
+    "id": "key",
+    "meaning": "ключ",
+    "languages": {
+      "en": {
+        "forms": [
+          "key"
+        ],
+        "lesson": "en-a1-69",
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "la llave"
+        ],
+        "lesson": "es-a1-34",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "der Schlüssel"
+        ],
+        "lesson": "de-a1-19",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la clé",
+          "la clef"
+        ],
+        "lesson": "fr-a1-28",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "钥匙"
+        ],
+        "lesson": "zh-a1-31",
+        "wordId": null,
+        "pinyin": [
+          "yàoshi"
+        ]
+      }
+    }
+  },
+  {
+    "id": "window",
+    "meaning": "окно",
+    "languages": {
+      "en": {
+        "forms": [
+          "window"
+        ],
+        "lesson": "a1-04",
+        "wordId": "en:window"
+      },
+      "es": {
+        "forms": [
+          "la ventana"
+        ],
+        "lesson": "es-a1-16",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "das Fenster"
+        ],
+        "lesson": "de-a1-25",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la fenêtre"
+        ],
+        "lesson": "fr-a1-18",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "窗户"
+        ],
+        "lesson": null,
+        "wordId": null,
+        "pinyin": [
+          "chuānghu"
+        ]
+      }
+    }
+  },
+  {
+    "id": "shirt",
+    "meaning": "рубашка",
+    "languages": {
+      "en": {
+        "forms": [
+          "shirt"
+        ],
+        "lesson": "a1-20",
+        "wordId": "en:shirt"
+      },
+      "es": {
+        "forms": [
+          "la camisa"
+        ],
+        "lesson": "es-a1-14",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "das Hemd"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la chemise"
+        ],
+        "lesson": "fr-a1-21",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "衬衫"
+        ],
+        "lesson": null,
+        "wordId": null,
+        "pinyin": [
+          "chènshān"
+        ]
+      }
+    }
+  },
+  {
+    "id": "room",
+    "meaning": "комната",
+    "languages": {
+      "en": {
+        "forms": [
+          "room"
+        ],
+        "lesson": "en-a1-33",
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "la habitación"
+        ],
+        "lesson": "es-a1-33",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "das Zimmer"
+        ],
+        "lesson": "de-a1-33",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la chambre"
+        ],
+        "lesson": "fr-a1-23",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "房间"
+        ],
+        "lesson": "zh-a1-14",
+        "wordId": null,
+        "pinyin": [
+          "fángjiān"
+        ]
+      }
+    }
+  },
+  {
+    "id": "door",
+    "meaning": "дверь",
+    "languages": {
+      "en": {
+        "forms": [
+          "door"
+        ],
+        "lesson": "a1-04",
+        "wordId": "en:door"
+      },
+      "es": {
+        "forms": [
+          "la puerta"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "die Tür"
+        ],
+        "lesson": "de-a1-21",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la porte"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "门"
+        ],
+        "lesson": "zh-a1-20",
+        "wordId": null,
+        "pinyin": [
+          "mén"
+        ]
+      }
+    }
+  },
+  {
+    "id": "chair",
+    "meaning": "стул",
+    "languages": {
+      "en": {
+        "forms": [
+          "chair"
+        ],
+        "lesson": "a1-12",
+        "wordId": "en:chair"
+      },
+      "es": {
+        "forms": [
+          "la silla"
+        ],
+        "lesson": "es-a1-08",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "der Stuhl"
+        ],
+        "lesson": "de-a1-21",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la chaise"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "椅子"
+        ],
+        "lesson": "zh-a1-07",
+        "wordId": null,
+        "pinyin": [
+          "yǐzi"
+        ]
+      }
+    }
+  },
+  {
+    "id": "park",
+    "meaning": "парк",
+    "languages": {
+      "en": {
+        "forms": [
+          "park"
+        ],
+        "lesson": "en-a1-30",
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "el parque"
+        ],
+        "lesson": "es-a1-15",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "der Park"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "le parc"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "公园"
+        ],
+        "lesson": "zh-a1-30",
+        "wordId": null,
+        "pinyin": [
+          "gōngyuán"
+        ]
+      }
+    }
+  },
+  {
+    "id": "hotel",
+    "meaning": "гостиница",
+    "languages": {
+      "en": {
+        "forms": [
+          "hotel"
+        ],
+        "lesson": "a1-18",
+        "wordId": "en:hotel"
+      },
+      "es": {
+        "forms": [
+          "el hotel"
+        ],
+        "lesson": "es-a1-17",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "das Hotel"
+        ],
+        "lesson": "de-a1-42",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "l'hôtel"
+        ],
+        "lesson": "fr-a1-24",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "酒店",
+          "宾馆",
+          "旅馆"
+        ],
+        "lesson": null,
+        "wordId": null,
+        "pinyin": [
+          "jiǔdiàn",
+          "bīnguǎn",
+          "lǚguǎn"
+        ]
+      }
+    }
+  },
+  {
+    "id": "clock",
+    "meaning": "часы",
+    "languages": {
+      "en": {
+        "forms": [
+          "clock"
+        ],
+        "lesson": "en-a1-21",
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "el reloj"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "die Uhr"
+        ],
+        "lesson": "de-a1-10",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "l'horloge"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "钟"
+        ],
+        "lesson": null,
+        "wordId": null,
+        "pinyin": [
+          "zhōng"
+        ]
+      }
+    }
+  },
+  {
+    "id": "one",
+    "meaning": "один",
+    "languages": {
+      "en": {
+        "forms": [
+          "one"
+        ],
+        "lesson": "a1-05",
+        "wordId": "en:one"
+      },
+      "es": {
+        "forms": [
+          "uno"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "eins"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "un"
+        ],
+        "lesson": "fr-a1-03",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "一"
+        ],
+        "lesson": "zh-a1-03",
+        "wordId": null,
+        "pinyin": [
+          "yī"
+        ]
+      }
+    }
+  },
+  {
+    "id": "two",
+    "meaning": "два",
+    "languages": {
+      "en": {
+        "forms": [
+          "two"
+        ],
+        "lesson": "a1-05",
+        "wordId": "en:two"
+      },
+      "es": {
+        "forms": [
+          "dos"
+        ],
+        "lesson": "es-a1-04",
+        "wordId": "es:dos"
+      },
+      "de": {
+        "forms": [
+          "zwei"
+        ],
+        "lesson": "de-a1-04",
+        "wordId": "de:zwei"
+      },
+      "fr": {
+        "forms": [
+          "deux"
+        ],
+        "lesson": "fr-a1-03",
+        "wordId": "fr:l3-w1"
+      },
+      "zh": {
+        "forms": [
+          "二",
+          "两"
+        ],
+        "lesson": "zh-a1-03",
+        "wordId": "zh:l3-w1",
+        "pinyin": [
+          "èr",
+          "liǎng"
+        ]
+      }
+    }
+  },
+  {
+    "id": "three",
+    "meaning": "три",
+    "languages": {
+      "en": {
+        "forms": [
+          "three"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "tres"
+        ],
+        "lesson": "es-a1-04",
+        "wordId": "es:tres"
+      },
+      "de": {
+        "forms": [
+          "drei"
+        ],
+        "lesson": "de-a1-04",
+        "wordId": "de:drei"
+      },
+      "fr": {
+        "forms": [
+          "trois"
+        ],
+        "lesson": "fr-a1-03",
+        "wordId": "fr:l3-w2"
+      },
+      "zh": {
+        "forms": [
+          "三"
+        ],
+        "lesson": "zh-a1-03",
+        "wordId": "zh:l3-w2",
+        "pinyin": [
+          "sān"
+        ]
+      }
+    }
+  },
+  {
+    "id": "four",
+    "meaning": "четыре",
+    "languages": {
+      "en": {
+        "forms": [
+          "four"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "cuatro"
+        ],
+        "lesson": "es-a1-12",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "vier"
+        ],
+        "lesson": "de-a1-27",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "quatre"
+        ],
+        "lesson": "fr-a1-03",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "四"
+        ],
+        "lesson": "zh-a1-03",
+        "wordId": null,
+        "pinyin": [
+          "sì"
+        ]
+      }
+    }
+  },
+  {
+    "id": "five",
+    "meaning": "пять",
+    "languages": {
+      "en": {
+        "forms": [
+          "five"
+        ],
+        "lesson": "a1-05",
+        "wordId": "en:five"
+      },
+      "es": {
+        "forms": [
+          "cinco"
+        ],
+        "lesson": "es-a1-04",
+        "wordId": "es:cinco"
+      },
+      "de": {
+        "forms": [
+          "fünf"
+        ],
+        "lesson": "de-a1-04",
+        "wordId": "de:fünf"
+      },
+      "fr": {
+        "forms": [
+          "cinq"
+        ],
+        "lesson": "fr-a1-03",
+        "wordId": "fr:l3-w3"
+      },
+      "zh": {
+        "forms": [
+          "五"
+        ],
+        "lesson": "zh-a1-03",
+        "wordId": "zh:l3-w3",
+        "pinyin": [
+          "wǔ"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ten",
+    "meaning": "десять",
+    "languages": {
+      "en": {
+        "forms": [
+          "ten"
+        ],
+        "lesson": "a1-06",
+        "wordId": "en:ten"
+      },
+      "es": {
+        "forms": [
+          "diez"
+        ],
+        "lesson": "es-a1-13",
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "zehn"
+        ],
+        "lesson": "de-a1-14",
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "dix"
+        ],
+        "lesson": "fr-a1-11",
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "十"
+        ],
+        "lesson": "zh-a1-03",
+        "wordId": null,
+        "pinyin": [
+          "shí"
+        ]
+      }
+    }
+  },
+  {
+    "id": "rain",
+    "meaning": "дождь",
+    "languages": {
+      "en": {
+        "forms": [
+          "rain"
+        ],
+        "lesson": "en-a1-25",
+        "wordId": null
+      },
+      "es": {
+        "forms": [
+          "la lluvia"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "de": {
+        "forms": [
+          "der Regen"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "fr": {
+        "forms": [
+          "la pluie"
+        ],
+        "lesson": null,
+        "wordId": null
+      },
+      "zh": {
+        "forms": [
+          "雨"
+        ],
+        "lesson": "zh-a1-19",
+        "wordId": null,
+        "pinyin": [
+          "yǔ"
+        ]
+      }
+    }
+  }
+]

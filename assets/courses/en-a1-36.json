@@ -1,0 +1,279 @@
+{
+  "id": "en-a1-36",
+  "title": "Сравниваем покупки",
+  "topic": "Сравниваем покупки",
+  "order": 35,
+  "objective": "Сравнить два предмета по цене и размеру.",
+  "guide": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+  "vocabulary": [
+    {
+      "id": "en:v013:36:p0",
+      "en": "This bag is cheaper than that one.",
+      "ru": "Эта сумка дешевле той."
+    },
+    {
+      "id": "en:v013:36:p1",
+      "en": "This jacket is bigger.",
+      "ru": "Эта куртка больше."
+    },
+    {
+      "id": "en:v013:36:p2",
+      "en": "These shoes are more comfortable.",
+      "ru": "Эти туфли удобнее."
+    },
+    {
+      "id": "en:v013:36:p3",
+      "en": "I'll take the cheaper bag.",
+      "ru": "Я возьму сумку подешевле."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "This bag is cheaper than that one.",
+      "translation": "Эта сумка дешевле той.",
+      "explanation": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "This jacket is bigger.",
+      "translation": "Эта куртка больше.",
+      "explanation": "This jacket is bigger. — Эта куртка больше."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "These shoes are more comfortable.",
+      "translation": "Эти туфли удобнее.",
+      "explanation": "These shoes are more comfortable. — Эти туфли удобнее."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "I'll take the cheaper bag.",
+      "translation": "Я возьму сумку подешевле.",
+      "explanation": "I'll take the cheaper bag. — Я возьму сумку подешевле.\nНе используем more вместе с -er: достаточно cheaper.\nВерно: This bag is cheaper."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-36-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Эти туфли удобнее."
+      ],
+      "explanation": "These shoes are more comfortable. — Эти туфли удобнее.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [
+        "en:v013:36:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "These shoes are more comfortable.",
+      "options": [
+        "Эта куртка больше.",
+        "Я возьму сумку подешевле.",
+        "Эти туфли удобнее."
+      ]
+    },
+    {
+      "id": "en-a1-36-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Эта сумка дешевле той. Выбери реплику.",
+      "answers": [
+        "This bag is cheaper than that one."
+      ],
+      "explanation": "This bag is cheaper than that one. — Эта сумка дешевле той.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [
+        "en:v013:36:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "These shoes are more comfortable.",
+        "This bag is cheaper than that one.",
+        "This jacket is bigger."
+      ]
+    },
+    {
+      "id": "en-a1-36-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [
+        "en:v013:36:p0",
+        "en:v013:36:p1",
+        "en:v013:36:p2",
+        "en:v013:36:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:36:p0",
+          "en": "This bag is cheaper than that one.",
+          "ru": "Эта сумка дешевле той."
+        },
+        {
+          "id": "en:v013:36:p1",
+          "en": "This jacket is bigger.",
+          "ru": "Эта куртка больше."
+        },
+        {
+          "id": "en:v013:36:p2",
+          "en": "These shoes are more comfortable.",
+          "ru": "Эти туфли удобнее."
+        },
+        {
+          "id": "en:v013:36:p3",
+          "en": "I'll take the cheaper bag.",
+          "ru": "Я возьму сумку подешевле."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-36-e05",
+      "type": "dialogue",
+      "prompt": "Какую сумку выбрал Мико?",
+      "answers": [
+        "Более дешёвую"
+      ],
+      "explanation": "Орби: This bag is cheaper than that one.\nМико: I'll take the cheaper bag.\nБолее дешёвую",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [
+        "en:v013:36:p0",
+        "en:v013:36:p1",
+        "en:v013:36:p2",
+        "en:v013:36:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: This bag is cheaper than that one.\nМико: I'll take the cheaper bag.",
+      "options": [
+        "Более дорогую",
+        "Более дешёвую",
+        "Самую большую"
+      ]
+    },
+    {
+      "id": "en-a1-36-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Эта куртка больше.",
+      "answers": [
+        "This jacket is bigger."
+      ],
+      "explanation": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [
+        "en:v013:36:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "This",
+        "jacket",
+        "is",
+        "bigger"
+      ]
+    },
+    {
+      "id": "en-a1-36-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я возьму сумку подешевле.",
+      "answers": [
+        "I'll take the cheaper bag."
+      ],
+      "explanation": "I'll take the cheaper bag. — Я возьму сумку подешевле.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [
+        "en:v013:36:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "I'll take the cheaper bag."
+    },
+    {
+      "id": "en-a1-36-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: This bag is more cheaper.",
+      "answers": [
+        "This bag is cheaper."
+      ],
+      "explanation": "Не используем more вместе с -er: достаточно cheaper.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "This bag is more cheaper.",
+        "This bag is cheaper."
+      ]
+    },
+    {
+      "id": "en-a1-36-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «This jacket is bigger.»?",
+      "answers": [
+        "Эта куртка больше."
+      ],
+      "explanation": "This jacket is bigger. — Эта куртка больше.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [
+        "en:v013:36:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Эта сумка дешевле той.",
+        "Эта куртка больше.",
+        "Я возьму сумку подешевле."
+      ]
+    },
+    {
+      "id": "en-a1-36-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Эта сумка дешевле той.",
+      "answers": [
+        "This bag is cheaper than that one."
+      ],
+      "explanation": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [
+        "en:v013:36:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "This bag is cheaper than that one.",
+        "meaning": "Эта сумка дешевле той."
+      }
+    },
+    {
+      "id": "en-a1-36-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Давай встретимся в половине одиннадцатого.",
+      "answers": [
+        "Let's meet at half past ten."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Let's meet at half past ten. — Давай встретимся в половине одиннадцатого.",
+      "hint": "К короткому прилагательному добавляем -er: cheap → cheaper. Big удваивает g: bigger. Than — чем. More comfortable — удобнее: длинное прилагательное использует more, а не -er. This — этот рядом, that — тот дальше.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Could we move our meeting to Friday?",
+        "I'm afraid I can't come on Thursday.",
+        "Friday works for me.",
+        "Let's meet at half past ten."
+      ]
+    }
+  ]
+}

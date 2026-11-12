@@ -1,0 +1,288 @@
+{
+  "id": "fr-a1-13",
+  "title": "Планы на завтра",
+  "topic": "Планы на завтра",
+  "order": 12,
+  "objective": "Рассказать о ближайшем намерении.",
+  "guide": "Aller + инфинитив выражает ближайший план: je vais préparer.",
+  "vocabulary": [
+    {
+      "id": "fr:v014:13:p0",
+      "en": "Je vais préparer le dîner.",
+      "ru": "Я собираюсь приготовить ужин."
+    },
+    {
+      "id": "fr:v014:13:p1",
+      "en": "Nous allons inviter Léa.",
+      "ru": "Мы собираемся пригласить Леа."
+    },
+    {
+      "id": "fr:v014:13:p2",
+      "en": "Tu vas venir demain ?",
+      "ru": "Ты придёшь завтра?"
+    },
+    {
+      "id": "fr:v014:13:p3",
+      "en": "Je vais apporter du pain.",
+      "ru": "Я принесу хлеб."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Планы на завтра",
+      "phrase": "Je vais préparer le dîner.",
+      "translation": "Я собираюсь приготовить ужин.",
+      "explanation": "Aller + инфинитив выражает ближайший план: je vais préparer."
+    },
+    {
+      "character": "miko",
+      "title": "Планы на завтра",
+      "phrase": "Nous allons inviter Léa.",
+      "translation": "Мы собираемся пригласить Леа.",
+      "explanation": "Nous allons inviter Léa. — Мы собираемся пригласить Леа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Планы на завтра",
+      "phrase": "Tu vas venir demain ?",
+      "translation": "Ты придёшь завтра?",
+      "explanation": "Tu vas venir demain ? — Ты придёшь завтра?"
+    },
+    {
+      "character": "orbi",
+      "title": "Планы на завтра",
+      "phrase": "Je vais apporter du pain.",
+      "translation": "Я принесу хлеб.",
+      "explanation": "Je vais apporter du pain. — Я принесу хлеб."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je vais préparer le dîner.",
+      "translation": "Я собираюсь приготовить ужин.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я собираюсь приготовить ужин.",
+      "options": [
+        "Ты придёшь завтра?",
+        "Я собираюсь приготовить ужин.",
+        "Я принесу хлеб."
+      ],
+      "explanation": "Aller + инфинитив выражает ближайший план: je vais préparer."
+    },
+    {
+      "id": "apply",
+      "phrase": "Nous allons inviter Léa.",
+      "translation": "Мы собираемся пригласить Леа.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Nous allons inviter Léa.",
+      "tokens": [
+        "Nous",
+        "allons",
+        "inviter",
+        "Léa."
+      ],
+      "character": "miko",
+      "explanation": "Nous allons inviter Léa. — Мы собираемся пригласить Леа."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-13-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я собираюсь приготовить ужин.»?",
+      "answers": [
+        "Je vais préparer le dîner."
+      ],
+      "explanation": "Je vais préparer le dîner. — Я собираюсь приготовить ужин.",
+      "wordIds": [
+        "fr:v014:13:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Nous allons inviter Léa.",
+        "Je vais apporter du pain.",
+        "Je vais préparer le dîner."
+      ],
+      "hint": "Je vais préparer le dîner. — Я собираюсь приготовить ужин."
+    },
+    {
+      "id": "fr-a1-13-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы собираемся пригласить Леа.",
+      "answers": [
+        "Nous allons inviter Léa."
+      ],
+      "explanation": "Aller + инфинитив выражает ближайший план: je vais préparer.",
+      "wordIds": [
+        "fr:v014:13:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Nous",
+        "allons",
+        "inviter",
+        "Léa."
+      ],
+      "hint": "Nous allons inviter Léa. — Мы собираемся пригласить Леа."
+    },
+    {
+      "id": "fr-a1-13-e03",
+      "type": "dialogue",
+      "prompt": "Что принесёт гость?",
+      "answers": [
+        "Хлеб."
+      ],
+      "explanation": "Хлеб. Рассказать о ближайшем намерении.",
+      "wordIds": [
+        "fr:v014:13:p0",
+        "fr:v014:13:p1",
+        "fr:v014:13:p2",
+        "fr:v014:13:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Tu vas venir dîner demain ?\nМико: Oui, je vais apporter du pain.",
+      "options": [
+        "Ужин целиком.",
+        "Цветы.",
+        "Хлеб."
+      ]
+    },
+    {
+      "id": "fr-a1-13-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ты придёшь завтра?"
+      ],
+      "explanation": "Tu vas venir demain ? — Ты придёшь завтра?",
+      "wordIds": [
+        "fr:v014:13:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Tu vas venir demain ?",
+      "options": [
+        "Я собираюсь приготовить ужин.",
+        "Ты придёшь завтра?",
+        "Мы собираемся пригласить Леа."
+      ],
+      "hint": "Tu vas venir demain ? — Ты придёшь завтра?"
+    },
+    {
+      "id": "fr-a1-13-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v014:13:p0",
+        "fr:v014:13:p1",
+        "fr:v014:13:p2",
+        "fr:v014:13:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v014:13:p0",
+          "en": "Je vais préparer le dîner.",
+          "ru": "Я собираюсь приготовить ужин."
+        },
+        {
+          "id": "fr:v014:13:p1",
+          "en": "Nous allons inviter Léa.",
+          "ru": "Мы собираемся пригласить Леа."
+        },
+        {
+          "id": "fr:v014:13:p2",
+          "en": "Tu vas venir demain ?",
+          "ru": "Ты придёшь завтра?"
+        },
+        {
+          "id": "fr:v014:13:p3",
+          "en": "Je vais apporter du pain.",
+          "ru": "Я принесу хлеб."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-13-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je vais prépare le dîner.",
+      "answers": [
+        "Je vais préparer le dîner."
+      ],
+      "explanation": "После vais нужен инфинитив préparer.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je vais prépare le dîner.",
+        "Je vais préparer le dîner."
+      ],
+      "hint": "Aller + инфинитив выражает ближайший план: je vais préparer."
+    },
+    {
+      "id": "fr-a1-13-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я принесу хлеб.». Можно написать вместо микрофона.",
+      "answers": [
+        "Je vais apporter du pain."
+      ],
+      "explanation": "Je vais apporter du pain. — Я принесу хлеб.",
+      "wordIds": [
+        "fr:v014:13:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Je vais apporter du pain.",
+      "recall": {
+        "phrase": "Je vais apporter du pain.",
+        "meaning": "Я принесу хлеб."
+      }
+    },
+    {
+      "id": "fr-a1-13-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я собираюсь приготовить ужин.",
+      "answers": [
+        "Je vais préparer le dîner."
+      ],
+      "explanation": "Aller + инфинитив выражает ближайший план: je vais préparer.",
+      "wordIds": [
+        "fr:v014:13:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je vais préparer le dîner.",
+        "meaning": "Я собираюсь приготовить ужин."
+      }
+    },
+    {
+      "id": "fr-a1-13-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сегодня я иду в музей.",
+      "answers": [
+        "Aujourd'hui, je vais au musée."
+      ],
+      "explanation": "Aujourd'hui, je vais au musée. — Сегодня я иду в музей.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Aujourd'hui, je vais au musée.",
+        "Je voudrais deux billets pour le musée.",
+        "Le musée est près de la gare.",
+        "Nous allons au musée à dix heures."
+      ]
+    }
+  ]
+}

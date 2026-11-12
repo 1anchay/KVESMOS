@@ -1,0 +1,279 @@
+{
+  "id": "de-a1-15",
+  "title": "Просьбы · können",
+  "topic": "Просьбы · können",
+  "order": 14,
+  "objective": "Попросить помощь и разрешение.",
+  "guide": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+  "vocabulary": [
+    {
+      "id": "de:v013:15:p0",
+      "en": "Können Sie mir bitte helfen?",
+      "ru": "Не могли бы вы мне помочь?"
+    },
+    {
+      "id": "de:v013:15:p1",
+      "en": "Können Sie langsamer sprechen?",
+      "ru": "Не могли бы вы говорить медленнее?"
+    },
+    {
+      "id": "de:v013:15:p2",
+      "en": "Kann ich hier sitzen?",
+      "ru": "Можно мне здесь сесть?"
+    },
+    {
+      "id": "de:v013:15:p3",
+      "en": "Können Sie das bitte wiederholen?",
+      "ru": "Не могли бы вы это повторить?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Können Sie mir bitte helfen?",
+      "translation": "Не могли бы вы мне помочь?",
+      "explanation": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Können Sie langsamer sprechen?",
+      "translation": "Не могли бы вы говорить медленнее?",
+      "explanation": "Können Sie langsamer sprechen? — Не могли бы вы говорить медленнее?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Kann ich hier sitzen?",
+      "translation": "Можно мне здесь сесть?",
+      "explanation": "Kann ich hier sitzen? — Можно мне здесь сесть?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Können Sie das bitte wiederholen?",
+      "translation": "Не могли бы вы это повторить?",
+      "explanation": "Können Sie das bitte wiederholen? — Не могли бы вы это повторить?\nВ этой конструкции инфинитив sprechen стоит в конце.\nВерно: Können Sie langsamer sprechen?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-15-e05",
+      "type": "dialogue",
+      "prompt": "Что просит Мико?",
+      "answers": [
+        "Повторить медленнее"
+      ],
+      "explanation": "Мико: Können Sie langsamer sprechen? Können Sie das bitte wiederholen?\nОрби: Ja, gern.\nПовторить медленнее",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [
+        "de:v013:15:p0",
+        "de:v013:15:p1",
+        "de:v013:15:p2",
+        "de:v013:15:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Können Sie langsamer sprechen? Können Sie das bitte wiederholen?\nОрби: Ja, gern.",
+      "options": [
+        "Открыть окно",
+        "Повторить медленнее",
+        "Купить билет"
+      ]
+    },
+    {
+      "id": "de-a1-15-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Не могли бы вы мне помочь? Выбери реплику.",
+      "answers": [
+        "Können Sie mir bitte helfen?"
+      ],
+      "explanation": "Können Sie mir bitte helfen? — Не могли бы вы мне помочь?",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [
+        "de:v013:15:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Kann ich hier sitzen?",
+        "Können Sie mir bitte helfen?",
+        "Können Sie langsamer sprechen?"
+      ]
+    },
+    {
+      "id": "de-a1-15-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Не могли бы вы говорить медленнее?",
+      "answers": [
+        "Können Sie langsamer sprechen?"
+      ],
+      "explanation": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [
+        "de:v013:15:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Können",
+        "Sie",
+        "langsamer",
+        "sprechen"
+      ]
+    },
+    {
+      "id": "de-a1-15-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Можно мне здесь сесть?"
+      ],
+      "explanation": "Kann ich hier sitzen? — Можно мне здесь сесть?",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [
+        "de:v013:15:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Kann ich hier sitzen?",
+      "options": [
+        "Не могли бы вы говорить медленнее?",
+        "Не могли бы вы это повторить?",
+        "Можно мне здесь сесть?"
+      ]
+    },
+    {
+      "id": "de-a1-15-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Können Sie sprechen langsamer?",
+      "answers": [
+        "Können Sie langsamer sprechen?"
+      ],
+      "explanation": "В этой конструкции инфинитив sprechen стоит в конце.",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Können Sie sprechen langsamer?",
+        "Können Sie langsamer sprechen?"
+      ]
+    },
+    {
+      "id": "de-a1-15-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [
+        "de:v013:15:p0",
+        "de:v013:15:p1",
+        "de:v013:15:p2",
+        "de:v013:15:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:15:p0",
+          "en": "Können Sie mir bitte helfen?",
+          "ru": "Не могли бы вы мне помочь?"
+        },
+        {
+          "id": "de:v013:15:p1",
+          "en": "Können Sie langsamer sprechen?",
+          "ru": "Не могли бы вы говорить медленнее?"
+        },
+        {
+          "id": "de:v013:15:p2",
+          "en": "Kann ich hier sitzen?",
+          "ru": "Можно мне здесь сесть?"
+        },
+        {
+          "id": "de:v013:15:p3",
+          "en": "Können Sie das bitte wiederholen?",
+          "ru": "Не могли бы вы это повторить?"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-15-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Не могли бы вы мне помочь?",
+      "answers": [
+        "Können Sie mir bitte helfen?"
+      ],
+      "explanation": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [
+        "de:v013:15:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Können Sie mir bitte helfen?",
+        "meaning": "Не могли бы вы мне помочь?"
+      }
+    },
+    {
+      "id": "de-a1-15-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Не могли бы вы это повторить?",
+      "answers": [
+        "Können Sie das bitte wiederholen?"
+      ],
+      "explanation": "Können Sie das bitte wiederholen? — Не могли бы вы это повторить?",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [
+        "de:v013:15:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Können Sie das bitte wiederholen?"
+    },
+    {
+      "id": "de-a1-15-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Können Sie langsamer sprechen?»?",
+      "answers": [
+        "Не могли бы вы говорить медленнее?"
+      ],
+      "explanation": "Können Sie langsamer sprechen? — Не могли бы вы говорить медленнее?",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [
+        "de:v013:15:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Не могли бы вы мне помочь?",
+        "Не могли бы вы говорить медленнее?",
+        "Не могли бы вы это повторить?"
+      ]
+    },
+    {
+      "id": "de-a1-15-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Мне нужен билет в Берлин.",
+      "answers": [
+        "Ich brauche eine Fahrkarte nach Berlin."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Ich brauche eine Fahrkarte nach Berlin. — Мне нужен билет в Берлин.",
+      "hint": "Können — мочь/уметь: ich kann, können Sie. Вежливое Sie пишется с заглавной буквы. Второй глагол стоит в конце в начальной форме: Können Sie langsamer sprechen? Mir — мне, helfen — помогать. Bitte смягчает просьбу.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich brauche eine Fahrkarte nach Berlin.",
+        "Wann fährt der Zug ab?",
+        "Der Zug fährt um zehn Uhr ab.",
+        "Wo ist der Bahnhof?"
+      ]
+    }
+  ]
+}

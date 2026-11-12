@@ -1,0 +1,474 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "lesson": "a1-01",
+      "objective": "Поздороваться, назвать своё имя и попрощаться.",
+      "requires": [],
+      "provides": [
+        "greeting"
+      ],
+      "words": [
+        "en:hello",
+        "en:name",
+        "en:goodbye"
+      ]
+    },
+    {
+      "lesson": "a1-02",
+      "objective": "Представить друга, спросить откуда он и встретить гостя.",
+      "requires": [
+        "greeting"
+      ],
+      "provides": [
+        "introduce-friend"
+      ],
+      "words": [
+        "en:from",
+        "en:friend",
+        "en:welcome"
+      ]
+    },
+    {
+      "lesson": "a1-03",
+      "objective": "Назвать книгу, ручку и сумку и объяснить, где лежит вещь.",
+      "requires": [
+        "greeting",
+        "introduce-friend"
+      ],
+      "provides": [
+        "objects-my"
+      ],
+      "words": [
+        "en:book",
+        "en:pen",
+        "en:bag"
+      ]
+    },
+    {
+      "lesson": "a1-04",
+      "objective": "Показать дом, дверь и окно рядом или вдали.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my"
+      ],
+      "provides": [
+        "this-that"
+      ],
+      "words": [
+        "en:house",
+        "en:door",
+        "en:window"
+      ]
+    },
+    {
+      "lesson": "a1-05",
+      "objective": "Назвать количество вещей и сказать, что у тебя есть.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that"
+      ],
+      "provides": [
+        "have-plural"
+      ],
+      "words": [
+        "en:one",
+        "en:two",
+        "en:five"
+      ]
+    },
+    {
+      "lesson": "a1-06",
+      "objective": "Спросить о возрасте и ответить коротко или полной фразой.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural"
+      ],
+      "provides": [
+        "age-numbers"
+      ],
+      "words": [
+        "en:six",
+        "en:ten",
+        "en:twenty"
+      ]
+    },
+    {
+      "lesson": "a1-07",
+      "objective": "Представить семью и сказать возраст близкого.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers"
+      ],
+      "provides": [
+        "family-introduction"
+      ],
+      "words": [
+        "en:sister",
+        "en:brother",
+        "en:mother"
+      ]
+    },
+    {
+      "lesson": "a1-08",
+      "objective": "Рассказать о родителях и семье во множественном числе.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction"
+      ],
+      "provides": [
+        "family-plural"
+      ],
+      "words": [
+        "en:father",
+        "en:parent",
+        "en:family"
+      ]
+    },
+    {
+      "lesson": "a1-09",
+      "objective": "Рассказать, какая еда нравится, и спросить друга.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural"
+      ],
+      "provides": [
+        "food-like"
+      ],
+      "words": [
+        "en:rice",
+        "en:bread",
+        "en:cheese"
+      ]
+    },
+    {
+      "lesson": "a1-10",
+      "objective": "Вежливо заказать напиток и поблагодарить.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like"
+      ],
+      "provides": [
+        "cafe-request"
+      ],
+      "words": [
+        "en:water",
+        "en:tea",
+        "en:milk"
+      ]
+    },
+    {
+      "lesson": "a1-11",
+      "objective": "Описать цвет предмета и уточнить нужный предмет.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request"
+      ],
+      "provides": [
+        "colors"
+      ],
+      "words": [
+        "en:blue",
+        "en:red",
+        "en:green"
+      ]
+    },
+    {
+      "lesson": "a1-12",
+      "objective": "Найти предмет и описать, где он находится.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors"
+      ],
+      "provides": [
+        "location-on-under"
+      ],
+      "words": [
+        "en:cup",
+        "en:table",
+        "en:chair"
+      ]
+    },
+    {
+      "lesson": "a1-13",
+      "objective": "Рассказать о простых привычках в течение дня.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors",
+        "location-on-under"
+      ],
+      "provides": [
+        "daily-present"
+      ],
+      "words": [
+        "en:eat",
+        "en:sleep",
+        "en:read"
+      ]
+    },
+    {
+      "lesson": "a1-14",
+      "objective": "Спросить о привычке и рассказать о действиях друга.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors",
+        "location-on-under",
+        "daily-present"
+      ],
+      "provides": [
+        "third-person"
+      ],
+      "words": [
+        "en:walk",
+        "en:run",
+        "en:write"
+      ]
+    },
+    {
+      "lesson": "a1-15",
+      "objective": "Назвать роль в классе и спросить, что это за предмет.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors",
+        "location-on-under",
+        "daily-present",
+        "third-person"
+      ],
+      "provides": [
+        "classroom-questions"
+      ],
+      "words": [
+        "en:student",
+        "en:teacher",
+        "en:lesson"
+      ]
+    },
+    {
+      "lesson": "a1-16",
+      "objective": "Рассказать, где работаешь, и спросить о месте работы.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors",
+        "location-on-under",
+        "daily-present",
+        "third-person",
+        "classroom-questions"
+      ],
+      "provides": [
+        "work-place"
+      ],
+      "words": [
+        "en:work",
+        "en:office",
+        "en:job"
+      ]
+    },
+    {
+      "lesson": "a1-17",
+      "objective": "Выбрать транспорт и вежливо попросить билет.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors",
+        "location-on-under",
+        "daily-present",
+        "third-person",
+        "classroom-questions",
+        "work-place"
+      ],
+      "provides": [
+        "travel-ticket"
+      ],
+      "words": [
+        "en:ticket",
+        "en:train",
+        "en:bus"
+      ]
+    },
+    {
+      "lesson": "a1-18",
+      "objective": "Спросить дорогу и понять простые указания.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors",
+        "location-on-under",
+        "daily-present",
+        "third-person",
+        "classroom-questions",
+        "work-place",
+        "travel-ticket"
+      ],
+      "provides": [
+        "city-directions"
+      ],
+      "words": [
+        "en:hotel",
+        "en:station",
+        "en:map"
+      ]
+    },
+    {
+      "lesson": "a1-19",
+      "objective": "Вежливо попросить помощи и переспросить.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors",
+        "location-on-under",
+        "daily-present",
+        "third-person",
+        "classroom-questions",
+        "work-place",
+        "travel-ticket",
+        "city-directions"
+      ],
+      "provides": [
+        "asking-help"
+      ],
+      "words": [
+        "en:help",
+        "en:please",
+        "en:sorry"
+      ]
+    },
+    {
+      "lesson": "a1-20",
+      "objective": "Выбрать вещь в магазине и спросить цену.",
+      "requires": [
+        "greeting",
+        "introduce-friend",
+        "objects-my",
+        "this-that",
+        "have-plural",
+        "age-numbers",
+        "family-introduction",
+        "family-plural",
+        "food-like",
+        "cafe-request",
+        "colors",
+        "location-on-under",
+        "daily-present",
+        "third-person",
+        "classroom-questions",
+        "work-place",
+        "travel-ticket",
+        "city-directions",
+        "asking-help"
+      ],
+      "provides": [
+        "shopping-price"
+      ],
+      "words": [
+        "en:shirt",
+        "en:shop",
+        "en:price"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "id": "es-a1-18",
+  "title": "Итог · встреча в городе",
+  "topic": "Итог · встреча в городе",
+  "order": 17,
+  "objective": "Соединить планы, время и просьбы в разговоре.",
+  "guide": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+  "vocabulary": [
+    {
+      "id": "es:v013:18:p0",
+      "en": "Vamos a tomar un café después de clase.",
+      "ru": "Мы собираемся выпить кофе после урока."
+    },
+    {
+      "id": "es:v013:18:p1",
+      "en": "La cafetería está cerca de la estación.",
+      "ru": "Кафе находится рядом с вокзалом."
+    },
+    {
+      "id": "es:v013:18:p2",
+      "en": "Quedamos aquí a las cuatro.",
+      "ru": "Встречаемся здесь в четыре."
+    },
+    {
+      "id": "es:v013:18:p3",
+      "en": "¿Puedes venir conmigo?",
+      "ru": "Можешь пойти со мной?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Vamos a tomar un café después de clase.",
+      "translation": "Мы собираемся выпить кофе после урока.",
+      "explanation": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "La cafetería está cerca de la estación.",
+      "translation": "Кафе находится рядом с вокзалом.",
+      "explanation": "La cafetería está cerca de la estación. — Кафе находится рядом с вокзалом."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Quedamos aquí a las cuatro.",
+      "translation": "Встречаемся здесь в четыре.",
+      "explanation": "Quedamos aquí a las cuatro. — Встречаемся здесь в четыре."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "¿Puedes venir conmigo?",
+      "translation": "Можешь пойти со мной?",
+      "explanation": "¿Puedes venir conmigo? — Можешь пойти со мной?\nВремя встречи вводится a las, а не просто las.\nВерно: Quedamos aquí a las cuatro."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-18-e05",
+      "type": "dialogue",
+      "prompt": "На какое время договорились?",
+      "answers": [
+        "На четыре часа"
+      ],
+      "explanation": "Мико: Vamos a tomar un café después de clase. ¿Puedes venir conmigo?\nОрби: Sí. Quedamos aquí a las cuatro.\nНа четыре часа",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [
+        "es:v013:18:p0",
+        "es:v013:18:p1",
+        "es:v013:18:p2",
+        "es:v013:18:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Vamos a tomar un café después de clase. ¿Puedes venir conmigo?\nОрби: Sí. Quedamos aquí a las cuatro.",
+      "options": [
+        "На три часа",
+        "На четыре часа",
+        "На половину третьего"
+      ]
+    },
+    {
+      "id": "es-a1-18-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Мы собираемся выпить кофе после урока. Выбери реплику.",
+      "answers": [
+        "Vamos a tomar un café después de clase."
+      ],
+      "explanation": "Vamos a tomar un café después de clase. — Мы собираемся выпить кофе после урока.",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [
+        "es:v013:18:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Quedamos aquí a las cuatro.",
+        "Vamos a tomar un café después de clase.",
+        "La cafetería está cerca de la estación."
+      ]
+    },
+    {
+      "id": "es-a1-18-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Кафе находится рядом с вокзалом.",
+      "answers": [
+        "La cafetería está cerca de la estación."
+      ],
+      "explanation": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [
+        "es:v013:18:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "La",
+        "cafetería",
+        "está",
+        "cerca",
+        "de",
+        "la",
+        "estación"
+      ]
+    },
+    {
+      "id": "es-a1-18-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Встречаемся здесь в четыре."
+      ],
+      "explanation": "Quedamos aquí a las cuatro. — Встречаемся здесь в четыре.",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [
+        "es:v013:18:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Quedamos aquí a las cuatro.",
+      "options": [
+        "Кафе находится рядом с вокзалом.",
+        "Можешь пойти со мной?",
+        "Встречаемся здесь в четыре."
+      ]
+    },
+    {
+      "id": "es-a1-18-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Quedamos aquí las cuatro.",
+      "answers": [
+        "Quedamos aquí a las cuatro."
+      ],
+      "explanation": "Время встречи вводится a las, а не просто las.",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Quedamos aquí las cuatro.",
+        "Quedamos aquí a las cuatro."
+      ]
+    },
+    {
+      "id": "es-a1-18-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [
+        "es:v013:18:p0",
+        "es:v013:18:p1",
+        "es:v013:18:p2",
+        "es:v013:18:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:18:p0",
+          "en": "Vamos a tomar un café después de clase.",
+          "ru": "Мы собираемся выпить кофе после урока."
+        },
+        {
+          "id": "es:v013:18:p1",
+          "en": "La cafetería está cerca de la estación.",
+          "ru": "Кафе находится рядом с вокзалом."
+        },
+        {
+          "id": "es:v013:18:p2",
+          "en": "Quedamos aquí a las cuatro.",
+          "ru": "Встречаемся здесь в четыре."
+        },
+        {
+          "id": "es:v013:18:p3",
+          "en": "¿Puedes venir conmigo?",
+          "ru": "Можешь пойти со мной?"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-18-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Мы собираемся выпить кофе после урока.",
+      "answers": [
+        "Vamos a tomar un café después de clase."
+      ],
+      "explanation": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [
+        "es:v013:18:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Vamos a tomar un café después de clase.",
+        "meaning": "Мы собираемся выпить кофе после урока."
+      }
+    },
+    {
+      "id": "es-a1-18-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Можешь пойти со мной?",
+      "answers": [
+        "¿Puedes venir conmigo?"
+      ],
+      "explanation": "¿Puedes venir conmigo? — Можешь пойти со мной?",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [
+        "es:v013:18:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "¿Puedes venir conmigo?"
+    },
+    {
+      "id": "es-a1-18-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «La cafetería está cerca de la estación.»?",
+      "answers": [
+        "Кафе находится рядом с вокзалом."
+      ],
+      "explanation": "La cafetería está cerca de la estación. — Кафе находится рядом с вокзалом.",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [
+        "es:v013:18:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Мы собираемся выпить кофе после урока.",
+        "Кафе находится рядом с вокзалом.",
+        "Можешь пойти со мной?"
+      ]
+    },
+    {
+      "id": "es-a1-18-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Музей напротив банка.",
+      "answers": [
+        "El museo está frente al banco."
+      ],
+      "explanation": "Ты уже встречал эту реплику: El museo está frente al banco. — Музей напротив банка.",
+      "hint": "Повторяем estar для расположения, ir a для плана, a las для времени и poder для просьбы. Tomar un café — выпить кофе. Quedar — договориться встретиться; aquí — здесь. Después — после/потом.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Siga todo recto.",
+        "Gire a la derecha.",
+        "La estación está al lado del hotel.",
+        "El museo está frente al banco."
+      ]
+    }
+  ]
+}

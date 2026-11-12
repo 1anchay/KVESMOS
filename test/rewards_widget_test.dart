@@ -8,7 +8,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:orbitwords/core/controller.dart';
 import 'package:orbitwords/ui/app.dart';
-import 'package:orbitwords/ui/character_reactions.dart';
 import 'package:orbitwords/ui/rewards_pages.dart';
 import 'support.dart';
 import 'widget_test.dart' show flushDb;
@@ -46,9 +45,7 @@ void main() {
           ..addFont(
             Future.value(
               ByteData.sublistView(
-                await File(
-                  '.tools/flutter/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
-                ).readAsBytes(),
+                await File(materialIconsFontPath()).readAsBytes(),
               ),
             ),
           );
@@ -108,20 +105,9 @@ void main() {
       expect(find.text('Уже сохранено в вашей коллекции'), findsOneWidget);
       expect(app.inventory.owned, hasLength(1));
       final itemId = app.inventory.owned.single;
-      final rarity = app.rewards.catalog.item(itemId).rarity;
-      expect(
-        find.text(
-          CharacterCue.pixieReward(
-            rarityNames[rarity]!,
-            fresh: true,
-          ).lines.first,
-        ),
-        findsOneWidget,
-      );
-      expect(find.text(CharacterCue.reward.lines.first), findsOneWidget);
+      expect(find.text('Вот это находка!'), findsOneWidget);
       await capture('kvesmos-reward');
-      await tester.ensureVisible(find.text('Забрать'));
-      await tester.tap(find.text('Забрать'));
+      await tester.tap(find.byTooltip('Закрыть'));
       await tester.pumpAndSettle();
       router.go('/inventory');
       await flushDb(tester);
@@ -195,11 +181,12 @@ void main() {
       }
       router.go('/rewards');
       await flushDb(tester);
-      await tester.scrollUntilVisible(chestButton('Посмотреть награду'), 200);
-      await tester.pumpAndSettle();
-      await tester.tap(chestButton('Посмотреть награду'));
-      await tester.pumpAndSettle();
-      expect(find.text(item.name), findsOneWidget);
+      expect(chestButton('Посмотреть награду'), findsNothing);
+      expect(app.inventory.pending.where((g) => g.itemId == itemId), isEmpty);
+      expect(
+        app.inventory.grants.values.any((g) => g.itemId == itemId),
+        isTrue,
+      );
       expect(app.inventory.owned.single, itemId);
       expect(tester.takeException(), isNull);
       await tester.pumpWidget(const SizedBox.shrink());

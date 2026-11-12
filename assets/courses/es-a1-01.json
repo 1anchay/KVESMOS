@@ -1,0 +1,280 @@
+{
+  "id": "es-a1-01",
+  "title": "Hola · первая встреча",
+  "topic": "Hola · первая встреча",
+  "order": 0,
+  "objective": "Поздороваться, спросить о делах и попрощаться.",
+  "guide": "Hola — привет; h не произносится. Buenos días — доброе утро или добрый день до обеда. Вопрос отмечается с двух сторон: ¿…? ¿Cómo estás? — как ты (неформально)?",
+  "vocabulary": [
+    {
+      "id": "es:hola",
+      "en": "hola",
+      "ru": "привет"
+    },
+    {
+      "id": "es:gracias",
+      "en": "gracias",
+      "ru": "спасибо"
+    },
+    {
+      "id": "es:bien",
+      "en": "bien",
+      "ru": "хорошо"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-01-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Привет.»",
+      "answers": [
+        "Hola."
+      ],
+      "explanation": "Hola. — Привет.",
+      "hint": "Hola. — Привет.",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Buenos días.",
+        "Hola.",
+        "Hasta luego."
+      ]
+    },
+    {
+      "id": "es-a1-01-e02",
+      "type": "choice",
+      "prompt": "Что означает «Buenos días.»?",
+      "answers": [
+        "Доброе утро."
+      ],
+      "explanation": "Buenos días. — Доброе утро.",
+      "hint": "Buenos días. — Доброе утро.",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Как ты?",
+        "До встречи.",
+        "Доброе утро."
+      ]
+    },
+    {
+      "id": "es-a1-01-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Как ты?»",
+      "answers": [
+        "¿Cómo estás"
+      ],
+      "explanation": "¿Cómo estás? — Как ты?",
+      "hint": "¿Cómo estás? — Как ты?",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "¿Cómo",
+        "estás"
+      ]
+    },
+    {
+      "id": "es-a1-01-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "hola — привет; gracias — спасибо; bien — хорошо",
+      "hint": "hola — привет; gracias — спасибо; bien — хорошо",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "es:hola",
+          "en": "hola",
+          "ru": "привет"
+        },
+        {
+          "id": "es:gracias",
+          "en": "gracias",
+          "ru": "спасибо"
+        },
+        {
+          "id": "es:bien",
+          "en": "bien",
+          "ru": "хорошо"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-01-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "До встречи."
+      ],
+      "explanation": "Hasta luego. — До встречи.",
+      "hint": "Hasta luego. — До встречи.",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Hasta luego.",
+      "options": [
+        "Привет.",
+        "До встречи.",
+        "Как ты?"
+      ]
+    },
+    {
+      "id": "es-a1-01-e06",
+      "type": "gap",
+      "prompt": "Спросим о делах одного друга: ¿Cómo ___?",
+      "answers": [
+        "estás"
+      ],
+      "explanation": "Hola — привет; h не произносится. Buenos días — доброе утро или добрый день до обеда. Вопрос отмечается с двух сторон: ¿…? ¿Cómo estás? — как ты (неформально)?",
+      "hint": "Hola — привет; h не произносится. Buenos días — доброе утро или добрый день до обеда. Вопрос отмечается с двух сторон: ¿…? ¿Cómo estás? — как ты (неформально)?",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "estoy",
+        "estás",
+        "están"
+      ]
+    },
+    {
+      "id": "es-a1-01-e07",
+      "type": "dialogue",
+      "prompt": "Орби: «¿Cómo estás?» Ответь, что всё хорошо, и поблагодари.",
+      "answers": [
+        "Bien, gracias."
+      ],
+      "explanation": "В этой ситуации подходит: Bien, gracias.",
+      "hint": "В этой ситуации подходит: Bien, gracias.",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Hasta luego.",
+        "¿Cómo estás?",
+        "Bien, gracias."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "es-a1-01-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «¿Cómo estoy?»",
+      "answers": [
+        "¿Cómo estás?"
+      ],
+      "explanation": "Estoy — «я», estás — «ты». О делах друга спрашиваем ¿Cómo estás?",
+      "hint": "Estoy — «я», estás — «ты». О делах друга спрашиваем ¿Cómo estás?",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "es-a1-01-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «До встречи.»",
+      "answers": [
+        "Hasta luego."
+      ],
+      "explanation": "Hasta luego. — До встречи.",
+      "hint": "Hasta luego. — До встречи.",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "es-a1-01-e10",
+      "type": "review",
+      "prompt": "Финал: Орби: «¿Cómo estás?» Ответь, что всё хорошо, и поблагодари.",
+      "answers": [
+        "Bien, gracias."
+      ],
+      "explanation": "Теперь ты умеешь: поздороваться, спросить о делах и попрощаться.",
+      "hint": "Теперь ты умеешь: поздороваться, спросить о делах и попрощаться.",
+      "wordIds": [
+        "es:hola",
+        "es:gracias",
+        "es:bien"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Bien, gracias.",
+        "¿Cómo estás?",
+        "Hasta luego."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Hola.",
+      "translation": "Привет.",
+      "explanation": "Ситуация: Поздороваться, спросить о делах и попрощаться. Hola. — Привет."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Buenos días.",
+      "translation": "Доброе утро.",
+      "explanation": "Ситуация: Поздороваться, спросить о делах и попрощаться. Buenos días. — Доброе утро."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "¿Cómo estás?",
+      "translation": "Как ты?",
+      "explanation": "Hola — привет; h не произносится. Buenos días — доброе утро или добрый день до обеда. Вопрос отмечается с двух сторон: ¿…? ¿Cómo estás? — как ты (неформально)?"
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Hasta luego.",
+      "translation": "До встречи.",
+      "explanation": "Ситуация: Поздороваться, спросить о делах и попрощаться. Hasta luego. — До встречи."
+    }
+  ]
+}

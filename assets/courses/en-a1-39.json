@@ -1,0 +1,283 @@
+{
+  "id": "en-a1-39",
+  "title": "На связи: рабочий звонок",
+  "topic": "На связи: рабочий звонок",
+  "order": 38,
+  "objective": "Попросить повторить и договориться о звонке.",
+  "guide": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+  "vocabulary": [
+    {
+      "id": "en:v013:39:p0",
+      "en": "Could you repeat that, please?",
+      "ru": "Не могли бы вы повторить?"
+    },
+    {
+      "id": "en:v013:39:p1",
+      "en": "Could you send me the address by email?",
+      "ru": "Не могли бы вы отправить мне адрес по электронной почте?"
+    },
+    {
+      "id": "en:v013:39:p2",
+      "en": "I'll call you back after lunch.",
+      "ru": "Я перезвоню тебе после обеда."
+    },
+    {
+      "id": "en:v013:39:p3",
+      "en": "The connection is bad.",
+      "ru": "Плохая связь."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Could you repeat that, please?",
+      "translation": "Не могли бы вы повторить?",
+      "explanation": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Could you send me the address by email?",
+      "translation": "Не могли бы вы отправить мне адрес по электронной почте?",
+      "explanation": "Could you send me the address by email? — Не могли бы вы отправить мне адрес по электронной почте?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "I'll call you back after lunch.",
+      "translation": "Я перезвоню тебе после обеда.",
+      "explanation": "I'll call you back after lunch. — Я перезвоню тебе после обеда."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "The connection is bad.",
+      "translation": "Плохая связь.",
+      "explanation": "The connection is bad. — Плохая связь.\nI'll = I will. После will не ставим to.\nВерно: I'll call you back after lunch."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-39-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Я перезвоню тебе после обеда."
+      ],
+      "explanation": "I'll call you back after lunch. — Я перезвоню тебе после обеда.",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [
+        "en:v013:39:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "I'll call you back after lunch.",
+      "options": [
+        "Не могли бы вы отправить мне адрес по электронной почте?",
+        "Плохая связь.",
+        "Я перезвоню тебе после обеда."
+      ]
+    },
+    {
+      "id": "en-a1-39-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Не могли бы вы повторить? Выбери реплику.",
+      "answers": [
+        "Could you repeat that, please?"
+      ],
+      "explanation": "Could you repeat that, please? — Не могли бы вы повторить?",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [
+        "en:v013:39:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "I'll call you back after lunch.",
+        "Could you repeat that, please?",
+        "Could you send me the address by email?"
+      ]
+    },
+    {
+      "id": "en-a1-39-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [
+        "en:v013:39:p0",
+        "en:v013:39:p1",
+        "en:v013:39:p2",
+        "en:v013:39:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:39:p0",
+          "en": "Could you repeat that, please?",
+          "ru": "Не могли бы вы повторить?"
+        },
+        {
+          "id": "en:v013:39:p1",
+          "en": "Could you send me the address by email?",
+          "ru": "Не могли бы вы отправить мне адрес по электронной почте?"
+        },
+        {
+          "id": "en:v013:39:p2",
+          "en": "I'll call you back after lunch.",
+          "ru": "Я перезвоню тебе после обеда."
+        },
+        {
+          "id": "en:v013:39:p3",
+          "en": "The connection is bad.",
+          "ru": "Плохая связь."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-39-e05",
+      "type": "dialogue",
+      "prompt": "Что собирается сделать Орби?",
+      "answers": [
+        "Перезвонить после обеда"
+      ],
+      "explanation": "Мико: The connection is bad. Could you repeat that, please?\nОрби: I'll call you back after lunch.\nПерезвонить после обеда",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [
+        "en:v013:39:p0",
+        "en:v013:39:p1",
+        "en:v013:39:p2",
+        "en:v013:39:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: The connection is bad. Could you repeat that, please?\nОрби: I'll call you back after lunch.",
+      "options": [
+        "Прийти до обеда",
+        "Перезвонить после обеда",
+        "Отменить поездку"
+      ]
+    },
+    {
+      "id": "en-a1-39-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Не могли бы вы отправить мне адрес по электронной почте?",
+      "answers": [
+        "Could you send me the address by email?"
+      ],
+      "explanation": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [
+        "en:v013:39:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Could",
+        "you",
+        "send",
+        "me",
+        "the",
+        "address",
+        "by",
+        "email"
+      ]
+    },
+    {
+      "id": "en-a1-39-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Плохая связь.",
+      "answers": [
+        "The connection is bad."
+      ],
+      "explanation": "The connection is bad. — Плохая связь.",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [
+        "en:v013:39:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "The connection is bad."
+    },
+    {
+      "id": "en-a1-39-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I'll to call you back after lunch.",
+      "answers": [
+        "I'll call you back after lunch."
+      ],
+      "explanation": "I'll = I will. После will не ставим to.",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I'll to call you back after lunch.",
+        "I'll call you back after lunch."
+      ]
+    },
+    {
+      "id": "en-a1-39-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Could you send me the address by email?»?",
+      "answers": [
+        "Не могли бы вы отправить мне адрес по электронной почте?"
+      ],
+      "explanation": "Could you send me the address by email? — Не могли бы вы отправить мне адрес по электронной почте?",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [
+        "en:v013:39:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Не могли бы вы повторить?",
+        "Не могли бы вы отправить мне адрес по электронной почте?",
+        "Плохая связь."
+      ]
+    },
+    {
+      "id": "en-a1-39-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Не могли бы вы повторить?",
+      "answers": [
+        "Could you repeat that, please?"
+      ],
+      "explanation": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [
+        "en:v013:39:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Could you repeat that, please?",
+        "meaning": "Не могли бы вы повторить?"
+      }
+    },
+    {
+      "id": "en-a1-39-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Ты собираешься остаться дома?",
+      "answers": [
+        "Are you going to stay at home?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: Are you going to stay at home? — Ты собираешься остаться дома?",
+      "hint": "Could you repeat that? — просьба повторить сказанное. Send me… — отправь мне… By email — по электронной почте. Call you back — перезвонить тебе. After lunch — после обеда, без the в общем значении.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I'm going to cook dinner tomorrow.",
+        "We're going to visit our friends.",
+        "Are you going to stay at home?",
+        "I'm not going to work tomorrow."
+      ]
+    }
+  ]
+}

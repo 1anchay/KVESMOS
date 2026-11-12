@@ -1,0 +1,294 @@
+{
+  "id": "fr-a1-17",
+  "title": "Уточнить время",
+  "topic": "Уточнить время",
+  "order": 16,
+  "objective": "Назвать точное время и понять половину часа.",
+  "guide": "Et demie добавляет полчаса; moins le quart означает без четверти.",
+  "vocabulary": [
+    {
+      "id": "fr:v014:17:p0",
+      "en": "Le rendez-vous est à neuf heures et demie.",
+      "ru": "Встреча в половине десятого."
+    },
+    {
+      "id": "fr:v014:17:p1",
+      "en": "Il est dix heures moins le quart.",
+      "ru": "Сейчас без четверти десять."
+    },
+    {
+      "id": "fr:v014:17:p2",
+      "en": "Nous avons encore quinze minutes.",
+      "ru": "У нас ещё пятнадцать минут."
+    },
+    {
+      "id": "fr:v014:17:p3",
+      "en": "Le train part à dix heures.",
+      "ru": "Поезд отправляется в десять."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Уточнить время",
+      "phrase": "Le rendez-vous est à neuf heures et demie.",
+      "translation": "Встреча в половине десятого.",
+      "explanation": "Et demie добавляет полчаса; moins le quart означает без четверти."
+    },
+    {
+      "character": "miko",
+      "title": "Уточнить время",
+      "phrase": "Il est dix heures moins le quart.",
+      "translation": "Сейчас без четверти десять.",
+      "explanation": "Il est dix heures moins le quart. — Сейчас без четверти десять."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Уточнить время",
+      "phrase": "Nous avons encore quinze minutes.",
+      "translation": "У нас ещё пятнадцать минут.",
+      "explanation": "Nous avons encore quinze minutes. — У нас ещё пятнадцать минут."
+    },
+    {
+      "character": "orbi",
+      "title": "Уточнить время",
+      "phrase": "Le train part à dix heures.",
+      "translation": "Поезд отправляется в десять.",
+      "explanation": "Le train part à dix heures. — Поезд отправляется в десять."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Le rendez-vous est à neuf heures et demie.",
+      "translation": "Встреча в половине десятого.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Встреча в половине десятого.",
+      "options": [
+        "У нас ещё пятнадцать минут.",
+        "Встреча в половине десятого.",
+        "Поезд отправляется в десять."
+      ],
+      "explanation": "Et demie добавляет полчаса; moins le quart означает без четверти."
+    },
+    {
+      "id": "apply",
+      "phrase": "Il est dix heures moins le quart.",
+      "translation": "Сейчас без четверти десять.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Il est dix heures moins le quart.",
+      "tokens": [
+        "Il",
+        "est",
+        "dix",
+        "heures",
+        "moins",
+        "le",
+        "quart."
+      ],
+      "character": "miko",
+      "explanation": "Il est dix heures moins le quart. — Сейчас без четверти десять."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-17-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Встреча в половине десятого.»?",
+      "answers": [
+        "Le rendez-vous est à neuf heures et demie."
+      ],
+      "explanation": "Le rendez-vous est à neuf heures et demie. — Встреча в половине десятого.",
+      "wordIds": [
+        "fr:v014:17:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Il est dix heures moins le quart.",
+        "Le train part à dix heures.",
+        "Le rendez-vous est à neuf heures et demie."
+      ],
+      "hint": "Le rendez-vous est à neuf heures et demie. — Встреча в половине десятого."
+    },
+    {
+      "id": "fr-a1-17-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Сейчас без четверти десять.",
+      "answers": [
+        "Il est dix heures moins le quart."
+      ],
+      "explanation": "Et demie добавляет полчаса; moins le quart означает без четверти.",
+      "wordIds": [
+        "fr:v014:17:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Il",
+        "est",
+        "dix",
+        "heures",
+        "moins",
+        "le",
+        "quart."
+      ],
+      "hint": "Il est dix heures moins le quart. — Сейчас без четверти десять."
+    },
+    {
+      "id": "fr-a1-17-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "У нас ещё пятнадцать минут."
+      ],
+      "explanation": "Nous avons encore quinze minutes. — У нас ещё пятнадцать минут.",
+      "wordIds": [
+        "fr:v014:17:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Nous avons encore quinze minutes.",
+      "options": [
+        "Встреча в половине десятого.",
+        "У нас ещё пятнадцать минут.",
+        "Сейчас без четверти десять."
+      ],
+      "hint": "Nous avons encore quinze minutes. — У нас ещё пятнадцать минут."
+    },
+    {
+      "id": "fr-a1-17-e03",
+      "type": "dialogue",
+      "prompt": "Сколько времени до поезда?",
+      "answers": [
+        "Пятнадцать минут."
+      ],
+      "explanation": "Пятнадцать минут. Назвать точное время и понять половину часа.",
+      "wordIds": [
+        "fr:v014:17:p0",
+        "fr:v014:17:p1",
+        "fr:v014:17:p2",
+        "fr:v014:17:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Il est dix heures moins le quart. Le train part à dix heures.\nМико: Nous avons encore quinze minutes.",
+      "options": [
+        "Полчаса.",
+        "Час.",
+        "Пятнадцать минут."
+      ]
+    },
+    {
+      "id": "fr-a1-17-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v014:17:p0",
+        "fr:v014:17:p1",
+        "fr:v014:17:p2",
+        "fr:v014:17:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v014:17:p0",
+          "en": "Le rendez-vous est à neuf heures et demie.",
+          "ru": "Встреча в половине десятого."
+        },
+        {
+          "id": "fr:v014:17:p1",
+          "en": "Il est dix heures moins le quart.",
+          "ru": "Сейчас без четверти десять."
+        },
+        {
+          "id": "fr:v014:17:p2",
+          "en": "Nous avons encore quinze minutes.",
+          "ru": "У нас ещё пятнадцать минут."
+        },
+        {
+          "id": "fr:v014:17:p3",
+          "en": "Le train part à dix heures.",
+          "ru": "Поезд отправляется в десять."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-17-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Le train part en dix heures.",
+      "answers": [
+        "Le train part à dix heures."
+      ],
+      "explanation": "Точное время отправления вводится через à.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Le train part en dix heures.",
+        "Le train part à dix heures."
+      ],
+      "hint": "Et demie добавляет полчаса; moins le quart означает без четверти."
+    },
+    {
+      "id": "fr-a1-17-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Поезд отправляется в десять.». Можно написать вместо микрофона.",
+      "answers": [
+        "Le train part à dix heures."
+      ],
+      "explanation": "Le train part à dix heures. — Поезд отправляется в десять.",
+      "wordIds": [
+        "fr:v014:17:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Le train part à dix heures.",
+      "recall": {
+        "phrase": "Le train part à dix heures.",
+        "meaning": "Поезд отправляется в десять."
+      }
+    },
+    {
+      "id": "fr-a1-17-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Встреча в половине десятого.",
+      "answers": [
+        "Le rendez-vous est à neuf heures et demie."
+      ],
+      "explanation": "Et demie добавляет полчаса; moins le quart означает без четверти.",
+      "wordIds": [
+        "fr:v014:17:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Le rendez-vous est à neuf heures et demie.",
+        "meaning": "Встреча в половине десятого."
+      }
+    },
+    {
+      "id": "fr-a1-17-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я встаю в семь часов.",
+      "answers": [
+        "Je me lève à sept heures."
+      ],
+      "explanation": "Je me lève à sept heures. — Я встаю в семь часов.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je me lève à sept heures.",
+        "Je prends le petit-déjeuner.",
+        "Ensuite, je vais au travail.",
+        "Je rentre à la maison à six heures."
+      ]
+    }
+  ]
+}

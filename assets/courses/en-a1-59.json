@@ -1,0 +1,294 @@
+{
+  "id": "en-a1-59",
+  "title": "Бюро находок",
+  "topic": "Бюро находок",
+  "order": 58,
+  "objective": "Описать потерянную вещь и последнюю встречу с ней.",
+  "guide": "Lost — прошедшая форма lose; last saw уточняет, где вещь видели в последний раз.",
+  "vocabulary": [
+    {
+      "id": "en:v014:59:p0",
+      "en": "I lost my blue backpack.",
+      "ru": "Я потерял свой синий рюкзак."
+    },
+    {
+      "id": "en:v014:59:p1",
+      "en": "I last saw it on the train.",
+      "ru": "В последний раз я видел его в поезде."
+    },
+    {
+      "id": "en:v014:59:p2",
+      "en": "There is a notebook inside.",
+      "ru": "Внутри есть тетрадь."
+    },
+    {
+      "id": "en:v014:59:p3",
+      "en": "Can you call me if you find it?",
+      "ru": "Можете позвонить мне, если найдёте его?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Бюро находок",
+      "phrase": "I lost my blue backpack.",
+      "translation": "Я потерял свой синий рюкзак.",
+      "explanation": "Lost — прошедшая форма lose; last saw уточняет, где вещь видели в последний раз."
+    },
+    {
+      "character": "miko",
+      "title": "Бюро находок",
+      "phrase": "I last saw it on the train.",
+      "translation": "В последний раз я видел его в поезде.",
+      "explanation": "I last saw it on the train. — В последний раз я видел его в поезде."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Бюро находок",
+      "phrase": "There is a notebook inside.",
+      "translation": "Внутри есть тетрадь.",
+      "explanation": "There is a notebook inside. — Внутри есть тетрадь."
+    },
+    {
+      "character": "orbi",
+      "title": "Бюро находок",
+      "phrase": "Can you call me if you find it?",
+      "translation": "Можете позвонить мне, если найдёте его?",
+      "explanation": "Can you call me if you find it? — Можете позвонить мне, если найдёте его?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I lost my blue backpack.",
+      "translation": "Я потерял свой синий рюкзак.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я потерял свой синий рюкзак.",
+      "options": [
+        "Внутри есть тетрадь.",
+        "Я потерял свой синий рюкзак.",
+        "Можете позвонить мне, если найдёте его?"
+      ],
+      "explanation": "Lost — прошедшая форма lose; last saw уточняет, где вещь видели в последний раз."
+    },
+    {
+      "id": "apply",
+      "phrase": "I last saw it on the train.",
+      "translation": "В последний раз я видел его в поезде.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I last saw it on the train.",
+      "tokens": [
+        "I",
+        "last",
+        "saw",
+        "it",
+        "on",
+        "the",
+        "train."
+      ],
+      "character": "miko",
+      "explanation": "I last saw it on the train. — В последний раз я видел его в поезде."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-59-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я потерял свой синий рюкзак.»?",
+      "answers": [
+        "I lost my blue backpack."
+      ],
+      "explanation": "I lost my blue backpack. — Я потерял свой синий рюкзак.",
+      "wordIds": [
+        "en:v014:59:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I last saw it on the train.",
+        "Can you call me if you find it?",
+        "I lost my blue backpack."
+      ],
+      "hint": "I lost my blue backpack. — Я потерял свой синий рюкзак."
+    },
+    {
+      "id": "en-a1-59-e02",
+      "type": "order",
+      "prompt": "Собери реплику: В последний раз я видел его в поезде.",
+      "answers": [
+        "I last saw it on the train."
+      ],
+      "explanation": "Lost — прошедшая форма lose; last saw уточняет, где вещь видели в последний раз.",
+      "wordIds": [
+        "en:v014:59:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I",
+        "last",
+        "saw",
+        "it",
+        "on",
+        "the",
+        "train."
+      ],
+      "hint": "I last saw it on the train. — В последний раз я видел его в поезде."
+    },
+    {
+      "id": "en-a1-59-e03",
+      "type": "dialogue",
+      "prompt": "Как узнать рюкзак?",
+      "answers": [
+        "Он синий, внутри тетрадь."
+      ],
+      "explanation": "Он синий, внутри тетрадь. Описать потерянную вещь и последнюю встречу с ней.",
+      "wordIds": [
+        "en:v014:59:p0",
+        "en:v014:59:p1",
+        "en:v014:59:p2",
+        "en:v014:59:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: What does your backpack look like?\nМико: It is blue, and there is a notebook inside.",
+      "options": [
+        "Он красный, внутри телефон.",
+        "Он чёрный и пустой.",
+        "Он синий, внутри тетрадь."
+      ]
+    },
+    {
+      "id": "en-a1-59-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Внутри есть тетрадь."
+      ],
+      "explanation": "There is a notebook inside. — Внутри есть тетрадь.",
+      "wordIds": [
+        "en:v014:59:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "There is a notebook inside.",
+      "options": [
+        "Я потерял свой синий рюкзак.",
+        "Внутри есть тетрадь.",
+        "В последний раз я видел его в поезде."
+      ],
+      "hint": "There is a notebook inside. — Внутри есть тетрадь."
+    },
+    {
+      "id": "en-a1-59-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:59:p0",
+        "en:v014:59:p1",
+        "en:v014:59:p2",
+        "en:v014:59:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:59:p0",
+          "en": "I lost my blue backpack.",
+          "ru": "Я потерял свой синий рюкзак."
+        },
+        {
+          "id": "en:v014:59:p1",
+          "en": "I last saw it on the train.",
+          "ru": "В последний раз я видел его в поезде."
+        },
+        {
+          "id": "en:v014:59:p2",
+          "en": "There is a notebook inside.",
+          "ru": "Внутри есть тетрадь."
+        },
+        {
+          "id": "en:v014:59:p3",
+          "en": "Can you call me if you find it?",
+          "ru": "Можете позвонить мне, если найдёте его?"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-59-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I lose my backpack yesterday.",
+      "answers": [
+        "I lost my backpack yesterday."
+      ],
+      "explanation": "Yesterday указывает на прошлое: lost.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I lose my backpack yesterday.",
+        "I lost my backpack yesterday."
+      ],
+      "hint": "Lost — прошедшая форма lose; last saw уточняет, где вещь видели в последний раз."
+    },
+    {
+      "id": "en-a1-59-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Можете позвонить мне, если найдёте его?». Можно написать вместо микрофона.",
+      "answers": [
+        "Can you call me if you find it?"
+      ],
+      "explanation": "Can you call me if you find it? — Можете позвонить мне, если найдёте его?",
+      "wordIds": [
+        "en:v014:59:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Can you call me if you find it?",
+      "recall": {
+        "phrase": "Can you call me if you find it?",
+        "meaning": "Можете позвонить мне, если найдёте его?"
+      }
+    },
+    {
+      "id": "en-a1-59-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я потерял свой синий рюкзак.",
+      "answers": [
+        "I lost my blue backpack."
+      ],
+      "explanation": "Lost — прошедшая форма lose; last saw уточняет, где вещь видели в последний раз.",
+      "wordIds": [
+        "en:v014:59:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I lost my blue backpack.",
+        "meaning": "Я потерял свой синий рюкзак."
+      }
+    },
+    {
+      "id": "en-a1-59-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Не мог бы ты подождать десять минут?",
+      "answers": [
+        "Could you wait ten minutes?"
+      ],
+      "explanation": "Could you wait ten minutes? — Не мог бы ты подождать десять минут?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I am late because the bus broke down.",
+        "I took a taxi, so I am almost there.",
+        "Could you wait ten minutes?",
+        "Thank you for waiting."
+      ]
+    }
+  ]
+}

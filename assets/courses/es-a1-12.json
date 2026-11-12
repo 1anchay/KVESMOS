@@ -1,0 +1,280 @@
+{
+  "id": "es-a1-12",
+  "title": "Время и расписание",
+  "topic": "Время и расписание",
+  "order": 11,
+  "objective": "Спросить время и назвать час встречи.",
+  "guide": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+  "vocabulary": [
+    {
+      "id": "es:v013:12:p0",
+      "en": "¿Qué hora es?",
+      "ru": "Который час?"
+    },
+    {
+      "id": "es:v013:12:p1",
+      "en": "Son las dos y media.",
+      "ru": "Половина третьего."
+    },
+    {
+      "id": "es:v013:12:p2",
+      "en": "La clase empieza a las tres.",
+      "ru": "Урок начинается в три часа."
+    },
+    {
+      "id": "es:v013:12:p3",
+      "en": "Nos vemos a las cuatro.",
+      "ru": "Увидимся в четыре."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "¿Qué hora es?",
+      "translation": "Который час?",
+      "explanation": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Son las dos y media.",
+      "translation": "Половина третьего.",
+      "explanation": "Son las dos y media. — Половина третьего."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "La clase empieza a las tres.",
+      "translation": "Урок начинается в три часа.",
+      "explanation": "La clase empieza a las tres. — Урок начинается в три часа."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Nos vemos a las cuatro.",
+      "translation": "Увидимся в четыре.",
+      "explanation": "Nos vemos a las cuatro. — Увидимся в четыре.\nДля одного часа нужна единственная форма es la una; для остальных — son las.\nВерно: Es la una."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-12-e05",
+      "type": "dialogue",
+      "prompt": "Через сколько начнётся урок?",
+      "answers": [
+        "Через полчаса"
+      ],
+      "explanation": "Мико: ¿Qué hora es?\nОрби: Son las dos y media. La clase empieza a las tres.\nЧерез полчаса",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [
+        "es:v013:12:p0",
+        "es:v013:12:p1",
+        "es:v013:12:p2",
+        "es:v013:12:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: ¿Qué hora es?\nОрби: Son las dos y media. La clase empieza a las tres.",
+      "options": [
+        "Через два часа",
+        "Через полчаса",
+        "Через четыре часа"
+      ]
+    },
+    {
+      "id": "es-a1-12-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Который час? Выбери реплику.",
+      "answers": [
+        "¿Qué hora es?"
+      ],
+      "explanation": "¿Qué hora es? — Который час?",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [
+        "es:v013:12:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "La clase empieza a las tres.",
+        "¿Qué hora es?",
+        "Son las dos y media."
+      ]
+    },
+    {
+      "id": "es-a1-12-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Половина третьего.",
+      "answers": [
+        "Son las dos y media."
+      ],
+      "explanation": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [
+        "es:v013:12:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Son",
+        "las",
+        "dos",
+        "y",
+        "media"
+      ]
+    },
+    {
+      "id": "es-a1-12-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Урок начинается в три часа."
+      ],
+      "explanation": "La clase empieza a las tres. — Урок начинается в три часа.",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [
+        "es:v013:12:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "La clase empieza a las tres.",
+      "options": [
+        "Половина третьего.",
+        "Увидимся в четыре.",
+        "Урок начинается в три часа."
+      ]
+    },
+    {
+      "id": "es-a1-12-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Son la una.",
+      "answers": [
+        "Es la una."
+      ],
+      "explanation": "Для одного часа нужна единственная форма es la una; для остальных — son las.",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Son la una.",
+        "Es la una."
+      ]
+    },
+    {
+      "id": "es-a1-12-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [
+        "es:v013:12:p0",
+        "es:v013:12:p1",
+        "es:v013:12:p2",
+        "es:v013:12:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:12:p0",
+          "en": "¿Qué hora es?",
+          "ru": "Который час?"
+        },
+        {
+          "id": "es:v013:12:p1",
+          "en": "Son las dos y media.",
+          "ru": "Половина третьего."
+        },
+        {
+          "id": "es:v013:12:p2",
+          "en": "La clase empieza a las tres.",
+          "ru": "Урок начинается в три часа."
+        },
+        {
+          "id": "es:v013:12:p3",
+          "en": "Nos vemos a las cuatro.",
+          "ru": "Увидимся в четыре."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-12-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Который час?",
+      "answers": [
+        "¿Qué hora es?"
+      ],
+      "explanation": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [
+        "es:v013:12:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "¿Qué hora es?",
+        "meaning": "Который час?"
+      }
+    },
+    {
+      "id": "es-a1-12-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Увидимся в четыре.",
+      "answers": [
+        "Nos vemos a las cuatro."
+      ],
+      "explanation": "Nos vemos a las cuatro. — Увидимся в четыре.",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [
+        "es:v013:12:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Nos vemos a las cuatro."
+    },
+    {
+      "id": "es-a1-12-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Son las dos y media.»?",
+      "answers": [
+        "Половина третьего."
+      ],
+      "explanation": "Son las dos y media. — Половина третьего.",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [
+        "es:v013:12:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Который час?",
+        "Половина третьего.",
+        "Увидимся в четыре."
+      ]
+    },
+    {
+      "id": "es-a1-12-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я пью кофе без сахара.",
+      "answers": [
+        "Bebo café sin azúcar."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Bebo café sin azúcar. — Я пью кофе без сахара.",
+      "hint": "¿Qué hora es? — который час? Es la una — час; son las dos — два часа. Y media — половина после названного часа: las dos y media — 14:30. Для времени события используем a las: a las tres.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Como arroz con verduras.",
+        "Bebo café sin azúcar.",
+        "¿Comes pescado?",
+        "No como carne."
+      ]
+    }
+  ]
+}

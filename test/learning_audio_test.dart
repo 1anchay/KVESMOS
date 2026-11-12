@@ -250,14 +250,17 @@ void main() {
     },
   );
   test(
-    'eight original earcons are small PCM files and preferences tolerate bad input',
+    'eleven original earcons are sub-second PCM files and preferences tolerate bad input',
     () {
       for (final effect in SoundEffect.values) {
         final bytes = File(
           'assets/audio/effects/${effect.name}.wav',
         ).readAsBytesSync();
         expect(String.fromCharCodes(bytes.take(4)), 'RIFF');
-        expect(bytes.length, lessThan(30000));
+        expect(
+          bytes.length,
+          lessThan(44144),
+        ); // <1 second, mono 22050 Hz PCM16.
         expect(bytes.length, greaterThan(1000));
       }
       expect(AudioPreferences.decode('broken').speech, true);

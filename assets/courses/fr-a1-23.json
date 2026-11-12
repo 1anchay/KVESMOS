@@ -1,0 +1,290 @@
+{
+  "id": "fr-a1-23",
+  "title": "На ресепшене",
+  "topic": "Номер и вещи",
+  "order": 22,
+  "objective": "Уточнить завтрак и время выезда.",
+  "guide": "Compris означает «включённый». À quelle heure…? спрашивает, когда происходит событие; avant + время — «до».",
+  "vocabulary": [
+    {
+      "id": "fr:v015:23:p0",
+      "en": "J'ai une réservation pour deux nuits.",
+      "ru": "У меня бронь на две ночи."
+    },
+    {
+      "id": "fr:v015:23:p1",
+      "en": "Le petit-déjeuner est compris ?",
+      "ru": "Завтрак включён?"
+    },
+    {
+      "id": "fr:v015:23:p2",
+      "en": "À quelle heure faut-il quitter la chambre ?",
+      "ru": "Во сколько нужно освободить номер?"
+    },
+    {
+      "id": "fr:v015:23:p3",
+      "en": "Nous voudrions une chambre calme.",
+      "ru": "Мы хотели бы тихий номер."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "На ресепшене",
+      "phrase": "J'ai une réservation pour deux nuits.",
+      "translation": "У меня бронь на две ночи.",
+      "explanation": "Compris означает «включённый». À quelle heure…? спрашивает, когда происходит событие; avant + время — «до»."
+    },
+    {
+      "character": "miko",
+      "title": "На ресепшене",
+      "phrase": "Le petit-déjeuner est compris ?",
+      "translation": "Завтрак включён?",
+      "explanation": "Le petit-déjeuner est compris ? — Завтрак включён?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "На ресепшене",
+      "phrase": "À quelle heure faut-il quitter la chambre ?",
+      "translation": "Во сколько нужно освободить номер?",
+      "explanation": "À quelle heure faut-il quitter la chambre ? — Во сколько нужно освободить номер?"
+    },
+    {
+      "character": "orbi",
+      "title": "На ресепшене",
+      "phrase": "Nous voudrions une chambre calme.",
+      "translation": "Мы хотели бы тихий номер.",
+      "explanation": "Nous voudrions une chambre calme. — Мы хотели бы тихий номер."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "J'ai une réservation pour deux nuits.",
+      "translation": "У меня бронь на две ночи.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "У меня бронь на две ночи.",
+      "options": [
+        "Во сколько нужно освободить номер?",
+        "У меня бронь на две ночи.",
+        "Мы хотели бы тихий номер."
+      ],
+      "explanation": "Compris означает «включённый». À quelle heure…? спрашивает, когда происходит событие; avant + время — «до»."
+    },
+    {
+      "id": "apply",
+      "phrase": "Le petit-déjeuner est compris ?",
+      "translation": "Завтрак включён?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Le petit-déjeuner est compris ?",
+      "tokens": [
+        "Le",
+        "petit-déjeuner",
+        "est",
+        "compris",
+        "?"
+      ],
+      "character": "miko",
+      "explanation": "Le petit-déjeuner est compris ? — Завтрак включён?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-23-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Бронь на имя Мартен.",
+      "answers": [
+        "La réservation est au nom de Martin."
+      ],
+      "explanation": "La réservation est au nom de Martin. — Бронь на имя Мартен.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Je voudrais réserver une table pour deux.",
+        "Vous avez une table libre à vingt heures ?",
+        "La réservation est au nom de Martin.",
+        "Nous préférons une table près de la fenêtre."
+      ]
+    },
+    {
+      "id": "fr-a1-23-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «У меня бронь на две ночи.»?",
+      "answers": [
+        "J'ai une réservation pour deux nuits."
+      ],
+      "explanation": "J'ai une réservation pour deux nuits. — У меня бронь на две ночи.",
+      "wordIds": [
+        "fr:v015:23:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Le petit-déjeuner est compris ?",
+        "Nous voudrions une chambre calme.",
+        "J'ai une réservation pour deux nuits."
+      ],
+      "hint": "J'ai une réservation pour deux nuits. — У меня бронь на две ночи."
+    },
+    {
+      "id": "fr-a1-23-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Завтрак включён?",
+      "answers": [
+        "Le petit-déjeuner est compris ?"
+      ],
+      "explanation": "Compris означает «включённый». À quelle heure…? спрашивает, когда происходит событие; avant + время — «до».",
+      "wordIds": [
+        "fr:v015:23:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Le",
+        "petit-déjeuner",
+        "est",
+        "compris",
+        "?"
+      ],
+      "hint": "Le petit-déjeuner est compris ? — Завтрак включён?"
+    },
+    {
+      "id": "fr-a1-23-e04",
+      "type": "dialogue",
+      "prompt": "До какого времени нужно освободить номер?",
+      "answers": [
+        "До одиннадцати."
+      ],
+      "explanation": "В диалоге: À quelle heure faut-il quitter la chambre ? / Avant onze heures. Le petit-déjeuner est servi jusqu'à dix heures. Поэтому: До одиннадцати.",
+      "wordIds": [
+        "fr:v015:23:p0",
+        "fr:v015:23:p1",
+        "fr:v015:23:p2",
+        "fr:v015:23:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: À quelle heure faut-il quitter la chambre ?\nМико: Avant onze heures. Le petit-déjeuner est servi jusqu'à dix heures.",
+      "options": [
+        "До десяти.",
+        "До полудня.",
+        "До одиннадцати."
+      ]
+    },
+    {
+      "id": "fr-a1-23-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Во сколько нужно освободить номер?"
+      ],
+      "explanation": "À quelle heure faut-il quitter la chambre ? — Во сколько нужно освободить номер?",
+      "wordIds": [
+        "fr:v015:23:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "À quelle heure faut-il quitter la chambre ?",
+      "options": [
+        "У меня бронь на две ночи.",
+        "Во сколько нужно освободить номер?",
+        "Завтрак включён?"
+      ],
+      "hint": "À quelle heure faut-il quitter la chambre ? — Во сколько нужно освободить номер?"
+    },
+    {
+      "id": "fr-a1-23-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v015:23:p0",
+        "fr:v015:23:p1",
+        "fr:v015:23:p2",
+        "fr:v015:23:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v015:23:p0",
+          "en": "J'ai une réservation pour deux nuits.",
+          "ru": "У меня бронь на две ночи."
+        },
+        {
+          "id": "fr:v015:23:p1",
+          "en": "Le petit-déjeuner est compris ?",
+          "ru": "Завтрак включён?"
+        },
+        {
+          "id": "fr:v015:23:p2",
+          "en": "À quelle heure faut-il quitter la chambre ?",
+          "ru": "Во сколько нужно освободить номер?"
+        },
+        {
+          "id": "fr:v015:23:p3",
+          "en": "Nous voudrions une chambre calme.",
+          "ru": "Мы хотели бы тихий номер."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-23-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Nous voudrions un chambre calme.",
+      "answers": [
+        "Nous voudrions une chambre calme."
+      ],
+      "explanation": "Chambre — женского рода, поэтому une.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Nous voudrions un chambre calme.",
+        "Nous voudrions une chambre calme."
+      ],
+      "hint": "Compris означает «включённый». À quelle heure…? спрашивает, когда происходит событие; avant + время — «до»."
+    },
+    {
+      "id": "fr-a1-23-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы хотели бы тихий номер.». Можно написать вместо микрофона.",
+      "answers": [
+        "Nous voudrions une chambre calme."
+      ],
+      "explanation": "Nous voudrions une chambre calme. — Мы хотели бы тихий номер.",
+      "wordIds": [
+        "fr:v015:23:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Nous voudrions une chambre calme.",
+      "recall": {
+        "phrase": "Nous voudrions une chambre calme.",
+        "meaning": "Мы хотели бы тихий номер."
+      }
+    },
+    {
+      "id": "fr-a1-23-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: У меня бронь на две ночи.",
+      "answers": [
+        "J'ai une réservation pour deux nuits."
+      ],
+      "explanation": "Compris означает «включённый». À quelle heure…? спрашивает, когда происходит событие; avant + время — «до».",
+      "wordIds": [
+        "fr:v015:23:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "J'ai une réservation pour deux nuits.",
+        "meaning": "У меня бронь на две ночи."
+      }
+    }
+  ]
+}

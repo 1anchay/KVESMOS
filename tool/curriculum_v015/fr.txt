@@ -1,0 +1,108 @@
+##
+Обменять одежду|Попросить обмен и подобрать другой размер.|Je voudrais + инфинитив — вежливая просьба. Trop означает «слишком», а plus grande — «больше» с согласованием по женскому роду.
+Je voudrais échanger cette chemise.~Я хотел бы обменять эту рубашку.
+Cette chemise est trop petite.~Эта рубашка слишком маленькая.
+Vous avez une taille plus grande ?~У вас есть размер побольше?
+J'ai gardé le ticket de caisse.~Я сохранил кассовый чек.
+Je voudrais échanger cette chemise. Elle est trop petite. / Bien sûr. Vous avez le ticket de caisse ?
+Почему покупатель хочет обменять рубашку?|Она слишком маленькая.|Она слишком большая.|Она слишком дорогая.
+Cette chemise est trop petit.~Cette chemise est trop petite.~Chemise — женского рода: petite получает -e.
+##
+Столик на двоих|Забронировать столик и проверить время.|Pour deux personnes — на двоих. À + время обозначает час встречи, au nom de — имя в бронировании.
+Je voudrais réserver une table pour deux.~Я хотел бы забронировать столик на двоих.
+Vous avez une table libre à vingt heures ?~У вас есть свободный столик в двадцать часов?
+La réservation est au nom de Martin.~Бронь на имя Мартен.
+Nous préférons une table près de la fenêtre.~Мы предпочитаем столик у окна.
+Vous avez une table libre à vingt heures ? / À vingt heures, non. Mais nous avons une table à vingt et une heures.
+На какое время предлагают столик?|На двадцать один час.|На двадцать часов.|На девятнадцать часов.
+Je voudrais réserve une table.~Je voudrais réserver une table.~После voudrais нужен инфинитив réserver.
+##
+На ресепшене|Уточнить завтрак и время выезда.|Compris означает «включённый». À quelle heure…? спрашивает, когда происходит событие; avant + время — «до».
+J'ai une réservation pour deux nuits.~У меня бронь на две ночи.
+Le petit-déjeuner est compris ?~Завтрак включён?
+À quelle heure faut-il quitter la chambre ?~Во сколько нужно освободить номер?
+Nous voudrions une chambre calme.~Мы хотели бы тихий номер.
+À quelle heure faut-il quitter la chambre ? / Avant onze heures. Le petit-déjeuner est servi jusqu'à dix heures.
+До какого времени нужно освободить номер?|До одиннадцати.|До десяти.|До полудня.
+Nous voudrions un chambre calme.~Nous voudrions une chambre calme.~Chambre — женского рода, поэтому une.
+##
+Этот, эта и эти|Выбирать указательное слово по роду и числу.|Ce — мужской род перед согласной, cet — перед гласной или немым h, cette — женский род, ces — множественное число.
+Ce train va à Lyon.~Этот поезд идёт в Лион.
+Cette valise est légère.~Этот чемодан лёгкий.
+Cet hôtel est près de la gare.~Эта гостиница рядом с вокзалом.
+Ces billets sont pour demain.~Эти билеты на завтра.
+Ces billets sont pour aujourd'hui ? / Non, ils sont pour demain. Ce train part à neuf heures.
+На какой день билеты?|На завтра.|На сегодня.|На вчера.
+Ce hôtel est près de la gare.~Cet hôtel est près de la gare.~Перед немым h в hôtel используется cet, а не ce.
+##
+Вчерашние дела|Рассказать о завершённых действиях с avoir.|Passé composé: avoir в настоящем + причастие. Для глаголов на -er: visiter → visité, acheter → acheté.
+Hier, j'ai visité le musée.~Вчера я посетил музей.
+Nous avons acheté du pain.~Мы купили хлеб.
+Tu as terminé ton travail ?~Ты закончил свою работу?
+Elle a téléphoné à sa sœur.~Она позвонила своей сестре.
+Tu as terminé ton travail ? / Oui, ce matin. Ensuite, j'ai visité le musée.
+Что произошло после окончания работы?|Посещение музея.|Покупка хлеба.|Звонок сестре.
+Nous avons acheter du pain.~Nous avons acheté du pain.~В Passé composé нужен participe passé acheté, а не инфинитив acheter.
+##
+Увидел и сделал|Использовать частые неправильные причастия.|Prendre → pris, faire → fait, voir → vu. Вспомогательный avoir остаётся спрягаемым: j'ai, nous avons.
+J'ai pris le train de huit heures.~Я сел на восьмичасовой поезд.
+Nous avons fait les courses.~Мы сходили за покупками.
+Tu as vu ce film ?~Ты видел этот фильм?
+Elle a lu ton message.~Она прочитала твоё сообщение.
+Tu as vu ce film hier ? / Non, j'ai fait les courses, puis j'ai lu ton message.
+Что собеседник сделал сначала?|Сходил за покупками.|Посмотрел фильм.|Прочитал сообщение.
+J'ai prend le train.~J'ai pris le train.~После ai требуется причастие pris от prendre.
+##
+Приехали и вернулись|Использовать être в рассказе о перемещении.|Aller, arriver и rentrer здесь образуют Passé composé с être. Причастие согласуется с подлежащим: elle est arrivée, ils sont arrivés.
+Elle est arrivée hier soir.~Она приехала вчера вечером.
+Ils sont allés à la plage.~Они ходили на пляж.
+Il est rentré à la maison.~Он вернулся домой.
+Elles sont parties tôt.~Они уехали рано.
+Léa est arrivée ce matin ? / Non, elle est arrivée hier soir. Elle est allée à l'hôtel.
+Когда приехала Леа?|Вчера вечером.|Сегодня утром.|Вчера утром.
+Elle est arrivé hier soir.~Elle est arrivée hier soir.~С être причастие согласуется с elle: arrivée с -e.
+##
+Что случилось вчера|Спросить о прошлом и отрицать завершённое действие.|В Passé composé отрицание ne… pas окружает вспомогательный глагол: je n'ai pas compris. Причастие стоит после pas.
+Qu'est-ce que tu as fait hier ?~Что ты делал вчера?
+Je n'ai pas compris la question.~Я не понял вопрос.
+Vous avez trouvé vos clés ?~Вы нашли свои ключи?
+Elle n'est pas venue ce matin.~Она не пришла сегодня утром.
+Vous avez trouvé vos clés ? / Oui, elles étaient dans mon sac. Je les ai trouvées ce matin.
+Где оказались ключи?|В сумке.|В гостинице.|На вокзале.
+Je n'ai compris pas la question.~Je n'ai pas compris la question.~Pas ставится после вспомогательного ai, перед compris.
+##
+Каким всё было|Описать прошлое состояние через étais и avais.|Imparfait задаёт фон и привычное состояние: j'étais — я был, j'avais — у меня было. Это не отдельное завершённое событие.
+Quand j'étais petit, j'habitais à Nice.~Когда я был маленьким, я жил в Ницце.
+Nous avions un petit jardin.~У нас был маленький сад.
+Il faisait froid ce jour-là.~В тот день было холодно.
+J'avais beaucoup de temps libre.~У меня было много свободного времени.
+Tu habitais à Nice quand tu étais petit ? / Oui, nous avions une maison avec un petit jardin.
+Что было у дома собеседника?|Маленький сад.|Большой бассейн.|Железнодорожная станция.
+Nous avait un petit jardin.~Nous avions un petit jardin.~С nous в Imparfait используется avions; avait относится к il/elle/on.
+##
+Сравнить варианты|Выбрать удобный вариант с сравнением.|Plus… que — «более… чем», moins… que — «менее… чем», aussi… que — «такой же… как». Прилагательное согласуется с предметом.
+Ce trajet est plus court que l'autre.~Этот маршрут короче другого.
+Cette chambre est moins chère.~Этот номер дешевле.
+Le train est aussi rapide que le bus.~Поезд такой же быстрый, как автобус.
+Cette valise est plus légère que la mienne.~Этот чемодан легче моего.
+Tu préfères quelle chambre ? / Celle-ci. Elle est moins chère et plus calme que l'autre.
+Почему собеседник выбирает этот номер?|Он дешевле и тише.|Он больше и дороже.|Он ближе к вокзалу.
+Ce trajet est plus court de l'autre.~Ce trajet est plus court que l'autre.~В сравнении после plus + прилагательное используется que.
+##
+Зачем и почему|Различать цель и причину действия.|Pour + инфинитив выражает цель: pour apprendre. Parce que + предложение объясняет причину: parce que j'aime…
+Je voyage pour découvrir de nouveaux endroits.~Я путешествую, чтобы открывать новые места.
+Je reste ici parce qu'il pleut.~Я остаюсь здесь, потому что идёт дождь.
+Nous apprenons le français pour parler avec nos amis.~Мы учим французский, чтобы говорить с друзьями.
+Elle prend le train parce que c'est pratique.~Она едет на поезде, потому что это удобно.
+Pourquoi tu apprends le français ? / Pour parler avec mes amis. Ils habitent à Lyon.
+Зачем собеседник учит французский?|Чтобы говорить с друзьями.|Чтобы купить билеты.|Чтобы работать в гостинице.
+Je reste ici pour il pleut.~Je reste ici parce qu'il pleut.~Причина с подлежащим и глаголом вводится через parce que. Pour здесь потребовал бы инфинитив и обозначал бы цель.
+##
+Сообщение друзьям|Составить короткий рассказ о поездке и плане.|Объединяем Passé composé для событий, imparfait для погоды и aller + инфинитив для ближайшего плана.
+Léa et moi, nous sommes arrivées hier.~Мы с Леа приехали вчера.
+Il faisait beau à notre arrivée.~Когда мы приехали, погода была хорошая.
+Nous avons déjà visité le centre-ville.~Мы уже осмотрели центр города.
+Demain, nous allons prendre le bateau.~Завтра мы собираемся отправиться на лодке.
+Vous avez déjà visité le centre-ville ? / Oui. Il faisait beau aujourd'hui. Demain, nous allons prendre le bateau.
+Что путешественницы планируют на завтра?|Поездку на лодке.|Посещение центра города.|Возвращение домой.
+Nous allons prenons le bateau.~Nous allons prendre le bateau.~После allons для ближайшего плана нужен инфинитив prendre.

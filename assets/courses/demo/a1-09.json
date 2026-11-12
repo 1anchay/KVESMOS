@@ -1,0 +1,245 @@
+{
+  "id": "a1-09",
+  "title": "Время обеда",
+  "topic": "Еда и напитки",
+  "order": 8,
+  "vocabulary": [
+    {
+      "id": "en:rice",
+      "en": "rice",
+      "ru": "рис"
+    },
+    {
+      "id": "en:bread",
+      "en": "bread",
+      "ru": "хлеб"
+    },
+    {
+      "id": "en:cheese",
+      "en": "cheese",
+      "ru": "сыр"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Рассказать, какая еда нравится, и спросить друга.",
+  "guide": "Rice — рис, bread — хлеб, cheese — сыр. I like… означает «мне нравится…». Перед этими названиями еды не ставим a. Do you like…? — вопрос о предпочтении. Короткие ответы: Yes, I do. / No, I don’t. Для отрицания добавь do not перед like. Don’t — сокращение do not; оба варианта допустимы.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Обед на станции",
+      "phrase": "I like rice.",
+      "translation": "Мне нравится рис.",
+      "explanation": "Rice — рис, bread — хлеб, cheese — сыр. I like… означает «мне нравится…». Перед этими названиями еды не ставим a."
+    },
+    {
+      "character": "miko",
+      "title": "Вопрос другу",
+      "phrase": "Do you like cheese?",
+      "translation": "Тебе нравится сыр?",
+      "explanation": "Do you like…? — вопрос о предпочтении. Короткие ответы: Yes, I do. / No, I don’t."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что не нравится",
+      "phrase": "I do not like bread.",
+      "translation": "Мне не нравится хлеб.",
+      "explanation": "Для отрицания добавь do not перед like. Don’t — сокращение do not; оба варианта допустимы."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-09-v3-01",
+      "type": "choice",
+      "prompt": "Орби любит рис. Выбери его реплику.",
+      "answers": [
+        "I like rice."
+      ],
+      "explanation": "I like — мне нравится; rice — рис.",
+      "hint": "I like — мне нравится; rice — рис.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:rice"
+      ],
+      "options": [
+        "I like rice.",
+        "I like cheese.",
+        "I do not like rice."
+      ]
+    },
+    {
+      "id": "a1-09-v3-02",
+      "type": "pairs",
+      "prompt": "Собери подписи для обеда.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Rice — рис, bread — хлеб, cheese — сыр.",
+      "hint": "Rice — рис, bread — хлеб, cheese — сыр.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:rice",
+        "en:bread",
+        "en:cheese"
+      ],
+      "pairs": [
+        {
+          "id": "en:rice",
+          "en": "rice",
+          "ru": "рис"
+        },
+        {
+          "id": "en:bread",
+          "en": "bread",
+          "ru": "хлеб"
+        },
+        {
+          "id": "en:cheese",
+          "en": "cheese",
+          "ru": "сыр"
+        }
+      ]
+    },
+    {
+      "id": "a1-09-v3-03",
+      "type": "order",
+      "prompt": "Спроси: «Тебе нравится сыр?»",
+      "answers": [
+        "Do you like cheese"
+      ],
+      "explanation": "Вопрос начинается с Do you, затем like.",
+      "hint": "Вопрос начинается с Do you, затем like.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:cheese"
+      ],
+      "tokens": [
+        "Do",
+        "you",
+        "like",
+        "cheese"
+      ]
+    },
+    {
+      "id": "a1-09-v3-04",
+      "type": "gap",
+      "prompt": "I do ___ like bread.",
+      "answers": [
+        "not"
+      ],
+      "explanation": "Do not делает предложение отрицательным.",
+      "hint": "Do not делает предложение отрицательным.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:bread"
+      ]
+    },
+    {
+      "id": "a1-09-v3-05",
+      "type": "listen",
+      "prompt": "Что нравится Мико?",
+      "answers": [
+        "bread"
+      ],
+      "explanation": "В записи I like bread — мне нравится хлеб.",
+      "hint": "В записи I like bread — мне нравится хлеб.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:bread"
+      ],
+      "options": [
+        "bread",
+        "rice",
+        "cheese"
+      ],
+      "audio": "I like bread."
+    },
+    {
+      "id": "a1-09-v3-06",
+      "type": "correct",
+      "prompt": "Исправь порядок: You do like rice?",
+      "answers": [
+        "Do you like rice?"
+      ],
+      "explanation": "В нейтральном вопросе Do ставим перед you.",
+      "hint": "В нейтральном вопросе Do ставим перед you.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:rice"
+      ]
+    },
+    {
+      "id": "a1-09-v3-07",
+      "type": "translate",
+      "prompt": "Скажи: «Мне не нравится сыр».",
+      "answers": [
+        "I do not like cheese.",
+        "I don’t like cheese."
+      ],
+      "explanation": "Do not или don’t стоит перед like.",
+      "hint": "Do not или don’t стоит перед like.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:cheese"
+      ]
+    },
+    {
+      "id": "a1-09-v3-08",
+      "type": "dialogue",
+      "prompt": "Ответь положительно на вопрос Орби.",
+      "answers": [
+        "Yes, I do."
+      ],
+      "explanation": "На Do you like…? отвечаем Yes, I do.",
+      "hint": "На Do you like…? отвечаем Yes, I do.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:rice"
+      ],
+      "options": [
+        "Yes, I do.",
+        "No, I don’t.",
+        "I am ten."
+      ],
+      "scene": "Орби: Do you like rice?\nТы: …"
+    },
+    {
+      "id": "a1-09-v3-09",
+      "type": "review",
+      "prompt": "Вспомни, как представить друга.",
+      "answers": [
+        "This is my friend."
+      ],
+      "explanation": "Друг — friend. This is my friend.",
+      "hint": "Друг — friend. This is my friend.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:friend"
+      ]
+    },
+    {
+      "id": "a1-09-v3-10",
+      "type": "speak",
+      "prompt": "Скажи, что тебе нравится сыр.",
+      "answers": [
+        "I like cheese."
+      ],
+      "explanation": "Не добавляй am: I like, а не I am like.",
+      "hint": "Не добавляй am: I like, а не I am like.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:cheese"
+      ],
+      "audio": "I like cheese."
+    }
+  ]
+}

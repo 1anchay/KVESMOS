@@ -1,0 +1,108 @@
+##
+Вернуть покупку|Объяснить причину возврата и попросить другой размер.|Could I…? — вежливая просьба. Too small означает «слишком маленький», а не просто small.
+Could I return this jacket?~Можно вернуть эту куртку?
+This jacket is too small.~Эта куртка слишком маленькая.
+Do you have a larger size?~У вас есть размер побольше?
+I still have the receipt.~У меня ещё есть чек.
+Could I return this jacket? It's too small. / Of course. Do you have the receipt?
+Что нужно показать для возврата?|Чек.|Билет.|Паспорт друга.
+This jacket are too small.~This jacket is too small.~Одна куртка — this jacket is. Are используется с множественным числом.
+##
+Где моя посылка|Уточнить срок доставки и сообщить о задержке.|Hasn't arrived yet — «ещё не пришла»: важен результат к настоящему моменту. Arrive здесь употребляется с has, а не is.
+My parcel hasn't arrived yet.~Моя посылка ещё не пришла.
+When will it arrive?~Когда она придёт?
+The address is correct.~Адрес правильный.
+Could you check the tracking number?~Не могли бы вы проверить номер отслеживания?
+My parcel hasn't arrived yet. / I'm sorry. It will arrive tomorrow.
+Когда обещают доставить посылку?|Завтра.|Сегодня утром.|Через месяц.
+My parcel haven't arrived yet.~My parcel hasn't arrived yet.~Parcel — единственное число, поэтому hasn't. Yet обычно стоит в конце вопроса или отрицания.
+##
+На стойке гостиницы|Заселиться и уточнить условия проживания.|A reservation under the name… — бронь на имя. Is… included? помогает узнать, входит ли услуга в стоимость.
+I have a reservation under the name Lee.~У меня бронь на имя Ли.
+Is breakfast included?~Завтрак включён?
+What time is check-out?~Во сколько нужно выехать?
+Could I have a quiet room?~Можно мне тихий номер?
+Is breakfast included? / Yes. Breakfast starts at seven, and check-out is at eleven.
+До какого времени нужно выехать?|До одиннадцати.|До семи.|До полуночи.
+Is breakfast include?~Is breakfast included?~В вопросе об уже включённой услуге нужна форма included.
+##
+Объявление в аэропорту|Понять изменение выхода на посадку.|Has changed сообщает о произошедшем изменении, важном сейчас. Go to + место указывает направление.
+The gate has changed.~Выход на посадку изменился.
+Please go to gate twelve.~Пожалуйста, пройдите к выходу двенадцать.
+Boarding starts in ten minutes.~Посадка начинается через десять минут.
+Our flight is delayed.~Наш рейс задерживается.
+Our flight is delayed. Has the gate changed? / Yes. Please go to gate twelve.
+Что нужно сделать пассажирам?|Пройти к выходу двенадцать.|Забрать багаж.|Уйти из аэропорта.
+Boarding start in ten minutes.~Boarding starts in ten minutes.~Boarding — единственное число: в Present Simple добавляем -s к starts.
+##
+Записаться на приём|Выбрать удобное время записи.|I'd like to + инфинитив — вежливое пожелание. Available означает «доступный, свободный» в контексте времени.
+I'd like to make an appointment.~Я хотел бы записаться на приём.
+Is Tuesday morning available?~Есть свободное время во вторник утром?
+That time works for me.~Это время мне подходит.
+Could we move it to Friday?~Не могли бы мы перенести это на пятницу?
+Is Tuesday morning available? / No, but we have a time on Friday. Does that work for you?
+Какой день предлагают вместо вторника?|Пятницу.|Понедельник.|Среду.
+I'd like make an appointment.~I'd like to make an appointment.~После I'd like перед глаголом нужно to.
+##
+Как давно это длится|Сообщить длительность состояния без постановки диагноза.|For + период: for two days. Since + точка начала: since Monday. I've had связывает прошлое с настоящим.
+I've had a headache for two days.~У меня болит голова уже два дня.
+I've felt tired since Monday.~Я чувствую усталость с понедельника.
+How long have you felt like this?~Как давно вы так себя чувствуете?
+I'd like to speak to a doctor.~Я хотел бы поговорить с врачом.
+How long have you felt like this? / I've felt tired since Monday.
+С какого дня собеседник чувствует усталость?|С понедельника.|Со вторника.|С пятницы.
+I've had a headache since two days.~I've had a headache for two days.~Two days — длительность, поэтому for. Since требует точки начала, например Monday.
+##
+Ты когда-нибудь был там|Спросить об опыте без указания точной даты.|Have you ever been…? спрашивает об опыте до настоящего момента. Been to — побывал и вернулся; точную дату здесь не называем.
+Have you ever been to London?~Ты когда-нибудь был в Лондоне?
+I've never tried surfing.~Я никогда не пробовал сёрфинг.
+I've been there twice.~Я был там дважды.
+We haven't visited that museum.~Мы не посещали тот музей.
+Have you ever been to London? / Yes, I've been there twice, but I haven't visited that museum.
+Что собеседник ещё не делал?|Не посещал тот музей.|Ни разу не был в Лондоне.|Не ездил туда дважды.
+Have you ever be to London?~Have you ever been to London?~После have в Present Perfect нужна третья форма: be → been.
+##
+Уже готово или ещё нет|Уточнить, завершено ли действие к текущему моменту.|Already обычно стоит после have/has, yet — в конце вопроса или отрицания. Just подчёркивает «только что».
+I've already packed my bag.~Я уже собрал сумку.
+Have you bought the tickets yet?~Ты уже купил билеты?
+We haven't booked a taxi yet.~Мы ещё не заказали такси.
+I've just sent the message.~Я только что отправил сообщение.
+Have you bought the tickets yet? / Yes, I've already bought them. We haven't booked a taxi yet.
+Что ещё нужно сделать?|Заказать такси.|Купить билеты.|Отменить поездку.
+We hasn't booked a taxi yet.~We haven't booked a taxi yet.~С we используется have; отрицание — haven't.
+##
+Какой именно предмет|Уточнить, о каком предмете идёт речь.|That или which связывает предмет с пояснением: the book that I bought. После определяемого предмета ставим уточняющую часть.
+This is the book that I bought yesterday.~Это книга, которую я купил вчера.
+I need a bag that is waterproof.~Мне нужна непромокаемая сумка.
+The café which opens early is nearby.~Кафе, которое открывается рано, находится рядом.
+Is this the key that you lost?~Это ключ, который ты потерял?
+Is this the key that you lost? / No, my key has a red label. This one has a blue label.
+Почему найденный ключ не подходит?|У потерянного ключа красная бирка.|Он слишком большой.|На нём нет бирки.
+I need a bag that are waterproof.~I need a bag that is waterproof.~That относится к одной сумке, поэтому is.
+##
+Когда это случилось|Связать действие в процессе с коротким событием.|Was/were + -ing задаёт фон в прошлом; Past Simple называет событие: I was cooking when you called.
+I was cooking when you called.~Я готовил, когда ты позвонил.
+We were waiting outside.~Мы ждали на улице.
+What were you doing at eight?~Что ты делал в восемь?
+It started raining while we were walking.~Начался дождь, пока мы гуляли.
+What were you doing at eight? / I was cooking when you called, so I couldn't answer.
+Почему собеседник не ответил на звонок?|Он готовил.|Он спал.|Он гулял под дождём.
+We was waiting outside.~We were waiting outside.~С we используется were. Was сочетается с I, he, she и it.
+##
+Передать просьбу|Попросить другого человека выполнить действие.|Ask someone to do something — попросить кого-то сделать что-то. Отрицательная просьба: ask someone not to…
+Could you ask Leo to call me?~Не могли бы вы попросить Лео позвонить мне?
+Please tell her to wait here.~Пожалуйста, скажите ей подождать здесь.
+I asked him not to be late.~Я попросил его не опаздывать.
+She asked us to bring water.~Она попросила нас принести воду.
+Could you ask Leo to call me? / Of course. Should I ask him to call this evening?
+Какую просьбу нужно передать Лео?|Позвонить собеседнику.|Принести воду.|Подождать на улице.
+Please tell her wait here.~Please tell her to wait here.~После tell her перед действием нужно to: tell her to wait.
+##
+Сообщение из поездки|Связно сообщить о прибытии, опыте и ближайшем плане.|Соединяем знакомые формы: arrived yesterday — законченное прошлое; have already… — результат сейчас; going to — план.
+We arrived yesterday afternoon.~Мы приехали вчера днём.
+We've already explored the old town.~Мы уже осмотрели старый город.
+The hotel is quieter than we expected.~В гостинице тише, чем мы ожидали.
+Tomorrow we're going to visit the museum.~Завтра мы собираемся посетить музей.
+Have you visited the museum yet? / Not yet. We explored the old town today, and we're going to visit the museum tomorrow.
+Куда путешественники собираются завтра?|В музей.|В старый город.|В аэропорт.
+We've already explore the old town.~We've already explored the old town.~После have нужна третья форма: у explore она образуется добавлением -d.

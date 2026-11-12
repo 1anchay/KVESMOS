@@ -1,0 +1,283 @@
+{
+  "id": "es-a1-05",
+  "title": "Моя семья",
+  "topic": "Моя семья",
+  "order": 4,
+  "objective": "Представить близких и сказать, как их зовут.",
+  "guide": "Mi — мой или моя перед одним предметом: mi madre, mi padre. Mis — перед несколькими: mis hermanos. Se llama… — его/её зовут… Hermano — брат, hermana — сестра.",
+  "vocabulary": [
+    {
+      "id": "es:madre",
+      "en": "madre",
+      "ru": "мама"
+    },
+    {
+      "id": "es:padre",
+      "en": "padre",
+      "ru": "папа"
+    },
+    {
+      "id": "es:hermana",
+      "en": "hermana",
+      "ru": "сестра"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-05-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Это моя мама.»",
+      "answers": [
+        "Esta es mi madre."
+      ],
+      "explanation": "Esta es mi madre. — Это моя мама.",
+      "hint": "Esta es mi madre. — Это моя мама.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Este es mi padre.",
+        "Esta es mi madre.",
+        "Tengo dos hermanos."
+      ]
+    },
+    {
+      "id": "es-a1-05-e02",
+      "type": "choice",
+      "prompt": "Что означает «Este es mi padre.»?",
+      "answers": [
+        "Это мой папа."
+      ],
+      "explanation": "Este es mi padre. — Это мой папа.",
+      "hint": "Este es mi padre. — Это мой папа.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Мою сестру зовут Ана.",
+        "У меня два брата.",
+        "Это мой папа."
+      ]
+    },
+    {
+      "id": "es-a1-05-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Мою сестру зовут Ана.»",
+      "answers": [
+        "Mi hermana se llama Ana"
+      ],
+      "explanation": "Mi hermana se llama Ana. — Мою сестру зовут Ана.",
+      "hint": "Mi hermana se llama Ana. — Мою сестру зовут Ана.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Mi",
+        "hermana",
+        "se",
+        "llama",
+        "Ana"
+      ]
+    },
+    {
+      "id": "es-a1-05-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "madre — мама; padre — папа; hermana — сестра",
+      "hint": "madre — мама; padre — папа; hermana — сестра",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "es:madre",
+          "en": "madre",
+          "ru": "мама"
+        },
+        {
+          "id": "es:padre",
+          "en": "padre",
+          "ru": "папа"
+        },
+        {
+          "id": "es:hermana",
+          "en": "hermana",
+          "ru": "сестра"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-05-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "У меня два брата."
+      ],
+      "explanation": "Tengo dos hermanos. — У меня два брата.",
+      "hint": "Tengo dos hermanos. — У меня два брата.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Tengo dos hermanos.",
+      "options": [
+        "Это моя мама.",
+        "У меня два брата.",
+        "Мою сестру зовут Ана."
+      ]
+    },
+    {
+      "id": "es-a1-05-e06",
+      "type": "gap",
+      "prompt": "Как зовут сестру: Mi hermana ___ llama Ana.",
+      "answers": [
+        "se"
+      ],
+      "explanation": "Mi — мой или моя перед одним предметом: mi madre, mi padre. Mis — перед несколькими: mis hermanos. Se llama… — его/её зовут… Hermano — брат, hermana — сестра.",
+      "hint": "Mi — мой или моя перед одним предметом: mi madre, mi padre. Mis — перед несколькими: mis hermanos. Se llama… — его/её зовут… Hermano — брат, hermana — сестра.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "me",
+        "se",
+        "te"
+      ]
+    },
+    {
+      "id": "es-a1-05-e07",
+      "type": "dialogue",
+      "prompt": "Орби: «¿Cómo se llama tu hermana?» Скажи, что её зовут Ана.",
+      "answers": [
+        "Se llama Ana."
+      ],
+      "explanation": "В этой ситуации подходит: Se llama Ana.",
+      "hint": "В этой ситуации подходит: Se llama Ana.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Me llamo Miko.",
+        "Este es mi padre.",
+        "Se llama Ana."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "es-a1-05-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Esta es mis madre.»",
+      "answers": [
+        "Esta es mi madre."
+      ],
+      "explanation": "Madre — один человек, поэтому mi; mis нужно перед множественным числом.",
+      "hint": "Madre — один человек, поэтому mi; mis нужно перед множественным числом.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "es-a1-05-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «У меня два брата.»",
+      "answers": [
+        "Tengo dos hermanos."
+      ],
+      "explanation": "Tengo dos hermanos. — У меня два брата.",
+      "hint": "Tengo dos hermanos. — У меня два брата.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "es-a1-05-e10",
+      "type": "review",
+      "prompt": "Финал: Орби: «¿Cómo se llama tu hermana?» Скажи, что её зовут Ана.",
+      "answers": [
+        "Se llama Ana."
+      ],
+      "explanation": "Теперь ты умеешь: представить близких и сказать, как их зовут.",
+      "hint": "Теперь ты умеешь: представить близких и сказать, как их зовут.",
+      "wordIds": [
+        "es:madre",
+        "es:padre",
+        "es:hermana"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Se llama Ana.",
+        "Este es mi padre.",
+        "Me llamo Miko."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Esta es mi madre.",
+      "translation": "Это моя мама.",
+      "explanation": "Ситуация: Представить близких и сказать, как их зовут. Esta es mi madre. — Это моя мама."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Este es mi padre.",
+      "translation": "Это мой папа.",
+      "explanation": "Ситуация: Представить близких и сказать, как их зовут. Este es mi padre. — Это мой папа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Mi hermana se llama Ana.",
+      "translation": "Мою сестру зовут Ана.",
+      "explanation": "Mi — мой или моя перед одним предметом: mi madre, mi padre. Mis — перед несколькими: mis hermanos. Se llama… — его/её зовут… Hermano — брат, hermana — сестра."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Tengo dos hermanos.",
+      "translation": "У меня два брата.",
+      "explanation": "Ситуация: Представить близких и сказать, как их зовут. Tengo dos hermanos. — У меня два брата."
+    }
+  ]
+}

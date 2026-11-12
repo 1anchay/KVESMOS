@@ -1,0 +1,281 @@
+{
+  "id": "en-a1-25",
+  "title": "Погода и планы",
+  "topic": "Погода и планы",
+  "order": 24,
+  "objective": "Описать погоду и выбрать подходящий план.",
+  "guide": "О погоде говорим с it: It is cold, It is sunny. It is raining — сейчас идёт дождь. В русском «холодно» без подлежащего, а в английском it обязательно.",
+  "vocabulary": [
+    {
+      "id": "en:sunny",
+      "en": "sunny",
+      "ru": "солнечно"
+    },
+    {
+      "id": "en:cold",
+      "en": "cold",
+      "ru": "холодно"
+    },
+    {
+      "id": "en:umbrella",
+      "en": "umbrella",
+      "ru": "зонт"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-25-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Сегодня солнечно.»",
+      "answers": [
+        "It is sunny today."
+      ],
+      "explanation": "It is sunny today. — Сегодня солнечно.",
+      "hint": "It is sunny today. — Сегодня солнечно.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "It is cold outside.",
+        "It is sunny today.",
+        "Let’s take an umbrella."
+      ]
+    },
+    {
+      "id": "en-a1-25-e02",
+      "type": "choice",
+      "prompt": "Что означает «It is cold outside.»?",
+      "answers": [
+        "На улице холодно."
+      ],
+      "explanation": "It is cold outside. — На улице холодно.",
+      "hint": "It is cold outside. — На улице холодно.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Идёт дождь.",
+        "Давай возьмём зонт.",
+        "На улице холодно."
+      ]
+    },
+    {
+      "id": "en-a1-25-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Идёт дождь.»",
+      "answers": [
+        "It is raining"
+      ],
+      "explanation": "It is raining. — Идёт дождь.",
+      "hint": "It is raining. — Идёт дождь.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "It",
+        "is",
+        "raining"
+      ]
+    },
+    {
+      "id": "en-a1-25-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "sunny — солнечно; cold — холодно; umbrella — зонт",
+      "hint": "sunny — солнечно; cold — холодно; umbrella — зонт",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:sunny",
+          "en": "sunny",
+          "ru": "солнечно"
+        },
+        {
+          "id": "en:cold",
+          "en": "cold",
+          "ru": "холодно"
+        },
+        {
+          "id": "en:umbrella",
+          "en": "umbrella",
+          "ru": "зонт"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-25-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Давай возьмём зонт."
+      ],
+      "explanation": "Let’s take an umbrella. — Давай возьмём зонт.",
+      "hint": "Let’s take an umbrella. — Давай возьмём зонт.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Let’s take an umbrella.",
+      "options": [
+        "Сегодня солнечно.",
+        "Давай возьмём зонт.",
+        "Идёт дождь."
+      ]
+    },
+    {
+      "id": "en-a1-25-e06",
+      "type": "gap",
+      "prompt": "Погода за окном: ___ is cold outside.",
+      "answers": [
+        "It"
+      ],
+      "explanation": "О погоде говорим с it: It is cold, It is sunny. It is raining — сейчас идёт дождь. В русском «холодно» без подлежащего, а в английском it обязательно.",
+      "hint": "О погоде говорим с it: It is cold, It is sunny. It is raining — сейчас идёт дождь. В русском «холодно» без подлежащего, а в английском it обязательно.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "I",
+        "It",
+        "They"
+      ]
+    },
+    {
+      "id": "en-a1-25-e07",
+      "type": "dialogue",
+      "prompt": "Мико говорит: «It is raining.» Предложи взять зонт.",
+      "answers": [
+        "Let’s take an umbrella."
+      ],
+      "explanation": "В этой ситуации подходит: Let’s take an umbrella.",
+      "hint": "В этой ситуации подходит: Let’s take an umbrella.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "It is sunny today.",
+        "This is my bedroom.",
+        "Let’s take an umbrella."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "en-a1-25-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Is sunny today.»",
+      "answers": [
+        "It is sunny today."
+      ],
+      "explanation": "Для описания погоды в английском нужно подлежащее it.",
+      "hint": "Для описания погоды в английском нужно подлежащее it.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "en-a1-25-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Давай возьмём зонт.»",
+      "answers": [
+        "Let’s take an umbrella."
+      ],
+      "explanation": "Let’s take an umbrella. — Давай возьмём зонт.",
+      "hint": "Let’s take an umbrella. — Давай возьмём зонт.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "en-a1-25-e10",
+      "type": "review",
+      "prompt": "Финал: Мико говорит: «It is raining.» Предложи взять зонт.",
+      "answers": [
+        "Let’s take an umbrella."
+      ],
+      "explanation": "Теперь ты умеешь: описать погоду и выбрать подходящий план.",
+      "hint": "Теперь ты умеешь: описать погоду и выбрать подходящий план.",
+      "wordIds": [
+        "en:sunny",
+        "en:cold",
+        "en:umbrella"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Let’s take an umbrella.",
+        "This is my bedroom.",
+        "It is sunny today."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "It is sunny today.",
+      "translation": "Сегодня солнечно.",
+      "explanation": "Ситуация: Описать погоду и выбрать подходящий план. It is sunny today. — Сегодня солнечно."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "It is cold outside.",
+      "translation": "На улице холодно.",
+      "explanation": "Ситуация: Описать погоду и выбрать подходящий план. It is cold outside. — На улице холодно."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "It is raining.",
+      "translation": "Идёт дождь.",
+      "explanation": "О погоде говорим с it: It is cold, It is sunny. It is raining — сейчас идёт дождь. В русском «холодно» без подлежащего, а в английском it обязательно."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Let’s take an umbrella.",
+      "translation": "Давай возьмём зонт.",
+      "explanation": "Ситуация: Описать погоду и выбрать подходящий план. Let’s take an umbrella. — Давай возьмём зонт."
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "id": "fr-a1-25",
+  "title": "Вчерашние дела",
+  "topic": "Прошлое с avoir",
+  "order": 24,
+  "objective": "Рассказать о завершённых действиях с avoir.",
+  "guide": "Passé composé: avoir в настоящем + причастие. Для глаголов на -er: visiter → visité, acheter → acheté.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:25:p0",
+      "en": "Hier, j'ai visité le musée.",
+      "ru": "Вчера я посетил музей."
+    },
+    {
+      "id": "fr:v015:25:p1",
+      "en": "Nous avons acheté du pain.",
+      "ru": "Мы купили хлеб."
+    },
+    {
+      "id": "fr:v015:25:p2",
+      "en": "Tu as terminé ton travail ?",
+      "ru": "Ты закончил свою работу?"
+    },
+    {
+      "id": "fr:v015:25:p3",
+      "en": "Elle a téléphoné à sa sœur.",
+      "ru": "Она позвонила своей сестре."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Вчерашние дела",
+      "phrase": "Hier, j'ai visité le musée.",
+      "translation": "Вчера я посетил музей.",
+      "explanation": "Passé composé: avoir в настоящем + причастие. Для глаголов на -er: visiter → visité, acheter → acheté."
+    },
+    {
+      "character": "miko",
+      "title": "Вчерашние дела",
+      "phrase": "Nous avons acheté du pain.",
+      "translation": "Мы купили хлеб.",
+      "explanation": "Nous avons acheté du pain. — Мы купили хлеб."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вчерашние дела",
+      "phrase": "Tu as terminé ton travail ?",
+      "translation": "Ты закончил свою работу?",
+      "explanation": "Tu as terminé ton travail ? — Ты закончил свою работу?"
+    },
+    {
+      "character": "orbi",
+      "title": "Вчерашние дела",
+      "phrase": "Elle a téléphoné à sa sœur.",
+      "translation": "Она позвонила своей сестре.",
+      "explanation": "Elle a téléphoné à sa sœur. — Она позвонила своей сестре."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Hier, j'ai visité le musée.",
+      "translation": "Вчера я посетил музей.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Вчера я посетил музей.",
+      "options": [
+        "Ты закончил свою работу?",
+        "Вчера я посетил музей.",
+        "Она позвонила своей сестре."
+      ],
+      "explanation": "Passé composé: avoir в настоящем + причастие. Для глаголов на -er: visiter → visité, acheter → acheté."
+    },
+    {
+      "id": "apply",
+      "phrase": "Nous avons acheté du pain.",
+      "translation": "Мы купили хлеб.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Nous avons acheté du pain.",
+      "tokens": [
+        "Nous",
+        "avons",
+        "acheté",
+        "du",
+        "pain."
+      ],
+      "character": "miko",
+      "explanation": "Nous avons acheté du pain. — Мы купили хлеб."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-25-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ты закончил свою работу?"
+      ],
+      "explanation": "Tu as terminé ton travail ? — Ты закончил свою работу?",
+      "wordIds": [
+        "fr:v015:25:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Tu as terminé ton travail ?",
+      "options": [
+        "Вчера я посетил музей.",
+        "Ты закончил свою работу?",
+        "Мы купили хлеб."
+      ],
+      "hint": "Tu as terminé ton travail ? — Ты закончил свою работу?"
+    },
+    {
+      "id": "fr-a1-25-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы купили хлеб.",
+      "answers": [
+        "Nous avons acheté du pain."
+      ],
+      "explanation": "Passé composé: avoir в настоящем + причастие. Для глаголов на -er: visiter → visité, acheter → acheté.",
+      "wordIds": [
+        "fr:v015:25:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Nous",
+        "avons",
+        "acheté",
+        "du",
+        "pain."
+      ],
+      "hint": "Nous avons acheté du pain. — Мы купили хлеб."
+    },
+    {
+      "id": "fr-a1-25-e03",
+      "type": "dialogue",
+      "prompt": "Что произошло после окончания работы?",
+      "answers": [
+        "Посещение музея."
+      ],
+      "explanation": "В диалоге: Tu as terminé ton travail ? / Oui, ce matin. Ensuite, j'ai visité le musée. Поэтому: Посещение музея.",
+      "wordIds": [
+        "fr:v015:25:p0",
+        "fr:v015:25:p1",
+        "fr:v015:25:p2",
+        "fr:v015:25:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Tu as terminé ton travail ?\nМико: Oui, ce matin. Ensuite, j'ai visité le musée.",
+      "options": [
+        "Покупка хлеба.",
+        "Звонок сестре.",
+        "Посещение музея."
+      ]
+    },
+    {
+      "id": "fr-a1-25-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Вчера я посетил музей.»?",
+      "answers": [
+        "Hier, j'ai visité le musée."
+      ],
+      "explanation": "Hier, j'ai visité le musée. — Вчера я посетил музей.",
+      "wordIds": [
+        "fr:v015:25:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Nous avons acheté du pain.",
+        "Elle a téléphoné à sa sœur.",
+        "Hier, j'ai visité le musée."
+      ],
+      "hint": "Hier, j'ai visité le musée. — Вчера я посетил музей."
+    },
+    {
+      "id": "fr-a1-25-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v015:25:p0",
+        "fr:v015:25:p1",
+        "fr:v015:25:p2",
+        "fr:v015:25:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v015:25:p0",
+          "en": "Hier, j'ai visité le musée.",
+          "ru": "Вчера я посетил музей."
+        },
+        {
+          "id": "fr:v015:25:p1",
+          "en": "Nous avons acheté du pain.",
+          "ru": "Мы купили хлеб."
+        },
+        {
+          "id": "fr:v015:25:p2",
+          "en": "Tu as terminé ton travail ?",
+          "ru": "Ты закончил свою работу?"
+        },
+        {
+          "id": "fr:v015:25:p3",
+          "en": "Elle a téléphoné à sa sœur.",
+          "ru": "Она позвонила своей сестре."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-25-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Nous avons acheter du pain.",
+      "answers": [
+        "Nous avons acheté du pain."
+      ],
+      "explanation": "В Passé composé нужен participe passé acheté, а не инфинитив acheter.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Nous avons acheter du pain.",
+        "Nous avons acheté du pain."
+      ],
+      "hint": "Passé composé: avoir в настоящем + причастие. Для глаголов на -er: visiter → visité, acheter → acheté."
+    },
+    {
+      "id": "fr-a1-25-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Она позвонила своей сестре.». Можно написать вместо микрофона.",
+      "answers": [
+        "Elle a téléphoné à sa sœur."
+      ],
+      "explanation": "Elle a téléphoné à sa sœur. — Она позвонила своей сестре.",
+      "wordIds": [
+        "fr:v015:25:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Elle a téléphoné à sa sœur.",
+      "recall": {
+        "phrase": "Elle a téléphoné à sa sœur.",
+        "meaning": "Она позвонила своей сестре."
+      }
+    },
+    {
+      "id": "fr-a1-25-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Вчера я посетил музей.",
+      "answers": [
+        "Hier, j'ai visité le musée."
+      ],
+      "explanation": "Passé composé: avoir в настоящем + причастие. Для глаголов на -er: visiter → visité, acheter → acheté.",
+      "wordIds": [
+        "fr:v015:25:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Hier, j'ai visité le musée.",
+        "meaning": "Вчера я посетил музей."
+      }
+    },
+    {
+      "id": "fr-a1-25-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Этот поезд идёт в Лион.",
+      "answers": [
+        "Ce train va à Lyon."
+      ],
+      "explanation": "Ce train va à Lyon. — Этот поезд идёт в Лион.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ce train va à Lyon.",
+        "Cette valise est légère.",
+        "Cet hôtel est près de la gare.",
+        "Ces billets sont pour demain."
+      ]
+    }
+  ]
+}

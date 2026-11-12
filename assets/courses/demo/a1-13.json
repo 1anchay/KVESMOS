@@ -1,0 +1,249 @@
+{
+  "id": "a1-13",
+  "title": "Моё утро",
+  "topic": "Повседневные действия",
+  "order": 12,
+  "vocabulary": [
+    {
+      "id": "en:eat",
+      "en": "eat",
+      "ru": "есть"
+    },
+    {
+      "id": "en:sleep",
+      "en": "sleep",
+      "ru": "спать"
+    },
+    {
+      "id": "en:read",
+      "en": "read",
+      "ru": "читать"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Рассказать о простых привычках в течение дня.",
+  "guide": "Eat — есть, read — читать, sleep — спать. После I используем действие без am. In the morning — утром, at night — ночью. Запомни разные предлоги в этих выражениях. Every day — каждый день. Для обычного действия используем простое настоящее время.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Действия",
+      "phrase": "I eat rice. I read a book. I sleep.",
+      "translation": "Я ем рис. Я читаю книгу. Я сплю.",
+      "explanation": "Eat — есть, read — читать, sleep — спать. После I используем действие без am."
+    },
+    {
+      "character": "miko",
+      "title": "Время дня",
+      "phrase": "I read in the morning. I sleep at night.",
+      "translation": "Я читаю утром. Я сплю ночью.",
+      "explanation": "In the morning — утром, at night — ночью. Запомни разные предлоги в этих выражениях."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Обычный день",
+      "phrase": "I eat bread every day.",
+      "translation": "Я ем хлеб каждый день.",
+      "explanation": "Every day — каждый день. Для обычного действия используем простое настоящее время."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-13-v3-01",
+      "type": "choice",
+      "prompt": "Выбери привычку: «Я читаю утром».",
+      "answers": [
+        "I read in the morning."
+      ],
+      "explanation": "Read — читать; in the morning — утром.",
+      "hint": "Read — читать; in the morning — утром.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:read"
+      ],
+      "options": [
+        "I read in the morning.",
+        "I sleep at night.",
+        "I eat cheese."
+      ]
+    },
+    {
+      "id": "a1-13-v3-02",
+      "type": "pairs",
+      "prompt": "Соедини действия и переводы.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Eat — есть, sleep — спать, read — читать.",
+      "hint": "Eat — есть, sleep — спать, read — читать.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:eat",
+        "en:sleep",
+        "en:read"
+      ],
+      "pairs": [
+        {
+          "id": "en:eat",
+          "en": "eat",
+          "ru": "есть"
+        },
+        {
+          "id": "en:sleep",
+          "en": "sleep",
+          "ru": "спать"
+        },
+        {
+          "id": "en:read",
+          "en": "read",
+          "ru": "читать"
+        }
+      ]
+    },
+    {
+      "id": "a1-13-v3-03",
+      "type": "order",
+      "prompt": "Собери: «Я сплю ночью».",
+      "answers": [
+        "I sleep at night"
+      ],
+      "explanation": "At night — устойчивое выражение «ночью».",
+      "hint": "At night — устойчивое выражение «ночью».",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:sleep"
+      ],
+      "tokens": [
+        "I",
+        "sleep",
+        "at",
+        "night"
+      ]
+    },
+    {
+      "id": "a1-13-v3-04",
+      "type": "gap",
+      "prompt": "Я ем рис: I ___ rice.",
+      "answers": [
+        "eat"
+      ],
+      "explanation": "Eat — есть. Am здесь не нужен.",
+      "hint": "Eat — есть. Am здесь не нужен.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:rice",
+        "en:eat"
+      ]
+    },
+    {
+      "id": "a1-13-v3-05",
+      "type": "listen",
+      "prompt": "Что делает Орби утром?",
+      "answers": [
+        "read"
+      ],
+      "explanation": "Он говорит I read in the morning.",
+      "hint": "Он говорит I read in the morning.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:read"
+      ],
+      "options": [
+        "read",
+        "eat",
+        "sleep"
+      ],
+      "audio": "I read in the morning."
+    },
+    {
+      "id": "a1-13-v3-06",
+      "type": "correct",
+      "prompt": "Исправь: I am read a book.",
+      "answers": [
+        "I read a book."
+      ],
+      "explanation": "Для обычного действия I read; am не ставится перед read.",
+      "hint": "Для обычного действия I read; am не ставится перед read.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:book",
+        "en:read"
+      ]
+    },
+    {
+      "id": "a1-13-v3-07",
+      "type": "translate",
+      "prompt": "Скажи: «Я ем хлеб каждый день».",
+      "answers": [
+        "I eat bread every day."
+      ],
+      "explanation": "Every day ставим в конце этой фразы.",
+      "hint": "Every day ставим в конце этой фразы.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:bread",
+        "en:eat"
+      ]
+    },
+    {
+      "id": "a1-13-v3-08",
+      "type": "dialogue",
+      "prompt": "Орби спрашивает, читаешь ли ты каждый день. Ответь да.",
+      "answers": [
+        "Yes, I do."
+      ],
+      "explanation": "Знакомый вопрос Do you…? работает и с read.",
+      "hint": "Знакомый вопрос Do you…? работает и с read.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:read"
+      ],
+      "options": [
+        "Yes, I do.",
+        "Yes, it is.",
+        "No, I do not."
+      ],
+      "scene": "Орби: Do you read every day?\nТы: …"
+    },
+    {
+      "id": "a1-13-v3-09",
+      "type": "review",
+      "prompt": "Скажи: «Книга на столе».",
+      "answers": [
+        "The book is on the table."
+      ],
+      "explanation": "Состояние предмета требует is; действие I read — нет.",
+      "hint": "Состояние предмета требует is; действие I read — нет.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:book",
+        "en:table"
+      ]
+    },
+    {
+      "id": "a1-13-v3-10",
+      "type": "speak",
+      "prompt": "Расскажи: «Я читаю книгу».",
+      "answers": [
+        "I read a book."
+      ],
+      "explanation": "Перед одной книгой используем a.",
+      "hint": "Перед одной книгой используем a.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:book",
+        "en:read"
+      ],
+      "audio": "I read a book."
+    }
+  ]
+}

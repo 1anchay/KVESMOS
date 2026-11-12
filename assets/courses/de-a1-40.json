@@ -1,0 +1,253 @@
+{
+  "id": "de-a1-40",
+  "title": "Короткая инструкция",
+  "topic": "Вежливые действия",
+  "order": 39,
+  "objective": "Понять и составить вежливую последовательность действий.",
+  "guide": "В обращении на Sie повелительная форма начинается с глагола: Öffnen Sie… Отделяемая приставка остаётся в конце: Füllen Sie… aus.",
+  "vocabulary": [
+    {
+      "id": "de:v015:40:p0",
+      "en": "Öffnen Sie bitte das Fenster.",
+      "ru": "Откройте, пожалуйста, окно."
+    },
+    {
+      "id": "de:v015:40:p1",
+      "en": "Füllen Sie bitte dieses Formular aus.",
+      "ru": "Заполните, пожалуйста, этот бланк."
+    },
+    {
+      "id": "de:v015:40:p2",
+      "en": "Unterschreiben Sie bitte hier.",
+      "ru": "Распишитесь, пожалуйста, здесь."
+    },
+    {
+      "id": "de:v015:40:p3",
+      "en": "Warten Sie einen Moment.",
+      "ru": "Подождите минутку."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Короткая инструкция",
+      "phrase": "Öffnen Sie bitte das Fenster.",
+      "translation": "Откройте, пожалуйста, окно.",
+      "explanation": "В обращении на Sie повелительная форма начинается с глагола: Öffnen Sie… Отделяемая приставка остаётся в конце: Füllen Sie… aus."
+    },
+    {
+      "character": "miko",
+      "title": "Короткая инструкция",
+      "phrase": "Füllen Sie bitte dieses Formular aus.",
+      "translation": "Заполните, пожалуйста, этот бланк.",
+      "explanation": "Füllen Sie bitte dieses Formular aus. — Заполните, пожалуйста, этот бланк."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Короткая инструкция",
+      "phrase": "Unterschreiben Sie bitte hier.",
+      "translation": "Распишитесь, пожалуйста, здесь.",
+      "explanation": "Unterschreiben Sie bitte hier. — Распишитесь, пожалуйста, здесь."
+    },
+    {
+      "character": "orbi",
+      "title": "Короткая инструкция",
+      "phrase": "Warten Sie einen Moment.",
+      "translation": "Подождите минутку.",
+      "explanation": "Warten Sie einen Moment. — Подождите минутку."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Öffnen Sie bitte das Fenster.",
+      "translation": "Откройте, пожалуйста, окно.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Откройте, пожалуйста, окно.",
+      "options": [
+        "Распишитесь, пожалуйста, здесь.",
+        "Откройте, пожалуйста, окно.",
+        "Подождите минутку."
+      ],
+      "explanation": "В обращении на Sie повелительная форма начинается с глагола: Öffnen Sie… Отделяемая приставка остаётся в конце: Füllen Sie… aus."
+    },
+    {
+      "id": "apply",
+      "phrase": "Füllen Sie bitte dieses Formular aus.",
+      "translation": "Заполните, пожалуйста, этот бланк.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Füllen Sie bitte dieses Formular aus.",
+      "tokens": [
+        "Füllen",
+        "Sie",
+        "bitte",
+        "dieses",
+        "Formular",
+        "aus."
+      ],
+      "character": "miko",
+      "explanation": "Füllen Sie bitte dieses Formular aus. — Заполните, пожалуйста, этот бланк."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-40-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Откройте, пожалуйста, окно.»?",
+      "answers": [
+        "Öffnen Sie bitte das Fenster."
+      ],
+      "explanation": "Öffnen Sie bitte das Fenster. — Откройте, пожалуйста, окно.",
+      "wordIds": [
+        "de:v015:40:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Füllen Sie bitte dieses Formular aus.",
+        "Warten Sie einen Moment.",
+        "Öffnen Sie bitte das Fenster."
+      ],
+      "hint": "Öffnen Sie bitte das Fenster. — Откройте, пожалуйста, окно."
+    },
+    {
+      "id": "de-a1-40-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Заполните, пожалуйста, этот бланк.",
+      "answers": [
+        "Füllen Sie bitte dieses Formular aus."
+      ],
+      "explanation": "В обращении на Sie повелительная форма начинается с глагола: Öffnen Sie… Отделяемая приставка остаётся в конце: Füllen Sie… aus.",
+      "wordIds": [
+        "de:v015:40:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Füllen",
+        "Sie",
+        "bitte",
+        "dieses",
+        "Formular",
+        "aus."
+      ],
+      "hint": "Füllen Sie bitte dieses Formular aus. — Заполните, пожалуйста, этот бланк."
+    },
+    {
+      "id": "de-a1-40-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно сделать сначала?",
+      "answers": [
+        "Заполнить бланк."
+      ],
+      "explanation": "В диалоге: Was soll ich zuerst machen? / Füllen Sie bitte dieses Formular aus. Unterschreiben Sie danach hier. Поэтому: Заполнить бланк.",
+      "wordIds": [
+        "de:v015:40:p0",
+        "de:v015:40:p1",
+        "de:v015:40:p2",
+        "de:v015:40:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Was soll ich zuerst machen?\nМико: Füllen Sie bitte dieses Formular aus. Unterschreiben Sie danach hier.",
+      "options": [
+        "Поставить подпись.",
+        "Открыть окно.",
+        "Заполнить бланк."
+      ]
+    },
+    {
+      "id": "de-a1-40-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Распишитесь, пожалуйста, здесь."
+      ],
+      "explanation": "Unterschreiben Sie bitte hier. — Распишитесь, пожалуйста, здесь.",
+      "wordIds": [
+        "de:v015:40:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Unterschreiben Sie bitte hier.",
+      "options": [
+        "Откройте, пожалуйста, окно.",
+        "Распишитесь, пожалуйста, здесь.",
+        "Заполните, пожалуйста, этот бланк."
+      ],
+      "hint": "Unterschreiben Sie bitte hier. — Распишитесь, пожалуйста, здесь."
+    },
+    {
+      "id": "de-a1-40-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Füllen Sie bitte aus dieses Formular.",
+      "answers": [
+        "Füllen Sie bitte dieses Formular aus."
+      ],
+      "explanation": "Отделяемая приставка aus стоит в конце предложения.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Füllen Sie bitte aus dieses Formular.",
+        "Füllen Sie bitte dieses Formular aus."
+      ],
+      "hint": "В обращении на Sie повелительная форма начинается с глагола: Öffnen Sie… Отделяемая приставка остаётся в конце: Füllen Sie… aus."
+    },
+    {
+      "id": "de-a1-40-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Подождите минутку.». Можно написать вместо микрофона.",
+      "answers": [
+        "Warten Sie einen Moment."
+      ],
+      "explanation": "Warten Sie einen Moment. — Подождите минутку.",
+      "wordIds": [
+        "de:v015:40:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Warten Sie einen Moment.",
+      "recall": {
+        "phrase": "Warten Sie einen Moment.",
+        "meaning": "Подождите минутку."
+      }
+    },
+    {
+      "id": "de-a1-40-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Откройте, пожалуйста, окно.",
+      "answers": [
+        "Öffnen Sie bitte das Fenster."
+      ],
+      "explanation": "В обращении на Sie повелительная форма начинается с глагола: Öffnen Sie… Отделяемая приставка остаётся в конце: Füllen Sie… aus.",
+      "wordIds": [
+        "de:v015:40:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Öffnen Sie bitte das Fenster.",
+        "meaning": "Откройте, пожалуйста, окно."
+      }
+    },
+    {
+      "id": "de-a1-40-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Не могли бы вы мне помочь?",
+      "answers": [
+        "Könnten Sie mir bitte helfen?"
+      ],
+      "explanation": "Könnten Sie mir bitte helfen? — Не могли бы вы мне помочь?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich würde gern am Fenster sitzen.",
+        "Könnten Sie mir bitte helfen?",
+        "Wir würden gern früher ankommen.",
+        "Ich hätte gern ein Glas Wasser."
+      ]
+    }
+  ]
+}

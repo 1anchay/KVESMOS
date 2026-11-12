@@ -1,0 +1,282 @@
+{
+  "id": "de-a1-03",
+  "title": "Предметы · der, die, das",
+  "topic": "Предметы · der, die, das",
+  "order": 2,
+  "objective": "Назвать предмет с правильным артиклем.",
+  "guide": "В немецком три рода: der Tisch — стол, die Lampe — лампа, das Buch — книга. Запоминайте слово с артиклем. Ein используется с мужским и средним родом, eine — с женским. Существительные пишутся с заглавной буквы.",
+  "vocabulary": [
+    {
+      "id": "de:der_tisch",
+      "en": "der Tisch",
+      "ru": "стол"
+    },
+    {
+      "id": "de:die_lampe",
+      "en": "die Lampe",
+      "ru": "лампа"
+    },
+    {
+      "id": "de:das_buch",
+      "en": "das Buch",
+      "ru": "книга"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-03-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Это книга.»",
+      "answers": [
+        "Das ist ein Buch."
+      ],
+      "explanation": "Das ist ein Buch. — Это книга.",
+      "hint": "Das ist ein Buch. — Это книга.",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Das ist eine Lampe.",
+        "Das ist ein Buch.",
+        "Was ist das?"
+      ]
+    },
+    {
+      "id": "de-a1-03-e02",
+      "type": "choice",
+      "prompt": "Что означает «Das ist eine Lampe.»?",
+      "answers": [
+        "Это лампа."
+      ],
+      "explanation": "Das ist eine Lampe. — Это лампа.",
+      "hint": "Das ist eine Lampe. — Это лампа.",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Стол большой.",
+        "Что это?",
+        "Это лампа."
+      ]
+    },
+    {
+      "id": "de-a1-03-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Стол большой.»",
+      "answers": [
+        "Der Tisch ist groß"
+      ],
+      "explanation": "Der Tisch ist groß. — Стол большой.",
+      "hint": "Der Tisch ist groß. — Стол большой.",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Der",
+        "Tisch",
+        "ist",
+        "groß"
+      ]
+    },
+    {
+      "id": "de-a1-03-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "der Tisch — стол; die Lampe — лампа; das Buch — книга",
+      "hint": "der Tisch — стол; die Lampe — лампа; das Buch — книга",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "de:der_tisch",
+          "en": "der Tisch",
+          "ru": "стол"
+        },
+        {
+          "id": "de:die_lampe",
+          "en": "die Lampe",
+          "ru": "лампа"
+        },
+        {
+          "id": "de:das_buch",
+          "en": "das Buch",
+          "ru": "книга"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-03-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Что это?"
+      ],
+      "explanation": "Was ist das? — Что это?",
+      "hint": "Was ist das? — Что это?",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Was ist das?",
+      "options": [
+        "Это книга.",
+        "Что это?",
+        "Стол большой."
+      ]
+    },
+    {
+      "id": "de-a1-03-e06",
+      "type": "gap",
+      "prompt": "Lampe женского рода: Das ist ___ Lampe.",
+      "answers": [
+        "eine"
+      ],
+      "explanation": "В немецком три рода: der Tisch — стол, die Lampe — лампа, das Buch — книга. Запоминайте слово с артиклем. Ein используется с мужским и средним родом, eine — с женским. Существительные пишутся с заглавной буквы.",
+      "hint": "В немецком три рода: der Tisch — стол, die Lampe — лампа, das Buch — книга. Запоминайте слово с артиклем. Ein используется с мужским и средним родом, eine — с женским. Существительные пишутся с заглавной буквы.",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "ein",
+        "eine",
+        "einen"
+      ]
+    },
+    {
+      "id": "de-a1-03-e07",
+      "type": "dialogue",
+      "prompt": "Орби показывает книгу: «Was ist das?» Ответь, что это книга.",
+      "answers": [
+        "Das ist ein Buch."
+      ],
+      "explanation": "В этой ситуации подходит: Das ist ein Buch.",
+      "hint": "В этой ситуации подходит: Das ist ein Buch.",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Das ist eine Lampe.",
+        "Der Tisch ist groß.",
+        "Das ist ein Buch."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "de-a1-03-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Das ist eine Buch.»",
+      "answers": [
+        "Das ist ein Buch."
+      ],
+      "explanation": "Buch среднего рода: das Buch, ein Buch. Род русского слова здесь не помогает.",
+      "hint": "Buch среднего рода: das Buch, ein Buch. Род русского слова здесь не помогает.",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "de-a1-03-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Что это?»",
+      "answers": [
+        "Was ist das?"
+      ],
+      "explanation": "Was ist das? — Что это?",
+      "hint": "Was ist das? — Что это?",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "de-a1-03-e10",
+      "type": "review",
+      "prompt": "Финал: Орби показывает книгу: «Was ist das?» Ответь, что это книга.",
+      "answers": [
+        "Das ist ein Buch."
+      ],
+      "explanation": "Теперь ты умеешь: назвать предмет с правильным артиклем.",
+      "hint": "Теперь ты умеешь: назвать предмет с правильным артиклем.",
+      "wordIds": [
+        "de:der_tisch",
+        "de:die_lampe",
+        "de:das_buch"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Das ist ein Buch.",
+        "Der Tisch ist groß.",
+        "Das ist eine Lampe."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Das ist ein Buch.",
+      "translation": "Это книга.",
+      "explanation": "Ситуация: Назвать предмет с правильным артиклем. Das ist ein Buch. — Это книга."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Das ist eine Lampe.",
+      "translation": "Это лампа.",
+      "explanation": "Ситуация: Назвать предмет с правильным артиклем. Das ist eine Lampe. — Это лампа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Der Tisch ist groß.",
+      "translation": "Стол большой.",
+      "explanation": "В немецком три рода: der Tisch — стол, die Lampe — лампа, das Buch — книга. Запоминайте слово с артиклем. Ein используется с мужским и средним родом, eine — с женским. Существительные пишутся с заглавной буквы."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Was ist das?",
+      "translation": "Что это?",
+      "explanation": "Ситуация: Назвать предмет с правильным артиклем. Was ist das? — Что это?"
+    }
+  ]
+}

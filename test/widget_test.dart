@@ -8,7 +8,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:orbitwords/core/controller.dart';
 import 'package:orbitwords/ui/app.dart';
-import 'package:orbitwords/ui/character_reactions.dart';
 import 'support.dart';
 
 Future<void> flushDb(WidgetTester tester) async {
@@ -33,7 +32,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    expect(find.text('Ваш следующий мир начинается со слова.'), findsOneWidget);
+    expect(find.text('Первое открытие — сегодня.'), findsOneWidget);
     for (var i = 0; i < 3; i++) {
       final next = find.widgetWithText(FilledButton, 'Продолжить');
       await tester.scrollUntilVisible(next, 250);
@@ -41,24 +40,34 @@ void main() {
       await tester.tap(next);
       await tester.pumpAndSettle();
     }
-    final start = find.widgetWithText(FilledButton, 'Начать путешествие');
+    final start = find.widgetWithText(FilledButton, 'Продолжить');
     await tester.scrollUntilVisible(start, 250);
     await tester.pumpAndSettle();
     await tester.tap(start);
     await flushDb(tester);
-    expect(find.text('Галактика\nзнаний'), findsOneWidget);
-    await tester.tap(find.text('Продолжить урок'));
+    for (var decision = 0; decision < 2; decision++) {
+      final later = find.widgetWithText(TextButton, 'Не сейчас');
+      await tester.scrollUntilVisible(later, 250);
+      await tester.tap(later);
+      await flushDb(tester);
+    }
+    expect(app.companion.preferences.enabled, isFalse);
+    expect(find.textContaining('АНГЛИЙСКИЙ ·'), findsOneWidget);
+    await tester.tap(find.byKey(const Key('today-start')));
     await flushDb(tester);
+    await advanceTeaching(tester);
     expect(
-      find.text('Мико встречает тебя у станции. Как сказать «привет»?'),
+      find.text(
+        'Орби встречает тебя на космической станции. Что ему ответить?',
+      ),
       findsOneWidget,
     );
     await tester.scrollUntilVisible(
-      find.widgetWithText(OutlinedButton, 'Hello'),
+      find.widgetWithText(OutlinedButton, 'Hello!'),
       220,
     );
     await tester.pumpAndSettle();
-    await tester.tap(find.widgetWithText(OutlinedButton, 'Hello'));
+    await tester.tap(find.widgetWithText(OutlinedButton, 'Hello!'));
     await flushDb(tester);
     final check = find.widgetWithText(FilledButton, 'Проверить');
     await tester.scrollUntilVisible(check, 250);
@@ -66,16 +75,22 @@ void main() {
     await tester.tap(check);
     await flushDb(tester);
     expect(app.progress.xp, 10);
-    expect(find.text('Сигнал принят! +10 XP'), findsOneWidget);
-    expect(find.text(CharacterCue.correct.lines.first), findsOneWidget);
+    expect(find.text('Отлично, идём дальше!'), findsOneWidget);
+    expect(find.text('Есть контакт! +10 XP'), findsOneWidget);
+    expect(
+      find.text('Сначала нас приветствуют — выбираем Hello!'),
+      findsOneWidget,
+    );
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Продолжить урок'));
+    await tester.tap(find.byKey(const Key('today-start')));
     await flushDb(tester);
-    expect(find.text('Соберите предложение'), findsOneWidget);
+    final resumed = (await tester.runAsync(() => r.startLesson('a1-01')))!;
+    expect(resumed.session.position, 1);
+    expect(find.text(resumed.lesson.exercises[1].prompt), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();
-    for (final label in ['Слова', 'Прогресс', 'Профиль', 'Карта']) {
+    for (final label in ['Практика', 'Прогресс', 'Профиль', 'Сегодня']) {
       await tester.tap(find.text(label).last);
       await tester.pumpAndSettle();
       expect(tester.takeException(), isNull);

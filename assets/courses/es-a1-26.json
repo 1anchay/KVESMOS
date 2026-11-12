@@ -1,0 +1,249 @@
+{
+  "id": "es-a1-26",
+  "title": "Плохая связь",
+  "topic": "Плохая связь",
+  "order": 25,
+  "objective": "Попросить собеседника повторить информацию.",
+  "guide": "¿Puedes repetir? — просьба повторить; más despacio — медленнее.",
+  "vocabulary": [
+    {
+      "id": "es:v014:26:p0",
+      "en": "No te oigo bien.",
+      "ru": "Я тебя плохо слышу."
+    },
+    {
+      "id": "es:v014:26:p1",
+      "en": "¿Puedes repetir la dirección?",
+      "ru": "Можешь повторить адрес?"
+    },
+    {
+      "id": "es:v014:26:p2",
+      "en": "Habla más despacio, por favor.",
+      "ru": "Говори медленнее, пожалуйста."
+    },
+    {
+      "id": "es:v014:26:p3",
+      "en": "Te envío un mensaje.",
+      "ru": "Я отправлю тебе сообщение."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Плохая связь",
+      "phrase": "No te oigo bien.",
+      "translation": "Я тебя плохо слышу.",
+      "explanation": "¿Puedes repetir? — просьба повторить; más despacio — медленнее."
+    },
+    {
+      "character": "miko",
+      "title": "Плохая связь",
+      "phrase": "¿Puedes repetir la dirección?",
+      "translation": "Можешь повторить адрес?",
+      "explanation": "¿Puedes repetir la dirección? — Можешь повторить адрес?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Плохая связь",
+      "phrase": "Habla más despacio, por favor.",
+      "translation": "Говори медленнее, пожалуйста.",
+      "explanation": "Habla más despacio, por favor. — Говори медленнее, пожалуйста."
+    },
+    {
+      "character": "orbi",
+      "title": "Плохая связь",
+      "phrase": "Te envío un mensaje.",
+      "translation": "Я отправлю тебе сообщение.",
+      "explanation": "Te envío un mensaje. — Я отправлю тебе сообщение."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "No te oigo bien.",
+      "translation": "Я тебя плохо слышу.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я тебя плохо слышу.",
+      "options": [
+        "Говори медленнее, пожалуйста.",
+        "Я тебя плохо слышу.",
+        "Я отправлю тебе сообщение."
+      ],
+      "explanation": "¿Puedes repetir? — просьба повторить; más despacio — медленнее."
+    },
+    {
+      "id": "apply",
+      "phrase": "¿Puedes repetir la dirección?",
+      "translation": "Можешь повторить адрес?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "¿Puedes repetir la dirección?",
+      "tokens": [
+        "¿Puedes",
+        "repetir",
+        "la",
+        "dirección?"
+      ],
+      "character": "miko",
+      "explanation": "¿Puedes repetir la dirección? — Можешь повторить адрес?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-26-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я тебя плохо слышу.»?",
+      "answers": [
+        "No te oigo bien."
+      ],
+      "explanation": "No te oigo bien. — Я тебя плохо слышу.",
+      "wordIds": [
+        "es:v014:26:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "¿Puedes repetir la dirección?",
+        "Te envío un mensaje.",
+        "No te oigo bien."
+      ],
+      "hint": "No te oigo bien. — Я тебя плохо слышу."
+    },
+    {
+      "id": "es-a1-26-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Можешь повторить адрес?",
+      "answers": [
+        "¿Puedes repetir la dirección?"
+      ],
+      "explanation": "¿Puedes repetir? — просьба повторить; más despacio — медленнее.",
+      "wordIds": [
+        "es:v014:26:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "¿Puedes",
+        "repetir",
+        "la",
+        "dirección?"
+      ],
+      "hint": "¿Puedes repetir la dirección? — Можешь повторить адрес?"
+    },
+    {
+      "id": "es-a1-26-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Говори медленнее, пожалуйста."
+      ],
+      "explanation": "Habla más despacio, por favor. — Говори медленнее, пожалуйста.",
+      "wordIds": [
+        "es:v014:26:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Habla más despacio, por favor.",
+      "options": [
+        "Я тебя плохо слышу.",
+        "Говори медленнее, пожалуйста.",
+        "Можешь повторить адрес?"
+      ],
+      "hint": "Habla más despacio, por favor. — Говори медленнее, пожалуйста."
+    },
+    {
+      "id": "es-a1-26-e03",
+      "type": "dialogue",
+      "prompt": "Как передадут адрес?",
+      "answers": [
+        "Сообщением."
+      ],
+      "explanation": "Сообщением. Попросить собеседника повторить информацию.",
+      "wordIds": [
+        "es:v014:26:p0",
+        "es:v014:26:p1",
+        "es:v014:26:p2",
+        "es:v014:26:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: No te oigo bien. ¿Puedes repetir la dirección?\nМико: Mejor te envío un mensaje.",
+      "options": [
+        "Только на бумаге.",
+        "Через продавца.",
+        "Сообщением."
+      ]
+    },
+    {
+      "id": "es-a1-26-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: ¿Puedes repites la dirección?",
+      "answers": [
+        "¿Puedes repetir la dirección?"
+      ],
+      "explanation": "После puedes используем инфинитив repetir.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "¿Puedes repites la dirección?",
+        "¿Puedes repetir la dirección?"
+      ],
+      "hint": "¿Puedes repetir? — просьба повторить; más despacio — медленнее."
+    },
+    {
+      "id": "es-a1-26-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я отправлю тебе сообщение.». Можно написать вместо микрофона.",
+      "answers": [
+        "Te envío un mensaje."
+      ],
+      "explanation": "Te envío un mensaje. — Я отправлю тебе сообщение.",
+      "wordIds": [
+        "es:v014:26:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Te envío un mensaje.",
+      "recall": {
+        "phrase": "Te envío un mensaje.",
+        "meaning": "Я отправлю тебе сообщение."
+      }
+    },
+    {
+      "id": "es-a1-26-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я тебя плохо слышу.",
+      "answers": [
+        "No te oigo bien."
+      ],
+      "explanation": "¿Puedes repetir? — просьба повторить; más despacio — медленнее.",
+      "wordIds": [
+        "es:v014:26:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "No te oigo bien.",
+        "meaning": "Я тебя плохо слышу."
+      }
+    },
+    {
+      "id": "es-a1-26-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы можем пойти пешком.",
+      "answers": [
+        "Podemos ir a pie."
+      ],
+      "explanation": "Podemos ir a pie. — Мы можем пойти пешком.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "¿Cuánto tarda el autobús?",
+        "El viaje dura veinte minutos.",
+        "La estación está cerca.",
+        "Podemos ir a pie."
+      ]
+    }
+  ]
+}

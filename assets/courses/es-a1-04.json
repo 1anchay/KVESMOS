@@ -1,0 +1,281 @@
+{
+  "id": "es-a1-04",
+  "title": "Считаем и называем возраст",
+  "topic": "Считаем и называем возраст",
+  "order": 3,
+  "objective": "Посчитать до пяти и назвать возраст.",
+  "guide": "Uno, dos, tres, cuatro, cinco — один, два, три, четыре, пять. Перед мужским существительным uno сокращается до un: un libro. Возраст выражается через tener: Tengo… años — мне… лет.",
+  "vocabulary": [
+    {
+      "id": "es:dos",
+      "en": "dos",
+      "ru": "два"
+    },
+    {
+      "id": "es:tres",
+      "en": "tres",
+      "ru": "три"
+    },
+    {
+      "id": "es:cinco",
+      "en": "cinco",
+      "ru": "пять"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-04-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «У меня две книги.»",
+      "answers": [
+        "Tengo dos libros."
+      ],
+      "explanation": "Tengo dos libros. — У меня две книги.",
+      "hint": "Tengo dos libros. — У меня две книги.",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Hay tres mesas.",
+        "Tengo dos libros.",
+        "¿Cuántos años tienes?"
+      ]
+    },
+    {
+      "id": "es-a1-04-e02",
+      "type": "choice",
+      "prompt": "Что означает «Hay tres mesas.»?",
+      "answers": [
+        "Есть три стола."
+      ],
+      "explanation": "Hay tres mesas. — Есть три стола.",
+      "hint": "Hay tres mesas. — Есть три стола.",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Мне двадцать лет.",
+        "Сколько тебе лет?",
+        "Есть три стола."
+      ]
+    },
+    {
+      "id": "es-a1-04-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Мне двадцать лет.»",
+      "answers": [
+        "Tengo veinte años"
+      ],
+      "explanation": "Tengo veinte años. — Мне двадцать лет.",
+      "hint": "Tengo veinte años. — Мне двадцать лет.",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Tengo",
+        "veinte",
+        "años"
+      ]
+    },
+    {
+      "id": "es-a1-04-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "dos — два; tres — три; cinco — пять",
+      "hint": "dos — два; tres — три; cinco — пять",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "es:dos",
+          "en": "dos",
+          "ru": "два"
+        },
+        {
+          "id": "es:tres",
+          "en": "tres",
+          "ru": "три"
+        },
+        {
+          "id": "es:cinco",
+          "en": "cinco",
+          "ru": "пять"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-04-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Сколько тебе лет?"
+      ],
+      "explanation": "¿Cuántos años tienes? — Сколько тебе лет?",
+      "hint": "¿Cuántos años tienes? — Сколько тебе лет?",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "¿Cuántos años tienes?",
+      "options": [
+        "У меня две книги.",
+        "Сколько тебе лет?",
+        "Мне двадцать лет."
+      ]
+    },
+    {
+      "id": "es-a1-04-e06",
+      "type": "gap",
+      "prompt": "Мне двадцать лет: ___ veinte años.",
+      "answers": [
+        "Tengo"
+      ],
+      "explanation": "Uno, dos, tres, cuatro, cinco — один, два, три, четыре, пять. Перед мужским существительным uno сокращается до un: un libro. Возраст выражается через tener: Tengo… años — мне… лет.",
+      "hint": "Uno, dos, tres, cuatro, cinco — один, два, три, четыре, пять. Перед мужским существительным uno сокращается до un: un libro. Возраст выражается через tener: Tengo… años — мне… лет.",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "Soy",
+        "Tengo",
+        "Estoy"
+      ]
+    },
+    {
+      "id": "es-a1-04-e07",
+      "type": "dialogue",
+      "prompt": "Друг: «¿Cuántos años tienes?» Назови возраст — двадцать лет.",
+      "answers": [
+        "Tengo veinte años."
+      ],
+      "explanation": "В этой ситуации подходит: Tengo veinte años.",
+      "hint": "В этой ситуации подходит: Tengo veinte años.",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Tengo dos libros.",
+        "Hay tres mesas.",
+        "Tengo veinte años."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "es-a1-04-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Soy veinte años.»",
+      "answers": [
+        "Tengo veinte años."
+      ],
+      "explanation": "По-испански возраст «имеют»: tengo… años, а не soy.",
+      "hint": "По-испански возраст «имеют»: tengo… años, а не soy.",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "es-a1-04-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Сколько тебе лет?»",
+      "answers": [
+        "¿Cuántos años tienes?"
+      ],
+      "explanation": "¿Cuántos años tienes? — Сколько тебе лет?",
+      "hint": "¿Cuántos años tienes? — Сколько тебе лет?",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "es-a1-04-e10",
+      "type": "review",
+      "prompt": "Финал: Друг: «¿Cuántos años tienes?» Назови возраст — двадцать лет.",
+      "answers": [
+        "Tengo veinte años."
+      ],
+      "explanation": "Теперь ты умеешь: посчитать до пяти и назвать возраст.",
+      "hint": "Теперь ты умеешь: посчитать до пяти и назвать возраст.",
+      "wordIds": [
+        "es:dos",
+        "es:tres",
+        "es:cinco"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Tengo veinte años.",
+        "Hay tres mesas.",
+        "Tengo dos libros."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Tengo dos libros.",
+      "translation": "У меня две книги.",
+      "explanation": "Ситуация: Посчитать до пяти и назвать возраст. Tengo dos libros. — У меня две книги."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Hay tres mesas.",
+      "translation": "Есть три стола.",
+      "explanation": "Ситуация: Посчитать до пяти и назвать возраст. Hay tres mesas. — Есть три стола."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Tengo veinte años.",
+      "translation": "Мне двадцать лет.",
+      "explanation": "Uno, dos, tres, cuatro, cinco — один, два, три, четыре, пять. Перед мужским существительным uno сокращается до un: un libro. Возраст выражается через tener: Tengo… años — мне… лет."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "¿Cuántos años tienes?",
+      "translation": "Сколько тебе лет?",
+      "explanation": "Ситуация: Посчитать до пяти и назвать возраст. ¿Cuántos años tienes? — Сколько тебе лет?"
+    }
+  ]
+}

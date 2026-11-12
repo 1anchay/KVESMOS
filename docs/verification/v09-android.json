@@ -1,0 +1,95 @@
+{
+  "version": "0.9.0-dev.1+11",
+  "baseCommit": "0aa84671337044613448331bd4b2a24ae6cdd5db",
+  "environment": "dedicated API36 x86_64 QA emulator; host GPU Vulkan off; headless; 2 cores/2048MB;720x1600 density320",
+  "network": "Wi-Fi and mobile data disabled",
+  "integration": {
+    "result": "passed",
+    "durationSeconds": 161,
+    "firstLessonThroughUI": true,
+    "adventures": 3,
+    "replayXpUnchanged": true,
+    "allAdventureEnglishClipsNativePlayback": true,
+    "newNativeEffects": 3,
+    "timings": {
+      "frames": 682,
+      "buildMedianMs": 2.005,
+      "buildP95Ms": 29.179,
+      "rasterMedianMs": 2.316,
+      "rasterP95Ms": 6.109
+    }
+  },
+  "upgrade": {
+    "settings": {
+      "before": 10,
+      "after": 11,
+      "changedOrMissingOldRows": 0
+    },
+    "lesson_packs": {
+      "before": 20,
+      "after": 20,
+      "changedOrMissingOldRows": 0
+    },
+    "sessions": {
+      "before": 3,
+      "after": 3,
+      "changedOrMissingOldRows": 0
+    },
+    "events": {
+      "before": 13,
+      "after": 13,
+      "changedOrMissingOldRows": 0
+    }
+  },
+  "killResume": {
+    "offline": true,
+    "killedAfterTapSeconds": 0.235,
+    "stepBefore": 1,
+    "stepAfter": 2,
+    "newEvents": 1,
+    "creditId": "adventure:v1:beacon:hello:correct",
+    "inventoryUnchanged": true,
+    "stateAfterKill": {
+      "version": 1,
+      "step": 2,
+      "revision": 4,
+      "attempts": 2,
+      "x": 0.2,
+      "y": 0.56,
+      "room": "deck",
+      "focus": "",
+      "dialogue": "Получилось! Следующий шаг готов.",
+      "selection": "",
+      "hint": false,
+      "completed": false,
+      "found": [],
+      "resolved": [
+        "guide",
+        "hello"
+      ],
+      "errors": {},
+      "tiles": []
+    },
+    "resumeStateIdentical": true,
+    "creditCountAfterResume": 1
+  },
+  "resources": {
+    "unchangedExistingAssetFiles": 316,
+    "manifest": "all old records retained; 7 added",
+    "newAssets": 17,
+    "addedAssetBytes": 188275,
+    "oldSpeechFiles": 220,
+    "newSpeechFiles": 234,
+    "newDependencies": 0,
+    "newRasterImages": 0
+  },
+  "debugScenePssKiB": 348798,
+  "nativeProductionApkSha256": "d9436b4a9515f7b2169eccf698d846457504b1a9271f69b1b161cb69beaf112b",
+  "nativeFollowup": "Decorative scene semantics excluded after native test; widget interaction rerun passed. No gameplay or data changes.",
+  "limits": [
+    "Not a physical device test",
+    "No iOS build",
+    "No release FPS measurement",
+    "Silent widget video; no microphone needed"
+  ]
+}

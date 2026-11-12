@@ -1,0 +1,286 @@
+{
+  "id": "en-a1-63",
+  "title": "На стойке гостиницы",
+  "topic": "В дороге",
+  "order": 62,
+  "objective": "Заселиться и уточнить условия проживания.",
+  "guide": "A reservation under the name… — бронь на имя. Is… included? помогает узнать, входит ли услуга в стоимость.",
+  "vocabulary": [
+    {
+      "id": "en:v015:63:p0",
+      "en": "I have a reservation under the name Lee.",
+      "ru": "У меня бронь на имя Ли."
+    },
+    {
+      "id": "en:v015:63:p1",
+      "en": "Is breakfast included?",
+      "ru": "Завтрак включён?"
+    },
+    {
+      "id": "en:v015:63:p2",
+      "en": "What time is check-out?",
+      "ru": "Во сколько нужно выехать?"
+    },
+    {
+      "id": "en:v015:63:p3",
+      "en": "Could I have a quiet room?",
+      "ru": "Можно мне тихий номер?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "На стойке гостиницы",
+      "phrase": "I have a reservation under the name Lee.",
+      "translation": "У меня бронь на имя Ли.",
+      "explanation": "A reservation under the name… — бронь на имя. Is… included? помогает узнать, входит ли услуга в стоимость."
+    },
+    {
+      "character": "miko",
+      "title": "На стойке гостиницы",
+      "phrase": "Is breakfast included?",
+      "translation": "Завтрак включён?",
+      "explanation": "Is breakfast included? — Завтрак включён?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "На стойке гостиницы",
+      "phrase": "What time is check-out?",
+      "translation": "Во сколько нужно выехать?",
+      "explanation": "What time is check-out? — Во сколько нужно выехать?"
+    },
+    {
+      "character": "orbi",
+      "title": "На стойке гостиницы",
+      "phrase": "Could I have a quiet room?",
+      "translation": "Можно мне тихий номер?",
+      "explanation": "Could I have a quiet room? — Можно мне тихий номер?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I have a reservation under the name Lee.",
+      "translation": "У меня бронь на имя Ли.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "У меня бронь на имя Ли.",
+      "options": [
+        "Во сколько нужно выехать?",
+        "У меня бронь на имя Ли.",
+        "Можно мне тихий номер?"
+      ],
+      "explanation": "A reservation under the name… — бронь на имя. Is… included? помогает узнать, входит ли услуга в стоимость."
+    },
+    {
+      "id": "apply",
+      "phrase": "Is breakfast included?",
+      "translation": "Завтрак включён?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Is breakfast included?",
+      "tokens": [
+        "Is",
+        "breakfast",
+        "included?"
+      ],
+      "character": "miko",
+      "explanation": "Is breakfast included? — Завтрак включён?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-63-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Адрес правильный.",
+      "answers": [
+        "The address is correct."
+      ],
+      "explanation": "The address is correct. — Адрес правильный.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "My parcel hasn't arrived yet.",
+        "When will it arrive?",
+        "The address is correct.",
+        "Could you check the tracking number?"
+      ]
+    },
+    {
+      "id": "en-a1-63-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «У меня бронь на имя Ли.»?",
+      "answers": [
+        "I have a reservation under the name Lee."
+      ],
+      "explanation": "I have a reservation under the name Lee. — У меня бронь на имя Ли.",
+      "wordIds": [
+        "en:v015:63:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Is breakfast included?",
+        "Could I have a quiet room?",
+        "I have a reservation under the name Lee."
+      ],
+      "hint": "I have a reservation under the name Lee. — У меня бронь на имя Ли."
+    },
+    {
+      "id": "en-a1-63-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Завтрак включён?",
+      "answers": [
+        "Is breakfast included?"
+      ],
+      "explanation": "A reservation under the name… — бронь на имя. Is… included? помогает узнать, входит ли услуга в стоимость.",
+      "wordIds": [
+        "en:v015:63:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Is",
+        "breakfast",
+        "included?"
+      ],
+      "hint": "Is breakfast included? — Завтрак включён?"
+    },
+    {
+      "id": "en-a1-63-e04",
+      "type": "dialogue",
+      "prompt": "До какого времени нужно выехать?",
+      "answers": [
+        "До одиннадцати."
+      ],
+      "explanation": "В диалоге: Is breakfast included? / Yes. Breakfast starts at seven, and check-out is at eleven. Поэтому: До одиннадцати.",
+      "wordIds": [
+        "en:v015:63:p0",
+        "en:v015:63:p1",
+        "en:v015:63:p2",
+        "en:v015:63:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Is breakfast included?\nМико: Yes. Breakfast starts at seven, and check-out is at eleven.",
+      "options": [
+        "До семи.",
+        "До полуночи.",
+        "До одиннадцати."
+      ]
+    },
+    {
+      "id": "en-a1-63-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Во сколько нужно выехать?"
+      ],
+      "explanation": "What time is check-out? — Во сколько нужно выехать?",
+      "wordIds": [
+        "en:v015:63:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "What time is check-out?",
+      "options": [
+        "У меня бронь на имя Ли.",
+        "Во сколько нужно выехать?",
+        "Завтрак включён?"
+      ],
+      "hint": "What time is check-out? — Во сколько нужно выехать?"
+    },
+    {
+      "id": "en-a1-63-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v015:63:p0",
+        "en:v015:63:p1",
+        "en:v015:63:p2",
+        "en:v015:63:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v015:63:p0",
+          "en": "I have a reservation under the name Lee.",
+          "ru": "У меня бронь на имя Ли."
+        },
+        {
+          "id": "en:v015:63:p1",
+          "en": "Is breakfast included?",
+          "ru": "Завтрак включён?"
+        },
+        {
+          "id": "en:v015:63:p2",
+          "en": "What time is check-out?",
+          "ru": "Во сколько нужно выехать?"
+        },
+        {
+          "id": "en:v015:63:p3",
+          "en": "Could I have a quiet room?",
+          "ru": "Можно мне тихий номер?"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-63-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Is breakfast include?",
+      "answers": [
+        "Is breakfast included?"
+      ],
+      "explanation": "В вопросе об уже включённой услуге нужна форма included.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Is breakfast include?",
+        "Is breakfast included?"
+      ],
+      "hint": "A reservation under the name… — бронь на имя. Is… included? помогает узнать, входит ли услуга в стоимость."
+    },
+    {
+      "id": "en-a1-63-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Можно мне тихий номер?». Можно написать вместо микрофона.",
+      "answers": [
+        "Could I have a quiet room?"
+      ],
+      "explanation": "Could I have a quiet room? — Можно мне тихий номер?",
+      "wordIds": [
+        "en:v015:63:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Could I have a quiet room?",
+      "recall": {
+        "phrase": "Could I have a quiet room?",
+        "meaning": "Можно мне тихий номер?"
+      }
+    },
+    {
+      "id": "en-a1-63-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: У меня бронь на имя Ли.",
+      "answers": [
+        "I have a reservation under the name Lee."
+      ],
+      "explanation": "A reservation under the name… — бронь на имя. Is… included? помогает узнать, входит ли услуга в стоимость.",
+      "wordIds": [
+        "en:v015:63:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I have a reservation under the name Lee.",
+        "meaning": "У меня бронь на имя Ли."
+      }
+    }
+  ]
+}

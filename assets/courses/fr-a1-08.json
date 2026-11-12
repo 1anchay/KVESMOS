@@ -1,0 +1,280 @@
+{
+  "id": "fr-a1-08",
+  "title": "Мой день · настоящее время",
+  "topic": "Мой день · настоящее время",
+  "order": 7,
+  "objective": "Рассказать о работе, учёбе и привычках.",
+  "guide": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+  "vocabulary": [
+    {
+      "id": "fr:v013:8:p0",
+      "en": "Je travaille le matin.",
+      "ru": "Я работаю по утрам."
+    },
+    {
+      "id": "fr:v013:8:p1",
+      "en": "J'étudie le français le soir.",
+      "ru": "По вечерам я учу французский."
+    },
+    {
+      "id": "fr:v013:8:p2",
+      "en": "Nous parlons français.",
+      "ru": "Мы говорим по-французски."
+    },
+    {
+      "id": "fr:v013:8:p3",
+      "en": "Elle travaille à Paris.",
+      "ru": "Она работает в Париже."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Je travaille le matin.",
+      "translation": "Я работаю по утрам.",
+      "explanation": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "J'étudie le français le soir.",
+      "translation": "По вечерам я учу французский.",
+      "explanation": "J'étudie le français le soir. — По вечерам я учу французский."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Nous parlons français.",
+      "translation": "Мы говорим по-французски.",
+      "explanation": "Nous parlons français. — Мы говорим по-французски."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Elle travaille à Paris.",
+      "translation": "Она работает в Париже.",
+      "explanation": "Elle travaille à Paris. — Она работает в Париже.\nС nous нужно окончание -ons: parlons.\nВерно: Nous parlons français."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-08-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Мы говорим по-французски."
+      ],
+      "explanation": "Nous parlons français. — Мы говорим по-французски.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [
+        "fr:v013:8:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Nous parlons français.",
+      "options": [
+        "По вечерам я учу французский.",
+        "Она работает в Париже.",
+        "Мы говорим по-французски."
+      ]
+    },
+    {
+      "id": "fr-a1-08-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я работаю по утрам. Выбери реплику.",
+      "answers": [
+        "Je travaille le matin."
+      ],
+      "explanation": "Je travaille le matin. — Я работаю по утрам.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [
+        "fr:v013:8:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Nous parlons français.",
+        "Je travaille le matin.",
+        "J'étudie le français le soir."
+      ]
+    },
+    {
+      "id": "fr-a1-08-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [
+        "fr:v013:8:p0",
+        "fr:v013:8:p1",
+        "fr:v013:8:p2",
+        "fr:v013:8:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "fr:v013:8:p0",
+          "en": "Je travaille le matin.",
+          "ru": "Я работаю по утрам."
+        },
+        {
+          "id": "fr:v013:8:p1",
+          "en": "J'étudie le français le soir.",
+          "ru": "По вечерам я учу французский."
+        },
+        {
+          "id": "fr:v013:8:p2",
+          "en": "Nous parlons français.",
+          "ru": "Мы говорим по-французски."
+        },
+        {
+          "id": "fr:v013:8:p3",
+          "en": "Elle travaille à Paris.",
+          "ru": "Она работает в Париже."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-08-e05",
+      "type": "dialogue",
+      "prompt": "Когда Мико учит французский?",
+      "answers": [
+        "По вечерам"
+      ],
+      "explanation": "Орби: Je travaille le matin.\nМико: J'étudie le français le soir.\nОрби: Nous parlons français.\nПо вечерам",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [
+        "fr:v013:8:p0",
+        "fr:v013:8:p1",
+        "fr:v013:8:p2",
+        "fr:v013:8:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Je travaille le matin.\nМико: J'étudie le français le soir.\nОрби: Nous parlons français.",
+      "options": [
+        "По утрам",
+        "По вечерам",
+        "Только по воскресеньям"
+      ]
+    },
+    {
+      "id": "fr-a1-08-e03",
+      "type": "order",
+      "prompt": "Составь реплику: По вечерам я учу французский.",
+      "answers": [
+        "J'étudie le français le soir."
+      ],
+      "explanation": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [
+        "fr:v013:8:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "J'étudie",
+        "le",
+        "français",
+        "le",
+        "soir"
+      ]
+    },
+    {
+      "id": "fr-a1-08-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Она работает в Париже.",
+      "answers": [
+        "Elle travaille à Paris."
+      ],
+      "explanation": "Elle travaille à Paris. — Она работает в Париже.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [
+        "fr:v013:8:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Elle travaille à Paris."
+    },
+    {
+      "id": "fr-a1-08-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Nous parle français.",
+      "answers": [
+        "Nous parlons français."
+      ],
+      "explanation": "С nous нужно окончание -ons: parlons.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Nous parle français.",
+        "Nous parlons français."
+      ]
+    },
+    {
+      "id": "fr-a1-08-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «J'étudie le français le soir.»?",
+      "answers": [
+        "По вечерам я учу французский."
+      ],
+      "explanation": "J'étudie le français le soir. — По вечерам я учу французский.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [
+        "fr:v013:8:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я работаю по утрам.",
+        "По вечерам я учу французский.",
+        "Она работает в Париже."
+      ]
+    },
+    {
+      "id": "fr-a1-08-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я работаю по утрам.",
+      "answers": [
+        "Je travaille le matin."
+      ],
+      "explanation": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [
+        "fr:v013:8:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Je travaille le matin.",
+        "meaning": "Я работаю по утрам."
+      }
+    },
+    {
+      "id": "fr-a1-08-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: У меня велосипед.",
+      "answers": [
+        "J'ai un vélo."
+      ],
+      "explanation": "Ты уже встречал эту реплику: J'ai un vélo. — У меня велосипед.",
+      "hint": "У глаголов на -er в настоящем времени с je окончание -e: travailler → je travaille, parler → je parle. Перед гласной j'étudie (étudier). С il/elle также -e, с nous — -ons. Le matin — по утрам, le soir — по вечерам.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Je suis à la maison.",
+        "J'ai un vélo.",
+        "Tu as faim ?",
+        "Je suis fatiguée."
+      ]
+    }
+  ]
+}

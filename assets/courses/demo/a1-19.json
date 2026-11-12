@@ -1,0 +1,248 @@
+{
+  "id": "a1-19",
+  "title": "Просим о помощи",
+  "topic": "Базовые разговорные ситуации",
+  "order": 18,
+  "vocabulary": [
+    {
+      "id": "en:help",
+      "en": "help",
+      "ru": "помогать"
+    },
+    {
+      "id": "en:please",
+      "en": "please",
+      "ru": "пожалуйста"
+    },
+    {
+      "id": "en:sorry",
+      "en": "sorry",
+      "ru": "извините"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Вежливо попросить помощи и переспросить.",
+  "guide": "Help — помогать. Can you…? — просьба к собеседнику, me — мне. Не путай с Can I have…? Excuse me привлекает внимание незнакомого человека. Sorry — извинение за ошибку или неудобство. Repeat — повторить. Эта готовая просьба поможет, если фраза прозвучала слишком быстро.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Нужна помощь",
+      "phrase": "Can you help me, please?",
+      "translation": "Можете мне помочь, пожалуйста?",
+      "explanation": "Help — помогать. Can you…? — просьба к собеседнику, me — мне. Не путай с Can I have…?"
+    },
+    {
+      "character": "miko",
+      "title": "Обратиться вежливо",
+      "phrase": "Excuse me. Where is the station?",
+      "translation": "Извините. Где вокзал?",
+      "explanation": "Excuse me привлекает внимание незнакомого человека. Sorry — извинение за ошибку или неудобство."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Переспросить",
+      "phrase": "Sorry. Can you repeat, please?",
+      "translation": "Извините. Можете повторить, пожалуйста?",
+      "explanation": "Repeat — повторить. Эта готовая просьба поможет, если фраза прозвучала слишком быстро."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-19-v3-01",
+      "type": "choice",
+      "prompt": "Попроси собеседника помочь.",
+      "answers": [
+        "Can you help me, please?"
+      ],
+      "explanation": "Просьба к собеседнику начинается с Can you.",
+      "hint": "Просьба к собеседнику начинается с Can you.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:help",
+        "en:please"
+      ],
+      "options": [
+        "Can you help me, please?",
+        "Can I have milk, please?",
+        "I am help."
+      ]
+    },
+    {
+      "id": "a1-19-v3-02",
+      "type": "pairs",
+      "prompt": "Соедини слова вежливого общения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Help — помощь или помогать, please — пожалуйста, sorry — извините.",
+      "hint": "Help — помощь или помогать, please — пожалуйста, sorry — извините.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:help",
+        "en:please",
+        "en:sorry"
+      ],
+      "pairs": [
+        {
+          "id": "en:help",
+          "en": "help",
+          "ru": "помогать"
+        },
+        {
+          "id": "en:please",
+          "en": "please",
+          "ru": "пожалуйста"
+        },
+        {
+          "id": "en:sorry",
+          "en": "sorry",
+          "ru": "извините"
+        }
+      ]
+    },
+    {
+      "id": "a1-19-v3-03",
+      "type": "order",
+      "prompt": "Попроси повторить.",
+      "answers": [
+        "Can you repeat please"
+      ],
+      "explanation": "Can you repeat, please — можете повторить?",
+      "hint": "Can you repeat, please — можете повторить?",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:please"
+      ],
+      "tokens": [
+        "Can",
+        "you",
+        "repeat",
+        "please"
+      ]
+    },
+    {
+      "id": "a1-19-v3-04",
+      "type": "gap",
+      "prompt": "Can you help ___, please?",
+      "answers": [
+        "me"
+      ],
+      "explanation": "Me означает «мне» в этой просьбе.",
+      "hint": "Me означает «мне» в этой просьбе.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:help",
+        "en:please"
+      ]
+    },
+    {
+      "id": "a1-19-v3-05",
+      "type": "listen",
+      "prompt": "О чём просит Орби?",
+      "answers": [
+        "Повторить."
+      ],
+      "explanation": "Repeat — повторить.",
+      "hint": "Repeat — повторить.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:please"
+      ],
+      "options": [
+        "Повторить.",
+        "Дать билет.",
+        "Повернуть налево."
+      ],
+      "audio": "Can you repeat, please?"
+    },
+    {
+      "id": "a1-19-v3-06",
+      "type": "correct",
+      "prompt": "Исправь: Can you me help, please?",
+      "answers": [
+        "Can you help me, please?"
+      ],
+      "explanation": "Порядок: help me, действие перед получателем помощи.",
+      "hint": "Порядок: help me, действие перед получателем помощи.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:help",
+        "en:please"
+      ]
+    },
+    {
+      "id": "a1-19-v3-07",
+      "type": "translate",
+      "prompt": "Вежливо привлеки внимание: «Извините».",
+      "answers": [
+        "Excuse me."
+      ],
+      "explanation": "Чтобы начать разговор, говорим Excuse me.",
+      "hint": "Чтобы начать разговор, говорим Excuse me.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": []
+    },
+    {
+      "id": "a1-19-v3-08",
+      "type": "dialogue",
+      "prompt": "Ты не расслышал указание. Попроси повторить.",
+      "answers": [
+        "Can you repeat, please?",
+        "Sorry. Can you repeat, please?"
+      ],
+      "explanation": "Повторить — repeat. Ошибаться и переспрашивать нормально.",
+      "hint": "Повторить — repeat. Ошибаться и переспрашивать нормально.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:please",
+        "en:sorry"
+      ],
+      "options": [
+        "Can you repeat, please?",
+        "Thank you.",
+        "I have a book."
+      ],
+      "scene": "Зиг: Go straight. Turn right.\nТы: …"
+    },
+    {
+      "id": "a1-19-v3-09",
+      "type": "review",
+      "prompt": "Вспомни: «Где вокзал?»",
+      "answers": [
+        "Where is the station?"
+      ],
+      "explanation": "Where is…? — где находится…?",
+      "hint": "Where is…? — где находится…?",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:station"
+      ]
+    },
+    {
+      "id": "a1-19-v3-10",
+      "type": "speak",
+      "prompt": "Самостоятельно попроси помощи.",
+      "answers": [
+        "Can you help me, please?"
+      ],
+      "explanation": "Can you help me, please — законченная просьба.",
+      "hint": "Can you help me, please — законченная просьба.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:help",
+        "en:please"
+      ],
+      "audio": "Can you help me, please?"
+    }
+  ]
+}

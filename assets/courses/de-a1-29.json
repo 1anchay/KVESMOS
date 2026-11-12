@@ -1,0 +1,296 @@
+{
+  "id": "de-a1-29",
+  "title": "Объяснить причину",
+  "topic": "Объяснить причину",
+  "order": 28,
+  "objective": "Коротко объяснить отказ или опоздание.",
+  "guide": "После weil спрягаемый глагол оказывается в конце придаточного.",
+  "vocabulary": [
+    {
+      "id": "de:v014:29:p0",
+      "en": "Ich bleibe zu Hause, weil ich krank bin.",
+      "ru": "Я остаюсь дома, потому что болен."
+    },
+    {
+      "id": "de:v014:29:p1",
+      "en": "Ich komme später, weil der Bus Verspätung hat.",
+      "ru": "Я приду позже, потому что автобус опаздывает."
+    },
+    {
+      "id": "de:v014:29:p2",
+      "en": "Kannst du mir die Aufgabe schicken?",
+      "ru": "Можешь прислать мне задание?"
+    },
+    {
+      "id": "de:v014:29:p3",
+      "en": "Danke für deine Hilfe.",
+      "ru": "Спасибо за твою помощь."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Объяснить причину",
+      "phrase": "Ich bleibe zu Hause, weil ich krank bin.",
+      "translation": "Я остаюсь дома, потому что болен.",
+      "explanation": "После weil спрягаемый глагол оказывается в конце придаточного."
+    },
+    {
+      "character": "miko",
+      "title": "Объяснить причину",
+      "phrase": "Ich komme später, weil der Bus Verspätung hat.",
+      "translation": "Я приду позже, потому что автобус опаздывает.",
+      "explanation": "Ich komme später, weil der Bus Verspätung hat. — Я приду позже, потому что автобус опаздывает."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Объяснить причину",
+      "phrase": "Kannst du mir die Aufgabe schicken?",
+      "translation": "Можешь прислать мне задание?",
+      "explanation": "Kannst du mir die Aufgabe schicken? — Можешь прислать мне задание?"
+    },
+    {
+      "character": "orbi",
+      "title": "Объяснить причину",
+      "phrase": "Danke für deine Hilfe.",
+      "translation": "Спасибо за твою помощь.",
+      "explanation": "Danke für deine Hilfe. — Спасибо за твою помощь."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich bleibe zu Hause, weil ich krank bin.",
+      "translation": "Я остаюсь дома, потому что болен.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я остаюсь дома, потому что болен.",
+      "options": [
+        "Можешь прислать мне задание?",
+        "Я остаюсь дома, потому что болен.",
+        "Спасибо за твою помощь."
+      ],
+      "explanation": "После weil спрягаемый глагол оказывается в конце придаточного."
+    },
+    {
+      "id": "apply",
+      "phrase": "Ich komme später, weil der Bus Verspätung hat.",
+      "translation": "Я приду позже, потому что автобус опаздывает.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Ich komme später, weil der Bus Verspätung hat.",
+      "tokens": [
+        "Ich",
+        "komme",
+        "später,",
+        "weil",
+        "der",
+        "Bus",
+        "Verspätung",
+        "hat."
+      ],
+      "character": "miko",
+      "explanation": "Ich komme später, weil der Bus Verspätung hat. — Я приду позже, потому что автобус опаздывает."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-29-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я остаюсь дома, потому что болен.»?",
+      "answers": [
+        "Ich bleibe zu Hause, weil ich krank bin."
+      ],
+      "explanation": "Ich bleibe zu Hause, weil ich krank bin. — Я остаюсь дома, потому что болен.",
+      "wordIds": [
+        "de:v014:29:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Ich komme später, weil der Bus Verspätung hat.",
+        "Danke für deine Hilfe.",
+        "Ich bleibe zu Hause, weil ich krank bin."
+      ],
+      "hint": "Ich bleibe zu Hause, weil ich krank bin. — Я остаюсь дома, потому что болен."
+    },
+    {
+      "id": "de-a1-29-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я приду позже, потому что автобус опаздывает.",
+      "answers": [
+        "Ich komme später, weil der Bus Verspätung hat."
+      ],
+      "explanation": "После weil спрягаемый глагол оказывается в конце придаточного.",
+      "wordIds": [
+        "de:v014:29:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Ich",
+        "komme",
+        "später,",
+        "weil",
+        "der",
+        "Bus",
+        "Verspätung",
+        "hat."
+      ],
+      "hint": "Ich komme später, weil der Bus Verspätung hat. — Я приду позже, потому что автобус опаздывает."
+    },
+    {
+      "id": "de-a1-29-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Можешь прислать мне задание?"
+      ],
+      "explanation": "Kannst du mir die Aufgabe schicken? — Можешь прислать мне задание?",
+      "wordIds": [
+        "de:v014:29:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Kannst du mir die Aufgabe schicken?",
+      "options": [
+        "Я остаюсь дома, потому что болен.",
+        "Можешь прислать мне задание?",
+        "Я приду позже, потому что автобус опаздывает."
+      ],
+      "hint": "Kannst du mir die Aufgabe schicken? — Можешь прислать мне задание?"
+    },
+    {
+      "id": "de-a1-29-e03",
+      "type": "dialogue",
+      "prompt": "Почему человек остаётся дома?",
+      "answers": [
+        "Он болен."
+      ],
+      "explanation": "Он болен. Коротко объяснить отказ или опоздание.",
+      "wordIds": [
+        "de:v014:29:p0",
+        "de:v014:29:p1",
+        "de:v014:29:p2",
+        "de:v014:29:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Warum bleibst du zu Hause?\nМико: Weil ich krank bin. Kannst du mir die Aufgabe schicken?",
+      "options": [
+        "Он ждёт автобус.",
+        "Он закончил задание.",
+        "Он болен."
+      ]
+    },
+    {
+      "id": "de-a1-29-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v014:29:p0",
+        "de:v014:29:p1",
+        "de:v014:29:p2",
+        "de:v014:29:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v014:29:p0",
+          "en": "Ich bleibe zu Hause, weil ich krank bin.",
+          "ru": "Я остаюсь дома, потому что болен."
+        },
+        {
+          "id": "de:v014:29:p1",
+          "en": "Ich komme später, weil der Bus Verspätung hat.",
+          "ru": "Я приду позже, потому что автобус опаздывает."
+        },
+        {
+          "id": "de:v014:29:p2",
+          "en": "Kannst du mir die Aufgabe schicken?",
+          "ru": "Можешь прислать мне задание?"
+        },
+        {
+          "id": "de:v014:29:p3",
+          "en": "Danke für deine Hilfe.",
+          "ru": "Спасибо за твою помощь."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-29-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Weil ich bin krank.",
+      "answers": [
+        "Weil ich krank bin."
+      ],
+      "explanation": "В придаточном с weil спрягаемый bin стоит последним.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Weil ich bin krank.",
+        "Weil ich krank bin."
+      ],
+      "hint": "После weil спрягаемый глагол оказывается в конце придаточного."
+    },
+    {
+      "id": "de-a1-29-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Спасибо за твою помощь.». Можно написать вместо микрофона.",
+      "answers": [
+        "Danke für deine Hilfe."
+      ],
+      "explanation": "Danke für deine Hilfe. — Спасибо за твою помощь.",
+      "wordIds": [
+        "de:v014:29:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Danke für deine Hilfe.",
+      "recall": {
+        "phrase": "Danke für deine Hilfe.",
+        "meaning": "Спасибо за твою помощь."
+      }
+    },
+    {
+      "id": "de-a1-29-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я остаюсь дома, потому что болен.",
+      "answers": [
+        "Ich bleibe zu Hause, weil ich krank bin."
+      ],
+      "explanation": "После weil спрягаемый глагол оказывается в конце придаточного.",
+      "wordIds": [
+        "de:v014:29:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich bleibe zu Hause, weil ich krank bin.",
+        "meaning": "Я остаюсь дома, потому что болен."
+      }
+    },
+    {
+      "id": "de-a1-29-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Больше всего я люблю пить воду.",
+      "answers": [
+        "Am liebsten trinke ich Wasser."
+      ],
+      "explanation": "Am liebsten trinke ich Wasser. — Больше всего я люблю пить воду.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich esse gern Gemüse.",
+        "Heute esse ich lieber Suppe.",
+        "Am liebsten trinke ich Wasser.",
+        "Was möchtest du lieber?"
+      ]
+    }
+  ]
+}

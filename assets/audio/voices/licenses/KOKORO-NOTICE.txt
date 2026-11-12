@@ -1,0 +1,22 @@
+KVESMOS synthetic English speech pack, 2026-10-25
+
+These are locally synthesized original lesson lines, not studio recordings,
+human actor performances or clones of public figures. No external speech API
+is used at playback. Normal and slow versions were generated separately.
+
+Model: Kokoro-82M v1.0 by hexgrad, published under Apache License 2.0.
+https://huggingface.co/hexgrad/Kokoro-82M
+https://huggingface.co/hexgrad/Kokoro-82M/blob/main/README.md
+Voice styles: af_heart (Orbi), am_michael (Miko), am_puck (Zig).
+https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md
+ONNX export: https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.1
+
+The model and voice weights are not shipped in this application. Attribution
+and the Apache-2.0 license are included for provenance. Generated speech is
+distributed with the original KVESMOS course under the repository license.
+This notice does not imply endorsement by the model authors.
+
+Model card training-data acknowledgments include Koniwa tnc (CC BY 3.0) and
+SIWIS (CC BY 4.0). We do not redistribute their source recordings.
+Build recipe, exact model/style hashes and audio-file hashes:
+tool/render_voice_pack.py and docs/audio/voice-pack-checksums.json.

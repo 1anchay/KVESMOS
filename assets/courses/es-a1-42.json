@@ -1,0 +1,253 @@
+{
+  "id": "es-a1-42",
+  "title": "Уточнить бронь письмом",
+  "topic": "Просьбы и сообщения",
+  "order": 41,
+  "objective": "Соединить просьбу, дату и уточнение в коротком сообщении.",
+  "guide": "Para + дата или число людей уточняет бронь. ¿Podría confirmar…? — вежливая просьба подтвердить детали.",
+  "vocabulary": [
+    {
+      "id": "es:v015:42:p0",
+      "en": "Quisiera confirmar mi reserva.",
+      "ru": "Я хотел бы подтвердить свою бронь."
+    },
+    {
+      "id": "es:v015:42:p1",
+      "en": "Llegamos el viernes por la tarde.",
+      "ru": "Мы приезжаем в пятницу днём."
+    },
+    {
+      "id": "es:v015:42:p2",
+      "en": "Reservé una habitación para dos personas.",
+      "ru": "Я забронировал номер на двоих."
+    },
+    {
+      "id": "es:v015:42:p3",
+      "en": "¿Podría confirmar el precio?",
+      "ru": "Не могли бы вы подтвердить цену?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Уточнить бронь письмом",
+      "phrase": "Quisiera confirmar mi reserva.",
+      "translation": "Я хотел бы подтвердить свою бронь.",
+      "explanation": "Para + дата или число людей уточняет бронь. ¿Podría confirmar…? — вежливая просьба подтвердить детали."
+    },
+    {
+      "character": "miko",
+      "title": "Уточнить бронь письмом",
+      "phrase": "Llegamos el viernes por la tarde.",
+      "translation": "Мы приезжаем в пятницу днём.",
+      "explanation": "Llegamos el viernes por la tarde. — Мы приезжаем в пятницу днём."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Уточнить бронь письмом",
+      "phrase": "Reservé una habitación para dos personas.",
+      "translation": "Я забронировал номер на двоих.",
+      "explanation": "Reservé una habitación para dos personas. — Я забронировал номер на двоих."
+    },
+    {
+      "character": "orbi",
+      "title": "Уточнить бронь письмом",
+      "phrase": "¿Podría confirmar el precio?",
+      "translation": "Не могли бы вы подтвердить цену?",
+      "explanation": "¿Podría confirmar el precio? — Не могли бы вы подтвердить цену?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Quisiera confirmar mi reserva.",
+      "translation": "Я хотел бы подтвердить свою бронь.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы подтвердить свою бронь.",
+      "options": [
+        "Я забронировал номер на двоих.",
+        "Я хотел бы подтвердить свою бронь.",
+        "Не могли бы вы подтвердить цену?"
+      ],
+      "explanation": "Para + дата или число людей уточняет бронь. ¿Podría confirmar…? — вежливая просьба подтвердить детали."
+    },
+    {
+      "id": "apply",
+      "phrase": "Llegamos el viernes por la tarde.",
+      "translation": "Мы приезжаем в пятницу днём.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Llegamos el viernes por la tarde.",
+      "tokens": [
+        "Llegamos",
+        "el",
+        "viernes",
+        "por",
+        "la",
+        "tarde."
+      ],
+      "character": "miko",
+      "explanation": "Llegamos el viernes por la tarde. — Мы приезжаем в пятницу днём."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-42-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можешь прислать мне сообщение?",
+      "answers": [
+        "¿Me puedes mandar el mensaje?"
+      ],
+      "explanation": "¿Me puedes mandar el mensaje? — Можешь прислать мне сообщение?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Te llamo esta tarde.",
+        "¿Me ayudas con la reserva?",
+        "Te envío la dirección.",
+        "¿Me puedes mandar el mensaje?"
+      ]
+    },
+    {
+      "id": "es-a1-42-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы подтвердить свою бронь.»?",
+      "answers": [
+        "Quisiera confirmar mi reserva."
+      ],
+      "explanation": "Quisiera confirmar mi reserva. — Я хотел бы подтвердить свою бронь.",
+      "wordIds": [
+        "es:v015:42:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Llegamos el viernes por la tarde.",
+        "¿Podría confirmar el precio?",
+        "Quisiera confirmar mi reserva."
+      ],
+      "hint": "Quisiera confirmar mi reserva. — Я хотел бы подтвердить свою бронь."
+    },
+    {
+      "id": "es-a1-42-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Мы приезжаем в пятницу днём.",
+      "answers": [
+        "Llegamos el viernes por la tarde."
+      ],
+      "explanation": "Para + дата или число людей уточняет бронь. ¿Podría confirmar…? — вежливая просьба подтвердить детали.",
+      "wordIds": [
+        "es:v015:42:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Llegamos",
+        "el",
+        "viernes",
+        "por",
+        "la",
+        "tarde."
+      ],
+      "hint": "Llegamos el viernes por la tarde. — Мы приезжаем в пятницу днём."
+    },
+    {
+      "id": "es-a1-42-e04",
+      "type": "dialogue",
+      "prompt": "Что входит в бронь?",
+      "answers": [
+        "Завтрак."
+      ],
+      "explanation": "В диалоге: Quisiera confirmar mi reserva para el viernes. / Sí, tenemos una habitación para dos personas. El desayuno está incluido. Поэтому: Завтрак.",
+      "wordIds": [
+        "es:v015:42:p0",
+        "es:v015:42:p1",
+        "es:v015:42:p2",
+        "es:v015:42:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Quisiera confirmar mi reserva para el viernes.\nМико: Sí, tenemos una habitación para dos personas. El desayuno está incluido.",
+      "options": [
+        "Ужин.",
+        "Поездка на автобусе.",
+        "Завтрак."
+      ]
+    },
+    {
+      "id": "es-a1-42-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я забронировал номер на двоих."
+      ],
+      "explanation": "Reservé una habitación para dos personas. — Я забронировал номер на двоих.",
+      "wordIds": [
+        "es:v015:42:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Reservé una habitación para dos personas.",
+      "options": [
+        "Я хотел бы подтвердить свою бронь.",
+        "Я забронировал номер на двоих.",
+        "Мы приезжаем в пятницу днём."
+      ],
+      "hint": "Reservé una habitación para dos personas. — Я забронировал номер на двоих."
+    },
+    {
+      "id": "es-a1-42-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Reservé una habitación por dos personas.",
+      "answers": [
+        "Reservé una habitación para dos personas."
+      ],
+      "explanation": "Для назначения «на двоих» здесь нужен para. Por не выражает вместимость номера.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Reservé una habitación por dos personas.",
+        "Reservé una habitación para dos personas."
+      ],
+      "hint": "Para + дата или число людей уточняет бронь. ¿Podría confirmar…? — вежливая просьба подтвердить детали."
+    },
+    {
+      "id": "es-a1-42-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Не могли бы вы подтвердить цену?». Можно написать вместо микрофона.",
+      "answers": [
+        "¿Podría confirmar el precio?"
+      ],
+      "explanation": "¿Podría confirmar el precio? — Не могли бы вы подтвердить цену?",
+      "wordIds": [
+        "es:v015:42:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "¿Podría confirmar el precio?",
+      "recall": {
+        "phrase": "¿Podría confirmar el precio?",
+        "meaning": "Не могли бы вы подтвердить цену?"
+      }
+    },
+    {
+      "id": "es-a1-42-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы подтвердить свою бронь.",
+      "answers": [
+        "Quisiera confirmar mi reserva."
+      ],
+      "explanation": "Para + дата или число людей уточняет бронь. ¿Podría confirmar…? — вежливая просьба подтвердить детали.",
+      "wordIds": [
+        "es:v015:42:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Quisiera confirmar mi reserva.",
+        "meaning": "Я хотел бы подтвердить свою бронь."
+      }
+    }
+  ]
+}

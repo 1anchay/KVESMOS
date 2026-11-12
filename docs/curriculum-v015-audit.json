@@ -1,0 +1,30 @@
+{
+  "courses": {
+    "en": {
+      "lessons": 72,
+      "exercises": 672
+    },
+    "es": {
+      "lessons": 42,
+      "exercises": 384
+    },
+    "de": {
+      "lessons": 42,
+      "exercises": 384
+    },
+    "fr": {
+      "lessons": 32,
+      "exercises": 290
+    },
+    "zh": {
+      "lessons": 32,
+      "exercises": 290
+    }
+  },
+  "totalLessons": 220,
+  "totalExercises": 2020,
+  "newLessons": 60,
+  "newDialogueScenes": 60,
+  "unchangedOldPayloads": 180,
+  "externalNativeSpeakerReview": false
+}

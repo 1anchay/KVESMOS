@@ -1,0 +1,251 @@
+{
+  "id": "en-a1-66",
+  "title": "Как давно это длится",
+  "topic": "Время и самочувствие",
+  "order": 65,
+  "objective": "Сообщить длительность состояния без постановки диагноза.",
+  "guide": "For + период: for two days. Since + точка начала: since Monday. I've had связывает прошлое с настоящим.",
+  "vocabulary": [
+    {
+      "id": "en:v015:66:p0",
+      "en": "I've had a headache for two days.",
+      "ru": "У меня болит голова уже два дня."
+    },
+    {
+      "id": "en:v015:66:p1",
+      "en": "I've felt tired since Monday.",
+      "ru": "Я чувствую усталость с понедельника."
+    },
+    {
+      "id": "en:v015:66:p2",
+      "en": "How long have you felt like this?",
+      "ru": "Как давно вы так себя чувствуете?"
+    },
+    {
+      "id": "en:v015:66:p3",
+      "en": "I'd like to speak to a doctor.",
+      "ru": "Я хотел бы поговорить с врачом."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Как давно это длится",
+      "phrase": "I've had a headache for two days.",
+      "translation": "У меня болит голова уже два дня.",
+      "explanation": "For + период: for two days. Since + точка начала: since Monday. I've had связывает прошлое с настоящим."
+    },
+    {
+      "character": "miko",
+      "title": "Как давно это длится",
+      "phrase": "I've felt tired since Monday.",
+      "translation": "Я чувствую усталость с понедельника.",
+      "explanation": "I've felt tired since Monday. — Я чувствую усталость с понедельника."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как давно это длится",
+      "phrase": "How long have you felt like this?",
+      "translation": "Как давно вы так себя чувствуете?",
+      "explanation": "How long have you felt like this? — Как давно вы так себя чувствуете?"
+    },
+    {
+      "character": "orbi",
+      "title": "Как давно это длится",
+      "phrase": "I'd like to speak to a doctor.",
+      "translation": "Я хотел бы поговорить с врачом.",
+      "explanation": "I'd like to speak to a doctor. — Я хотел бы поговорить с врачом."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I've had a headache for two days.",
+      "translation": "У меня болит голова уже два дня.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "У меня болит голова уже два дня.",
+      "options": [
+        "Как давно вы так себя чувствуете?",
+        "У меня болит голова уже два дня.",
+        "Я хотел бы поговорить с врачом."
+      ],
+      "explanation": "For + период: for two days. Since + точка начала: since Monday. I've had связывает прошлое с настоящим."
+    },
+    {
+      "id": "apply",
+      "phrase": "I've felt tired since Monday.",
+      "translation": "Я чувствую усталость с понедельника.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I've felt tired since Monday.",
+      "tokens": [
+        "I've",
+        "felt",
+        "tired",
+        "since",
+        "Monday."
+      ],
+      "character": "miko",
+      "explanation": "I've felt tired since Monday. — Я чувствую усталость с понедельника."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-66-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Есть свободное время во вторник утром?",
+      "answers": [
+        "Is Tuesday morning available?"
+      ],
+      "explanation": "Is Tuesday morning available? — Есть свободное время во вторник утром?",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "I'd like to make an appointment.",
+        "Is Tuesday morning available?",
+        "That time works for me.",
+        "Could we move it to Friday?"
+      ]
+    },
+    {
+      "id": "en-a1-66-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «У меня болит голова уже два дня.»?",
+      "answers": [
+        "I've had a headache for two days."
+      ],
+      "explanation": "I've had a headache for two days. — У меня болит голова уже два дня.",
+      "wordIds": [
+        "en:v015:66:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I've felt tired since Monday.",
+        "I'd like to speak to a doctor.",
+        "I've had a headache for two days."
+      ],
+      "hint": "I've had a headache for two days. — У меня болит голова уже два дня."
+    },
+    {
+      "id": "en-a1-66-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Я чувствую усталость с понедельника.",
+      "answers": [
+        "I've felt tired since Monday."
+      ],
+      "explanation": "For + период: for two days. Since + точка начала: since Monday. I've had связывает прошлое с настоящим.",
+      "wordIds": [
+        "en:v015:66:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I've",
+        "felt",
+        "tired",
+        "since",
+        "Monday."
+      ],
+      "hint": "I've felt tired since Monday. — Я чувствую усталость с понедельника."
+    },
+    {
+      "id": "en-a1-66-e04",
+      "type": "dialogue",
+      "prompt": "С какого дня собеседник чувствует усталость?",
+      "answers": [
+        "С понедельника."
+      ],
+      "explanation": "В диалоге: How long have you felt like this? / I've felt tired since Monday. Поэтому: С понедельника.",
+      "wordIds": [
+        "en:v015:66:p0",
+        "en:v015:66:p1",
+        "en:v015:66:p2",
+        "en:v015:66:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: How long have you felt like this?\nМико: I've felt tired since Monday.",
+      "options": [
+        "Со вторника.",
+        "С пятницы.",
+        "С понедельника."
+      ]
+    },
+    {
+      "id": "en-a1-66-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Как давно вы так себя чувствуете?"
+      ],
+      "explanation": "How long have you felt like this? — Как давно вы так себя чувствуете?",
+      "wordIds": [
+        "en:v015:66:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "How long have you felt like this?",
+      "options": [
+        "У меня болит голова уже два дня.",
+        "Как давно вы так себя чувствуете?",
+        "Я чувствую усталость с понедельника."
+      ],
+      "hint": "How long have you felt like this? — Как давно вы так себя чувствуете?"
+    },
+    {
+      "id": "en-a1-66-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I've had a headache since two days.",
+      "answers": [
+        "I've had a headache for two days."
+      ],
+      "explanation": "Two days — длительность, поэтому for. Since требует точки начала, например Monday.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I've had a headache since two days.",
+        "I've had a headache for two days."
+      ],
+      "hint": "For + период: for two days. Since + точка начала: since Monday. I've had связывает прошлое с настоящим."
+    },
+    {
+      "id": "en-a1-66-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я хотел бы поговорить с врачом.». Можно написать вместо микрофона.",
+      "answers": [
+        "I'd like to speak to a doctor."
+      ],
+      "explanation": "I'd like to speak to a doctor. — Я хотел бы поговорить с врачом.",
+      "wordIds": [
+        "en:v015:66:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I'd like to speak to a doctor.",
+      "recall": {
+        "phrase": "I'd like to speak to a doctor.",
+        "meaning": "Я хотел бы поговорить с врачом."
+      }
+    },
+    {
+      "id": "en-a1-66-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: У меня болит голова уже два дня.",
+      "answers": [
+        "I've had a headache for two days."
+      ],
+      "explanation": "For + период: for two days. Since + точка начала: since Monday. I've had связывает прошлое с настоящим.",
+      "wordIds": [
+        "en:v015:66:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I've had a headache for two days.",
+        "meaning": "У меня болит голова уже два дня."
+      }
+    }
+  ]
+}

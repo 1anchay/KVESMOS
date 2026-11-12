@@ -1,0 +1,289 @@
+{
+  "id": "fr-a1-02",
+  "title": "Je m’appelle · знакомимся",
+  "topic": "Je m’appelle · знакомимся",
+  "order": 1,
+  "objective": "Назвать своё имя и спросить имя друга.",
+  "guide": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+  "vocabulary": [
+    {
+      "id": "fr:l2-w1",
+      "en": "le prénom",
+      "ru": "имя"
+    },
+    {
+      "id": "fr:l2-w2",
+      "en": "la Russie",
+      "ru": "Россия"
+    },
+    {
+      "id": "fr:l2-w3",
+      "en": "la France",
+      "ru": "Франция"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Встречаем фразу",
+      "phrase": "Je m’appelle Anna.",
+      "translation": "Меня зовут Анна.",
+      "explanation": "Je m’appelle Anna. — Меня зовут Анна.\nle prénom · имя; la Russie · Россия; la France · Франция"
+    },
+    {
+      "character": "miko",
+      "title": "Слушаем друга",
+      "phrase": "Comment tu t’appelles ?",
+      "translation": "Как тебя зовут?",
+      "explanation": "Comment tu t’appelles ? — Как тебя зовут?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Разбираемся вместе",
+      "phrase": "Je viens de Russie.",
+      "translation": "Я из России.",
+      "explanation": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь твой ход",
+      "phrase": "Enchantée !",
+      "translation": "Очень приятно! (говорит женщина)",
+      "explanation": "Enchantée ! — Очень приятно! (говорит женщина)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-02-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Меня зовут Анна.»",
+      "answers": [
+        "Je m’appelle Anna."
+      ],
+      "explanation": "Je m’appelle Anna. — Меня зовут Анна.",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "Comment tu t’appelles ?",
+        "Je m’appelle Anna.",
+        "Enchantée !"
+      ]
+    },
+    {
+      "id": "fr-a1-02-e02",
+      "type": "choice",
+      "prompt": "Что означает «Comment tu t’appelles ?»?",
+      "answers": [
+        "Как тебя зовут?"
+      ],
+      "explanation": "Comment tu t’appelles ? — Как тебя зовут?",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "options": [
+        "Я из России.",
+        "Очень приятно! (говорит женщина)",
+        "Как тебя зовут?"
+      ]
+    },
+    {
+      "id": "fr-a1-02-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Я из России.»",
+      "answers": [
+        "Je viens de Russie"
+      ],
+      "explanation": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "tokens": [
+        "Je",
+        "viens",
+        "de",
+        "Russie"
+      ]
+    },
+    {
+      "id": "fr-a1-02-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова и значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "le prénom — имя; la Russie — Россия; la France — Франция",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "pairs": [
+        {
+          "id": "fr:l2-w1",
+          "en": "le prénom",
+          "ru": "имя"
+        },
+        {
+          "id": "fr:l2-w2",
+          "en": "la Russie",
+          "ru": "Россия"
+        },
+        {
+          "id": "fr:l2-w3",
+          "en": "la France",
+          "ru": "Франция"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-02-e05",
+      "type": "listen",
+      "prompt": "Послушай или открой текст и выбери значение.",
+      "answers": [
+        "Очень приятно! (говорит женщина)"
+      ],
+      "explanation": "Enchantée ! — Очень приятно! (говорит женщина)",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "miko",
+      "phase": "Практика",
+      "audio": "Enchantée !",
+      "options": [
+        "Меня зовут Анна.",
+        "Очень приятно! (говорит женщина)",
+        "Я из России."
+      ]
+    },
+    {
+      "id": "fr-a1-02-e06",
+      "type": "gap",
+      "prompt": "Je ___ Anna.",
+      "answers": [
+        "m’appelle"
+      ],
+      "explanation": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "options": [
+        "t’appelles",
+        "m’appelle",
+        "s’appelle"
+      ]
+    },
+    {
+      "id": "fr-a1-02-e07",
+      "type": "dialogue",
+      "prompt": "Мико: «Comment tu t’appelles ?» Представься как Анна.",
+      "answers": [
+        "Je m’appelle Anna."
+      ],
+      "explanation": "Je m’appelle Anna. — Меня зовут Анна.",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "orbi",
+      "phase": "Практика",
+      "options": [
+        "Je m’appelle Anna.",
+        "Comment tu t’appelles ?",
+        "Je viens de Russie.",
+        "Enchantée !"
+      ],
+      "scene": "Орби: Мико: «Comment tu t’appelles ?» Представься как Анна.\nМико: …"
+    },
+    {
+      "id": "fr-a1-02-e08",
+      "type": "choice",
+      "prompt": "Найди перевод «le prénom».",
+      "answers": [
+        "имя"
+      ],
+      "explanation": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "miko",
+      "phase": "Закрепление",
+      "options": [
+        "имя",
+        "Россия",
+        "Франция"
+      ]
+    },
+    {
+      "id": "fr-a1-02-e09",
+      "type": "translate",
+      "prompt": "Вспомни: «Очень приятно! (говорит женщина)»",
+      "answers": [
+        "Enchantée !"
+      ],
+      "explanation": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Закрепление"
+    },
+    {
+      "id": "fr-a1-02-e10",
+      "type": "review",
+      "prompt": "Финал разговора: Мико: «Comment tu t’appelles ?» Представься как Анна.",
+      "answers": [
+        "Je m’appelle Anna."
+      ],
+      "explanation": "Теперь ты умеешь: назвать своё имя и спросить имя друга.",
+      "hint": "Je m’appelle… — меня зовут… Перед гласной me сокращается до m’ (апостроф сохраняется). Tu t’appelles… — тебя зовут… Enchanté говорит мужчина, enchantée — женщина; звучат одинаково. Здесь представляется Анна: enchantée.",
+      "wordIds": [
+        "fr:l2-w1",
+        "fr:l2-w2",
+        "fr:l2-w3"
+      ],
+      "character": "orbi",
+      "phase": "Закрепление",
+      "options": [
+        "Enchantée !",
+        "Je viens de Russie.",
+        "Comment tu t’appelles ?",
+        "Je m’appelle Anna."
+      ]
+    }
+  ]
+}

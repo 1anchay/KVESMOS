@@ -1,0 +1,278 @@
+{
+  "id": "fr-a1-11",
+  "title": "Встреча · время и отказ",
+  "topic": "Встреча · время и отказ",
+  "order": 10,
+  "objective": "Договориться о встрече и вежливо отказаться.",
+  "guide": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+  "vocabulary": [
+    {
+      "id": "fr:v013:11:p0",
+      "en": "On se retrouve demain ?",
+      "ru": "Встретимся завтра?"
+    },
+    {
+      "id": "fr:v013:11:p1",
+      "en": "À quelle heure ?",
+      "ru": "Во сколько?"
+    },
+    {
+      "id": "fr:v013:11:p2",
+      "en": "À dix heures devant la gare.",
+      "ru": "В десять часов перед вокзалом."
+    },
+    {
+      "id": "fr:v013:11:p3",
+      "en": "Je ne peux pas venir demain.",
+      "ru": "Я не могу прийти завтра."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "On se retrouve demain ?",
+      "translation": "Встретимся завтра?",
+      "explanation": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "À quelle heure ?",
+      "translation": "Во сколько?",
+      "explanation": "À quelle heure ? — Во сколько?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "À dix heures devant la gare.",
+      "translation": "В десять часов перед вокзалом.",
+      "explanation": "À dix heures devant la gare. — В десять часов перед вокзалом."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Je ne peux pas venir demain.",
+      "translation": "Я не могу прийти завтра.",
+      "explanation": "Je ne peux pas venir demain. — Я не могу прийти завтра.\nNe ставим перед peux, pas — после: je ne peux pas.\nВерно: Je ne peux pas venir demain."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-11-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "В десять часов перед вокзалом."
+      ],
+      "explanation": "À dix heures devant la gare. — В десять часов перед вокзалом.",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [
+        "fr:v013:11:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "À dix heures devant la gare.",
+      "options": [
+        "Во сколько?",
+        "Я не могу прийти завтра.",
+        "В десять часов перед вокзалом."
+      ]
+    },
+    {
+      "id": "fr-a1-11-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Встретимся завтра? Выбери реплику.",
+      "answers": [
+        "On se retrouve demain ?"
+      ],
+      "explanation": "On se retrouve demain ? — Встретимся завтра?",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [
+        "fr:v013:11:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "À dix heures devant la gare.",
+        "On se retrouve demain ?",
+        "À quelle heure ?"
+      ]
+    },
+    {
+      "id": "fr-a1-11-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [
+        "fr:v013:11:p0",
+        "fr:v013:11:p1",
+        "fr:v013:11:p2",
+        "fr:v013:11:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "fr:v013:11:p0",
+          "en": "On se retrouve demain ?",
+          "ru": "Встретимся завтра?"
+        },
+        {
+          "id": "fr:v013:11:p1",
+          "en": "À quelle heure ?",
+          "ru": "Во сколько?"
+        },
+        {
+          "id": "fr:v013:11:p2",
+          "en": "À dix heures devant la gare.",
+          "ru": "В десять часов перед вокзалом."
+        },
+        {
+          "id": "fr:v013:11:p3",
+          "en": "Je ne peux pas venir demain.",
+          "ru": "Я не могу прийти завтра."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-11-e05",
+      "type": "dialogue",
+      "prompt": "Удалось ли договориться на завтра?",
+      "answers": [
+        "Нет, Мико не может прийти"
+      ],
+      "explanation": "Орби: On se retrouve demain ?\nМико: À quelle heure ?\nОрби: À dix heures devant la gare.\nМико: Je ne peux pas venir demain.\nНет, Мико не может прийти",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [
+        "fr:v013:11:p0",
+        "fr:v013:11:p1",
+        "fr:v013:11:p2",
+        "fr:v013:11:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: On se retrouve demain ?\nМико: À quelle heure ?\nОрби: À dix heures devant la gare.\nМико: Je ne peux pas venir demain.",
+      "options": [
+        "Да, в десять",
+        "Нет, Мико не может прийти",
+        "Да, возле кафе"
+      ]
+    },
+    {
+      "id": "fr-a1-11-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Во сколько?",
+      "answers": [
+        "À quelle heure ?"
+      ],
+      "explanation": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [
+        "fr:v013:11:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "À",
+        "quelle",
+        "heure"
+      ]
+    },
+    {
+      "id": "fr-a1-11-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Я не могу прийти завтра.",
+      "answers": [
+        "Je ne peux pas venir demain."
+      ],
+      "explanation": "Je ne peux pas venir demain. — Я не могу прийти завтра.",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [
+        "fr:v013:11:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Je ne peux pas venir demain."
+    },
+    {
+      "id": "fr-a1-11-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je ne pas peux venir demain.",
+      "answers": [
+        "Je ne peux pas venir demain."
+      ],
+      "explanation": "Ne ставим перед peux, pas — после: je ne peux pas.",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Je ne pas peux venir demain.",
+        "Je ne peux pas venir demain."
+      ]
+    },
+    {
+      "id": "fr-a1-11-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «À quelle heure ?»?",
+      "answers": [
+        "Во сколько?"
+      ],
+      "explanation": "À quelle heure ? — Во сколько?",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [
+        "fr:v013:11:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Встретимся завтра?",
+        "Во сколько?",
+        "Я не могу прийти завтра."
+      ]
+    },
+    {
+      "id": "fr-a1-11-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Встретимся завтра?",
+      "answers": [
+        "On se retrouve demain ?"
+      ],
+      "explanation": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [
+        "fr:v013:11:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "On se retrouve demain ?",
+        "meaning": "Встретимся завтра?"
+      }
+    },
+    {
+      "id": "fr-a1-11-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Сколько стоят яблоки?",
+      "answers": [
+        "Combien coûtent les pommes ?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: Combien coûtent les pommes ? — Сколько стоят яблоки?",
+      "hint": "On se retrouve…? — встретимся…? À quelle heure ? — во сколько? À dix heures — в десять часов. Je peux — я могу, je ne peux pas — я не могу. В письменной полной форме отрицание окружает глагол: ne + peux + pas.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Combien coûtent les pommes ?",
+        "Je voudrais un kilo de pommes.",
+        "Ça coûte trois euros.",
+        "Je prends deux kilos."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "id": "de-a1-04",
+  "title": "Числа и возраст",
+  "topic": "Числа и возраст",
+  "order": 3,
+  "objective": "Посчитать предметы и назвать возраст.",
+  "guide": "Eins, zwei, drei, vier, fünf — один, два, три, четыре, пять. Перед Buch: ein Buch. Возраст выражаем с sein: Ich bin… Jahre alt. В zwei Bücher меняются гласная и окончание слова Buch.",
+  "vocabulary": [
+    {
+      "id": "de:zwei",
+      "en": "zwei",
+      "ru": "два"
+    },
+    {
+      "id": "de:drei",
+      "en": "drei",
+      "ru": "три"
+    },
+    {
+      "id": "de:fünf",
+      "en": "fünf",
+      "ru": "пять"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-04-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «У меня две книги.»",
+      "answers": [
+        "Ich habe zwei Bücher."
+      ],
+      "explanation": "Ich habe zwei Bücher. — У меня две книги.",
+      "hint": "Ich habe zwei Bücher. — У меня две книги.",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Hier sind drei Lampen.",
+        "Ich habe zwei Bücher.",
+        "Wie alt bist du?"
+      ]
+    },
+    {
+      "id": "de-a1-04-e02",
+      "type": "choice",
+      "prompt": "Что означает «Hier sind drei Lampen.»?",
+      "answers": [
+        "Здесь три лампы."
+      ],
+      "explanation": "Hier sind drei Lampen. — Здесь три лампы.",
+      "hint": "Hier sind drei Lampen. — Здесь три лампы.",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Мне двадцать лет.",
+        "Сколько тебе лет?",
+        "Здесь три лампы."
+      ]
+    },
+    {
+      "id": "de-a1-04-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Мне двадцать лет.»",
+      "answers": [
+        "Ich bin zwanzig Jahre alt"
+      ],
+      "explanation": "Ich bin zwanzig Jahre alt. — Мне двадцать лет.",
+      "hint": "Ich bin zwanzig Jahre alt. — Мне двадцать лет.",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Ich",
+        "bin",
+        "zwanzig",
+        "Jahre",
+        "alt"
+      ]
+    },
+    {
+      "id": "de-a1-04-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "zwei — два; drei — три; fünf — пять",
+      "hint": "zwei — два; drei — три; fünf — пять",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "de:zwei",
+          "en": "zwei",
+          "ru": "два"
+        },
+        {
+          "id": "de:drei",
+          "en": "drei",
+          "ru": "три"
+        },
+        {
+          "id": "de:fünf",
+          "en": "fünf",
+          "ru": "пять"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-04-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Сколько тебе лет?"
+      ],
+      "explanation": "Wie alt bist du? — Сколько тебе лет?",
+      "hint": "Wie alt bist du? — Сколько тебе лет?",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Wie alt bist du?",
+      "options": [
+        "У меня две книги.",
+        "Сколько тебе лет?",
+        "Мне двадцать лет."
+      ]
+    },
+    {
+      "id": "de-a1-04-e06",
+      "type": "gap",
+      "prompt": "Мне двадцать лет: Ich ___ zwanzig Jahre alt.",
+      "answers": [
+        "bin"
+      ],
+      "explanation": "Eins, zwei, drei, vier, fünf — один, два, три, четыре, пять. Перед Buch: ein Buch. Возраст выражаем с sein: Ich bin… Jahre alt. В zwei Bücher меняются гласная и окончание слова Buch.",
+      "hint": "Eins, zwei, drei, vier, fünf — один, два, три, четыре, пять. Перед Buch: ein Buch. Возраст выражаем с sein: Ich bin… Jahre alt. В zwei Bücher меняются гласная и окончание слова Buch.",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "habe",
+        "bin",
+        "bist"
+      ]
+    },
+    {
+      "id": "de-a1-04-e07",
+      "type": "dialogue",
+      "prompt": "Друг: «Wie alt bist du?» Назови возраст — двадцать лет.",
+      "answers": [
+        "Ich bin zwanzig Jahre alt."
+      ],
+      "explanation": "В этой ситуации подходит: Ich bin zwanzig Jahre alt.",
+      "hint": "В этой ситуации подходит: Ich bin zwanzig Jahre alt.",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Ich habe zwei Bücher.",
+        "Hier sind drei Lampen.",
+        "Ich bin zwanzig Jahre alt."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "de-a1-04-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Ich habe zwanzig Jahre alt.»",
+      "answers": [
+        "Ich bin zwanzig Jahre alt."
+      ],
+      "explanation": "Для возраста используем bin… Jahre alt, а не habe.",
+      "hint": "Для возраста используем bin… Jahre alt, а не habe.",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "de-a1-04-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Сколько тебе лет?»",
+      "answers": [
+        "Wie alt bist du?"
+      ],
+      "explanation": "Wie alt bist du? — Сколько тебе лет?",
+      "hint": "Wie alt bist du? — Сколько тебе лет?",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "de-a1-04-e10",
+      "type": "review",
+      "prompt": "Финал: Друг: «Wie alt bist du?» Назови возраст — двадцать лет.",
+      "answers": [
+        "Ich bin zwanzig Jahre alt."
+      ],
+      "explanation": "Теперь ты умеешь: посчитать предметы и назвать возраст.",
+      "hint": "Теперь ты умеешь: посчитать предметы и назвать возраст.",
+      "wordIds": [
+        "de:zwei",
+        "de:drei",
+        "de:fünf"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Ich bin zwanzig Jahre alt.",
+        "Hier sind drei Lampen.",
+        "Ich habe zwei Bücher."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Ich habe zwei Bücher.",
+      "translation": "У меня две книги.",
+      "explanation": "Ситуация: Посчитать предметы и назвать возраст. Ich habe zwei Bücher. — У меня две книги."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Hier sind drei Lampen.",
+      "translation": "Здесь три лампы.",
+      "explanation": "Ситуация: Посчитать предметы и назвать возраст. Hier sind drei Lampen. — Здесь три лампы."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Ich bin zwanzig Jahre alt.",
+      "translation": "Мне двадцать лет.",
+      "explanation": "Eins, zwei, drei, vier, fünf — один, два, три, четыре, пять. Перед Buch: ein Buch. Возраст выражаем с sein: Ich bin… Jahre alt. В zwei Bücher меняются гласная и окончание слова Buch."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Wie alt bist du?",
+      "translation": "Сколько тебе лет?",
+      "explanation": "Ситуация: Посчитать предметы и назвать возраст. Wie alt bist du? — Сколько тебе лет?"
+    }
+  ]
+}

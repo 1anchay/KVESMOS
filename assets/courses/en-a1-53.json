@@ -1,0 +1,290 @@
+{
+  "id": "en-a1-53",
+  "title": "Выбрать подходящий маршрут",
+  "topic": "Выбрать подходящий маршрут",
+  "order": 52,
+  "objective": "Сравнить маршруты по времени и удобству.",
+  "guide": "Для длинного прилагательного сравнение строится с more: more comfortable.",
+  "vocabulary": [
+    {
+      "id": "en:v014:53:p0",
+      "en": "The train is faster than the bus.",
+      "ru": "Поезд быстрее автобуса."
+    },
+    {
+      "id": "en:v014:53:p1",
+      "en": "This route is more comfortable.",
+      "ru": "Этот маршрут удобнее."
+    },
+    {
+      "id": "en:v014:53:p2",
+      "en": "The bus is less expensive.",
+      "ru": "Автобус дешевле."
+    },
+    {
+      "id": "en:v014:53:p3",
+      "en": "Which option is better for you?",
+      "ru": "Какой вариант лучше для тебя?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Выбрать подходящий маршрут",
+      "phrase": "The train is faster than the bus.",
+      "translation": "Поезд быстрее автобуса.",
+      "explanation": "Для длинного прилагательного сравнение строится с more: more comfortable."
+    },
+    {
+      "character": "miko",
+      "title": "Выбрать подходящий маршрут",
+      "phrase": "This route is more comfortable.",
+      "translation": "Этот маршрут удобнее.",
+      "explanation": "This route is more comfortable. — Этот маршрут удобнее."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Выбрать подходящий маршрут",
+      "phrase": "The bus is less expensive.",
+      "translation": "Автобус дешевле.",
+      "explanation": "The bus is less expensive. — Автобус дешевле."
+    },
+    {
+      "character": "orbi",
+      "title": "Выбрать подходящий маршрут",
+      "phrase": "Which option is better for you?",
+      "translation": "Какой вариант лучше для тебя?",
+      "explanation": "Which option is better for you? — Какой вариант лучше для тебя?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "The train is faster than the bus.",
+      "translation": "Поезд быстрее автобуса.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Поезд быстрее автобуса.",
+      "options": [
+        "Автобус дешевле.",
+        "Поезд быстрее автобуса.",
+        "Какой вариант лучше для тебя?"
+      ],
+      "explanation": "Для длинного прилагательного сравнение строится с more: more comfortable."
+    },
+    {
+      "id": "apply",
+      "phrase": "This route is more comfortable.",
+      "translation": "Этот маршрут удобнее.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "This route is more comfortable.",
+      "tokens": [
+        "This",
+        "route",
+        "is",
+        "more",
+        "comfortable."
+      ],
+      "character": "miko",
+      "explanation": "This route is more comfortable. — Этот маршрут удобнее."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-53-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Поезд быстрее автобуса.»?",
+      "answers": [
+        "The train is faster than the bus."
+      ],
+      "explanation": "The train is faster than the bus. — Поезд быстрее автобуса.",
+      "wordIds": [
+        "en:v014:53:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "This route is more comfortable.",
+        "Which option is better for you?",
+        "The train is faster than the bus."
+      ],
+      "hint": "The train is faster than the bus. — Поезд быстрее автобуса."
+    },
+    {
+      "id": "en-a1-53-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Этот маршрут удобнее.",
+      "answers": [
+        "This route is more comfortable."
+      ],
+      "explanation": "Для длинного прилагательного сравнение строится с more: more comfortable.",
+      "wordIds": [
+        "en:v014:53:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "This",
+        "route",
+        "is",
+        "more",
+        "comfortable."
+      ],
+      "hint": "This route is more comfortable. — Этот маршрут удобнее."
+    },
+    {
+      "id": "en-a1-53-e03",
+      "type": "dialogue",
+      "prompt": "Почему выбрали автобус?",
+      "answers": [
+        "Чтобы сэкономить."
+      ],
+      "explanation": "Чтобы сэкономить. Сравнить маршруты по времени и удобству.",
+      "wordIds": [
+        "en:v014:53:p0",
+        "en:v014:53:p1",
+        "en:v014:53:p2",
+        "en:v014:53:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: The train is faster, but the bus is less expensive.\nМико: Let us take the bus and save money.",
+      "options": [
+        "Он быстрее поезда.",
+        "Он единственный маршрут.",
+        "Чтобы сэкономить."
+      ]
+    },
+    {
+      "id": "en-a1-53-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Автобус дешевле."
+      ],
+      "explanation": "The bus is less expensive. — Автобус дешевле.",
+      "wordIds": [
+        "en:v014:53:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "The bus is less expensive.",
+      "options": [
+        "Поезд быстрее автобуса.",
+        "Автобус дешевле.",
+        "Этот маршрут удобнее."
+      ],
+      "hint": "The bus is less expensive. — Автобус дешевле."
+    },
+    {
+      "id": "en-a1-53-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:53:p0",
+        "en:v014:53:p1",
+        "en:v014:53:p2",
+        "en:v014:53:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:53:p0",
+          "en": "The train is faster than the bus.",
+          "ru": "Поезд быстрее автобуса."
+        },
+        {
+          "id": "en:v014:53:p1",
+          "en": "This route is more comfortable.",
+          "ru": "Этот маршрут удобнее."
+        },
+        {
+          "id": "en:v014:53:p2",
+          "en": "The bus is less expensive.",
+          "ru": "Автобус дешевле."
+        },
+        {
+          "id": "en:v014:53:p3",
+          "en": "Which option is better for you?",
+          "ru": "Какой вариант лучше для тебя?"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-53-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: This route is comfortabler.",
+      "answers": [
+        "This route is more comfortable."
+      ],
+      "explanation": "Comfortable образует сравнение с more.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "This route is comfortabler.",
+        "This route is more comfortable."
+      ],
+      "hint": "Для длинного прилагательного сравнение строится с more: more comfortable."
+    },
+    {
+      "id": "en-a1-53-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Какой вариант лучше для тебя?». Можно написать вместо микрофона.",
+      "answers": [
+        "Which option is better for you?"
+      ],
+      "explanation": "Which option is better for you? — Какой вариант лучше для тебя?",
+      "wordIds": [
+        "en:v014:53:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Which option is better for you?",
+      "recall": {
+        "phrase": "Which option is better for you?",
+        "meaning": "Какой вариант лучше для тебя?"
+      }
+    },
+    {
+      "id": "en-a1-53-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Поезд быстрее автобуса.",
+      "answers": [
+        "The train is faster than the bus."
+      ],
+      "explanation": "Для длинного прилагательного сравнение строится с more: more comfortable.",
+      "wordIds": [
+        "en:v014:53:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "The train is faster than the bus.",
+        "meaning": "Поезд быстрее автобуса."
+      }
+    },
+    {
+      "id": "en-a1-53-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Открой ссылку в сообщении.",
+      "answers": [
+        "Open the link in the message."
+      ],
+      "explanation": "Open the link in the message. — Открой ссылку в сообщении.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Open the link in the message.",
+        "Enter your name first.",
+        "Do not close the window.",
+        "Click the blue button to join."
+      ]
+    }
+  ]
+}

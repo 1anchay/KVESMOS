@@ -1,0 +1,282 @@
+{
+  "id": "en-a1-27",
+  "title": "Как ты себя чувствуешь?",
+  "topic": "Как ты себя чувствуешь?",
+  "order": 26,
+  "objective": "Сообщить о самочувствии и попросить воду.",
+  "guide": "I feel… — я чувствую себя… I have a headache — у меня болит голова: перед headache нужен a. I need… — мне нужно… Здесь учимся общаться, а не ставить диагнозы.",
+  "vocabulary": [
+    {
+      "id": "en:tired",
+      "en": "tired",
+      "ru": "уставший"
+    },
+    {
+      "id": "en:headache",
+      "en": "headache",
+      "ru": "головная боль"
+    },
+    {
+      "id": "en:water",
+      "en": "water",
+      "ru": "вода"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-27-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Как ты себя чувствуешь?»",
+      "answers": [
+        "How do you feel?"
+      ],
+      "explanation": "How do you feel? — Как ты себя чувствуешь?",
+      "hint": "How do you feel? — Как ты себя чувствуешь?",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "I feel tired.",
+        "How do you feel?",
+        "I need some water, please."
+      ]
+    },
+    {
+      "id": "en-a1-27-e02",
+      "type": "choice",
+      "prompt": "Что означает «I feel tired.»?",
+      "answers": [
+        "Я чувствую усталость."
+      ],
+      "explanation": "I feel tired. — Я чувствую усталость.",
+      "hint": "I feel tired. — Я чувствую усталость.",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "У меня болит голова.",
+        "Мне нужно немного воды, пожалуйста.",
+        "Я чувствую усталость."
+      ]
+    },
+    {
+      "id": "en-a1-27-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «У меня болит голова.»",
+      "answers": [
+        "I have a headache"
+      ],
+      "explanation": "I have a headache. — У меня болит голова.",
+      "hint": "I have a headache. — У меня болит голова.",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "I",
+        "have",
+        "a",
+        "headache"
+      ]
+    },
+    {
+      "id": "en-a1-27-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "tired — уставший; headache — головная боль; water — вода",
+      "hint": "tired — уставший; headache — головная боль; water — вода",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:tired",
+          "en": "tired",
+          "ru": "уставший"
+        },
+        {
+          "id": "en:headache",
+          "en": "headache",
+          "ru": "головная боль"
+        },
+        {
+          "id": "en:water",
+          "en": "water",
+          "ru": "вода"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-27-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Мне нужно немного воды, пожалуйста."
+      ],
+      "explanation": "I need some water, please. — Мне нужно немного воды, пожалуйста.",
+      "hint": "I need some water, please. — Мне нужно немного воды, пожалуйста.",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "I need some water, please.",
+      "options": [
+        "Как ты себя чувствуешь?",
+        "Мне нужно немного воды, пожалуйста.",
+        "У меня болит голова."
+      ]
+    },
+    {
+      "id": "en-a1-27-e06",
+      "type": "gap",
+      "prompt": "Болит голова: I have ___ headache.",
+      "answers": [
+        "a"
+      ],
+      "explanation": "I feel… — я чувствую себя… I have a headache — у меня болит голова: перед headache нужен a. I need… — мне нужно… Здесь учимся общаться, а не ставить диагнозы.",
+      "hint": "I feel… — я чувствую себя… I have a headache — у меня болит голова: перед headache нужен a. I need… — мне нужно… Здесь учимся общаться, а не ставить диагнозы.",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "an",
+        "a",
+        "two"
+      ]
+    },
+    {
+      "id": "en-a1-27-e07",
+      "type": "dialogue",
+      "prompt": "Орби спрашивает: «Can I help?» Вежливо попроси воды.",
+      "answers": [
+        "I need some water, please."
+      ],
+      "explanation": "В этой ситуации подходит: I need some water, please.",
+      "hint": "В этой ситуации подходит: I need some water, please.",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "How do you feel?",
+        "I play the guitar.",
+        "I need some water, please."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "en-a1-27-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «I have headache.»",
+      "answers": [
+        "I have a headache."
+      ],
+      "explanation": "В выражении have a headache существительное требует a.",
+      "hint": "В выражении have a headache существительное требует a.",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "en-a1-27-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Мне нужно немного воды, пожалуйста.»",
+      "answers": [
+        "I need some water, please."
+      ],
+      "explanation": "I need some water, please. — Мне нужно немного воды, пожалуйста.",
+      "hint": "I need some water, please. — Мне нужно немного воды, пожалуйста.",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "en-a1-27-e10",
+      "type": "review",
+      "prompt": "Финал: Орби спрашивает: «Can I help?» Вежливо попроси воды.",
+      "answers": [
+        "I need some water, please."
+      ],
+      "explanation": "Теперь ты умеешь: сообщить о самочувствии и попросить воду.",
+      "hint": "Теперь ты умеешь: сообщить о самочувствии и попросить воду.",
+      "wordIds": [
+        "en:tired",
+        "en:headache",
+        "en:water"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "I need some water, please.",
+        "I play the guitar.",
+        "How do you feel?"
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "How do you feel?",
+      "translation": "Как ты себя чувствуешь?",
+      "explanation": "Ситуация: Сообщить о самочувствии и попросить воду. How do you feel? — Как ты себя чувствуешь?"
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "I feel tired.",
+      "translation": "Я чувствую усталость.",
+      "explanation": "Ситуация: Сообщить о самочувствии и попросить воду. I feel tired. — Я чувствую усталость."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "I have a headache.",
+      "translation": "У меня болит голова.",
+      "explanation": "I feel… — я чувствую себя… I have a headache — у меня болит голова: перед headache нужен a. I need… — мне нужно… Здесь учимся общаться, а не ставить диагнозы."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "I need some water, please.",
+      "translation": "Мне нужно немного воды, пожалуйста.",
+      "explanation": "Ситуация: Сообщить о самочувствии и попросить воду. I need some water, please. — Мне нужно немного воды, пожалуйста."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 name: orbitwords
-description: Free offline language journeys. Original English A1 course for Russian speakers.
+description: Free offline language journeys. English, Spanish, German, French and Mandarin starter courses for Russian speakers.
 publish_to: none
-version: 0.4.0-dev.2+5
+version: 1.0.0+18
 environment:
   sdk: '>=3.8.0 <4.0.0'
 dependencies:
@@ -21,7 +21,9 @@ dependencies:
   flutter_secure_storage: ^9.2.4
   flutter_tts: ^4.2.3
   speech_to_text: ^7.3.0
+  timezone: ^0.10.1
   flutter_local_notifications: ^19.4.0
+  url_launcher: 6.3.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -33,6 +35,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   fonts:
+    - family: KvesmosHanzi
+      fonts:
+        - asset: assets/fonts/kvesmos-hanzi.otf
     - family: OrbitSans
       fonts:
         - asset: assets/fonts/roboto-regular.ttf
@@ -40,7 +45,11 @@ flutter:
         - asset: assets/fonts/roboto-bold.ttf
           weight: 700
   assets:
+    - assets/fonts/HANZI-OFL.txt
     - assets/courses/
     - assets/kvesmos/
     - assets/audio/effects/
+    - assets/audio/voices/
+    - assets/audio/voices/clips/
+    - assets/audio/voices/licenses/
     - assets/courses/demo/

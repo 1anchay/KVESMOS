@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-25",
+  "title": "Сколько длится дорога",
+  "topic": "Сколько длится дорога",
+  "order": 24,
+  "objective": "Спросить о длительности поездки.",
+  "guide": "Cuánto tarda спрашивает о затраченном времени, cuánto cuesta — о цене.",
+  "vocabulary": [
+    {
+      "id": "es:v014:25:p0",
+      "en": "¿Cuánto tarda el autobús?",
+      "ru": "Сколько времени идёт автобус?"
+    },
+    {
+      "id": "es:v014:25:p1",
+      "en": "El viaje dura veinte minutos.",
+      "ru": "Поездка длится двадцать минут."
+    },
+    {
+      "id": "es:v014:25:p2",
+      "en": "La estación está cerca.",
+      "ru": "Станция находится близко."
+    },
+    {
+      "id": "es:v014:25:p3",
+      "en": "Podemos ir a pie.",
+      "ru": "Мы можем пойти пешком."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сколько длится дорога",
+      "phrase": "¿Cuánto tarda el autobús?",
+      "translation": "Сколько времени идёт автобус?",
+      "explanation": "Cuánto tarda спрашивает о затраченном времени, cuánto cuesta — о цене."
+    },
+    {
+      "character": "miko",
+      "title": "Сколько длится дорога",
+      "phrase": "El viaje dura veinte minutos.",
+      "translation": "Поездка длится двадцать минут.",
+      "explanation": "El viaje dura veinte minutos. — Поездка длится двадцать минут."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сколько длится дорога",
+      "phrase": "La estación está cerca.",
+      "translation": "Станция находится близко.",
+      "explanation": "La estación está cerca. — Станция находится близко."
+    },
+    {
+      "character": "orbi",
+      "title": "Сколько длится дорога",
+      "phrase": "Podemos ir a pie.",
+      "translation": "Мы можем пойти пешком.",
+      "explanation": "Podemos ir a pie. — Мы можем пойти пешком."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "¿Cuánto tarda el autobús?",
+      "translation": "Сколько времени идёт автобус?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Сколько времени идёт автобус?",
+      "options": [
+        "Станция находится близко.",
+        "Сколько времени идёт автобус?",
+        "Мы можем пойти пешком."
+      ],
+      "explanation": "Cuánto tarda спрашивает о затраченном времени, cuánto cuesta — о цене."
+    },
+    {
+      "id": "apply",
+      "phrase": "El viaje dura veinte minutos.",
+      "translation": "Поездка длится двадцать минут.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "El viaje dura veinte minutos.",
+      "tokens": [
+        "El",
+        "viaje",
+        "dura",
+        "veinte",
+        "minutos."
+      ],
+      "character": "miko",
+      "explanation": "El viaje dura veinte minutos. — Поездка длится двадцать минут."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-25-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Сколько времени идёт автобус?»?",
+      "answers": [
+        "¿Cuánto tarda el autobús?"
+      ],
+      "explanation": "¿Cuánto tarda el autobús? — Сколько времени идёт автобус?",
+      "wordIds": [
+        "es:v014:25:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "El viaje dura veinte minutos.",
+        "Podemos ir a pie.",
+        "¿Cuánto tarda el autobús?"
+      ],
+      "hint": "¿Cuánto tarda el autobús? — Сколько времени идёт автобус?"
+    },
+    {
+      "id": "es-a1-25-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Поездка длится двадцать минут.",
+      "answers": [
+        "El viaje dura veinte minutos."
+      ],
+      "explanation": "Cuánto tarda спрашивает о затраченном времени, cuánto cuesta — о цене.",
+      "wordIds": [
+        "es:v014:25:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "El",
+        "viaje",
+        "dura",
+        "veinte",
+        "minutos."
+      ],
+      "hint": "El viaje dura veinte minutos. — Поездка длится двадцать минут."
+    },
+    {
+      "id": "es-a1-25-e03",
+      "type": "dialogue",
+      "prompt": "Что значит veinte minutos?",
+      "answers": [
+        "Длительность поездки."
+      ],
+      "explanation": "Длительность поездки. Спросить о длительности поездки.",
+      "wordIds": [
+        "es:v014:25:p0",
+        "es:v014:25:p1",
+        "es:v014:25:p2",
+        "es:v014:25:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Cuánto dura el viaje en autobús?\nМико: Veinte minutos, pero podemos ir a pie.",
+      "options": [
+        "Цена билета.",
+        "Время отправления.",
+        "Длительность поездки."
+      ]
+    },
+    {
+      "id": "es-a1-25-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Станция находится близко."
+      ],
+      "explanation": "La estación está cerca. — Станция находится близко.",
+      "wordIds": [
+        "es:v014:25:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "La estación está cerca.",
+      "options": [
+        "Сколько времени идёт автобус?",
+        "Станция находится близко.",
+        "Поездка длится двадцать минут."
+      ],
+      "hint": "La estación está cerca. — Станция находится близко."
+    },
+    {
+      "id": "es-a1-25-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v014:25:p0",
+        "es:v014:25:p1",
+        "es:v014:25:p2",
+        "es:v014:25:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v014:25:p0",
+          "en": "¿Cuánto tarda el autobús?",
+          "ru": "Сколько времени идёт автобус?"
+        },
+        {
+          "id": "es:v014:25:p1",
+          "en": "El viaje dura veinte minutos.",
+          "ru": "Поездка длится двадцать минут."
+        },
+        {
+          "id": "es:v014:25:p2",
+          "en": "La estación está cerca.",
+          "ru": "Станция находится близко."
+        },
+        {
+          "id": "es:v014:25:p3",
+          "en": "Podemos ir a pie.",
+          "ru": "Мы можем пойти пешком."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-25-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: El viaje duran veinte minutos.",
+      "answers": [
+        "El viaje dura veinte minutos."
+      ],
+      "explanation": "El viaje — единственное число: dura.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "El viaje duran veinte minutos.",
+        "El viaje dura veinte minutos."
+      ],
+      "hint": "Cuánto tarda спрашивает о затраченном времени, cuánto cuesta — о цене."
+    },
+    {
+      "id": "es-a1-25-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы можем пойти пешком.». Можно написать вместо микрофона.",
+      "answers": [
+        "Podemos ir a pie."
+      ],
+      "explanation": "Podemos ir a pie. — Мы можем пойти пешком.",
+      "wordIds": [
+        "es:v014:25:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Podemos ir a pie.",
+      "recall": {
+        "phrase": "Podemos ir a pie.",
+        "meaning": "Мы можем пойти пешком."
+      }
+    },
+    {
+      "id": "es-a1-25-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Сколько времени идёт автобус?",
+      "answers": [
+        "¿Cuánto tarda el autobús?"
+      ],
+      "explanation": "Cuánto tarda спрашивает о затраченном времени, cuánto cuesta — о цене.",
+      "wordIds": [
+        "es:v014:25:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "¿Cuánto tarda el autobús?",
+        "meaning": "Сколько времени идёт автобус?"
+      }
+    },
+    {
+      "id": "es-a1-25-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Она открыта с понедельника по пятницу.",
+      "answers": [
+        "Está abierta de lunes a viernes."
+      ],
+      "explanation": "Está abierta de lunes a viernes. — Она открыта с понедельника по пятницу.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "La biblioteca abre a las nueve.",
+        "Cierra a las seis de la tarde.",
+        "Está abierta de lunes a viernes.",
+        "El domingo está cerrada."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "broadcast": "Broadcasting: Intent { act=dev.orbitwords.orbitwords.STUDY flg=0x400000 cmp=dev.orbitwords.orbitwords/.CompanionReceiver }\r\nBroadcast completed: result=0\r\n",
+  "delivered": true
+}

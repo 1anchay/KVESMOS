@@ -1,0 +1,245 @@
+{
+  "id": "a1-14",
+  "title": "Каждый день",
+  "topic": "Повседневные действия",
+  "order": 13,
+  "vocabulary": [
+    {
+      "id": "en:walk",
+      "en": "walk",
+      "ru": "ходить пешком"
+    },
+    {
+      "id": "en:run",
+      "en": "run",
+      "ru": "бегать"
+    },
+    {
+      "id": "en:write",
+      "en": "write",
+      "ru": "писать"
+    }
+  ],
+  "materialVersion": 3,
+  "objective": "Спросить о привычке и рассказать о действиях друга.",
+  "guide": "Walk — ходить пешком, run — бегать, write — писать. После he и she к обычному действию добавляем -s: reads, walks, runs, writes. С he/she используем does. После does или does not действие без -s: run. Doesn’t — сокращение does not.",
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новые действия",
+      "phrase": "I walk. I run. I write.",
+      "translation": "Я хожу пешком. Я бегаю. Я пишу.",
+      "explanation": "Walk — ходить пешком, run — бегать, write — писать."
+    },
+    {
+      "character": "miko",
+      "title": "Он и она действуют",
+      "phrase": "She reads. He runs.",
+      "translation": "Она читает. Он бегает.",
+      "explanation": "После he и she к обычному действию добавляем -s: reads, walks, runs, writes."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вопрос и отрицание",
+      "phrase": "Does he run? He does not run.",
+      "translation": "Он бегает? Он не бегает.",
+      "explanation": "С he/she используем does. После does или does not действие без -s: run. Doesn’t — сокращение does not."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a1-14-v3-01",
+      "type": "choice",
+      "prompt": "Расскажи о привычке Мико: «Он пишет».",
+      "answers": [
+        "He writes."
+      ],
+      "explanation": "После he нужна форма writes.",
+      "hint": "После he нужна форма writes.",
+      "character": "orbi",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:write"
+      ],
+      "options": [
+        "He writes.",
+        "He write.",
+        "He is write."
+      ]
+    },
+    {
+      "id": "a1-14-v3-02",
+      "type": "pairs",
+      "prompt": "Соедини действия.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Walk — идти пешком, run — бегать, write — писать.",
+      "hint": "Walk — идти пешком, run — бегать, write — писать.",
+      "character": "miko",
+      "phase": "Знакомство",
+      "wordIds": [
+        "en:walk",
+        "en:run",
+        "en:write"
+      ],
+      "pairs": [
+        {
+          "id": "en:walk",
+          "en": "walk",
+          "ru": "ходить пешком"
+        },
+        {
+          "id": "en:run",
+          "en": "run",
+          "ru": "бегать"
+        },
+        {
+          "id": "en:write",
+          "en": "write",
+          "ru": "писать"
+        }
+      ]
+    },
+    {
+      "id": "a1-14-v3-03",
+      "type": "order",
+      "prompt": "Спроси: «Она ходит пешком?»",
+      "answers": [
+        "Does she walk"
+      ],
+      "explanation": "Does she + действие без -s.",
+      "hint": "Does she + действие без -s.",
+      "character": "zig_quartz",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:walk"
+      ],
+      "tokens": [
+        "Does",
+        "she",
+        "walk"
+      ]
+    },
+    {
+      "id": "a1-14-v3-04",
+      "type": "gap",
+      "prompt": "Он бегает: He ___.",
+      "answers": [
+        "runs"
+      ],
+      "explanation": "После he добавляем -s.",
+      "hint": "После he добавляем -s.",
+      "character": "orbi",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:run"
+      ]
+    },
+    {
+      "id": "a1-14-v3-05",
+      "type": "listen",
+      "prompt": "Что делает она каждый день?",
+      "answers": [
+        "write"
+      ],
+      "explanation": "She writes every day — она пишет каждый день.",
+      "hint": "She writes every day — она пишет каждый день.",
+      "character": "miko",
+      "phase": "Понимание",
+      "wordIds": [
+        "en:write"
+      ],
+      "options": [
+        "write",
+        "walk",
+        "run"
+      ],
+      "audio": "She writes every day."
+    },
+    {
+      "id": "a1-14-v3-06",
+      "type": "correct",
+      "prompt": "Исправь: Does he runs?",
+      "answers": [
+        "Does he run?"
+      ],
+      "explanation": "После does окончание -s у действия убираем.",
+      "hint": "После does окончание -s у действия убираем.",
+      "character": "zig_quartz",
+      "phase": "Практика",
+      "wordIds": [
+        "en:run"
+      ]
+    },
+    {
+      "id": "a1-14-v3-07",
+      "type": "translate",
+      "prompt": "Скажи: «Он не бегает».",
+      "answers": [
+        "He does not run.",
+        "He doesn’t run."
+      ],
+      "explanation": "Does not / doesn’t + run.",
+      "hint": "Does not / doesn’t + run.",
+      "character": "orbi",
+      "phase": "Практика",
+      "wordIds": [
+        "en:run"
+      ]
+    },
+    {
+      "id": "a1-14-v3-08",
+      "type": "dialogue",
+      "prompt": "Ответь положительно о привычке Мико.",
+      "answers": [
+        "Yes, he does."
+      ],
+      "explanation": "После Does he…? короткий ответ Yes, he does.",
+      "hint": "После Does he…? короткий ответ Yes, he does.",
+      "character": "miko",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:read"
+      ],
+      "options": [
+        "Yes, he does.",
+        "Yes, I do.",
+        "Yes, it is."
+      ],
+      "scene": "Зиг: Does he read every day?\nТы: …"
+    },
+    {
+      "id": "a1-14-v3-09",
+      "type": "review",
+      "prompt": "Вспомни: «Я сплю ночью».",
+      "answers": [
+        "I sleep at night."
+      ],
+      "explanation": "С I действие без -s; ночью — at night.",
+      "hint": "С I действие без -s; ночью — at night.",
+      "character": "zig_quartz",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:sleep"
+      ]
+    },
+    {
+      "id": "a1-14-v3-10",
+      "type": "speak",
+      "prompt": "Расскажи: «Она читает книгу».",
+      "answers": [
+        "She reads a book."
+      ],
+      "explanation": "She reads — не she read.",
+      "hint": "She reads — не she read.",
+      "character": "orbi",
+      "phase": "Закрепление",
+      "wordIds": [
+        "en:book",
+        "en:read"
+      ],
+      "audio": "She reads a book."
+    }
+  ]
+}

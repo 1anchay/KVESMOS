@@ -1,20 +1,28 @@
+import 'explorer_profile.dart';
+import 'course_picker.dart';
+import 'companion_settings.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../services/account_deletion.dart';
 import '../core/controller.dart';
+import '../core/rustore_release.dart';
 import '../domain/course.dart';
 import '../domain/progress.dart';
+import '../domain/learning_recap.dart';
 import '../domain/missions.dart';
-import '../services/device.dart';
 import 'design.dart';
 import 'character_reactions.dart';
 import 'weekly_activity.dart';
-import 'rewards_pages.dart';
-import 'adventure_map.dart';
+import 'today_page.dart';
+import 'character_moment.dart';
 import 'profile_achievements.dart';
 import 'audio_settings.dart';
+import 'optional_adventures.dart';
+import 'galaxy_components.dart';
 import '../services/learning_audio.dart';
 
 class OnboardingPage extends ConsumerWidget {
@@ -37,7 +45,12 @@ class OnboardingPage extends ConsumerWidget {
       body: pageBody([
         Center(
           child: step == 0
-              ? const OrbitRobot(size: 180)
+              ? SpeakingCharacter(
+                  audio: app.audio,
+                  character: 'orbi',
+                  state: CharacterState.greeting,
+                  size: 108,
+                )
               : CharacterReaction(
                   cue: CharacterCue.navigator,
                   eventKey: 'onboarding-$step',
@@ -46,7 +59,7 @@ class OnboardingPage extends ConsumerWidget {
         ),
         Text(
           [
-            'Ваш следующий мир начинается со слова.',
+            'Первое открытие — сегодня.',
             'Куда отправимся?',
             'Выберите точку старта',
             'Небольшая цель. Большие открытия.',
@@ -56,8 +69,8 @@ class OnboardingPage extends ConsumerWidget {
         const SizedBox(height: 16),
         Text(
           [
-            'Я Орби, ваш спутник в изучении языков. Здесь можно ошибаться, пробовать снова и учиться в своём темпе. Всё бесплатно — всегда.',
-            'Первый маршрут: английский для русскоговорящих. 20 коротких уроков и 60 слов.',
+            'Я Орби. Давай выберем язык: короткий урок, маленькое открытие и первая находка. Ошибаться можно.',
+            'Пять языков, от английского до путунхуа, — с понятными объяснениями по-русски.',
             'Этот курс знакомит с основами A1. Выбор помогает настроить приветствие; это не тест уровня.',
             'Цель мотивирует, но никогда не ограничивает число уроков. Её можно изменить в настройках.',
           ][step],
@@ -74,24 +87,7 @@ class OnboardingPage extends ConsumerWidget {
               Chip(label: Text('Без лимита ошибок')),
             ],
           ),
-        if (step == 1) ...[
-          Card(
-            child: ListTile(
-              contentPadding: const EdgeInsets.all(16),
-              leading: const Icon(Icons.public, color: violet, size: 36),
-              title: const Text('Английский'),
-              subtitle: const Text('Русский → English · основы A1'),
-              trailing: const Icon(
-                Icons.check_circle,
-                color: Color(0xFF007B73),
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-          const Text(
-            'Другие языки появятся после подготовки и проверки курсов.',
-          ),
-        ],
+        if (step == 1) const CoursePicker(onboarding: true),
         if (step == 2)
           ...['С нуля', 'Знаю немного'].map(
             (level) => Padding(
@@ -124,17 +120,20 @@ class OnboardingPage extends ConsumerWidget {
         FilledButton(
           onPressed: () async {
             if (step == 3) {
-              await app.finishOnboarding();
-              if (context.mounted) context.go('/');
+              await app.repository.setSetting(
+                'kvesmos.onboarding.route.v012',
+                '/companion/reminders',
+              );
+              if (context.mounted) context.go('/companion/reminders');
             } else {
               context.go(['/language', '/level', '/goal'][step]);
             }
           },
-          child: Text(step == 3 ? 'Начать путешествие' : 'Продолжить'),
+          child: const Text('Продолжить'),
         ),
         const SizedBox(height: 18),
         Text(
-          'ШАГ ${step + 1} ИЗ 4',
+          'ШАГ ${step + 1} ИЗ 6',
           textAlign: TextAlign.center,
           style: const TextStyle(letterSpacing: 2, fontSize: 12),
         ),
@@ -143,152 +142,10 @@ class OnboardingPage extends ConsumerWidget {
   }
 }
 
-class HomePage extends ConsumerWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final app = ref.watch(appProvider), p = app.progress;
-    final catalog = app.repository.catalog;
-    final next =
-        catalog.where((e) => !p.completed.contains(e.id)).firstOrNull ??
-        catalog.first;
-    final today = p.dailyXp[dayKey(DateTime.now())] ?? 0;
-    return pageBody([
-      Padding(
-        padding: const EdgeInsets.only(top: 4, bottom: 16),
-        child: Row(
-          children: [
-            Expanded(
-              child: Text(
-                'Привет, ${app.name}',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-            ),
-            const Icon(Icons.bolt, color: coral),
-            Text(
-              '${p.xp} XP',
-              style: const TextStyle(fontWeight: FontWeight.w800),
-            ),
-          ],
-        ),
-      ),
-      SpaceBanner(
-        eyebrow: 'АНГЛИЙСКИЙ · ОСНОВЫ A1',
-        title: 'Галактика\nзнаний',
-        subtitle: app.startingLevel == 'С нуля'
-            ? 'Один маленький шаг сегодня — и мир становится ближе.'
-            : 'Закрепляйте знакомое и открывайте новые выражения.',
-        action: FilledButton.icon(
-          style: FilledButton.styleFrom(
-            backgroundColor: turquoise,
-            foregroundColor: space,
-          ),
-          onPressed: () => context.go(
-            app.installed.contains(next.id) ? '/lesson/${next.id}' : '/offline',
-          ),
-          icon: const Icon(Icons.arrow_forward),
-          label: const Text('Продолжить урок'),
-        ),
-      ),
-      const SizedBox(height: 12),
-      Card(
-        child: CharacterReaction(
-          cue: hasDailyXpRecord(p, DateTime.now())
-              ? CharacterCue.record(today)
-              : CharacterCue.greeting,
-          eventKey:
-              'home:${dayKey(DateTime.now())}:${hasDailyXpRecord(p, DateTime.now()) ? today : 0}',
-        ),
-      ),
-      const SizedBox(height: 16),
-      Card(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  const Icon(Icons.track_changes, color: violet),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      today >= app.goal
-                          ? 'Дневная цель достигнута!'
-                          : 'Ваша цель на сегодня',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                  ),
-                  Text('$today / ${app.goal} XP'),
-                ],
-              ),
-              const SizedBox(height: 14),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(5),
-                child: LinearProgressIndicator(
-                  value: (today / app.goal).clamp(0, 1),
-                  minHeight: 8,
-                ),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                today >= app.goal
-                    ? 'Отличная работа. Если хочется — продолжайте!'
-                    : 'Каждый верный ответ добавляет 10 XP. Ошибки ничего не отнимают.',
-              ),
-            ],
-          ),
-        ),
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: TextButton.icon(
-              onPressed: () => context.go('/quests'),
-              icon: const Icon(Icons.rocket_launch_outlined),
-              label: const Text('Задания дня'),
-            ),
-          ),
-          Expanded(
-            child: TextButton.icon(
-              onPressed: () => context.go('/review'),
-              icon: const Icon(Icons.refresh),
-              label: const Text('Повторение'),
-            ),
-          ),
-        ],
-      ),
-      const RewardShortcut(),
-      Card(
-        child: Padding(
-          padding: const EdgeInsets.all(18),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Первые три урока обновлены',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const Text(
-                'Новый формат открывается обычной кнопкой продолжения и с карты. Если сохранился старый урок, внутри можно перейти к обновлённым заданиям без потери XP.',
-              ),
-              TextButton(
-                onPressed: () => context.go('/settings'),
-                child: const Text('Проверить голоса и звук'),
-              ),
-            ],
-          ),
-        ),
-      ),
-      const AdventureMap(),
-      const SizedBox(height: 24),
-      Text(
-        app.sync?.status ?? 'Локальный режим · уроки и прогресс на устройстве',
-        textAlign: TextAlign.center,
-        style: Theme.of(context).textTheme.bodySmall,
-      ),
-    ]);
-  }
+  Widget build(BuildContext context) => const TodayPage();
 }
 
 class WordsPage extends ConsumerStatefulWidget {
@@ -323,9 +180,12 @@ class _WordsPageState extends ConsumerState<WordsPage> {
         )
         .toList();
     return pageBody([
-      const SectionTitle(
-        'Ваш словарь',
-        subtitle: 'Слова появляются здесь после упражнений.',
+      MissionHeader(
+        eyebrow: 'Бортовой журнал',
+        title: 'Ваш словарь',
+        icon: Icons.auto_stories_rounded,
+        subtitle:
+            '${app.progress.words.length} слов открыто. Повторение помогает сохранить их в памяти.',
       ),
       const CharacterReaction(
         cue: CharacterCue.words,
@@ -358,7 +218,7 @@ class _WordsPageState extends ConsumerState<WordsPage> {
             child: ListTile(
               title: Text(w.en, style: Theme.of(context).textTheme.titleMedium),
               subtitle: Text(
-                '${w.ru}\nВерно: ${state.correct} · ошибок: ${state.errors}\nОсвоено ${(state.mastery * 100).round()}% · повтор ${dayKey(state.next!.toLocal())}',
+                '${w.pronunciation == null ? '' : '${w.pronunciation}\n'}${w.ru}\n${(state.mastery * 100).round()}% освоено · повтор ${dayKey(state.next!.toLocal())}',
               ),
               isThreeLine: true,
               trailing: IconButton(
@@ -369,7 +229,7 @@ class _WordsPageState extends ConsumerState<WordsPage> {
                       context.mounted) {
                     showMessage(
                       context,
-                      'Английский голос недоступен. Установите его в настройках речи устройства.',
+                      'Голос выбранного языка недоступен. Текст остаётся доступным; голос можно установить в настройках речи устройства.',
                     );
                   }
                 },
@@ -383,19 +243,40 @@ class _WordsPageState extends ConsumerState<WordsPage> {
 }
 
 class ReviewPage extends ConsumerStatefulWidget {
-  const ReviewPage({super.key});
+  final bool mistakesOnly;
+  const ReviewPage({super.key, this.mistakesOnly = false});
   @override
   ConsumerState<ReviewPage> createState() => _ReviewPageState();
 }
 
 class _ReviewPageState extends ConsumerState<ReviewPage> {
+  late final LearningAudio reviewAudio;
+  int creditedXp = 0;
   final input = TextEditingController();
   List<Vocabulary>? queue;
   int index = 0;
   bool? correct;
   bool busy = false;
+  Map<String, Exercise> examples = {};
+  @override
+  void initState() {
+    super.initState();
+    reviewAudio = ref.read(appProvider).audio;
+    unawaited(loadExamples());
+  }
+
+  Future<void> loadExamples() async {
+    try {
+      final loaded = await ref.read(appProvider).repository.mistakeExamples();
+      if (mounted) setState(() => examples = loaded);
+    } catch (_) {
+      /* Word review remains available if an old example cannot load. */
+    }
+  }
+
   @override
   void dispose() {
+    unawaited(reviewAudio.stop());
     input.dispose();
     super.dispose();
   }
@@ -403,24 +284,25 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
   @override
   Widget build(BuildContext context) {
     final app = ref.watch(appProvider);
-    queue ??=
-        app.repository.vocabulary.values.where((w) {
-          final p = app.progress.words[w.id];
-          return p != null &&
-              p.next != null &&
-              !p.next!.isAfter(DateTime.now());
-        }).toList()..sort(
-          (a, b) => app.progress.words[b.id]!.errors.compareTo(
-            app.progress.words[a.id]!.errors,
-          ),
-        );
+    queue ??= reviewWords(
+      app.repository.vocabulary.values,
+      app.progress,
+      app.repository.now(),
+      mistakesOnly: widget.mistakesOnly,
+    );
     final finished = index >= queue!.length;
     return pageBody([
-      const SectionTitle(
-        'Сигналы памяти',
+      const MissionHeader(
+        eyebrow: 'Тренировка памяти',
+        title: 'Сигналы памяти',
+        icon: Icons.psychology_rounded,
         subtitle:
             'Сначала слова, которым пора вернуться. Ошибки помогают подобрать следующий интервал.',
       ),
+      if (widget.mistakesOnly)
+        const Text(
+          'Добровольная тренировка ошибок. Плановые интервалы повторения сохраняются.',
+        ),
       if (finished) ...[
         CharacterReaction(
           cue: CharacterCue('reyvo', 'Рэйво', [
@@ -442,18 +324,20 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
           onPressed: () => context.go('/'),
           child: const Text('К урокам'),
         ),
-        if (app.progress.words.isNotEmpty)
+        if (reviewWords(
+          app.repository.vocabulary.values,
+          app.progress,
+          DateTime.now(),
+          mistakesOnly: true,
+        ).isNotEmpty)
           TextButton(
             onPressed: () => setState(() {
-              queue =
-                  app.repository.vocabulary.values
-                      .where((w) => app.progress.words.containsKey(w.id))
-                      .toList()
-                    ..sort(
-                      (a, b) => app.progress.words[b.id]!.errors.compareTo(
-                        app.progress.words[a.id]!.errors,
-                      ),
-                    );
+              queue = reviewWords(
+                app.repository.vocabulary.values,
+                app.progress,
+                DateTime.now(),
+                mistakesOnly: true,
+              );
               index = 0;
               correct = null;
               input.clear();
@@ -476,15 +360,32 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
         TextField(
           controller: input,
           enabled: correct == null,
-          decoration: const InputDecoration(hintText: 'Напишите по-английски'),
+          decoration: const InputDecoration(
+            hintText: 'Напишите на изучаемом языке',
+          ),
         ),
         const SizedBox(height: 20),
         if (correct != null)
           Text(
             correct!
-                ? 'Верно! +10 XP'
+                ? 'Верно! +$creditedXp XP'
                 : '${queue![index].en} — ${queue![index].ru}. Слово вернётся завтра.',
           ),
+        if (correct == false)
+          if (examples[queue![index].id] case final example?)
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Вспомни ситуацию из урока'),
+                    Text(example.prompt),
+                    Text(example.explanation),
+                  ],
+                ),
+              ),
+            ),
         FilledButton(
           onPressed: busy
               ? null
@@ -501,8 +402,21 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
                   setState(() => busy = true);
                   try {
                     final word = queue![index];
+                    final grantsBefore = app.inventory.grants.length;
+                    final xpBefore = app.progress.xp;
                     await app.repository.review(word, input.text);
                     await app.refresh();
+                    creditedXp = app.progress.xp - xpBefore;
+                    unawaited(
+                      reviewAudio.play(
+                        app.inventory.grants.length > grantsBefore
+                            ? SoundEffect.achievement
+                            : normalizeAnswer(input.text) ==
+                                  normalizeAnswer(word.en)
+                            ? SoundEffect.correct
+                            : SoundEffect.incorrect,
+                      ),
+                    );
                     if (mounted) {
                       setState(
                         () => correct =
@@ -644,44 +558,7 @@ class AchievementsPage extends ConsumerWidget {
   const AchievementsPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final unlocked = ref.watch(appProvider).progress.achievements;
-    const goals = {
-      'Первый контакт': 'Завершите первый урок',
-      'Исследователь': 'Пройдите 5 разных уроков',
-      'Новая планета': 'Пройдите 10 разных уроков',
-      'Созвездие A1': 'Пройдите все 20 уроков',
-      'Хранитель слов': 'Откройте 30 слов',
-      'Тысяча звёзд': 'Накопите 1000 XP',
-    };
-    return pageBody([
-      const SpaceBanner(
-        eyebrow: 'КОЛЛЕКЦИЯ ОТКРЫТИЙ',
-        title: 'У каждого шага\nсвоя звезда.',
-        subtitle: 'Награды остаются с вами. Ошибки их не отнимают.',
-      ),
-      ...goals.entries.map(
-        (e) => Padding(
-          padding: const EdgeInsets.only(top: 14),
-          child: Card(
-            child: ListTile(
-              contentPadding: const EdgeInsets.all(20),
-              leading: Icon(
-                unlocked.contains(e.key)
-                    ? Icons.auto_awesome
-                    : Icons.star_outline,
-                color: unlocked.contains(e.key) ? coral : Colors.grey,
-                size: 36,
-              ),
-              title: Text(e.key),
-              subtitle: Text(e.value),
-              trailing: unlocked.contains(e.key)
-                  ? const Icon(Icons.check_circle, color: Color(0xFF007B73))
-                  : null,
-            ),
-          ),
-        ),
-      ),
-    ]);
+    return const AchievementCollection();
   }
 }
 
@@ -694,8 +571,7 @@ class QuestsPage extends ConsumerWidget {
     return pageBody([
       const SectionTitle(
         'Задания дня',
-        subtitle:
-            'Маленькая практика — новые находки. Все три задания бесплатны.',
+        subtitle: 'Общие для всех языков. Маленькая практика — новые находки.',
       ),
       Text(
         'Сегодня: ${state.day}',
@@ -720,7 +596,14 @@ class QuestsPage extends ConsumerWidget {
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(height: 8),
-                  Text(mission.description),
+                  Text(
+                    mission.id == 'review' &&
+                            app.globalProgress.words.length < 5
+                        ? 'Откроется, когда познакомимся с пятью словами. Сейчас известно ${app.globalProgress.words.length}. Продолжи уроки — всё впереди.'
+                        : mission.id == 'review' && !reviewReadyToday(app)
+                        ? 'Все знакомые слова пока закрепляются. Повторение откроется по расписанию; можно продолжить уроки.'
+                        : mission.description,
+                  ),
                   const SizedBox(height: 16),
                   LinearProgressIndicator(
                     value: (state.progress.count(mission) / mission.target)
@@ -757,8 +640,11 @@ class QuestsPage extends ConsumerWidget {
                       state.awarded(mission)
                           ? '/rewards'
                           : mission.id == 'review'
-                          ? '/review'
-                          : '/',
+                          ? (app.globalProgress.words.length < 5 ||
+                                    !reviewReadyToday(app)
+                                ? nextLessonRoute(app)
+                                : '/review')
+                          : nextLessonRoute(app),
                     ),
                     icon: Icon(
                       state.awarded(mission)
@@ -769,7 +655,10 @@ class QuestsPage extends ConsumerWidget {
                       state.awarded(mission)
                           ? 'К сундукам'
                           : mission.id == 'review'
-                          ? 'Повторить слова'
+                          ? (app.globalProgress.words.length < 5 ||
+                                    !reviewReadyToday(app)
+                                ? 'Открыть новые слова'
+                                : 'Повторить слова')
                           : 'К урокам',
                     ),
                   ),
@@ -802,10 +691,12 @@ class _OfflinePageState extends ConsumerState<OfflinePage> {
         subtitle:
             'Курс включён в приложение. Сохранение переносит урок в локальную SQLite-базу и не требует интернета.',
       ),
-      Text('${app.installed.length} из 20 уроков сохранено'),
+      Text(
+        '${app.course.name}: ${app.repository.catalog.where((l) => app.installed.contains(l.id)).length} из ${app.repository.catalog.length} уроков сохранено',
+      ),
       const SizedBox(height: 12),
       const Text(
-        'Озвучивание требует установленного английского голоса. Распознавание речи зависит от устройства; ввод текста доступен всегда.',
+        'Новый материал озвучивается установленным голосом выбранного языка. Для старых английских фраз есть встроенные записи. Распознавание речи зависит от устройства; ввод текста доступен всегда.',
       ),
       const SizedBox(height: 20),
       ...app.repository.catalog.map(
@@ -896,16 +787,8 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
         cloud = app.cloud,
         user = app.cloud?.auth.currentUser;
     return pageBody([
-      ProfileLook(app),
-      const SizedBox(height: 16),
-      const AchievementShowcase(),
-      const SizedBox(height: 16),
-      const RewardShortcut(),
-      TextButton.icon(
-        onPressed: () => context.go('/crew'),
-        icon: const Icon(Icons.groups_outlined),
-        label: const Text('Команда KVESMOS'),
-      ),
+      const ExplorerProfile(),
+      const SizedBox(height: 24),
       const SectionTitle('Сохранение прогресса'),
       if (cloud == null) ...[
         const Text(
@@ -1059,7 +942,13 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                   }
                   await act(() async {
                     await app.changeAccount(() async {
-                      await cloud.functions.invoke('delete-account');
+                      final deletion = await cloud.functions
+                          .invoke('delete-account')
+                          .timeout(const Duration(seconds: 30));
+                      requireDeletionConfirmation(
+                        deletion.status,
+                        deletion.data,
+                      );
                       try {
                         await cloud.auth.signOut(scope: SignOutScope.local);
                       } finally {
@@ -1110,16 +999,7 @@ class SettingsPage extends ConsumerStatefulWidget {
 
 class _SettingsPageState extends ConsumerState<SettingsPage> {
   TextEditingController? name;
-  bool reminders = false, busy = false;
-  final reminderService = ReminderService();
-  @override
-  void initState() {
-    super.initState();
-    ref.read(appProvider).repository.setting('reminders').then((v) {
-      if (mounted) setState(() => reminders = v == 'true');
-    });
-  }
-
+  bool busy = false;
   @override
   void dispose() {
     name?.dispose();
@@ -1133,6 +1013,19 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     return pageBody([
       const SectionTitle('Настройки'),
       const AudioSettings(),
+      const SectionTitle('Учебный путь'),
+      ListTile(
+        title: Text('${app.course.flag} ${app.course.name}'),
+        subtitle: const Text('Сменить язык обучения'),
+        onTap: () => context.go('/courses'),
+      ),
+      if (app.course.language == 'en') const AdventureVisibilitySetting(),
+      if (app.course.language == 'en')
+        TextButton.icon(
+          onPressed: () => context.go('/adventures'),
+          icon: const Icon(Icons.explore_outlined),
+          label: const Text('Открыть приключения'),
+        ),
       TextField(
         controller: name,
         maxLength: 40,
@@ -1177,51 +1070,38 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
             )
             .toList(),
       ),
-      const SectionTitle('Напоминания'),
-      SwitchListTile(
-        contentPadding: EdgeInsets.zero,
-        title: const Text('Раз в сутки с момента включения'),
-        subtitle: const Text(
-          'Приблизительное время. Разрешение запрашивается только при включении.',
-        ),
-        value: reminders,
-        onChanged: busy
-            ? null
-            : (v) async {
-                setState(() => busy = true);
-                try {
-                  if (v) {
-                    final ok = await reminderService.enable();
-                    if (!ok) {
-                      if (context.mounted) {
-                        showMessage(context, 'Уведомления не разрешены.');
-                      }
-                      return;
-                    }
-                  } else {
-                    await reminderService.disable();
-                  }
-                  await app.repository.setSetting('reminders', '$v');
-                  if (mounted) setState(() => reminders = v);
-                } catch (_) {
-                  if (context.mounted) {
-                    showMessage(
-                      context,
-                      'Не удалось настроить уведомления на этом устройстве.',
-                    );
-                  }
-                } finally {
-                  if (mounted) setState(() => busy = false);
-                }
-              },
-      ),
+      const CompanionSettings(),
       const SectionTitle('Доступность'),
       const Text(
         'Размер текста следует настройке устройства. При отключении системных анимаций эффекты сокращаются. Микрофон необязателен; для речи есть текстовый режим.',
       ),
       const SectionTitle('Конфиденциальность'),
+      if (rustoreRelease)
+        TextButton(
+          onPressed: () async {
+            try {
+              if (await launchUrl(
+                Uri.parse(rustorePrivacyUrl),
+                mode: LaunchMode.externalApplication,
+              )) {
+                return;
+              }
+            } catch (_) {
+              // A browser may be missing or disabled by device policy.
+            }
+            if (context.mounted) {
+              showMessage(
+                context,
+                'Откройте политику в браузере: $rustorePrivacyUrl',
+              );
+            }
+          },
+          child: const Text('Политика конфиденциальности'),
+        ),
       const Text(
-        'Без рекламы и аналитических SDK. Локально сохраняются ответы, XP и настройки. При включении синхронизации история обучения и email хранятся в Supabase. Аудиозаписи приложение не сохраняет. Системные голосовые службы могут обрабатывать речь по правилам вашей ОС.',
+        rustoreRelease
+            ? 'Прогресс и настройки хранятся на устройстве. Версия RuStore работает без аккаунта. Аудиозаписи приложение не сохраняет.'
+            : 'Без рекламы и аналитических SDK. Локально сохраняются ответы, XP и настройки. При включении синхронизации история обучения и email хранятся в Supabase. Аудиозаписи приложение не сохраняет. Системные голосовые службы могут обрабатывать речь по правилам вашей ОС.',
       ),
       const SizedBox(height: 16),
       OutlinedButton(
@@ -1238,7 +1118,6 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 try {
                   await app.changeAccount(() async {
                     await app.cloud?.auth.signOut(scope: SignOutScope.local);
-                    await reminderService.disable();
                     await app.repository.reset();
                     await app.initializeAfterReset();
                   });

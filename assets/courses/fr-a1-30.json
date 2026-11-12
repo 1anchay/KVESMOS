@@ -1,0 +1,251 @@
+{
+  "id": "fr-a1-30",
+  "title": "Сравнить варианты",
+  "topic": "Фон и сравнение",
+  "order": 29,
+  "objective": "Выбрать удобный вариант с сравнением.",
+  "guide": "Plus… que — «более… чем», moins… que — «менее… чем», aussi… que — «такой же… как». Прилагательное согласуется с предметом.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:30:p0",
+      "en": "Ce trajet est plus court que l'autre.",
+      "ru": "Этот маршрут короче другого."
+    },
+    {
+      "id": "fr:v015:30:p1",
+      "en": "Cette chambre est moins chère.",
+      "ru": "Этот номер дешевле."
+    },
+    {
+      "id": "fr:v015:30:p2",
+      "en": "Le train est aussi rapide que le bus.",
+      "ru": "Поезд такой же быстрый, как автобус."
+    },
+    {
+      "id": "fr:v015:30:p3",
+      "en": "Cette valise est plus légère que la mienne.",
+      "ru": "Этот чемодан легче моего."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сравнить варианты",
+      "phrase": "Ce trajet est plus court que l'autre.",
+      "translation": "Этот маршрут короче другого.",
+      "explanation": "Plus… que — «более… чем», moins… que — «менее… чем», aussi… que — «такой же… как». Прилагательное согласуется с предметом."
+    },
+    {
+      "character": "miko",
+      "title": "Сравнить варианты",
+      "phrase": "Cette chambre est moins chère.",
+      "translation": "Этот номер дешевле.",
+      "explanation": "Cette chambre est moins chère. — Этот номер дешевле."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сравнить варианты",
+      "phrase": "Le train est aussi rapide que le bus.",
+      "translation": "Поезд такой же быстрый, как автобус.",
+      "explanation": "Le train est aussi rapide que le bus. — Поезд такой же быстрый, как автобус."
+    },
+    {
+      "character": "orbi",
+      "title": "Сравнить варианты",
+      "phrase": "Cette valise est plus légère que la mienne.",
+      "translation": "Этот чемодан легче моего.",
+      "explanation": "Cette valise est plus légère que la mienne. — Этот чемодан легче моего."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ce trajet est plus court que l'autre.",
+      "translation": "Этот маршрут короче другого.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Этот маршрут короче другого.",
+      "options": [
+        "Поезд такой же быстрый, как автобус.",
+        "Этот маршрут короче другого.",
+        "Этот чемодан легче моего."
+      ],
+      "explanation": "Plus… que — «более… чем», moins… que — «менее… чем», aussi… que — «такой же… как». Прилагательное согласуется с предметом."
+    },
+    {
+      "id": "apply",
+      "phrase": "Cette chambre est moins chère.",
+      "translation": "Этот номер дешевле.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Cette chambre est moins chère.",
+      "tokens": [
+        "Cette",
+        "chambre",
+        "est",
+        "moins",
+        "chère."
+      ],
+      "character": "miko",
+      "explanation": "Cette chambre est moins chère. — Этот номер дешевле."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-30-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Этот маршрут короче другого.»?",
+      "answers": [
+        "Ce trajet est plus court que l'autre."
+      ],
+      "explanation": "Ce trajet est plus court que l'autre. — Этот маршрут короче другого.",
+      "wordIds": [
+        "fr:v015:30:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Cette chambre est moins chère.",
+        "Cette valise est plus légère que la mienne.",
+        "Ce trajet est plus court que l'autre."
+      ],
+      "hint": "Ce trajet est plus court que l'autre. — Этот маршрут короче другого."
+    },
+    {
+      "id": "fr-a1-30-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Этот номер дешевле.",
+      "answers": [
+        "Cette chambre est moins chère."
+      ],
+      "explanation": "Plus… que — «более… чем», moins… que — «менее… чем», aussi… que — «такой же… как». Прилагательное согласуется с предметом.",
+      "wordIds": [
+        "fr:v015:30:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Cette",
+        "chambre",
+        "est",
+        "moins",
+        "chère."
+      ],
+      "hint": "Cette chambre est moins chère. — Этот номер дешевле."
+    },
+    {
+      "id": "fr-a1-30-e03",
+      "type": "dialogue",
+      "prompt": "Почему собеседник выбирает этот номер?",
+      "answers": [
+        "Он дешевле и тише."
+      ],
+      "explanation": "В диалоге: Tu préfères quelle chambre ? / Celle-ci. Elle est moins chère et plus calme que l'autre. Поэтому: Он дешевле и тише.",
+      "wordIds": [
+        "fr:v015:30:p0",
+        "fr:v015:30:p1",
+        "fr:v015:30:p2",
+        "fr:v015:30:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Tu préfères quelle chambre ?\nМико: Celle-ci. Elle est moins chère et plus calme que l'autre.",
+      "options": [
+        "Он больше и дороже.",
+        "Он ближе к вокзалу.",
+        "Он дешевле и тише."
+      ]
+    },
+    {
+      "id": "fr-a1-30-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Поезд такой же быстрый, как автобус."
+      ],
+      "explanation": "Le train est aussi rapide que le bus. — Поезд такой же быстрый, как автобус.",
+      "wordIds": [
+        "fr:v015:30:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Le train est aussi rapide que le bus.",
+      "options": [
+        "Этот маршрут короче другого.",
+        "Поезд такой же быстрый, как автобус.",
+        "Этот номер дешевле."
+      ],
+      "hint": "Le train est aussi rapide que le bus. — Поезд такой же быстрый, как автобус."
+    },
+    {
+      "id": "fr-a1-30-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ce trajet est plus court de l'autre.",
+      "answers": [
+        "Ce trajet est plus court que l'autre."
+      ],
+      "explanation": "В сравнении после plus + прилагательное используется que.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ce trajet est plus court de l'autre.",
+        "Ce trajet est plus court que l'autre."
+      ],
+      "hint": "Plus… que — «более… чем», moins… que — «менее… чем», aussi… que — «такой же… как». Прилагательное согласуется с предметом."
+    },
+    {
+      "id": "fr-a1-30-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Этот чемодан легче моего.». Можно написать вместо микрофона.",
+      "answers": [
+        "Cette valise est plus légère que la mienne."
+      ],
+      "explanation": "Cette valise est plus légère que la mienne. — Этот чемодан легче моего.",
+      "wordIds": [
+        "fr:v015:30:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Cette valise est plus légère que la mienne.",
+      "recall": {
+        "phrase": "Cette valise est plus légère que la mienne.",
+        "meaning": "Этот чемодан легче моего."
+      }
+    },
+    {
+      "id": "fr-a1-30-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Этот маршрут короче другого.",
+      "answers": [
+        "Ce trajet est plus court que l'autre."
+      ],
+      "explanation": "Plus… que — «более… чем», moins… que — «менее… чем», aussi… que — «такой же… как». Прилагательное согласуется с предметом.",
+      "wordIds": [
+        "fr:v015:30:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ce trajet est plus court que l'autre.",
+        "meaning": "Этот маршрут короче другого."
+      }
+    },
+    {
+      "id": "fr-a1-30-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: У нас был маленький сад.",
+      "answers": [
+        "Nous avions un petit jardin."
+      ],
+      "explanation": "Nous avions un petit jardin. — У нас был маленький сад.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Quand j'étais petit, j'habitais à Nice.",
+        "Nous avions un petit jardin.",
+        "Il faisait froid ce jour-là.",
+        "J'avais beaucoup de temps libre."
+      ]
+    }
+  ]
+}

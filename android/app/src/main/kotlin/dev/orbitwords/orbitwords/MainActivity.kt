@@ -4,16 +4,21 @@ import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 import android.content.Context
+import android.content.Intent
+import java.util.TimeZone
 import android.media.AudioAttributes
 import android.media.AudioFocusRequest
 import android.media.AudioManager
 import android.media.SoundPool
+import android.media.MediaPlayer
+import android.media.PlaybackParams
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import java.io.File
 
 class MainActivity : FlutterActivity() {
+    private var companionChannel: MethodChannel? = null
     private var channel: MethodChannel? = null
     private var pool: SoundPool? = null
     private val samples = mutableMapOf<String, Int>()
@@ -22,6 +27,7 @@ class MainActivity : FlutterActivity() {
     private var focus: AudioFocusRequest? = null
     private var focusEpoch = 0
     private var speechActive = false
+    private var speechPlayer: MediaPlayer? = null
     private val manager get() = getSystemService(Context.AUDIO_SERVICE) as AudioManager
     private val focusListener = AudioManager.OnAudioFocusChangeListener { change ->
         if (change < 0) {
@@ -29,8 +35,35 @@ class MainActivity : FlutterActivity() {
             channel?.invokeMethod("interrupted", null)
         }
     }
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        intent.getStringExtra(DailyCompanion.OPEN_COURSE)?.let {
+            // Android can reuse the activity while Dart is still starting.
+            // Keep the extra for consumeLaunch until Dart acknowledges it.
+            companionChannel?.invokeMethod("openCourse", DailyCompanion.course(it), object : MethodChannel.Result {
+                override fun success(result: Any?) {
+                    if (this@MainActivity.intent === intent) intent.removeExtra(DailyCompanion.OPEN_COURSE)
+                }
+                override fun error(code: String, message: String?, details: Any?) {}
+                override fun notImplemented() {}
+            })
+        }
+    }
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        companionChannel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "dev.orbitwords/daily_companion")
+        companionChannel!!.setMethodCallHandler { call, result ->
+            try {
+                when(call.method) {
+                    "consumeLaunch" -> { val id = intent.getStringExtra(DailyCompanion.OPEN_COURSE); intent.removeExtra(DailyCompanion.OPEN_COURSE); result.success(id) }
+                    "sync" -> { DailyCompanion.sync(this, call.arguments as String); result.success(null) }
+                    "pinWidget" -> result.success(DailyCompanion.pin(this))
+                    "timezone" -> result.success(TimeZone.getDefault().id)
+                    else -> result.notImplemented()
+                }
+            } catch (e: Exception) { result.error("companion", e.message, null) }
+        }
         channel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "dev.orbitwords/learning_audio")
         channel!!.setMethodCallHandler { call, result ->
             when (call.method) {
@@ -47,7 +80,7 @@ class MainActivity : FlutterActivity() {
                                 remaining--
                                 if (remaining == 0) result.success(ready.size == 8)
                             }
-                            for (name in listOf("correct", "incorrect", "xp", "complete", "achievement", "chest", "rare", "tap")) {
+                            for (name in listOf("correct", "incorrect", "xp", "complete", "achievement", "chest", "rare", "tap", "equip", "epic", "legendary", "interact", "pickup", "chapter")) {
                                 val target = File(cacheDir, "kvesmos-$name-v1.wav")
                                 assets.open("flutter_assets/assets/audio/effects/$name.wav").use { input ->
                                     target.outputStream().use { input.copyTo(it) }
@@ -67,8 +100,64 @@ class MainActivity : FlutterActivity() {
                     result.success(canSpeak() && takeFocus())
                 }
                 "speechFinished" -> {
-                    if (speechActive) stopAudio()
+                    if (speechActive && speechPlayer == null) stopAudio()
                     result.success(null)
+                }
+                "playSpeech" -> {
+                    stopRecording()
+                    val asset = call.argument<String>("asset") ?: ""
+                    val request = call.argument<Number>("request")?.toInt()
+                    if (!asset.startsWith("assets/audio/voices/") || asset.contains("..") ||
+                        asset.contains(":") || asset.contains("\\") || request == null || !canSpeak() || !takeFocus()) {
+                        result.success(false)
+                    } else {
+                        try {
+                            val target = File(cacheDir, "kvesmos-speech-current")
+                            assets.open("flutter_assets/$asset").use { input ->
+                                target.outputStream().use { input.copyTo(it) }
+                            }
+                            val player = MediaPlayer()
+                            speechPlayer = player
+                            player.setAudioAttributes(AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA)
+                                .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build())
+                            player.setDataSource(target.absolutePath)
+                            val volume = (call.argument<Double>("volume") ?: .85).coerceIn(0.0, 1.0).toFloat()
+                            player.setVolume(volume, volume)
+                            player.setOnCompletionListener {
+                                if (speechPlayer === it) {
+                                    stopAudio()
+                                    channel?.invokeMethod("recordingFinished", request)
+                                }
+                            }
+                            player.setOnErrorListener { failed, _, _ ->
+                                if (speechPlayer === failed) {
+                                    stopAudio()
+                                    channel?.invokeMethod("recordingFailed", request)
+                                }
+                                true
+                            }
+                            player.prepare()
+                            val rate = (call.argument<Double>("rate") ?: 1.0).coerceIn(.7, 1.0).toFloat()
+                            player.playbackParams = PlaybackParams().setSpeed(rate).setPitch(1f)
+                            speechActive = true
+                            player.start()
+                            result.success(true)
+                        } catch (_: Exception) {
+                            stopAudio()
+                            result.success(false)
+                        }
+                    }
+                }
+                "stopSpeech" -> { stopRecording(); result.success(null) }
+                "pauseSpeech" -> {
+                    val player = speechPlayer
+                    if (player == null) result.success(false)
+                    else { player.pause(); result.success(true) }
+                }
+                "resumeSpeech" -> {
+                    val player = speechPlayer
+                    if (player == null || !canSpeak() || !takeFocus()) result.success(false)
+                    else { player.start(); result.success(true) }
                 }
                 "play" -> {
                     val sample = samples[call.argument<String>("effect")]
@@ -112,8 +201,13 @@ class MainActivity : FlutterActivity() {
         focusEpoch++
         speechActive = false
         pool?.stop(stream)
+        stopRecording()
         if (Build.VERSION.SDK_INT >= 26) focus?.let { manager.abandonAudioFocusRequest(it) }
         else manager.abandonAudioFocus(focusListener)
+    }
+    private fun stopRecording() {
+        speechPlayer?.release()
+        speechPlayer = null
     }
     override fun onPause() {
         stopAudio()

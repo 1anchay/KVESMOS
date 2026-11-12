@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -9,7 +10,12 @@ import '../data/missions_repository.dart';
 import '../domain/missions.dart';
 import '../domain/rewards.dart';
 import '../domain/progress.dart';
+import '../domain/languages.dart';
+import '../domain/language_passport.dart';
+import '../domain/explorer_profile.dart';
 import '../services/cloud.dart';
+import '../services/daily_companion.dart';
+import '../domain/reminders.dart';
 import '../services/sync.dart';
 import '../services/learning_audio.dart';
 
@@ -20,27 +26,46 @@ final appProvider = ChangeNotifierProvider<AppController>(
 class AppController extends ChangeNotifier with WidgetsBindingObserver {
   static const showcaseKey = 'kvesmos.profile.showcase.v1';
   final LearningRepository repository;
+  final Random? rewardRandom;
   final SupabaseClient? cloud;
   late final SyncService? sync;
   late final RewardsRepository rewards;
   late final MissionsRepository dailyMissions;
   late final LearningAudio audio;
+  late final DailyCompanion companion;
   MissionSnapshot? missions;
   Inventory inventory = Inventory();
   List<String> featuredAchievements = [];
   ProgressSnapshot progress = ProgressSnapshot();
+  ProgressSnapshot globalProgress = ProgressSnapshot();
+  List<LanguagePassport> passports = [];
+  StudyCourse get course => repository.course;
+  Set<String> completedAdventures = {};
+  int adventuresToday = 0;
+  ExplorerRecords records = const ExplorerRecords();
   Set<String> installed = {};
+  Set<String> masteredUnits = {};
   int goal = 50;
   String name = 'Исследователь', startingLevel = 'С нуля';
   ThemeMode theme = ThemeMode.system;
   bool onboarded = false;
+  bool companionInvitation = false;
+  String onboardingRoute = '/welcome';
+  bool showMiniAdventures = false;
+  static const adventuresVisibilityKey = 'kvesmos.learning.showAdventures.v1';
   bool recoveringPassword = false, syncPaused = false;
   bool _disposed = false;
   String? cloudError;
   Timer? _retry;
   Timer? _calendarTimer;
   StreamSubscription<AuthState>? _auth;
-  AppController(this.repository, {this.cloud, this.cloudError}) {
+  AppController(
+    this.repository, {
+    this.cloud,
+    this.cloudError,
+    this.rewardRandom,
+  }) {
+    companion = DailyCompanion(repository);
     audio = LearningAudio(repository.setting, repository.setSetting);
     sync = cloud == null
         ? null
@@ -49,15 +74,32 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Future<void> initialize() async {
     await repository.initialize();
     await audio.initialize();
+    audio.studyLocale = course.locale;
+    await companion.initialize();
     rewards = RewardsRepository(
       repository,
       RewardCatalog(await repository.loadAsset('assets/kvesmos/catalog.json')),
+      random: rewardRandom,
     );
     dailyMissions = MissionsRepository(repository);
     goal = int.tryParse(await repository.setting('goal') ?? '') ?? 50;
     name = await repository.setting('name') ?? 'Исследователь';
     startingLevel = await repository.setting('level') ?? 'С нуля';
     onboarded = await repository.setting('onboarded') == 'true';
+    companionInvitation =
+        onboarded &&
+        await repository.setting('kvesmos.companion.invitation.v012') != 'seen';
+    final savedRoute = await repository.setting(
+      'kvesmos.onboarding.route.v012',
+    );
+    if (const [
+      '/companion/reminders',
+      '/companion/widget',
+    ].contains(savedRoute)) {
+      onboardingRoute = savedRoute!;
+    }
+    showMiniAdventures =
+        await repository.setting(adventuresVisibilityKey) == 'true';
     try {
       final saved = jsonDecode(await repository.setting(showcaseKey) ?? '[]');
       if (saved is List) {
@@ -94,6 +136,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
 
   Future<void> initializeAfterReset() async {
     await audio.initialize();
+    audio.studyLocale = course.locale;
     featuredAchievements = [];
     recoveringPassword = false;
     goal = 50;
@@ -101,28 +144,139 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     startingLevel = 'С нуля';
     theme = ThemeMode.system;
     onboarded = false;
+    onboardingRoute = '/welcome';
+    companionInvitation = false;
+    showMiniAdventures = false;
     await repository.initialize();
+    await companion.save(const ReminderPreferences());
+    audio.studyLocale = course.locale;
     await refresh();
   }
 
   Future<void> refresh() async {
-    progress = await repository.progress();
+    final stamps = await repository.settingsWithPrefix(
+      'kvesmos.mastery.v1:${course.id}:',
+    );
+    masteredUnits = stamps.keys
+        .where((key) => key.endsWith(':stamp'))
+        .map(
+          (key) => key.substring(
+            'kvesmos.mastery.v1:${course.id}:'.length,
+            key.length - ':stamp'.length,
+          ),
+        )
+        .toSet();
+    final events = await repository.allEvents();
+    completedAdventures = events
+        .where((e) => e.kind == 'adventure_complete')
+        .map((e) => e.data['adventure'] as String)
+        .toSet();
+    adventuresToday = events
+        .where(
+          (e) =>
+              e.kind == 'adventure_complete' &&
+              e.day == dayKey(repository.now()),
+        )
+        .map((e) => e.data['adventure'])
+        .toSet()
+        .length;
+    globalProgress = ProgressSnapshot.fromEvents(events);
+    passports = LanguagePassport.fromEvents(events);
+    progress = ProgressSnapshot.fromEvents(
+      events.where((e) => e.courseId == course.id),
+    );
+    records = ExplorerRecords.fromEvents(events, progress);
     installed = await repository.installed();
     await rewards.reconcile();
     missions = await dailyMissions.reconcile();
     inventory = missions!.inventory;
+    await companion.sync(goal);
     if (!_disposed) notifyListeners();
   }
+
+  /// Durable presentation marker only; never grants XP or inventory items.
+  Future<bool> claimExperienceMoment(String id) =>
+      repository.db.transaction(() async {
+        final key = 'kvesmos.alive.seen.v1:$id';
+        if (await repository.setting(key) != null) return false;
+        await repository.setSetting(key, 'true');
+        return true;
+      });
 
   Future<void> equipCosmetic(String slot, String? id) async {
     inventory = await rewards.equip(slot, id);
     if (!_disposed) notifyListeners();
   }
 
+  Future<void> saveAdventureVisibility(bool visible) async {
+    await repository.setSetting(adventuresVisibilityKey, '$visible');
+    showMiniAdventures = visible;
+    if (!_disposed) notifyListeners();
+  }
+
+  /// Read-only route selection. Never completes a game, creates a lesson
+  /// session or awards anything. Existing unfinished lessons retain priority.
+  Future<String> learningContinuationRoute() async {
+    bool available(String id) {
+      final lesson = repository.catalog.where((l) => l.id == id).firstOrNull;
+      return lesson != null &&
+          (lesson.order == 0 ||
+              progress.completed.contains(id) ||
+              progress.completed.contains(
+                repository.catalog[lesson.order - 1].id,
+              ));
+    }
+
+    final drafts = await (repository.db.select(
+      repository.db.sessions,
+    )..where((s) => s.done.equals(false))).get();
+    for (final draft in drafts) {
+      if (available(draft.lessonId) &&
+          await repository.setting('kvesmos.session.retired.v1:${draft.id}') !=
+              'true') {
+        return installed.contains(draft.lessonId)
+            ? '/lesson/${draft.lessonId}'
+            : '/offline';
+      }
+    }
+    final next = repository.catalog
+        .where((l) => !progress.completed.contains(l.id) && available(l.id))
+        .firstOrNull;
+    return next == null
+        ? '/map'
+        : installed.contains(next.id)
+        ? '/lesson/${next.id}'
+        : '/offline';
+  }
+
+  Future<void> saveReminders(ReminderPreferences value) async {
+    await companion.save(value);
+    await companion.sync(goal);
+    if (!_disposed) notifyListeners();
+  }
+
+  Future<void> dismissCompanionInvitation() async {
+    await repository.setSetting('kvesmos.companion.invitation.v012', 'seen');
+    companionInvitation = false;
+    if (!_disposed) notifyListeners();
+  }
+
+  Future<void> selectCourse(String id) async {
+    await audio.stop();
+    await repository.selectCourse(id);
+    audio.studyLocale = course.locale;
+    await refresh();
+  }
+
+  Future<void> resetAppearance() async {
+    inventory = await rewards.resetAppearance();
+    if (!_disposed) notifyListeners();
+  }
+
   Future<void> saveShowcase(List<String> names) async {
     final selected = names.toSet().toList();
     if (selected.length > 3 ||
-        selected.any((n) => !progress.achievements.contains(n))) {
+        selected.any((n) => !globalProgress.achievements.contains(n))) {
       throw StateError('Выберите до трёх уже полученных достижений.');
     }
     await repository.setSetting(showcaseKey, jsonEncode(selected));
@@ -191,16 +345,21 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     String? level,
   }) async {
     if (newName != null) {
-      name = newName.trim().isEmpty ? 'Исследователь' : newName.trim();
-      await repository.setSetting('name', name);
+      final savedName = newName.trim().isEmpty
+          ? 'Исследователь'
+          : newName.trim();
+      await repository.setSetting('name', savedName);
+      name = savedName;
     }
     if (newGoal != null) {
       goal = newGoal;
       await repository.setSetting('goal', '$goal');
+      await companion.sync(goal);
     }
     if (newTheme != null) {
       theme = newTheme;
       await repository.setSetting('theme', theme.name);
+      await companion.sync(goal);
     }
     if (level != null) {
       startingLevel = level;
@@ -220,6 +379,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     if (state != AppLifecycleState.resumed) unawaited(audio.stop());
     if (state == AppLifecycleState.resumed) {
       audio.voices.scanned = false;
+      unawaited(refresh());
       unawaited(_refreshCalendar());
       unawaited(synchronize());
     }

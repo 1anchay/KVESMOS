@@ -1,3 +1,4 @@
+import 'unit_mastery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -7,6 +8,16 @@ import 'design.dart';
 import 'pages.dart';
 import 'rewards_pages.dart';
 import 'lesson_screen.dart';
+import 'adventure_map.dart';
+import 'expeditions_page.dart';
+import 'personal_practice.dart';
+import 'space_adventure_page.dart';
+import 'optional_adventures.dart';
+import 'course_picker.dart';
+import 'companion_onboarding.dart';
+import 'unit_guide.dart';
+import 'practice_hub.dart';
+import '../data/practice_repository.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key});
@@ -16,18 +27,55 @@ class OrbitApp extends ConsumerStatefulWidget {
 
 class _OrbitAppState extends ConsumerState<OrbitApp> {
   late final GoRouter router;
+  late final AppController controller;
+  bool handlingLaunch = false;
+  Future<void> openCompanion() async {
+    if (!mounted) return;
+    final app = controller;
+    final id = app.companion.launchCourse.value;
+    if (id == null || !app.onboarded || handlingLaunch) return;
+    handlingLaunch = true;
+    app.companion.launchCourse.value = null;
+    try {
+      await app.selectCourse(id);
+      final route = await app.learningContinuationRoute();
+      if (mounted) router.go(route);
+    } finally {
+      handlingLaunch = false;
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-    final app = ref.read(appProvider);
+    final app = controller = ref.read(appProvider);
     router = GoRouter(
       refreshListenable: app,
       redirect: (context, state) =>
           app.recoveringPassword && state.uri.path != '/profile'
           ? '/profile'
+          : app.course.language != 'en' &&
+                (state.uri.path == '/adventures' ||
+                    state.uri.path.startsWith('/adventure/'))
+          ? '/map'
           : null,
-      initialLocation: app.onboarded ? '/' : '/welcome',
+      initialLocation: app.onboarded ? '/' : app.onboardingRoute,
       routes: [
+        GoRoute(
+          path: '/companion/reminders',
+          builder: (_, _) => const CompanionOnboarding(),
+        ),
+        GoRoute(
+          path: '/companion/widget',
+          builder: (_, _) => const CompanionOnboarding(widgetStep: true),
+        ),
+        GoRoute(
+          path: '/adventure/:id',
+          builder: (_, state) => SpaceAdventurePage(
+            key: ValueKey(state.pathParameters['id']),
+            id: state.pathParameters['id']!,
+          ),
+        ),
         GoRoute(
           path: '/welcome',
           builder: (_, _) => const OnboardingPage(step: 0),
@@ -47,14 +95,33 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
         GoRoute(
           path: '/lesson/:id',
           builder: (_, state) => LessonScreen(
+            key: ValueKey(state.uri.toString()),
             lessonId: state.pathParameters['id']!,
             demo: state.uri.queryParameters['demo'] == '1',
           ),
+        ),
+        GoRoute(
+          path: '/chest/:id',
+          builder: (_, state) {
+            final grant = app.inventory.grants[state.pathParameters['id']];
+            return grant == null
+                ? Scaffold(
+                    appBar: AppBar(title: const Text('Находки')),
+                    body: const Center(
+                      child: Text('Этот сундук ещё не получен.'),
+                    ),
+                  )
+                : OpenChestDialog(key: ValueKey(grant.id), grant: grant);
+          },
         ),
         ShellRoute(
           builder: (context, state, child) =>
               OrbitShell(location: state.uri.path, child: child),
           routes: [
+            GoRoute(
+              path: '/adventures',
+              builder: (_, _) => const OptionalAdventuresPage(),
+            ),
             GoRoute(path: '/rewards', builder: (_, _) => const RewardsPage()),
             GoRoute(
               path: '/inventory',
@@ -62,8 +129,51 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             ),
             GoRoute(path: '/crew', builder: (_, _) => const CrewPage()),
             GoRoute(path: '/', builder: (_, _) => const HomePage()),
+            GoRoute(path: '/units', builder: (_, _) => const UnitGuidePage()),
+            GoRoute(path: '/map', builder: (_, _) => const UnitGuidePage()),
+            GoRoute(
+              path: '/galaxy',
+              builder: (_, _) => pageBody([const AdventureMap()]),
+            ),
+            GoRoute(
+              path: '/mastery/:unit',
+              builder: (_, state) => UnitMasteryPage(
+                key: ValueKey('${app.course.id}:${state.uri}'),
+                unitId: state.pathParameters['unit']!,
+              ),
+            ),
+            GoRoute(path: '/training', builder: (_, _) => const PracticeHub()),
+            GoRoute(
+              path: '/practice/:mode',
+              builder: (_, state) => PersonalPracticePage(
+                key: ValueKey('${app.course.id}:${state.uri}'),
+                lessonIds: (state.uri.queryParameters['unit'] ?? '')
+                    .split(',')
+                    .where((id) => id.isNotEmpty)
+                    .toList(),
+                mode:
+                    PracticeMode.values
+                        .where((m) => m.name == state.pathParameters['mode'])
+                        .firstOrNull ??
+                    PracticeMode.warmup,
+              ),
+            ),
+            GoRoute(
+              path: '/practice',
+              builder: (_, _) =>
+                  PersonalPracticePage(key: ValueKey(app.course.id)),
+            ),
             GoRoute(path: '/words', builder: (_, _) => const WordsPage()),
-            GoRoute(path: '/review', builder: (_, _) => const ReviewPage()),
+            GoRoute(
+              path: '/review',
+              builder: (_, state) => ReviewPage(
+                mistakesOnly: state.uri.queryParameters['mistakes'] == '1',
+              ),
+            ),
+            GoRoute(
+              path: '/expeditions',
+              builder: (_, _) => const ExpeditionsPage(),
+            ),
             GoRoute(path: '/stats', builder: (_, _) => const StatsPage()),
             GoRoute(
               path: '/achievements',
@@ -71,6 +181,7 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             ),
             GoRoute(path: '/quests', builder: (_, _) => const QuestsPage()),
             GoRoute(path: '/profile', builder: (_, _) => const ProfilePage()),
+            GoRoute(path: '/courses', builder: (_, _) => const CoursesPage()),
             GoRoute(path: '/settings', builder: (_, _) => const SettingsPage()),
             GoRoute(path: '/offline', builder: (_, _) => const OfflinePage()),
           ],
@@ -85,10 +196,15 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
         ),
       ),
     );
+    app.companion.launchCourse.addListener(openCompanion);
+    app.addListener(openCompanion);
+    WidgetsBinding.instance.addPostFrameCallback((_) => openCompanion());
   }
 
   @override
   void dispose() {
+    controller.companion.launchCourse.removeListener(openCompanion);
+    controller.removeListener(openCompanion);
     router.dispose();
     super.dispose();
   }
@@ -113,9 +229,10 @@ class OrbitShell extends StatelessWidget {
   const OrbitShell({super.key, required this.location, required this.child});
   @override
   Widget build(BuildContext context) {
-    final index = location == '/'
+    final index = ['/', '/map', '/units', '/galaxy'].contains(location)
         ? 0
-        : ['/words', '/review'].contains(location)
+        : ['/words', '/review', '/practice', '/training'].contains(location) ||
+              location.startsWith('/practice/')
         ? 1
         : location == '/rewards'
         ? 2
@@ -140,6 +257,7 @@ class OrbitShell extends StatelessWidget {
           ],
         ),
         actions: [
+          const CourseSwitch(),
           IconButton(
             tooltip: 'Офлайн-уроки',
             onPressed: () => context.go('/offline'),
@@ -153,20 +271,27 @@ class OrbitShell extends StatelessWidget {
           const SizedBox(width: 8),
         ],
       ),
-      body: SafeArea(child: child),
+      body: SafeArea(
+        child: Consumer(
+          builder: (context, ref, _) => KeyedSubtree(
+            key: ValueKey(ref.watch(appProvider).course.id),
+            child: child,
+          ),
+        ),
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: index,
         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         onDestinationSelected: (i) =>
-            context.go(['/', '/words', '/rewards', '/stats', '/profile'][i]),
+            context.go(['/', '/training', '/rewards', '/stats', '/profile'][i]),
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.travel_explore),
-            label: 'Карта',
+            label: 'Сегодня',
           ),
           NavigationDestination(
             icon: Icon(Icons.style_outlined),
-            label: 'Слова',
+            label: 'Практика',
           ),
           NavigationDestination(
             icon: Icon(Icons.redeem_rounded),

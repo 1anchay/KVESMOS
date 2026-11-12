@@ -1,0 +1,255 @@
+{
+  "id": "es-a1-24",
+  "title": "Часы работы",
+  "topic": "Часы работы",
+  "order": 23,
+  "objective": "Понять расписание учреждения.",
+  "guide": "De… a… задаёт промежуток; abre/cierra — открывается/закрывается.",
+  "vocabulary": [
+    {
+      "id": "es:v014:24:p0",
+      "en": "La biblioteca abre a las nueve.",
+      "ru": "Библиотека открывается в девять."
+    },
+    {
+      "id": "es:v014:24:p1",
+      "en": "Cierra a las seis de la tarde.",
+      "ru": "Она закрывается в шесть вечера."
+    },
+    {
+      "id": "es:v014:24:p2",
+      "en": "Está abierta de lunes a viernes.",
+      "ru": "Она открыта с понедельника по пятницу."
+    },
+    {
+      "id": "es:v014:24:p3",
+      "en": "El domingo está cerrada.",
+      "ru": "В воскресенье она закрыта."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Часы работы",
+      "phrase": "La biblioteca abre a las nueve.",
+      "translation": "Библиотека открывается в девять.",
+      "explanation": "De… a… задаёт промежуток; abre/cierra — открывается/закрывается."
+    },
+    {
+      "character": "miko",
+      "title": "Часы работы",
+      "phrase": "Cierra a las seis de la tarde.",
+      "translation": "Она закрывается в шесть вечера.",
+      "explanation": "Cierra a las seis de la tarde. — Она закрывается в шесть вечера."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Часы работы",
+      "phrase": "Está abierta de lunes a viernes.",
+      "translation": "Она открыта с понедельника по пятницу.",
+      "explanation": "Está abierta de lunes a viernes. — Она открыта с понедельника по пятницу."
+    },
+    {
+      "character": "orbi",
+      "title": "Часы работы",
+      "phrase": "El domingo está cerrada.",
+      "translation": "В воскресенье она закрыта.",
+      "explanation": "El domingo está cerrada. — В воскресенье она закрыта."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "La biblioteca abre a las nueve.",
+      "translation": "Библиотека открывается в девять.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Библиотека открывается в девять.",
+      "options": [
+        "Она открыта с понедельника по пятницу.",
+        "Библиотека открывается в девять.",
+        "В воскресенье она закрыта."
+      ],
+      "explanation": "De… a… задаёт промежуток; abre/cierra — открывается/закрывается."
+    },
+    {
+      "id": "apply",
+      "phrase": "Cierra a las seis de la tarde.",
+      "translation": "Она закрывается в шесть вечера.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Cierra a las seis de la tarde.",
+      "tokens": [
+        "Cierra",
+        "a",
+        "las",
+        "seis",
+        "de",
+        "la",
+        "tarde."
+      ],
+      "character": "miko",
+      "explanation": "Cierra a las seis de la tarde. — Она закрывается в шесть вечера."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-24-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Библиотека открывается в девять.»?",
+      "answers": [
+        "La biblioteca abre a las nueve."
+      ],
+      "explanation": "La biblioteca abre a las nueve. — Библиотека открывается в девять.",
+      "wordIds": [
+        "es:v014:24:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Cierra a las seis de la tarde.",
+        "El domingo está cerrada.",
+        "La biblioteca abre a las nueve."
+      ],
+      "hint": "La biblioteca abre a las nueve. — Библиотека открывается в девять."
+    },
+    {
+      "id": "es-a1-24-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Она закрывается в шесть вечера.",
+      "answers": [
+        "Cierra a las seis de la tarde."
+      ],
+      "explanation": "De… a… задаёт промежуток; abre/cierra — открывается/закрывается.",
+      "wordIds": [
+        "es:v014:24:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Cierra",
+        "a",
+        "las",
+        "seis",
+        "de",
+        "la",
+        "tarde."
+      ],
+      "hint": "Cierra a las seis de la tarde. — Она закрывается в шесть вечера."
+    },
+    {
+      "id": "es-a1-24-e03",
+      "type": "dialogue",
+      "prompt": "В какой день библиотека закрыта?",
+      "answers": [
+        "В воскресенье."
+      ],
+      "explanation": "В воскресенье. Понять расписание учреждения.",
+      "wordIds": [
+        "es:v014:24:p0",
+        "es:v014:24:p1",
+        "es:v014:24:p2",
+        "es:v014:24:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿La biblioteca abre el domingo?\nМико: No, está abierta de lunes a viernes.",
+      "options": [
+        "В понедельник.",
+        "В пятницу.",
+        "В воскресенье."
+      ]
+    },
+    {
+      "id": "es-a1-24-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Она открыта с понедельника по пятницу."
+      ],
+      "explanation": "Está abierta de lunes a viernes. — Она открыта с понедельника по пятницу.",
+      "wordIds": [
+        "es:v014:24:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Está abierta de lunes a viernes.",
+      "options": [
+        "Библиотека открывается в девять.",
+        "Она открыта с понедельника по пятницу.",
+        "Она закрывается в шесть вечера."
+      ],
+      "hint": "Está abierta de lunes a viernes. — Она открыта с понедельника по пятницу."
+    },
+    {
+      "id": "es-a1-24-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: La biblioteca está abierto.",
+      "answers": [
+        "La biblioteca está abierta."
+      ],
+      "explanation": "Biblioteca — женского рода: abierta.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "La biblioteca está abierto.",
+        "La biblioteca está abierta."
+      ],
+      "hint": "De… a… задаёт промежуток; abre/cierra — открывается/закрывается."
+    },
+    {
+      "id": "es-a1-24-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «В воскресенье она закрыта.». Можно написать вместо микрофона.",
+      "answers": [
+        "El domingo está cerrada."
+      ],
+      "explanation": "El domingo está cerrada. — В воскресенье она закрыта.",
+      "wordIds": [
+        "es:v014:24:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "El domingo está cerrada.",
+      "recall": {
+        "phrase": "El domingo está cerrada.",
+        "meaning": "В воскресенье она закрыта."
+      }
+    },
+    {
+      "id": "es-a1-24-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Библиотека открывается в девять.",
+      "answers": [
+        "La biblioteca abre a las nueve."
+      ],
+      "explanation": "De… a… задаёт промежуток; abre/cierra — открывается/закрывается.",
+      "wordIds": [
+        "es:v014:24:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "La biblioteca abre a las nueve.",
+        "meaning": "Библиотека открывается в девять."
+      }
+    },
+    {
+      "id": "es-a1-24-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сегодня не могу, извини.",
+      "answers": [
+        "Hoy no puedo, lo siento."
+      ],
+      "explanation": "Hoy no puedo, lo siento. — Сегодня не могу, извини.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "¿Quieres cenar con nosotros?",
+        "Hoy no puedo, lo siento.",
+        "¿Puedes venir el sábado?",
+        "Sí, llevo una ensalada."
+      ]
+    }
+  ]
+}

@@ -1,4 +1,8 @@
+import 'semantic_colors.dart';
 import 'package:flutter/material.dart';
+import 'character_moment.dart';
+import 'galaxy_components.dart';
+import 'flight_components.dart';
 
 const space = Color(0xFF0F172A),
     cosmicBlue = Color(0xFF1D4ED8),
@@ -11,16 +15,17 @@ ThemeData orbitTheme(Brightness brightness) {
   final dark = brightness == Brightness.dark;
   final scheme =
       ColorScheme.fromSeed(
-        seedColor: cosmicBlue,
+        seedColor: FlightTokens.signal,
         brightness: brightness,
       ).copyWith(
-        primary: dark ? const Color(0xFF9BB9FF) : cosmicBlue,
+        primary: dark ? const Color(0xFF71D5CA) : FlightTokens.signal,
         secondary: violet,
         tertiary: coral,
-        surface: dark ? const Color(0xFF0F172A) : const Color(0xFFF1F5FD),
+        surface: dark ? FlightTokens.night : FlightTokens.paper,
       );
   return ThemeData(
     fontFamily: 'OrbitSans',
+    fontFamilyFallback: const ['KvesmosHanzi'],
     useMaterial3: true,
     colorScheme: scheme,
     scaffoldBackgroundColor: scheme.surface,
@@ -32,9 +37,14 @@ ThemeData orbitTheme(Brightness brightness) {
     cardTheme: CardThemeData(
       elevation: 0,
       clipBehavior: Clip.antiAlias,
-      color: dark ? const Color(0xFF1B2945) : Colors.white,
+      color: dark ? const Color(0xFF192C38) : Colors.white,
       margin: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(24),
+        side: BorderSide(
+          color: dark ? const Color(0xFF2C4552) : const Color(0xFFDCE5DF),
+        ),
+      ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
@@ -51,6 +61,7 @@ ThemeData orbitTheme(Brightness brightness) {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         textStyle: const TextStyle(
           fontFamily: 'OrbitSans',
+          fontFamilyFallback: ['KvesmosHanzi'],
           fontSize: 16,
           fontWeight: FontWeight.w700,
         ),
@@ -63,11 +74,11 @@ ThemeData orbitTheme(Brightness brightness) {
       ),
     ),
     navigationBarTheme: NavigationBarThemeData(
-      backgroundColor: dark ? const Color(0xFF15213A) : Colors.white,
-      indicatorColor: dark ? const Color(0xFF304574) : const Color(0xFFDCE7FF),
+      backgroundColor: dark ? FlightTokens.night : Colors.white,
+      indicatorColor: dark ? const Color(0xFF244950) : const Color(0xFFD9EEE8),
     ),
     progressIndicatorTheme: ProgressIndicatorThemeData(
-      color: cosmicBlue,
+      color: scheme.primary,
       linearTrackColor: dark
           ? const Color(0xFF2A3D60)
           : const Color(0xFFDCE6FA),
@@ -75,20 +86,20 @@ ThemeData orbitTheme(Brightness brightness) {
     ),
     textTheme: TextTheme(
       headlineLarge: TextStyle(
-        fontSize: 34,
+        fontSize: 30,
         fontWeight: FontWeight.w800,
         letterSpacing: -1,
         color: dark ? Colors.white : space,
       ),
       headlineMedium: const TextStyle(
-        fontSize: 28,
+        fontSize: 26,
         fontWeight: FontWeight.w800,
         letterSpacing: -.6,
       ),
       titleLarge: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
       titleMedium: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
-      bodyLarge: const TextStyle(fontSize: 17, height: 1.5),
-      bodyMedium: const TextStyle(fontSize: 15, height: 1.45),
+      bodyLarge: const TextStyle(fontSize: 17, height: 1.35),
+      bodyMedium: const TextStyle(fontSize: 15, height: 1.3),
     ),
   );
 }
@@ -133,16 +144,19 @@ class CharacterPortrait extends StatelessWidget {
 class SpaceBanner extends StatelessWidget {
   final String eyebrow, title, subtitle;
   final Widget? action;
+  final bool animate;
+  final bool showCharacter;
   const SpaceBanner({
     super.key,
     required this.eyebrow,
     required this.title,
     required this.subtitle,
     this.action,
+    this.animate = true,
+    this.showCharacter = true,
   });
   @override
   Widget build(BuildContext context) => Container(
-    padding: const EdgeInsets.all(24),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(28),
       gradient: const LinearGradient(
@@ -151,56 +165,68 @@ class SpaceBanner extends StatelessWidget {
         end: Alignment.bottomRight,
       ),
     ),
-    child: LayoutBuilder(
-      builder: (context, constraints) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
+    clipBehavior: Clip.antiAlias,
+    child: GalaxyField(
+      deep: true,
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: LayoutBuilder(
+          builder: (context, constraints) => Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                child: Text(
-                  eyebrow,
-                  style: const TextStyle(
-                    color: turquoise,
-                    fontWeight: FontWeight.w800,
-                    letterSpacing: 2,
-                    fontSize: 11,
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      eyebrow,
+                      style: TextStyle(
+                        color: KvColors.of(context).accent,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 2,
+                        fontSize: 11,
+                      ),
+                    ),
                   ),
+                  const Icon(Icons.auto_awesome, color: starYellow, size: 20),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Text(
+                      title,
+                      style: TextStyle(
+                        color: KvColors.of(context).text,
+                        fontSize: 30,
+                        height: 1.15,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                  if (showCharacter && constraints.maxWidth > 270)
+                    CharacterMoment(
+                      characterId: 'orbi',
+                      animate: animate,
+                      state: CharacterState.greeting,
+                      size: constraints.maxWidth > 350 ? 150 : 104,
+                    ),
+                ],
+              ),
+              const SizedBox(height: 14),
+              Text(
+                subtitle,
+                style: TextStyle(
+                  color: KvColors.of(context).muted,
+                  fontSize: 15,
+                  height: 1.5,
                 ),
               ),
-              const Icon(Icons.auto_awesome, color: starYellow, size: 20),
+              if (action != null) ...[const SizedBox(height: 20), action!],
             ],
           ),
-          const SizedBox(height: 12),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Text(
-                  title,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    height: 1.15,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
-              if (constraints.maxWidth > 270)
-                OrbitRobot(size: constraints.maxWidth > 350 ? 160 : 112),
-            ],
-          ),
-          const SizedBox(height: 14),
-          Text(
-            subtitle,
-            style: const TextStyle(
-              color: Color(0xFFC5CDE0),
-              fontSize: 15,
-              height: 1.5,
-            ),
-          ),
-          if (action != null) ...[const SizedBox(height: 20), action!],
-        ],
+        ),
       ),
     ),
   );
@@ -259,12 +285,14 @@ class Metric extends StatelessWidget {
   );
 }
 
-Widget pageBody(List<Widget> children) => Center(
-  child: ConstrainedBox(
-    constraints: const BoxConstraints(maxWidth: 860),
-    child: ListView(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
-      children: children,
+Widget pageBody(List<Widget> children) => SizedBox(
+  child: Center(
+    child: ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 860),
+      child: ListView(
+        padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
+        children: children,
+      ),
     ),
   ),
 );

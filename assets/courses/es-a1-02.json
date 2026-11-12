@@ -1,0 +1,281 @@
+{
+  "id": "es-a1-02",
+  "title": "Me llamo · знакомимся",
+  "topic": "Me llamo · знакомимся",
+  "order": 1,
+  "objective": "Назвать имя и страну происхождения.",
+  "guide": "Me llamo… — меня зовут…; ¿Cómo te llamas? — как тебя зовут? Soy de… — я из… Soy означает «я являюсь»: yo можно опустить. В испанском ll обычно звучит близко к «й», с региональными отличиями.",
+  "vocabulary": [
+    {
+      "id": "es:nombre",
+      "en": "nombre",
+      "ru": "имя"
+    },
+    {
+      "id": "es:rusia",
+      "en": "Rusia",
+      "ru": "Россия"
+    },
+    {
+      "id": "es:españa",
+      "en": "España",
+      "ru": "Испания"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-02-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Меня зовут Ана.»",
+      "answers": [
+        "Me llamo Ana."
+      ],
+      "explanation": "Me llamo Ana. — Меня зовут Ана.",
+      "hint": "Me llamo Ana. — Меня зовут Ана.",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "¿Cómo te llamas?",
+        "Me llamo Ana.",
+        "Mucho gusto."
+      ]
+    },
+    {
+      "id": "es-a1-02-e02",
+      "type": "choice",
+      "prompt": "Что означает «¿Cómo te llamas?»?",
+      "answers": [
+        "Как тебя зовут?"
+      ],
+      "explanation": "¿Cómo te llamas? — Как тебя зовут?",
+      "hint": "¿Cómo te llamas? — Как тебя зовут?",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Я из России.",
+        "Очень приятно.",
+        "Как тебя зовут?"
+      ]
+    },
+    {
+      "id": "es-a1-02-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Я из России.»",
+      "answers": [
+        "Soy de Rusia"
+      ],
+      "explanation": "Soy de Rusia. — Я из России.",
+      "hint": "Soy de Rusia. — Я из России.",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "Soy",
+        "de",
+        "Rusia"
+      ]
+    },
+    {
+      "id": "es-a1-02-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "nombre — имя; Rusia — Россия; España — Испания",
+      "hint": "nombre — имя; Rusia — Россия; España — Испания",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "es:nombre",
+          "en": "nombre",
+          "ru": "имя"
+        },
+        {
+          "id": "es:rusia",
+          "en": "Rusia",
+          "ru": "Россия"
+        },
+        {
+          "id": "es:españa",
+          "en": "España",
+          "ru": "Испания"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-02-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Очень приятно."
+      ],
+      "explanation": "Mucho gusto. — Очень приятно.",
+      "hint": "Mucho gusto. — Очень приятно.",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Mucho gusto.",
+      "options": [
+        "Меня зовут Ана.",
+        "Очень приятно.",
+        "Я из России."
+      ]
+    },
+    {
+      "id": "es-a1-02-e06",
+      "type": "gap",
+      "prompt": "Я из России: ___ de Rusia.",
+      "answers": [
+        "Soy"
+      ],
+      "explanation": "Me llamo… — меня зовут…; ¿Cómo te llamas? — как тебя зовут? Soy de… — я из… Soy означает «я являюсь»: yo можно опустить. В испанском ll обычно звучит близко к «й», с региональными отличиями.",
+      "hint": "Me llamo… — меня зовут…; ¿Cómo te llamas? — как тебя зовут? Soy de… — я из… Soy означает «я являюсь»: yo можно опустить. В испанском ll обычно звучит близко к «й», с региональными отличиями.",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "Es",
+        "Soy",
+        "Eres"
+      ]
+    },
+    {
+      "id": "es-a1-02-e07",
+      "type": "dialogue",
+      "prompt": "Мико: «Me llamo Miko.» Вежливо ответь, что тебе приятно познакомиться.",
+      "answers": [
+        "Mucho gusto."
+      ],
+      "explanation": "В этой ситуации подходит: Mucho gusto.",
+      "hint": "В этой ситуации подходит: Mucho gusto.",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Hasta luego.",
+        "¿Cómo estás?",
+        "Mucho gusto."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "es-a1-02-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Me llamas Ana.»",
+      "answers": [
+        "Me llamo Ana."
+      ],
+      "explanation": "Говоря о себе, используем me llamo; te llamas — о собеседнике.",
+      "hint": "Говоря о себе, используем me llamo; te llamas — о собеседнике.",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "es-a1-02-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Очень приятно.»",
+      "answers": [
+        "Mucho gusto."
+      ],
+      "explanation": "Mucho gusto. — Очень приятно.",
+      "hint": "Mucho gusto. — Очень приятно.",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "es-a1-02-e10",
+      "type": "review",
+      "prompt": "Финал: Мико: «Me llamo Miko.» Вежливо ответь, что тебе приятно познакомиться.",
+      "answers": [
+        "Mucho gusto."
+      ],
+      "explanation": "Теперь ты умеешь: назвать имя и страну происхождения.",
+      "hint": "Теперь ты умеешь: назвать имя и страну происхождения.",
+      "wordIds": [
+        "es:nombre",
+        "es:rusia",
+        "es:españa"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Mucho gusto.",
+        "¿Cómo estás?",
+        "Hasta luego."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Me llamo Ana.",
+      "translation": "Меня зовут Ана.",
+      "explanation": "Ситуация: Назвать имя и страну происхождения. Me llamo Ana. — Меня зовут Ана."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "¿Cómo te llamas?",
+      "translation": "Как тебя зовут?",
+      "explanation": "Ситуация: Назвать имя и страну происхождения. ¿Cómo te llamas? — Как тебя зовут?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "Soy de Rusia.",
+      "translation": "Я из России.",
+      "explanation": "Me llamo… — меня зовут…; ¿Cómo te llamas? — как тебя зовут? Soy de… — я из… Soy означает «я являюсь»: yo можно опустить. В испанском ll обычно звучит близко к «й», с региональными отличиями."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Mucho gusto.",
+      "translation": "Очень приятно.",
+      "explanation": "Ситуация: Назвать имя и страну происхождения. Mucho gusto. — Очень приятно."
+    }
+  ]
+}

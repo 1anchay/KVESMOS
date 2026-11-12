@@ -13,6 +13,7 @@ class LearningEvent {
     required this.day,
     required this.data,
   });
+  String get courseId => data['courseId'] as String? ?? 'ru-en';
   Map<String, dynamic> toJson() => {
     'id': id,
     'kind': kind,
@@ -104,7 +105,9 @@ class ProgressSnapshot {
         } else {
           result.errors++;
         }
-        if (passed && credited.add('${d['session']}:${d['exercise']}')) {
+        if (passed &&
+            d['rehearsal'] != true &&
+            credited.add('${d['session']}:${d['exercise']}')) {
           gained = 10;
         }
         final at = DateTime.parse(event.occurredAt).toUtc();
@@ -121,6 +124,7 @@ class ProgressSnapshot {
           days[key] = ((previous?.$1 ?? true) && passed, at);
         }
       } else if (event.kind == 'complete' &&
+          d['rehearsal'] != true &&
           completedRuns.add(d['session'] as String)) {
         gained = 20;
         result.completed.add(d['lesson']);

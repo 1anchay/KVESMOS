@@ -1,0 +1,108 @@
+##
+Обменять покупку|Попросить обмен и объяснить проблему с размером.|Quisiera — вежливое «я хотел бы». Me queda pequeño значит «мне мало»; прилагательное согласуется с предметом.
+Quisiera cambiar esta camisa.~Я хотел бы обменять эту рубашку.
+Esta camisa me queda pequeña.~Эта рубашка мне мала.
+¿Tiene una talla más grande?~У вас есть размер побольше?
+Aquí está el recibo.~Вот чек.
+Esta camisa me queda pequeña. ¿Tiene una talla más grande? / Sí. ¿Tiene el recibo?
+Почему покупатель хочет обменять рубашку?|Она ему мала.|Она слишком дорогая.|Ему не нравится цвет.
+Esta camisa me queda pequeño.~Esta camisa me queda pequeña.~Camisa — женского рода, поэтому pequeña.
+##
+Забронировать столик|Уточнить время и число гостей при бронировании.|Para + число людей обозначает, на кого бронь. A las + час указывает время встречи.
+Quisiera reservar una mesa para dos.~Я хотел бы забронировать столик на двоих.
+¿Hay una mesa libre a las ocho?~Есть свободный столик в восемь?
+La reserva está a nombre de Ana.~Бронь на имя Аны.
+Preferimos una mesa junto a la ventana.~Мы предпочитаем столик у окна.
+¿Hay una mesa libre a las ocho? / A las ocho no, pero tenemos una a las nueve.
+На какое время есть свободный столик?|На девять.|На восемь.|На семь.
+¿Hay una mesa libre a los ocho?~¿Hay una mesa libre a las ocho?~Для времени с horas используем женское las: a las ocho.
+##
+Заселиться в отель|Сообщить о брони и узнать время завтрака.|Una habitación doble — двухместный номер. ¿A qué hora…? спрашивает о времени события.
+Tengo una reserva para dos noches.~У меня бронь на две ночи.
+¿A qué hora empieza el desayuno?~Во сколько начинается завтрак?
+Necesitamos una habitación doble.~Нам нужен двухместный номер.
+¿Está incluido el desayuno?~Завтрак включён?
+¿Está incluido el desayuno? / Sí. Empieza a las siete y termina a las diez.
+Когда заканчивается завтрак?|В десять.|В семь.|В двенадцать.
+Necesitamos un habitación doble.~Necesitamos una habitación doble.~Habitación — женского рода: una habitación.
+##
+Наша семья и наши вещи|Использовать притяжательные слова с разными существительными.|Nuestro/nuestra/nuestros/nuestras согласуется с тем, что принадлежит, а не с владельцем. Su может означать «его», «её» или «их» — помогает контекст.
+Nuestra hija estudia en Madrid.~Наша дочь учится в Мадриде.
+Nuestros amigos viven cerca.~Наши друзья живут рядом.
+Este es su hermano.~Это её брат.
+¿Dónde están nuestras llaves?~Где наши ключи?
+¿Tus amigos viven lejos? / No, nuestros amigos viven cerca, junto al parque.
+Где живут друзья?|Рядом, у парка.|Далеко от города.|В самом парке.
+Nuestro hija estudia en Madrid.~Nuestra hija estudia en Madrid.~Hija — женского рода, поэтому nuestra.
+##
+Где я был вчера|Сообщить о месте и состоянии в законченный период прошлого.|Estuve — «я был» от estar для завершённого периода. Estuvimos — «мы были». Вопрос «где?» — ¿dónde?
+Ayer estuve en casa.~Вчера я был дома.
+Estuvimos en el mercado por la mañana.~Утром мы были на рынке.
+¿Dónde estuviste el sábado?~Где ты был в субботу?
+La tienda estuvo cerrada ayer.~Вчера магазин был закрыт.
+¿Dónde estuviste el sábado? / Estuve en casa. La tienda estuvo cerrada ese día.
+Почему собеседник не пошёл в магазин?|Магазин был закрыт.|Он был на рынке весь день.|Он уехал из города.
+Ayer yo estuvo en casa.~Ayer yo estuve en casa.~Yo требует формы estuve; estuvo относится к él, ella или usted.
+##
+Что сделал вчера|Рассказать о законченных действиях с правильными глаголами.|В прошедшем времени yo: hablar → hablé, comer → comí, vivir → viví. Ударение на последнем слоге важно.
+Ayer compré fruta.~Вчера я купил фрукты.
+Comí con una amiga.~Я поел с подругой.
+Escribí un mensaje por la tarde.~Днём я написал сообщение.
+¿Terminaste el trabajo?~Ты закончил работу?
+¿Terminaste el trabajo? / Sí, lo terminé por la mañana. Por la tarde escribí un mensaje a Luis.
+Когда была закончена работа?|Утром.|Днём.|Поздно ночью.
+Ayer yo compro fruta.~Ayer yo compré fruta.~Ayer задаёт законченное прошлое. Для yo нужна форма compré, а compro — настоящее.
+##
+Куда ездили|Рассказать о поездке с формами fui и fuimos.|Fui и fuimos — формы ir в законченном прошлом. A обозначает направление; a + el сокращается до al.
+El domingo fui al museo.~В воскресенье я ходил в музей.
+Fuimos a la playa en autobús.~Мы ездили на пляж на автобусе.
+¿Fuiste al concierto?~Ты ходил на концерт?
+Después volvimos a casa.~Потом мы вернулись домой.
+¿Fuiste al concierto el domingo? / No, fui al museo. Después volví a casa.
+Где был собеседник в воскресенье?|В музее.|На концерте.|На пляже.
+Fuimos a el museo.~Fuimos al museo.~Предлог a с артиклем el сокращается до al.
+##
+Как прошёл день|Спросить о действиях и использовать hice, tuve.|Hacer → hice/hiciste, tener → tuve/tuviste: эти прошедшие формы нужно запомнить. Не добавляем к ним окончания правильных глаголов.
+¿Qué hiciste ayer?~Что ты делал вчера?
+Hice la cena para mi familia.~Я приготовил ужин для своей семьи.
+Tuve una reunión por la mañana.~Утром у меня была встреча.
+No tuve tiempo para llamar.~У меня не было времени позвонить.
+¿Qué hiciste ayer? / Tuve una reunión por la mañana e hice la cena por la noche.
+Что собеседник делал вечером?|Готовил ужин.|Был на встрече.|Звонил друзьям.
+Yo hiciste la cena.~Yo hice la cena.~Для yo используется hice; hiciste относится к tú.
+##
+Обычно и вчера|Различать привычку и отдельное действие в прошлом.|Normalmente сочетается с настоящим, ayer — с законченным прошлым. Сравни: voy — иду обычно, fui — сходил.
+Normalmente voy a pie.~Обычно я хожу пешком.
+Ayer tomé el autobús.~Вчера я поехал на автобусе.
+Siempre desayuno en casa.~Я всегда завтракаю дома.
+El lunes desayuné en una cafetería.~В понедельник я позавтракал в кафе.
+¿Siempre desayunas en casa? / Normalmente sí, pero el lunes desayuné en una cafetería.
+Чем отличался понедельник?|Завтрак был в кафе.|Завтрака не было.|Завтрак был дома, как всегда.
+Ayer tomo el autobús.~Ayer tomé el autobús.~Для законченного действия с ayer нужна прошедшая форма tomé.
+##
+Выбрать подходящий вариант|Выразить предпочтение и сравнить предложения.|Preferir меняет e на ie в prefiero/prefieres/prefiere; nosotros preferimos сохраняет e. Más… que означает «более… чем».
+Prefiero viajar en tren.~Я предпочитаю путешествовать на поезде.
+Este hotel es más tranquilo que el otro.~Этот отель тише другого.
+¿Qué opción prefieres?~Какой вариант ты предпочитаешь?
+Preferimos salir temprano.~Мы предпочитаем выехать рано.
+¿Qué opción prefieres, el tren o el autobús? / Prefiero el tren. Es más cómodo que el autobús.
+Почему собеседник выбирает поезд?|Он удобнее автобуса.|Он дешевле самолёта.|Он отправляется позже.
+Yo prefero viajar en tren.~Yo prefiero viajar en tren.~В форме yo глагол preferir меняет e на ie: prefiero.
+##
+Кому отправить сообщение|Понять короткие дополнения me и te.|Me означает «мне/меня», te — «тебе/тебя». Перед спрягаемым глаголом: te llamo, me ayudas.
+Te llamo esta tarde.~Я позвоню тебе сегодня днём.
+¿Me ayudas con la reserva?~Поможешь мне с бронированием?
+Te envío la dirección.~Я отправляю тебе адрес.
+¿Me puedes mandar el mensaje?~Можешь прислать мне сообщение?
+¿Me puedes mandar la dirección? / Claro. Te envío la dirección ahora y te llamo esta tarde.
+Что собеседник отправит сейчас?|Адрес.|Билет.|Чек.
+Te yo llamo esta tarde.~Yo te llamo esta tarde.~Дополнение te ставим непосредственно перед llamo; явное yo, если нужно, стоит раньше.
+##
+Уточнить бронь письмом|Соединить просьбу, дату и уточнение в коротком сообщении.|Para + дата или число людей уточняет бронь. ¿Podría confirmar…? — вежливая просьба подтвердить детали.
+Quisiera confirmar mi reserva.~Я хотел бы подтвердить свою бронь.
+Llegamos el viernes por la tarde.~Мы приезжаем в пятницу днём.
+Reservé una habitación para dos personas.~Я забронировал номер на двоих.
+¿Podría confirmar el precio?~Не могли бы вы подтвердить цену?
+Quisiera confirmar mi reserva para el viernes. / Sí, tenemos una habitación para dos personas. El desayuno está incluido.
+Что входит в бронь?|Завтрак.|Ужин.|Поездка на автобусе.
+Reservé una habitación por dos personas.~Reservé una habitación para dos personas.~Для назначения «на двоих» здесь нужен para. Por не выражает вместимость номера.

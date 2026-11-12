@@ -9,9 +9,13 @@ android/local.properties
 android/key.properties
 *.jks
 *.keystore
+*.p12
 .env
 ios/Pods/
 ios/.symlinks/
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
 test-output/
+
+# Python authoring caches
+__pycache__/

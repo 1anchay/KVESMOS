@@ -1,0 +1,290 @@
+{
+  "id": "fr-a1-21",
+  "title": "Обменять одежду",
+  "topic": "Покупки и бронирование",
+  "order": 20,
+  "objective": "Попросить обмен и подобрать другой размер.",
+  "guide": "Je voudrais + инфинитив — вежливая просьба. Trop означает «слишком», а plus grande — «больше» с согласованием по женскому роду.",
+  "vocabulary": [
+    {
+      "id": "fr:v015:21:p0",
+      "en": "Je voudrais échanger cette chemise.",
+      "ru": "Я хотел бы обменять эту рубашку."
+    },
+    {
+      "id": "fr:v015:21:p1",
+      "en": "Cette chemise est trop petite.",
+      "ru": "Эта рубашка слишком маленькая."
+    },
+    {
+      "id": "fr:v015:21:p2",
+      "en": "Vous avez une taille plus grande ?",
+      "ru": "У вас есть размер побольше?"
+    },
+    {
+      "id": "fr:v015:21:p3",
+      "en": "J'ai gardé le ticket de caisse.",
+      "ru": "Я сохранил кассовый чек."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Обменять одежду",
+      "phrase": "Je voudrais échanger cette chemise.",
+      "translation": "Я хотел бы обменять эту рубашку.",
+      "explanation": "Je voudrais + инфинитив — вежливая просьба. Trop означает «слишком», а plus grande — «больше» с согласованием по женскому роду."
+    },
+    {
+      "character": "miko",
+      "title": "Обменять одежду",
+      "phrase": "Cette chemise est trop petite.",
+      "translation": "Эта рубашка слишком маленькая.",
+      "explanation": "Cette chemise est trop petite. — Эта рубашка слишком маленькая."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Обменять одежду",
+      "phrase": "Vous avez une taille plus grande ?",
+      "translation": "У вас есть размер побольше?",
+      "explanation": "Vous avez une taille plus grande ? — У вас есть размер побольше?"
+    },
+    {
+      "character": "orbi",
+      "title": "Обменять одежду",
+      "phrase": "J'ai gardé le ticket de caisse.",
+      "translation": "Я сохранил кассовый чек.",
+      "explanation": "J'ai gardé le ticket de caisse. — Я сохранил кассовый чек."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je voudrais échanger cette chemise.",
+      "translation": "Я хотел бы обменять эту рубашку.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы обменять эту рубашку.",
+      "options": [
+        "У вас есть размер побольше?",
+        "Я хотел бы обменять эту рубашку.",
+        "Я сохранил кассовый чек."
+      ],
+      "explanation": "Je voudrais + инфинитив — вежливая просьба. Trop означает «слишком», а plus grande — «больше» с согласованием по женскому роду."
+    },
+    {
+      "id": "apply",
+      "phrase": "Cette chemise est trop petite.",
+      "translation": "Эта рубашка слишком маленькая.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Cette chemise est trop petite.",
+      "tokens": [
+        "Cette",
+        "chemise",
+        "est",
+        "trop",
+        "petite."
+      ],
+      "character": "miko",
+      "explanation": "Cette chemise est trop petite. — Эта рубашка слишком маленькая."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-21-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы обменять эту рубашку.»?",
+      "answers": [
+        "Je voudrais échanger cette chemise."
+      ],
+      "explanation": "Je voudrais échanger cette chemise. — Я хотел бы обменять эту рубашку.",
+      "wordIds": [
+        "fr:v015:21:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Cette chemise est trop petite.",
+        "J'ai gardé le ticket de caisse.",
+        "Je voudrais échanger cette chemise."
+      ],
+      "hint": "Je voudrais échanger cette chemise. — Я хотел бы обменять эту рубашку."
+    },
+    {
+      "id": "fr-a1-21-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Эта рубашка слишком маленькая.",
+      "answers": [
+        "Cette chemise est trop petite."
+      ],
+      "explanation": "Je voudrais + инфинитив — вежливая просьба. Trop означает «слишком», а plus grande — «больше» с согласованием по женскому роду.",
+      "wordIds": [
+        "fr:v015:21:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Cette",
+        "chemise",
+        "est",
+        "trop",
+        "petite."
+      ],
+      "hint": "Cette chemise est trop petite. — Эта рубашка слишком маленькая."
+    },
+    {
+      "id": "fr-a1-21-e03",
+      "type": "dialogue",
+      "prompt": "Почему покупатель хочет обменять рубашку?",
+      "answers": [
+        "Она слишком маленькая."
+      ],
+      "explanation": "В диалоге: Je voudrais échanger cette chemise. Elle est trop petite. / Bien sûr. Vous avez le ticket de caisse ? Поэтому: Она слишком маленькая.",
+      "wordIds": [
+        "fr:v015:21:p0",
+        "fr:v015:21:p1",
+        "fr:v015:21:p2",
+        "fr:v015:21:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Je voudrais échanger cette chemise. Elle est trop petite.\nМико: Bien sûr. Vous avez le ticket de caisse ?",
+      "options": [
+        "Она слишком большая.",
+        "Она слишком дорогая.",
+        "Она слишком маленькая."
+      ]
+    },
+    {
+      "id": "fr-a1-21-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "У вас есть размер побольше?"
+      ],
+      "explanation": "Vous avez une taille plus grande ? — У вас есть размер побольше?",
+      "wordIds": [
+        "fr:v015:21:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Vous avez une taille plus grande ?",
+      "options": [
+        "Я хотел бы обменять эту рубашку.",
+        "У вас есть размер побольше?",
+        "Эта рубашка слишком маленькая."
+      ],
+      "hint": "Vous avez une taille plus grande ? — У вас есть размер побольше?"
+    },
+    {
+      "id": "fr-a1-21-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v015:21:p0",
+        "fr:v015:21:p1",
+        "fr:v015:21:p2",
+        "fr:v015:21:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v015:21:p0",
+          "en": "Je voudrais échanger cette chemise.",
+          "ru": "Я хотел бы обменять эту рубашку."
+        },
+        {
+          "id": "fr:v015:21:p1",
+          "en": "Cette chemise est trop petite.",
+          "ru": "Эта рубашка слишком маленькая."
+        },
+        {
+          "id": "fr:v015:21:p2",
+          "en": "Vous avez une taille plus grande ?",
+          "ru": "У вас есть размер побольше?"
+        },
+        {
+          "id": "fr:v015:21:p3",
+          "en": "J'ai gardé le ticket de caisse.",
+          "ru": "Я сохранил кассовый чек."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-21-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Cette chemise est trop petit.",
+      "answers": [
+        "Cette chemise est trop petite."
+      ],
+      "explanation": "Chemise — женского рода: petite получает -e.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Cette chemise est trop petit.",
+        "Cette chemise est trop petite."
+      ],
+      "hint": "Je voudrais + инфинитив — вежливая просьба. Trop означает «слишком», а plus grande — «больше» с согласованием по женскому роду."
+    },
+    {
+      "id": "fr-a1-21-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я сохранил кассовый чек.». Можно написать вместо микрофона.",
+      "answers": [
+        "J'ai gardé le ticket de caisse."
+      ],
+      "explanation": "J'ai gardé le ticket de caisse. — Я сохранил кассовый чек.",
+      "wordIds": [
+        "fr:v015:21:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "J'ai gardé le ticket de caisse.",
+      "recall": {
+        "phrase": "J'ai gardé le ticket de caisse.",
+        "meaning": "Я сохранил кассовый чек."
+      }
+    },
+    {
+      "id": "fr-a1-21-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы обменять эту рубашку.",
+      "answers": [
+        "Je voudrais échanger cette chemise."
+      ],
+      "explanation": "Je voudrais + инфинитив — вежливая просьба. Trop означает «слишком», а plus grande — «больше» с согласованием по женскому роду.",
+      "wordIds": [
+        "fr:v015:21:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je voudrais échanger cette chemise.",
+        "meaning": "Я хотел бы обменять эту рубашку."
+      }
+    },
+    {
+      "id": "fr-a1-21-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я немного опоздаю.",
+      "answers": [
+        "Je vais arriver un peu en retard."
+      ],
+      "explanation": "Je vais arriver un peu en retard. — Я немного опоздаю.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je vais arriver un peu en retard.",
+        "Attends-moi devant la gare.",
+        "On peut prendre un café près de la gare.",
+        "Merci de me prévenir."
+      ]
+    }
+  ]
+}

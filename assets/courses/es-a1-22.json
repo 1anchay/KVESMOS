@@ -1,0 +1,249 @@
+{
+  "id": "es-a1-22",
+  "title": "Нужно сделать сегодня",
+  "topic": "Нужно сделать сегодня",
+  "order": 21,
+  "objective": "Объяснить личную обязанность.",
+  "guide": "Tener que + глагол обозначает необходимость: tengo que estudiar.",
+  "vocabulary": [
+    {
+      "id": "es:v014:22:p0",
+      "en": "Tengo que estudiar hoy.",
+      "ru": "Мне нужно сегодня учиться."
+    },
+    {
+      "id": "es:v014:22:p1",
+      "en": "Tenemos que comprar pan.",
+      "ru": "Нам нужно купить хлеб."
+    },
+    {
+      "id": "es:v014:22:p2",
+      "en": "¿Tienes que trabajar mañana?",
+      "ru": "Тебе нужно завтра работать?"
+    },
+    {
+      "id": "es:v014:22:p3",
+      "en": "No tengo que salir ahora.",
+      "ru": "Мне не нужно сейчас выходить."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Нужно сделать сегодня",
+      "phrase": "Tengo que estudiar hoy.",
+      "translation": "Мне нужно сегодня учиться.",
+      "explanation": "Tener que + глагол обозначает необходимость: tengo que estudiar."
+    },
+    {
+      "character": "miko",
+      "title": "Нужно сделать сегодня",
+      "phrase": "Tenemos que comprar pan.",
+      "translation": "Нам нужно купить хлеб.",
+      "explanation": "Tenemos que comprar pan. — Нам нужно купить хлеб."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Нужно сделать сегодня",
+      "phrase": "¿Tienes que trabajar mañana?",
+      "translation": "Тебе нужно завтра работать?",
+      "explanation": "¿Tienes que trabajar mañana? — Тебе нужно завтра работать?"
+    },
+    {
+      "character": "orbi",
+      "title": "Нужно сделать сегодня",
+      "phrase": "No tengo que salir ahora.",
+      "translation": "Мне не нужно сейчас выходить.",
+      "explanation": "No tengo que salir ahora. — Мне не нужно сейчас выходить."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Tengo que estudiar hoy.",
+      "translation": "Мне нужно сегодня учиться.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мне нужно сегодня учиться.",
+      "options": [
+        "Тебе нужно завтра работать?",
+        "Мне нужно сегодня учиться.",
+        "Мне не нужно сейчас выходить."
+      ],
+      "explanation": "Tener que + глагол обозначает необходимость: tengo que estudiar."
+    },
+    {
+      "id": "apply",
+      "phrase": "Tenemos que comprar pan.",
+      "translation": "Нам нужно купить хлеб.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Tenemos que comprar pan.",
+      "tokens": [
+        "Tenemos",
+        "que",
+        "comprar",
+        "pan."
+      ],
+      "character": "miko",
+      "explanation": "Tenemos que comprar pan. — Нам нужно купить хлеб."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-22-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Мне нужно сегодня учиться.»?",
+      "answers": [
+        "Tengo que estudiar hoy."
+      ],
+      "explanation": "Tengo que estudiar hoy. — Мне нужно сегодня учиться.",
+      "wordIds": [
+        "es:v014:22:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Tenemos que comprar pan.",
+        "No tengo que salir ahora.",
+        "Tengo que estudiar hoy."
+      ],
+      "hint": "Tengo que estudiar hoy. — Мне нужно сегодня учиться."
+    },
+    {
+      "id": "es-a1-22-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Нам нужно купить хлеб.",
+      "answers": [
+        "Tenemos que comprar pan."
+      ],
+      "explanation": "Tener que + глагол обозначает необходимость: tengo que estudiar.",
+      "wordIds": [
+        "es:v014:22:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Tenemos",
+        "que",
+        "comprar",
+        "pan."
+      ],
+      "hint": "Tenemos que comprar pan. — Нам нужно купить хлеб."
+    },
+    {
+      "id": "es-a1-22-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно сделать сегодня?",
+      "answers": [
+        "Поучиться."
+      ],
+      "explanation": "Поучиться. Объяснить личную обязанность.",
+      "wordIds": [
+        "es:v014:22:p0",
+        "es:v014:22:p1",
+        "es:v014:22:p2",
+        "es:v014:22:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Tienes que trabajar mañana?\nМико: No, pero tengo que estudiar hoy.",
+      "options": [
+        "Пойти на работу завтра.",
+        "Уехать прямо сейчас.",
+        "Поучиться."
+      ]
+    },
+    {
+      "id": "es-a1-22-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Тебе нужно завтра работать?"
+      ],
+      "explanation": "¿Tienes que trabajar mañana? — Тебе нужно завтра работать?",
+      "wordIds": [
+        "es:v014:22:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Tienes que trabajar mañana?",
+      "options": [
+        "Мне нужно сегодня учиться.",
+        "Тебе нужно завтра работать?",
+        "Нам нужно купить хлеб."
+      ],
+      "hint": "¿Tienes que trabajar mañana? — Тебе нужно завтра работать?"
+    },
+    {
+      "id": "es-a1-22-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Tengo estudiar hoy.",
+      "answers": [
+        "Tengo que estudiar hoy."
+      ],
+      "explanation": "Между tengo и действием требуется que.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Tengo estudiar hoy.",
+        "Tengo que estudiar hoy."
+      ],
+      "hint": "Tener que + глагол обозначает необходимость: tengo que estudiar."
+    },
+    {
+      "id": "es-a1-22-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мне не нужно сейчас выходить.». Можно написать вместо микрофона.",
+      "answers": [
+        "No tengo que salir ahora."
+      ],
+      "explanation": "No tengo que salir ahora. — Мне не нужно сейчас выходить.",
+      "wordIds": [
+        "es:v014:22:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "No tengo que salir ahora.",
+      "recall": {
+        "phrase": "No tengo que salir ahora.",
+        "meaning": "Мне не нужно сейчас выходить."
+      }
+    },
+    {
+      "id": "es-a1-22-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мне нужно сегодня учиться.",
+      "answers": [
+        "Tengo que estudiar hoy."
+      ],
+      "explanation": "Tener que + глагол обозначает необходимость: tengo que estudiar.",
+      "wordIds": [
+        "es:v014:22:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Tengo que estudiar hoy.",
+        "meaning": "Мне нужно сегодня учиться."
+      }
+    },
+    {
+      "id": "es-a1-22-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Моей сестре нравится танцевать.",
+      "answers": [
+        "A mi hermana le gusta bailar."
+      ],
+      "explanation": "A mi hermana le gusta bailar. — Моей сестре нравится танцевать.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Me gusta cocinar.",
+        "Me gustan las películas españolas.",
+        "¿Te gusta esta canción?",
+        "A mi hermana le gusta bailar."
+      ]
+    }
+  ]
+}

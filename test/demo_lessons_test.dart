@@ -14,11 +14,14 @@ import 'widget_test.dart' show flushDb;
 void main() {
   setUpAll(setupSqlite);
   test(
-    'three authored pilots validate and complete through the existing checker with unchanged XP',
+    'twenty authored lessons validate and complete with unchanged XP',
     () async {
       final r = memoryRepository();
       await r.initialize();
-      for (final id in ['a1-01', 'a1-02', 'a1-03']) {
+      for (final id in List.generate(
+        20,
+        (i) => 'a1-${(i + 1).toString().padLeft(2, '0')}',
+      )) {
         final result = await r.startLesson(id);
         final l = result.lesson;
         expect(l.exercises, hasLength(10));
@@ -54,9 +57,15 @@ void main() {
         expect((await r.session(result.session.id)).done, true);
       }
       final p = await r.progress();
-      expect(p.xp, 360);
-      expect(p.completed, {'a1-01', 'a1-02', 'a1-03'});
-      expect(p.correct, 30);
+      expect(p.xp, 2400);
+      expect(
+        p.completed,
+        List.generate(
+          20,
+          (i) => 'a1-${(i + 1).toString().padLeft(2, '0')}',
+        ).toSet(),
+      );
+      expect(p.correct, 200);
       await r.db.close();
     },
   );
@@ -156,9 +165,12 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.text('Начать обновлённый урок'));
       await flushDb(tester);
-      expect(find.text('Новый формат'), findsOneWidget);
+      await advanceTeaching(tester);
+      expect(find.text('ЗНАКОМСТВО'), findsOneWidget);
       expect(
-        find.text('Мико встречает тебя у станции. Как сказать «привет»?'),
+        find.text(
+          'Орби встречает тебя на космической станции. Что ему ответить?',
+        ),
         findsOneWidget,
       );
       expect(app.progress.xp, 10);
@@ -169,12 +181,12 @@ void main() {
     },
   );
   testWidgets(
-    'all three pilots complete with audio disabled through real controls',
+    'all twenty lessons complete with audio disabled through real controls',
     (tester) async {
-      for (var number = 1; number <= 3; number++) {
+      for (var number = 1; number <= 20; number++) {
         final r = memoryRepository();
         final app = AppController(r);
-        final id = 'a1-0$number';
+        final id = 'a1-${number.toString().padLeft(2, '0')}';
         late Lesson l;
         await tester.runAsync(() async {
           await app.initialize();
@@ -188,7 +200,7 @@ void main() {
           for (var previous = 1; previous < number; previous++) {
             await r.append(
               r.event('complete', {
-                'lesson': 'a1-0$previous',
+                'lesson': 'a1-${previous.toString().padLeft(2, '0')}',
                 'session': 'seed$previous',
               }),
             );
@@ -223,6 +235,8 @@ void main() {
           await tester.pump(const Duration(milliseconds: 250));
         }
         await tester.pumpAndSettle();
+        await advanceTeaching(tester);
+        await flushDb(tester);
         Future<void> top() async {
           final list = tester.state<ScrollableState>(
             find.byType(Scrollable).first,
@@ -242,16 +256,23 @@ void main() {
           await tester.pumpAndSettle();
           await tester.tap(target);
           await flushDb(tester);
+          // SQLite runs on the real event loop; scrolling in fake time must
+          // not race an in-flight answer transaction on a busy CI runner.
+          for (
+            var wait = 0;
+            wait < 40 && find.text('Сохраняем…').evaluate().isNotEmpty;
+            wait++
+          ) {
+            await flushDb(tester);
+          }
+          expect(find.text('Сохраняем…'), findsNothing);
         }
 
         for (final e in l.exercises) {
           if (e.audio != null) {
             await tap(find.widgetWithText(OutlinedButton, 'Прослушать'));
             await top();
-            final transcript = find.descendant(
-              of: find.byType(Card),
-              matching: find.text(e.audio!),
-            );
+            final transcript = find.byKey(const Key('audio-transcript'));
             await tester.scrollUntilVisible(
               transcript,
               200,
@@ -259,6 +280,7 @@ void main() {
             );
             await tester.pumpAndSettle();
             expect(transcript, findsOneWidget);
+            expect(tester.widget<Text>(transcript).data, e.audio!);
           }
           if (e.options.isNotEmpty) {
             await tap(find.widgetWithText(OutlinedButton, e.answers.first));
@@ -285,6 +307,12 @@ void main() {
           await tap(find.text('Проверить'));
           expect(app.progress.errors, 0, reason: e.id);
           await tap(find.text('Дальше'));
+          if (find
+              .byKey(const Key('checkpoint-continue'))
+              .evaluate()
+              .isNotEmpty) {
+            await tap(find.byKey(const Key('checkpoint-continue')));
+          }
         }
         expect(app.progress.completed, contains(id));
         expect(app.progress.xp, 120 + (number - 1) * 20);
@@ -340,6 +368,8 @@ void main() {
               ),
             ),
           );
+          await flushDb(tester);
+          await advanceTeaching(tester);
           await flushDb(tester);
           await tester.scrollUntilVisible(
             find.text('Проверить'),

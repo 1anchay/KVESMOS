@@ -1,0 +1,288 @@
+{
+  "id": "en-a1-65",
+  "title": "Записаться на приём",
+  "topic": "Время и самочувствие",
+  "order": 64,
+  "objective": "Выбрать удобное время записи.",
+  "guide": "I'd like to + инфинитив — вежливое пожелание. Available означает «доступный, свободный» в контексте времени.",
+  "vocabulary": [
+    {
+      "id": "en:v015:65:p0",
+      "en": "I'd like to make an appointment.",
+      "ru": "Я хотел бы записаться на приём."
+    },
+    {
+      "id": "en:v015:65:p1",
+      "en": "Is Tuesday morning available?",
+      "ru": "Есть свободное время во вторник утром?"
+    },
+    {
+      "id": "en:v015:65:p2",
+      "en": "That time works for me.",
+      "ru": "Это время мне подходит."
+    },
+    {
+      "id": "en:v015:65:p3",
+      "en": "Could we move it to Friday?",
+      "ru": "Не могли бы мы перенести это на пятницу?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Записаться на приём",
+      "phrase": "I'd like to make an appointment.",
+      "translation": "Я хотел бы записаться на приём.",
+      "explanation": "I'd like to + инфинитив — вежливое пожелание. Available означает «доступный, свободный» в контексте времени."
+    },
+    {
+      "character": "miko",
+      "title": "Записаться на приём",
+      "phrase": "Is Tuesday morning available?",
+      "translation": "Есть свободное время во вторник утром?",
+      "explanation": "Is Tuesday morning available? — Есть свободное время во вторник утром?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Записаться на приём",
+      "phrase": "That time works for me.",
+      "translation": "Это время мне подходит.",
+      "explanation": "That time works for me. — Это время мне подходит."
+    },
+    {
+      "character": "orbi",
+      "title": "Записаться на приём",
+      "phrase": "Could we move it to Friday?",
+      "translation": "Не могли бы мы перенести это на пятницу?",
+      "explanation": "Could we move it to Friday? — Не могли бы мы перенести это на пятницу?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I'd like to make an appointment.",
+      "translation": "Я хотел бы записаться на приём.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хотел бы записаться на приём.",
+      "options": [
+        "Это время мне подходит.",
+        "Я хотел бы записаться на приём.",
+        "Не могли бы мы перенести это на пятницу?"
+      ],
+      "explanation": "I'd like to + инфинитив — вежливое пожелание. Available означает «доступный, свободный» в контексте времени."
+    },
+    {
+      "id": "apply",
+      "phrase": "Is Tuesday morning available?",
+      "translation": "Есть свободное время во вторник утром?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Is Tuesday morning available?",
+      "tokens": [
+        "Is",
+        "Tuesday",
+        "morning",
+        "available?"
+      ],
+      "character": "miko",
+      "explanation": "Is Tuesday morning available? — Есть свободное время во вторник утром?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-65-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Это время мне подходит."
+      ],
+      "explanation": "That time works for me. — Это время мне подходит.",
+      "wordIds": [
+        "en:v015:65:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "That time works for me.",
+      "options": [
+        "Я хотел бы записаться на приём.",
+        "Это время мне подходит.",
+        "Есть свободное время во вторник утром?"
+      ],
+      "hint": "That time works for me. — Это время мне подходит."
+    },
+    {
+      "id": "en-a1-65-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Есть свободное время во вторник утром?",
+      "answers": [
+        "Is Tuesday morning available?"
+      ],
+      "explanation": "I'd like to + инфинитив — вежливое пожелание. Available означает «доступный, свободный» в контексте времени.",
+      "wordIds": [
+        "en:v015:65:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Is",
+        "Tuesday",
+        "morning",
+        "available?"
+      ],
+      "hint": "Is Tuesday morning available? — Есть свободное время во вторник утром?"
+    },
+    {
+      "id": "en-a1-65-e03",
+      "type": "dialogue",
+      "prompt": "Какой день предлагают вместо вторника?",
+      "answers": [
+        "Пятницу."
+      ],
+      "explanation": "В диалоге: Is Tuesday morning available? / No, but we have a time on Friday. Does that work for you? Поэтому: Пятницу.",
+      "wordIds": [
+        "en:v015:65:p0",
+        "en:v015:65:p1",
+        "en:v015:65:p2",
+        "en:v015:65:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Is Tuesday morning available?\nМико: No, but we have a time on Friday. Does that work for you?",
+      "options": [
+        "Понедельник.",
+        "Среду.",
+        "Пятницу."
+      ]
+    },
+    {
+      "id": "en-a1-65-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хотел бы записаться на приём.»?",
+      "answers": [
+        "I'd like to make an appointment."
+      ],
+      "explanation": "I'd like to make an appointment. — Я хотел бы записаться на приём.",
+      "wordIds": [
+        "en:v015:65:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Is Tuesday morning available?",
+        "Could we move it to Friday?",
+        "I'd like to make an appointment."
+      ],
+      "hint": "I'd like to make an appointment. — Я хотел бы записаться на приём."
+    },
+    {
+      "id": "en-a1-65-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v015:65:p0",
+        "en:v015:65:p1",
+        "en:v015:65:p2",
+        "en:v015:65:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v015:65:p0",
+          "en": "I'd like to make an appointment.",
+          "ru": "Я хотел бы записаться на приём."
+        },
+        {
+          "id": "en:v015:65:p1",
+          "en": "Is Tuesday morning available?",
+          "ru": "Есть свободное время во вторник утром?"
+        },
+        {
+          "id": "en:v015:65:p2",
+          "en": "That time works for me.",
+          "ru": "Это время мне подходит."
+        },
+        {
+          "id": "en:v015:65:p3",
+          "en": "Could we move it to Friday?",
+          "ru": "Не могли бы мы перенести это на пятницу?"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-65-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I'd like make an appointment.",
+      "answers": [
+        "I'd like to make an appointment."
+      ],
+      "explanation": "После I'd like перед глаголом нужно to.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I'd like make an appointment.",
+        "I'd like to make an appointment."
+      ],
+      "hint": "I'd like to + инфинитив — вежливое пожелание. Available означает «доступный, свободный» в контексте времени."
+    },
+    {
+      "id": "en-a1-65-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Не могли бы мы перенести это на пятницу?». Можно написать вместо микрофона.",
+      "answers": [
+        "Could we move it to Friday?"
+      ],
+      "explanation": "Could we move it to Friday? — Не могли бы мы перенести это на пятницу?",
+      "wordIds": [
+        "en:v015:65:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Could we move it to Friday?",
+      "recall": {
+        "phrase": "Could we move it to Friday?",
+        "meaning": "Не могли бы мы перенести это на пятницу?"
+      }
+    },
+    {
+      "id": "en-a1-65-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хотел бы записаться на приём.",
+      "answers": [
+        "I'd like to make an appointment."
+      ],
+      "explanation": "I'd like to + инфинитив — вежливое пожелание. Available означает «доступный, свободный» в контексте времени.",
+      "wordIds": [
+        "en:v015:65:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I'd like to make an appointment.",
+        "meaning": "Я хотел бы записаться на приём."
+      }
+    },
+    {
+      "id": "en-a1-65-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Выход на посадку изменился.",
+      "answers": [
+        "The gate has changed."
+      ],
+      "explanation": "The gate has changed. — Выход на посадку изменился.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "The gate has changed.",
+        "Please go to gate twelve.",
+        "Boarding starts in ten minutes.",
+        "Our flight is delayed."
+      ]
+    }
+  ]
+}

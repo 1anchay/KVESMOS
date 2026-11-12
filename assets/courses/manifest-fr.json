@@ -1,0 +1,308 @@
+{
+  "id": "ru-fr",
+  "version": 1,
+  "sourceLanguage": "ru",
+  "targetLanguage": "fr",
+  "sections": [
+    {
+      "id": "fr-v012",
+      "title": "Первые разговоры",
+      "themes": [
+        {
+          "id": "fr-intro",
+          "title": "Начальный курс",
+          "lessons": [
+            {
+              "id": "fr-a1-01",
+              "title": "Bonjour · первый разговор",
+              "asset": "assets/courses/fr-a1-01.json",
+              "order": 0
+            },
+            {
+              "id": "fr-a1-02",
+              "title": "Je m’appelle · знакомимся",
+              "asset": "assets/courses/fr-a1-02.json",
+              "order": 1
+            },
+            {
+              "id": "fr-a1-03",
+              "title": "Числа и возраст",
+              "asset": "assets/courses/fr-a1-03.json",
+              "order": 2
+            },
+            {
+              "id": "fr-a1-04",
+              "title": "Вещи · un и une",
+              "asset": "assets/courses/fr-a1-04.json",
+              "order": 3
+            },
+            {
+              "id": "fr-a1-05",
+              "title": "Моя семья",
+              "asset": "assets/courses/fr-a1-05.json",
+              "order": 4
+            },
+            {
+              "id": "fr-a1-06",
+              "title": "В кафе · просьбы",
+              "asset": "assets/courses/fr-a1-06.json",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-v013",
+      "title": "Самостоятельные разговоры",
+      "themes": [
+        {
+          "id": "fr-v013-unit-1",
+          "title": "Être et avoir · состояние и вещи",
+          "lessons": [
+            {
+              "id": "fr-a1-07",
+              "title": "Être et avoir · состояние и вещи",
+              "asset": "assets/courses/fr-a1-07.json",
+              "order": 6
+            },
+            {
+              "id": "fr-a1-08",
+              "title": "Мой день · настоящее время",
+              "asset": "assets/courses/fr-a1-08.json",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "id": "fr-v013-unit-2",
+          "title": "Где находится вокзал?",
+          "lessons": [
+            {
+              "id": "fr-a1-09",
+              "title": "Где находится вокзал?",
+              "asset": "assets/courses/fr-a1-09.json",
+              "order": 8
+            },
+            {
+              "id": "fr-a1-10",
+              "title": "На рынке · цена и количество",
+              "asset": "assets/courses/fr-a1-10.json",
+              "order": 9
+            }
+          ]
+        },
+        {
+          "id": "fr-v013-unit-3",
+          "title": "Встреча · время и отказ",
+          "lessons": [
+            {
+              "id": "fr-a1-11",
+              "title": "Встреча · время и отказ",
+              "asset": "assets/courses/fr-a1-11.json",
+              "order": 10
+            },
+            {
+              "id": "fr-a1-12",
+              "title": "Итог · день в городе",
+              "asset": "assets/courses/fr-a1-12.json",
+              "order": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-v014",
+      "title": "Разговоры на каждый день",
+      "themes": [
+        {
+          "id": "fr-v014-unit-1",
+          "title": "Планы на завтра",
+          "lessons": [
+            {
+              "id": "fr-a1-13",
+              "title": "Планы на завтра",
+              "asset": "assets/courses/fr-a1-13.json",
+              "order": 12
+            },
+            {
+              "id": "fr-a1-14",
+              "title": "Не сегодня",
+              "asset": "assets/courses/fr-a1-14.json",
+              "order": 13
+            }
+          ]
+        },
+        {
+          "id": "fr-v014-unit-2",
+          "title": "Продукты для завтрака",
+          "lessons": [
+            {
+              "id": "fr-a1-15",
+              "title": "Продукты для завтрака",
+              "asset": "assets/courses/fr-a1-15.json",
+              "order": 14
+            },
+            {
+              "id": "fr-a1-16",
+              "title": "Обычное утро",
+              "asset": "assets/courses/fr-a1-16.json",
+              "order": 15
+            }
+          ]
+        },
+        {
+          "id": "fr-v014-unit-3",
+          "title": "Уточнить время",
+          "lessons": [
+            {
+              "id": "fr-a1-17",
+              "title": "Уточнить время",
+              "asset": "assets/courses/fr-a1-17.json",
+              "order": 16
+            },
+            {
+              "id": "fr-a1-18",
+              "title": "Можно попросить",
+              "asset": "assets/courses/fr-a1-18.json",
+              "order": 17
+            }
+          ]
+        },
+        {
+          "id": "fr-v014-unit-4",
+          "title": "Что нужно сделать",
+          "lessons": [
+            {
+              "id": "fr-a1-19",
+              "title": "Что нужно сделать",
+              "asset": "assets/courses/fr-a1-19.json",
+              "order": 18
+            },
+            {
+              "id": "fr-a1-20",
+              "title": "Сообщение об изменении",
+              "asset": "assets/courses/fr-a1-20.json",
+              "order": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-v015",
+      "title": "Самостоятельное общение",
+      "themes": [
+        {
+          "id": "fr-v015-unit-1",
+          "title": "Покупки и бронирование",
+          "lessons": [
+            {
+              "id": "fr-a1-21",
+              "title": "Обменять одежду",
+              "asset": "assets/courses/fr-a1-21.json",
+              "order": 20
+            },
+            {
+              "id": "fr-a1-22",
+              "title": "Столик на двоих",
+              "asset": "assets/courses/fr-a1-22.json",
+              "order": 21
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-2",
+          "title": "Номер и вещи",
+          "lessons": [
+            {
+              "id": "fr-a1-23",
+              "title": "На ресепшене",
+              "asset": "assets/courses/fr-a1-23.json",
+              "order": 22
+            },
+            {
+              "id": "fr-a1-24",
+              "title": "Этот, эта и эти",
+              "asset": "assets/courses/fr-a1-24.json",
+              "order": 23
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-3",
+          "title": "Прошлое с avoir",
+          "lessons": [
+            {
+              "id": "fr-a1-25",
+              "title": "Вчерашние дела",
+              "asset": "assets/courses/fr-a1-25.json",
+              "order": 24
+            },
+            {
+              "id": "fr-a1-26",
+              "title": "Увидел и сделал",
+              "asset": "assets/courses/fr-a1-26.json",
+              "order": 25
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-4",
+          "title": "Движение и вопросы",
+          "lessons": [
+            {
+              "id": "fr-a1-27",
+              "title": "Приехали и вернулись",
+              "asset": "assets/courses/fr-a1-27.json",
+              "order": 26
+            },
+            {
+              "id": "fr-a1-28",
+              "title": "Что случилось вчера",
+              "asset": "assets/courses/fr-a1-28.json",
+              "order": 27
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-5",
+          "title": "Фон и сравнение",
+          "lessons": [
+            {
+              "id": "fr-a1-29",
+              "title": "Каким всё было",
+              "asset": "assets/courses/fr-a1-29.json",
+              "order": 28
+            },
+            {
+              "id": "fr-a1-30",
+              "title": "Сравнить варианты",
+              "asset": "assets/courses/fr-a1-30.json",
+              "order": 29
+            }
+          ]
+        },
+        {
+          "id": "fr-v015-unit-6",
+          "title": "Причины и новости",
+          "lessons": [
+            {
+              "id": "fr-a1-31",
+              "title": "Зачем и почему",
+              "asset": "assets/courses/fr-a1-31.json",
+              "order": 30
+            },
+            {
+              "id": "fr-a1-32",
+              "title": "Сообщение друзьям",
+              "asset": "assets/courses/fr-a1-32.json",
+              "order": 31
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

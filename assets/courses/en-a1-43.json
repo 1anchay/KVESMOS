@@ -1,0 +1,292 @@
+{
+  "id": "en-a1-43",
+  "title": "Как прошёл выходной",
+  "topic": "Как прошёл выходной",
+  "order": 42,
+  "objective": "Спросить о завершённой поездке и её длительности.",
+  "guide": "В вопросе о прошлом did ставится перед человеком, а основной глагол не меняется.",
+  "vocabulary": [
+    {
+      "id": "en:v014:43:p0",
+      "en": "Did you visit the museum?",
+      "ru": "Ты посетил музей?"
+    },
+    {
+      "id": "en:v014:43:p1",
+      "en": "We stayed there for two hours.",
+      "ru": "Мы пробыли там два часа."
+    },
+    {
+      "id": "en:v014:43:p2",
+      "en": "What did you see?",
+      "ru": "Что ты увидел?"
+    },
+    {
+      "id": "en:v014:43:p3",
+      "en": "I saw some old maps.",
+      "ru": "Я увидел несколько старых карт."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Как прошёл выходной",
+      "phrase": "Did you visit the museum?",
+      "translation": "Ты посетил музей?",
+      "explanation": "В вопросе о прошлом did ставится перед человеком, а основной глагол не меняется."
+    },
+    {
+      "character": "miko",
+      "title": "Как прошёл выходной",
+      "phrase": "We stayed there for two hours.",
+      "translation": "Мы пробыли там два часа.",
+      "explanation": "We stayed there for two hours. — Мы пробыли там два часа."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как прошёл выходной",
+      "phrase": "What did you see?",
+      "translation": "Что ты увидел?",
+      "explanation": "What did you see? — Что ты увидел?"
+    },
+    {
+      "character": "orbi",
+      "title": "Как прошёл выходной",
+      "phrase": "I saw some old maps.",
+      "translation": "Я увидел несколько старых карт.",
+      "explanation": "I saw some old maps. — Я увидел несколько старых карт."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Did you visit the museum?",
+      "translation": "Ты посетил музей?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Ты посетил музей?",
+      "options": [
+        "Что ты увидел?",
+        "Ты посетил музей?",
+        "Я увидел несколько старых карт."
+      ],
+      "explanation": "В вопросе о прошлом did ставится перед человеком, а основной глагол не меняется."
+    },
+    {
+      "id": "apply",
+      "phrase": "We stayed there for two hours.",
+      "translation": "Мы пробыли там два часа.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "We stayed there for two hours.",
+      "tokens": [
+        "We",
+        "stayed",
+        "there",
+        "for",
+        "two",
+        "hours."
+      ],
+      "character": "miko",
+      "explanation": "We stayed there for two hours. — Мы пробыли там два часа."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-43-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Ты посетил музей?»?",
+      "answers": [
+        "Did you visit the museum?"
+      ],
+      "explanation": "Did you visit the museum? — Ты посетил музей?",
+      "wordIds": [
+        "en:v014:43:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "We stayed there for two hours.",
+        "I saw some old maps.",
+        "Did you visit the museum?"
+      ],
+      "hint": "Did you visit the museum? — Ты посетил музей?"
+    },
+    {
+      "id": "en-a1-43-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы пробыли там два часа.",
+      "answers": [
+        "We stayed there for two hours."
+      ],
+      "explanation": "В вопросе о прошлом did ставится перед человеком, а основной глагол не меняется.",
+      "wordIds": [
+        "en:v014:43:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "We",
+        "stayed",
+        "there",
+        "for",
+        "two",
+        "hours."
+      ],
+      "hint": "We stayed there for two hours. — Мы пробыли там два часа."
+    },
+    {
+      "id": "en-a1-43-e03",
+      "type": "dialogue",
+      "prompt": "Что увидел собеседник?",
+      "answers": [
+        "Старые карты."
+      ],
+      "explanation": "Старые карты. Спросить о завершённой поездке и её длительности.",
+      "wordIds": [
+        "en:v014:43:p0",
+        "en:v014:43:p1",
+        "en:v014:43:p2",
+        "en:v014:43:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: What did you see at the museum?\nМико: I saw some old maps.",
+      "options": [
+        "Новые поезда.",
+        "Два музея.",
+        "Старые карты."
+      ]
+    },
+    {
+      "id": "en-a1-43-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Что ты увидел?"
+      ],
+      "explanation": "What did you see? — Что ты увидел?",
+      "wordIds": [
+        "en:v014:43:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "What did you see?",
+      "options": [
+        "Ты посетил музей?",
+        "Что ты увидел?",
+        "Мы пробыли там два часа."
+      ],
+      "hint": "What did you see? — Что ты увидел?"
+    },
+    {
+      "id": "en-a1-43-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v014:43:p0",
+        "en:v014:43:p1",
+        "en:v014:43:p2",
+        "en:v014:43:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v014:43:p0",
+          "en": "Did you visit the museum?",
+          "ru": "Ты посетил музей?"
+        },
+        {
+          "id": "en:v014:43:p1",
+          "en": "We stayed there for two hours.",
+          "ru": "Мы пробыли там два часа."
+        },
+        {
+          "id": "en:v014:43:p2",
+          "en": "What did you see?",
+          "ru": "Что ты увидел?"
+        },
+        {
+          "id": "en:v014:43:p3",
+          "en": "I saw some old maps.",
+          "ru": "Я увидел несколько старых карт."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-43-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: What did you saw?",
+      "answers": [
+        "What did you see?"
+      ],
+      "explanation": "После did используем see; saw употребляется в утвердительном предложении.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "What did you saw?",
+        "What did you see?"
+      ],
+      "hint": "В вопросе о прошлом did ставится перед человеком, а основной глагол не меняется."
+    },
+    {
+      "id": "en-a1-43-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я увидел несколько старых карт.». Можно написать вместо микрофона.",
+      "answers": [
+        "I saw some old maps."
+      ],
+      "explanation": "I saw some old maps. — Я увидел несколько старых карт.",
+      "wordIds": [
+        "en:v014:43:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I saw some old maps.",
+      "recall": {
+        "phrase": "I saw some old maps.",
+        "meaning": "Я увидел несколько старых карт."
+      }
+    },
+    {
+      "id": "en-a1-43-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Ты посетил музей?",
+      "answers": [
+        "Did you visit the museum?"
+      ],
+      "explanation": "В вопросе о прошлом did ставится перед человеком, а основной глагол не меняется.",
+      "wordIds": [
+        "en:v014:43:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Did you visit the museum?",
+        "meaning": "Ты посетил музей?"
+      }
+    },
+    {
+      "id": "en-a1-43-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Твои очки были в сумке?",
+      "answers": [
+        "Were your glasses in the bag?"
+      ],
+      "explanation": "Were your glasses in the bag? — Твои очки были в сумке?",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "My keys were on the table.",
+        "The door was open.",
+        "Were your glasses in the bag?",
+        "No, they were next to the phone."
+      ]
+    }
+  ]
+}

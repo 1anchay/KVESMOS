@@ -1,0 +1,398 @@
+{
+  "id": "ru-de",
+  "version": 1,
+  "sourceLanguage": "ru",
+  "targetLanguage": "de",
+  "sections": [
+    {
+      "id": "de-v011",
+      "title": "Первые разговоры",
+      "themes": [
+        {
+          "id": "de-intro",
+          "title": "Начальный курс",
+          "lessons": [
+            {
+              "id": "de-a1-01",
+              "title": "Hallo · приветствие",
+              "asset": "assets/courses/de-a1-01.json",
+              "order": 0
+            },
+            {
+              "id": "de-a1-02",
+              "title": "Ich heiße · имя и происхождение",
+              "asset": "assets/courses/de-a1-02.json",
+              "order": 1
+            },
+            {
+              "id": "de-a1-03",
+              "title": "Предметы · der, die, das",
+              "asset": "assets/courses/de-a1-03.json",
+              "order": 2
+            },
+            {
+              "id": "de-a1-04",
+              "title": "Числа и возраст",
+              "asset": "assets/courses/de-a1-04.json",
+              "order": 3
+            },
+            {
+              "id": "de-a1-05",
+              "title": "Моя семья",
+              "asset": "assets/courses/de-a1-05.json",
+              "order": 4
+            },
+            {
+              "id": "de-a1-06",
+              "title": "В кафе · вежливый заказ",
+              "asset": "assets/courses/de-a1-06.json",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de-v013",
+      "title": "Самостоятельные разговоры",
+      "themes": [
+        {
+          "id": "de-v013-unit-1",
+          "title": "Sein und haben · состояние и вещи",
+          "lessons": [
+            {
+              "id": "de-a1-07",
+              "title": "Sein und haben · состояние и вещи",
+              "asset": "assets/courses/de-a1-07.json",
+              "order": 6
+            },
+            {
+              "id": "de-a1-08",
+              "title": "Артикли · кого и что",
+              "asset": "assets/courses/de-a1-08.json",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-2",
+          "title": "Работа и учёба · порядок слов",
+          "lessons": [
+            {
+              "id": "de-a1-09",
+              "title": "Работа и учёба · порядок слов",
+              "asset": "assets/courses/de-a1-09.json",
+              "order": 8
+            },
+            {
+              "id": "de-a1-10",
+              "title": "Вопросы · wer, wo, wann",
+              "asset": "assets/courses/de-a1-10.json",
+              "order": 9
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-3",
+          "title": "Распорядок · отделяемая приставка",
+          "lessons": [
+            {
+              "id": "de-a1-11",
+              "title": "Распорядок · отделяемая приставка",
+              "asset": "assets/courses/de-a1-11.json",
+              "order": 10
+            },
+            {
+              "id": "de-a1-12",
+              "title": "Еда и отрицание",
+              "asset": "assets/courses/de-a1-12.json",
+              "order": 11
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-4",
+          "title": "На рынке · количество и цена",
+          "lessons": [
+            {
+              "id": "de-a1-13",
+              "title": "На рынке · количество и цена",
+              "asset": "assets/courses/de-a1-13.json",
+              "order": 12
+            },
+            {
+              "id": "de-a1-14",
+              "title": "В дороге · составные слова",
+              "asset": "assets/courses/de-a1-14.json",
+              "order": 13
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-5",
+          "title": "Просьбы · können",
+          "lessons": [
+            {
+              "id": "de-a1-15",
+              "title": "Просьбы · können",
+              "asset": "assets/courses/de-a1-15.json",
+              "order": 14
+            },
+            {
+              "id": "de-a1-16",
+              "title": "Как пройти · ориентиры",
+              "asset": "assets/courses/de-a1-16.json",
+              "order": 15
+            }
+          ]
+        },
+        {
+          "id": "de-v013-unit-6",
+          "title": "Встреча · möchten",
+          "lessons": [
+            {
+              "id": "de-a1-17",
+              "title": "Встреча · möchten",
+              "asset": "assets/courses/de-a1-17.json",
+              "order": 16
+            },
+            {
+              "id": "de-a1-18",
+              "title": "Итог · самостоятельная поездка",
+              "asset": "assets/courses/de-a1-18.json",
+              "order": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de-v014",
+      "title": "Разговоры на каждый день",
+      "themes": [
+        {
+          "id": "de-v014-unit-1",
+          "title": "Чьи это вещи",
+          "lessons": [
+            {
+              "id": "de-a1-19",
+              "title": "Чьи это вещи",
+              "asset": "assets/courses/de-a1-19.json",
+              "order": 18
+            },
+            {
+              "id": "de-a1-20",
+              "title": "Домашние дела",
+              "asset": "assets/courses/de-a1-20.json",
+              "order": 19
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-2",
+          "title": "Где лежит посылка",
+          "lessons": [
+            {
+              "id": "de-a1-21",
+              "title": "Где лежит посылка",
+              "asset": "assets/courses/de-a1-21.json",
+              "order": 20
+            },
+            {
+              "id": "de-a1-22",
+              "title": "Куда поставить коробку",
+              "asset": "assets/courses/de-a1-22.json",
+              "order": 21
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-3",
+          "title": "Позвоню после работы",
+          "lessons": [
+            {
+              "id": "de-a1-23",
+              "title": "Позвоню после работы",
+              "asset": "assets/courses/de-a1-23.json",
+              "order": 22
+            },
+            {
+              "id": "de-a1-24",
+              "title": "Обязательные дела",
+              "asset": "assets/courses/de-a1-24.json",
+              "order": 23
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-4",
+          "title": "Разрешено или запрещено",
+          "lessons": [
+            {
+              "id": "de-a1-25",
+              "title": "Разрешено или запрещено",
+              "asset": "assets/courses/de-a1-25.json",
+              "order": 24
+            },
+            {
+              "id": "de-a1-26",
+              "title": "Планы на выходной",
+              "asset": "assets/courses/de-a1-26.json",
+              "order": 25
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-5",
+          "title": "Время на табло",
+          "lessons": [
+            {
+              "id": "de-a1-27",
+              "title": "Время на табло",
+              "asset": "assets/courses/de-a1-27.json",
+              "order": 26
+            },
+            {
+              "id": "de-a1-28",
+              "title": "Что выбрать на ужин",
+              "asset": "assets/courses/de-a1-28.json",
+              "order": 27
+            }
+          ]
+        },
+        {
+          "id": "de-v014-unit-6",
+          "title": "Объяснить причину",
+          "lessons": [
+            {
+              "id": "de-a1-29",
+              "title": "Объяснить причину",
+              "asset": "assets/courses/de-a1-29.json",
+              "order": 28
+            },
+            {
+              "id": "de-a1-30",
+              "title": "Короткое письмо другу",
+              "asset": "assets/courses/de-a1-30.json",
+              "order": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de-v015",
+      "title": "Самостоятельное общение",
+      "themes": [
+        {
+          "id": "de-v015-unit-1",
+          "title": "Покупки и бронирование",
+          "lessons": [
+            {
+              "id": "de-a1-31",
+              "title": "Обменять куртку",
+              "asset": "assets/courses/de-a1-31.json",
+              "order": 30
+            },
+            {
+              "id": "de-a1-32",
+              "title": "Столик на вечер",
+              "asset": "assets/courses/de-a1-32.json",
+              "order": 31
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-2",
+          "title": "Приезд и помощь",
+          "lessons": [
+            {
+              "id": "de-a1-33",
+              "title": "В гостинице",
+              "asset": "assets/courses/de-a1-33.json",
+              "order": 32
+            },
+            {
+              "id": "de-a1-34",
+              "title": "Кому я отправляю",
+              "asset": "assets/courses/de-a1-34.json",
+              "order": 33
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-3",
+          "title": "Прошлое: Perfekt",
+          "lessons": [
+            {
+              "id": "de-a1-35",
+              "title": "Что я сделал",
+              "asset": "assets/courses/de-a1-35.json",
+              "order": 34
+            },
+            {
+              "id": "de-a1-36",
+              "title": "Как прошла дорога",
+              "asset": "assets/courses/de-a1-36.json",
+              "order": 35
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-4",
+          "title": "Вопросы о прошлом",
+          "lessons": [
+            {
+              "id": "de-a1-37",
+              "title": "Вопрос о вчерашнем дне",
+              "asset": "assets/courses/de-a1-37.json",
+              "order": 36
+            },
+            {
+              "id": "de-a1-38",
+              "title": "Каким был день",
+              "asset": "assets/courses/de-a1-38.json",
+              "order": 37
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-5",
+          "title": "Вежливые действия",
+          "lessons": [
+            {
+              "id": "de-a1-39",
+              "title": "Вежливое пожелание",
+              "asset": "assets/courses/de-a1-39.json",
+              "order": 38
+            },
+            {
+              "id": "de-a1-40",
+              "title": "Короткая инструкция",
+              "asset": "assets/courses/de-a1-40.json",
+              "order": 39
+            }
+          ]
+        },
+        {
+          "id": "de-v015-unit-6",
+          "title": "Мысли и новости",
+          "lessons": [
+            {
+              "id": "de-a1-41",
+              "title": "Сказать, что я думаю",
+              "asset": "assets/courses/de-a1-41.json",
+              "order": 40
+            },
+            {
+              "id": "de-a1-42",
+              "title": "Весточка из поездки",
+              "asset": "assets/courses/de-a1-42.json",
+              "order": 41
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

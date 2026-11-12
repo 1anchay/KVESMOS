@@ -1,0 +1,4983 @@
+{
+  "engine": "piper-tts 1.8.0",
+  "voices": {
+    "es-ES": {
+      "phrases": 46,
+      "files": 92,
+      "model": "es_ES-sharvard-medium",
+      "modelSha256": "40febfb1679c69a4505ff311dc136e121e3419a13a290ef264fdf43ddedd0fb1",
+      "configSha256": "7438c9b699c72b0c3388dae1b68d3f364dc66a2150fe554a1c11f03372957b2c"
+    },
+    "de-DE": {
+      "phrases": 46,
+      "files": 92,
+      "model": "de_DE-thorsten-medium",
+      "modelSha256": "7e64762d8e5118bb578f2eea6207e1a35a8e0c30595010b666f983fc87bb7819",
+      "configSha256": "974adee790533adb273a1ac88f49027d2a1b8f0f2cf4905954a4791e79264e85"
+    }
+  },
+  "files": [
+    {
+      "asset": "assets/audio/voices/clips/piper-9880e0ffa2461ab4427d.m4a",
+      "sha256": "954b443ec652567614b005e93a1f54908835eb7a2896861c5807c8c5804e887a",
+      "bytes": 12195,
+      "text": "Agua, por favor.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "a",
+          "ɣ",
+          "w",
+          "a",
+          ",",
+          " ",
+          "p",
+          "o",
+          "ɾ",
+          " ",
+          "f",
+          "a",
+          "β",
+          "ˈ",
+          "o",
+          "ɾ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-9880e0ffa2461ab4427d-slow.m4a",
+      "sha256": "98ca4d38a82b77dbd48728a99d717456fad8f5056bbe8963c288b217b5bb7065",
+      "bytes": 14978,
+      "text": "Agua, por favor.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "a",
+          "ɣ",
+          "w",
+          "a",
+          ",",
+          " ",
+          "p",
+          "o",
+          "ɾ",
+          " ",
+          "f",
+          "a",
+          "β",
+          "ˈ",
+          "o",
+          "ɾ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-404eb66a028e7845a7f8.m4a",
+      "sha256": "532c91f8bddc64c4ace9e30f85ca84d09e661a4257e94e8c35e982efc81922ee",
+      "bytes": 13714,
+      "text": "Bien, gracias.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "b",
+          "j",
+          "ˈ",
+          "e",
+          "n",
+          ",",
+          " ",
+          "ɡ",
+          "ɾ",
+          "ˈ",
+          "a",
+          "θ",
+          "j",
+          "a",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-404eb66a028e7845a7f8-slow.m4a",
+      "sha256": "f9398ed2246534963c84601d385cf88b1a5682ff53113122721aa3460e38f446",
+      "bytes": 15965,
+      "text": "Bien, gracias.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "b",
+          "j",
+          "ˈ",
+          "e",
+          "n",
+          ",",
+          " ",
+          "ɡ",
+          "ɾ",
+          "ˈ",
+          "a",
+          "θ",
+          "j",
+          "a",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-9cedb56a50afe99b4cc6.m4a",
+      "sha256": "fec4e2a7f22ea6b5819f3877228bb0b1b16018ae7a7e6ca0b2a7c711a8df56d7",
+      "bytes": 10265,
+      "text": "Buenos días.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "b",
+          "w",
+          "ˈ",
+          "e",
+          "n",
+          "o",
+          "s",
+          " ",
+          "ð",
+          "ˈ",
+          "i",
+          "ʲ",
+          "a",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-9cedb56a50afe99b4cc6-slow.m4a",
+      "sha256": "2d9645e4e6c063194b3548a7437a126fc6799b0841c0a6c28ceb7ae4ecc7a18f",
+      "bytes": 12790,
+      "text": "Buenos días.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "b",
+          "w",
+          "ˈ",
+          "e",
+          "n",
+          "o",
+          "s",
+          " ",
+          "ð",
+          "ˈ",
+          "i",
+          "ʲ",
+          "a",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-aa54c012140bd2222043.m4a",
+      "sha256": "46f51231c5cf60cdc767a3d74b9643712bc0cfd0d1c0fb2c86198607559c1394",
+      "bytes": 7595,
+      "text": "Es un libro.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "ˈ",
+          "u",
+          "n",
+          " ",
+          "l",
+          "ˈ",
+          "i",
+          "β",
+          "ɾ",
+          "o",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-aa54c012140bd2222043-slow.m4a",
+      "sha256": "2d3ccfc954354eda886c78ab30b59b570c4ce36ce8995c58cbbd6ea94b4c8da1",
+      "bytes": 10191,
+      "text": "Es un libro.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "ˈ",
+          "u",
+          "n",
+          " ",
+          "l",
+          "ˈ",
+          "i",
+          "β",
+          "ɾ",
+          "o",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-ed62c989c2a8db3a79a1.m4a",
+      "sha256": "e06e8c160aed1e282bded51c9df95764866521e4eb295f552efefa3f5e0500ce",
+      "bytes": 9149,
+      "text": "Es una mesa.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "ˈ",
+          "u",
+          "n",
+          "a",
+          " ",
+          "m",
+          "ˈ",
+          "e",
+          "s",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-ed62c989c2a8db3a79a1-slow.m4a",
+      "sha256": "be949ca790e58621117035d3fff2c39138f6488710c233919be15a08cc02a350",
+      "bytes": 10034,
+      "text": "Es una mesa.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "ˈ",
+          "u",
+          "n",
+          "a",
+          " ",
+          "m",
+          "ˈ",
+          "e",
+          "s",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e42bc2aaaca22da26db5.m4a",
+      "sha256": "f68510760b9395d576f255d113c1542631659f1c05236bc83c0a42cd33082908",
+      "bytes": 5978,
+      "text": "España",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "e",
+          "s",
+          "p",
+          "ˈ",
+          "a",
+          "ɲ",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e42bc2aaaca22da26db5-slow.m4a",
+      "sha256": "2641c82ff4f5f90d768f9ba98445cd6015212c29a668dc860717e0dc743cb918",
+      "bytes": 8952,
+      "text": "España",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "e",
+          "s",
+          "p",
+          "ˈ",
+          "a",
+          "ɲ",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-c350530cb3cbf745b273.m4a",
+      "sha256": "93be659ff79cf83a4b829b7d9f0abdbe8bc302103bbdd4c8dc80f1d5dc9c17d7",
+      "bytes": 11560,
+      "text": "Esta es mi madre.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "e",
+          "s",
+          "t",
+          "a",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "m",
+          "i",
+          " ",
+          "m",
+          "ˈ",
+          "a",
+          "ð",
+          "ɾ",
+          "e",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-c350530cb3cbf745b273-slow.m4a",
+      "sha256": "73a2067ddebc335a274b11a6fa0ee980757b6e050b1d8d4aa624a084e7e641e4",
+      "bytes": 13106,
+      "text": "Esta es mi madre.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "e",
+          "s",
+          "t",
+          "a",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "m",
+          "i",
+          " ",
+          "m",
+          "ˈ",
+          "a",
+          "ð",
+          "ɾ",
+          "e",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-25654dcc5cbdfe0efd6d.m4a",
+      "sha256": "3d4429a84f7346a96a54a4045b0f50396dcb8e6b87e45ea9f1d579361f399352",
+      "bytes": 9792,
+      "text": "Este es mi padre.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "e",
+          "s",
+          "t",
+          "e",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "m",
+          "i",
+          " ",
+          "p",
+          "ˈ",
+          "a",
+          "ð",
+          "ɾ",
+          "e",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-25654dcc5cbdfe0efd6d-slow.m4a",
+      "sha256": "b75b1a5cc144d11430f81da9c784ff2e190db0671bb48f7a7745d8c3878fe614",
+      "bytes": 13270,
+      "text": "Este es mi padre.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "e",
+          "s",
+          "t",
+          "e",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "m",
+          "i",
+          " ",
+          "p",
+          "ˈ",
+          "a",
+          "ð",
+          "ɾ",
+          "e",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-3a823148e9767b438fac.m4a",
+      "sha256": "19b37e88e4de8e4a61b62e172145e4a957c8800ea7203432da91ca0cd69305d3",
+      "bytes": 8065,
+      "text": "Hasta luego.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˌ",
+          "a",
+          "s",
+          "t",
+          "a",
+          " ",
+          "l",
+          "u",
+          "ˈ",
+          "e",
+          "ɣ",
+          "o",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-3a823148e9767b438fac-slow.m4a",
+      "sha256": "86a18e6814aadc51bcb3a641540374998a8d5f59da1bf408f2b63db08ca84f17",
+      "bytes": 9882,
+      "text": "Hasta luego.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˌ",
+          "a",
+          "s",
+          "t",
+          "a",
+          " ",
+          "l",
+          "u",
+          "ˈ",
+          "e",
+          "ɣ",
+          "o",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-42743e13befc25846732.m4a",
+      "sha256": "a99c5ea485f6d6b81a81bbf696755a4b9ef134ff6cfc8f6d52e7675581e22538",
+      "bytes": 11672,
+      "text": "Hay tres mesas.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "a",
+          "ɪ",
+          " ",
+          "t",
+          "ɾ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "m",
+          "ˈ",
+          "e",
+          "s",
+          "a",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-42743e13befc25846732-slow.m4a",
+      "sha256": "5925bd5ceea532a15c14d7b6d137bf3a863c4da65b6f9775788bf11657e992d7",
+      "bytes": 14001,
+      "text": "Hay tres mesas.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "a",
+          "ɪ",
+          " ",
+          "t",
+          "ɾ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "m",
+          "ˈ",
+          "e",
+          "s",
+          "a",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-01510355457a3b87b750.m4a",
+      "sha256": "a42c4e66c5ffbc88dade5391ef371e9b040d96c65a1f2d9360b9afc311ee972f",
+      "bytes": 3922,
+      "text": "Hola.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "o",
+          "l",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-01510355457a3b87b750-slow.m4a",
+      "sha256": "c351e8151efb8c99fca2095fbd8925677dc9e29292d81341aebeaac52ba9c388",
+      "bytes": 4539,
+      "text": "Hola.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "o",
+          "l",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1d06d8c29fe21b50021b.m4a",
+      "sha256": "0e689fb0eb575917d97ec7f83d3487e683cdc6db64389f034c3d066eab948ece",
+      "bytes": 13633,
+      "text": "La casa es grande.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "l",
+          "a",
+          " ",
+          "k",
+          "ˈ",
+          "a",
+          "s",
+          "a",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "ɣ",
+          "ɾ",
+          "ˈ",
+          "a",
+          "n",
+          "d",
+          "e",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1d06d8c29fe21b50021b-slow.m4a",
+      "sha256": "b3eb9d30bd8d7d0a3ece410bac3b05c0c34f35d112619174a68d2453c4660ca1",
+      "bytes": 16207,
+      "text": "La casa es grande.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "l",
+          "a",
+          " ",
+          "k",
+          "ˈ",
+          "a",
+          "s",
+          "a",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "ɣ",
+          "ɾ",
+          "ˈ",
+          "a",
+          "n",
+          "d",
+          "e",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1aa57cfca879ba9247e0.m4a",
+      "sha256": "c5861812bd391910e8e42afefb090429a9f6dd3fc59caf91e9903e3f89be2018",
+      "bytes": 18011,
+      "text": "La cuenta, por favor.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "l",
+          "a",
+          " ",
+          "k",
+          "w",
+          "ˈ",
+          "ɛ",
+          "n",
+          "t",
+          "a",
+          ",",
+          " ",
+          "p",
+          "o",
+          "ɾ",
+          " ",
+          "f",
+          "a",
+          "β",
+          "ˈ",
+          "o",
+          "ɾ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1aa57cfca879ba9247e0-slow.m4a",
+      "sha256": "f92edbc5d0d494dd43e8868daaadc67438f8db15168819001755753ea120ed89",
+      "bytes": 19462,
+      "text": "La cuenta, por favor.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "l",
+          "a",
+          " ",
+          "k",
+          "w",
+          "ˈ",
+          "ɛ",
+          "n",
+          "t",
+          "a",
+          ",",
+          " ",
+          "p",
+          "o",
+          "ɾ",
+          " ",
+          "f",
+          "a",
+          "β",
+          "ˈ",
+          "o",
+          "ɾ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-f65f1869c62ce4ea3e1a.m4a",
+      "sha256": "4af4e93d816f296a4e56fc24f621358799f738dfa9f28c5f716ffba813a0529a",
+      "bytes": 9680,
+      "text": "Me llamo Ana.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "m",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "o",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-f65f1869c62ce4ea3e1a-slow.m4a",
+      "sha256": "19e37d3c2de82d449cbb3005832b18380cf48c2e3886e367e4b5ca12010c3d4f",
+      "bytes": 11556,
+      "text": "Me llamo Ana.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "m",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "o",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-860af269342b54522b2d.m4a",
+      "sha256": "fcf0dc5fdd6d5f51d37c9a6b5a0ac399856c7624989211a6e5ede910b402a769",
+      "bytes": 10264,
+      "text": "Me llamo Miko.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "m",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "o",
+          " ",
+          "m",
+          "ˈ",
+          "i",
+          "k",
+          "o",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-860af269342b54522b2d-slow.m4a",
+      "sha256": "6384f35b305acc0d91ebc16a3bb12fa80d62e552018303369985d69b453aa2b5",
+      "bytes": 11198,
+      "text": "Me llamo Miko.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "m",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "o",
+          " ",
+          "m",
+          "ˈ",
+          "i",
+          "k",
+          "o",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-dd98cf824ba7d35e03ad.m4a",
+      "sha256": "979876ed07a9896ddd9fad90bca06006796a4fd4c5bbe99e87714c5174758cb5",
+      "bytes": 15906,
+      "text": "Mi hermana se llama Ana.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "m",
+          "i",
+          "ʲ",
+          " ",
+          "e",
+          "ɾ",
+          "m",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          " ",
+          "s",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "a",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-dd98cf824ba7d35e03ad-slow.m4a",
+      "sha256": "0436c7478d66eba471dfe1de7f326b4510f8083807343cef3c77a7f0d5a321c3",
+      "bytes": 20038,
+      "text": "Mi hermana se llama Ana.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "m",
+          "i",
+          "ʲ",
+          " ",
+          "e",
+          "ɾ",
+          "m",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          " ",
+          "s",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "a",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-6b22bcf431265ef4c41e.m4a",
+      "sha256": "e154b21162dd5af7865435db25fb1ac2a6976a230994e2eb17711554bc2d6572",
+      "bytes": 8957,
+      "text": "Mucho gusto.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "m",
+          "ˈ",
+          "u",
+          "t",
+          "ʃ",
+          "o",
+          " ",
+          "ɣ",
+          "ˈ",
+          "u",
+          "s",
+          "t",
+          "o",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-6b22bcf431265ef4c41e-slow.m4a",
+      "sha256": "cc5257d4a5b727157c79dee158b0527f51eaaa8eea6ecd896afe432d18f18603",
+      "bytes": 11087,
+      "text": "Mucho gusto.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "m",
+          "ˈ",
+          "u",
+          "t",
+          "ʃ",
+          "o",
+          " ",
+          "ɣ",
+          "ˈ",
+          "u",
+          "s",
+          "t",
+          "o",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-df1afe66ff8d80af8622.m4a",
+      "sha256": "9b6fd13493769059b29eb2a6486d76748cfc251325d295019908a837c428dc04",
+      "bytes": 18637,
+      "text": "Quisiera un café, por favor.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "k",
+          "i",
+          "s",
+          "j",
+          "ˈ",
+          "e",
+          "ɾ",
+          "a",
+          " ",
+          "ˈ",
+          "u",
+          "n",
+          " ",
+          "k",
+          "a",
+          "f",
+          "ˈ",
+          "e",
+          ",",
+          " ",
+          "p",
+          "o",
+          "ɾ",
+          " ",
+          "f",
+          "a",
+          "β",
+          "ˈ",
+          "o",
+          "ɾ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-df1afe66ff8d80af8622-slow.m4a",
+      "sha256": "5125023b18c821194db182b899cf5d384e17bf8c6429ae8381dcde6d9255df04",
+      "bytes": 21573,
+      "text": "Quisiera un café, por favor.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "k",
+          "i",
+          "s",
+          "j",
+          "ˈ",
+          "e",
+          "ɾ",
+          "a",
+          " ",
+          "ˈ",
+          "u",
+          "n",
+          " ",
+          "k",
+          "a",
+          "f",
+          "ˈ",
+          "e",
+          ",",
+          " ",
+          "p",
+          "o",
+          "ɾ",
+          " ",
+          "f",
+          "a",
+          "β",
+          "ˈ",
+          "o",
+          "ɾ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-211c8b926542b722e754.m4a",
+      "sha256": "863ed63a036da047e3437ee24559ef1b52eb3943cf67eac1cd6ebd4ed187eabf",
+      "bytes": 5709,
+      "text": "Rusia",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "r",
+          "ˈ",
+          "u",
+          "s",
+          "j",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-211c8b926542b722e754-slow.m4a",
+      "sha256": "1c536e2d01f2f0868196221f1a4064865b42a389cec776bd5c6248e8c6066986",
+      "bytes": 6366,
+      "text": "Rusia",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "r",
+          "ˈ",
+          "u",
+          "s",
+          "j",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-04cce4f04c9766e47d70.m4a",
+      "sha256": "5e680c7567f90b9f0f3bc3758bbe6f30ea85113d999930311bb863bf9ae53893",
+      "bytes": 10122,
+      "text": "Se llama Ana.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "s",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "a",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-04cce4f04c9766e47d70-slow.m4a",
+      "sha256": "68af58ff5716b87fe2141bbdcaced04a452c8677d1a1f8a52ef381b1ec0b34c6",
+      "bytes": 12802,
+      "text": "Se llama Ana.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "s",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "a",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e4e4ba1dc79024e9b98a.m4a",
+      "sha256": "0c16c056ba56afd12dee427f2efe27b725db6b63f43895d2fe3ef8931badce15",
+      "bytes": 10223,
+      "text": "Soy de Rusia.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "o",
+          "ɪ",
+          " ",
+          "ð",
+          "e",
+          " ",
+          "r",
+          "ˈ",
+          "u",
+          "s",
+          "j",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e4e4ba1dc79024e9b98a-slow.m4a",
+      "sha256": "8ea81fabe3c56a55846911dbe810ccf29fbb7b3d4915671c4c2e84d7cf25107e",
+      "bytes": 12480,
+      "text": "Soy de Rusia.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "o",
+          "ɪ",
+          " ",
+          "ð",
+          "e",
+          " ",
+          "r",
+          "ˈ",
+          "u",
+          "s",
+          "j",
+          "a",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-865556a4f17d4aca42c8.m4a",
+      "sha256": "4fec59f7081f6a9167c152aee389621d25c0985db573900ce09ca96685ba148f",
+      "bytes": 11518,
+      "text": "Tengo dos hermanos.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "t",
+          "ˈ",
+          "ɛ",
+          "ŋ",
+          "ɡ",
+          "o",
+          " ",
+          "ð",
+          "ˈ",
+          "o",
+          "s",
+          " ",
+          "e",
+          "ɾ",
+          "m",
+          "ˈ",
+          "a",
+          "n",
+          "o",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-865556a4f17d4aca42c8-slow.m4a",
+      "sha256": "a55c4f5d74c84cfd9fcb6b8de35c4a1674c947b1581b48f9fcabcad454aafb5e",
+      "bytes": 14935,
+      "text": "Tengo dos hermanos.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "t",
+          "ˈ",
+          "ɛ",
+          "ŋ",
+          "ɡ",
+          "o",
+          " ",
+          "ð",
+          "ˈ",
+          "o",
+          "s",
+          " ",
+          "e",
+          "ɾ",
+          "m",
+          "ˈ",
+          "a",
+          "n",
+          "o",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e3cea30c0a40241b5a2f.m4a",
+      "sha256": "b5e4124b84865cdf204f721a162da913a1cb889e0e82c0a185c57493b1c03a31",
+      "bytes": 11317,
+      "text": "Tengo dos libros.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "t",
+          "ˈ",
+          "ɛ",
+          "ŋ",
+          "ɡ",
+          "o",
+          " ",
+          "ð",
+          "ˈ",
+          "o",
+          "s",
+          " ",
+          "l",
+          "ˈ",
+          "i",
+          "β",
+          "ɾ",
+          "o",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e3cea30c0a40241b5a2f-slow.m4a",
+      "sha256": "36c8478ea6c110e4975c643f2b779861686975db90dfcaf48b7ba5a9b5f56488",
+      "bytes": 14029,
+      "text": "Tengo dos libros.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "t",
+          "ˈ",
+          "ɛ",
+          "ŋ",
+          "ɡ",
+          "o",
+          " ",
+          "ð",
+          "ˈ",
+          "o",
+          "s",
+          " ",
+          "l",
+          "ˈ",
+          "i",
+          "β",
+          "ɾ",
+          "o",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-65b3c34778b8ea2ba548.m4a",
+      "sha256": "67e0f0cfa00fb54c8dd40cc4ac0d7d29e5a30e1289b7e2efd0c676bc858d5b41",
+      "bytes": 12019,
+      "text": "Tengo veinte años.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "t",
+          "ˈ",
+          "ɛ",
+          "ŋ",
+          "ɡ",
+          "o",
+          " ",
+          "β",
+          "ˈ",
+          "e",
+          "ɪ",
+          "n",
+          "t",
+          "e",
+          " ",
+          "ˈ",
+          "a",
+          "ɲ",
+          "o",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-65b3c34778b8ea2ba548-slow.m4a",
+      "sha256": "0766c6a6041e9af99462ce068793262a1567e54d5a3924ed9c91f641c956b789",
+      "bytes": 15205,
+      "text": "Tengo veinte años.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "t",
+          "ˈ",
+          "ɛ",
+          "ŋ",
+          "ɡ",
+          "o",
+          " ",
+          "β",
+          "ˈ",
+          "e",
+          "ɪ",
+          "n",
+          "t",
+          "e",
+          " ",
+          "ˈ",
+          "a",
+          "ɲ",
+          "o",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-5d39e9c564390e469228.m4a",
+      "sha256": "fc9e208d79527fa94f3eae226b5b8a48d533b0af789193228e14a0afa0208995",
+      "bytes": 15380,
+      "text": "Una sopa, por favor.",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "u",
+          "n",
+          "a",
+          " ",
+          "s",
+          "ˈ",
+          "o",
+          "p",
+          "a",
+          ",",
+          " ",
+          "p",
+          "o",
+          "ɾ",
+          " ",
+          "f",
+          "a",
+          "β",
+          "ˈ",
+          "o",
+          "ɾ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-5d39e9c564390e469228-slow.m4a",
+      "sha256": "eac446716903be0312e8c86ad964b43cff702aea3920fa4fe1b32ca3642d1ad0",
+      "bytes": 18924,
+      "text": "Una sopa, por favor.",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "u",
+          "n",
+          "a",
+          " ",
+          "s",
+          "ˈ",
+          "o",
+          "p",
+          "a",
+          ",",
+          " ",
+          "p",
+          "o",
+          "ɾ",
+          " ",
+          "f",
+          "a",
+          "β",
+          "ˈ",
+          "o",
+          "ɾ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-360d6407b8c9ed21b6ac.m4a",
+      "sha256": "fce0fd16c5bb38cae0d18430271161ab620cf853eaf8e149c7c9d9b0b92e399c",
+      "bytes": 3893,
+      "text": "agua",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "a",
+          "ɣ",
+          "w",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-360d6407b8c9ed21b6ac-slow.m4a",
+      "sha256": "61b089c4ae2a47c3f63187629d72bae915d3bc1f6a3faf7ec4b0400dc1b89edd",
+      "bytes": 4907,
+      "text": "agua",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "a",
+          "ɣ",
+          "w",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b4fa9f36c44fc25a828f.m4a",
+      "sha256": "c3bc7dccb4115218f5dc9aa8d6cefcf344db1ffb81892e78cf3ac7c3b5fc3396",
+      "bytes": 6564,
+      "text": "bien",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "b",
+          "j",
+          "ˈ",
+          "e",
+          "n"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b4fa9f36c44fc25a828f-slow.m4a",
+      "sha256": "701aab12962e4d1c8416567a8f0aa6ef035e91bb6dad923f813150fe3728b10c",
+      "bytes": 6821,
+      "text": "bien",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "b",
+          "j",
+          "ˈ",
+          "e",
+          "n"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-6c00b7f87c94c0bd32ed.m4a",
+      "sha256": "c97d0272e25bcaf23bd7849d03581d195573c84ca4b6d653275f24dfc1e1854f",
+      "bytes": 5043,
+      "text": "café",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "k",
+          "a",
+          "f",
+          "ˈ",
+          "e"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-6c00b7f87c94c0bd32ed-slow.m4a",
+      "sha256": "5c4f3661882fdbbcf719571bdd156dc9251a60229c3f2d72f82b17f01d960b21",
+      "bytes": 6025,
+      "text": "café",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "k",
+          "a",
+          "f",
+          "ˈ",
+          "e"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-85d1cd0db7a1b61c80ef.m4a",
+      "sha256": "43f3ce9ad03981d9985abc43bdc006b72c9e961f84a1395994d3af9b2937a0e9",
+      "bytes": 6625,
+      "text": "cinco",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "θ",
+          "ˈ",
+          "i",
+          "n",
+          "k",
+          "o"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-85d1cd0db7a1b61c80ef-slow.m4a",
+      "sha256": "257b7f45ce52677a7ef17d68e7ca08d92ec836026294d48900940c5be8ad85f4",
+      "bytes": 8002,
+      "text": "cinco",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "θ",
+          "ˈ",
+          "i",
+          "n",
+          "k",
+          "o"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-aa0374903e5fa9bc7b3a.m4a",
+      "sha256": "73296278b174b338353cc8bf0d7f2dbdb9d08953660dee4ee17acbf8e791299d",
+      "bytes": 4572,
+      "text": "dos",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "ˈ",
+          "o",
+          "s"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-aa0374903e5fa9bc7b3a-slow.m4a",
+      "sha256": "d6d9cf4817dc82acf149a3414b702c7f050d7c2f3059a45a5c72efe8bc2fe164",
+      "bytes": 5521,
+      "text": "dos",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "ˈ",
+          "o",
+          "s"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-a1408e18a6d273b63613.m4a",
+      "sha256": "35f6323f2351bea6c2a9e4b31ce3224407170b7ab0db2fa5719b37bb9ede1e6a",
+      "bytes": 6086,
+      "text": "el libro",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "e",
+          "l",
+          " ",
+          "l",
+          "ˈ",
+          "i",
+          "β",
+          "ɾ",
+          "o"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-a1408e18a6d273b63613-slow.m4a",
+      "sha256": "972551544e042bc73e44b075ad0fd38119a5eaf6d48f1dbab624ef6cdb85cb35",
+      "bytes": 7953,
+      "text": "el libro",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "e",
+          "l",
+          " ",
+          "l",
+          "ˈ",
+          "i",
+          "β",
+          "ɾ",
+          "o"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-3864291ba8fe05155f6c.m4a",
+      "sha256": "69c7f071400e8b6de33e02f5039a66075b9c276b072fa032f7de679b5918ad12",
+      "bytes": 6648,
+      "text": "gracias",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ɡ",
+          "ɾ",
+          "ˈ",
+          "a",
+          "θ",
+          "j",
+          "a",
+          "s"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-3864291ba8fe05155f6c-slow.m4a",
+      "sha256": "a3baeebdd37763abb1f3140ed446a1cd22eef0a76734e2388d909a02cc27b04a",
+      "bytes": 8943,
+      "text": "gracias",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ɡ",
+          "ɾ",
+          "ˈ",
+          "a",
+          "θ",
+          "j",
+          "a",
+          "s"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b7b85e67a43dfecd2b5c.m4a",
+      "sha256": "9c557f2456adbc20faa14f87cc95997245674268987b6a174456c6a0392499f6",
+      "bytes": 6259,
+      "text": "hermana",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "e",
+          "ɾ",
+          "m",
+          "ˈ",
+          "a",
+          "n",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b7b85e67a43dfecd2b5c-slow.m4a",
+      "sha256": "082224cc1198b5a209e3214fb9530e7e5dcb1a2f32963b97183b00001e02d3b9",
+      "bytes": 7504,
+      "text": "hermana",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "e",
+          "ɾ",
+          "m",
+          "ˈ",
+          "a",
+          "n",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-5a0e7ebc4c7bc29d7aac.m4a",
+      "sha256": "972c9e6e9a8040daf24733894a71c85d141fe8c636d49e16c52fc21fbd0872e8",
+      "bytes": 4116,
+      "text": "hola",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˈ",
+          "o",
+          "l",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-5a0e7ebc4c7bc29d7aac-slow.m4a",
+      "sha256": "1643ea67bed31d793155b361b03429bbdad8763a8b52cd7d61ba9ff9373d3a9f",
+      "bytes": 4672,
+      "text": "hola",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˈ",
+          "o",
+          "l",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8bc6058b300eb4d41700.m4a",
+      "sha256": "20a9f445852b61c734a0aaa1d90ba1dba10f5fa9c1ad8c379f91ab6d70cc7f72",
+      "bytes": 7359,
+      "text": "la casa",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "l",
+          "a",
+          " ",
+          "k",
+          "ˈ",
+          "a",
+          "s",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8bc6058b300eb4d41700-slow.m4a",
+      "sha256": "9ce37c5b718373d61f1625c3b66f562d269797b3ca374ed95e92b82d569e3dfb",
+      "bytes": 8916,
+      "text": "la casa",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "l",
+          "a",
+          " ",
+          "k",
+          "ˈ",
+          "a",
+          "s",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b490b0cfd6b5f2a0f93b.m4a",
+      "sha256": "75a5439888d052684127f77705b098dfb9f1751d7510936458a5fa0a57f111cb",
+      "bytes": 7038,
+      "text": "la mesa",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "l",
+          "a",
+          " ",
+          "m",
+          "ˈ",
+          "e",
+          "s",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b490b0cfd6b5f2a0f93b-slow.m4a",
+      "sha256": "bc34ec27d298997e6c7972b61ad3f1ed66b870bfe15a5c1b277c5ddbc7859095",
+      "bytes": 8026,
+      "text": "la mesa",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "l",
+          "a",
+          " ",
+          "m",
+          "ˈ",
+          "e",
+          "s",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-339b9fbc6f16d6d886e1.m4a",
+      "sha256": "db6f594491879ebcf129c3b8b2a96f342398ccf7bfd5307aa8fe574045a2eb49",
+      "bytes": 5482,
+      "text": "madre",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "m",
+          "ˈ",
+          "a",
+          "ð",
+          "ɾ",
+          "e"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-339b9fbc6f16d6d886e1-slow.m4a",
+      "sha256": "d93d2535a94404c7efc437fe4a5a1d791a3d770e9ff10786c8cc5fe57cdcb737",
+      "bytes": 7001,
+      "text": "madre",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "m",
+          "ˈ",
+          "a",
+          "ð",
+          "ɾ",
+          "e"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1ca090a0b8a52ac1f003.m4a",
+      "sha256": "4192e86e3d8132cb0a79a1e2af616eb69f052a13f59712b0bef0bc7577e46d8b",
+      "bytes": 6061,
+      "text": "nombre",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "n",
+          "ˈ",
+          "o",
+          "m",
+          "b",
+          "ɾ",
+          "e"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1ca090a0b8a52ac1f003-slow.m4a",
+      "sha256": "fcfa048c0d437d7cc69953c39648da8110e6a3bf149b0aa40ce01d5b49f4528d",
+      "bytes": 7343,
+      "text": "nombre",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "n",
+          "ˈ",
+          "o",
+          "m",
+          "b",
+          "ɾ",
+          "e"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-45701cb7c658af5dde83.m4a",
+      "sha256": "d39b8c9ce59bcd86174f836b2097cd48217b9de7466f247380aa8bc942937609",
+      "bytes": 4485,
+      "text": "padre",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "p",
+          "ˈ",
+          "a",
+          "ð",
+          "ɾ",
+          "e"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-45701cb7c658af5dde83-slow.m4a",
+      "sha256": "92be84fb93c42a8151b8c5ee572ca9501d6e1bc592474bb79f1cf1cf3f514220",
+      "bytes": 5265,
+      "text": "padre",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "p",
+          "ˈ",
+          "a",
+          "ð",
+          "ɾ",
+          "e"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-de304252bd4559e5babc.m4a",
+      "sha256": "49f14900ac0b65361e6e3a63fea310948ba9191459448d482995203dbe08fb48",
+      "bytes": 5604,
+      "text": "sopa",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "o",
+          "p",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-de304252bd4559e5babc-slow.m4a",
+      "sha256": "0157ab683265141b41725dbd37da25d671451fa96d845432b3c7f61fe71d7414",
+      "bytes": 6225,
+      "text": "sopa",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "o",
+          "p",
+          "a"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-ba9f3030e2af58cca731.m4a",
+      "sha256": "0c34b45730d70d75d69376da8d531eb1092ea926add2a6de58eeec86dc41933d",
+      "bytes": 4697,
+      "text": "tres",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "t",
+          "ɾ",
+          "ˈ",
+          "e",
+          "s"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-ba9f3030e2af58cca731-slow.m4a",
+      "sha256": "f27dce91dd247e7780ef252e3fcec8d3cf1cd0962fc6aab0d4ec5a209e870e06",
+      "bytes": 5609,
+      "text": "tres",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "t",
+          "ɾ",
+          "ˈ",
+          "e",
+          "s"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8eb5444d63b194469bdf.m4a",
+      "sha256": "6fad962eaba9a83b029194aaeaa9290dc8ee25100de0674ee04ab784038aa3b6",
+      "bytes": 15002,
+      "text": "¿Cuántos años tienes?",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "k",
+          "w",
+          "ˈ",
+          "a",
+          "n",
+          "t",
+          "o",
+          "s",
+          " ",
+          "ˈ",
+          "a",
+          "ɲ",
+          "o",
+          "s",
+          " ",
+          "t",
+          "j",
+          "ˈ",
+          "e",
+          "n",
+          "e",
+          "s",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8eb5444d63b194469bdf-slow.m4a",
+      "sha256": "cbf073180cd54ec2b1c49aedc6ecad802f3536bf2a7984fe9080d2f4564388bc",
+      "bytes": 17903,
+      "text": "¿Cuántos años tienes?",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "k",
+          "w",
+          "ˈ",
+          "a",
+          "n",
+          "t",
+          "o",
+          "s",
+          " ",
+          "ˈ",
+          "a",
+          "ɲ",
+          "o",
+          "s",
+          " ",
+          "t",
+          "j",
+          "ˈ",
+          "e",
+          "n",
+          "e",
+          "s",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-d25ca391d46520474c40.m4a",
+      "sha256": "4b404dba1403d27c23b9e993788306baef5e855144ec52f15fd302233cfb67e2",
+      "bytes": 8161,
+      "text": "¿Cómo estás?",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "o",
+          "m",
+          "o",
+          " ",
+          "e",
+          "s",
+          "t",
+          "ˈ",
+          "a",
+          "s",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-d25ca391d46520474c40-slow.m4a",
+      "sha256": "3042e9a3c76d9a5252528dfc885cbc355bae0fcdbbdf86c30229ed2e9efe6f72",
+      "bytes": 10107,
+      "text": "¿Cómo estás?",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "o",
+          "m",
+          "o",
+          " ",
+          "e",
+          "s",
+          "t",
+          "ˈ",
+          "a",
+          "s",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-31ce2bc64c6c42824ff9.m4a",
+      "sha256": "f1dfda96d3807c2b207af8d128a4158f6839d237db20f2753032c378499f3f9c",
+      "bytes": 16579,
+      "text": "¿Cómo se llama tu hermana?",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "o",
+          "m",
+          "o",
+          " ",
+          "s",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "a",
+          " ",
+          "t",
+          "u",
+          " ",
+          "e",
+          "ɾ",
+          "m",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-31ce2bc64c6c42824ff9-slow.m4a",
+      "sha256": "28e92f04e0e4fb69a6ab90734b5bd9cf11b3dd7b28fd4a3d602c3d29f1f20ccc",
+      "bytes": 20760,
+      "text": "¿Cómo se llama tu hermana?",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "o",
+          "m",
+          "o",
+          " ",
+          "s",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "a",
+          " ",
+          "t",
+          "u",
+          " ",
+          "e",
+          "ɾ",
+          "m",
+          "ˈ",
+          "a",
+          "n",
+          "a",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-37961b89db19f63d5c98.m4a",
+      "sha256": "482b4e6c9b5452e95ae9bfe77aa067392c0d95618b2fb41c711a48573323cf2d",
+      "bytes": 10142,
+      "text": "¿Cómo te llamas?",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "o",
+          "m",
+          "o",
+          " ",
+          "t",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "a",
+          "s",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-37961b89db19f63d5c98-slow.m4a",
+      "sha256": "3b0d5611a4b16a4e4ebea337fa0a4b9bb29a13a18fedf8d9264b0ae420503f9b",
+      "bytes": 12450,
+      "text": "¿Cómo te llamas?",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "o",
+          "m",
+          "o",
+          " ",
+          "t",
+          "e",
+          " ",
+          "ʎ",
+          "ˈ",
+          "a",
+          "m",
+          "a",
+          "s",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-478091d05038b368d292.m4a",
+      "sha256": "4a8e253170ed5c7f2a0a91afee224e2678adf2fd128fb2a34af81a130a6afa1c",
+      "bytes": 7642,
+      "text": "¿Qué es esto?",
+      "locale": "es-ES",
+      "slow": false,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "e",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          "t",
+          "o",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-478091d05038b368d292-slow.m4a",
+      "sha256": "fedf10169200e20afc4b65b4f11add47ce619ef8ae3e55c53c1d4cc584e896e6",
+      "bytes": 10043,
+      "text": "¿Qué es esto?",
+      "locale": "es-ES",
+      "slow": true,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "e",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          " ",
+          "ˈ",
+          "e",
+          "s",
+          "t",
+          "o",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e82d454abc7328b591d7.m4a",
+      "sha256": "f520a1b328edb50c58594d54be46f7a2978d345c657c341bdfba08725bf7061b",
+      "bytes": 10475,
+      "text": "Auf Wiedersehen.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "a",
+          "ʊ",
+          "f",
+          " ",
+          "v",
+          "i",
+          "ː",
+          "d",
+          "ɜ",
+          "z",
+          "ˈ",
+          "e",
+          "ː",
+          "ə",
+          "n",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e82d454abc7328b591d7-slow.m4a",
+      "sha256": "0a5070755c1c4fde3facb5cd87a77560823d33b715a1f6ea88d9f84dfcd0a843",
+      "bytes": 13400,
+      "text": "Auf Wiedersehen.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "a",
+          "ʊ",
+          "f",
+          " ",
+          "v",
+          "i",
+          "ː",
+          "d",
+          "ɜ",
+          "z",
+          "ˈ",
+          "e",
+          "ː",
+          "ə",
+          "n",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1599f03a6c4b401be7e7.m4a",
+      "sha256": "69d29e3dccc5eba36bf45ea955f4685be8ca82b7b37d9525109a493aaf96b94d",
+      "bytes": 12272,
+      "text": "Danke, gut.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "ˈ",
+          "a",
+          "ŋ",
+          "k",
+          "ə",
+          ",",
+          " ",
+          "ɡ",
+          "ˈ",
+          "u",
+          "ː",
+          "t",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1599f03a6c4b401be7e7-slow.m4a",
+      "sha256": "904817789e5dd27c27989ef1c3a9270468d1203f1c5af3f08ae30c199a9a08e6",
+      "bytes": 14148,
+      "text": "Danke, gut.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "ˈ",
+          "a",
+          "ŋ",
+          "k",
+          "ə",
+          ",",
+          " ",
+          "ɡ",
+          "ˈ",
+          "u",
+          "ː",
+          "t",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-5428bddd3c42aa32993d.m4a",
+      "sha256": "16aa36a9c0fef7018985bd8feb687372633b66c8a1155f589c2c3ed062ea3ef3",
+      "bytes": 11853,
+      "text": "Das ist ein Buch.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "a",
+          "ɪ",
+          "n",
+          " ",
+          "b",
+          "ˈ",
+          "u",
+          "ː",
+          "x",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-5428bddd3c42aa32993d-slow.m4a",
+      "sha256": "5272183a9e2cd0834f44f010c0a58cb254e7a047248c776a0310312719a938a4",
+      "bytes": 16883,
+      "text": "Das ist ein Buch.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "a",
+          "ɪ",
+          "n",
+          " ",
+          "b",
+          "ˈ",
+          "u",
+          "ː",
+          "x",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b13a0ca5ec494f41a2cc.m4a",
+      "sha256": "1a94937c099f39824225ea435a8ab63c01532b44709f7909b61a0be69701d711",
+      "bytes": 11015,
+      "text": "Das ist eine Lampe.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "l",
+          "ˈ",
+          "a",
+          "m",
+          "p",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b13a0ca5ec494f41a2cc-slow.m4a",
+      "sha256": "32abc8fef15920f7386674cbfeffdf55c80e151d52eb880ad8db746753670237",
+      "bytes": 13817,
+      "text": "Das ist eine Lampe.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "l",
+          "ˈ",
+          "a",
+          "m",
+          "p",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-bc440fa73c4dbeb63f13.m4a",
+      "sha256": "d71d3c3c945618fa5943276daf07bdc40cb186ffb2ef353d679f4f1fe3fc32d0",
+      "bytes": 16708,
+      "text": "Das ist mein Vater.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "m",
+          "a",
+          "ɪ",
+          "n",
+          " ",
+          "f",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "t",
+          "ɜ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-bc440fa73c4dbeb63f13-slow.m4a",
+      "sha256": "7211135eed69e0007fb176a75ba6d010d5ed4fde5495205165f359f08443cfdd",
+      "bytes": 18344,
+      "text": "Das ist mein Vater.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "m",
+          "a",
+          "ɪ",
+          "n",
+          " ",
+          "f",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "t",
+          "ɜ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-ba901700f2de2f266c5c.m4a",
+      "sha256": "8cbbe52c516ca1d18e7d00645a6b2ada5aaf3a3c8af1aa7ad9ea33cb82ba2020",
+      "bytes": 14606,
+      "text": "Das ist meine Mutter.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "m",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "m",
+          "ˈ",
+          "ʊ",
+          "t",
+          "ɜ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-ba901700f2de2f266c5c-slow.m4a",
+      "sha256": "78bfba19886a2081ae372c06d61cd24869b95c58d18c54e02a7f00761088763a",
+      "bytes": 17258,
+      "text": "Das ist meine Mutter.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "m",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "m",
+          "ˈ",
+          "ʊ",
+          "t",
+          "ɜ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8b615aff994b8c61aa22.m4a",
+      "sha256": "a098385e4cd06756ecb28cd32c65fadf4a32b6a716b8ffa95f989e3c088a148c",
+      "bytes": 13904,
+      "text": "Der Tisch ist groß.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "ɛ",
+          "ɾ",
+          " ",
+          "t",
+          "ˈ",
+          "ɪ",
+          "ʃ",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "ɡ",
+          "r",
+          "ˈ",
+          "o",
+          "ː",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8b615aff994b8c61aa22-slow.m4a",
+      "sha256": "cc570591e28920d9ce40f42568c4f8a8ce86a2d666e2e88d16285c6ab44e89d1",
+      "bytes": 18316,
+      "text": "Der Tisch ist groß.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "ɛ",
+          "ɾ",
+          " ",
+          "t",
+          "ˈ",
+          "ɪ",
+          "ʃ",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "ɡ",
+          "r",
+          "ˈ",
+          "o",
+          "ː",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-0015573a3797ed039fd6.m4a",
+      "sha256": "9d96ef608ce882b96c08340557849bde60e92c69556202a32d1210b14c20a26e",
+      "bytes": 8177,
+      "text": "Deutschland",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "ˈ",
+          "ɔ",
+          "ø",
+          "t",
+          "ʃ",
+          "l",
+          "a",
+          "n",
+          "t"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-0015573a3797ed039fd6-slow.m4a",
+      "sha256": "aaa3937b831140c54121c0d21ac92008c4a154ec8f6f1a0ec360a4dd4c490799",
+      "bytes": 11076,
+      "text": "Deutschland",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "ˈ",
+          "ɔ",
+          "ø",
+          "t",
+          "ʃ",
+          "l",
+          "a",
+          "n",
+          "t"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-0cf8855384b60845ebff.m4a",
+      "sha256": "90fe3561b3ea7f78421c0b6a9a20627a8a1a4043b674bf6d49bf2db6f09854fd",
+      "bytes": 12780,
+      "text": "Eine Suppe, bitte.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "z",
+          "ˈ",
+          "ʊ",
+          "p",
+          "ə",
+          ",",
+          " ",
+          "b",
+          "ˈ",
+          "ɪ",
+          "t",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-0cf8855384b60845ebff-slow.m4a",
+      "sha256": "ea4250d610d03673ff7d0d20e814c6cf6edd6a7cb766da81f88e8bead2f40e4f",
+      "bytes": 14341,
+      "text": "Eine Suppe, bitte.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "z",
+          "ˈ",
+          "ʊ",
+          "p",
+          "ə",
+          ",",
+          " ",
+          "b",
+          "ˈ",
+          "ɪ",
+          "t",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-2f8bbf1ebc5d1901ae7c.m4a",
+      "sha256": "48d788daa24d0948f2cee49dfe0283a468ee8a686feafeae404fdc6f2a82440e",
+      "bytes": 9736,
+      "text": "Freut mich.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "f",
+          "r",
+          "ˈ",
+          "ɔ",
+          "ø",
+          "t",
+          " ",
+          "m",
+          "ɪ",
+          "c",
+          "̧",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-2f8bbf1ebc5d1901ae7c-slow.m4a",
+      "sha256": "f1d8af8163e21945b681cdb6a4f9326fb0d018489d1296a489be219dc1fb1df1",
+      "bytes": 11024,
+      "text": "Freut mich.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "f",
+          "r",
+          "ˈ",
+          "ɔ",
+          "ø",
+          "t",
+          " ",
+          "m",
+          "ɪ",
+          "c",
+          "̧",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-bcce059256c45a2d9daf.m4a",
+      "sha256": "c9c094f16aef0fd9ac41c075aaf25aea06588cf9efaa58453d3b77448135fb8b",
+      "bytes": 8712,
+      "text": "Guten Morgen.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ɡ",
+          "ˈ",
+          "u",
+          "ː",
+          "t",
+          "ə",
+          "n",
+          " ",
+          "m",
+          "ˈ",
+          "ɔ",
+          "ɾ",
+          "ɡ",
+          "ə",
+          "n",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-bcce059256c45a2d9daf-slow.m4a",
+      "sha256": "b4d702c8caffad380b39f55984b6b28e141117c289ff50393a2c66f1b7123eca",
+      "bytes": 9642,
+      "text": "Guten Morgen.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ɡ",
+          "ˈ",
+          "u",
+          "ː",
+          "t",
+          "ə",
+          "n",
+          " ",
+          "m",
+          "ˈ",
+          "ɔ",
+          "ɾ",
+          "ɡ",
+          "ə",
+          "n",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-00bbc42388ea631df2e5.m4a",
+      "sha256": "97ab168cf0cbd233353096310cba32171d382f4bff2cf7d1d23d7e5cb03aa05a",
+      "bytes": 6880,
+      "text": "Hallo.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "h",
+          "ˈ",
+          "a",
+          "l",
+          "o",
+          "ː",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-00bbc42388ea631df2e5-slow.m4a",
+      "sha256": "ef9b997d29ad535d31f06156848b753d124df76abc7b46c306508f2421935916",
+      "bytes": 9410,
+      "text": "Hallo.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "h",
+          "ˈ",
+          "a",
+          "l",
+          "o",
+          "ː",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8124b166ebdf749b62ce.m4a",
+      "sha256": "910df4df0cf7caf369ec4598336912137753cd055f31c6fd1a8ccec5251c00ab",
+      "bytes": 15139,
+      "text": "Hier sind drei Lampen.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "h",
+          "ˈ",
+          "i",
+          "ː",
+          "ɾ",
+          " ",
+          "z",
+          "ɪ",
+          "n",
+          "t",
+          " ",
+          "d",
+          "r",
+          "ˈ",
+          "a",
+          "ɪ",
+          " ",
+          "l",
+          "ˈ",
+          "a",
+          "m",
+          "p",
+          "ə",
+          "n",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8124b166ebdf749b62ce-slow.m4a",
+      "sha256": "de8e5573743e6e2badce9830d4214e63a600f9466e07112f965523abba510c94",
+      "bytes": 18401,
+      "text": "Hier sind drei Lampen.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "h",
+          "ˈ",
+          "i",
+          "ː",
+          "ɾ",
+          " ",
+          "z",
+          "ɪ",
+          "n",
+          "t",
+          " ",
+          "d",
+          "r",
+          "ˈ",
+          "a",
+          "ɪ",
+          " ",
+          "l",
+          "ˈ",
+          "a",
+          "m",
+          "p",
+          "ə",
+          "n",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e5a9f050ff465c6d897b.m4a",
+      "sha256": "69b24e1bd24fac94b024e168bc55c4257f29c2d141802418f66077c6d7f95359",
+      "bytes": 18947,
+      "text": "Ich bin zwanzig Jahre alt.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "b",
+          "ɪ",
+          "n",
+          " ",
+          "t",
+          "s",
+          "v",
+          "ˈ",
+          "a",
+          "n",
+          "t",
+          "s",
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "j",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "r",
+          "ə",
+          " ",
+          "ˈ",
+          "a",
+          "l",
+          "t",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e5a9f050ff465c6d897b-slow.m4a",
+      "sha256": "5519397034232885586058849406edbdbd3d846a7ff4ebea8c4ab7d1ee23f052",
+      "bytes": 25553,
+      "text": "Ich bin zwanzig Jahre alt.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "b",
+          "ɪ",
+          "n",
+          " ",
+          "t",
+          "s",
+          "v",
+          "ˈ",
+          "a",
+          "n",
+          "t",
+          "s",
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "j",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "r",
+          "ə",
+          " ",
+          "ˈ",
+          "a",
+          "l",
+          "t",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-c9baaf782ab8c1fa9966.m4a",
+      "sha256": "fe2d831ec84b9569f8fde53bd7ecd8a9cf09683c4be628f7a3dbf882f7d55531",
+      "bytes": 15098,
+      "text": "Ich habe zwei Bücher.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "h",
+          "ɑ",
+          "ː",
+          "b",
+          "ə",
+          " ",
+          "t",
+          "s",
+          "v",
+          "ˈ",
+          "a",
+          "ɪ",
+          " ",
+          "b",
+          "ˈ",
+          "y",
+          "ː",
+          "c",
+          "̧",
+          "ɜ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-c9baaf782ab8c1fa9966-slow.m4a",
+      "sha256": "5d8df8cf1976b671cad4671bdc3cc60204ded1219f4ece21063f06954e3aa350",
+      "bytes": 17972,
+      "text": "Ich habe zwei Bücher.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "h",
+          "ɑ",
+          "ː",
+          "b",
+          "ə",
+          " ",
+          "t",
+          "s",
+          "v",
+          "ˈ",
+          "a",
+          "ɪ",
+          " ",
+          "b",
+          "ˈ",
+          "y",
+          "ː",
+          "c",
+          "̧",
+          "ɜ",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b992c3b93d556824c5f5.m4a",
+      "sha256": "2392c76d71d52d26736f00b322e3802c30b016040d762f7f430d5ec9b7eb2ddd",
+      "bytes": 11204,
+      "text": "Ich heiße Anna.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "ə",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "ɑ",
+          "ː",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b992c3b93d556824c5f5-slow.m4a",
+      "sha256": "762f5649ee61ab250cf4e7c908a7526162ed10e8488428dfe83fe3e026a6ad05",
+      "bytes": 14235,
+      "text": "Ich heiße Anna.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "ə",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "ɑ",
+          "ː",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-df678da6c3810beca047.m4a",
+      "sha256": "d21e6505e82724f064c6286c48a00cb798bbbe93feff59abab3658f4606ebe2c",
+      "bytes": 14479,
+      "text": "Ich komme aus Russland.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "k",
+          "ˈ",
+          "ɔ",
+          "m",
+          "ə",
+          " ",
+          "ˌ",
+          "a",
+          "ʊ",
+          "s",
+          " ",
+          "r",
+          "ˈ",
+          "ʊ",
+          "s",
+          "l",
+          "a",
+          "n",
+          "t",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-df678da6c3810beca047-slow.m4a",
+      "sha256": "36a15b907092e16499e2f3efe8f4d4b76ecf01d3873c680b1308d431495e0f0f",
+      "bytes": 17411,
+      "text": "Ich komme aus Russland.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "k",
+          "ˈ",
+          "ɔ",
+          "m",
+          "ə",
+          " ",
+          "ˌ",
+          "a",
+          "ʊ",
+          "s",
+          " ",
+          "r",
+          "ˈ",
+          "ʊ",
+          "s",
+          "l",
+          "a",
+          "n",
+          "t",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-edbaaec58bcef85e9bac.m4a",
+      "sha256": "98952fdc56cce7531ae8c8ddca370d8fc6a9ed0dc5795835deee80d779e74506",
+      "bytes": 19325,
+      "text": "Ich möchte einen Kaffee, bitte.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "m",
+          "ˈ",
+          "œ",
+          "c",
+          "̧",
+          "t",
+          "ə",
+          " ",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          "n",
+          " ",
+          "k",
+          "ˈ",
+          "a",
+          "f",
+          "e",
+          "ː",
+          ",",
+          " ",
+          "b",
+          "ˈ",
+          "ɪ",
+          "t",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-edbaaec58bcef85e9bac-slow.m4a",
+      "sha256": "81ef56a2578858186cb5d377219596187f447b1b60e7f0df0438930be8c59aaf",
+      "bytes": 23936,
+      "text": "Ich möchte einen Kaffee, bitte.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ɪ",
+          "c",
+          "̧",
+          " ",
+          "m",
+          "ˈ",
+          "œ",
+          "c",
+          "̧",
+          "t",
+          "ə",
+          " ",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          "n",
+          " ",
+          "k",
+          "ˈ",
+          "a",
+          "f",
+          "e",
+          "ː",
+          ",",
+          " ",
+          "b",
+          "ˈ",
+          "ɪ",
+          "t",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8c8003abbebe3d5c35e6.m4a",
+      "sha256": "bf9978aca564942dd9b25696079b479cad1b763a7c425c2d975795cc2392d586",
+      "bytes": 8631,
+      "text": "Kaffee",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "a",
+          "f",
+          "e",
+          "ː"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8c8003abbebe3d5c35e6-slow.m4a",
+      "sha256": "68aa828f5cf4cea484004b0ced3d21d54614ddb5e79c309958fb5c623552e239",
+      "bytes": 9932,
+      "text": "Kaffee",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "k",
+          "ˈ",
+          "a",
+          "f",
+          "e",
+          "ː"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b18a8903a1b4e6e715c4.m4a",
+      "sha256": "1e4b06dab69801afd3d66449c38039ae49ec0f750bea6ceb09e9b0d92807727b",
+      "bytes": 14894,
+      "text": "Mein Bruder heißt Max.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "m",
+          "a",
+          "ɪ",
+          "n",
+          " ",
+          "b",
+          "r",
+          "ˈ",
+          "u",
+          "ː",
+          "d",
+          "ɜ",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "m",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "k",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b18a8903a1b4e6e715c4-slow.m4a",
+      "sha256": "1f348862d28012f0df3bf133c047eff0082e50727b7546689141334c066e5211",
+      "bytes": 17513,
+      "text": "Mein Bruder heißt Max.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "m",
+          "a",
+          "ɪ",
+          "n",
+          " ",
+          "b",
+          "r",
+          "ˈ",
+          "u",
+          "ː",
+          "d",
+          "ɜ",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "m",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "k",
+          "s",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-6236e4014ff304720c60.m4a",
+      "sha256": "01082b57895180c411d0cb1706ec5b770c94bd530b13f01193a70f95f8c4c3ea",
+      "bytes": 14554,
+      "text": "Meine Schwester heißt Anna.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "m",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "ʃ",
+          "v",
+          "ˈ",
+          "ɛ",
+          "s",
+          "t",
+          "ɜ",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "ɑ",
+          "ː",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-6236e4014ff304720c60-slow.m4a",
+      "sha256": "f07f812eb42b1c87f308bbd695c317b5be6a9b06a26650e5dbe9fccc78424a4a",
+      "bytes": 19925,
+      "text": "Meine Schwester heißt Anna.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "m",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "ʃ",
+          "v",
+          "ˈ",
+          "ɛ",
+          "s",
+          "t",
+          "ɜ",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "ɑ",
+          "ː",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-af107c10748a2e67e813.m4a",
+      "sha256": "370d718a593f2fa7734a9a0da42a598442e911bc560a0b6582b6a439bad33d43",
+      "bytes": 8253,
+      "text": "Mutter",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "m",
+          "ˈ",
+          "ʊ",
+          "t",
+          "ɜ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-af107c10748a2e67e813-slow.m4a",
+      "sha256": "96a772b189db52dd49415d6d3c575d48734f7e454613ff7ffb9977c9b50295b4",
+      "bytes": 9708,
+      "text": "Mutter",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "m",
+          "ˈ",
+          "ʊ",
+          "t",
+          "ɜ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-4198786b82333c30ec5d.m4a",
+      "sha256": "037b931acd8daeacd24ab399ff29c2fc9227303e85fd7c274b93a9982e541c9c",
+      "bytes": 7020,
+      "text": "Name",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "n",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "m",
+          "ə"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-4198786b82333c30ec5d-slow.m4a",
+      "sha256": "3f3184ff37b61208dab7ff1f3ee6327b67b95ea98c308e9cf7ed4a4e30648139",
+      "bytes": 10994,
+      "text": "Name",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "n",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "m",
+          "ə"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-40ea878b3d51a2fe4594.m4a",
+      "sha256": "d8c40f89eab99e8037c72917ef01eb224b34854837c0b3eab5c5ce113588a66e",
+      "bytes": 8982,
+      "text": "Russland",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "r",
+          "ˈ",
+          "ʊ",
+          "s",
+          "l",
+          "a",
+          "n",
+          "t"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-40ea878b3d51a2fe4594-slow.m4a",
+      "sha256": "948a5f967ce57b0767ebdd5e3ca8f28683b2827ead56dbea5bdf360c0b7ff4bc",
+      "bytes": 10745,
+      "text": "Russland",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "r",
+          "ˈ",
+          "ʊ",
+          "s",
+          "l",
+          "a",
+          "n",
+          "t"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8469aa47c6af8c857094.m4a",
+      "sha256": "fcf9868093663fe9305b5990c4c712dffb6ed96674febc48a6294db63b54b03f",
+      "bytes": 6184,
+      "text": "Schwester",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ʃ",
+          "v",
+          "ˈ",
+          "ɛ",
+          "s",
+          "t",
+          "ɜ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-8469aa47c6af8c857094-slow.m4a",
+      "sha256": "d80cad53229b6e8de89d4c311fda3001dcdd50fb42a263f949837fd69486a23f",
+      "bytes": 10391,
+      "text": "Schwester",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ʃ",
+          "v",
+          "ˈ",
+          "ɛ",
+          "s",
+          "t",
+          "ɜ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-21d78dff98ede138a48e.m4a",
+      "sha256": "17d5f8fe525c3e0caa0609c073b71efe7f1a412987b89784b56b0e55d773285b",
+      "bytes": 10362,
+      "text": "Sie heißt Anna.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "z",
+          "i",
+          "ː",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "ɑ",
+          "ː",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-21d78dff98ede138a48e-slow.m4a",
+      "sha256": "b4732823977b43ec9c5376834e1891f0b263d2e73294a1d60c987eac9a5f1ea1",
+      "bytes": 12927,
+      "text": "Sie heißt Anna.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "z",
+          "i",
+          "ː",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "ˈ",
+          "a",
+          "n",
+          "ɑ",
+          "ː",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-c299699a3c3a390087a2.m4a",
+      "sha256": "d7d26f8e2ac92962660c6b7ddbbb7c7b27bb650cba123fa8592e9eda45a5a768",
+      "bytes": 7983,
+      "text": "Suppe",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "z",
+          "ˈ",
+          "ʊ",
+          "p",
+          "ə"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-c299699a3c3a390087a2-slow.m4a",
+      "sha256": "deba167a39f497f5c9303ff5d9e2793168b678205ff8b52a2d19d57e7cdac475",
+      "bytes": 9107,
+      "text": "Suppe",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "z",
+          "ˈ",
+          "ʊ",
+          "p",
+          "ə"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-51d1a2bc52cbc36f7d7a.m4a",
+      "sha256": "1086cc58f2345149340eed7819f7e9c08eaa12719782178d33d4f18262d12e7d",
+      "bytes": 7651,
+      "text": "Vater",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "f",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "t",
+          "ɜ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-51d1a2bc52cbc36f7d7a-slow.m4a",
+      "sha256": "ea753fa59b72f494716a325856f754e1136d5a0c6f3e426897d1743328b1efe0",
+      "bytes": 9639,
+      "text": "Vater",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "f",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "t",
+          "ɜ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-7bd3fb855d3ad7e397cf.m4a",
+      "sha256": "c47e6ad0bfd9984e667e0c07bd0c6626e90f5587dc7f3ff0d8012fdec197c8ce",
+      "bytes": 10230,
+      "text": "Was ist das?",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "v",
+          "ˈ",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "d",
+          "a",
+          "s",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-7bd3fb855d3ad7e397cf-slow.m4a",
+      "sha256": "d3089dbe1863f6ef75f0e2204a29dd54b39af88448fa698673f66681695daf78",
+      "bytes": 12527,
+      "text": "Was ist das?",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "v",
+          "ˈ",
+          "a",
+          "s",
+          " ",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "d",
+          "a",
+          "s",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b6896c33f57e58fff809.m4a",
+      "sha256": "fc6ca83c8c566da235951fe104f910fc717b7bf665ad943ae2fba397c43cef40",
+      "bytes": 9541,
+      "text": "Wasser",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "v",
+          "ˈ",
+          "a",
+          "s",
+          "ɜ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b6896c33f57e58fff809-slow.m4a",
+      "sha256": "bbdfaa07b899865e5e4c2638bf14726e866d23c9a07341e9b766d76ff47dc33f",
+      "bytes": 11659,
+      "text": "Wasser",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "v",
+          "ˈ",
+          "a",
+          "s",
+          "ɜ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-a4e6bceb23245fe080fe.m4a",
+      "sha256": "3714639a5f8b596bf525f661a9298bb741330095b07f964b71f0cb49393ea3b5",
+      "bytes": 13594,
+      "text": "Wasser, bitte.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "v",
+          "ˈ",
+          "a",
+          "s",
+          "ɜ",
+          ",",
+          " ",
+          "b",
+          "ˈ",
+          "ɪ",
+          "t",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-a4e6bceb23245fe080fe-slow.m4a",
+      "sha256": "01b960bd0c635c5168142cc93f6e82678cff8b135832fa42f1844e73a2c8b99a",
+      "bytes": 17309,
+      "text": "Wasser, bitte.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "v",
+          "ˈ",
+          "a",
+          "s",
+          "ɜ",
+          ",",
+          " ",
+          "b",
+          "ˈ",
+          "ɪ",
+          "t",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-ef34b28281e7c2b7965a.m4a",
+      "sha256": "5c9ee8a0d4232ce6a445a3e55739793281ff4f93d488eff1dbb8f4aa039105fc",
+      "bytes": 11023,
+      "text": "Wie alt bist du?",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "v",
+          "i",
+          "ː",
+          " ",
+          "ˈ",
+          "a",
+          "l",
+          "t",
+          " ",
+          "b",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "d",
+          "u",
+          "ː",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-ef34b28281e7c2b7965a-slow.m4a",
+      "sha256": "ab5b56af48f806f0af0eb75a48956c1e1a2f8edb9836f65f60861cd936b004de",
+      "bytes": 13496,
+      "text": "Wie alt bist du?",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "v",
+          "i",
+          "ː",
+          " ",
+          "ˈ",
+          "a",
+          "l",
+          "t",
+          " ",
+          "b",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "d",
+          "u",
+          "ː",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-649ea4045b0d54781742.m4a",
+      "sha256": "758aebe8e8ef9b1e2cd160cf35218aa8af8ea05c74e82dfaa3dcd65eaae46069",
+      "bytes": 11477,
+      "text": "Wie geht es dir?",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "v",
+          "i",
+          "ː",
+          " ",
+          "ɡ",
+          "ˈ",
+          "e",
+          "ː",
+          "t",
+          " ",
+          "ɛ",
+          "s",
+          " ",
+          "d",
+          "ˈ",
+          "i",
+          "ː",
+          "ɾ",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-649ea4045b0d54781742-slow.m4a",
+      "sha256": "ffa6b3917a243353bccb97baedbd4466898c60d042783c069843288b65179167",
+      "bytes": 14930,
+      "text": "Wie geht es dir?",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "v",
+          "i",
+          "ː",
+          " ",
+          "ɡ",
+          "ˈ",
+          "e",
+          "ː",
+          "t",
+          " ",
+          "ɛ",
+          "s",
+          " ",
+          "d",
+          "ˈ",
+          "i",
+          "ː",
+          "ɾ",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-a1e38c53bc505139fcb3.m4a",
+      "sha256": "c5232b0cb77e8ef4b8249d13ace2635a8a364da8ad3281d6af20ecdf381035d9",
+      "bytes": 14108,
+      "text": "Wie heißt deine Schwester?",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "v",
+          "i",
+          "ː",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "d",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "ʃ",
+          "v",
+          "ˈ",
+          "ɛ",
+          "s",
+          "t",
+          "ɜ",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-a1e38c53bc505139fcb3-slow.m4a",
+      "sha256": "ffbc49286bc7388948a4f203b699f67566892e21d64348fc1422ed2b483d1095",
+      "bytes": 19813,
+      "text": "Wie heißt deine Schwester?",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "v",
+          "i",
+          "ː",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "d",
+          "ˌ",
+          "a",
+          "ɪ",
+          "n",
+          "ə",
+          " ",
+          "ʃ",
+          "v",
+          "ˈ",
+          "ɛ",
+          "s",
+          "t",
+          "ɜ",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-db9d33058ca6e06a78b8.m4a",
+      "sha256": "5d8fb9ac61e3ae50fccab721d04a22d43513a48847e5560faf3afea0baf7cb70",
+      "bytes": 9587,
+      "text": "Wie heißt du?",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "v",
+          "i",
+          "ː",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "d",
+          "u",
+          "ː",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-db9d33058ca6e06a78b8-slow.m4a",
+      "sha256": "459e93042abb1941ae336232e13a66976fdbaaf7b458c15d8d5db81d5b003320",
+      "bytes": 11674,
+      "text": "Wie heißt du?",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "v",
+          "i",
+          "ː",
+          " ",
+          "h",
+          "ˈ",
+          "a",
+          "ɪ",
+          "s",
+          "t",
+          " ",
+          "d",
+          "u",
+          "ː",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e864b558b5cc6a83c869.m4a",
+      "sha256": "69432ed4ed0e1e4183601e84cb99a6abb9426304c49906445c923a33046217ae",
+      "bytes": 11279,
+      "text": "Woher kommst du?",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "v",
+          "o",
+          "ː",
+          "h",
+          "ˈ",
+          "e",
+          "ː",
+          "ɾ",
+          " ",
+          "k",
+          "ˈ",
+          "ɔ",
+          "m",
+          "s",
+          "t",
+          " ",
+          "d",
+          "u",
+          "ː",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-e864b558b5cc6a83c869-slow.m4a",
+      "sha256": "afdb858204412a1b8a33efa3c8743f33e35e720a85987c887fb9f3ae3d6c0b95",
+      "bytes": 13521,
+      "text": "Woher kommst du?",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "v",
+          "o",
+          "ː",
+          "h",
+          "ˈ",
+          "e",
+          "ː",
+          "ɾ",
+          " ",
+          "k",
+          "ˈ",
+          "ɔ",
+          "m",
+          "s",
+          "t",
+          " ",
+          "d",
+          "u",
+          "ː",
+          "?"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-d4c587df246496fe22e5.m4a",
+      "sha256": "54f1248cc06916000fe8fed05eb9120bab321dc90d6b524f2c57390ae6f56ef6",
+      "bytes": 10066,
+      "text": "Zahlen, bitte.",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "t",
+          "s",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "l",
+          "ə",
+          "n",
+          ",",
+          " ",
+          "b",
+          "ˈ",
+          "ɪ",
+          "t",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-d4c587df246496fe22e5-slow.m4a",
+      "sha256": "31dfb46ff2af02c7ae94dda4b1919bc10f2851bbeae11fde788ec5dfc5207f3a",
+      "bytes": 17512,
+      "text": "Zahlen, bitte.",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "t",
+          "s",
+          "ˈ",
+          "ɑ",
+          "ː",
+          "l",
+          "ə",
+          "n",
+          ",",
+          " ",
+          "b",
+          "ˈ",
+          "ɪ",
+          "t",
+          "ə",
+          "."
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-29a556e85f266c3d0d51.m4a",
+      "sha256": "0290082f6bbc994d24582293557021d80ce02999a4807b97304282b887d57125",
+      "bytes": 6568,
+      "text": "danke",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "ˈ",
+          "a",
+          "ŋ",
+          "k",
+          "ə"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-29a556e85f266c3d0d51-slow.m4a",
+      "sha256": "3b0a96e717d622de070e99df6059ceedb8adeead758a09632b2abf3acc4459bc",
+      "bytes": 8673,
+      "text": "danke",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "ˈ",
+          "a",
+          "ŋ",
+          "k",
+          "ə"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-53f32c69e112760bdb57.m4a",
+      "sha256": "8b1dd252445eddc028f99b8784faf317ed3b55a7948c7fda96b882381d9d2fde",
+      "bytes": 9220,
+      "text": "das Buch",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "b",
+          "ˈ",
+          "u",
+          "ː",
+          "x"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-53f32c69e112760bdb57-slow.m4a",
+      "sha256": "ef287a5a9fe0b354eba33ca66c16f5b1a7cc91090349a5bbd70a3c8fd6b2852f",
+      "bytes": 10338,
+      "text": "das Buch",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "a",
+          "s",
+          " ",
+          "b",
+          "ˈ",
+          "u",
+          "ː",
+          "x"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-51b9d3d1d9e338f05e48.m4a",
+      "sha256": "016f2cca5579a56baa0353f4408e814e3ef3aba108ebe6fa58d6a41ae4a56c2a",
+      "bytes": 7589,
+      "text": "der Tisch",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "ɛ",
+          "ɾ",
+          " ",
+          "t",
+          "ˈ",
+          "ɪ",
+          "ʃ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-51b9d3d1d9e338f05e48-slow.m4a",
+      "sha256": "1a4fd5ce7c465d651149115ffdf9c8dcc799676dbfc6c94d054178d000ec3cc0",
+      "bytes": 8260,
+      "text": "der Tisch",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "ɛ",
+          "ɾ",
+          " ",
+          "t",
+          "ˈ",
+          "ɪ",
+          "ʃ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b9edfd15d457b9c5a831.m4a",
+      "sha256": "1b54b6db9d8e50dc7bb4846ff5be55980564169ef5e05bf2905923f6b5f8bf50",
+      "bytes": 11266,
+      "text": "die Lampe",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "i",
+          "ː",
+          " ",
+          "l",
+          "ˈ",
+          "a",
+          "m",
+          "p",
+          "ə"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-b9edfd15d457b9c5a831-slow.m4a",
+      "sha256": "a2ff4b796c75682560cee23da99ff06e3e4647e52634ba7958421b15616912fe",
+      "bytes": 13413,
+      "text": "die Lampe",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "i",
+          "ː",
+          " ",
+          "l",
+          "ˈ",
+          "a",
+          "m",
+          "p",
+          "ə"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-cf6e02135ca9024bc171.m4a",
+      "sha256": "530686feba49658b92965466b4721418e49fbfb7c5743eaf984b84c506cb1127",
+      "bytes": 8685,
+      "text": "drei",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "d",
+          "r",
+          "ˈ",
+          "a",
+          "ɪ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-cf6e02135ca9024bc171-slow.m4a",
+      "sha256": "c444676bab0f7524202b9becff0e6c530afbfd997a651ed4e0c502cbe19a4d30",
+      "bytes": 9800,
+      "text": "drei",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "d",
+          "r",
+          "ˈ",
+          "a",
+          "ɪ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-517908265c0c338380e4.m4a",
+      "sha256": "c42e1a98e47689eb3ce7c1cbc9c8cbe08753b720de120b6d328e14abf213f6a5",
+      "bytes": 7995,
+      "text": "fünf",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "f",
+          "ˈ",
+          "ʏ",
+          "n",
+          "f"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-517908265c0c338380e4-slow.m4a",
+      "sha256": "b5d2eb7495d04f2a41ae79589dc29dfa6298b747f92ce3d1a227f093f4ba1c35",
+      "bytes": 10215,
+      "text": "fünf",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "f",
+          "ˈ",
+          "ʏ",
+          "n",
+          "f"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-9e57178efc08eabdfed8.m4a",
+      "sha256": "29e88cb9e7d3229c5d0c7363578bca9a5dc6a16980d5fcd9f13a5977e2c0014b",
+      "bytes": 4803,
+      "text": "gut",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "ɡ",
+          "ˈ",
+          "u",
+          "ː",
+          "t"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-9e57178efc08eabdfed8-slow.m4a",
+      "sha256": "4d25e4a31b4fb2bc9a3239c334792818d0c16d4f5521206b1f83cf58baa6b103",
+      "bytes": 7015,
+      "text": "gut",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "ɡ",
+          "ˈ",
+          "u",
+          "ː",
+          "t"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1da2319a9d364cc51d36.m4a",
+      "sha256": "409e26ec9b6429f2f7ec97529604240fb7f25b374bec0e18c50c458e4e88e02a",
+      "bytes": 7197,
+      "text": "hallo",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "h",
+          "ˈ",
+          "a",
+          "l",
+          "o",
+          "ː"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-1da2319a9d364cc51d36-slow.m4a",
+      "sha256": "e225d733b606957643cde2907e27435fe346b6c2ba505896b58df6a98ca13519",
+      "bytes": 7943,
+      "text": "hallo",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "h",
+          "ˈ",
+          "a",
+          "l",
+          "o",
+          "ː"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-2d78ef86f4d63e119bd3.m4a",
+      "sha256": "b836922df51bc452ff27d21eab5cb4e26f34a4568f936d710f7d4ab2d14bc4a7",
+      "bytes": 6007,
+      "text": "zwei",
+      "locale": "de-DE",
+      "slow": false,
+      "phonemes": [
+        [
+          "t",
+          "s",
+          "v",
+          "ˈ",
+          "a",
+          "ɪ"
+        ]
+      ],
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/piper-2d78ef86f4d63e119bd3-slow.m4a",
+      "sha256": "19f2992e23ac5e0a57928483d8199e9a09dfb5973dfc3c28b77b5ccaa4ab4320",
+      "bytes": 6844,
+      "text": "zwei",
+      "locale": "de-DE",
+      "slow": true,
+      "phonemes": [
+        [
+          "t",
+          "s",
+          "v",
+          "ˈ",
+          "a",
+          "ɪ"
+        ]
+      ],
+      "humanReviewed": false
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "id": "es-a1-38",
+  "title": "Как прошёл день",
+  "topic": "Поездки и события",
+  "order": 37,
+  "objective": "Спросить о действиях и использовать hice, tuve.",
+  "guide": "Hacer → hice/hiciste, tener → tuve/tuviste: эти прошедшие формы нужно запомнить. Не добавляем к ним окончания правильных глаголов.",
+  "vocabulary": [
+    {
+      "id": "es:v015:38:p0",
+      "en": "¿Qué hiciste ayer?",
+      "ru": "Что ты делал вчера?"
+    },
+    {
+      "id": "es:v015:38:p1",
+      "en": "Hice la cena para mi familia.",
+      "ru": "Я приготовил ужин для своей семьи."
+    },
+    {
+      "id": "es:v015:38:p2",
+      "en": "Tuve una reunión por la mañana.",
+      "ru": "Утром у меня была встреча."
+    },
+    {
+      "id": "es:v015:38:p3",
+      "en": "No tuve tiempo para llamar.",
+      "ru": "У меня не было времени позвонить."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Как прошёл день",
+      "phrase": "¿Qué hiciste ayer?",
+      "translation": "Что ты делал вчера?",
+      "explanation": "Hacer → hice/hiciste, tener → tuve/tuviste: эти прошедшие формы нужно запомнить. Не добавляем к ним окончания правильных глаголов."
+    },
+    {
+      "character": "miko",
+      "title": "Как прошёл день",
+      "phrase": "Hice la cena para mi familia.",
+      "translation": "Я приготовил ужин для своей семьи.",
+      "explanation": "Hice la cena para mi familia. — Я приготовил ужин для своей семьи."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как прошёл день",
+      "phrase": "Tuve una reunión por la mañana.",
+      "translation": "Утром у меня была встреча.",
+      "explanation": "Tuve una reunión por la mañana. — Утром у меня была встреча."
+    },
+    {
+      "character": "orbi",
+      "title": "Как прошёл день",
+      "phrase": "No tuve tiempo para llamar.",
+      "translation": "У меня не было времени позвонить.",
+      "explanation": "No tuve tiempo para llamar. — У меня не было времени позвонить."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "¿Qué hiciste ayer?",
+      "translation": "Что ты делал вчера?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Что ты делал вчера?",
+      "options": [
+        "Утром у меня была встреча.",
+        "Что ты делал вчера?",
+        "У меня не было времени позвонить."
+      ],
+      "explanation": "Hacer → hice/hiciste, tener → tuve/tuviste: эти прошедшие формы нужно запомнить. Не добавляем к ним окончания правильных глаголов."
+    },
+    {
+      "id": "apply",
+      "phrase": "Hice la cena para mi familia.",
+      "translation": "Я приготовил ужин для своей семьи.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Hice la cena para mi familia.",
+      "tokens": [
+        "Hice",
+        "la",
+        "cena",
+        "para",
+        "mi",
+        "familia."
+      ],
+      "character": "miko",
+      "explanation": "Hice la cena para mi familia. — Я приготовил ужин для своей семьи."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-38-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Утром у меня была встреча."
+      ],
+      "explanation": "Tuve una reunión por la mañana. — Утром у меня была встреча.",
+      "wordIds": [
+        "es:v015:38:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Tuve una reunión por la mañana.",
+      "options": [
+        "Что ты делал вчера?",
+        "Утром у меня была встреча.",
+        "Я приготовил ужин для своей семьи."
+      ],
+      "hint": "Tuve una reunión por la mañana. — Утром у меня была встреча."
+    },
+    {
+      "id": "es-a1-38-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я приготовил ужин для своей семьи.",
+      "answers": [
+        "Hice la cena para mi familia."
+      ],
+      "explanation": "Hacer → hice/hiciste, tener → tuve/tuviste: эти прошедшие формы нужно запомнить. Не добавляем к ним окончания правильных глаголов.",
+      "wordIds": [
+        "es:v015:38:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Hice",
+        "la",
+        "cena",
+        "para",
+        "mi",
+        "familia."
+      ],
+      "hint": "Hice la cena para mi familia. — Я приготовил ужин для своей семьи."
+    },
+    {
+      "id": "es-a1-38-e03",
+      "type": "dialogue",
+      "prompt": "Что собеседник делал вечером?",
+      "answers": [
+        "Готовил ужин."
+      ],
+      "explanation": "В диалоге: ¿Qué hiciste ayer? / Tuve una reunión por la mañana e hice la cena por la noche. Поэтому: Готовил ужин.",
+      "wordIds": [
+        "es:v015:38:p0",
+        "es:v015:38:p1",
+        "es:v015:38:p2",
+        "es:v015:38:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Qué hiciste ayer?\nМико: Tuve una reunión por la mañana e hice la cena por la noche.",
+      "options": [
+        "Был на встрече.",
+        "Звонил друзьям.",
+        "Готовил ужин."
+      ]
+    },
+    {
+      "id": "es-a1-38-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Что ты делал вчера?»?",
+      "answers": [
+        "¿Qué hiciste ayer?"
+      ],
+      "explanation": "¿Qué hiciste ayer? — Что ты делал вчера?",
+      "wordIds": [
+        "es:v015:38:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Hice la cena para mi familia.",
+        "No tuve tiempo para llamar.",
+        "¿Qué hiciste ayer?"
+      ],
+      "hint": "¿Qué hiciste ayer? — Что ты делал вчера?"
+    },
+    {
+      "id": "es-a1-38-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Yo hiciste la cena.",
+      "answers": [
+        "Yo hice la cena."
+      ],
+      "explanation": "Для yo используется hice; hiciste относится к tú.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Yo hiciste la cena.",
+        "Yo hice la cena."
+      ],
+      "hint": "Hacer → hice/hiciste, tener → tuve/tuviste: эти прошедшие формы нужно запомнить. Не добавляем к ним окончания правильных глаголов."
+    },
+    {
+      "id": "es-a1-38-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «У меня не было времени позвонить.». Можно написать вместо микрофона.",
+      "answers": [
+        "No tuve tiempo para llamar."
+      ],
+      "explanation": "No tuve tiempo para llamar. — У меня не было времени позвонить.",
+      "wordIds": [
+        "es:v015:38:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "No tuve tiempo para llamar.",
+      "recall": {
+        "phrase": "No tuve tiempo para llamar.",
+        "meaning": "У меня не было времени позвонить."
+      }
+    },
+    {
+      "id": "es-a1-38-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Что ты делал вчера?",
+      "answers": [
+        "¿Qué hiciste ayer?"
+      ],
+      "explanation": "Hacer → hice/hiciste, tener → tuve/tuviste: эти прошедшие формы нужно запомнить. Не добавляем к ним окончания правильных глаголов.",
+      "wordIds": [
+        "es:v015:38:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "¿Qué hiciste ayer?",
+        "meaning": "Что ты делал вчера?"
+      }
+    },
+    {
+      "id": "es-a1-38-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Потом мы вернулись домой.",
+      "answers": [
+        "Después volvimos a casa."
+      ],
+      "explanation": "Después volvimos a casa. — Потом мы вернулись домой.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "El domingo fui al museo.",
+        "Fuimos a la playa en autobús.",
+        "¿Fuiste al concierto?",
+        "Después volvimos a casa."
+      ]
+    }
+  ]
+}

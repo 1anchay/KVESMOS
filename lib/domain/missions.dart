@@ -16,14 +16,14 @@ class DailyMission {
     DailyMission(
       'lesson',
       'Завершить один урок',
-      'Подойдёт новый урок или повторное прохождение.',
+      'Заверши новый урок или продолжи начатый. Повтор пройденного не увеличивает счётчик.',
       1,
       'explorer',
     ),
     DailyMission(
       'answers',
       'Дать 10 верных ответов',
-      'В уроках и повторении слов. Ошибки не отнимают прогресс.',
+      'В уроках, приключениях и повторении слов. Ошибки не отнимают прогресс.',
       10,
       'explorer',
     ),
@@ -78,6 +78,7 @@ Map<String, MissionDay> missionHistory(
   final seenWords = <String, DateTime>{};
   for (final event in events) {
     final d = event.data;
+    if (d['rehearsal'] == true) continue;
     final inRange =
         event.day.compareTo(since) >= 0 && event.day.compareTo(through) <= 0;
     final day = inRange ? days.putIfAbsent(event.day, MissionDay.new) : null;

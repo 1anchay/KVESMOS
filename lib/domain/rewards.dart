@@ -55,14 +55,29 @@ class RewardCatalog {
 class ChestGrant {
   final String id, kind;
   final String? itemId;
-  const ChestGrant(this.id, this.kind, [this.itemId]);
+  final bool consumedEmpty;
+  const ChestGrant(
+    this.id,
+    this.kind, [
+    this.itemId,
+    this.consumedEmpty = false,
+  ]);
+  bool get claimed => itemId != null || consumedEmpty;
   Map<String, dynamic> toJson() => {
     'chestInstanceId': id,
     'grantEventId': 'grant:$id',
     'kind': kind,
-    if (itemId != null) 'openEventId': 'open:$id',
+    if (claimed) 'openEventId': 'open:$id',
+    if (consumedEmpty) 'consumedEmpty': true,
     if (itemId != null) 'itemId': itemId,
   };
+}
+
+/// The transaction, rather than UI timing, decides whether this was a new find.
+class RewardOpening {
+  final Cosmetic? item;
+  final bool fresh;
+  const RewardOpening(this.item, this.fresh);
 }
 
 class Inventory {
@@ -74,7 +89,7 @@ class Inventory {
   factory Inventory.decode(String? raw) {
     if (raw == null) return Inventory();
     final j = jsonDecode(raw);
-    if (j['version'] != 1) {
+    if (j['version'] != 1 && j['version'] != 2) {
       throw StateError('Неподдерживаемая версия коллекции.');
     }
     return Inventory(
@@ -84,6 +99,7 @@ class Inventory {
             e['chestInstanceId'],
             e['kind'],
             e['itemId'],
+            e['consumedEmpty'] == true,
           ),
       },
       equipped: Map<String, String>.from(j['equipped']),
@@ -91,9 +107,10 @@ class Inventory {
   }
   Set<String> get owned =>
       grants.values.map((e) => e.itemId).whereType<String>().toSet();
-  int get unopened => grants.values.where((e) => e.itemId == null).length;
+  Iterable<ChestGrant> get pending => grants.values.where((e) => !e.claimed);
+  int get unopened => pending.length;
   String encode() => jsonEncode({
-    'version': 1,
+    'version': 2,
     'grants': grants.values.map((e) => e.toJson()).toList(),
     'equipped': equipped,
   });

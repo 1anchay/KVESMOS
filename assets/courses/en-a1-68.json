@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-68",
+  "title": "Уже готово или ещё нет",
+  "topic": "Опыт и результат",
+  "order": 67,
+  "objective": "Уточнить, завершено ли действие к текущему моменту.",
+  "guide": "Already обычно стоит после have/has, yet — в конце вопроса или отрицания. Just подчёркивает «только что».",
+  "vocabulary": [
+    {
+      "id": "en:v015:68:p0",
+      "en": "I've already packed my bag.",
+      "ru": "Я уже собрал сумку."
+    },
+    {
+      "id": "en:v015:68:p1",
+      "en": "Have you bought the tickets yet?",
+      "ru": "Ты уже купил билеты?"
+    },
+    {
+      "id": "en:v015:68:p2",
+      "en": "We haven't booked a taxi yet.",
+      "ru": "Мы ещё не заказали такси."
+    },
+    {
+      "id": "en:v015:68:p3",
+      "en": "I've just sent the message.",
+      "ru": "Я только что отправил сообщение."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Уже готово или ещё нет",
+      "phrase": "I've already packed my bag.",
+      "translation": "Я уже собрал сумку.",
+      "explanation": "Already обычно стоит после have/has, yet — в конце вопроса или отрицания. Just подчёркивает «только что»."
+    },
+    {
+      "character": "miko",
+      "title": "Уже готово или ещё нет",
+      "phrase": "Have you bought the tickets yet?",
+      "translation": "Ты уже купил билеты?",
+      "explanation": "Have you bought the tickets yet? — Ты уже купил билеты?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Уже готово или ещё нет",
+      "phrase": "We haven't booked a taxi yet.",
+      "translation": "Мы ещё не заказали такси.",
+      "explanation": "We haven't booked a taxi yet. — Мы ещё не заказали такси."
+    },
+    {
+      "character": "orbi",
+      "title": "Уже готово или ещё нет",
+      "phrase": "I've just sent the message.",
+      "translation": "Я только что отправил сообщение.",
+      "explanation": "I've just sent the message. — Я только что отправил сообщение."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I've already packed my bag.",
+      "translation": "Я уже собрал сумку.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я уже собрал сумку.",
+      "options": [
+        "Мы ещё не заказали такси.",
+        "Я уже собрал сумку.",
+        "Я только что отправил сообщение."
+      ],
+      "explanation": "Already обычно стоит после have/has, yet — в конце вопроса или отрицания. Just подчёркивает «только что»."
+    },
+    {
+      "id": "apply",
+      "phrase": "Have you bought the tickets yet?",
+      "translation": "Ты уже купил билеты?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Have you bought the tickets yet?",
+      "tokens": [
+        "Have",
+        "you",
+        "bought",
+        "the",
+        "tickets",
+        "yet?"
+      ],
+      "character": "miko",
+      "explanation": "Have you bought the tickets yet? — Ты уже купил билеты?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-68-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы ещё не заказали такси."
+      ],
+      "explanation": "We haven't booked a taxi yet. — Мы ещё не заказали такси.",
+      "wordIds": [
+        "en:v015:68:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "We haven't booked a taxi yet.",
+      "options": [
+        "Я уже собрал сумку.",
+        "Мы ещё не заказали такси.",
+        "Ты уже купил билеты?"
+      ],
+      "hint": "We haven't booked a taxi yet. — Мы ещё не заказали такси."
+    },
+    {
+      "id": "en-a1-68-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Ты уже купил билеты?",
+      "answers": [
+        "Have you bought the tickets yet?"
+      ],
+      "explanation": "Already обычно стоит после have/has, yet — в конце вопроса или отрицания. Just подчёркивает «только что».",
+      "wordIds": [
+        "en:v015:68:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Have",
+        "you",
+        "bought",
+        "the",
+        "tickets",
+        "yet?"
+      ],
+      "hint": "Have you bought the tickets yet? — Ты уже купил билеты?"
+    },
+    {
+      "id": "en-a1-68-e03",
+      "type": "dialogue",
+      "prompt": "Что ещё нужно сделать?",
+      "answers": [
+        "Заказать такси."
+      ],
+      "explanation": "В диалоге: Have you bought the tickets yet? / Yes, I've already bought them. We haven't booked a taxi yet. Поэтому: Заказать такси.",
+      "wordIds": [
+        "en:v015:68:p0",
+        "en:v015:68:p1",
+        "en:v015:68:p2",
+        "en:v015:68:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Have you bought the tickets yet?\nМико: Yes, I've already bought them. We haven't booked a taxi yet.",
+      "options": [
+        "Купить билеты.",
+        "Отменить поездку.",
+        "Заказать такси."
+      ]
+    },
+    {
+      "id": "en-a1-68-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я уже собрал сумку.»?",
+      "answers": [
+        "I've already packed my bag."
+      ],
+      "explanation": "I've already packed my bag. — Я уже собрал сумку.",
+      "wordIds": [
+        "en:v015:68:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Have you bought the tickets yet?",
+        "I've just sent the message.",
+        "I've already packed my bag."
+      ],
+      "hint": "I've already packed my bag. — Я уже собрал сумку."
+    },
+    {
+      "id": "en-a1-68-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We hasn't booked a taxi yet.",
+      "answers": [
+        "We haven't booked a taxi yet."
+      ],
+      "explanation": "С we используется have; отрицание — haven't.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We hasn't booked a taxi yet.",
+        "We haven't booked a taxi yet."
+      ],
+      "hint": "Already обычно стоит после have/has, yet — в конце вопроса или отрицания. Just подчёркивает «только что»."
+    },
+    {
+      "id": "en-a1-68-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я только что отправил сообщение.». Можно написать вместо микрофона.",
+      "answers": [
+        "I've just sent the message."
+      ],
+      "explanation": "I've just sent the message. — Я только что отправил сообщение.",
+      "wordIds": [
+        "en:v015:68:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I've just sent the message.",
+      "recall": {
+        "phrase": "I've just sent the message.",
+        "meaning": "Я только что отправил сообщение."
+      }
+    },
+    {
+      "id": "en-a1-68-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я уже собрал сумку.",
+      "answers": [
+        "I've already packed my bag."
+      ],
+      "explanation": "Already обычно стоит после have/has, yet — в конце вопроса или отрицания. Just подчёркивает «только что».",
+      "wordIds": [
+        "en:v015:68:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I've already packed my bag.",
+        "meaning": "Я уже собрал сумку."
+      }
+    },
+    {
+      "id": "en-a1-68-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы не посещали тот музей.",
+      "answers": [
+        "We haven't visited that museum."
+      ],
+      "explanation": "We haven't visited that museum. — Мы не посещали тот музей.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Have you ever been to London?",
+        "I've never tried surfing.",
+        "I've been there twice.",
+        "We haven't visited that museum."
+      ]
+    }
+  ]
+}

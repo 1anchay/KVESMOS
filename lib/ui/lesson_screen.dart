@@ -7,12 +7,26 @@ import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/database.dart';
 import '../domain/course.dart';
+import '../domain/intro_activity.dart';
+import '../domain/languages.dart';
 import '../domain/progress.dart';
+import '../domain/learning_recap.dart';
 import '../services/device.dart';
 import 'design.dart';
 import 'lesson_effects.dart';
-import 'character_reactions.dart';
-import 'rewards_pages.dart';
+import 'lesson_coach.dart';
+import 'lesson_introduction.dart';
+import 'lesson_reference.dart';
+import 'dialogue_scene.dart';
+import 'character_moment.dart';
+import 'speech_source.dart';
+import 'galaxy_components.dart';
+import 'lesson_audio_toggle.dart';
+import 'flight_completion.dart';
+import 'mission_checkpoint.dart';
+import 'story_response.dart';
+import 'answer_signal.dart';
+import 'package:flutter/services.dart';
 import '../services/learning_audio.dart';
 
 const exerciseNames = {
@@ -22,7 +36,7 @@ const exerciseNames = {
   ExerciseType.gap: 'Заполните пропуск',
   ExerciseType.listen: 'Поймайте сигнал',
   ExerciseType.pairs: 'Соедините пары',
-  ExerciseType.speak: 'Скажите по-английски',
+  ExerciseType.speak: 'Произнесите фразу',
   ExerciseType.correct: 'Исправьте ошибку',
   ExerciseType.review: 'Вспомните слово',
   ExerciseType.dialogue: 'Продолжите диалог',
@@ -44,11 +58,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   final input = TextEditingController();
   final voice = VoiceService();
   late final LearningAudio audio;
-  bool unlockedAchievement = false;
+  bool completionMoment = false;
+  bool storyNeededHelp = false;
+  bool showCheckpoint = false;
+  int checkpointXp = 0;
+  Set<String> initialGrants = {}, initialAchievements = {};
+  int consecutiveCorrect = 0;
+  int bestCombo = 0;
   List<int> order = [];
   Map<String, String> pairs = {};
   String? activePair;
   bool busy = false, finished = false, revealedAudio = false;
+  bool showTeaching = false;
+  bool recallHidden = false;
+  bool rehearsal = false;
+  int teachingStep = 0;
+  IntroDraft? introDraft;
   bool? result;
   List<String> options = [];
   List<int> tokenPool = [];
@@ -63,6 +88,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Future<void> load() async {
     try {
       final app = ref.read(appProvider);
+      initialGrants = app.inventory.grants.keys.toSet();
+      initialAchievements = app.globalProgress.achievements.toSet();
+      if (app.course.id != StudyCourse.forContent(widget.lessonId).id) {
+        await app.selectCourse(StudyCourse.forContent(widget.lessonId).id);
+      }
       final loaded = await app.repository.lesson(widget.lessonId);
       // Guards also apply to direct deep links, not just the map's buttons.
       if (loaded.order > 0 &&
@@ -77,13 +107,44 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         demo: widget.demo,
       );
       final saved = material.session;
+      rehearsal =
+          await app.repository.setting(
+            'kvesmos.session.rehearsal.v1:${saved.id}',
+          ) ==
+          'true';
+      // Resolve async session state before exposing the quiz to build().
+      final shouldTeach =
+          !saved.done &&
+          !rehearsal &&
+          saved.position == 0 &&
+          material.lesson.guidedIntroduction.isNotEmpty &&
+          !await app.repository.hasTeachingSeen(saved.id);
+      final summary = saved.done ? await _readSummary(saved.id) : null;
+      final recap = LearningRecap.fromEvents(
+        await app.repository.allEvents(),
+        saved.id,
+      );
+      final savedTeachingStep = shouldTeach
+          ? await app.repository.teachingStep(saved.id)
+          : 0;
+      final savedIntro = shouldTeach
+          ? await app.repository.introDraft(saved.id)
+          : null;
       if (!mounted) return;
+      // Map notices must not follow the student and cover lesson navigation.
+      ScaffoldMessenger.of(context).clearSnackBars();
       lesson = material.lesson;
       session = saved;
-      if (saved.done) lessonResult = await _readSummary(saved.id);
-      if (!mounted) return;
+      showTeaching = shouldTeach;
+      teachingStep = savedTeachingStep;
+      introDraft = savedIntro;
+      lessonResult = summary;
+      consecutiveCorrect = recap.streak;
+      bestCombo = recap.best;
+      storyNeededHelp = recap.difficultWords.isNotEmpty;
       prepare();
-      setState(() {});
+      await checkCheckpoint();
+      if (mounted) setState(() {});
     } catch (e) {
       if (mounted) {
         setState(
@@ -95,6 +156,50 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   }
 
   Exercise get exercise => lesson!.exercises[session!.position];
+  Future<void> checkCheckpoint() async {
+    if (session!.done ||
+        lesson!.exercises.length < 8 ||
+        session!.position != lesson!.exercises.length ~/ 2 ||
+        session!.draft.isNotEmpty) {
+      return;
+    }
+    final repo = ref.read(appProvider).repository;
+    if (await repo.setting(
+          'kvesmos.stage.seen.v1:${session!.id}:${session!.position}',
+        ) ==
+        'true') {
+      return;
+    }
+    checkpointXp = ProgressSnapshot.fromEvents(
+      (await repo.allEvents()).where((e) => e.data['session'] == session!.id),
+    ).xp;
+    if (mounted) showCheckpoint = true;
+  }
+
+  Future<void> continueCheckpoint() async {
+    if (busy) return;
+    setState(() => busy = true);
+    try {
+      await ref
+          .read(appProvider)
+          .repository
+          .setSetting(
+            'kvesmos.stage.seen.v1:${session!.id}:${session!.position}',
+            'true',
+          );
+      if (mounted) setState(() => showCheckpoint = false);
+    } catch (_) {
+      if (mounted) {
+        showMessage(
+          context,
+          'Не удалось сохранить переход. Попробуйте ещё раз.',
+        );
+      }
+    } finally {
+      if (mounted) setState(() => busy = false);
+    }
+  }
+
   Future<void> restartUpdated() async {
     if (busy) return;
     setState(() => busy = true);
@@ -107,6 +212,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       if (!mounted) return;
       lesson = material.lesson;
       session = material.session;
+      showTeaching = material.lesson.guidedIntroduction.isNotEmpty;
+      introDraft = null;
+      teachingStep = 0;
+      consecutiveCorrect = 0;
+      bestCombo = 0;
       lessonResult = null;
       prepare();
     } catch (_) {
@@ -128,6 +238,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     activePair = null;
     result = null;
     revealedAudio = false;
+    recallHidden = false;
     if (session!.done) {
       finished = true;
       return;
@@ -143,6 +254,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         input.text = d['text'] ?? '';
         order = List<int>.from(d['order'] ?? []);
         pairs = Map<String, String>.from(d['pairs'] ?? {});
+        recallHidden = d['recallHidden'] == true;
       }
     } catch (_) {
       input.clear();
@@ -160,7 +272,12 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           .draft(
             session!.id,
             session!.position,
-            jsonEncode({'text': input.text, 'order': order, 'pairs': pairs}),
+            jsonEncode({
+              'text': input.text,
+              'order': order,
+              'pairs': pairs,
+              'recallHidden': recallHidden,
+            }),
           );
     } catch (_) {
       if (mounted) {
@@ -185,7 +302,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     return input.text;
   }
 
-  bool get canCheck => exercise.type == ExerciseType.pairs
+  bool get canCheck => exercise.recall != null && !recallHidden
+      ? false
+      : exercise.type == ExerciseType.pairs
       ? pairs.length == exercise.pairs.length
       : answer.trim().isNotEmpty;
   Future<void> check() async {
@@ -200,21 +319,31 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         session = await app.repository.session(session!.id);
         if (session!.done) lessonResult = await _readSummary(session!.id);
         prepare();
-        if (mounted) {
-          unawaited(
-            audio.play(
-              finished
-                  ? (unlockedAchievement
-                        ? SoundEffect.achievement
-                        : SoundEffect.complete)
-                  : SoundEffect.xp,
-            ),
-          );
+        await checkCheckpoint();
+        if (mounted && finished) {
+          try {
+            completionMoment = await app.claimExperienceMoment(
+              'complete:${session!.id}',
+            );
+          } catch (_) {
+            // Presentation bookkeeping must not hide an already saved result.
+            completionMoment = false;
+          }
+          if (mounted && completionMoment) {
+            unawaited(
+              audio.play(
+                app.inventory.grants.keys.any(
+                      (id) => !initialGrants.contains(id),
+                    )
+                    ? SoundEffect.achievement
+                    : SoundEffect.complete,
+              ),
+            );
+          }
         }
       } else if (result == false) {
         result = null;
       } else {
-        final achievementsBefore = app.progress.achievements.toSet();
         final correct = await app.repository.answer(
           session!.id,
           session!.position,
@@ -223,13 +352,28 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           total: lesson!.exercises.length,
         );
         await app.refresh();
-        unlockedAchievement = app.progress.achievements.any(
-          (a) => !achievementsBefore.contains(a),
-        );
         result = correct;
+        if (!correct) storyNeededHelp = true;
+        if (audio.preferences.reactions &&
+            mounted &&
+            !MediaQuery.disableAnimationsOf(context)) {
+          unawaited(
+            correct
+                ? HapticFeedback.lightImpact()
+                : HapticFeedback.selectionClick(),
+          );
+        }
+        consecutiveCorrect = correct ? consecutiveCorrect + 1 : 0;
+        bestCombo = max(bestCombo, consecutiveCorrect);
         if (mounted) {
           unawaited(
-            audio.play(correct ? SoundEffect.correct : SoundEffect.incorrect),
+            audio.play(
+              !correct
+                  ? SoundEffect.incorrect
+                  : consecutiveCorrect >= 3 && consecutiveCorrect % 3 == 0
+                  ? SoundEffect.xp
+                  : SoundEffect.correct,
+            ),
           );
         }
         unawaited(app.synchronize());
@@ -242,7 +386,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         );
       }
     } finally {
-      if (mounted) setState(() => busy = false);
+      if (mounted) {
+        setState(() => busy = false);
+      }
     }
   }
 
@@ -303,8 +449,58 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     if (finished) return _completion(context);
+    if (showCheckpoint) {
+      return MissionCheckpoint(
+        lesson: lesson!,
+        position: session!.position,
+        xp: checkpointXp,
+        animate: audio.preferences.reactions,
+        busy: busy,
+        onContinue: continueCheckpoint,
+      );
+    }
+    if (showTeaching) {
+      return LessonIntroduction(
+        lesson: lesson!,
+        audio: audio,
+        initialStep: teachingStep,
+        initialDraft: introDraft,
+        onDraft: (draft) async {
+          await ref
+              .read(appProvider)
+              .repository
+              .saveIntroDraft(session!.id, draft);
+          introDraft = draft;
+        },
+        onClose: () => context.go('/'),
+        onStep: (step) async {
+          await ref
+              .read(appProvider)
+              .repository
+              .saveTeachingStep(session!.id, step);
+          teachingStep = step;
+        },
+        onStart: () async {
+          if (busy) return;
+          setState(() => busy = true);
+          try {
+            await ref
+                .read(appProvider)
+                .repository
+                .markTeachingSeen(session!.id);
+            if (mounted) setState(() => showTeaching = false);
+          } catch (_) {
+            if (context.mounted) {
+              showMessage(context, 'Не удалось сохранить начало практики.');
+            }
+          } finally {
+            if (mounted) setState(() => busy = false);
+          }
+        },
+      );
+    }
     final e = exercise;
-    final reactions = ref.watch(appProvider).audio.preferences.reactions;
+    ref.watch(appProvider);
     final answered = session!.position + (result == true ? 1 : 0);
     return Scaffold(
       appBar: AppBar(
@@ -317,25 +513,116 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           icon: const Icon(Icons.close),
         ),
         title: Text(
-          lesson!.title,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
+          'Шаг ${session!.position + 1} из ${lesson!.exercises.length}',
+          style: Theme.of(context).textTheme.titleMedium,
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Text(
-              '${session!.position + 1} / ${lesson!.exercises.length}',
+          IconButton(
+            tooltip: 'Справочник',
+            icon: const Icon(Icons.menu_book_outlined),
+            onPressed: () => showLessonReference(
+              context,
+              lesson!,
+              onTry: lesson!.guidedIntroduction.isEmpty
+                  ? null
+                  : () async {
+                      await saveDraft();
+                      if (!mounted) return;
+                      setState(() {
+                        introDraft = null;
+                        teachingStep = 0;
+                        showTeaching = true;
+                      });
+                    },
             ),
           ),
+          const LessonAudioToggle(),
+          const SizedBox(width: 8),
         ],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(16),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+            child: LessonProgress(
+              done: answered,
+              total: lesson!.exercises.length,
+            ),
+          ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.viewInsetsOf(context).bottom,
+        ),
+        child: SafeArea(
+          top: false,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 12),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (result != null)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: MediaQuery.sizeOf(context).height * .28,
+                      ),
+                      child: SingleChildScrollView(
+                        key: ValueKey('feedback:${e.id}:$result'),
+                        child: AnswerSignal(
+                          awardedXp: rehearsal ? 0 : 10,
+                          explanation: e.explanation,
+                          correction: result == false
+                              ? e.type == ExerciseType.pairs
+                                    ? e.pairs
+                                          .map((v) => '${v.en} — ${v.ru}')
+                                          .join('\n')
+                                    : 'Верный вариант: ${e.answers.first}'
+                              : null,
+                          key: ValueKey(
+                            '${session!.id}:${session!.position}:$result',
+                          ),
+                          correct: result!,
+                          animate: audio.preferences.reactions,
+                          combo: consecutiveCorrect,
+                        ),
+                      ),
+                    ),
+                  ),
+                FilledButton(
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size(double.infinity, 60),
+                  ),
+                  onPressed: busy || (!canCheck && result == null)
+                      ? null
+                      : check,
+                  child: Text(
+                    busy
+                        ? 'Сохраняем…'
+                        : result == true
+                        ? 'Дальше'
+                        : result == false
+                        ? 'Попробовать снова'
+                        : 'Проверить',
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
       body: SafeArea(
         child: QuestionEntrance(
           questionId: e.id,
+          enabled: audio.preferences.reactions,
           child: pageBody([
             if (e.phase.isEmpty &&
-                const ['a1-01', 'a1-02', 'a1-03'].contains(widget.lessonId))
+                ref
+                    .read(appProvider)
+                    .repository
+                    .updatedMaterials
+                    .containsKey(widget.lessonId))
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(16),
@@ -353,136 +640,163 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   ),
                 ),
               ),
-            LessonProgress(done: answered, total: lesson!.exercises.length),
-            if (e.phase.isNotEmpty) ...[
-              const SizedBox(height: 12),
-              Wrap(
-                spacing: 8,
+            Text(
+              [
+                if (e.phase.isNotEmpty) e.phase.toUpperCase(),
+                if (consecutiveCorrect >= 2) 'Серия: $consecutiveCorrect',
+              ].join('  ·  '),
+              style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                color: Theme.of(context).colorScheme.primary,
+                letterSpacing: .8,
+              ),
+            ),
+            const SizedBox(height: 8),
+            if (e.story != null)
+              StoryPanel(story: e.story!, completed: result == true),
+            if (e.story == null)
+              Row(
                 children: [
-                  Chip(label: Text(e.phase)),
-                  const Chip(label: Text('Новый формат')),
+                  SpeakingCharacter(
+                    audio: audio,
+                    character: e.character,
+                    state: result == true
+                        ? CharacterState.correct
+                        : result == false
+                        ? CharacterState.support
+                        : CharacterState.thinking,
+                    size: 44,
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      e.visual != null
+                          ? 'Узнай предмет'
+                          : e.audio != null && e.options.isNotEmpty
+                          ? 'Слушай и выбирай'
+                          : exerciseNames[e.type]!,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ),
                 ],
               ),
-            ],
-            const SizedBox(height: 24),
-            Row(
-              children: [
-                if (e.character == 'orbi')
-                  const OrbitRobot(size: 66, emotion: 'thinking')
-                else
-                  CharacterPortrait(e.character, size: 66),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Text(
-                    e.visual != null
-                        ? 'Узнай предмет'
-                        : e.audio != null && e.options.isNotEmpty
-                        ? 'Слушай и выбирай'
-                        : exerciseNames[e.type]!,
-                    style: Theme.of(context).textTheme.titleMedium,
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (e.pronunciation != null && e.recall == null) ...[
+                    Text(
+                      e.pronunciation!,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const SizedBox(height: 8),
+                  ],
+                  if (e.introduction != null) ...[
+                    Text(
+                      e.introduction!,
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  if (e.visual != null) ...[
+                    Center(
+                      child: Semantics(
+                        label:
+                            'Иллюстрация: ${e.visual == 'book'
+                                ? 'книга'
+                                : e.visual == 'pen'
+                                ? 'ручка'
+                                : 'сумка'}',
+                        child: Icon(
+                          switch (e.visual) {
+                            'book' => Icons.menu_book_rounded,
+                            'pen' => Icons.edit_rounded,
+                            _ => Icons.backpack_rounded,
+                          },
+                          size: 64,
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? turquoise
+                              : cosmicBlue,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  if (e.scene != null) ...[
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(e.story == null ? 12 : 0),
+                      decoration: BoxDecoration(
+                        color: turquoise.withValues(alpha: .12),
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      child: DialogueScene(
+                        pronunciation: e.scenePronunciation,
+                        scene: e.scene!,
+                        audio: audio,
+                        reply: result == true ? answer : null,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  Text(
+                    e.prompt,
+                    style: e.story == null
+                        ? Theme.of(context).textTheme.headlineSmall
+                        : Theme.of(context).textTheme.titleMedium,
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    if (e.introduction != null) ...[
+                  if (e.audio != null ||
+                      e.type == ExerciseType.listen ||
+                      e.type == ExerciseType.speak) ...[
+                    const SizedBox(height: 20),
+                    SpeechSourceLabel(
+                      audio: audio,
+                      character: e.character,
+                      text: e.audio ?? e.prompt,
+                    ),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 4,
+                      children: [
+                        OutlinedButton.icon(
+                          onPressed: () => speak(),
+                          icon: const Icon(Icons.volume_up_outlined),
+                          label: const Text('Прослушать'),
+                        ),
+                        TextButton.icon(
+                          onPressed: () => speak(slow: true),
+                          icon: const Icon(Icons.slow_motion_video),
+                          label: const Text('Медленно'),
+                        ),
+                      ],
+                    ),
+                    if (e.audio != null)
+                      TextButton(
+                        onPressed: () => setState(() => revealedAudio = true),
+                        child: const Text('Нет звука? Показать фразу'),
+                      ),
+                    if (revealedAudio && e.audio != null)
                       Text(
-                        e.introduction!,
+                        e.audio!,
+                        key: const Key('audio-transcript'),
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
-                      const SizedBox(height: 16),
-                    ],
-                    if (e.visual != null) ...[
-                      Center(
-                        child: Semantics(
-                          label:
-                              'Иллюстрация: ${e.visual == 'book'
-                                  ? 'книга'
-                                  : e.visual == 'pen'
-                                  ? 'ручка'
-                                  : 'сумка'}',
-                          child: Icon(
-                            switch (e.visual) {
-                              'book' => Icons.menu_book_rounded,
-                              'pen' => Icons.edit_rounded,
-                              _ => Icons.backpack_rounded,
-                            },
-                            size: 100,
-                            color:
-                                Theme.of(context).brightness == Brightness.dark
-                                ? turquoise
-                                : cosmicBlue,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                    ],
-                    if (e.scene != null) ...[
-                      Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: turquoise.withValues(alpha: .12),
-                          borderRadius: BorderRadius.circular(18),
-                        ),
-                        child: Text(
-                          e.scene!,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                    ],
-                    Text(
-                      e.prompt,
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    if (e.audio != null ||
-                        e.type == ExerciseType.listen ||
-                        e.type == ExerciseType.speak) ...[
-                      const SizedBox(height: 20),
-                      Text(
-                        'Говорит ${CharacterVoiceProfile.forId(e.character).name}',
-                      ),
-                      OutlinedButton.icon(
-                        style: OutlinedButton.styleFrom(
-                          minimumSize: const Size(double.infinity, 58),
-                        ),
-                        onPressed: () => speak(),
-                        icon: const Icon(Icons.volume_up_outlined),
-                        label: const Text('Прослушать'),
-                      ),
-                      TextButton.icon(
-                        onPressed: () => speak(slow: true),
-                        icon: const Icon(Icons.slow_motion_video),
-                        label: const Text('Медленно'),
-                      ),
-                      if (e.audio != null)
-                        TextButton(
-                          onPressed: () => setState(() => revealedAudio = true),
-                          child: const Text('Нет звука? Показать фразу'),
-                        ),
-                      if (revealedAudio && e.audio != null)
-                        Text(
-                          e.audio!,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                    ],
                   ],
-                ),
+                ],
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 16),
             AbsorbPointer(
               absorbing: result != null || busy,
-              child: _answerWidget(e),
+              child: QuestionEntrance(
+                questionId: '${e.id}:$recallHidden',
+                enabled: audio.preferences.reactions,
+                child: _answerWidget(e),
+              ),
             ),
-            const SizedBox(height: 18),
+            LessonCoachCard(lesson: lesson!, exercise: e),
+            const SizedBox(height: 12),
             if (e.type == ExerciseType.speak) ...[
               OutlinedButton.icon(
                 onPressed: result != null || busy
@@ -499,6 +813,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                           (message) {
                             if (mounted) showMessage(context, message);
                           },
+                          language: ref.read(appProvider).course.language,
                         );
                         if (!ok && context.mounted) {
                           showMessage(
@@ -515,142 +830,14 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 'Сравниваем распознанный текст с фразой. Это не оценка произношения. Можно ввести текст вручную.',
               ),
             ],
-            const SizedBox(height: 24),
-            AnimatedSwitcher(
-              duration: MediaQuery.disableAnimationsOf(context)
-                  ? Duration.zero
-                  : const Duration(milliseconds: 220),
-              child: result == null
-                  ? const SizedBox.shrink()
-                  : Container(
-                      key: ValueKey(result),
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: (result! ? mintGlow : coral).withValues(
-                          alpha: .18,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                result!
-                                    ? Icons.check_circle_outline
-                                    : Icons.lightbulb_outline,
-                              ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: XpPop(
-                                  enabled: result!,
-                                  eventKey: '${e.id}:$result',
-                                  child: Text(
-                                    result!
-                                        ? 'Сигнал принят! +10 XP'
-                                        : 'Попробуем ещё раз',
-                                    style: Theme.of(
-                                      context,
-                                    ).textTheme.titleMedium,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 10),
-                          if (reactions)
-                            CharacterReaction(
-                              cue: result!
-                                  ? CharacterCue.correct
-                                  : CharacterCue.support,
-                              eventKey: '${e.id}:$result',
-                            ),
-                          if (reactions)
-                            TextButton.icon(
-                              onPressed: () async {
-                                final cue = result!
-                                    ? CharacterCue.correct
-                                    : CharacterCue.support;
-                                final ok = await audio.speak(
-                                  cue.lines.first,
-                                  character: cue.id,
-                                  locale: 'ru-RU',
-                                );
-                                if (!ok && context.mounted) {
-                                  showMessage(
-                                    context,
-                                    'Реплика доступна текстом. Проверьте русский голос в настройках звука.',
-                                  );
-                                }
-                              },
-                              icon: const Icon(Icons.volume_up_outlined),
-                              label: const Text('Послушать Орби'),
-                            ),
-                          if (!result!) Text(e.explanation),
-                          if (!result!)
-                            Text(
-                              e.type == ExerciseType.pairs
-                                  ? e.pairs
-                                        .map((v) => '${v.en} — ${v.ru}')
-                                        .join('\n')
-                                  : 'Один из верных ответов: ${e.answers.first}',
-                            ),
-                        ],
-                      ),
-                    ),
-            ),
-            const SizedBox(height: 18),
-            FilledButton(
-              style: FilledButton.styleFrom(
-                minimumSize: const Size(double.infinity, 60),
+            if (e.story != null && result != null)
+              StoryResponse(
+                key: ValueKey('${e.id}:$result'),
+                exercise: e,
+                correct: result!,
+                neededHelp: storyNeededHelp,
+                audio: audio,
               ),
-              onPressed: busy || (!canCheck && result == null) ? null : check,
-              child: Text(
-                busy
-                    ? 'Сохраняем…'
-                    : result == true
-                    ? 'Дальше'
-                    : result == false
-                    ? 'Попробовать снова'
-                    : 'Проверить',
-              ),
-            ),
-            const SizedBox(height: 16),
-            ExpansionTile(
-              title: const Text('Подсказка команды'),
-              children: [
-                if (reactions)
-                  CharacterReaction(
-                    cue: CharacterCue.tutor(e.type),
-                    eventKey: 'hint:${e.id}',
-                    announce: false,
-                  ),
-                if (reactions)
-                  TextButton.icon(
-                    onPressed: () async {
-                      final cue = CharacterCue.tutor(e.type);
-                      final ok = await audio.speak(
-                        cue.lines.first,
-                        character: cue.id,
-                        locale: 'ru-RU',
-                      );
-                      if (!ok && context.mounted) {
-                        showMessage(
-                          context,
-                          'Реплика доступна текстом. Проверьте русский голос в настройках звука.',
-                        );
-                      }
-                    },
-                    icon: const Icon(Icons.volume_up_outlined),
-                    label: const Text('Послушать подсказку'),
-                  ),
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Text(lesson!.guide),
-                ),
-              ],
-            ),
           ]),
         ),
       ),
@@ -658,31 +845,46 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   }
 
   Widget _answerWidget(Exercise e) {
+    if (e.recall != null && !recallHidden) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            e.recall!['phrase']!,
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          if (e.pronunciation != null) Text(e.pronunciation!),
+          const SizedBox(height: 8),
+          Text(e.recall!['meaning']!),
+          const SizedBox(height: 16),
+          FilledButton.icon(
+            key: const Key('recall-hide'),
+            onPressed: () {
+              setState(() => recallHidden = true);
+              unawaited(saveDraft());
+            },
+            icon: const Icon(Icons.psychology_outlined),
+            label: const Text('Скрыть и вспомнить самостоятельно'),
+          ),
+        ],
+      );
+    }
     if (e.options.isNotEmpty) {
       return Column(
         children: options
             .map(
               (v) => Padding(
                 padding: const EdgeInsets.only(bottom: 12),
-                child: Semantics(
+                child: AnswerTile(
+                  verdict: result,
+                  text: v,
+                  index: options.indexOf(v),
                   selected: input.text == v,
-                  child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: input.text == v
-                          ? turquoise.withValues(alpha: .22)
-                          : null,
-                      minimumSize: const Size(double.infinity, 58),
-                    ),
-                    onPressed: () {
-                      unawaited(audio.play(SoundEffect.tap));
-                      setState(() => input.text = v);
-                      unawaited(saveDraft());
-                    },
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(v),
-                    ),
-                  ),
+                  onPressed: () {
+                    unawaited(audio.play(SoundEffect.tap));
+                    setState(() => input.text = v);
+                    unawaited(saveDraft());
+                  },
                 ),
               ),
             )
@@ -700,21 +902,27 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
               border: Border.all(color: violet),
               borderRadius: BorderRadius.circular(18),
             ),
-            child: Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: order
-                  .map(
-                    (i) => InputChip(
-                      label: Text(e.tokens[i]),
-                      onDeleted: () {
-                        setState(() => order.remove(i));
-                        unawaited(saveDraft());
-                      },
-                    ),
+            child: order.isEmpty
+                ? Text(
+                    'Нажимай слова в нужном порядке',
+                    style: Theme.of(context).textTheme.bodyMedium,
                   )
-                  .toList(),
-            ),
+                : Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: order
+                        .map(
+                          (i) => InputChip(
+                            label: Text(e.tokens[i]),
+                            onDeleted: () {
+                              unawaited(audio.play(SoundEffect.tap));
+                              setState(() => order.remove(i));
+                              unawaited(saveDraft());
+                            },
+                          ),
+                        )
+                        .toList(),
+                  ),
           ),
           const SizedBox(height: 20),
           Wrap(
@@ -727,6 +935,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     onPressed: order.contains(i)
                         ? null
                         : () {
+                            unawaited(audio.play(SoundEffect.tap));
                             setState(() => order.add(i));
                             unawaited(saveDraft());
                           },
@@ -758,12 +967,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                             style: OutlinedButton.styleFrom(
                               backgroundColor: activePair == v.id
                                   ? turquoise.withValues(alpha: .25)
+                                  : pairs.containsKey(v.id)
+                                  ? Theme.of(
+                                      context,
+                                    ).colorScheme.primaryContainer
                                   : null,
+                              minimumSize: const Size(double.infinity, 52),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 12,
+                              ),
                             ),
-                            onPressed: () => setState(() => activePair = v.id),
-                            child: Text(
-                              '${v.en}${pairs.containsKey(v.id) ? ' ✓' : ''}',
-                            ),
+                            onPressed: () {
+                              unawaited(audio.play(SoundEffect.tap));
+                              setState(() => activePair = v.id);
+                            },
+                            child: Text(v.en),
                           ),
                         ),
                       )
@@ -778,9 +997,22 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         (v) => Padding(
                           padding: const EdgeInsets.only(bottom: 10),
                           child: OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              minimumSize: const Size(double.infinity, 52),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 12,
+                              ),
+                              backgroundColor: pairs.containsValue(v.ru)
+                                  ? Theme.of(
+                                      context,
+                                    ).colorScheme.primaryContainer
+                                  : null,
+                            ),
                             onPressed: activePair == null
                                 ? null
                                 : () {
+                                    unawaited(audio.play(SoundEffect.tap));
                                     setState(() {
                                       pairs.removeWhere(
                                         (key, value) => value == v.ru,
@@ -801,7 +1033,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           ),
           ...pairs.entries.map(
             (pair) => Text(
-              '${e.pairs.firstWhere((v) => v.id == pair.key).en} → ${pair.value}',
+              '${e.pairs.firstWhere((v) => v.id == pair.key).en} — ${pair.value}',
             ),
           ),
         ],
@@ -816,7 +1048,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       decoration: InputDecoration(
         hintText: e.type == ExerciseType.gap
             ? 'Пропущенное слово'
-            : 'Ваш ответ по-английски',
+            : 'Ответ на изучаемом языке',
       ),
       onChanged: (_) {
         setState(() {});
@@ -827,69 +1059,18 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
 
   Widget _completion(BuildContext context) {
     final app = ref.watch(appProvider);
-    final summary = lessonResult ?? ProgressSnapshot();
-    final attempts = summary.correct + summary.errors;
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => context.go('/'),
-          icon: const Icon(Icons.close),
-        ),
-      ),
-      body: SafeArea(
-        child: pageBody([
-          if (app.audio.preferences.reactions)
-            CharacterReaction(
-              cue: CharacterCue.completed,
-              eventKey: 'completed:${session!.id}',
-            ),
-          const SizedBox(height: 12),
-          Text(
-            'Новая орбита освоена!',
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineLarge,
-          ),
-          const SizedBox(height: 16),
-          Text(
-            lesson!.title,
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const SizedBox(height: 24),
-          SpaceBanner(
-            eyebrow: 'УРОК ЗАВЕРШЁН',
-            title: '+${summary.xp} XP',
-            subtitle:
-                'Верных ответов: ${summary.correct}. Ошибок: ${summary.errors}. Прогресс уже сохранён на устройстве.',
-          ),
-          const SizedBox(height: 16),
-          Metric(
-            value: attempts == 0
-                ? '—'
-                : '${(100 * summary.correct / attempts).round()}%',
-            label: 'точность всех попыток в этом уроке',
-            icon: Icons.track_changes,
-          ),
-          const SizedBox(height: 20),
-          Text(
-            'Всего ${app.progress.xp} XP · уровень ${app.progress.level}',
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 24),
-          if (app.inventory.unopened > 0) ...[
-            const RewardShortcut(),
-            const SizedBox(height: 16),
-          ],
-          FilledButton(
-            onPressed: () => context.go('/'),
-            child: const Text('Вернуться к путешествию'),
-          ),
-          TextButton(
-            onPressed: () => context.go('/words'),
-            child: const Text('Посмотреть новые слова'),
-          ),
-        ]),
-      ),
+    return FlightCompletion(
+      app: app,
+      lesson: lesson!,
+      summary: lessonResult ?? ProgressSnapshot(),
+      celebrate: completionMoment,
+      bestCombo: bestCombo,
+      newChests: app.inventory.grants.keys
+          .where((id) => !initialGrants.contains(id))
+          .length,
+      achievements: app.globalProgress.achievements
+          .where((id) => !initialAchievements.contains(id))
+          .toList(),
     );
   }
 }

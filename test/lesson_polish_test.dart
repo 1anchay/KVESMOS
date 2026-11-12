@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:orbitwords/core/controller.dart';
 import 'package:orbitwords/domain/course.dart';
-import 'package:orbitwords/ui/character_reactions.dart';
 import 'package:orbitwords/ui/lesson_screen.dart';
 import 'package:orbitwords/ui/lesson_effects.dart';
 import 'package:orbitwords/ui/design.dart';
@@ -33,6 +32,8 @@ void main() {
         ),
       );
       await flushDb(tester);
+      await advanceTeaching(tester);
+      await flushDb(tester);
       await tester.scrollUntilVisible(
         find.widgetWithText(OutlinedButton, wrong),
         220,
@@ -40,14 +41,12 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.widgetWithText(OutlinedButton, wrong));
       await flushDb(tester);
-      await tester.scrollUntilVisible(find.text('Проверить'), 250);
       await tester.pumpAndSettle();
       await tester.tap(find.text('Проверить'));
       await flushDb(tester);
       expect(app.progress.xp, 0);
       expect(app.progress.errors, 1);
-      expect(find.text(CharacterCue.support.lines.first), findsOneWidget);
-      await tester.scrollUntilVisible(find.text('Попробовать снова'), 200);
+      expect(find.text('Почти! Я помогу.'), findsOneWidget);
       await tester.pumpAndSettle();
       await tester.tap(find.text('Попробовать снова'));
       await flushDb(tester);
@@ -60,23 +59,20 @@ void main() {
         find.widgetWithText(OutlinedButton, first.answers.first),
       );
       await flushDb(tester);
-      await tester.scrollUntilVisible(find.text('Проверить'), 250);
       await tester.pumpAndSettle();
       await tester.tap(find.text('Проверить'));
       await flushDb(tester);
       expect(app.progress.xp, 10);
-      await tester.scrollUntilVisible(find.byType(LessonProgress), -250);
       await tester.pumpAndSettle();
       expect(
         tester.widget<LessonProgress>(find.byType(LessonProgress)).done,
         1,
       );
-      await tester.scrollUntilVisible(find.text('Дальше'), 200);
       await tester.pumpAndSettle();
       await tester.tap(find.text('Дальше'));
       await flushDb(tester);
       expect(find.text(lesson.exercises[1].prompt), findsOneWidget);
-      expect(find.byType(QuestionEntrance), findsOneWidget);
+      expect(find.byType(QuestionEntrance), findsNWidgets(2));
       expect(app.progress.xp, 10);
       expect(tester.takeException(), isNull);
       await tester.pumpWidget(const SizedBox.shrink());
@@ -126,6 +122,7 @@ void main() {
             home: MediaQuery(
               data: const MediaQueryData(
                 disableAnimations: true,
+                size: Size(320, 720),
                 textScaler: TextScaler.linear(2),
               ),
               child: const LessonScreen(lessonId: 'a1-01'),
@@ -144,12 +141,10 @@ void main() {
         await tester.enterText(find.byType(TextField), lastAnswer);
       }
       await flushDb(tester);
-      await tester.scrollUntilVisible(find.text('Проверить'), 250);
       await tester.pumpAndSettle();
       await tester.tap(find.text('Проверить'));
       await flushDb(tester);
       expect(app.progress.xp, 120);
-      await tester.scrollUntilVisible(find.text('Дальше'), 200);
       await tester.pumpAndSettle();
       await tester.tap(find.text('Дальше'));
       await flushDb(tester);

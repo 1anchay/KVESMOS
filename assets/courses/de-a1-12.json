@@ -1,0 +1,280 @@
+{
+  "id": "de-a1-12",
+  "title": "Еда и отрицание",
+  "topic": "Еда и отрицание",
+  "order": 11,
+  "objective": "Рассказать, что вы едите и чего не едите.",
+  "guide": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+  "vocabulary": [
+    {
+      "id": "de:v013:12:p0",
+      "en": "Ich esse kein Fleisch.",
+      "ru": "Я не ем мясо."
+    },
+    {
+      "id": "de:v013:12:p1",
+      "en": "Ich trinke Tee ohne Zucker.",
+      "ru": "Я пью чай без сахара."
+    },
+    {
+      "id": "de:v013:12:p2",
+      "en": "Isst du gern Gemüse?",
+      "ru": "Ты любишь есть овощи?"
+    },
+    {
+      "id": "de:v013:12:p3",
+      "en": "Heute koche ich nicht.",
+      "ru": "Сегодня я не готовлю."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Ich esse kein Fleisch.",
+      "translation": "Я не ем мясо.",
+      "explanation": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Ich trinke Tee ohne Zucker.",
+      "translation": "Я пью чай без сахара.",
+      "explanation": "Ich trinke Tee ohne Zucker. — Я пью чай без сахара."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Isst du gern Gemüse?",
+      "translation": "Ты любишь есть овощи?",
+      "explanation": "Isst du gern Gemüse? — Ты любишь есть овощи?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Heute koche ich nicht.",
+      "translation": "Сегодня я не готовлю.",
+      "explanation": "Heute koche ich nicht. — Сегодня я не готовлю.\nВ нейтральной фразе «не ем мяса» перед существительным без артикля употребляем kein.\nВерно: Ich esse kein Fleisch."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-12-e05",
+      "type": "dialogue",
+      "prompt": "Что Мико не ест?",
+      "answers": [
+        "Мясо"
+      ],
+      "explanation": "Орби: Isst du gern Gemüse?\nМико: Ja. Ich esse kein Fleisch. Heute koche ich nicht.\nМясо",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [
+        "de:v013:12:p0",
+        "de:v013:12:p1",
+        "de:v013:12:p2",
+        "de:v013:12:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Isst du gern Gemüse?\nМико: Ja. Ich esse kein Fleisch. Heute koche ich nicht.",
+      "options": [
+        "Овощи",
+        "Мясо",
+        "Сахар"
+      ]
+    },
+    {
+      "id": "de-a1-12-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я не ем мясо. Выбери реплику.",
+      "answers": [
+        "Ich esse kein Fleisch."
+      ],
+      "explanation": "Ich esse kein Fleisch. — Я не ем мясо.",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [
+        "de:v013:12:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Isst du gern Gemüse?",
+        "Ich esse kein Fleisch.",
+        "Ich trinke Tee ohne Zucker."
+      ]
+    },
+    {
+      "id": "de-a1-12-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Я пью чай без сахара.",
+      "answers": [
+        "Ich trinke Tee ohne Zucker."
+      ],
+      "explanation": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [
+        "de:v013:12:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Ich",
+        "trinke",
+        "Tee",
+        "ohne",
+        "Zucker"
+      ]
+    },
+    {
+      "id": "de-a1-12-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Ты любишь есть овощи?"
+      ],
+      "explanation": "Isst du gern Gemüse? — Ты любишь есть овощи?",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [
+        "de:v013:12:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Isst du gern Gemüse?",
+      "options": [
+        "Я пью чай без сахара.",
+        "Сегодня я не готовлю.",
+        "Ты любишь есть овощи?"
+      ]
+    },
+    {
+      "id": "de-a1-12-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich esse keine Fleisch.",
+      "answers": [
+        "Ich esse kein Fleisch."
+      ],
+      "explanation": "В нейтральной фразе «не ем мяса» перед существительным без артикля употребляем kein.",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich esse keine Fleisch.",
+        "Ich esse kein Fleisch."
+      ]
+    },
+    {
+      "id": "de-a1-12-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [
+        "de:v013:12:p0",
+        "de:v013:12:p1",
+        "de:v013:12:p2",
+        "de:v013:12:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:12:p0",
+          "en": "Ich esse kein Fleisch.",
+          "ru": "Я не ем мясо."
+        },
+        {
+          "id": "de:v013:12:p1",
+          "en": "Ich trinke Tee ohne Zucker.",
+          "ru": "Я пью чай без сахара."
+        },
+        {
+          "id": "de:v013:12:p2",
+          "en": "Isst du gern Gemüse?",
+          "ru": "Ты любишь есть овощи?"
+        },
+        {
+          "id": "de:v013:12:p3",
+          "en": "Heute koche ich nicht.",
+          "ru": "Сегодня я не готовлю."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-12-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я не ем мясо.",
+      "answers": [
+        "Ich esse kein Fleisch."
+      ],
+      "explanation": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [
+        "de:v013:12:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Ich esse kein Fleisch.",
+        "meaning": "Я не ем мясо."
+      }
+    },
+    {
+      "id": "de-a1-12-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Сегодня я не готовлю.",
+      "answers": [
+        "Heute koche ich nicht."
+      ],
+      "explanation": "Heute koche ich nicht. — Сегодня я не готовлю.",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [
+        "de:v013:12:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Heute koche ich nicht."
+    },
+    {
+      "id": "de-a1-12-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Ich trinke Tee ohne Zucker.»?",
+      "answers": [
+        "Я пью чай без сахара."
+      ],
+      "explanation": "Ich trinke Tee ohne Zucker. — Я пью чай без сахара.",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [
+        "de:v013:12:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я не ем мясо.",
+        "Я пью чай без сахара.",
+        "Сегодня я не готовлю."
+      ]
+    },
+    {
+      "id": "de-a1-12-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Затем я завтракаю.",
+      "answers": [
+        "Dann frühstücke ich."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Dann frühstücke ich. — Затем я завтракаю.",
+      "hint": "Essen — есть: ich esse, du isst. Trinken — пить: ich trinke. Kein отрицает существительное без определённого артикля: kein Fleisch. Nicht отрицает действие или признак: ich koche nicht. Ohne — без; Zucker — сахар, Fleisch — мясо.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich stehe um sieben Uhr auf.",
+        "Dann frühstücke ich.",
+        "Ich arbeite von neun bis fünf.",
+        "Abends lese ich ein Buch."
+      ]
+    }
+  ]
+}

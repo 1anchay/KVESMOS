@@ -1,0 +1,251 @@
+{
+  "id": "es-a1-20",
+  "title": "Не каждый день",
+  "topic": "Не каждый день",
+  "order": 19,
+  "objective": "Описать частоту привычных занятий.",
+  "guide": "Todos los días — каждый день; nunca перед глаголом уже выражает отрицание.",
+  "vocabulary": [
+    {
+      "id": "es:v014:20:p0",
+      "en": "Camino todos los días.",
+      "ru": "Я гуляю каждый день."
+    },
+    {
+      "id": "es:v014:20:p1",
+      "en": "A veces trabajo en casa.",
+      "ru": "Иногда я работаю дома."
+    },
+    {
+      "id": "es:v014:20:p2",
+      "en": "Nunca tomo café por la noche.",
+      "ru": "Я никогда не пью кофе вечером."
+    },
+    {
+      "id": "es:v014:20:p3",
+      "en": "Los domingos descanso.",
+      "ru": "По воскресеньям я отдыхаю."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Не каждый день",
+      "phrase": "Camino todos los días.",
+      "translation": "Я гуляю каждый день.",
+      "explanation": "Todos los días — каждый день; nunca перед глаголом уже выражает отрицание."
+    },
+    {
+      "character": "miko",
+      "title": "Не каждый день",
+      "phrase": "A veces trabajo en casa.",
+      "translation": "Иногда я работаю дома.",
+      "explanation": "A veces trabajo en casa. — Иногда я работаю дома."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Не каждый день",
+      "phrase": "Nunca tomo café por la noche.",
+      "translation": "Я никогда не пью кофе вечером.",
+      "explanation": "Nunca tomo café por la noche. — Я никогда не пью кофе вечером."
+    },
+    {
+      "character": "orbi",
+      "title": "Не каждый день",
+      "phrase": "Los domingos descanso.",
+      "translation": "По воскресеньям я отдыхаю.",
+      "explanation": "Los domingos descanso. — По воскресеньям я отдыхаю."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Camino todos los días.",
+      "translation": "Я гуляю каждый день.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я гуляю каждый день.",
+      "options": [
+        "Я никогда не пью кофе вечером.",
+        "Я гуляю каждый день.",
+        "По воскресеньям я отдыхаю."
+      ],
+      "explanation": "Todos los días — каждый день; nunca перед глаголом уже выражает отрицание."
+    },
+    {
+      "id": "apply",
+      "phrase": "A veces trabajo en casa.",
+      "translation": "Иногда я работаю дома.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "A veces trabajo en casa.",
+      "tokens": [
+        "A",
+        "veces",
+        "trabajo",
+        "en",
+        "casa."
+      ],
+      "character": "miko",
+      "explanation": "A veces trabajo en casa. — Иногда я работаю дома."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-20-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я гуляю каждый день.»?",
+      "answers": [
+        "Camino todos los días."
+      ],
+      "explanation": "Camino todos los días. — Я гуляю каждый день.",
+      "wordIds": [
+        "es:v014:20:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "A veces trabajo en casa.",
+        "Los domingos descanso.",
+        "Camino todos los días."
+      ],
+      "hint": "Camino todos los días. — Я гуляю каждый день."
+    },
+    {
+      "id": "es-a1-20-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Иногда я работаю дома.",
+      "answers": [
+        "A veces trabajo en casa."
+      ],
+      "explanation": "Todos los días — каждый день; nunca перед глаголом уже выражает отрицание.",
+      "wordIds": [
+        "es:v014:20:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "A",
+        "veces",
+        "trabajo",
+        "en",
+        "casa."
+      ],
+      "hint": "A veces trabajo en casa. — Иногда я работаю дома."
+    },
+    {
+      "id": "es-a1-20-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я никогда не пью кофе вечером."
+      ],
+      "explanation": "Nunca tomo café por la noche. — Я никогда не пью кофе вечером.",
+      "wordIds": [
+        "es:v014:20:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Nunca tomo café por la noche.",
+      "options": [
+        "Я гуляю каждый день.",
+        "Я никогда не пью кофе вечером.",
+        "Иногда я работаю дома."
+      ],
+      "hint": "Nunca tomo café por la noche. — Я никогда не пью кофе вечером."
+    },
+    {
+      "id": "es-a1-20-e03",
+      "type": "dialogue",
+      "prompt": "Как часто человек работает дома?",
+      "answers": [
+        "Иногда."
+      ],
+      "explanation": "Иногда. Описать частоту привычных занятий.",
+      "wordIds": [
+        "es:v014:20:p0",
+        "es:v014:20:p1",
+        "es:v014:20:p2",
+        "es:v014:20:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Trabajas en casa todos los días?\nМико: No, solo a veces. Los domingos descanso.",
+      "options": [
+        "Каждый день.",
+        "Каждое воскресенье.",
+        "Иногда."
+      ]
+    },
+    {
+      "id": "es-a1-20-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Yo caminas todos los días.",
+      "answers": [
+        "Yo camino todos los días."
+      ],
+      "explanation": "С yo глагол caminar имеет форму camino.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Yo caminas todos los días.",
+        "Yo camino todos los días."
+      ],
+      "hint": "Todos los días — каждый день; nunca перед глаголом уже выражает отрицание."
+    },
+    {
+      "id": "es-a1-20-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «По воскресеньям я отдыхаю.». Можно написать вместо микрофона.",
+      "answers": [
+        "Los domingos descanso."
+      ],
+      "explanation": "Los domingos descanso. — По воскресеньям я отдыхаю.",
+      "wordIds": [
+        "es:v014:20:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Los domingos descanso.",
+      "recall": {
+        "phrase": "Los domingos descanso.",
+        "meaning": "По воскресеньям я отдыхаю."
+      }
+    },
+    {
+      "id": "es-a1-20-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я гуляю каждый день.",
+      "answers": [
+        "Camino todos los días."
+      ],
+      "explanation": "Todos los días — каждый день; nunca перед глаголом уже выражает отрицание.",
+      "wordIds": [
+        "es:v014:20:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Camino todos los días.",
+        "meaning": "Я гуляю каждый день."
+      }
+    },
+    {
+      "id": "es-a1-20-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я принимаю душ утром.",
+      "answers": [
+        "Me ducho por la mañana."
+      ],
+      "explanation": "Me ducho por la mañana. — Я принимаю душ утром.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Me levanto a las siete.",
+        "Me ducho por la mañana.",
+        "Después desayuno en casa.",
+        "Salgo de casa a las ocho."
+      ]
+    }
+  ]
+}

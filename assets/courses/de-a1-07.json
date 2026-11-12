@@ -1,0 +1,279 @@
+{
+  "id": "de-a1-07",
+  "title": "Sein und haben · состояние и вещи",
+  "topic": "Sein und haben · состояние и вещи",
+  "order": 6,
+  "objective": "Различать состояние и владение предметом.",
+  "guide": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+  "vocabulary": [
+    {
+      "id": "de:v013:7:p0",
+      "en": "Ich bin müde.",
+      "ru": "Я устал."
+    },
+    {
+      "id": "de:v013:7:p1",
+      "en": "Ich habe ein Fahrrad.",
+      "ru": "У меня велосипед."
+    },
+    {
+      "id": "de:v013:7:p2",
+      "en": "Hast du Zeit?",
+      "ru": "У тебя есть время?"
+    },
+    {
+      "id": "de:v013:7:p3",
+      "en": "Wir sind zu Hause.",
+      "ru": "Мы дома."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Ich bin müde.",
+      "translation": "Я устал.",
+      "explanation": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Ich habe ein Fahrrad.",
+      "translation": "У меня велосипед.",
+      "explanation": "Ich habe ein Fahrrad. — У меня велосипед."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Hast du Zeit?",
+      "translation": "У тебя есть время?",
+      "explanation": "Hast du Zeit? — У тебя есть время?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Wir sind zu Hause.",
+      "translation": "Мы дома.",
+      "explanation": "Wir sind zu Hause. — Мы дома.\nMüde — состояние: ich bin müde, а не ich habe müde.\nВерно: Ich bin müde."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-07-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Я устал. Выбери реплику.",
+      "answers": [
+        "Ich bin müde."
+      ],
+      "explanation": "Ich bin müde. — Я устал.",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [
+        "de:v013:7:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Hast du Zeit?",
+        "Ich bin müde.",
+        "Ich habe ein Fahrrad."
+      ]
+    },
+    {
+      "id": "de-a1-07-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "У тебя есть время?"
+      ],
+      "explanation": "Hast du Zeit? — У тебя есть время?",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [
+        "de:v013:7:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Hast du Zeit?",
+      "options": [
+        "У меня велосипед.",
+        "Мы дома.",
+        "У тебя есть время?"
+      ]
+    },
+    {
+      "id": "de-a1-07-e03",
+      "type": "order",
+      "prompt": "Составь реплику: У меня велосипед.",
+      "answers": [
+        "Ich habe ein Fahrrad."
+      ],
+      "explanation": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [
+        "de:v013:7:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Ich",
+        "habe",
+        "ein",
+        "Fahrrad"
+      ]
+    },
+    {
+      "id": "de-a1-07-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [
+        "de:v013:7:p0",
+        "de:v013:7:p1",
+        "de:v013:7:p2",
+        "de:v013:7:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:7:p0",
+          "en": "Ich bin müde.",
+          "ru": "Я устал."
+        },
+        {
+          "id": "de:v013:7:p1",
+          "en": "Ich habe ein Fahrrad.",
+          "ru": "У меня велосипед."
+        },
+        {
+          "id": "de:v013:7:p2",
+          "en": "Hast du Zeit?",
+          "ru": "У тебя есть время?"
+        },
+        {
+          "id": "de:v013:7:p3",
+          "en": "Wir sind zu Hause.",
+          "ru": "Мы дома."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-07-e05",
+      "type": "dialogue",
+      "prompt": "Где Мико и его друзья?",
+      "answers": [
+        "Дома"
+      ],
+      "explanation": "Орби: Hast du Zeit?\nМико: Ja. Wir sind zu Hause. Ich bin müde.\nДома",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [
+        "de:v013:7:p0",
+        "de:v013:7:p1",
+        "de:v013:7:p2",
+        "de:v013:7:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: Hast du Zeit?\nМико: Ja. Wir sind zu Hause. Ich bin müde.",
+      "options": [
+        "В школе",
+        "Дома",
+        "На вокзале"
+      ]
+    },
+    {
+      "id": "de-a1-07-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich habe müde.",
+      "answers": [
+        "Ich bin müde."
+      ],
+      "explanation": "Müde — состояние: ich bin müde, а не ich habe müde.",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich habe müde.",
+        "Ich bin müde."
+      ]
+    },
+    {
+      "id": "de-a1-07-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Мы дома.",
+      "answers": [
+        "Wir sind zu Hause."
+      ],
+      "explanation": "Wir sind zu Hause. — Мы дома.",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [
+        "de:v013:7:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Wir sind zu Hause."
+    },
+    {
+      "id": "de-a1-07-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Я устал.",
+      "answers": [
+        "Ich bin müde."
+      ],
+      "explanation": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [
+        "de:v013:7:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Ich bin müde.",
+        "meaning": "Я устал."
+      }
+    },
+    {
+      "id": "de-a1-07-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Ich habe ein Fahrrad.»?",
+      "answers": [
+        "У меня велосипед."
+      ],
+      "explanation": "Ich habe ein Fahrrad. — У меня велосипед.",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [
+        "de:v013:7:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Я устал.",
+        "У меня велосипед.",
+        "Мы дома."
+      ]
+    },
+    {
+      "id": "de-a1-07-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я хотел бы кофе, пожалуйста.",
+      "answers": [
+        "Ich möchte einen Kaffee, bitte."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Ich möchte einen Kaffee, bitte. — Я хотел бы кофе, пожалуйста.",
+      "hint": "Sein — быть: ich bin, du bist, wir sind. Haben — иметь: ich habe, du hast, wir haben. Уставший — müde; ich bin müde. Велосипед — das Fahrrad, после haben: ein Fahrrad. Состояние описываем через sein, владение через haben.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich möchte einen Kaffee, bitte.",
+        "Wasser, bitte.",
+        "Eine Suppe, bitte.",
+        "Zahlen, bitte."
+      ]
+    }
+  ]
+}

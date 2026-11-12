@@ -1,0 +1,43 @@
+name: RuStore APK Audit
+on:
+  push:
+    branches: [release/kvesmos-1.0-android]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    env:
+      KVESMOS_UNSIGNED_RELEASE_AUDIT: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: dart format --output=none --set-exit-if-changed lib test
+      - run: flutter analyze
+      - run: flutter build apk --release --target lib/main.dart --dart-define=KVESMOS_RUSTORE=true
+      - name: Audit unsigned packaging and 64-bit ELF alignment
+        run: |
+          python3 tool/audit_release.py build/app/outputs/flutter-apk/app-release.apk --output build/release-audit.json
+          "$ANDROID_HOME/build-tools/36.0.0/zipalign" -c -P 16 4 build/app/outputs/flutter-apk/app-release.apk
+          "$ANDROID_HOME/build-tools/36.0.0/aapt2" dump badging build/app/outputs/flutter-apk/app-release.apk > build/release-package.txt
+          grep -F "package: name='dev.orbitwords.orbitwords' versionCode='18' versionName='1.0.0'" build/release-package.txt
+          grep -F "targetSdkVersion:'36'" build/release-package.txt
+          if "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify build/app/outputs/flutter-apk/app-release.apk; then
+            echo 'Unexpected signing in unsigned audit'; exit 1
+          fi
+          printf '%s\n' "$GITHUB_SHA" > build/release-source-sha.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KVESMOS-1.0-RuStore-UNSIGNED
+          path: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/release-audit.json
+            build/release-package.txt
+            build/release-source-sha.txt
+          if-no-files-found: error

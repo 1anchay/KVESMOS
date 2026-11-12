@@ -1,0 +1,282 @@
+{
+  "id": "es-a1-03",
+  "title": "Вещи вокруг · el и la",
+  "topic": "Вещи вокруг · el и la",
+  "order": 2,
+  "objective": "Назвать предметы и различить род артикля.",
+  "guide": "Учите существительное вместе с артиклем: el libro — книга, la mesa — стол, la casa — дом. Род испанского слова может отличаться от русского. Un/una — один или неопределённый предмет. Es — «это есть».",
+  "vocabulary": [
+    {
+      "id": "es:el_libro",
+      "en": "el libro",
+      "ru": "книга"
+    },
+    {
+      "id": "es:la_mesa",
+      "en": "la mesa",
+      "ru": "стол"
+    },
+    {
+      "id": "es:la_casa",
+      "en": "la casa",
+      "ru": "дом"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-03-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Это книга.»",
+      "answers": [
+        "Es un libro."
+      ],
+      "explanation": "Es un libro. — Это книга.",
+      "hint": "Es un libro. — Это книга.",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Es una mesa.",
+        "Es un libro.",
+        "¿Qué es esto?"
+      ]
+    },
+    {
+      "id": "es-a1-03-e02",
+      "type": "choice",
+      "prompt": "Что означает «Es una mesa.»?",
+      "answers": [
+        "Это стол."
+      ],
+      "explanation": "Es una mesa. — Это стол.",
+      "hint": "Es una mesa. — Это стол.",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Дом большой.",
+        "Что это?",
+        "Это стол."
+      ]
+    },
+    {
+      "id": "es-a1-03-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Дом большой.»",
+      "answers": [
+        "La casa es grande"
+      ],
+      "explanation": "La casa es grande. — Дом большой.",
+      "hint": "La casa es grande. — Дом большой.",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "La",
+        "casa",
+        "es",
+        "grande"
+      ]
+    },
+    {
+      "id": "es-a1-03-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "el libro — книга; la mesa — стол; la casa — дом",
+      "hint": "el libro — книга; la mesa — стол; la casa — дом",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "es:el_libro",
+          "en": "el libro",
+          "ru": "книга"
+        },
+        {
+          "id": "es:la_mesa",
+          "en": "la mesa",
+          "ru": "стол"
+        },
+        {
+          "id": "es:la_casa",
+          "en": "la casa",
+          "ru": "дом"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-03-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Что это?"
+      ],
+      "explanation": "¿Qué es esto? — Что это?",
+      "hint": "¿Qué es esto? — Что это?",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "¿Qué es esto?",
+      "options": [
+        "Это книга.",
+        "Что это?",
+        "Дом большой."
+      ]
+    },
+    {
+      "id": "es-a1-03-e06",
+      "type": "gap",
+      "prompt": "Mesa женского рода: Es ___ mesa.",
+      "answers": [
+        "una"
+      ],
+      "explanation": "Учите существительное вместе с артиклем: el libro — книга, la mesa — стол, la casa — дом. Род испанского слова может отличаться от русского. Un/una — один или неопределённый предмет. Es — «это есть».",
+      "hint": "Учите существительное вместе с артиклем: el libro — книга, la mesa — стол, la casa — дом. Род испанского слова может отличаться от русского. Un/una — один или неопределённый предмет. Es — «это есть».",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "un",
+        "una",
+        "el"
+      ]
+    },
+    {
+      "id": "es-a1-03-e07",
+      "type": "dialogue",
+      "prompt": "Орби показывает книгу и спрашивает «¿Qué es esto?» Назови предмет.",
+      "answers": [
+        "Es un libro."
+      ],
+      "explanation": "В этой ситуации подходит: Es un libro.",
+      "hint": "В этой ситуации подходит: Es un libro.",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Es una mesa.",
+        "La casa es grande.",
+        "Es un libro."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "es-a1-03-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Es una libro.»",
+      "answers": [
+        "Es un libro."
+      ],
+      "explanation": "Libro — мужского рода: el libro, un libro. Не переносим род русского «книга».",
+      "hint": "Libro — мужского рода: el libro, un libro. Не переносим род русского «книга».",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "es-a1-03-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Что это?»",
+      "answers": [
+        "¿Qué es esto?"
+      ],
+      "explanation": "¿Qué es esto? — Что это?",
+      "hint": "¿Qué es esto? — Что это?",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "es-a1-03-e10",
+      "type": "review",
+      "prompt": "Финал: Орби показывает книгу и спрашивает «¿Qué es esto?» Назови предмет.",
+      "answers": [
+        "Es un libro."
+      ],
+      "explanation": "Теперь ты умеешь: назвать предметы и различить род артикля.",
+      "hint": "Теперь ты умеешь: назвать предметы и различить род артикля.",
+      "wordIds": [
+        "es:el_libro",
+        "es:la_mesa",
+        "es:la_casa"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "Es un libro.",
+        "La casa es grande.",
+        "Es una mesa."
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Es un libro.",
+      "translation": "Это книга.",
+      "explanation": "Ситуация: Назвать предметы и различить род артикля. Es un libro. — Это книга."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Es una mesa.",
+      "translation": "Это стол.",
+      "explanation": "Ситуация: Назвать предметы и различить род артикля. Es una mesa. — Это стол."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "La casa es grande.",
+      "translation": "Дом большой.",
+      "explanation": "Учите существительное вместе с артиклем: el libro — книга, la mesa — стол, la casa — дом. Род испанского слова может отличаться от русского. Un/una — один или неопределённый предмет. Es — «это есть»."
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "¿Qué es esto?",
+      "translation": "Что это?",
+      "explanation": "Ситуация: Назвать предметы и различить род артикля. ¿Qué es esto? — Что это?"
+    }
+  ]
+}

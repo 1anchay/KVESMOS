@@ -1,0 +1,253 @@
+{
+  "id": "de-a1-36",
+  "title": "Как прошла дорога",
+  "topic": "Прошлое: Perfekt",
+  "order": 35,
+  "objective": "Использовать sein с перемещением в прошлом.",
+  "guide": "При перемещении многие глаголы образуют Perfekt с sein: ich bin gefahren, wir sind angekommen. Приставка an остаётся в angekommen.",
+  "vocabulary": [
+    {
+      "id": "de:v015:36:p0",
+      "en": "Ich bin mit dem Zug gefahren.",
+      "ru": "Я ехал на поезде."
+    },
+    {
+      "id": "de:v015:36:p1",
+      "en": "Wir sind um acht Uhr angekommen.",
+      "ru": "Мы приехали в восемь."
+    },
+    {
+      "id": "de:v015:36:p2",
+      "en": "Bist du zu Fuß gegangen?",
+      "ru": "Ты пошёл пешком?"
+    },
+    {
+      "id": "de:v015:36:p3",
+      "en": "Sie ist gestern nach Berlin geflogen.",
+      "ru": "Она вчера полетела в Берлин."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Как прошла дорога",
+      "phrase": "Ich bin mit dem Zug gefahren.",
+      "translation": "Я ехал на поезде.",
+      "explanation": "При перемещении многие глаголы образуют Perfekt с sein: ich bin gefahren, wir sind angekommen. Приставка an остаётся в angekommen."
+    },
+    {
+      "character": "miko",
+      "title": "Как прошла дорога",
+      "phrase": "Wir sind um acht Uhr angekommen.",
+      "translation": "Мы приехали в восемь.",
+      "explanation": "Wir sind um acht Uhr angekommen. — Мы приехали в восемь."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как прошла дорога",
+      "phrase": "Bist du zu Fuß gegangen?",
+      "translation": "Ты пошёл пешком?",
+      "explanation": "Bist du zu Fuß gegangen? — Ты пошёл пешком?"
+    },
+    {
+      "character": "orbi",
+      "title": "Как прошла дорога",
+      "phrase": "Sie ist gestern nach Berlin geflogen.",
+      "translation": "Она вчера полетела в Берлин.",
+      "explanation": "Sie ist gestern nach Berlin geflogen. — Она вчера полетела в Берлин."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich bin mit dem Zug gefahren.",
+      "translation": "Я ехал на поезде.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я ехал на поезде.",
+      "options": [
+        "Ты пошёл пешком?",
+        "Я ехал на поезде.",
+        "Она вчера полетела в Берлин."
+      ],
+      "explanation": "При перемещении многие глаголы образуют Perfekt с sein: ich bin gefahren, wir sind angekommen. Приставка an остаётся в angekommen."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wir sind um acht Uhr angekommen.",
+      "translation": "Мы приехали в восемь.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wir sind um acht Uhr angekommen.",
+      "tokens": [
+        "Wir",
+        "sind",
+        "um",
+        "acht",
+        "Uhr",
+        "angekommen."
+      ],
+      "character": "miko",
+      "explanation": "Wir sind um acht Uhr angekommen. — Мы приехали в восемь."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-36-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы купили свежий хлеб.",
+      "answers": [
+        "Wir haben frisches Brot gekauft."
+      ],
+      "explanation": "Wir haben frisches Brot gekauft. — Мы купили свежий хлеб.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ich habe gestern gekocht.",
+        "Wir haben frisches Brot gekauft.",
+        "Hast du die Rechnung bezahlt?",
+        "Sie hat lange gewartet."
+      ]
+    },
+    {
+      "id": "de-a1-36-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я ехал на поезде.»?",
+      "answers": [
+        "Ich bin mit dem Zug gefahren."
+      ],
+      "explanation": "Ich bin mit dem Zug gefahren. — Я ехал на поезде.",
+      "wordIds": [
+        "de:v015:36:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wir sind um acht Uhr angekommen.",
+        "Sie ist gestern nach Berlin geflogen.",
+        "Ich bin mit dem Zug gefahren."
+      ],
+      "hint": "Ich bin mit dem Zug gefahren. — Я ехал на поезде."
+    },
+    {
+      "id": "de-a1-36-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Мы приехали в восемь.",
+      "answers": [
+        "Wir sind um acht Uhr angekommen."
+      ],
+      "explanation": "При перемещении многие глаголы образуют Perfekt с sein: ich bin gefahren, wir sind angekommen. Приставка an остаётся в angekommen.",
+      "wordIds": [
+        "de:v015:36:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wir",
+        "sind",
+        "um",
+        "acht",
+        "Uhr",
+        "angekommen."
+      ],
+      "hint": "Wir sind um acht Uhr angekommen. — Мы приехали в восемь."
+    },
+    {
+      "id": "de-a1-36-e04",
+      "type": "dialogue",
+      "prompt": "Как путешественники добрались?",
+      "answers": [
+        "На поезде."
+      ],
+      "explanation": "В диалоге: Seid ihr mit dem Bus gefahren? / Nein, wir sind mit dem Zug gefahren und um acht Uhr angekommen. Поэтому: На поезде.",
+      "wordIds": [
+        "de:v015:36:p0",
+        "de:v015:36:p1",
+        "de:v015:36:p2",
+        "de:v015:36:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Seid ihr mit dem Bus gefahren?\nМико: Nein, wir sind mit dem Zug gefahren und um acht Uhr angekommen.",
+      "options": [
+        "На автобусе.",
+        "Пешком.",
+        "На поезде."
+      ]
+    },
+    {
+      "id": "de-a1-36-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ты пошёл пешком?"
+      ],
+      "explanation": "Bist du zu Fuß gegangen? — Ты пошёл пешком?",
+      "wordIds": [
+        "de:v015:36:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Bist du zu Fuß gegangen?",
+      "options": [
+        "Я ехал на поезде.",
+        "Ты пошёл пешком?",
+        "Мы приехали в восемь."
+      ],
+      "hint": "Bist du zu Fuß gegangen? — Ты пошёл пешком?"
+    },
+    {
+      "id": "de-a1-36-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich habe mit dem Zug gefahren.",
+      "answers": [
+        "Ich bin mit dem Zug gefahren."
+      ],
+      "explanation": "Fahren при перемещении образует Perfekt с sein: ich bin gefahren.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich habe mit dem Zug gefahren.",
+        "Ich bin mit dem Zug gefahren."
+      ],
+      "hint": "При перемещении многие глаголы образуют Perfekt с sein: ich bin gefahren, wir sind angekommen. Приставка an остаётся в angekommen."
+    },
+    {
+      "id": "de-a1-36-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Она вчера полетела в Берлин.». Можно написать вместо микрофона.",
+      "answers": [
+        "Sie ist gestern nach Berlin geflogen."
+      ],
+      "explanation": "Sie ist gestern nach Berlin geflogen. — Она вчера полетела в Берлин.",
+      "wordIds": [
+        "de:v015:36:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Sie ist gestern nach Berlin geflogen.",
+      "recall": {
+        "phrase": "Sie ist gestern nach Berlin geflogen.",
+        "meaning": "Она вчера полетела в Берлин."
+      }
+    },
+    {
+      "id": "de-a1-36-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я ехал на поезде.",
+      "answers": [
+        "Ich bin mit dem Zug gefahren."
+      ],
+      "explanation": "При перемещении многие глаголы образуют Perfekt с sein: ich bin gefahren, wir sind angekommen. Приставка an остаётся в angekommen.",
+      "wordIds": [
+        "de:v015:36:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich bin mit dem Zug gefahren.",
+        "meaning": "Я ехал на поезде."
+      }
+    }
+  ]
+}

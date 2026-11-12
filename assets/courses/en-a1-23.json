@@ -1,0 +1,284 @@
+{
+  "id": "en-a1-23",
+  "title": "На автобусной остановке",
+  "topic": "На автобусной остановке",
+  "order": 22,
+  "objective": "Найти остановку и уточнить маршрут.",
+  "guide": "Where is…? помогает найти место. Does this bus go to…? — вопрос о маршруте: после does используем go, без -s. A ticket to… — билет до…",
+  "vocabulary": [
+    {
+      "id": "en:bus",
+      "en": "bus",
+      "ru": "автобус"
+    },
+    {
+      "id": "en:station",
+      "en": "station",
+      "ru": "вокзал"
+    },
+    {
+      "id": "en:ticket",
+      "en": "ticket",
+      "ru": "билет"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-23-e01",
+      "type": "choice",
+      "prompt": "Выбери фразу: «Где автобусная остановка?»",
+      "answers": [
+        "Where is the bus stop?"
+      ],
+      "explanation": "Where is the bus stop? — Где автобусная остановка?",
+      "hint": "Where is the bus stop? — Где автобусная остановка?",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "options": [
+        "Does this bus go to the station?",
+        "Where is the bus stop?",
+        "Turn left at the station."
+      ]
+    },
+    {
+      "id": "en-a1-23-e02",
+      "type": "choice",
+      "prompt": "Что означает «Does this bus go to the station?»?",
+      "answers": [
+        "Этот автобус идёт до вокзала?"
+      ],
+      "explanation": "Does this bus go to the station? — Этот автобус идёт до вокзала?",
+      "hint": "Does this bus go to the station? — Этот автобус идёт до вокзала?",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Понимание",
+      "character": "miko",
+      "options": [
+        "Один билет до вокзала, пожалуйста.",
+        "Поверните налево у вокзала.",
+        "Этот автобус идёт до вокзала?"
+      ]
+    },
+    {
+      "id": "en-a1-23-e03",
+      "type": "order",
+      "prompt": "Собери фразу: «Один билет до вокзала, пожалуйста.»",
+      "answers": [
+        "One ticket to the station, please"
+      ],
+      "explanation": "One ticket to the station, please. — Один билет до вокзала, пожалуйста.",
+      "hint": "One ticket to the station, please. — Один билет до вокзала, пожалуйста.",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Понимание",
+      "character": "zig_quartz",
+      "tokens": [
+        "One",
+        "ticket",
+        "to",
+        "the",
+        "station,",
+        "please"
+      ]
+    },
+    {
+      "id": "en-a1-23-e04",
+      "type": "pairs",
+      "prompt": "Соедини слова с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "bus — автобус; station — вокзал; ticket — билет",
+      "hint": "bus — автобус; station — вокзал; ticket — билет",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Понимание",
+      "character": "orbi",
+      "pairs": [
+        {
+          "id": "en:bus",
+          "en": "bus",
+          "ru": "автобус"
+        },
+        {
+          "id": "en:station",
+          "en": "station",
+          "ru": "вокзал"
+        },
+        {
+          "id": "en:ticket",
+          "en": "ticket",
+          "ru": "билет"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-23-e05",
+      "type": "listen",
+      "prompt": "Послушай и выбери значение. Если голос недоступен, прочитай фразу.",
+      "answers": [
+        "Поверните налево у вокзала."
+      ],
+      "explanation": "Turn left at the station. — Поверните налево у вокзала.",
+      "hint": "Turn left at the station. — Поверните налево у вокзала.",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Практика",
+      "character": "miko",
+      "audio": "Turn left at the station.",
+      "options": [
+        "Где автобусная остановка?",
+        "Поверните налево у вокзала.",
+        "Один билет до вокзала, пожалуйста."
+      ]
+    },
+    {
+      "id": "en-a1-23-e06",
+      "type": "gap",
+      "prompt": "Уточни маршрут: Does this bus ___ to the station?",
+      "answers": [
+        "go"
+      ],
+      "explanation": "Where is…? помогает найти место. Does this bus go to…? — вопрос о маршруте: после does используем go, без -s. A ticket to… — билет до…",
+      "hint": "Where is…? помогает найти место. Does this bus go to…? — вопрос о маршруте: после does используем go, без -s. A ticket to… — билет до…",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Практика",
+      "character": "zig_quartz",
+      "options": [
+        "goes",
+        "go",
+        "going"
+      ]
+    },
+    {
+      "id": "en-a1-23-e07",
+      "type": "dialogue",
+      "prompt": "Ты у кассы. Кассир ждёт твой заказ. Попроси один билет до вокзала.",
+      "answers": [
+        "One ticket to the station, please."
+      ],
+      "explanation": "В этой ситуации подходит: One ticket to the station, please.",
+      "hint": "В этой ситуации подходит: One ticket to the station, please.",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Практика",
+      "character": "orbi",
+      "options": [
+        "Where is the bus stop?",
+        "Turn left at the station.",
+        "One ticket to the station, please."
+      ],
+      "scene": "meeting"
+    },
+    {
+      "id": "en-a1-23-e08",
+      "type": "correct",
+      "prompt": "Исправь фразу: «Does this bus goes to the station?»",
+      "answers": [
+        "Does this bus go to the station?"
+      ],
+      "explanation": "В вопросе с does основной глагол остаётся в форме go.",
+      "hint": "В вопросе с does основной глагол остаётся в форме go.",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Практика",
+      "character": "miko"
+    },
+    {
+      "id": "en-a1-23-e09",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: «Поверните налево у вокзала.»",
+      "answers": [
+        "Turn left at the station."
+      ],
+      "explanation": "Turn left at the station. — Поверните налево у вокзала.",
+      "hint": "Turn left at the station. — Поверните налево у вокзала.",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Закрепление",
+      "character": "zig_quartz"
+    },
+    {
+      "id": "en-a1-23-e10",
+      "type": "review",
+      "prompt": "Финал: Ты у кассы. Кассир ждёт твой заказ. Попроси один билет до вокзала.",
+      "answers": [
+        "One ticket to the station, please."
+      ],
+      "explanation": "Теперь ты умеешь: найти остановку и уточнить маршрут.",
+      "hint": "Теперь ты умеешь: найти остановку и уточнить маршрут.",
+      "wordIds": [
+        "en:bus",
+        "en:station",
+        "en:ticket"
+      ],
+      "phase": "Закрепление",
+      "character": "orbi",
+      "options": [
+        "One ticket to the station, please.",
+        "Turn left at the station.",
+        "Where is the bus stop?"
+      ]
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Первая фраза",
+      "phrase": "Where is the bus stop?",
+      "translation": "Где автобусная остановка?",
+      "explanation": "Ситуация: Найти остановку и уточнить маршрут. Where is the bus stop? — Где автобусная остановка?"
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Does this bus go to the station?",
+      "translation": "Этот автобус идёт до вокзала?",
+      "explanation": "Ситуация: Найти остановку и уточнить маршрут. Does this bus go to the station? — Этот автобус идёт до вокзала?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как устроен язык",
+      "phrase": "One ticket to the station, please.",
+      "translation": "Один билет до вокзала, пожалуйста.",
+      "explanation": "Where is…? помогает найти место. Does this bus go to…? — вопрос о маршруте: после does используем go, без -s. A ticket to… — билет до…"
+    },
+    {
+      "character": "orbi",
+      "title": "Теперь попробуем",
+      "phrase": "Turn left at the station.",
+      "translation": "Поверните налево у вокзала.",
+      "explanation": "Ситуация: Найти остановку и уточнить маршрут. Turn left at the station. — Поверните налево у вокзала."
+    }
+  ]
+}

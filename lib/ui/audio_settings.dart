@@ -41,6 +41,11 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const SectionTitle('Звук и голоса'),
+        Text(
+          audio.recordings.recordings.isEmpty
+              ? 'Студийные записи персонажей пока не добавлены. Доступна резервная озвучка голосами устройства.'
+              : 'Офлайн: ${audio.recordings.recordings.length} английских реплик, ${audio.recordings.recordings.map((r) => r.performer).toSet().length} синтезированных голоса. Обычные и медленные версии. Это синтез, не запись актёров. Для остальных фраз — системный голос.',
+        ),
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           title: const Text('Озвучка'),
@@ -122,14 +127,21 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
         ),
         if (message != null) Text(message!),
         if (audio.voices.scanned) ...[
+          Text(
+            'Разных голосов устройства: ${audio.voices.distinctVoiceCount(locale)}. Персонажи могут использовать один и тот же голос.',
+          ),
           const Text(
-            'Голоса с обязательным интернетом исключены. Установите английский и русский офлайн-пакеты в системных настройках TTS. Уникальность и пол голоса зависят от движка; параметры не имитируют актёров.',
+            'Голоса с обязательным интернетом исключены. Установите офлайн-пакет изучаемого языка и русский в системных настройках TTS. Уникальность и пол голоса зависят от движка; параметры не имитируют актёров.',
           ),
           Wrap(
             spacing: 8,
             children: [
               for (final entry in {
                 'en-US': 'English',
+                'es-ES': 'Español',
+                'de-DE': 'Deutsch',
+                'fr-FR': 'Français',
+                'zh-CN': '普通话 · путунхуа',
                 'ru-RU': 'Русский',
               }.entries)
                 ChoiceChip(
@@ -162,9 +174,14 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
                           TextButton.icon(
                             onPressed: () async {
                               final ok = await audio.speak(
-                                locale == 'en-US'
-                                    ? 'Hello! Let us learn together.'
-                                    : 'Привет! Давай учиться вместе.',
+                                {
+                                  'en-US': 'Hello! Let us learn together.',
+                                  'es-ES': '¡Hola! Vamos a aprender juntos.',
+                                  'de-DE': 'Hallo! Lernen wir zusammen.',
+                                  'fr-FR': 'Bonjour ! Apprenons ensemble.',
+                                  'zh-CN': '你好！我们一起学习。',
+                                  'ru-RU': 'Привет! Давай учиться вместе.',
+                                }[locale]!,
                                 character: profile.id,
                                 locale: locale,
                                 slow: slow,

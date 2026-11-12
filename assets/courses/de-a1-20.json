@@ -1,0 +1,249 @@
+{
+  "id": "de-a1-20",
+  "title": "Домашние дела",
+  "topic": "Домашние дела",
+  "order": 19,
+  "objective": "Распределить простые домашние дела.",
+  "guide": "В настоящем времени wir сочетается с формой на -en; du часто имеет окончание -st.",
+  "vocabulary": [
+    {
+      "id": "de:v014:20:p0",
+      "en": "Ich putze die Küche.",
+      "ru": "Я убираю кухню."
+    },
+    {
+      "id": "de:v014:20:p1",
+      "en": "Du wäschst das Geschirr.",
+      "ru": "Ты моешь посуду."
+    },
+    {
+      "id": "de:v014:20:p2",
+      "en": "Wir kaufen heute ein.",
+      "ru": "Мы сегодня делаем покупки."
+    },
+    {
+      "id": "de:v014:20:p3",
+      "en": "Wer bringt den Müll raus?",
+      "ru": "Кто выносит мусор?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Домашние дела",
+      "phrase": "Ich putze die Küche.",
+      "translation": "Я убираю кухню.",
+      "explanation": "В настоящем времени wir сочетается с формой на -en; du часто имеет окончание -st."
+    },
+    {
+      "character": "miko",
+      "title": "Домашние дела",
+      "phrase": "Du wäschst das Geschirr.",
+      "translation": "Ты моешь посуду.",
+      "explanation": "Du wäschst das Geschirr. — Ты моешь посуду."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Домашние дела",
+      "phrase": "Wir kaufen heute ein.",
+      "translation": "Мы сегодня делаем покупки.",
+      "explanation": "Wir kaufen heute ein. — Мы сегодня делаем покупки."
+    },
+    {
+      "character": "orbi",
+      "title": "Домашние дела",
+      "phrase": "Wer bringt den Müll raus?",
+      "translation": "Кто выносит мусор?",
+      "explanation": "Wer bringt den Müll raus? — Кто выносит мусор?"
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich putze die Küche.",
+      "translation": "Я убираю кухню.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я убираю кухню.",
+      "options": [
+        "Мы сегодня делаем покупки.",
+        "Я убираю кухню.",
+        "Кто выносит мусор?"
+      ],
+      "explanation": "В настоящем времени wir сочетается с формой на -en; du часто имеет окончание -st."
+    },
+    {
+      "id": "apply",
+      "phrase": "Du wäschst das Geschirr.",
+      "translation": "Ты моешь посуду.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Du wäschst das Geschirr.",
+      "tokens": [
+        "Du",
+        "wäschst",
+        "das",
+        "Geschirr."
+      ],
+      "character": "miko",
+      "explanation": "Du wäschst das Geschirr. — Ты моешь посуду."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-20-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я убираю кухню.»?",
+      "answers": [
+        "Ich putze die Küche."
+      ],
+      "explanation": "Ich putze die Küche. — Я убираю кухню.",
+      "wordIds": [
+        "de:v014:20:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Du wäschst das Geschirr.",
+        "Wer bringt den Müll raus?",
+        "Ich putze die Küche."
+      ],
+      "hint": "Ich putze die Küche. — Я убираю кухню."
+    },
+    {
+      "id": "de-a1-20-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Ты моешь посуду.",
+      "answers": [
+        "Du wäschst das Geschirr."
+      ],
+      "explanation": "В настоящем времени wir сочетается с формой на -en; du часто имеет окончание -st.",
+      "wordIds": [
+        "de:v014:20:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Du",
+        "wäschst",
+        "das",
+        "Geschirr."
+      ],
+      "hint": "Du wäschst das Geschirr. — Ты моешь посуду."
+    },
+    {
+      "id": "de-a1-20-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы сегодня делаем покупки."
+      ],
+      "explanation": "Wir kaufen heute ein. — Мы сегодня делаем покупки.",
+      "wordIds": [
+        "de:v014:20:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir kaufen heute ein.",
+      "options": [
+        "Я убираю кухню.",
+        "Мы сегодня делаем покупки.",
+        "Ты моешь посуду."
+      ],
+      "hint": "Wir kaufen heute ein. — Мы сегодня делаем покупки."
+    },
+    {
+      "id": "de-a1-20-e03",
+      "type": "dialogue",
+      "prompt": "Что сделают после уборки?",
+      "answers": [
+        "Пойдут за покупками."
+      ],
+      "explanation": "Пойдут за покупками. Распределить простые домашние дела.",
+      "wordIds": [
+        "de:v014:20:p0",
+        "de:v014:20:p1",
+        "de:v014:20:p2",
+        "de:v014:20:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Ich putze die Küche. Wäschst du das Geschirr?\nМико: Ja, danach kaufen wir ein.",
+      "options": [
+        "Будут учиться.",
+        "Сразу лягут спать.",
+        "Пойдут за покупками."
+      ]
+    },
+    {
+      "id": "de-a1-20-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wir kauft heute ein.",
+      "answers": [
+        "Wir kaufen heute ein."
+      ],
+      "explanation": "С wir нужна форма kaufen; приставка ein остаётся в конце.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Wir kauft heute ein.",
+        "Wir kaufen heute ein."
+      ],
+      "hint": "В настоящем времени wir сочетается с формой на -en; du часто имеет окончание -st."
+    },
+    {
+      "id": "de-a1-20-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Кто выносит мусор?». Можно написать вместо микрофона.",
+      "answers": [
+        "Wer bringt den Müll raus?"
+      ],
+      "explanation": "Wer bringt den Müll raus? — Кто выносит мусор?",
+      "wordIds": [
+        "de:v014:20:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Wer bringt den Müll raus?",
+      "recall": {
+        "phrase": "Wer bringt den Müll raus?",
+        "meaning": "Кто выносит мусор?"
+      }
+    },
+    {
+      "id": "de-a1-20-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я убираю кухню.",
+      "answers": [
+        "Ich putze die Küche."
+      ],
+      "explanation": "В настоящем времени wir сочетается с формой на -en; du часто имеет окончание -st.",
+      "wordIds": [
+        "de:v014:20:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich putze die Küche.",
+        "meaning": "Я убираю кухню."
+      }
+    },
+    {
+      "id": "de-a1-20-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Нет, это мой телефон.",
+      "answers": [
+        "Nein, das ist mein Handy."
+      ],
+      "explanation": "Nein, das ist mein Handy. — Нет, это мой телефон.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ist das dein Schlüssel?",
+        "Nein, das ist mein Handy.",
+        "Meine Tasche ist blau.",
+        "Sein Buch liegt hier."
+      ]
+    }
+  ]
+}

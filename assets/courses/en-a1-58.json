@@ -1,0 +1,259 @@
+{
+  "id": "en-a1-58",
+  "title": "Объяснить опоздание",
+  "topic": "Объяснить опоздание",
+  "order": 57,
+  "objective": "Связать событие и его причину.",
+  "guide": "Because вводит причину, so — результат.",
+  "vocabulary": [
+    {
+      "id": "en:v014:58:p0",
+      "en": "I am late because the bus broke down.",
+      "ru": "Я опоздал, потому что автобус сломался."
+    },
+    {
+      "id": "en:v014:58:p1",
+      "en": "I took a taxi, so I am almost there.",
+      "ru": "Я взял такси, так что я почти на месте."
+    },
+    {
+      "id": "en:v014:58:p2",
+      "en": "Could you wait ten minutes?",
+      "ru": "Не мог бы ты подождать десять минут?"
+    },
+    {
+      "id": "en:v014:58:p3",
+      "en": "Thank you for waiting.",
+      "ru": "Спасибо за ожидание."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Объяснить опоздание",
+      "phrase": "I am late because the bus broke down.",
+      "translation": "Я опоздал, потому что автобус сломался.",
+      "explanation": "Because вводит причину, so — результат."
+    },
+    {
+      "character": "miko",
+      "title": "Объяснить опоздание",
+      "phrase": "I took a taxi, so I am almost there.",
+      "translation": "Я взял такси, так что я почти на месте.",
+      "explanation": "I took a taxi, so I am almost there. — Я взял такси, так что я почти на месте."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Объяснить опоздание",
+      "phrase": "Could you wait ten minutes?",
+      "translation": "Не мог бы ты подождать десять минут?",
+      "explanation": "Could you wait ten minutes? — Не мог бы ты подождать десять минут?"
+    },
+    {
+      "character": "orbi",
+      "title": "Объяснить опоздание",
+      "phrase": "Thank you for waiting.",
+      "translation": "Спасибо за ожидание.",
+      "explanation": "Thank you for waiting. — Спасибо за ожидание."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I am late because the bus broke down.",
+      "translation": "Я опоздал, потому что автобус сломался.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я опоздал, потому что автобус сломался.",
+      "options": [
+        "Не мог бы ты подождать десять минут?",
+        "Я опоздал, потому что автобус сломался.",
+        "Спасибо за ожидание."
+      ],
+      "explanation": "Because вводит причину, so — результат."
+    },
+    {
+      "id": "apply",
+      "phrase": "I took a taxi, so I am almost there.",
+      "translation": "Я взял такси, так что я почти на месте.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I took a taxi, so I am almost there.",
+      "tokens": [
+        "I",
+        "took",
+        "a",
+        "taxi,",
+        "so",
+        "I",
+        "am",
+        "almost",
+        "there."
+      ],
+      "character": "miko",
+      "explanation": "I took a taxi, so I am almost there. — Я взял такси, так что я почти на месте."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-58-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я опоздал, потому что автобус сломался.»?",
+      "answers": [
+        "I am late because the bus broke down."
+      ],
+      "explanation": "I am late because the bus broke down. — Я опоздал, потому что автобус сломался.",
+      "wordIds": [
+        "en:v014:58:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I took a taxi, so I am almost there.",
+        "Thank you for waiting.",
+        "I am late because the bus broke down."
+      ],
+      "hint": "I am late because the bus broke down. — Я опоздал, потому что автобус сломался."
+    },
+    {
+      "id": "en-a1-58-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я взял такси, так что я почти на месте.",
+      "answers": [
+        "I took a taxi, so I am almost there."
+      ],
+      "explanation": "Because вводит причину, so — результат.",
+      "wordIds": [
+        "en:v014:58:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I",
+        "took",
+        "a",
+        "taxi,",
+        "so",
+        "I",
+        "am",
+        "almost",
+        "there."
+      ],
+      "hint": "I took a taxi, so I am almost there. — Я взял такси, так что я почти на месте."
+    },
+    {
+      "id": "en-a1-58-e03",
+      "type": "dialogue",
+      "prompt": "Почему человек опоздал?",
+      "answers": [
+        "Автобус сломался."
+      ],
+      "explanation": "Автобус сломался. Связать событие и его причину.",
+      "wordIds": [
+        "en:v014:58:p0",
+        "en:v014:58:p1",
+        "en:v014:58:p2",
+        "en:v014:58:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Why are you late?\nМико: The bus broke down, so I took a taxi.",
+      "options": [
+        "Он ждал посылку.",
+        "Такси приехало рано.",
+        "Автобус сломался."
+      ]
+    },
+    {
+      "id": "en-a1-58-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Не мог бы ты подождать десять минут?"
+      ],
+      "explanation": "Could you wait ten minutes? — Не мог бы ты подождать десять минут?",
+      "wordIds": [
+        "en:v014:58:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Could you wait ten minutes?",
+      "options": [
+        "Я опоздал, потому что автобус сломался.",
+        "Не мог бы ты подождать десять минут?",
+        "Я взял такси, так что я почти на месте."
+      ],
+      "hint": "Could you wait ten minutes? — Не мог бы ты подождать десять минут?"
+    },
+    {
+      "id": "en-a1-58-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Thank you for wait.",
+      "answers": [
+        "Thank you for waiting."
+      ],
+      "explanation": "После for в этой конструкции используем waiting.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Thank you for wait.",
+        "Thank you for waiting."
+      ],
+      "hint": "Because вводит причину, so — результат."
+    },
+    {
+      "id": "en-a1-58-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Спасибо за ожидание.». Можно написать вместо микрофона.",
+      "answers": [
+        "Thank you for waiting."
+      ],
+      "explanation": "Thank you for waiting. — Спасибо за ожидание.",
+      "wordIds": [
+        "en:v014:58:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Thank you for waiting.",
+      "recall": {
+        "phrase": "Thank you for waiting.",
+        "meaning": "Спасибо за ожидание."
+      }
+    },
+    {
+      "id": "en-a1-58-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я опоздал, потому что автобус сломался.",
+      "answers": [
+        "I am late because the bus broke down."
+      ],
+      "explanation": "Because вводит причину, so — результат.",
+      "wordIds": [
+        "en:v014:58:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I am late because the bus broke down.",
+        "meaning": "Я опоздал, потому что автобус сломался."
+      }
+    },
+    {
+      "id": "en-a1-58-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Магазин закрывается в шесть.",
+      "answers": [
+        "The shop closes at six."
+      ],
+      "explanation": "The shop closes at six. — Магазин закрывается в шесть.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Could you collect my parcel?",
+        "The shop closes at six.",
+        "Please go there before six.",
+        "I will leave the code on the table."
+      ]
+    }
+  ]
+}

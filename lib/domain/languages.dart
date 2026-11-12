@@ -1,0 +1,73 @@
+/// Interface language stays Russian; course IDs are durable ledger metadata.
+class StudyCourse {
+  final String id, language, name, flag, locale, manifest;
+  final int lessons;
+  const StudyCourse(
+    this.id,
+    this.language,
+    this.name,
+    this.flag,
+    this.locale,
+    this.manifest,
+    this.lessons,
+  );
+  static const english = StudyCourse(
+    'ru-en',
+    'en',
+    'Английский',
+    '🇬🇧',
+    'en-US',
+    'assets/courses/manifest.json',
+    72,
+  );
+  static const all = [
+    english,
+    StudyCourse(
+      'ru-es',
+      'es',
+      'Испанский',
+      '🇪🇸',
+      'es-ES',
+      'assets/courses/manifest-es.json',
+      42,
+    ),
+    StudyCourse(
+      'ru-de',
+      'de',
+      'Немецкий',
+      '🇩🇪',
+      'de-DE',
+      'assets/courses/manifest-de.json',
+      42,
+    ),
+    StudyCourse(
+      'ru-fr',
+      'fr',
+      'Французский',
+      '🇫🇷',
+      'fr-FR',
+      'assets/courses/manifest-fr.json',
+      32,
+    ),
+    StudyCourse(
+      'ru-zh',
+      'zh',
+      'Китайский · путунхуа',
+      '🇨🇳',
+      'zh-CN',
+      'assets/courses/manifest-zh.json',
+      32,
+    ),
+  ];
+  static StudyCourse byId(String? id) =>
+      all.where((c) => c.id == id).firstOrNull ?? english;
+  static StudyCourse forContent(String id) =>
+      all
+          .where(
+            (c) =>
+                id.startsWith('${c.language}-') ||
+                id.startsWith('${c.language}:'),
+          )
+          .firstOrNull ??
+      english;
+}

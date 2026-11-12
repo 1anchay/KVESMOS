@@ -1,3 +1,4 @@
+import 'package:orbitwords/ui/collection_components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -63,22 +64,14 @@ void main() {
         await tester.pump(const Duration(milliseconds: 350));
         expect(
           find.byWidgetPredicate(
-            (w) =>
-                w is Image &&
-                w.image is AssetImage &&
-                (w.image as AssetImage).assetName.endsWith(
-                  '${kind}_closed.png',
-                ),
+            (w) => w is CollectionArt && w.asset.endsWith('${kind}_closed.png'),
           ),
           findsOneWidget,
         );
         await tester.pump(const Duration(milliseconds: 500));
         expect(
           find.byWidgetPredicate(
-            (w) =>
-                w is Image &&
-                w.image is AssetImage &&
-                (w.image as AssetImage).assetName.endsWith('${kind}_open.png'),
+            (w) => w is CollectionArt && w.asset.endsWith('${kind}_open.png'),
           ),
           findsOneWidget,
         );
@@ -88,7 +81,7 @@ void main() {
           await tester.pumpAndSettle();
         } else {
           if (kind == 'supernova') {
-            await tester.pump(const Duration(milliseconds: 600));
+            await tester.pump(const Duration(milliseconds: 1000));
           } else {
             await tester.tap(find.text('Пропустить анимацию'));
           }

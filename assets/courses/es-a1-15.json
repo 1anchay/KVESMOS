@@ -1,0 +1,281 @@
+{
+  "id": "es-a1-15",
+  "title": "Планы · ir a",
+  "topic": "Планы · ir a",
+  "order": 14,
+  "objective": "Рассказать о намерении на завтра.",
+  "guide": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+  "vocabulary": [
+    {
+      "id": "es:v013:15:p0",
+      "en": "Mañana voy a estudiar.",
+      "ru": "Завтра я собираюсь учиться."
+    },
+    {
+      "id": "es:v013:15:p1",
+      "en": "Vamos a visitar a mi hermana.",
+      "ru": "Мы собираемся навестить мою сестру."
+    },
+    {
+      "id": "es:v013:15:p2",
+      "en": "Voy al parque esta tarde.",
+      "ru": "Сегодня днём я иду в парк."
+    },
+    {
+      "id": "es:v013:15:p3",
+      "en": "¿Qué vas a hacer mañana?",
+      "ru": "Что ты собираешься делать завтра?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Mañana voy a estudiar.",
+      "translation": "Завтра я собираюсь учиться.",
+      "explanation": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Vamos a visitar a mi hermana.",
+      "translation": "Мы собираемся навестить мою сестру.",
+      "explanation": "Vamos a visitar a mi hermana. — Мы собираемся навестить мою сестру."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Voy al parque esta tarde.",
+      "translation": "Сегодня днём я иду в парк.",
+      "explanation": "Voy al parque esta tarde. — Сегодня днём я иду в парк."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "¿Qué vas a hacer mañana?",
+      "translation": "Что ты собираешься делать завтра?",
+      "explanation": "¿Qué vas a hacer mañana? — Что ты собираешься делать завтра?\nA + el сокращаются до al.\nВерно: Voy al parque."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-15-e05",
+      "type": "dialogue",
+      "prompt": "Кого собираются навестить?",
+      "answers": [
+        "Сестру Мико"
+      ],
+      "explanation": "Орби: ¿Qué vas a hacer mañana?\nМико: Mañana voy a estudiar. Vamos a visitar a mi hermana.\nСестру Мико",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [
+        "es:v013:15:p0",
+        "es:v013:15:p1",
+        "es:v013:15:p2",
+        "es:v013:15:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Орби: ¿Qué vas a hacer mañana?\nМико: Mañana voy a estudiar. Vamos a visitar a mi hermana.",
+      "options": [
+        "Учителя",
+        "Сестру Мико",
+        "Брата Орби"
+      ]
+    },
+    {
+      "id": "es-a1-15-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Завтра я собираюсь учиться. Выбери реплику.",
+      "answers": [
+        "Mañana voy a estudiar."
+      ],
+      "explanation": "Mañana voy a estudiar. — Завтра я собираюсь учиться.",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [
+        "es:v013:15:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Voy al parque esta tarde.",
+        "Mañana voy a estudiar.",
+        "Vamos a visitar a mi hermana."
+      ]
+    },
+    {
+      "id": "es-a1-15-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Мы собираемся навестить мою сестру.",
+      "answers": [
+        "Vamos a visitar a mi hermana."
+      ],
+      "explanation": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [
+        "es:v013:15:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Vamos",
+        "a",
+        "visitar",
+        "a",
+        "mi",
+        "hermana"
+      ]
+    },
+    {
+      "id": "es-a1-15-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Сегодня днём я иду в парк."
+      ],
+      "explanation": "Voy al parque esta tarde. — Сегодня днём я иду в парк.",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [
+        "es:v013:15:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Voy al parque esta tarde.",
+      "options": [
+        "Мы собираемся навестить мою сестру.",
+        "Что ты собираешься делать завтра?",
+        "Сегодня днём я иду в парк."
+      ]
+    },
+    {
+      "id": "es-a1-15-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Voy a el parque.",
+      "answers": [
+        "Voy al parque."
+      ],
+      "explanation": "A + el сокращаются до al.",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Voy a el parque.",
+        "Voy al parque."
+      ]
+    },
+    {
+      "id": "es-a1-15-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [
+        "es:v013:15:p0",
+        "es:v013:15:p1",
+        "es:v013:15:p2",
+        "es:v013:15:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:15:p0",
+          "en": "Mañana voy a estudiar.",
+          "ru": "Завтра я собираюсь учиться."
+        },
+        {
+          "id": "es:v013:15:p1",
+          "en": "Vamos a visitar a mi hermana.",
+          "ru": "Мы собираемся навестить мою сестру."
+        },
+        {
+          "id": "es:v013:15:p2",
+          "en": "Voy al parque esta tarde.",
+          "ru": "Сегодня днём я иду в парк."
+        },
+        {
+          "id": "es:v013:15:p3",
+          "en": "¿Qué vas a hacer mañana?",
+          "ru": "Что ты собираешься делать завтра?"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-15-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Завтра я собираюсь учиться.",
+      "answers": [
+        "Mañana voy a estudiar."
+      ],
+      "explanation": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [
+        "es:v013:15:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Mañana voy a estudiar.",
+        "meaning": "Завтра я собираюсь учиться."
+      }
+    },
+    {
+      "id": "es-a1-15-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Что ты собираешься делать завтра?",
+      "answers": [
+        "¿Qué vas a hacer mañana?"
+      ],
+      "explanation": "¿Qué vas a hacer mañana? — Что ты собираешься делать завтра?",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [
+        "es:v013:15:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "¿Qué vas a hacer mañana?"
+    },
+    {
+      "id": "es-a1-15-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Vamos a visitar a mi hermana.»?",
+      "answers": [
+        "Мы собираемся навестить мою сестру."
+      ],
+      "explanation": "Vamos a visitar a mi hermana. — Мы собираемся навестить мою сестру.",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [
+        "es:v013:15:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Завтра я собираюсь учиться.",
+        "Мы собираемся навестить мою сестру.",
+        "Что ты собираешься делать завтра?"
+      ]
+    },
+    {
+      "id": "es-a1-15-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Я хочу красную рубашку.",
+      "answers": [
+        "Quiero una camisa roja."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Quiero una camisa roja. — Я хочу красную рубашку.",
+      "hint": "Ir a + инфинитив выражает план: voy a estudiar — собираюсь учиться. Voy — я иду/еду, vamos — мы. A + el сокращается до al: al parque. Mañana — завтра. Esta tarde — сегодня во второй половине дня.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Quiero una camisa roja.",
+        "Este abrigo es grande.",
+        "Estos zapatos son pequeños.",
+        "¿Tiene una talla más grande?"
+      ]
+    }
+  ]
+}

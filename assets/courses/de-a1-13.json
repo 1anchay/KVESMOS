@@ -1,0 +1,280 @@
+{
+  "id": "de-a1-13",
+  "title": "На рынке · количество и цена",
+  "topic": "На рынке · количество и цена",
+  "order": 12,
+  "objective": "Узнать цену и сделать покупку.",
+  "guide": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+  "vocabulary": [
+    {
+      "id": "de:v013:13:p0",
+      "en": "Was kostet ein Kilo Äpfel?",
+      "ru": "Сколько стоит килограмм яблок?"
+    },
+    {
+      "id": "de:v013:13:p1",
+      "en": "Ein Kilo kostet drei Euro.",
+      "ru": "Килограмм стоит три евро."
+    },
+    {
+      "id": "de:v013:13:p2",
+      "en": "Ich nehme zwei Kilo.",
+      "ru": "Я беру два килограмма."
+    },
+    {
+      "id": "de:v013:13:p3",
+      "en": "Das macht sechs Euro.",
+      "ru": "С вас шесть евро."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Was kostet ein Kilo Äpfel?",
+      "translation": "Сколько стоит килограмм яблок?",
+      "explanation": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Ein Kilo kostet drei Euro.",
+      "translation": "Килограмм стоит три евро.",
+      "explanation": "Ein Kilo kostet drei Euro. — Килограмм стоит три евро."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Ich nehme zwei Kilo.",
+      "translation": "Я беру два килограмма.",
+      "explanation": "Ich nehme zwei Kilo. — Я беру два килограмма."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Das macht sechs Euro.",
+      "translation": "С вас шесть евро.",
+      "explanation": "Das macht sechs Euro. — С вас шесть евро.\nПодлежащее ein Kilo в единственном числе: kostet.\nВерно: Ein Kilo kostet drei Euro."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-13-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Сколько стоит килограмм яблок? Выбери реплику.",
+      "answers": [
+        "Was kostet ein Kilo Äpfel?"
+      ],
+      "explanation": "Was kostet ein Kilo Äpfel? — Сколько стоит килограмм яблок?",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [
+        "de:v013:13:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Ich nehme zwei Kilo.",
+        "Was kostet ein Kilo Äpfel?",
+        "Ein Kilo kostet drei Euro."
+      ]
+    },
+    {
+      "id": "de-a1-13-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Я беру два килограмма."
+      ],
+      "explanation": "Ich nehme zwei Kilo. — Я беру два килограмма.",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [
+        "de:v013:13:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Ich nehme zwei Kilo.",
+      "options": [
+        "Килограмм стоит три евро.",
+        "С вас шесть евро.",
+        "Я беру два килограмма."
+      ]
+    },
+    {
+      "id": "de-a1-13-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Килограмм стоит три евро.",
+      "answers": [
+        "Ein Kilo kostet drei Euro."
+      ],
+      "explanation": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [
+        "de:v013:13:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Ein",
+        "Kilo",
+        "kostet",
+        "drei",
+        "Euro"
+      ]
+    },
+    {
+      "id": "de-a1-13-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [
+        "de:v013:13:p0",
+        "de:v013:13:p1",
+        "de:v013:13:p2",
+        "de:v013:13:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:13:p0",
+          "en": "Was kostet ein Kilo Äpfel?",
+          "ru": "Сколько стоит килограмм яблок?"
+        },
+        {
+          "id": "de:v013:13:p1",
+          "en": "Ein Kilo kostet drei Euro.",
+          "ru": "Килограмм стоит три евро."
+        },
+        {
+          "id": "de:v013:13:p2",
+          "en": "Ich nehme zwei Kilo.",
+          "ru": "Я беру два килограмма."
+        },
+        {
+          "id": "de:v013:13:p3",
+          "en": "Das macht sechs Euro.",
+          "ru": "С вас шесть евро."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-13-e05",
+      "type": "dialogue",
+      "prompt": "Сколько нужно заплатить?",
+      "answers": [
+        "Шесть евро"
+      ],
+      "explanation": "Мико: Was kostet ein Kilo Äpfel?\nОрби: Ein Kilo kostet drei Euro.\nМико: Ich nehme zwei Kilo.\nОрби: Das macht sechs Euro.\nШесть евро",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [
+        "de:v013:13:p0",
+        "de:v013:13:p1",
+        "de:v013:13:p2",
+        "de:v013:13:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Was kostet ein Kilo Äpfel?\nОрби: Ein Kilo kostet drei Euro.\nМико: Ich nehme zwei Kilo.\nОрби: Das macht sechs Euro.",
+      "options": [
+        "Три евро",
+        "Шесть евро",
+        "Два евро"
+      ]
+    },
+    {
+      "id": "de-a1-13-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ein Kilo kosten drei Euro.",
+      "answers": [
+        "Ein Kilo kostet drei Euro."
+      ],
+      "explanation": "Подлежащее ein Kilo в единственном числе: kostet.",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ein Kilo kosten drei Euro.",
+        "Ein Kilo kostet drei Euro."
+      ]
+    },
+    {
+      "id": "de-a1-13-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: С вас шесть евро.",
+      "answers": [
+        "Das macht sechs Euro."
+      ],
+      "explanation": "Das macht sechs Euro. — С вас шесть евро.",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [
+        "de:v013:13:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Das macht sechs Euro."
+    },
+    {
+      "id": "de-a1-13-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Сколько стоит килограмм яблок?",
+      "answers": [
+        "Was kostet ein Kilo Äpfel?"
+      ],
+      "explanation": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [
+        "de:v013:13:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Was kostet ein Kilo Äpfel?",
+        "meaning": "Сколько стоит килограмм яблок?"
+      }
+    },
+    {
+      "id": "de-a1-13-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Ein Kilo kostet drei Euro.»?",
+      "answers": [
+        "Килограмм стоит три евро."
+      ],
+      "explanation": "Ein Kilo kostet drei Euro. — Килограмм стоит три евро.",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [
+        "de:v013:13:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Сколько стоит килограмм яблок?",
+        "Килограмм стоит три евро.",
+        "С вас шесть евро."
+      ]
+    },
+    {
+      "id": "de-a1-13-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Ты любишь есть овощи?",
+      "answers": [
+        "Isst du gern Gemüse?"
+      ],
+      "explanation": "Ты уже встречал эту реплику: Isst du gern Gemüse? — Ты любишь есть овощи?",
+      "hint": "Was kostet…? — сколько стоит…? Was kosten…? — сколько стоят…? Ein Kilo Äpfel — килограмм яблок, без предлога между количеством и продуктом. Ich nehme… — я беру…; nehmen имеет форму nehme с ich. Drei Euro — три евро: в сумме Euro обычно без -s.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Ich esse kein Fleisch.",
+        "Ich trinke Tee ohne Zucker.",
+        "Isst du gern Gemüse?",
+        "Heute koche ich nicht."
+      ]
+    }
+  ]
+}

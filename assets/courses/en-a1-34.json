@@ -1,0 +1,279 @@
+{
+  "id": "en-a1-34",
+  "title": "Помощь в гостинице",
+  "topic": "Помощь в гостинице",
+  "order": 33,
+  "objective": "Описать простую проблему и попросить помощь.",
+  "guide": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+  "vocabulary": [
+    {
+      "id": "en:v013:34:p0",
+      "en": "There isn't a towel in my room.",
+      "ru": "В моём номере нет полотенца."
+    },
+    {
+      "id": "en:v013:34:p1",
+      "en": "The shower doesn't work.",
+      "ru": "Душ не работает."
+    },
+    {
+      "id": "en:v013:34:p2",
+      "en": "Could you help me, please?",
+      "ru": "Не могли бы вы мне помочь?"
+    },
+    {
+      "id": "en:v013:34:p3",
+      "en": "Could I have another towel?",
+      "ru": "Можно мне ещё одно полотенце?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "There isn't a towel in my room.",
+      "translation": "В моём номере нет полотенца.",
+      "explanation": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "The shower doesn't work.",
+      "translation": "Душ не работает.",
+      "explanation": "The shower doesn't work. — Душ не работает."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Could you help me, please?",
+      "translation": "Не могли бы вы мне помочь?",
+      "explanation": "Could you help me, please? — Не могли бы вы мне помочь?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Could I have another towel?",
+      "translation": "Можно мне ещё одно полотенце?",
+      "explanation": "Could I have another towel? — Можно мне ещё одно полотенце?\nПосле could используем help без to.\nВерно: Could you help me, please?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-34-e05",
+      "type": "dialogue",
+      "prompt": "Какая проблема у Анны?",
+      "answers": [
+        "Не работает душ"
+      ],
+      "explanation": "Анна: The shower doesn't work. Could you help me, please?\nОрби: Yes.\nАнна: Could I have another towel?\nНе работает душ",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [
+        "en:v013:34:p0",
+        "en:v013:34:p1",
+        "en:v013:34:p2",
+        "en:v013:34:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Анна: The shower doesn't work. Could you help me, please?\nОрби: Yes.\nАнна: Could I have another towel?",
+      "options": [
+        "Потерян билет",
+        "Не работает душ",
+        "Закрыт ресторан"
+      ]
+    },
+    {
+      "id": "en-a1-34-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: В моём номере нет полотенца. Выбери реплику.",
+      "answers": [
+        "There isn't a towel in my room."
+      ],
+      "explanation": "There isn't a towel in my room. — В моём номере нет полотенца.",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [
+        "en:v013:34:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Could you help me, please?",
+        "There isn't a towel in my room.",
+        "The shower doesn't work."
+      ]
+    },
+    {
+      "id": "en-a1-34-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Душ не работает.",
+      "answers": [
+        "The shower doesn't work."
+      ],
+      "explanation": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [
+        "en:v013:34:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "The",
+        "shower",
+        "doesn't",
+        "work"
+      ]
+    },
+    {
+      "id": "en-a1-34-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Не могли бы вы мне помочь?"
+      ],
+      "explanation": "Could you help me, please? — Не могли бы вы мне помочь?",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [
+        "en:v013:34:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Could you help me, please?",
+      "options": [
+        "Душ не работает.",
+        "Можно мне ещё одно полотенце?",
+        "Не могли бы вы мне помочь?"
+      ]
+    },
+    {
+      "id": "en-a1-34-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Could you to help me, please?",
+      "answers": [
+        "Could you help me, please?"
+      ],
+      "explanation": "После could используем help без to.",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Could you to help me, please?",
+        "Could you help me, please?"
+      ]
+    },
+    {
+      "id": "en-a1-34-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [
+        "en:v013:34:p0",
+        "en:v013:34:p1",
+        "en:v013:34:p2",
+        "en:v013:34:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "en:v013:34:p0",
+          "en": "There isn't a towel in my room.",
+          "ru": "В моём номере нет полотенца."
+        },
+        {
+          "id": "en:v013:34:p1",
+          "en": "The shower doesn't work.",
+          "ru": "Душ не работает."
+        },
+        {
+          "id": "en:v013:34:p2",
+          "en": "Could you help me, please?",
+          "ru": "Не могли бы вы мне помочь?"
+        },
+        {
+          "id": "en:v013:34:p3",
+          "en": "Could I have another towel?",
+          "ru": "Можно мне ещё одно полотенце?"
+        }
+      ]
+    },
+    {
+      "id": "en-a1-34-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: В моём номере нет полотенца.",
+      "answers": [
+        "There isn't a towel in my room."
+      ],
+      "explanation": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [
+        "en:v013:34:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "There isn't a towel in my room.",
+        "meaning": "В моём номере нет полотенца."
+      }
+    },
+    {
+      "id": "en-a1-34-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Можно мне ещё одно полотенце?",
+      "answers": [
+        "Could I have another towel?"
+      ],
+      "explanation": "Could I have another towel? — Можно мне ещё одно полотенце?",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [
+        "en:v013:34:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Could I have another towel?"
+    },
+    {
+      "id": "en-a1-34-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «The shower doesn't work.»?",
+      "answers": [
+        "Душ не работает."
+      ],
+      "explanation": "The shower doesn't work. — Душ не работает.",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [
+        "en:v013:34:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "В моём номере нет полотенца.",
+        "Душ не работает.",
+        "Можно мне ещё одно полотенце?"
+      ]
+    },
+    {
+      "id": "en-a1-34-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Мне нужен номер на две ночи.",
+      "answers": [
+        "I need a room for two nights."
+      ],
+      "explanation": "Ты уже встречал эту реплику: I need a room for two nights. — Мне нужен номер на две ночи.",
+      "hint": "There is / there are сообщают, что где-то есть предмет. There isn't — нет одного предмета. Doesn't work — не работает. Could you…? — вежливая просьба; после could идёт help без to.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "I have a reservation under the name Anna.",
+        "I need a room for two nights.",
+        "What time is check-out?",
+        "Check-out is at eleven."
+      ]
+    }
+  ]
+}

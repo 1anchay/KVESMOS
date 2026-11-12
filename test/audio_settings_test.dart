@@ -14,6 +14,14 @@ import 'support.dart';
 import 'widget_test.dart' show flushDb;
 
 Future<void> loadPreviewFonts() async {
+  await (FontLoader('KvesmosHanzi')..addFont(
+        Future.value(
+          ByteData.sublistView(
+            await File('assets/fonts/kvesmos-hanzi.otf').readAsBytes(),
+          ),
+        ),
+      ))
+      .load();
   for (final family in ['OrbitSans', 'Roboto', 'Ahem']) {
     final loader = FontLoader(family)
       ..addFont(
@@ -28,11 +36,7 @@ Future<void> loadPreviewFonts() async {
   final icons = FontLoader('MaterialIcons')
     ..addFont(
       Future.value(
-        ByteData.sublistView(
-          await File(
-            '.tools/flutter/bin/cache/artifacts/material_fonts/materialicons-regular.otf',
-          ).readAsBytes(),
-        ),
+        ByteData.sublistView(await File(materialIconsFontPath()).readAsBytes()),
       ),
     );
   await icons.load();
@@ -160,6 +164,8 @@ void main() {
           ),
         );
         await flushDb(tester);
+        await advanceTeaching(tester);
+        await flushDb(tester);
         await tester.runAsync(() async {
           final context = tester.element(find.byType(LessonScreen));
           for (final path in [
@@ -171,7 +177,12 @@ void main() {
         });
         await tester.pumpAndSettle();
         await tester.runAsync(() => capturePreview(boundary, config.$3));
-        expect(find.text('Новый формат'), findsOneWidget);
+        expect(
+          find.textContaining(
+            config.$1 == 'a1-03' ? 'ЗНАКОМСТВО' : 'ПОНИМАНИЕ',
+          ),
+          findsOneWidget,
+        );
         expect(tester.takeException(), isNull);
         await tester.pumpWidget(const SizedBox.shrink());
         await tester.runAsync(r.db.close);

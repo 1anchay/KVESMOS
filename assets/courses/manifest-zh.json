@@ -1,0 +1,308 @@
+{
+  "id": "ru-zh",
+  "version": 1,
+  "sourceLanguage": "ru",
+  "targetLanguage": "zh",
+  "sections": [
+    {
+      "id": "zh-v012",
+      "title": "Первые разговоры",
+      "themes": [
+        {
+          "id": "zh-intro",
+          "title": "Начальный курс",
+          "lessons": [
+            {
+              "id": "zh-a1-01",
+              "title": "你好 · первый контакт",
+              "asset": "assets/courses/zh-a1-01.json",
+              "order": 0
+            },
+            {
+              "id": "zh-a1-02",
+              "title": "我叫 · имя",
+              "asset": "assets/courses/zh-a1-02.json",
+              "order": 1
+            },
+            {
+              "id": "zh-a1-03",
+              "title": "Числа и возраст",
+              "asset": "assets/courses/zh-a1-03.json",
+              "order": 2
+            },
+            {
+              "id": "zh-a1-04",
+              "title": "Предметы · что это?",
+              "asset": "assets/courses/zh-a1-04.json",
+              "order": 3
+            },
+            {
+              "id": "zh-a1-05",
+              "title": "Моя семья",
+              "asset": "assets/courses/zh-a1-05.json",
+              "order": 4
+            },
+            {
+              "id": "zh-a1-06",
+              "title": "В кафе · чай и просьбы",
+              "asset": "assets/courses/zh-a1-06.json",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-v013",
+      "title": "Самостоятельные разговоры",
+      "themes": [
+        {
+          "id": "zh-v013-unit-1",
+          "title": "Где находится предмет · 在",
+          "lessons": [
+            {
+              "id": "zh-a1-07",
+              "title": "Где находится предмет · 在",
+              "asset": "assets/courses/zh-a1-07.json",
+              "order": 6
+            },
+            {
+              "id": "zh-a1-08",
+              "title": "Куда идти · 左 и 右",
+              "asset": "assets/courses/zh-a1-08.json",
+              "order": 7
+            }
+          ]
+        },
+        {
+          "id": "zh-v013-unit-2",
+          "title": "Цена и количество · 块 и 个",
+          "lessons": [
+            {
+              "id": "zh-a1-09",
+              "title": "Цена и количество · 块 и 个",
+              "asset": "assets/courses/zh-a1-09.json",
+              "order": 8
+            },
+            {
+              "id": "zh-a1-10",
+              "title": "Сегодня и завтра · время",
+              "asset": "assets/courses/zh-a1-10.json",
+              "order": 9
+            }
+          ]
+        },
+        {
+          "id": "zh-v013-unit-3",
+          "title": "Просьбы · 可以 и 会",
+          "lessons": [
+            {
+              "id": "zh-a1-11",
+              "title": "Просьбы · 可以 и 会",
+              "asset": "assets/courses/zh-a1-11.json",
+              "order": 10
+            },
+            {
+              "id": "zh-a1-12",
+              "title": "Итог · покупки и планы",
+              "asset": "assets/courses/zh-a1-12.json",
+              "order": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-v014",
+      "title": "Разговоры на каждый день",
+      "themes": [
+        {
+          "id": "zh-v014-unit-1",
+          "title": "Чья это книга",
+          "lessons": [
+            {
+              "id": "zh-a1-13",
+              "title": "Чья это книга",
+              "asset": "assets/courses/zh-a1-13.json",
+              "order": 12
+            },
+            {
+              "id": "zh-a1-14",
+              "title": "Есть и нет",
+              "asset": "assets/courses/zh-a1-14.json",
+              "order": 13
+            }
+          ]
+        },
+        {
+          "id": "zh-v014-unit-2",
+          "title": "Дата и день недели",
+          "lessons": [
+            {
+              "id": "zh-a1-15",
+              "title": "Дата и день недели",
+              "asset": "assets/courses/zh-a1-15.json",
+              "order": 14
+            },
+            {
+              "id": "zh-a1-16",
+              "title": "Каждый день и иногда",
+              "asset": "assets/courses/zh-a1-16.json",
+              "order": 15
+            }
+          ]
+        },
+        {
+          "id": "zh-v014-unit-3",
+          "title": "Считаем покупки",
+          "lessons": [
+            {
+              "id": "zh-a1-17",
+              "title": "Считаем покупки",
+              "asset": "assets/courses/zh-a1-17.json",
+              "order": 16
+            },
+            {
+              "id": "zh-a1-18",
+              "title": "Выбрать из двух",
+              "asset": "assets/courses/zh-a1-18.json",
+              "order": 17
+            }
+          ]
+        },
+        {
+          "id": "zh-v014-unit-4",
+          "title": "Объяснить свой выбор",
+          "lessons": [
+            {
+              "id": "zh-a1-19",
+              "title": "Объяснить свой выбор",
+              "asset": "assets/courses/zh-a1-19.json",
+              "order": 18
+            },
+            {
+              "id": "zh-a1-20",
+              "title": "Сообщение перед встречей",
+              "asset": "assets/courses/zh-a1-20.json",
+              "order": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-v015",
+      "title": "Самостоятельное общение",
+      "themes": [
+        {
+          "id": "zh-v015-unit-1",
+          "title": "Обмен и бронирование",
+          "lessons": [
+            {
+              "id": "zh-a1-21",
+              "title": "Обменять одежду",
+              "asset": "assets/courses/zh-a1-21.json",
+              "order": 20
+            },
+            {
+              "id": "zh-a1-22",
+              "title": "Бронь на две ночи",
+              "asset": "assets/courses/zh-a1-22.json",
+              "order": 21
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-2",
+          "title": "Уже и сейчас",
+          "lessons": [
+            {
+              "id": "zh-a1-23",
+              "title": "Уже сделано",
+              "asset": "assets/courses/zh-a1-23.json",
+              "order": 22
+            },
+            {
+              "id": "zh-a1-24",
+              "title": "Прямо сейчас",
+              "asset": "assets/courses/zh-a1-24.json",
+              "order": 23
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-3",
+          "title": "Завершение и ожидание",
+          "lessons": [
+            {
+              "id": "zh-a1-25",
+              "title": "Довести до конца",
+              "asset": "assets/courses/zh-a1-25.json",
+              "order": 24
+            },
+            {
+              "id": "zh-a1-26",
+              "title": "Ещё не успел",
+              "asset": "assets/courses/zh-a1-26.json",
+              "order": 25
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-4",
+          "title": "Опыт и сравнение",
+          "lessons": [
+            {
+              "id": "zh-a1-27",
+              "title": "Был ли такой опыт",
+              "asset": "assets/courses/zh-a1-27.json",
+              "order": 26
+            },
+            {
+              "id": "zh-a1-28",
+              "title": "Сравнить два варианта",
+              "asset": "assets/courses/zh-a1-28.json",
+              "order": 27
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-5",
+          "title": "Скоро и по порядку",
+          "lessons": [
+            {
+              "id": "zh-a1-29",
+              "title": "Скоро начнётся",
+              "asset": "assets/courses/zh-a1-29.json",
+              "order": 28
+            },
+            {
+              "id": "zh-a1-30",
+              "title": "Сначала и потом",
+              "asset": "assets/courses/zh-a1-30.json",
+              "order": 29
+            }
+          ]
+        },
+        {
+          "id": "zh-v015-unit-6",
+          "title": "Результат и новости",
+          "lessons": [
+            {
+              "id": "zh-a1-31",
+              "title": "Понял и нашёл",
+              "asset": "assets/courses/zh-a1-31.json",
+              "order": 30
+            },
+            {
+              "id": "zh-a1-32",
+              "title": "Новости из поездки",
+              "asset": "assets/courses/zh-a1-32.json",
+              "order": 31
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

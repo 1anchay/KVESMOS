@@ -1,0 +1,279 @@
+{
+  "id": "es-a1-16",
+  "title": "Просьбы и разрешение",
+  "topic": "Просьбы и разрешение",
+  "order": 15,
+  "objective": "Вежливо попросить помощь и разрешение.",
+  "guide": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+  "vocabulary": [
+    {
+      "id": "es:v013:16:p0",
+      "en": "¿Puede ayudarme, por favor?",
+      "ru": "Не могли бы вы мне помочь?"
+    },
+    {
+      "id": "es:v013:16:p1",
+      "en": "¿Puede hablar más despacio?",
+      "ru": "Не могли бы вы говорить медленнее?"
+    },
+    {
+      "id": "es:v013:16:p2",
+      "en": "¿Puedo abrir la ventana?",
+      "ru": "Можно открыть окно?"
+    },
+    {
+      "id": "es:v013:16:p3",
+      "en": "¿Puede repetir la dirección?",
+      "ru": "Не могли бы вы повторить адрес?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "¿Puede ayudarme, por favor?",
+      "translation": "Не могли бы вы мне помочь?",
+      "explanation": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "¿Puede hablar más despacio?",
+      "translation": "Не могли бы вы говорить медленнее?",
+      "explanation": "¿Puede hablar más despacio? — Не могли бы вы говорить медленнее?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "¿Puedo abrir la ventana?",
+      "translation": "Можно открыть окно?",
+      "explanation": "¿Puedo abrir la ventana? — Можно открыть окно?"
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "¿Puede repetir la dirección?",
+      "translation": "Не могли бы вы повторить адрес?",
+      "explanation": "¿Puede repetir la dirección? — Не могли бы вы повторить адрес?\nПосле puede нужен инфинитив hablar, не habla.\nВерно: ¿Puede hablar más despacio?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-16-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Не могли бы вы мне помочь? Выбери реплику.",
+      "answers": [
+        "¿Puede ayudarme, por favor?"
+      ],
+      "explanation": "¿Puede ayudarme, por favor? — Не могли бы вы мне помочь?",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [
+        "es:v013:16:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "¿Puedo abrir la ventana?",
+        "¿Puede ayudarme, por favor?",
+        "¿Puede hablar más despacio?"
+      ]
+    },
+    {
+      "id": "es-a1-16-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Можно открыть окно?"
+      ],
+      "explanation": "¿Puedo abrir la ventana? — Можно открыть окно?",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [
+        "es:v013:16:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "¿Puedo abrir la ventana?",
+      "options": [
+        "Не могли бы вы говорить медленнее?",
+        "Не могли бы вы повторить адрес?",
+        "Можно открыть окно?"
+      ]
+    },
+    {
+      "id": "es-a1-16-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Не могли бы вы говорить медленнее?",
+      "answers": [
+        "¿Puede hablar más despacio?"
+      ],
+      "explanation": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [
+        "es:v013:16:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "¿Puede",
+        "hablar",
+        "más",
+        "despacio"
+      ]
+    },
+    {
+      "id": "es-a1-16-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [
+        "es:v013:16:p0",
+        "es:v013:16:p1",
+        "es:v013:16:p2",
+        "es:v013:16:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "es:v013:16:p0",
+          "en": "¿Puede ayudarme, por favor?",
+          "ru": "Не могли бы вы мне помочь?"
+        },
+        {
+          "id": "es:v013:16:p1",
+          "en": "¿Puede hablar más despacio?",
+          "ru": "Не могли бы вы говорить медленнее?"
+        },
+        {
+          "id": "es:v013:16:p2",
+          "en": "¿Puedo abrir la ventana?",
+          "ru": "Можно открыть окно?"
+        },
+        {
+          "id": "es:v013:16:p3",
+          "en": "¿Puede repetir la dirección?",
+          "ru": "Не могли бы вы повторить адрес?"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-16-e05",
+      "type": "dialogue",
+      "prompt": "Что просит Мико?",
+      "answers": [
+        "Повторить адрес медленнее"
+      ],
+      "explanation": "Мико: ¿Puede repetir la dirección? ¿Puede hablar más despacio?\nОрби: Sí.\nПовторить адрес медленнее",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [
+        "es:v013:16:p0",
+        "es:v013:16:p1",
+        "es:v013:16:p2",
+        "es:v013:16:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: ¿Puede repetir la dirección? ¿Puede hablar más despacio?\nОрби: Sí.",
+      "options": [
+        "Открыть дверь",
+        "Повторить адрес медленнее",
+        "Перенести встречу"
+      ]
+    },
+    {
+      "id": "es-a1-16-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: ¿Puede habla más despacio?",
+      "answers": [
+        "¿Puede hablar más despacio?"
+      ],
+      "explanation": "После puede нужен инфинитив hablar, не habla.",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "¿Puede habla más despacio?",
+        "¿Puede hablar más despacio?"
+      ]
+    },
+    {
+      "id": "es-a1-16-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Не могли бы вы повторить адрес?",
+      "answers": [
+        "¿Puede repetir la dirección?"
+      ],
+      "explanation": "¿Puede repetir la dirección? — Не могли бы вы повторить адрес?",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [
+        "es:v013:16:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "¿Puede repetir la dirección?"
+    },
+    {
+      "id": "es-a1-16-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Не могли бы вы мне помочь?",
+      "answers": [
+        "¿Puede ayudarme, por favor?"
+      ],
+      "explanation": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [
+        "es:v013:16:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "¿Puede ayudarme, por favor?",
+        "meaning": "Не могли бы вы мне помочь?"
+      }
+    },
+    {
+      "id": "es-a1-16-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «¿Puede hablar más despacio?»?",
+      "answers": [
+        "Не могли бы вы говорить медленнее?"
+      ],
+      "explanation": "¿Puede hablar más despacio? — Не могли бы вы говорить медленнее?",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [
+        "es:v013:16:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Не могли бы вы мне помочь?",
+        "Не могли бы вы говорить медленнее?",
+        "Не могли бы вы повторить адрес?"
+      ]
+    },
+    {
+      "id": "es-a1-16-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: Мы собираемся навестить мою сестру.",
+      "answers": [
+        "Vamos a visitar a mi hermana."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Vamos a visitar a mi hermana. — Мы собираемся навестить мою сестру.",
+      "hint": "¿Puede…? — можете ли вы…? (вежливое usted), ¿puedes…? — можешь ли ты…? После puede используем инфинитив: ayudar, repetir. ¿Puedo…? — могу ли я…? Más despacio — медленнее.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Mañana voy a estudiar.",
+        "Vamos a visitar a mi hermana.",
+        "Voy al parque esta tarde.",
+        "¿Qué vas a hacer mañana?"
+      ]
+    }
+  ]
+}

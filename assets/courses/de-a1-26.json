@@ -1,0 +1,249 @@
+{
+  "id": "de-a1-26",
+  "title": "Планы на выходной",
+  "topic": "Планы на выходной",
+  "order": 25,
+  "objective": "Рассказать о намерении и согласовать занятие.",
+  "guide": "Wollen обозначает желание или намерение; ich will, wir wollen.",
+  "vocabulary": [
+    {
+      "id": "de:v014:26:p0",
+      "en": "Ich will am Samstag wandern.",
+      "ru": "Я хочу в субботу пойти в поход."
+    },
+    {
+      "id": "de:v014:26:p1",
+      "en": "Wir wollen zusammen kochen.",
+      "ru": "Мы хотим готовить вместе."
+    },
+    {
+      "id": "de:v014:26:p2",
+      "en": "Willst du mitkommen?",
+      "ru": "Хочешь пойти с нами?"
+    },
+    {
+      "id": "de:v014:26:p3",
+      "en": "Ich möchte lieber zu Hause bleiben.",
+      "ru": "Я бы лучше остался дома."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Планы на выходной",
+      "phrase": "Ich will am Samstag wandern.",
+      "translation": "Я хочу в субботу пойти в поход.",
+      "explanation": "Wollen обозначает желание или намерение; ich will, wir wollen."
+    },
+    {
+      "character": "miko",
+      "title": "Планы на выходной",
+      "phrase": "Wir wollen zusammen kochen.",
+      "translation": "Мы хотим готовить вместе.",
+      "explanation": "Wir wollen zusammen kochen. — Мы хотим готовить вместе."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Планы на выходной",
+      "phrase": "Willst du mitkommen?",
+      "translation": "Хочешь пойти с нами?",
+      "explanation": "Willst du mitkommen? — Хочешь пойти с нами?"
+    },
+    {
+      "character": "orbi",
+      "title": "Планы на выходной",
+      "phrase": "Ich möchte lieber zu Hause bleiben.",
+      "translation": "Я бы лучше остался дома.",
+      "explanation": "Ich möchte lieber zu Hause bleiben. — Я бы лучше остался дома."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich will am Samstag wandern.",
+      "translation": "Я хочу в субботу пойти в поход.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я хочу в субботу пойти в поход.",
+      "options": [
+        "Хочешь пойти с нами?",
+        "Я хочу в субботу пойти в поход.",
+        "Я бы лучше остался дома."
+      ],
+      "explanation": "Wollen обозначает желание или намерение; ich will, wir wollen."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wir wollen zusammen kochen.",
+      "translation": "Мы хотим готовить вместе.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wir wollen zusammen kochen.",
+      "tokens": [
+        "Wir",
+        "wollen",
+        "zusammen",
+        "kochen."
+      ],
+      "character": "miko",
+      "explanation": "Wir wollen zusammen kochen. — Мы хотим готовить вместе."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-26-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я хочу в субботу пойти в поход.»?",
+      "answers": [
+        "Ich will am Samstag wandern."
+      ],
+      "explanation": "Ich will am Samstag wandern. — Я хочу в субботу пойти в поход.",
+      "wordIds": [
+        "de:v014:26:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wir wollen zusammen kochen.",
+        "Ich möchte lieber zu Hause bleiben.",
+        "Ich will am Samstag wandern."
+      ],
+      "hint": "Ich will am Samstag wandern. — Я хочу в субботу пойти в поход."
+    },
+    {
+      "id": "de-a1-26-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы хотим готовить вместе.",
+      "answers": [
+        "Wir wollen zusammen kochen."
+      ],
+      "explanation": "Wollen обозначает желание или намерение; ich will, wir wollen.",
+      "wordIds": [
+        "de:v014:26:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wir",
+        "wollen",
+        "zusammen",
+        "kochen."
+      ],
+      "hint": "Wir wollen zusammen kochen. — Мы хотим готовить вместе."
+    },
+    {
+      "id": "de-a1-26-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Хочешь пойти с нами?"
+      ],
+      "explanation": "Willst du mitkommen? — Хочешь пойти с нами?",
+      "wordIds": [
+        "de:v014:26:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Willst du mitkommen?",
+      "options": [
+        "Я хочу в субботу пойти в поход.",
+        "Хочешь пойти с нами?",
+        "Мы хотим готовить вместе."
+      ],
+      "hint": "Willst du mitkommen? — Хочешь пойти с нами?"
+    },
+    {
+      "id": "de-a1-26-e03",
+      "type": "dialogue",
+      "prompt": "Что предпочитает собеседник?",
+      "answers": [
+        "Остаться дома и готовить."
+      ],
+      "explanation": "Остаться дома и готовить. Рассказать о намерении и согласовать занятие.",
+      "wordIds": [
+        "de:v014:26:p0",
+        "de:v014:26:p1",
+        "de:v014:26:p2",
+        "de:v014:26:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Willst du am Samstag wandern?\nМико: Ich möchte lieber zu Hause bleiben und kochen.",
+      "options": [
+        "Пойти в поход.",
+        "Работать весь день.",
+        "Остаться дома и готовить."
+      ]
+    },
+    {
+      "id": "de-a1-26-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wir will zusammen kochen.",
+      "answers": [
+        "Wir wollen zusammen kochen."
+      ],
+      "explanation": "С wir используем wollen.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Wir will zusammen kochen.",
+        "Wir wollen zusammen kochen."
+      ],
+      "hint": "Wollen обозначает желание или намерение; ich will, wir wollen."
+    },
+    {
+      "id": "de-a1-26-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я бы лучше остался дома.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ich möchte lieber zu Hause bleiben."
+      ],
+      "explanation": "Ich möchte lieber zu Hause bleiben. — Я бы лучше остался дома.",
+      "wordIds": [
+        "de:v014:26:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Ich möchte lieber zu Hause bleiben.",
+      "recall": {
+        "phrase": "Ich möchte lieber zu Hause bleiben.",
+        "meaning": "Я бы лучше остался дома."
+      }
+    },
+    {
+      "id": "de-a1-26-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я хочу в субботу пойти в поход.",
+      "answers": [
+        "Ich will am Samstag wandern."
+      ],
+      "explanation": "Wollen обозначает желание или намерение; ich will, wir wollen.",
+      "wordIds": [
+        "de:v014:26:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich will am Samstag wandern.",
+        "meaning": "Я хочу в субботу пойти в поход."
+      }
+    },
+    {
+      "id": "de-a1-26-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Нам разрешено здесь фотографировать.",
+      "answers": [
+        "Wir dürfen hier Fotos machen."
+      ],
+      "explanation": "Wir dürfen hier Fotos machen. — Нам разрешено здесь фотографировать.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Darf ich hier sitzen?",
+        "Hier darf man nicht rauchen.",
+        "Du darfst das Fenster öffnen.",
+        "Wir dürfen hier Fotos machen."
+      ]
+    }
+  ]
+}

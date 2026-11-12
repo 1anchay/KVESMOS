@@ -1,0 +1,280 @@
+{
+  "id": "de-a1-14",
+  "title": "В дороге · составные слова",
+  "topic": "В дороге · составные слова",
+  "order": 13,
+  "objective": "Купить билет и уточнить отправление.",
+  "guide": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+  "vocabulary": [
+    {
+      "id": "de:v013:14:p0",
+      "en": "Ich brauche eine Fahrkarte nach Berlin.",
+      "ru": "Мне нужен билет в Берлин."
+    },
+    {
+      "id": "de:v013:14:p1",
+      "en": "Wann fährt der Zug ab?",
+      "ru": "Когда отправляется поезд?"
+    },
+    {
+      "id": "de:v013:14:p2",
+      "en": "Der Zug fährt um zehn Uhr ab.",
+      "ru": "Поезд отправляется в десять часов."
+    },
+    {
+      "id": "de:v013:14:p3",
+      "en": "Wo ist der Bahnhof?",
+      "ru": "Где вокзал?"
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новая ситуация",
+      "phrase": "Ich brauche eine Fahrkarte nach Berlin.",
+      "translation": "Мне нужен билет в Берлин.",
+      "explanation": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление."
+    },
+    {
+      "character": "miko",
+      "title": "Ответ собеседнику",
+      "phrase": "Wann fährt der Zug ab?",
+      "translation": "Когда отправляется поезд?",
+      "explanation": "Wann fährt der Zug ab? — Когда отправляется поезд?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Замечаем правило",
+      "phrase": "Der Zug fährt um zehn Uhr ab.",
+      "translation": "Поезд отправляется в десять часов.",
+      "explanation": "Der Zug fährt um zehn Uhr ab. — Поезд отправляется в десять часов."
+    },
+    {
+      "character": "orbi",
+      "title": "Применяем",
+      "phrase": "Wo ist der Bahnhof?",
+      "translation": "Где вокзал?",
+      "explanation": "Wo ist der Bahnhof? — Где вокзал?\nПосле wann нужна личная форма fährt; приставка ab остаётся в конце.\nВерно: Wann fährt der Zug ab?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-14-e02",
+      "type": "listen",
+      "prompt": "Радиосвязь: послушай Мико и выбери смысл. Текст можно открыть.",
+      "answers": [
+        "Поезд отправляется в десять часов."
+      ],
+      "explanation": "Der Zug fährt um zehn Uhr ab. — Поезд отправляется в десять часов.",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [
+        "de:v013:14:p2"
+      ],
+      "character": "miko",
+      "phase": "Новая ситуация",
+      "audio": "Der Zug fährt um zehn Uhr ab.",
+      "options": [
+        "Когда отправляется поезд?",
+        "Где вокзал?",
+        "Поезд отправляется в десять часов."
+      ]
+    },
+    {
+      "id": "de-a1-14-e01",
+      "type": "choice",
+      "prompt": "Твоя задача: Мне нужен билет в Берлин. Выбери реплику.",
+      "answers": [
+        "Ich brauche eine Fahrkarte nach Berlin."
+      ],
+      "explanation": "Ich brauche eine Fahrkarte nach Berlin. — Мне нужен билет в Берлин.",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [
+        "de:v013:14:p0"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "options": [
+        "Der Zug fährt um zehn Uhr ab.",
+        "Ich brauche eine Fahrkarte nach Berlin.",
+        "Wann fährt der Zug ab?"
+      ]
+    },
+    {
+      "id": "de-a1-14-e04",
+      "type": "pairs",
+      "prompt": "Соедини реплики с их значениями.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [
+        "de:v013:14:p0",
+        "de:v013:14:p1",
+        "de:v013:14:p2",
+        "de:v013:14:p3"
+      ],
+      "character": "orbi",
+      "phase": "Новая ситуация",
+      "pairs": [
+        {
+          "id": "de:v013:14:p0",
+          "en": "Ich brauche eine Fahrkarte nach Berlin.",
+          "ru": "Мне нужен билет в Берлин."
+        },
+        {
+          "id": "de:v013:14:p1",
+          "en": "Wann fährt der Zug ab?",
+          "ru": "Когда отправляется поезд?"
+        },
+        {
+          "id": "de:v013:14:p2",
+          "en": "Der Zug fährt um zehn Uhr ab.",
+          "ru": "Поезд отправляется в десять часов."
+        },
+        {
+          "id": "de:v013:14:p3",
+          "en": "Wo ist der Bahnhof?",
+          "ru": "Где вокзал?"
+        }
+      ]
+    },
+    {
+      "id": "de-a1-14-e05",
+      "type": "dialogue",
+      "prompt": "Куда едет Мико?",
+      "answers": [
+        "В Берлин"
+      ],
+      "explanation": "Мико: Wann fährt der Zug ab?\nОрби: Der Zug fährt um zehn Uhr ab.\nМико: Ich brauche eine Fahrkarte nach Berlin.\nВ Берлин",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [
+        "de:v013:14:p0",
+        "de:v013:14:p1",
+        "de:v013:14:p2",
+        "de:v013:14:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "scene": "Мико: Wann fährt der Zug ab?\nОрби: Der Zug fährt um zehn Uhr ab.\nМико: Ich brauche eine Fahrkarte nach Berlin.",
+      "options": [
+        "В Мюнхен",
+        "В Берлин",
+        "В Гамбург"
+      ]
+    },
+    {
+      "id": "de-a1-14-e03",
+      "type": "order",
+      "prompt": "Составь реплику: Когда отправляется поезд?",
+      "answers": [
+        "Wann fährt der Zug ab?"
+      ],
+      "explanation": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [
+        "de:v013:14:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Новая ситуация",
+      "tokens": [
+        "Wann",
+        "fährt",
+        "der",
+        "Zug",
+        "ab"
+      ]
+    },
+    {
+      "id": "de-a1-14-e07",
+      "type": "speak",
+      "prompt": "Произнеси реплику или введи её текстом: Где вокзал?",
+      "answers": [
+        "Wo ist der Bahnhof?"
+      ],
+      "explanation": "Wo ist der Bahnhof? — Где вокзал?",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [
+        "de:v013:14:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "audio": "Wo ist der Bahnhof?"
+    },
+    {
+      "id": "de-a1-14-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wann der Zug fährt ab?",
+      "answers": [
+        "Wann fährt der Zug ab?"
+      ],
+      "explanation": "После wann нужна личная форма fährt; приставка ab остаётся в конце.",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Wann der Zug fährt ab?",
+        "Wann fährt der Zug ab?"
+      ]
+    },
+    {
+      "id": "de-a1-14-e09",
+      "type": "choice",
+      "prompt": "Что означает реплика «Wann fährt der Zug ab?»?",
+      "answers": [
+        "Когда отправляется поезд?"
+      ],
+      "explanation": "Wann fährt der Zug ab? — Когда отправляется поезд?",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [
+        "de:v013:14:p1"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Мне нужен билет в Берлин.",
+        "Когда отправляется поезд?",
+        "Где вокзал?"
+      ]
+    },
+    {
+      "id": "de-a1-14-e08",
+      "type": "translate",
+      "prompt": "Вспомни без вариантов: Мне нужен билет в Берлин.",
+      "answers": [
+        "Ich brauche eine Fahrkarte nach Berlin."
+      ],
+      "explanation": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [
+        "de:v013:14:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем в разговоре",
+      "recall": {
+        "phrase": "Ich brauche eine Fahrkarte nach Berlin.",
+        "meaning": "Мне нужен билет в Берлин."
+      }
+    },
+    {
+      "id": "de-a1-14-e10",
+      "type": "review",
+      "prompt": "Мостик к прошлой теме: С вас шесть евро.",
+      "answers": [
+        "Das macht sechs Euro."
+      ],
+      "explanation": "Ты уже встречал эту реплику: Das macht sechs Euro. — С вас шесть евро.",
+      "hint": "Die Fahrkarte — билет на транспорт, der Bahnhof — вокзал: Bahn + Hof. Род составного слова определяется последней частью: der Hof → der Bahnhof. Nach Berlin — в Берлин. Abfahren — отправляться: der Zug fährt … ab. Abfahrt — отправление.",
+      "wordIds": [],
+      "character": "orbi",
+      "phase": "Применяем в разговоре",
+      "options": [
+        "Was kostet ein Kilo Äpfel?",
+        "Ein Kilo kostet drei Euro.",
+        "Ich nehme zwei Kilo.",
+        "Das macht sechs Euro."
+      ]
+    }
+  ]
+}

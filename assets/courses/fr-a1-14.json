@@ -1,0 +1,251 @@
+{
+  "id": "fr-a1-14",
+  "title": "Не сегодня",
+  "topic": "Не сегодня",
+  "order": 13,
+  "objective": "Вежливо отказаться и объяснить причину.",
+  "guide": "В письменном отрицании ne… pas окружает глагол; перед гласной ne становится n'.",
+  "vocabulary": [
+    {
+      "id": "fr:v014:14:p0",
+      "en": "Je ne travaille pas aujourd'hui.",
+      "ru": "Я сегодня не работаю."
+    },
+    {
+      "id": "fr:v014:14:p1",
+      "en": "Je n'ai pas de voiture.",
+      "ru": "У меня нет машины."
+    },
+    {
+      "id": "fr:v014:14:p2",
+      "en": "Nous ne sommes pas libres ce soir.",
+      "ru": "Мы не свободны сегодня вечером."
+    },
+    {
+      "id": "fr:v014:14:p3",
+      "en": "Je ne peux pas venir.",
+      "ru": "Я не могу прийти."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Не сегодня",
+      "phrase": "Je ne travaille pas aujourd'hui.",
+      "translation": "Я сегодня не работаю.",
+      "explanation": "В письменном отрицании ne… pas окружает глагол; перед гласной ne становится n'."
+    },
+    {
+      "character": "miko",
+      "title": "Не сегодня",
+      "phrase": "Je n'ai pas de voiture.",
+      "translation": "У меня нет машины.",
+      "explanation": "Je n'ai pas de voiture. — У меня нет машины."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Не сегодня",
+      "phrase": "Nous ne sommes pas libres ce soir.",
+      "translation": "Мы не свободны сегодня вечером.",
+      "explanation": "Nous ne sommes pas libres ce soir. — Мы не свободны сегодня вечером."
+    },
+    {
+      "character": "orbi",
+      "title": "Не сегодня",
+      "phrase": "Je ne peux pas venir.",
+      "translation": "Я не могу прийти.",
+      "explanation": "Je ne peux pas venir. — Я не могу прийти."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je ne travaille pas aujourd'hui.",
+      "translation": "Я сегодня не работаю.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я сегодня не работаю.",
+      "options": [
+        "Мы не свободны сегодня вечером.",
+        "Я сегодня не работаю.",
+        "Я не могу прийти."
+      ],
+      "explanation": "В письменном отрицании ne… pas окружает глагол; перед гласной ne становится n'."
+    },
+    {
+      "id": "apply",
+      "phrase": "Je n'ai pas de voiture.",
+      "translation": "У меня нет машины.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Je n'ai pas de voiture.",
+      "tokens": [
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "voiture."
+      ],
+      "character": "miko",
+      "explanation": "Je n'ai pas de voiture. — У меня нет машины."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-14-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я сегодня не работаю.»?",
+      "answers": [
+        "Je ne travaille pas aujourd'hui."
+      ],
+      "explanation": "Je ne travaille pas aujourd'hui. — Я сегодня не работаю.",
+      "wordIds": [
+        "fr:v014:14:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Je n'ai pas de voiture.",
+        "Je ne peux pas venir.",
+        "Je ne travaille pas aujourd'hui."
+      ],
+      "hint": "Je ne travaille pas aujourd'hui. — Я сегодня не работаю."
+    },
+    {
+      "id": "fr-a1-14-e02",
+      "type": "order",
+      "prompt": "Собери реплику: У меня нет машины.",
+      "answers": [
+        "Je n'ai pas de voiture."
+      ],
+      "explanation": "В письменном отрицании ne… pas окружает глагол; перед гласной ne становится n'.",
+      "wordIds": [
+        "fr:v014:14:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "voiture."
+      ],
+      "hint": "Je n'ai pas de voiture. — У меня нет машины."
+    },
+    {
+      "id": "fr-a1-14-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы не свободны сегодня вечером."
+      ],
+      "explanation": "Nous ne sommes pas libres ce soir. — Мы не свободны сегодня вечером.",
+      "wordIds": [
+        "fr:v014:14:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Nous ne sommes pas libres ce soir.",
+      "options": [
+        "Я сегодня не работаю.",
+        "Мы не свободны сегодня вечером.",
+        "У меня нет машины."
+      ],
+      "hint": "Nous ne sommes pas libres ce soir. — Мы не свободны сегодня вечером."
+    },
+    {
+      "id": "fr-a1-14-e03",
+      "type": "dialogue",
+      "prompt": "На чём едет собеседник?",
+      "answers": [
+        "На автобусе."
+      ],
+      "explanation": "На автобусе. Вежливо отказаться и объяснить причину.",
+      "wordIds": [
+        "fr:v014:14:p0",
+        "fr:v014:14:p1",
+        "fr:v014:14:p2",
+        "fr:v014:14:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Tu viens en voiture ?\nМико: Non, je n'ai pas de voiture. Je prends le bus.",
+      "options": [
+        "На своей машине.",
+        "На поезде.",
+        "На автобусе."
+      ]
+    },
+    {
+      "id": "fr-a1-14-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je ne ai pas de voiture.",
+      "answers": [
+        "Je n'ai pas de voiture."
+      ],
+      "explanation": "Перед ai используем сокращение n'.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je ne ai pas de voiture.",
+        "Je n'ai pas de voiture."
+      ],
+      "hint": "В письменном отрицании ne… pas окружает глагол; перед гласной ne становится n'."
+    },
+    {
+      "id": "fr-a1-14-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я не могу прийти.». Можно написать вместо микрофона.",
+      "answers": [
+        "Je ne peux pas venir."
+      ],
+      "explanation": "Je ne peux pas venir. — Я не могу прийти.",
+      "wordIds": [
+        "fr:v014:14:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Je ne peux pas venir.",
+      "recall": {
+        "phrase": "Je ne peux pas venir.",
+        "meaning": "Я не могу прийти."
+      }
+    },
+    {
+      "id": "fr-a1-14-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я сегодня не работаю.",
+      "answers": [
+        "Je ne travaille pas aujourd'hui."
+      ],
+      "explanation": "В письменном отрицании ne… pas окружает глагол; перед гласной ne становится n'.",
+      "wordIds": [
+        "fr:v014:14:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je ne travaille pas aujourd'hui.",
+        "meaning": "Я сегодня не работаю."
+      }
+    },
+    {
+      "id": "fr-a1-14-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы собираемся пригласить Леа.",
+      "answers": [
+        "Nous allons inviter Léa."
+      ],
+      "explanation": "Nous allons inviter Léa. — Мы собираемся пригласить Леа.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je vais préparer le dîner.",
+        "Nous allons inviter Léa.",
+        "Tu vas venir demain ?",
+        "Je vais apporter du pain."
+      ]
+    }
+  ]
+}

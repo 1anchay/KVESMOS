@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/account_deletion.dart';
 import '../core/controller.dart';
 import '../domain/course.dart';
 import '../domain/progress.dart';
@@ -939,7 +940,13 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                   }
                   await act(() async {
                     await app.changeAccount(() async {
-                      await cloud.functions.invoke('delete-account');
+                      final deletion = await cloud.functions
+                          .invoke('delete-account')
+                          .timeout(const Duration(seconds: 30));
+                      requireDeletionConfirmation(
+                        deletion.status,
+                        deletion.data,
+                      );
                       try {
                         await cloud.auth.signOut(scope: SignOutScope.local);
                       } finally {

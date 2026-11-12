@@ -46,6 +46,10 @@ for path in args.artifacts:
             libraries.append(dict(file=name, bits=64 if wide else 32, loadAlignments=aligns))
         assert any(l['file'].endswith('/libapp.so') for l in libraries)
         assert any(l['file'].endswith('/libflutter.so') for l in libraries)
+        # A dependency must not advertise an ABI without the actual app engine.
+        for folder in {l['file'].rsplit('/', 1)[0] for l in libraries}:
+            assert folder + '/libflutter.so' in names, ('Missing engine', folder)
+            assert folder + '/libapp.so' in names, ('Missing app', folder)
     reports.append(dict(file=path.name, bytes=path.stat().st_size,
                         sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                         lessons=counts, libraries=libraries,

@@ -20,7 +20,7 @@ jobs:
       - run: flutter pub get
       - run: dart format --output=none --set-exit-if-changed lib test
       - run: flutter analyze
-      - run: flutter build apk --release --target-platform=android-arm64 --target lib/main.dart
+      - run: flutter build apk --release --target lib/main.dart
       - run: flutter build appbundle --release --target lib/main.dart
       - name: Audit unsigned packaging and 64-bit ELF alignment
         run: |

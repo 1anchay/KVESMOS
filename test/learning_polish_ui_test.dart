@@ -125,6 +125,12 @@ void main() {
       await reveal(tester, diagnostic);
       await tester.tap(diagnostic);
       await flushDb(tester);
+      final option = find.widgetWithText(OutlinedButton, 'Hello!');
+      await reveal(tester, option);
+      await tester.tap(option);
+      await flushDb(tester);
+      expect(find.text('Вопрос 2 из 8'), findsOneWidget);
+      expect(find.textContaining('Ответ не сохранён'), findsNothing);
       final skip = find.text('Пропустить диагностику');
       await reveal(tester, skip);
       await tester.tap(skip);

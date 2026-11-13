@@ -122,7 +122,9 @@ class _PlacementPageState extends ConsumerState<PlacementPage> {
                                 option,
                               );
                               if (mounted) {
-                                setState(() => load = Future.value(next));
+                                setState(() {
+                                  load = Future.value(next);
+                                });
                               }
                             } catch (_) {
                               if (context.mounted) {

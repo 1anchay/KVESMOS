@@ -154,9 +154,11 @@ void main() {
       }
       await app.refresh();
       await go('/lesson/$lessonId');
+      final checkpoint = find.byKey(const Key('checkpoint-continue'));
+      if (checkpoint.evaluate().isNotEmpty) await tap(checkpoint);
       final e = run.lesson.exercises[step];
       final wrong = e.options.firstWhere((o) => !checkAnswer(e, o));
-      await tap(find.widgetWithText(OutlinedButton, wrong));
+      await tap(find.text(wrong));
       await tap(find.text('Проверить'));
       expect(find.text(mistakeExplanation(e, wrong)), findsOneWidget);
       await capture('feedback-$lang');

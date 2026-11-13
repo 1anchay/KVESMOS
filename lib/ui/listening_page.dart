@@ -279,7 +279,7 @@ class _ListeningPageState extends ConsumerState<ListeningPage> {
                         ],
                       ),
                     ),
-                  if (value!['heard'] == true || reading) ...[
+                  if (!playing && (value!['heard'] == true || reading)) ...[
                     const SizedBox(height: 12),
                     Text(question.prompt, style: type.titleLarge),
                     for (final option in question.options)
@@ -289,7 +289,7 @@ class _ListeningPageState extends ConsumerState<ListeningPage> {
                             : () => _answer(index, option),
                         child: Text(option),
                       ),
-                  ] else
+                  ] else if (!playing)
                     const Text('После прослушивания появится первый вопрос.'),
                   if (checked) ...[
                     Semantics(

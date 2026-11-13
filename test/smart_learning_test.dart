@@ -56,6 +56,38 @@ void main() {
     return repo;
   }
 
+  test('smart practice retrieves old pinned questions by exact ID', () async {
+    final repo = await profile();
+    final id = repo.catalog.first.id;
+    final old = await repo.lesson(id);
+    final exercise = old.exercises.firstWhere(
+      (e) => StudySkill.forExercise(e) == StudySkill.grammar,
+    );
+    final session = await repo.start(id);
+    await repo.append(
+      repo.event('answer', {
+        'session': session.id,
+        'exercise': exercise.id,
+        'lesson': id,
+        'correct': false,
+        'words': exercise.wordIds,
+      }),
+    );
+    final practice = SmartPracticeRepository(repo);
+    final plan = await practice.plan();
+    expect(plan.items.first.exercise.id, exercise.id);
+    final state = (await practice.open())!;
+    final restored = (await practice.material(state)).first;
+    expect(restored.exercise.id, exercise.id);
+    final transfer = ProgressTransfer(repo, rewards);
+    await transfer.validate(await transfer.export());
+    await practice.answer(state['run'], 0, restored, exercise.answers.first);
+    expect(
+      (await practice.plan()).report.evidence[StudySkill.grammar]!.unresolved,
+      0,
+    );
+  });
+
   test(
     'two profiles merge all five courses, drafts, station states and consumed rewards',
     () async {

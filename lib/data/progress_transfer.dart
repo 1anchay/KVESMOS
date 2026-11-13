@@ -252,6 +252,8 @@ class ProgressTransfer {
           listening,
           pictures,
           conversations,
+          settings,
+          materials,
         );
       }
       final events = <String, LearningEvent>{};
@@ -403,6 +405,8 @@ class ProgressTransfer {
     Map<String, String> listening,
     Set<String> pictures,
     Set<String> conversations,
+    Map<String, String> settings,
+    Map<String, Lesson> materials,
   ) {
     _require(_allowed(key) && _id.hasMatch(key) && value.length <= 200000);
     final parts = key.split(':');
@@ -630,10 +634,23 @@ class ProgressTransfer {
               catalog.containsKey(lesson) &&
                   StudyCourse.forContent(lesson).id == suffix,
             );
-            final raw = learning.updatedMaterials[lesson]!;
-            final exercise = Lesson.fromJson(
-              jsonDecode(raw),
-            ).exercises.where((e) => e.id == id).firstOrNull;
+            final source = item['sourceSession'];
+            Lesson? content;
+            if (source is String) {
+              _require(sessions[source]?.lessonId == lesson);
+              final pinned = settings['$_material$source'];
+              content = pinned == null
+                  ? materials[lesson]
+                  : _lesson(lesson, pinned, catalog);
+            } else {
+              final raw = learning.updatedMaterials[lesson];
+              content = raw == null
+                  ? materials[lesson]
+                  : _lesson(lesson, raw, catalog);
+            }
+            final exercise = content?.exercises
+                .where((e) => e.id == id)
+                .firstOrNull;
             _require(exercise != null);
             if (position == index) {
               _require(

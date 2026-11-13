@@ -10,9 +10,15 @@ import 'listening_repository.dart';
 
 class SmartItem {
   final String? lessonId;
+  final String? sourceSession;
   final Vocabulary? word;
   final Exercise exercise;
-  const SmartItem(this.exercise, {this.lessonId, this.word});
+  const SmartItem(
+    this.exercise, {
+    this.lessonId,
+    this.word,
+    this.sourceSession,
+  });
 }
 
 typedef SmartPlan = ({
@@ -77,9 +83,9 @@ class SmartPracticeRepository {
       ...tried.map((e) => e.data['lesson'] as String).where(catalog.contains),
     });
     final attemptedIds = tried.map((e) => e.data['exercise']).toSet();
+    final installed = await learning.installed();
     final missing = tried.where(
-      (e) =>
-          e.data['skill'] == null && !available.containsKey(e.data['exercise']),
+      (e) => !available.containsKey(e.data['exercise']),
     );
     final historical = <String, StudySkill?>{};
     final materials = <String, Lesson?>{};
@@ -90,7 +96,9 @@ class SmartPracticeRepository {
           'kvesmos.session.material.v1:$session',
         );
         materials[session] = raw == null
-            ? null
+            ? installed.contains(event.data['lesson'])
+                  ? await learning.lesson(event.data['lesson'])
+                  : null
             : Lesson.fromJson(jsonDecode(raw));
       }
       final exercise = materials[session]?.exercises
@@ -98,6 +106,13 @@ class SmartPracticeRepository {
           .firstOrNull;
       if (exercise != null) {
         historical[event.id] = StudySkill.forExercise(exercise);
+        if (historical[event.id] != null) {
+          available[exercise.id] = SmartItem(
+            exercise,
+            lessonId: event.data['lesson'],
+            sourceSession: session,
+          );
+        }
       }
     }
     final report = SkillReport.fromEvents(
@@ -272,6 +287,8 @@ class SmartPracticeRepository {
                 'id': item.exercise.id,
                 'lesson': item.lessonId,
                 'word': item.word?.id,
+                if (item.sourceSession != null)
+                  'sourceSession': item.sourceSession,
               },
           ],
           'index': 0,
@@ -289,13 +306,30 @@ class SmartPracticeRepository {
     final exercises = await _exercises(
       items.map((i) => i['lesson']).whereType<String>().toSet(),
     );
-    return [
-      for (final item in items)
-        if (item['word'] != null)
-          _word(learning.allVocabulary[item['word']]!)
-        else
-          exercises[item['id']]!,
-    ];
+    final result = <SmartItem>[];
+    for (final item in items) {
+      if (item['word'] != null) {
+        result.add(_word(learning.allVocabulary[item['word']]!));
+      } else if (item['sourceSession'] case final String session) {
+        final raw = await learning.setting(
+          'kvesmos.session.material.v1:$session',
+        );
+        final id = item['lesson'] as String;
+        final lesson = raw == null
+            ? await learning.lesson(id)
+            : Lesson.fromJson(jsonDecode(raw));
+        result.add(
+          SmartItem(
+            lesson.exercises.firstWhere((e) => e.id == item['id']),
+            lessonId: id,
+            sourceSession: session,
+          ),
+        );
+      } else {
+        result.add(exercises[item['id']]!);
+      }
+    }
+    return result;
   }
 
   Future<void> draft(String run, int index, String text, List<int> order) =>

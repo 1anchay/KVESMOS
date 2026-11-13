@@ -83,9 +83,16 @@ class RewardOpening {
 class Inventory {
   final Map<String, ChestGrant> grants;
   final Map<String, String> equipped;
-  Inventory({Map<String, ChestGrant>? grants, Map<String, String>? equipped})
-    : grants = grants ?? {},
-      equipped = equipped ?? {};
+
+  /// Items already found on another device in the same one-time chest.
+  final Set<String> transferredItems;
+  Inventory({
+    Map<String, ChestGrant>? grants,
+    Map<String, String>? equipped,
+    Set<String>? transferredItems,
+  }) : grants = grants ?? {},
+       equipped = equipped ?? {},
+       transferredItems = transferredItems ?? {};
   factory Inventory.decode(String? raw) {
     if (raw == null) return Inventory();
     final j = jsonDecode(raw);
@@ -103,15 +110,20 @@ class Inventory {
           ),
       },
       equipped: Map<String, String>.from(j['equipped']),
+      transferredItems: Set<String>.from(j['transferredItems'] ?? []),
     );
   }
-  Set<String> get owned =>
-      grants.values.map((e) => e.itemId).whereType<String>().toSet();
+  Set<String> get owned => {
+    ...transferredItems,
+    ...grants.values.map((e) => e.itemId).whereType<String>(),
+  };
   Iterable<ChestGrant> get pending => grants.values.where((e) => !e.claimed);
   int get unopened => pending.length;
   String encode() => jsonEncode({
     'version': 2,
     'grants': grants.values.map((e) => e.toJson()).toList(),
     'equipped': equipped,
+    if (transferredItems.isNotEmpty)
+      'transferredItems': transferredItems.toList()..sort(),
   });
 }

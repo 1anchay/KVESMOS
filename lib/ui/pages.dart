@@ -88,6 +88,12 @@ class OnboardingPage extends ConsumerWidget {
               Chip(label: Text('Без лимита ошибок')),
             ],
           ),
+        if (step == 0)
+          TextButton.icon(
+            onPressed: () => context.push('/progress-transfer'),
+            icon: const Icon(Icons.file_open_outlined),
+            label: const Text('Восстановить прогресс с другого телефона'),
+          ),
         if (step == 1) const CoursePicker(onboarding: true),
         if (step == 2)
           ...['С нуля', 'Знаю немного'].map(
@@ -126,7 +132,9 @@ class OnboardingPage extends ConsumerWidget {
         const SizedBox(height: 32),
         FilledButton(
           onPressed: () async {
-            if (step == 3) {
+            if (app.onboarded) {
+              context.go('/');
+            } else if (step == 3) {
               await app.repository.setSetting(
                 'kvesmos.onboarding.route.v012',
                 '/companion/reminders',
@@ -1020,6 +1028,11 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     name ??= TextEditingController(text: app.name);
     return pageBody([
       const SectionTitle('Настройки'),
+      ListTile(
+        leading: const Icon(Icons.save_alt),
+        title: const Text('Сохранение и перенос прогресса'),
+        onTap: () => context.push('/progress-transfer'),
+      ),
       const AudioSettings(),
       const SectionTitle('Учебный путь'),
       ListTile(

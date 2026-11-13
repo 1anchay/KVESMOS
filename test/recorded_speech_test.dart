@@ -100,6 +100,31 @@ void main() {
     SoundEffectsService.channel.setMethodCallHandler(null);
   });
   test(
+    'listening evidence waits for completion and rejects failure or interruption',
+    () async {
+      for (final method in ['recordingFinished', 'recordingFailed', 'stop']) {
+        final count = player.requests.length;
+        final result = audio.speakThrough(
+          'Hello!',
+          character: 'orbi',
+          locale: 'en-US',
+          slow: true,
+        );
+        while (player.requests.length == count ||
+            audio.playback.value?.playing != true) {
+          await Future<void>.delayed(Duration.zero);
+        }
+        if (method == 'stop') {
+          await audio.stop();
+        } else {
+          await event(method, player.requests.last);
+        }
+        expect(await result, method == 'recordingFinished');
+        expect(player.lastSlow, true);
+      }
+    },
+  );
+  test(
     'course locale selects only its offline voice, never an English clip',
     () async {
       tts.installed.addAll(const [

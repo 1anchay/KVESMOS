@@ -121,6 +121,7 @@ class SystemTtsBackend
   @override
   final ValueNotifier<String?> failure = ValueNotifier<String?>(null);
   bool _active = false;
+  VoidCallback? onCompleted;
   SystemTtsBackend() {
     void release() {
       _active = false;
@@ -130,7 +131,10 @@ class SystemTtsBackend
           .catchError((_) {});
     }
 
-    tts.setCompletionHandler(release);
+    tts.setCompletionHandler(() {
+      if (_active) onCompleted?.call();
+      release();
+    });
     tts.setStartHandler(() {
       if (_active) playing.value = true;
     });
@@ -430,6 +434,7 @@ class LearningAudio {
   String? lastProblem;
   String studyLocale = 'en-US';
   int _generation = 0;
+  int? _completedGeneration;
   LearningAudio(
     this.read,
     this.write, {
@@ -441,6 +446,13 @@ class LearningAudio {
        recordedPlayer = recordedPlayer ?? NativeRecordedSpeech() {
     voices = CharacterVoiceService(read, write, backend: backend);
     final events = voices.backend;
+    if (events is SystemTtsBackend) {
+      events.onCompleted = () {
+        if (_speakingCharacter != null && lastSource == SpeechSource.system) {
+          _completedGeneration = _generation;
+        }
+      };
+    }
     if (events is TtsPlaybackEvents) {
       final playingEvents = (events as TtsPlaybackEvents).playing;
       playingEvents.addListener(() {
@@ -485,6 +497,8 @@ class LearningAudio {
         if (call.method == 'recordingFailed') {
           lastProblem =
               'Запись прервалась. Повторите прослушивание или прочитайте текст.';
+        } else {
+          _completedGeneration = _generation;
         }
         playback.value = null;
       }
@@ -511,8 +525,8 @@ class LearningAudio {
     lastText = text;
     _speakingCharacter = null;
     _recordingRequest = null;
-    playback.value = null;
     final ticket = ++_generation;
+    playback.value = null;
     await voices.stop();
     await recordedPlayer.stop();
     await effects.stop();
@@ -589,6 +603,47 @@ class LearningAudio {
           : 'Синтез речи не запустил фразу. Проверьте голос в настройках синтеза речи устройства.';
     }
     return ok && ticket == _generation;
+  }
+
+  /// Wait for the player/engine's completion callback. An accepted request,
+  /// interrupted clip or transcript reveal is insufficient listening evidence.
+  Future<bool> speakThrough(
+    String text, {
+    required String character,
+    required String locale,
+    bool slow = false,
+  }) async {
+    final starting = speak(
+      text,
+      character: character,
+      locale: locale,
+      slow: slow,
+    );
+    final ticket = _generation;
+    if (!await starting || ticket != _generation) return false;
+    if (_completedGeneration == ticket) return true;
+    final completion = Completer<bool>();
+    void changed() {
+      if (completion.isCompleted) return;
+      if (ticket == _generation && _completedGeneration == ticket) {
+        completion.complete(true);
+      } else if (ticket != _generation ||
+          playback.value == null ||
+          lastSource == SpeechSource.system && lastProblem != null) {
+        completion.complete(false);
+      }
+    }
+
+    playback.addListener(changed);
+    try {
+      changed();
+      return await completion.future.timeout(
+        const Duration(seconds: 25),
+        onTimeout: () => false,
+      );
+    } finally {
+      playback.removeListener(changed);
+    }
   }
 
   Future<bool> play(SoundEffect effect) async {

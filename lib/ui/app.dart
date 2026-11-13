@@ -20,6 +20,9 @@ import 'practice_hub.dart';
 import 'placement_page.dart';
 import 'picture_recall.dart';
 import 'conversation_page.dart';
+import 'progress_transfer_page.dart';
+import 'listening_page.dart';
+import 'smart_practice_page.dart';
 import '../data/practice_repository.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
@@ -64,6 +67,26 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           : null,
       initialLocation: app.onboarded ? '/' : app.onboardingRoute,
       routes: [
+        GoRoute(
+          path: '/smart-practice',
+          builder: (_, _) => SmartPracticePage(key: ValueKey(app.course.id)),
+        ),
+        GoRoute(
+          path: '/listening',
+          builder: (_, _) => ListeningPage(key: ValueKey(app.course.id)),
+        ),
+        GoRoute(
+          path: '/listening/:scene',
+          builder: (_, state) => ListeningPage(
+            key: ValueKey('${app.course.id}:${state.uri}'),
+            sceneId: state.pathParameters['scene'],
+            repeat: state.uri.queryParameters['repeat'] == '1',
+          ),
+        ),
+        GoRoute(
+          path: '/progress-transfer',
+          builder: (_, _) => const ProgressTransferPage(),
+        ),
         GoRoute(
           path: '/placement',
           builder: (_, _) => PlacementPage(key: ValueKey(app.course.id)),

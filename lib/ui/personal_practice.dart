@@ -33,6 +33,8 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
   final voice = VoiceService();
   Map<String, String> dialogues = {};
   bool showTranscript = false;
+  bool heard = false;
+  bool playing = false;
   Map<String, dynamic>? state;
   Map<String, Exercise> examples = {};
   bool busy = false;
@@ -99,12 +101,16 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
         state!['index'],
         oldPhase,
         input.text,
+        heard: heard && !showTranscript,
       );
       await ref.read(appProvider).refresh();
       if (mounted) {
         setState(() {
           state = value;
-          if (value['phase'] == 0) showTranscript = false;
+          if (value['phase'] == 0) {
+            showTranscript = false;
+            heard = false;
+          }
           input.text = value['phase'] == 2 ? value['text'] : '';
         });
         if (oldPhase == 1) {
@@ -174,10 +180,27 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
     final word = practice.learning.vocabulary[ids[index]]!;
     final listening = widget.mode == PracticeMode.listen;
     Future<void> play(bool slow) async {
-      final ok = await audio.speak(word.en, character: 'miko', slow: slow);
-      if (!ok && context.mounted && state?['index'] == index) {
-        setState(() => showTranscript = true);
-        showMessage(context, audio.lastProblem ?? 'Прочитай фразу на экране.');
+      setState(() => playing = true);
+      final ok = await audio.speakThrough(
+        word.en,
+        character: 'miko',
+        locale: app.course.locale,
+        slow: slow,
+      );
+      if (context.mounted) {
+        setState(() {
+          playing = false;
+          if (state?['index'] == index) {
+            heard = heard || ok;
+            if (!ok && !busy) showTranscript = true;
+          }
+        });
+        if (!ok && !busy && state?['index'] == index) {
+          showMessage(
+            context,
+            audio.lastProblem ?? 'Прочитай фразу на экране.',
+          );
+        }
       }
     }
 
@@ -238,12 +261,12 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
           spacing: 8,
           children: [
             OutlinedButton.icon(
-              onPressed: () => play(false),
+              onPressed: playing || busy ? null : () => play(false),
               icon: const Icon(Icons.volume_up_outlined),
               label: const Text('Послушать'),
             ),
             TextButton(
-              onPressed: () => play(true),
+              onPressed: playing || busy ? null : () => play(true),
               child: const Text('Медленнее'),
             ),
             TextButton(
@@ -252,6 +275,7 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
             ),
           ],
         ),
+        if (showTranscript) const Text('Режим чтения'),
         if (showTranscript || phase == 2) Text(word.en, style: type.titleLarge),
       ],
       if (!listening &&

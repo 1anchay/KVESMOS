@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import '../domain/course.dart';
+import '../domain/study_skills.dart';
 import 'repository.dart';
 
 typedef DialogueLine = ({String text, String meaning, String? pronunciation});
@@ -26,10 +27,10 @@ class Conversation {
     this.paths,
   );
 
-  static Future<List<Conversation>> load() async {
-    final source = await rootBundle.loadString(
-      'assets/learning/conversations.txt',
-    );
+  static Future<List<Conversation>> load() async =>
+      parse(await rootBundle.loadString('assets/learning/conversations.txt'));
+
+  static List<Conversation> parse(String source) {
     return source.split('##').skip(1).map((block) {
       final lines = block.trim().split(RegExp(r'\r?\n'));
       final meta = lines.first.split('|');
@@ -119,6 +120,13 @@ class ConversationRepository {
               typed.replaceAll(' ', '') ==
                   normalizeAnswer(target.pronunciation!).replaceAll(' ', '');
       state['error'] = !correct;
+      await learning.recordPractice(
+        courseId: courseId,
+        sessionId: 'dialogue:${scene.id}',
+        itemId: '${scene.id}:${state['branch']}:$expectedStep',
+        skill: StudySkill.dialogue,
+        correct: correct,
+      );
       if (correct) {
         state['step'] = expectedStep + 1;
         state['text'] = '';

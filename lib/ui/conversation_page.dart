@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/conversation_repository.dart';
+import '../services/device.dart';
+import '../services/learning_audio.dart';
 import 'character_moment.dart';
 import 'design.dart';
 import 'flight_components.dart';
@@ -21,7 +23,10 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
   late Future<({List<Conversation> scenes, Map<String, dynamic>? state})> load;
   ConversationRepository? repository;
   final input = TextEditingController();
+  final voice = VoiceService();
   bool busy = false, help = false, typing = false;
+  bool listening = false;
+  int voiceTicket = 0;
   @override
   void initState() {
     super.initState();
@@ -50,13 +55,25 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
     setState(() => busy = true);
     FocusScope.of(context).unfocus();
     try {
+      voiceTicket++;
+      await voice.stop();
       await app.audio.stop();
       final state = await repository!.advance(step, option);
       if (!mounted) return;
       setState(() {
         load = Future.value((scenes: scenes, state: state));
         input.text = state['text'];
+        listening = false;
       });
+      if (step > 0) {
+        unawaited(
+          app.audio.play(
+            state['error'] == true
+                ? SoundEffect.incorrect
+                : SoundEffect.correct,
+          ),
+        );
+      }
     } catch (_) {
       if (mounted) {
         showMessage(context, 'Реплика не сохранилась. Попробуй ещё раз.');
@@ -64,6 +81,46 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
     } finally {
       if (mounted) setState(() => busy = false);
     }
+  }
+
+  Future<void> _draft(String text) async {
+    try {
+      await repository!.draft(text);
+    } catch (_) {
+      if (mounted) showMessage(context, 'Черновик не сохранён.');
+    }
+  }
+
+  Future<void> _voice() async {
+    final ticket = ++voiceTicket;
+    if (listening) {
+      setState(() => listening = false);
+      await voice.stop();
+      return;
+    }
+    setState(() => listening = true);
+    await app.audio.stop();
+    if (!mounted || ticket != voiceTicket) return;
+    void unavailable(String message) {
+      if (!mounted || ticket != voiceTicket) return;
+      voiceTicket++;
+      setState(() => listening = false);
+      showMessage(context, message);
+    }
+
+    final ok = await voice.listen(
+      (words) {
+        if (!mounted || ticket != voiceTicket || words.isEmpty) return;
+        input.text = words;
+        unawaited(_draft(words));
+      },
+      unavailable,
+      language: app.course.language,
+      onDone: () {
+        if (mounted && ticket == voiceTicket) setState(() => listening = false);
+      },
+    );
+    if (!ok) unavailable('Распознавание недоступно. Ответ можно написать.');
   }
 
   Widget bubble(
@@ -86,6 +143,10 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
         if (help) Text(line.meaning),
         TextButton.icon(
           onPressed: () async {
+            voiceTicket++;
+            setState(() => listening = false);
+            await voice.stop();
+            if (!mounted) return;
             final ok = await app.audio.speak(line.text, character: character);
             if (!ok && mounted) {
               showMessage(
@@ -103,6 +164,8 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
 
   @override
   void dispose() {
+    voiceTicket++;
+    unawaited(voice.stop());
     unawaited(app.audio.stop());
     input.dispose();
     super.dispose();
@@ -249,7 +312,7 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
                 ),
               if (step == 2)
                 TextButton(
-                  onPressed: busy
+                  onPressed: busy || listening
                       ? null
                       : () => setState(() => typing = !typing),
                   child: Text(
@@ -263,15 +326,19 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
                   decoration: const InputDecoration(
                     labelText: 'Ответ на изучаемом языке',
                   ),
-                  onChanged: (text) async {
-                    try {
-                      await repository!.draft(text);
-                    } catch (_) {
-                      if (context.mounted) {
-                        showMessage(context, 'Черновик не сохранён.');
-                      }
-                    }
-                  },
+                  onChanged: _draft,
+                ),
+                TextButton.icon(
+                  onPressed: busy ? null : _voice,
+                  icon: Icon(
+                    listening ? Icons.stop_circle_outlined : Icons.mic_none,
+                  ),
+                  label: Text(
+                    listening ? 'Остановить микрофон' : 'Продиктовать ответ',
+                  ),
+                ),
+                const Text(
+                  'Распознанный текст можно исправить перед ответом. Произношение не оценивается.',
                 ),
                 FilledButton(
                   onPressed: busy

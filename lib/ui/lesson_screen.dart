@@ -70,6 +70,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Map<String, String> pairs = {};
   String? activePair;
   bool busy = false, finished = false, revealedAudio = false;
+  bool heardAudio = false;
   bool showTeaching = false;
   bool recallHidden = false;
   bool rehearsal = false;
@@ -239,6 +240,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     activePair = null;
     result = null;
     revealedAudio = false;
+    heardAudio = false;
     recallHidden = false;
     if (session!.done) {
       finished = true;
@@ -351,6 +353,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           exercise,
           answer,
           total: lesson!.exercises.length,
+          heardAudio: heardAudio && !revealedAudio,
         );
         await app.refresh();
         result = correct;
@@ -403,13 +406,18 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Future<void> speak({bool slow = false}) async {
     final question = exercise;
     await voice.stop();
-    if (!await audio.speak(
-          question.audio ?? question.prompt,
-          character: question.character,
-          slow: slow,
-        ) &&
-        mounted &&
-        question.id == exercise.id) {
+    if (!mounted) return;
+    final text = question.audio ?? question.prompt;
+    final ok = question.type == ExerciseType.listen
+        ? await audio.speakThrough(
+            text,
+            character: question.character,
+            locale: audio.studyLocale,
+            slow: slow,
+          )
+        : await audio.speak(text, character: question.character, slow: slow);
+    if (ok && mounted && question.id == exercise.id) heardAudio = true;
+    if (!ok && mounted && !busy && question.id == exercise.id) {
       setState(() => revealedAudio = true);
       showMessage(
         context,
@@ -779,6 +787,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         onPressed: () => setState(() => revealedAudio = true),
                         child: const Text('Нет звука? Показать фразу'),
                       ),
+                    if (revealedAudio &&
+                        e.audio != null &&
+                        e.type == ExerciseType.listen)
+                      const Text('Режим чтения'),
                     if (revealedAudio && e.audio != null)
                       Text(
                         e.audio!,

@@ -6,6 +6,7 @@ import '../domain/course.dart';
 import '../domain/intro_activity.dart';
 import '../domain/languages.dart';
 import '../domain/progress.dart';
+import '../domain/study_skills.dart';
 import 'database.dart';
 
 class LearningRepository {
@@ -306,13 +307,13 @@ class LearningRepository {
       occurredAt: time.toUtc().toIso8601String(),
       day: dayKey(time),
       data: {
-        ...data,
         'courseId': StudyCourse.forContent(
           '${data['lesson'] ?? (data['words'] as List?)?.firstOrNull ?? ''}',
         ).id,
         'targetLanguage': StudyCourse.forContent(
           '${data['lesson'] ?? (data['words'] as List?)?.firstOrNull ?? ''}',
         ).language,
+        ...data,
       },
     );
   }
@@ -335,6 +336,7 @@ class LearningRepository {
     Exercise exercise,
     String input, {
     required int total,
+    bool heardAudio = false,
   }) => db.transaction(() async {
     final current = await session(sessionId);
     if (current.done || current.position != expectedPosition) {
@@ -343,6 +345,7 @@ class LearningRepository {
     final rehearsal =
         await setting('kvesmos.session.rehearsal.v1:$sessionId') == 'true';
     final correct = checkAnswer(exercise, input);
+    final skill = StudySkill.forExercise(exercise);
     await append(
       event('answer', {
         'session': sessionId,
@@ -351,6 +354,8 @@ class LearningRepository {
         if (rehearsal) 'rehearsal': true,
         'correct': correct,
         'words': exercise.wordIds,
+        if (skill != null) 'skill': skill.name,
+        if (skill == StudySkill.listening) 'evidence': heardAudio,
       }),
     );
     if (correct) {
@@ -380,17 +385,22 @@ class LearningRepository {
     Vocabulary word,
     String input, {
     bool credit = true,
+    StudySkill? skill = StudySkill.words,
+    bool evidence = true,
   }) => db.transaction(() async {
     final day = dayKey(now());
-    final previous = (await allEvents())
-        .where(
-          (e) =>
-              e.kind == 'answer' &&
-              e.day == day &&
-              e.data['exercise'] == 'review:${word.id}' &&
-              e.data['correct'] == true,
-        )
-        .firstOrNull;
+    final previous = credit
+        ? (await allEvents())
+              .where(
+                (e) =>
+                    e.kind == 'answer' &&
+                    e.day == day &&
+                    e.data['exercise'] == 'review:${word.id}' &&
+                    e.data['correct'] == true &&
+                    e.data['rehearsal'] != true,
+              )
+              .firstOrNull
+        : null;
     await append(
       event('answer', {
         // One credit per known word per local study day, including retries and
@@ -400,9 +410,30 @@ class LearningRepository {
         'correct': normalizeAnswer(input) == normalizeAnswer(word.en),
         if (!credit) 'rehearsal': true,
         'words': [word.id],
+        if (skill != null) 'skill': skill.name,
+        'evidence': evidence,
       }),
     );
   });
+
+  Future<void> recordPractice({
+    required String courseId,
+    required String sessionId,
+    required String itemId,
+    required StudySkill skill,
+    required bool correct,
+  }) => append(
+    event('answer', {
+      'session': sessionId,
+      'exercise': itemId,
+      'correct': correct,
+      'rehearsal': true,
+      'skill': skill.name,
+      'evidence': true,
+      'courseId': courseId,
+      'targetLanguage': StudyCourse.byId(courseId).language,
+    }),
+  );
 
   Future<List<LearningEvent>> allEvents() async =>
       (await db.select(db.events).get())

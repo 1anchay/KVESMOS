@@ -124,7 +124,12 @@ void main() {
             await conversation.restart();
           }
         }
-        expect((await repository.allEvents()).length, baselineEvents + 1);
+        final afterDialogue = await repository.allEvents();
+        expect(
+          afterDialogue.where((e) => e.data['skill'] == 'dialogue'),
+          hasLength(12),
+        );
+        expect((await repository.progress()).xp, baselineXp);
         final resumed = await repository.startLesson(legacy.lesson.id);
         expect(resumed.session.id, legacy.session.id);
         expect(resumed.session.draft, '{"text":"legacy draft"}');

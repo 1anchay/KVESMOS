@@ -139,6 +139,16 @@ void main() {
         'fr' => ('fr-a1-14', 'fr-a1-14-e05'),
         _ => ('zh-a1-17', 'zh-a1-17-e06'),
       };
+      final previous =
+          r.catalog[r.catalog.indexWhere((info) => info.id == lessonId) - 1];
+      if (!app.progress.completed.contains(previous.id)) {
+        await r.append(
+          r.event('complete', {
+            'lesson': previous.id,
+            'session': 'demo:${previous.id}',
+          }),
+        );
+      }
       final run = await r.startLesson(lessonId);
       await r.markTeachingSeen(run.session.id);
       final step = run.lesson.exercises.indexWhere((e) => e.id == exerciseId);

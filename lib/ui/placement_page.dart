@@ -61,6 +61,13 @@ class _PlacementPageState extends ConsumerState<PlacementPage> {
           final info = app.repository.catalog
               .where((l) => l.id == state['recommendation'])
               .firstOrNull;
+          final canOpen =
+              info != null &&
+              (info.order == 0 ||
+                  app.progress.completed.contains(info.id) ||
+                  app.progress.completed.contains(
+                    app.repository.catalog[info.order - 1].id,
+                  ));
           final question = done ? null : questions[results.length] as Map;
           return pageBody([
             const CharacterMoment(
@@ -91,7 +98,7 @@ class _PlacementPageState extends ConsumerState<PlacementPage> {
               const Text(
                 'Начало курса всегда доступно. Рекомендация сохранена в выборе языков.',
               ),
-              if (app.onboarded && info != null)
+              if (app.onboarded && canOpen)
                 FilledButton(
                   onPressed: () => showLessonPreview(context, app, info),
                   child: const Text('Посмотреть рекомендованный урок'),

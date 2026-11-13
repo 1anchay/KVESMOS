@@ -1,0 +1,251 @@
+{
+  "id": "fr-a1-36",
+  "title": "Вернуться туда",
+  "topic": "Предметы и адреса",
+  "order": 35,
+  "objective": "Использовать y для уже названного места.",
+  "guide": "Y заменяет указание места. В j’y retourne собеседнику уже известно, куда именно.",
+  "vocabulary": [
+    {
+      "id": "fr:v13:36:p0",
+      "en": "Je suis allé au marché ce matin.",
+      "ru": "Я ходил на рынок сегодня утром."
+    },
+    {
+      "id": "fr:v13:36:p1",
+      "en": "J’y retourne après le déjeuner.",
+      "ru": "Я вернусь туда после обеда."
+    },
+    {
+      "id": "fr:v13:36:p2",
+      "en": "Le magasin ferme à trois heures.",
+      "ru": "Магазин закрывается в три."
+    },
+    {
+      "id": "fr:v13:36:p3",
+      "en": "On se retrouve devant l’entrée.",
+      "ru": "Встретимся перед входом."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Вернуться туда",
+      "phrase": "Je suis allé au marché ce matin.",
+      "translation": "Я ходил на рынок сегодня утром.",
+      "explanation": "Y заменяет указание места. В j’y retourne собеседнику уже известно, куда именно."
+    },
+    {
+      "character": "miko",
+      "title": "Вернуться туда",
+      "phrase": "J’y retourne après le déjeuner.",
+      "translation": "Я вернусь туда после обеда.",
+      "explanation": "J’y retourne après le déjeuner. — Я вернусь туда после обеда."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вернуться туда",
+      "phrase": "Le magasin ferme à trois heures.",
+      "translation": "Магазин закрывается в три.",
+      "explanation": "Le magasin ferme à trois heures. — Магазин закрывается в три."
+    },
+    {
+      "character": "orbi",
+      "title": "Вернуться туда",
+      "phrase": "On se retrouve devant l’entrée.",
+      "translation": "Встретимся перед входом.",
+      "explanation": "On se retrouve devant l’entrée. — Встретимся перед входом."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je suis allé au marché ce matin.",
+      "translation": "Я ходил на рынок сегодня утром.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я ходил на рынок сегодня утром.",
+      "options": [
+        "Магазин закрывается в три.",
+        "Я ходил на рынок сегодня утром.",
+        "Встретимся перед входом."
+      ],
+      "explanation": "Y заменяет указание места. В j’y retourne собеседнику уже известно, куда именно."
+    },
+    {
+      "id": "apply",
+      "phrase": "J’y retourne après le déjeuner.",
+      "translation": "Я вернусь туда после обеда.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "J’y retourne après le déjeuner.",
+      "tokens": [
+        "J’y",
+        "retourne",
+        "après",
+        "le",
+        "déjeuner."
+      ],
+      "character": "miko",
+      "explanation": "J’y retourne après le déjeuner. — Я вернусь туда после обеда."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-36-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я ходил на рынок сегодня утром.»?",
+      "answers": [
+        "Je suis allé au marché ce matin."
+      ],
+      "explanation": "Je suis allé au marché ce matin. — Я ходил на рынок сегодня утром.",
+      "wordIds": [
+        "fr:v13:36:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "J’y retourne après le déjeuner.",
+        "On se retrouve devant l’entrée.",
+        "Je suis allé au marché ce matin."
+      ],
+      "hint": "Je suis allé au marché ce matin. — Я ходил на рынок сегодня утром."
+    },
+    {
+      "id": "fr-a1-36-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я вернусь туда после обеда.",
+      "answers": [
+        "J’y retourne après le déjeuner."
+      ],
+      "explanation": "Y заменяет указание места. В j’y retourne собеседнику уже известно, куда именно.",
+      "wordIds": [
+        "fr:v13:36:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "J’y",
+        "retourne",
+        "après",
+        "le",
+        "déjeuner."
+      ],
+      "hint": "J’y retourne après le déjeuner. — Я вернусь туда после обеда."
+    },
+    {
+      "id": "fr-a1-36-e03",
+      "type": "dialogue",
+      "prompt": "Когда собеседник снова пойдёт на рынок?",
+      "answers": [
+        "После обеда."
+      ],
+      "explanation": "В диалоге: Tu es encore au marché ? / Non, mais j’y retourne après le déjeuner. Поэтому: После обеда.",
+      "wordIds": [
+        "fr:v13:36:p0",
+        "fr:v13:36:p1",
+        "fr:v13:36:p2",
+        "fr:v13:36:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Tu es encore au marché ?\nМико: Non, mais j’y retourne après le déjeuner.",
+      "options": [
+        "До завтрака.",
+        "В три часа.",
+        "После обеда."
+      ]
+    },
+    {
+      "id": "fr-a1-36-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Магазин закрывается в три."
+      ],
+      "explanation": "Le magasin ferme à trois heures. — Магазин закрывается в три.",
+      "wordIds": [
+        "fr:v13:36:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Le magasin ferme à trois heures.",
+      "options": [
+        "Я ходил на рынок сегодня утром.",
+        "Магазин закрывается в три.",
+        "Я вернусь туда после обеда."
+      ],
+      "hint": "Le magasin ferme à trois heures. — Магазин закрывается в три."
+    },
+    {
+      "id": "fr-a1-36-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je retourne y après le déjeuner.",
+      "answers": [
+        "J’y retourne après le déjeuner."
+      ],
+      "explanation": "Y ставится перед глаголом. Je перед ним сокращается до j’.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je retourne y après le déjeuner.",
+        "J’y retourne après le déjeuner."
+      ],
+      "hint": "Y заменяет указание места. В j’y retourne собеседнику уже известно, куда именно."
+    },
+    {
+      "id": "fr-a1-36-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Встретимся перед входом.». Можно написать вместо микрофона.",
+      "answers": [
+        "On se retrouve devant l’entrée."
+      ],
+      "explanation": "On se retrouve devant l’entrée. — Встретимся перед входом.",
+      "wordIds": [
+        "fr:v13:36:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "On se retrouve devant l’entrée.",
+      "recall": {
+        "phrase": "On se retrouve devant l’entrée.",
+        "meaning": "Встретимся перед входом."
+      }
+    },
+    {
+      "id": "fr-a1-36-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я ходил на рынок сегодня утром.",
+      "answers": [
+        "Je suis allé au marché ce matin."
+      ],
+      "explanation": "Y заменяет указание места. В j’y retourne собеседнику уже известно, куда именно.",
+      "wordIds": [
+        "fr:v13:36:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je suis allé au marché ce matin.",
+        "meaning": "Я ходил на рынок сегодня утром."
+      }
+    },
+    {
+      "id": "fr-a1-36-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я заберу их завтра.",
+      "answers": [
+        "Je les prendrai demain."
+      ],
+      "explanation": "Je les prendrai demain. — Я заберу их завтра.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Je laisse la clé chez la voisine.",
+        "Tu peux la récupérer ce soir.",
+        "Les lettres sont sur la table.",
+        "Je les prendrai demain."
+      ]
+    }
+  ]
+}

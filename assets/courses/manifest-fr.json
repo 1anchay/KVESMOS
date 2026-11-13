@@ -303,6 +303,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fr-v13",
+      "title": "Разговоры и решения",
+      "themes": [
+        {
+          "id": "fr-v13-1",
+          "title": "Места и покупки",
+          "lessons": [
+            {
+              "id": "fr-a1-33",
+              "title": "Сколько ещё осталось?",
+              "order": 32,
+              "asset": "assets/courses/fr-a1-33.json"
+            },
+            {
+              "id": "fr-a1-34",
+              "title": "Возьми молока",
+              "order": 33,
+              "asset": "assets/courses/fr-a1-34.json"
+            }
+          ]
+        },
+        {
+          "id": "fr-v13-2",
+          "title": "Предметы и адреса",
+          "lessons": [
+            {
+              "id": "fr-a1-35",
+              "title": "Ключ у соседки",
+              "order": 34,
+              "asset": "assets/courses/fr-a1-35.json"
+            },
+            {
+              "id": "fr-a1-36",
+              "title": "Вернуться туда",
+              "order": 35,
+              "asset": "assets/courses/fr-a1-36.json"
+            }
+          ]
+        },
+        {
+          "id": "fr-v13-3",
+          "title": "Изменения и события",
+          "lessons": [
+            {
+              "id": "fr-a1-37",
+              "title": "Автобус больше не ходит",
+              "order": 36,
+              "asset": "assets/courses/fr-a1-37.json"
+            },
+            {
+              "id": "fr-a1-38",
+              "title": "Пока я готовил",
+              "order": 37,
+              "asset": "assets/courses/fr-a1-38.json"
+            }
+          ]
+        },
+        {
+          "id": "fr-v13-4",
+          "title": "Условия и новости",
+          "lessons": [
+            {
+              "id": "fr-a1-39",
+              "title": "Если будет свободно",
+              "order": 38,
+              "asset": "assets/courses/fr-a1-39.json"
+            },
+            {
+              "id": "fr-a1-40",
+              "title": "Объяснить задержку",
+              "order": 39,
+              "asset": "assets/courses/fr-a1-40.json"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

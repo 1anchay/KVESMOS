@@ -1,0 +1,249 @@
+{
+  "id": "fr-a1-38",
+  "title": "Пока я готовил",
+  "topic": "Изменения и события",
+  "order": 37,
+  "objective": "Различить фон рассказа и неожиданное событие.",
+  "guide": "Imparfait описывает происходившее в тот момент. Passé composé отмечает событие на этом фоне.",
+  "vocabulary": [
+    {
+      "id": "fr:v13:38:p0",
+      "en": "Je préparais le dîner quand tu as appelé.",
+      "ru": "Я готовил ужин, когда ты позвонил."
+    },
+    {
+      "id": "fr:v13:38:p1",
+      "en": "La porte était ouverte.",
+      "ru": "Дверь была открыта."
+    },
+    {
+      "id": "fr:v13:38:p2",
+      "en": "Le chat est entré dans la cuisine.",
+      "ru": "Кот вошёл на кухню."
+    },
+    {
+      "id": "fr:v13:38:p3",
+      "en": "Il s’est caché sous la table.",
+      "ru": "Он спрятался под столом."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Пока я готовил",
+      "phrase": "Je préparais le dîner quand tu as appelé.",
+      "translation": "Я готовил ужин, когда ты позвонил.",
+      "explanation": "Imparfait описывает происходившее в тот момент. Passé composé отмечает событие на этом фоне."
+    },
+    {
+      "character": "miko",
+      "title": "Пока я готовил",
+      "phrase": "La porte était ouverte.",
+      "translation": "Дверь была открыта.",
+      "explanation": "La porte était ouverte. — Дверь была открыта."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Пока я готовил",
+      "phrase": "Le chat est entré dans la cuisine.",
+      "translation": "Кот вошёл на кухню.",
+      "explanation": "Le chat est entré dans la cuisine. — Кот вошёл на кухню."
+    },
+    {
+      "character": "orbi",
+      "title": "Пока я готовил",
+      "phrase": "Il s’est caché sous la table.",
+      "translation": "Он спрятался под столом.",
+      "explanation": "Il s’est caché sous la table. — Он спрятался под столом."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je préparais le dîner quand tu as appelé.",
+      "translation": "Я готовил ужин, когда ты позвонил.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я готовил ужин, когда ты позвонил.",
+      "options": [
+        "Кот вошёл на кухню.",
+        "Я готовил ужин, когда ты позвонил.",
+        "Он спрятался под столом."
+      ],
+      "explanation": "Imparfait описывает происходившее в тот момент. Passé composé отмечает событие на этом фоне."
+    },
+    {
+      "id": "apply",
+      "phrase": "La porte était ouverte.",
+      "translation": "Дверь была открыта.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "La porte était ouverte.",
+      "tokens": [
+        "La",
+        "porte",
+        "était",
+        "ouverte."
+      ],
+      "character": "miko",
+      "explanation": "La porte était ouverte. — Дверь была открыта."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-38-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Нужно сесть на шестой маршрут.",
+      "answers": [
+        "Il faut prendre la ligne six."
+      ],
+      "explanation": "Il faut prendre la ligne six. — Нужно сесть на шестой маршрут.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ce bus ne passe plus ici.",
+        "Il faut prendre la ligne six.",
+        "L’arrêt a changé de place.",
+        "Le prochain bus arrive dans dix minutes."
+      ]
+    },
+    {
+      "id": "fr-a1-38-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я готовил ужин, когда ты позвонил.»?",
+      "answers": [
+        "Je préparais le dîner quand tu as appelé."
+      ],
+      "explanation": "Je préparais le dîner quand tu as appelé. — Я готовил ужин, когда ты позвонил.",
+      "wordIds": [
+        "fr:v13:38:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "La porte était ouverte.",
+        "Il s’est caché sous la table.",
+        "Je préparais le dîner quand tu as appelé."
+      ],
+      "hint": "Je préparais le dîner quand tu as appelé. — Я готовил ужин, когда ты позвонил."
+    },
+    {
+      "id": "fr-a1-38-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Дверь была открыта.",
+      "answers": [
+        "La porte était ouverte."
+      ],
+      "explanation": "Imparfait описывает происходившее в тот момент. Passé composé отмечает событие на этом фоне.",
+      "wordIds": [
+        "fr:v13:38:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "La",
+        "porte",
+        "était",
+        "ouverte."
+      ],
+      "hint": "La porte était ouverte. — Дверь была открыта."
+    },
+    {
+      "id": "fr-a1-38-e04",
+      "type": "dialogue",
+      "prompt": "Чем был занят рассказчик?",
+      "answers": [
+        "Готовил ужин."
+      ],
+      "explanation": "В диалоге: Que faisais-tu quand le chat est entré ? / Je préparais le dîner. Je ne l’ai pas vu tout de suite. Поэтому: Готовил ужин.",
+      "wordIds": [
+        "fr:v13:38:p0",
+        "fr:v13:38:p1",
+        "fr:v13:38:p2",
+        "fr:v13:38:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Que faisais-tu quand le chat est entré ?\nМико: Je préparais le dîner. Je ne l’ai pas vu tout de suite.",
+      "options": [
+        "Звонил другу.",
+        "Закрывал окно.",
+        "Готовил ужин."
+      ]
+    },
+    {
+      "id": "fr-a1-38-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Кот вошёл на кухню."
+      ],
+      "explanation": "Le chat est entré dans la cuisine. — Кот вошёл на кухню.",
+      "wordIds": [
+        "fr:v13:38:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Le chat est entré dans la cuisine.",
+      "options": [
+        "Я готовил ужин, когда ты позвонил.",
+        "Кот вошёл на кухню.",
+        "Дверь была открыта."
+      ],
+      "hint": "Le chat est entré dans la cuisine. — Кот вошёл на кухню."
+    },
+    {
+      "id": "fr-a1-38-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Le chat a entré dans la cuisine.",
+      "answers": [
+        "Le chat est entré dans la cuisine."
+      ],
+      "explanation": "Для entrer в значении «войти» здесь нужен вспомогательный être.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Le chat a entré dans la cuisine.",
+        "Le chat est entré dans la cuisine."
+      ],
+      "hint": "Imparfait описывает происходившее в тот момент. Passé composé отмечает событие на этом фоне."
+    },
+    {
+      "id": "fr-a1-38-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Он спрятался под столом.». Можно написать вместо микрофона.",
+      "answers": [
+        "Il s’est caché sous la table."
+      ],
+      "explanation": "Il s’est caché sous la table. — Он спрятался под столом.",
+      "wordIds": [
+        "fr:v13:38:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Il s’est caché sous la table.",
+      "recall": {
+        "phrase": "Il s’est caché sous la table.",
+        "meaning": "Он спрятался под столом."
+      }
+    },
+    {
+      "id": "fr-a1-38-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я готовил ужин, когда ты позвонил.",
+      "answers": [
+        "Je préparais le dîner quand tu as appelé."
+      ],
+      "explanation": "Imparfait описывает происходившее в тот момент. Passé composé отмечает событие на этом фоне.",
+      "wordIds": [
+        "fr:v13:38:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je préparais le dîner quand tu as appelé.",
+        "meaning": "Я готовил ужин, когда ты позвонил."
+      }
+    }
+  ]
+}

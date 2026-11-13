@@ -1,0 +1,251 @@
+{
+  "id": "fr-a1-34",
+  "title": "Возьми молока",
+  "topic": "Места и покупки",
+  "order": 33,
+  "objective": "Попросить купить продукты и уточнить количество.",
+  "guide": "Du и de la употребляются для неопределённого количества. После un litre ставится de.",
+  "vocabulary": [
+    {
+      "id": "fr:v13:34:p0",
+      "en": "Tu peux prendre du lait ?",
+      "ru": "Можешь взять молока?"
+    },
+    {
+      "id": "fr:v13:34:p1",
+      "en": "Prends un litre de lait.",
+      "ru": "Возьми литр молока."
+    },
+    {
+      "id": "fr:v13:34:p2",
+      "en": "On a déjà du beurre.",
+      "ru": "Масло у нас уже есть."
+    },
+    {
+      "id": "fr:v13:34:p3",
+      "en": "Il nous faut aussi de la farine.",
+      "ru": "Нам нужна ещё мука."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Возьми молока",
+      "phrase": "Tu peux prendre du lait ?",
+      "translation": "Можешь взять молока?",
+      "explanation": "Du и de la употребляются для неопределённого количества. После un litre ставится de."
+    },
+    {
+      "character": "miko",
+      "title": "Возьми молока",
+      "phrase": "Prends un litre de lait.",
+      "translation": "Возьми литр молока.",
+      "explanation": "Prends un litre de lait. — Возьми литр молока."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Возьми молока",
+      "phrase": "On a déjà du beurre.",
+      "translation": "Масло у нас уже есть.",
+      "explanation": "On a déjà du beurre. — Масло у нас уже есть."
+    },
+    {
+      "character": "orbi",
+      "title": "Возьми молока",
+      "phrase": "Il nous faut aussi de la farine.",
+      "translation": "Нам нужна ещё мука.",
+      "explanation": "Il nous faut aussi de la farine. — Нам нужна ещё мука."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Tu peux prendre du lait ?",
+      "translation": "Можешь взять молока?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Можешь взять молока?",
+      "options": [
+        "Масло у нас уже есть.",
+        "Можешь взять молока?",
+        "Нам нужна ещё мука."
+      ],
+      "explanation": "Du и de la употребляются для неопределённого количества. После un litre ставится de."
+    },
+    {
+      "id": "apply",
+      "phrase": "Prends un litre de lait.",
+      "translation": "Возьми литр молока.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Prends un litre de lait.",
+      "tokens": [
+        "Prends",
+        "un",
+        "litre",
+        "de",
+        "lait."
+      ],
+      "character": "miko",
+      "explanation": "Prends un litre de lait. — Возьми литр молока."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-34-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Масло у нас уже есть."
+      ],
+      "explanation": "On a déjà du beurre. — Масло у нас уже есть.",
+      "wordIds": [
+        "fr:v13:34:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "On a déjà du beurre.",
+      "options": [
+        "Можешь взять молока?",
+        "Масло у нас уже есть.",
+        "Возьми литр молока."
+      ],
+      "hint": "On a déjà du beurre. — Масло у нас уже есть."
+    },
+    {
+      "id": "fr-a1-34-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Возьми литр молока.",
+      "answers": [
+        "Prends un litre de lait."
+      ],
+      "explanation": "Du и de la употребляются для неопределённого количества. После un litre ставится de.",
+      "wordIds": [
+        "fr:v13:34:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Prends",
+        "un",
+        "litre",
+        "de",
+        "lait."
+      ],
+      "hint": "Prends un litre de lait. — Возьми литр молока."
+    },
+    {
+      "id": "fr-a1-34-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно купить помимо молока?",
+      "answers": [
+        "Муку."
+      ],
+      "explanation": "В диалоге: Tu peux prendre du lait et du beurre ? / Du lait, oui. On a déjà du beurre, mais il nous faut de la farine. Поэтому: Муку.",
+      "wordIds": [
+        "fr:v13:34:p0",
+        "fr:v13:34:p1",
+        "fr:v13:34:p2",
+        "fr:v13:34:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Tu peux prendre du lait et du beurre ?\nМико: Du lait, oui. On a déjà du beurre, mais il nous faut de la farine.",
+      "options": [
+        "Масло.",
+        "Хлеб.",
+        "Муку."
+      ]
+    },
+    {
+      "id": "fr-a1-34-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Можешь взять молока?»?",
+      "answers": [
+        "Tu peux prendre du lait ?"
+      ],
+      "explanation": "Tu peux prendre du lait ? — Можешь взять молока?",
+      "wordIds": [
+        "fr:v13:34:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Prends un litre de lait.",
+        "Il nous faut aussi de la farine.",
+        "Tu peux prendre du lait ?"
+      ],
+      "hint": "Tu peux prendre du lait ? — Можешь взять молока?"
+    },
+    {
+      "id": "fr-a1-34-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Prends un litre du lait.",
+      "answers": [
+        "Prends un litre de lait."
+      ],
+      "explanation": "После меры un litre для обычного названия продукта требуется de.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Prends un litre du lait.",
+        "Prends un litre de lait."
+      ],
+      "hint": "Du и de la употребляются для неопределённого количества. После un litre ставится de."
+    },
+    {
+      "id": "fr-a1-34-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Нам нужна ещё мука.». Можно написать вместо микрофона.",
+      "answers": [
+        "Il nous faut aussi de la farine."
+      ],
+      "explanation": "Il nous faut aussi de la farine. — Нам нужна ещё мука.",
+      "wordIds": [
+        "fr:v13:34:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Il nous faut aussi de la farine.",
+      "recall": {
+        "phrase": "Il nous faut aussi de la farine.",
+        "meaning": "Нам нужна ещё мука."
+      }
+    },
+    {
+      "id": "fr-a1-34-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Можешь взять молока?",
+      "answers": [
+        "Tu peux prendre du lait ?"
+      ],
+      "explanation": "Du и de la употребляются для неопределённого количества. После un litre ставится de.",
+      "wordIds": [
+        "fr:v13:34:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Tu peux prendre du lait ?",
+        "meaning": "Можешь взять молока?"
+      }
+    },
+    {
+      "id": "fr-a1-34-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Да, осталось три.",
+      "answers": [
+        "Oui, il en reste trois."
+      ],
+      "explanation": "Oui, il en reste trois. — Да, осталось три.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Il reste des places pour ce soir ?",
+        "Oui, il en reste trois.",
+        "Nous en prenons deux.",
+        "Je vous réserve les deux places."
+      ]
+    }
+  ]
+}

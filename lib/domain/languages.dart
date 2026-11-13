@@ -47,7 +47,7 @@ class StudyCourse {
       '🇫🇷',
       'fr-FR',
       'assets/courses/manifest-fr.json',
-      32,
+      40,
     ),
     StudyCourse(
       'ru-zh',
@@ -56,7 +56,7 @@ class StudyCourse {
       '🇨🇳',
       'zh-CN',
       'assets/courses/manifest-zh.json',
-      32,
+      40,
     ),
   ];
   static StudyCourse byId(String? id) =>

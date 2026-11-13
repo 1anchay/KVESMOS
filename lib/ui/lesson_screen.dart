@@ -95,15 +95,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       if (app.course.id != StudyCourse.forContent(widget.lessonId).id) {
         await app.selectCourse(StudyCourse.forContent(widget.lessonId).id);
       }
-      final loaded = await app.repository.lesson(widget.lessonId);
-      // Guards also apply to direct deep links, not just the map's buttons.
-      if (loaded.order > 0 &&
-          !app.progress.completed.contains(
-            app.repository.catalog[loaded.order - 1].id,
-          ) &&
-          !app.progress.completed.contains(loaded.id)) {
-        throw StateError('Сначала пройдите предыдущий урок.');
-      }
+      await app.repository.ensureLessonAccess(widget.lessonId);
       final material = await app.repository.startLesson(
         widget.lessonId,
         demo: widget.demo,

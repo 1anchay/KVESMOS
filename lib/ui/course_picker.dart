@@ -37,7 +37,16 @@ class CoursePicker extends ConsumerWidget {
                     : null,
                 onTap: () async {
                   await app.selectCourse(course.id);
-                  if (context.mounted && !onboarding) context.go('/');
+                  final needsStart = await app.repository.needsCourseStart();
+                  if (context.mounted) {
+                    context.go(
+                      needsStart
+                          ? '/placement'
+                          : onboarding
+                          ? '/goal'
+                          : '/',
+                    );
+                  }
                 },
               ),
             ),

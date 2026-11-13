@@ -303,6 +303,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "zh-v13",
+      "title": "Разговоры и решения",
+      "themes": [
+        {
+          "id": "zh-v13-1",
+          "title": "Время и дорога",
+          "lessons": [
+            {
+              "id": "zh-a1-33",
+              "title": "Как долго ждать",
+              "order": 32,
+              "asset": "assets/courses/zh-a1-33.json"
+            },
+            {
+              "id": "zh-a1-34",
+              "title": "Десять минут до станции",
+              "order": 33,
+              "asset": "assets/courses/zh-a1-34.json"
+            }
+          ]
+        },
+        {
+          "id": "zh-v13-2",
+          "title": "Предмет и результат",
+          "lessons": [
+            {
+              "id": "zh-a1-35",
+              "title": "Куда положить сумку",
+              "order": 34,
+              "asset": "assets/courses/zh-a1-35.json"
+            },
+            {
+              "id": "zh-a1-36",
+              "title": "Билет уже куплен",
+              "order": 35,
+              "asset": "assets/courses/zh-a1-36.json"
+            }
+          ]
+        },
+        {
+          "id": "zh-v13-3",
+          "title": "Условия и выбор",
+          "lessons": [
+            {
+              "id": "zh-a1-37",
+              "title": "Планы на дождливый день",
+              "order": 36,
+              "asset": "assets/courses/zh-a1-37.json"
+            },
+            {
+              "id": "zh-a1-38",
+              "title": "Выбираем занятие",
+              "order": 37,
+              "asset": "assets/courses/zh-a1-38.json"
+            }
+          ]
+        },
+        {
+          "id": "zh-v13-4",
+          "title": "Новости и планы",
+          "lessons": [
+            {
+              "id": "zh-a1-39",
+              "title": "Откуда вы узнали",
+              "order": 38,
+              "asset": "assets/courses/zh-a1-39.json"
+            },
+            {
+              "id": "zh-a1-40",
+              "title": "Сообщение группе",
+              "order": 39,
+              "asset": "assets/courses/zh-a1-40.json"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

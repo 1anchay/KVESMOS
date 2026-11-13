@@ -83,8 +83,12 @@ class _CompanionOnboardingState extends ConsumerState<CompanionOnboarding> {
       if (decision == null) await app.repository.setSetting(key, 'later');
       if (widget.widgetStep) {
         await app.dismissCompanionInvitation();
+        final firstRun = !app.onboarded;
         if (!app.onboarded) await app.finishOnboarding();
-        if (mounted) context.go('/');
+        final route = firstRun && app.courseStart.entry != null
+            ? await app.learningContinuationRoute()
+            : '/';
+        if (mounted) context.go(route);
       } else {
         await app.repository.setSetting(
           'kvesmos.onboarding.route.v012',

@@ -1,0 +1,292 @@
+{
+  "id": "fr-a1-35",
+  "title": "Ключ у соседки",
+  "topic": "Предметы и адреса",
+  "order": 34,
+  "objective": "Заменить названный предмет местоимением le, la или les.",
+  "guide": "Le, la и les обычно стоят перед глаголом, к которому относятся. La clé → je la laisse.",
+  "vocabulary": [
+    {
+      "id": "fr:v13:35:p0",
+      "en": "Je laisse la clé chez la voisine.",
+      "ru": "Я оставляю ключ у соседки."
+    },
+    {
+      "id": "fr:v13:35:p1",
+      "en": "Tu peux la récupérer ce soir.",
+      "ru": "Ты можешь забрать его сегодня вечером."
+    },
+    {
+      "id": "fr:v13:35:p2",
+      "en": "Les lettres sont sur la table.",
+      "ru": "Письма на столе."
+    },
+    {
+      "id": "fr:v13:35:p3",
+      "en": "Je les prendrai demain.",
+      "ru": "Я заберу их завтра."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Ключ у соседки",
+      "phrase": "Je laisse la clé chez la voisine.",
+      "translation": "Я оставляю ключ у соседки.",
+      "explanation": "Le, la и les обычно стоят перед глаголом, к которому относятся. La clé → je la laisse."
+    },
+    {
+      "character": "miko",
+      "title": "Ключ у соседки",
+      "phrase": "Tu peux la récupérer ce soir.",
+      "translation": "Ты можешь забрать его сегодня вечером.",
+      "explanation": "Tu peux la récupérer ce soir. — Ты можешь забрать его сегодня вечером."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Ключ у соседки",
+      "phrase": "Les lettres sont sur la table.",
+      "translation": "Письма на столе.",
+      "explanation": "Les lettres sont sur la table. — Письма на столе."
+    },
+    {
+      "character": "orbi",
+      "title": "Ключ у соседки",
+      "phrase": "Je les prendrai demain.",
+      "translation": "Я заберу их завтра.",
+      "explanation": "Je les prendrai demain. — Я заберу их завтра."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Je laisse la clé chez la voisine.",
+      "translation": "Я оставляю ключ у соседки.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я оставляю ключ у соседки.",
+      "options": [
+        "Письма на столе.",
+        "Я оставляю ключ у соседки.",
+        "Я заберу их завтра."
+      ],
+      "explanation": "Le, la и les обычно стоят перед глаголом, к которому относятся. La clé → je la laisse."
+    },
+    {
+      "id": "apply",
+      "phrase": "Tu peux la récupérer ce soir.",
+      "translation": "Ты можешь забрать его сегодня вечером.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Tu peux la récupérer ce soir.",
+      "tokens": [
+        "Tu",
+        "peux",
+        "la",
+        "récupérer",
+        "ce",
+        "soir."
+      ],
+      "character": "miko",
+      "explanation": "Tu peux la récupérer ce soir. — Ты можешь забрать его сегодня вечером."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-35-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Масло у нас уже есть.",
+      "answers": [
+        "On a déjà du beurre."
+      ],
+      "explanation": "On a déjà du beurre. — Масло у нас уже есть.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Tu peux prendre du lait ?",
+        "Prends un litre de lait.",
+        "On a déjà du beurre.",
+        "Il nous faut aussi de la farine."
+      ]
+    },
+    {
+      "id": "fr-a1-35-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я оставляю ключ у соседки.»?",
+      "answers": [
+        "Je laisse la clé chez la voisine."
+      ],
+      "explanation": "Je laisse la clé chez la voisine. — Я оставляю ключ у соседки.",
+      "wordIds": [
+        "fr:v13:35:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Tu peux la récupérer ce soir.",
+        "Je les prendrai demain.",
+        "Je laisse la clé chez la voisine."
+      ],
+      "hint": "Je laisse la clé chez la voisine. — Я оставляю ключ у соседки."
+    },
+    {
+      "id": "fr-a1-35-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Ты можешь забрать его сегодня вечером.",
+      "answers": [
+        "Tu peux la récupérer ce soir."
+      ],
+      "explanation": "Le, la и les обычно стоят перед глаголом, к которому относятся. La clé → je la laisse.",
+      "wordIds": [
+        "fr:v13:35:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Tu",
+        "peux",
+        "la",
+        "récupérer",
+        "ce",
+        "soir."
+      ],
+      "hint": "Tu peux la récupérer ce soir. — Ты можешь забрать его сегодня вечером."
+    },
+    {
+      "id": "fr-a1-35-e04",
+      "type": "dialogue",
+      "prompt": "Где забрать ключ?",
+      "answers": [
+        "У соседки."
+      ],
+      "explanation": "В диалоге: Tu as la clé ? / Je la laisse chez la voisine. Elle rentre à six heures. Поэтому: У соседки.",
+      "wordIds": [
+        "fr:v13:35:p0",
+        "fr:v13:35:p1",
+        "fr:v13:35:p2",
+        "fr:v13:35:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Tu as la clé ?\nМико: Je la laisse chez la voisine. Elle rentre à six heures.",
+      "options": [
+        "На почте.",
+        "На столе.",
+        "У соседки."
+      ]
+    },
+    {
+      "id": "fr-a1-35-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Письма на столе."
+      ],
+      "explanation": "Les lettres sont sur la table. — Письма на столе.",
+      "wordIds": [
+        "fr:v13:35:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Les lettres sont sur la table.",
+      "options": [
+        "Я оставляю ключ у соседки.",
+        "Письма на столе.",
+        "Ты можешь забрать его сегодня вечером."
+      ],
+      "hint": "Les lettres sont sur la table. — Письма на столе."
+    },
+    {
+      "id": "fr-a1-35-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v13:35:p0",
+        "fr:v13:35:p1",
+        "fr:v13:35:p2",
+        "fr:v13:35:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v13:35:p0",
+          "en": "Je laisse la clé chez la voisine.",
+          "ru": "Я оставляю ключ у соседки."
+        },
+        {
+          "id": "fr:v13:35:p1",
+          "en": "Tu peux la récupérer ce soir.",
+          "ru": "Ты можешь забрать его сегодня вечером."
+        },
+        {
+          "id": "fr:v13:35:p2",
+          "en": "Les lettres sont sur la table.",
+          "ru": "Письма на столе."
+        },
+        {
+          "id": "fr:v13:35:p3",
+          "en": "Je les prendrai demain.",
+          "ru": "Я заберу их завтра."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-35-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Je laisse la chez la voisine.",
+      "answers": [
+        "Je la laisse chez la voisine."
+      ],
+      "explanation": "La заменяет la clé и ставится перед laisse.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je laisse la chez la voisine.",
+        "Je la laisse chez la voisine."
+      ],
+      "hint": "Le, la и les обычно стоят перед глаголом, к которому относятся. La clé → je la laisse."
+    },
+    {
+      "id": "fr-a1-35-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я заберу их завтра.». Можно написать вместо микрофона.",
+      "answers": [
+        "Je les prendrai demain."
+      ],
+      "explanation": "Je les prendrai demain. — Я заберу их завтра.",
+      "wordIds": [
+        "fr:v13:35:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Je les prendrai demain.",
+      "recall": {
+        "phrase": "Je les prendrai demain.",
+        "meaning": "Я заберу их завтра."
+      }
+    },
+    {
+      "id": "fr-a1-35-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я оставляю ключ у соседки.",
+      "answers": [
+        "Je laisse la clé chez la voisine."
+      ],
+      "explanation": "Le, la и les обычно стоят перед глаголом, к которому относятся. La clé → je la laisse.",
+      "wordIds": [
+        "fr:v13:35:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Je laisse la clé chez la voisine.",
+        "meaning": "Я оставляю ключ у соседки."
+      }
+    }
+  ]
+}

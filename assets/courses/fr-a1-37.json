@@ -1,0 +1,292 @@
+{
+  "id": "fr-a1-37",
+  "title": "Автобус больше не ходит",
+  "topic": "Изменения и события",
+  "order": 36,
+  "objective": "Объяснить изменение маршрута с ne… plus.",
+  "guide": "Ne… plus означает «больше не». В настоящем времени оно обрамляет глагол: ne passe plus.",
+  "vocabulary": [
+    {
+      "id": "fr:v13:37:p0",
+      "en": "Ce bus ne passe plus ici.",
+      "ru": "Этот автобус здесь больше не ходит."
+    },
+    {
+      "id": "fr:v13:37:p1",
+      "en": "Il faut prendre la ligne six.",
+      "ru": "Нужно сесть на шестой маршрут."
+    },
+    {
+      "id": "fr:v13:37:p2",
+      "en": "L’arrêt a changé de place.",
+      "ru": "Остановка переехала."
+    },
+    {
+      "id": "fr:v13:37:p3",
+      "en": "Le prochain bus arrive dans dix minutes.",
+      "ru": "Следующий автобус прибудет через десять минут."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Автобус больше не ходит",
+      "phrase": "Ce bus ne passe plus ici.",
+      "translation": "Этот автобус здесь больше не ходит.",
+      "explanation": "Ne… plus означает «больше не». В настоящем времени оно обрамляет глагол: ne passe plus."
+    },
+    {
+      "character": "miko",
+      "title": "Автобус больше не ходит",
+      "phrase": "Il faut prendre la ligne six.",
+      "translation": "Нужно сесть на шестой маршрут.",
+      "explanation": "Il faut prendre la ligne six. — Нужно сесть на шестой маршрут."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Автобус больше не ходит",
+      "phrase": "L’arrêt a changé de place.",
+      "translation": "Остановка переехала.",
+      "explanation": "L’arrêt a changé de place. — Остановка переехала."
+    },
+    {
+      "character": "orbi",
+      "title": "Автобус больше не ходит",
+      "phrase": "Le prochain bus arrive dans dix minutes.",
+      "translation": "Следующий автобус прибудет через десять минут.",
+      "explanation": "Le prochain bus arrive dans dix minutes. — Следующий автобус прибудет через десять минут."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ce bus ne passe plus ici.",
+      "translation": "Этот автобус здесь больше не ходит.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Этот автобус здесь больше не ходит.",
+      "options": [
+        "Остановка переехала.",
+        "Этот автобус здесь больше не ходит.",
+        "Следующий автобус прибудет через десять минут."
+      ],
+      "explanation": "Ne… plus означает «больше не». В настоящем времени оно обрамляет глагол: ne passe plus."
+    },
+    {
+      "id": "apply",
+      "phrase": "Il faut prendre la ligne six.",
+      "translation": "Нужно сесть на шестой маршрут.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Il faut prendre la ligne six.",
+      "tokens": [
+        "Il",
+        "faut",
+        "prendre",
+        "la",
+        "ligne",
+        "six."
+      ],
+      "character": "miko",
+      "explanation": "Il faut prendre la ligne six. — Нужно сесть на шестой маршрут."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-37-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Остановка переехала."
+      ],
+      "explanation": "L’arrêt a changé de place. — Остановка переехала.",
+      "wordIds": [
+        "fr:v13:37:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "L’arrêt a changé de place.",
+      "options": [
+        "Этот автобус здесь больше не ходит.",
+        "Остановка переехала.",
+        "Нужно сесть на шестой маршрут."
+      ],
+      "hint": "L’arrêt a changé de place. — Остановка переехала."
+    },
+    {
+      "id": "fr-a1-37-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Нужно сесть на шестой маршрут.",
+      "answers": [
+        "Il faut prendre la ligne six."
+      ],
+      "explanation": "Ne… plus означает «больше не». В настоящем времени оно обрамляет глагол: ne passe plus.",
+      "wordIds": [
+        "fr:v13:37:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Il",
+        "faut",
+        "prendre",
+        "la",
+        "ligne",
+        "six."
+      ],
+      "hint": "Il faut prendre la ligne six. — Нужно сесть на шестой маршрут."
+    },
+    {
+      "id": "fr-a1-37-e03",
+      "type": "dialogue",
+      "prompt": "Какой маршрут советуют?",
+      "answers": [
+        "Шестой."
+      ],
+      "explanation": "В диалоге: La ligne quatre passe encore ici ? / Non, elle ne passe plus ici. Prenez la ligne six. Поэтому: Шестой.",
+      "wordIds": [
+        "fr:v13:37:p0",
+        "fr:v13:37:p1",
+        "fr:v13:37:p2",
+        "fr:v13:37:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: La ligne quatre passe encore ici ?\nМико: Non, elle ne passe plus ici. Prenez la ligne six.",
+      "options": [
+        "Четвёртый.",
+        "Десятый.",
+        "Шестой."
+      ]
+    },
+    {
+      "id": "fr-a1-37-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Этот автобус здесь больше не ходит.»?",
+      "answers": [
+        "Ce bus ne passe plus ici."
+      ],
+      "explanation": "Ce bus ne passe plus ici. — Этот автобус здесь больше не ходит.",
+      "wordIds": [
+        "fr:v13:37:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Il faut prendre la ligne six.",
+        "Le prochain bus arrive dans dix minutes.",
+        "Ce bus ne passe plus ici."
+      ],
+      "hint": "Ce bus ne passe plus ici. — Этот автобус здесь больше не ходит."
+    },
+    {
+      "id": "fr-a1-37-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v13:37:p0",
+        "fr:v13:37:p1",
+        "fr:v13:37:p2",
+        "fr:v13:37:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v13:37:p0",
+          "en": "Ce bus ne passe plus ici.",
+          "ru": "Этот автобус здесь больше не ходит."
+        },
+        {
+          "id": "fr:v13:37:p1",
+          "en": "Il faut prendre la ligne six.",
+          "ru": "Нужно сесть на шестой маршрут."
+        },
+        {
+          "id": "fr:v13:37:p2",
+          "en": "L’arrêt a changé de place.",
+          "ru": "Остановка переехала."
+        },
+        {
+          "id": "fr:v13:37:p3",
+          "en": "Le prochain bus arrive dans dix minutes.",
+          "ru": "Следующий автобус прибудет через десять минут."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-37-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ce bus plus ne passe ici.",
+      "answers": [
+        "Ce bus ne passe plus ici."
+      ],
+      "explanation": "Ne идёт перед passe, plus — после него.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ce bus plus ne passe ici.",
+        "Ce bus ne passe plus ici."
+      ],
+      "hint": "Ne… plus означает «больше не». В настоящем времени оно обрамляет глагол: ne passe plus."
+    },
+    {
+      "id": "fr-a1-37-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Следующий автобус прибудет через десять минут.». Можно написать вместо микрофона.",
+      "answers": [
+        "Le prochain bus arrive dans dix minutes."
+      ],
+      "explanation": "Le prochain bus arrive dans dix minutes. — Следующий автобус прибудет через десять минут.",
+      "wordIds": [
+        "fr:v13:37:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Le prochain bus arrive dans dix minutes.",
+      "recall": {
+        "phrase": "Le prochain bus arrive dans dix minutes.",
+        "meaning": "Следующий автобус прибудет через десять минут."
+      }
+    },
+    {
+      "id": "fr-a1-37-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Этот автобус здесь больше не ходит.",
+      "answers": [
+        "Ce bus ne passe plus ici."
+      ],
+      "explanation": "Ne… plus означает «больше не». В настоящем времени оно обрамляет глагол: ne passe plus.",
+      "wordIds": [
+        "fr:v13:37:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ce bus ne passe plus ici.",
+        "meaning": "Этот автобус здесь больше не ходит."
+      }
+    },
+    {
+      "id": "fr-a1-37-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я ходил на рынок сегодня утром.",
+      "answers": [
+        "Je suis allé au marché ce matin."
+      ],
+      "explanation": "Je suis allé au marché ce matin. — Я ходил на рынок сегодня утром.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je suis allé au marché ce matin.",
+        "J’y retourne après le déjeuner.",
+        "Le magasin ferme à trois heures.",
+        "On se retrouve devant l’entrée."
+      ]
+    }
+  ]
+}

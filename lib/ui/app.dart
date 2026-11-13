@@ -129,10 +129,7 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           path: '/language',
           builder: (_, _) => const OnboardingPage(step: 1),
         ),
-        GoRoute(
-          path: '/level',
-          builder: (_, _) => const OnboardingPage(step: 2),
-        ),
+        GoRoute(path: '/level', redirect: (_, _) => '/placement'),
         GoRoute(
           path: '/goal',
           builder: (_, _) => const OnboardingPage(step: 3),

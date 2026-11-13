@@ -14,6 +14,7 @@ import 'database.dart';
 import 'conversation_repository.dart';
 import 'listening_repository.dart';
 import 'repository.dart';
+import 'smart_placement_repository.dart';
 import 'rewards_repository.dart';
 
 const progressTransferMaxBytes = 32 * 1024 * 1024;
@@ -66,6 +67,7 @@ class ProgressTransfer {
     'level',
     'theme',
     'onboarded',
+    'kvesmos.smartStart.invite.v1',
     LearningRepository.courseKey,
     'kvesmos.audio.preferences.v1',
     'kvesmos.reminders.v1',
@@ -89,6 +91,8 @@ class ProgressTransfer {
     'kvesmos.adventure.v1:',
     'kvesmos.mastery.v1:',
     'kvesmos.placement.v1:',
+    SmartPlacementRepository.prefix,
+    'kvesmos.course.start.v1:',
     'kvesmos.picture.v1:',
     'kvesmos.conversation.v1:',
     'kvesmos.listening.v1:',
@@ -446,6 +450,8 @@ class ProgressTransfer {
         _require(_courses.contains(value));
       case 'theme':
         _require(const {'light', 'dark', 'system'}.contains(value));
+      case 'kvesmos.smartStart.invite.v1':
+        _require(value == 'seen');
       case 'goal':
         _require(const {'25', '50', '100'}.contains(value));
       case 'name':
@@ -577,6 +583,22 @@ class ProgressTransfer {
               _boundedIndex(state['branch'], 1) &&
               state['error'] is bool &&
               state['text'] is String,
+        );
+      case 'kvesmos.course.start.v1':
+        _require(
+          _courses.contains(suffix) &&
+              catalog.containsKey(value) &&
+              StudyCourse.forContent(value).id == suffix,
+        );
+      case 'kvesmos.placement.v2':
+        _require(
+          _courses.contains(suffix) &&
+              SmartPlacementRepository.valid(
+                _object(jsonDecode(value)),
+                catalog.keys
+                    .where((id) => StudyCourse.forContent(id).id == suffix)
+                    .toSet(),
+              ),
         );
       case 'kvesmos.listening.v1':
         final state = _object(jsonDecode(value));

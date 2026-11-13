@@ -62,7 +62,7 @@ void main() {
   );
 
   test(
-    'continuation ignores locked/retired drafts; offline and finished routes are safe',
+    'continuation preserves existing drafts; retired and offline routes are safe',
     () async {
       final repo = memoryRepository();
       final subject = AppController(repo);
@@ -72,6 +72,12 @@ void main() {
       });
       await subject.initialize();
       await repo.start('a1-20');
+      expect(await subject.learningContinuationRoute(), '/lesson/a1-20');
+      final preserved = await repo.start('a1-20');
+      await repo.setSetting(
+        'kvesmos.session.retired.v1:${preserved.id}',
+        'true',
+      );
       final old = await repo.startLesson('a1-01');
       await repo.setSetting(
         'kvesmos.session.retired.v1:${old.session.id}',
@@ -90,11 +96,6 @@ void main() {
         );
       }
       await subject.refresh();
-      expect(await subject.learningContinuationRoute(), '/lesson/a1-20');
-      await repo.setSetting(
-        'kvesmos.session.retired.v1:${(await repo.start('a1-20')).id}',
-        'true',
-      );
       expect(await subject.learningContinuationRoute(), '/map');
     },
   );

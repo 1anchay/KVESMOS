@@ -1,0 +1,290 @@
+{
+  "id": "fr-a1-39",
+  "title": "Если будет свободно",
+  "topic": "Условия и новости",
+  "order": 38,
+  "objective": "Согласовать бронирование с возможным условием.",
+  "guide": "После si для возможного условия употребляют настоящее. Будущее возможно в главной части.",
+  "vocabulary": [
+    {
+      "id": "fr:v13:39:p0",
+      "en": "S’il reste une table, je réserverai pour deux.",
+      "ru": "Если столик останется, я забронирую на двоих."
+    },
+    {
+      "id": "fr:v13:39:p1",
+      "en": "Je t’appellerai après le travail.",
+      "ru": "Я позвоню тебе после работы."
+    },
+    {
+      "id": "fr:v13:39:p2",
+      "en": "On peut dîner plus tard.",
+      "ru": "Мы можем поужинать позже."
+    },
+    {
+      "id": "fr:v13:39:p3",
+      "en": "Sinon, on mangera à la maison.",
+      "ru": "Иначе поедим дома."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Если будет свободно",
+      "phrase": "S’il reste une table, je réserverai pour deux.",
+      "translation": "Если столик останется, я забронирую на двоих.",
+      "explanation": "После si для возможного условия употребляют настоящее. Будущее возможно в главной части."
+    },
+    {
+      "character": "miko",
+      "title": "Если будет свободно",
+      "phrase": "Je t’appellerai après le travail.",
+      "translation": "Я позвоню тебе после работы.",
+      "explanation": "Je t’appellerai après le travail. — Я позвоню тебе после работы."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Если будет свободно",
+      "phrase": "On peut dîner plus tard.",
+      "translation": "Мы можем поужинать позже.",
+      "explanation": "On peut dîner plus tard. — Мы можем поужинать позже."
+    },
+    {
+      "character": "orbi",
+      "title": "Если будет свободно",
+      "phrase": "Sinon, on mangera à la maison.",
+      "translation": "Иначе поедим дома.",
+      "explanation": "Sinon, on mangera à la maison. — Иначе поедим дома."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "S’il reste une table, je réserverai pour deux.",
+      "translation": "Если столик останется, я забронирую на двоих.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Если столик останется, я забронирую на двоих.",
+      "options": [
+        "Мы можем поужинать позже.",
+        "Если столик останется, я забронирую на двоих.",
+        "Иначе поедим дома."
+      ],
+      "explanation": "После si для возможного условия употребляют настоящее. Будущее возможно в главной части."
+    },
+    {
+      "id": "apply",
+      "phrase": "Je t’appellerai après le travail.",
+      "translation": "Я позвоню тебе после работы.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Je t’appellerai après le travail.",
+      "tokens": [
+        "Je",
+        "t’appellerai",
+        "après",
+        "le",
+        "travail."
+      ],
+      "character": "miko",
+      "explanation": "Je t’appellerai après le travail. — Я позвоню тебе после работы."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-39-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Если столик останется, я забронирую на двоих.»?",
+      "answers": [
+        "S’il reste une table, je réserverai pour deux."
+      ],
+      "explanation": "S’il reste une table, je réserverai pour deux. — Если столик останется, я забронирую на двоих.",
+      "wordIds": [
+        "fr:v13:39:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Je t’appellerai après le travail.",
+        "Sinon, on mangera à la maison.",
+        "S’il reste une table, je réserverai pour deux."
+      ],
+      "hint": "S’il reste une table, je réserverai pour deux. — Если столик останется, я забронирую на двоих."
+    },
+    {
+      "id": "fr-a1-39-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я позвоню тебе после работы.",
+      "answers": [
+        "Je t’appellerai après le travail."
+      ],
+      "explanation": "После si для возможного условия употребляют настоящее. Будущее возможно в главной части.",
+      "wordIds": [
+        "fr:v13:39:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Je",
+        "t’appellerai",
+        "après",
+        "le",
+        "travail."
+      ],
+      "hint": "Je t’appellerai après le travail. — Я позвоню тебе после работы."
+    },
+    {
+      "id": "fr-a1-39-e03",
+      "type": "dialogue",
+      "prompt": "Каков запасной план?",
+      "answers": [
+        "Поесть дома."
+      ],
+      "explanation": "В диалоге: Tu vas réserver ? / Oui, s’il reste une table. Sinon, on mangera à la maison. Поэтому: Поесть дома.",
+      "wordIds": [
+        "fr:v13:39:p0",
+        "fr:v13:39:p1",
+        "fr:v13:39:p2",
+        "fr:v13:39:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Tu vas réserver ?\nМико: Oui, s’il reste une table. Sinon, on mangera à la maison.",
+      "options": [
+        "Поехать на вокзал.",
+        "Позвать ещё двоих.",
+        "Поесть дома."
+      ]
+    },
+    {
+      "id": "fr-a1-39-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы можем поужинать позже."
+      ],
+      "explanation": "On peut dîner plus tard. — Мы можем поужинать позже.",
+      "wordIds": [
+        "fr:v13:39:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "On peut dîner plus tard.",
+      "options": [
+        "Если столик останется, я забронирую на двоих.",
+        "Мы можем поужинать позже.",
+        "Я позвоню тебе после работы."
+      ],
+      "hint": "On peut dîner plus tard. — Мы можем поужинать позже."
+    },
+    {
+      "id": "fr-a1-39-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v13:39:p0",
+        "fr:v13:39:p1",
+        "fr:v13:39:p2",
+        "fr:v13:39:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v13:39:p0",
+          "en": "S’il reste une table, je réserverai pour deux.",
+          "ru": "Если столик останется, я забронирую на двоих."
+        },
+        {
+          "id": "fr:v13:39:p1",
+          "en": "Je t’appellerai après le travail.",
+          "ru": "Я позвоню тебе после работы."
+        },
+        {
+          "id": "fr:v13:39:p2",
+          "en": "On peut dîner plus tard.",
+          "ru": "Мы можем поужинать позже."
+        },
+        {
+          "id": "fr:v13:39:p3",
+          "en": "Sinon, on mangera à la maison.",
+          "ru": "Иначе поедим дома."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-39-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: S’il restera une table, je réserverai.",
+      "answers": [
+        "S’il reste une table, je réserverai."
+      ],
+      "explanation": "После si условие стоит в présent, в главной части подходит futur.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "S’il restera une table, je réserverai.",
+        "S’il reste une table, je réserverai."
+      ],
+      "hint": "После si для возможного условия употребляют настоящее. Будущее возможно в главной части."
+    },
+    {
+      "id": "fr-a1-39-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Иначе поедим дома.». Можно написать вместо микрофона.",
+      "answers": [
+        "Sinon, on mangera à la maison."
+      ],
+      "explanation": "Sinon, on mangera à la maison. — Иначе поедим дома.",
+      "wordIds": [
+        "fr:v13:39:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Sinon, on mangera à la maison.",
+      "recall": {
+        "phrase": "Sinon, on mangera à la maison.",
+        "meaning": "Иначе поедим дома."
+      }
+    },
+    {
+      "id": "fr-a1-39-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Если столик останется, я забронирую на двоих.",
+      "answers": [
+        "S’il reste une table, je réserverai pour deux."
+      ],
+      "explanation": "После si для возможного условия употребляют настоящее. Будущее возможно в главной части.",
+      "wordIds": [
+        "fr:v13:39:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "S’il reste une table, je réserverai pour deux.",
+        "meaning": "Если столик останется, я забронирую на двоих."
+      }
+    },
+    {
+      "id": "fr-a1-39-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Кот вошёл на кухню.",
+      "answers": [
+        "Le chat est entré dans la cuisine."
+      ],
+      "explanation": "Le chat est entré dans la cuisine. — Кот вошёл на кухню.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Je préparais le dîner quand tu as appelé.",
+        "La porte était ouverte.",
+        "Le chat est entré dans la cuisine.",
+        "Il s’est caché sous la table."
+      ]
+    }
+  ]
+}

@@ -82,6 +82,38 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
       random: rewardRandom,
     );
     dailyMissions = MissionsRepository(repository);
+    await _loadProfile();
+    await refresh();
+    WidgetsBinding.instance.addObserver(this);
+    _auth = cloud?.auth.onAuthStateChange.listen((state) {
+      if (state.event == AuthChangeEvent.passwordRecovery) {
+        recoveringPassword = true;
+        notifyListeners();
+      }
+      unawaited(synchronize());
+    });
+    _retry = Timer.periodic(const Duration(minutes: 1), (_) {
+      unawaited(synchronize());
+      unawaited(_refreshCalendar());
+    });
+    _scheduleCalendar();
+    unawaited(synchronize());
+  }
+
+  Future<void> reloadTransferredProgress() async {
+    repository.course = StudyCourse.byId(
+      await repository.setting(LearningRepository.courseKey),
+    );
+    await audio.initialize();
+    audio.studyLocale = course.locale;
+    companion.preferences = ReminderPreferences.decode(
+      await repository.setting(DailyCompanion.settingsKey),
+    );
+    await _loadProfile();
+    await refresh();
+  }
+
+  Future<void> _loadProfile() async {
     goal = int.tryParse(await repository.setting('goal') ?? '') ?? 50;
     name = await repository.setting('name') ?? 'Исследователь';
     startingLevel = await repository.setting('level') ?? 'С нуля';
@@ -92,12 +124,10 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     final savedRoute = await repository.setting(
       'kvesmos.onboarding.route.v012',
     );
-    if (const [
-      '/companion/reminders',
-      '/companion/widget',
-    ].contains(savedRoute)) {
-      onboardingRoute = savedRoute!;
-    }
+    onboardingRoute =
+        const ['/companion/reminders', '/companion/widget'].contains(savedRoute)
+        ? savedRoute!
+        : '/welcome';
     showMiniAdventures =
         await repository.setting(adventuresVisibilityKey) == 'true';
     try {
@@ -117,21 +147,6 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
       (t) => t.name == savedTheme,
       orElse: () => ThemeMode.system,
     );
-    await refresh();
-    WidgetsBinding.instance.addObserver(this);
-    _auth = cloud?.auth.onAuthStateChange.listen((state) {
-      if (state.event == AuthChangeEvent.passwordRecovery) {
-        recoveringPassword = true;
-        notifyListeners();
-      }
-      unawaited(synchronize());
-    });
-    _retry = Timer.periodic(const Duration(minutes: 1), (_) {
-      unawaited(synchronize());
-      unawaited(_refreshCalendar());
-    });
-    _scheduleCalendar();
-    unawaited(synchronize());
   }
 
   Future<void> initializeAfterReset() async {

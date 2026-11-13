@@ -12735,6 +12735,204 @@
       "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
       "asset": "assets/audio/voices/clips/kokoro-3ca268d766a8db5da490.m4a",
       "slowAsset": "assets/audio/voices/clips/kokoro-3ca268d766a8db5da490-slow.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "en-US",
+      "courseId": "ru-en",
+      "text": "Does the train leave at nine?",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-1be9eb87c2fe83e4.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "en-US",
+      "courseId": "ru-en",
+      "text": "No, at ten. We have time for coffee.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-2a4a646b295a3a8d.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "en-US",
+      "courseId": "ru-en",
+      "text": "Three euros for both.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-146d390d08ef4383.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "en-US",
+      "courseId": "ru-en",
+      "text": "Two apples, please. How much are they?",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-b35834f089aa6410.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "es-ES",
+      "courseId": "ru-es",
+      "text": "Al lado del museo. Hoy cierra a las seis.",
+      "source": "synthetic",
+      "performer": "Piper / es_ES-sharvard-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-02e123ebabaa4533.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "es-ES",
+      "courseId": "ru-es",
+      "text": "Aquí, gracias.",
+      "source": "synthetic",
+      "performer": "Piper / es_ES-sharvard-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-c4fc53dabc830d84.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "es-ES",
+      "courseId": "ru-es",
+      "text": "Un té con limón, por favor.",
+      "source": "synthetic",
+      "performer": "Piper / es_ES-sharvard-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-803aa1f28954040a.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "es-ES",
+      "courseId": "ru-es",
+      "text": "¿Aquí o para llevar?",
+      "source": "synthetic",
+      "performer": "Piper / es_ES-sharvard-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-bc7737034100faa7.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "es-ES",
+      "courseId": "ru-es",
+      "text": "¿Dónde está la biblioteca?",
+      "source": "synthetic",
+      "performer": "Piper / es_ES-sharvard-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-a08e2742bea8bb4d.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "de-DE",
+      "courseId": "ru-de",
+      "text": "Fährt dieser Bus zum Bahnhof?",
+      "source": "synthetic",
+      "performer": "Piper / de_DE-thorsten-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-969cf988fd4115ba.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "de-DE",
+      "courseId": "ru-de",
+      "text": "Joghurt, bitte. Ich habe schon Brot.",
+      "source": "synthetic",
+      "performer": "Piper / de_DE-thorsten-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-9d7d1b5bec463982.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "de-DE",
+      "courseId": "ru-de",
+      "text": "Möchtest du Brot oder Joghurt?",
+      "source": "synthetic",
+      "performer": "Piper / de_DE-thorsten-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-85aa86ad385da01d.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "de-DE",
+      "courseId": "ru-de",
+      "text": "Nein. Nehmen Sie bitte die Linie sieben.",
+      "source": "synthetic",
+      "performer": "Piper / de_DE-thorsten-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V012-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-d2434175cbeda01a.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "fr-FR",
+      "courseId": "ru-fr",
+      "text": "Bonjour, deux croissants, s’il vous plaît.",
+      "source": "synthetic",
+      "performer": "Piper / fr_FR-siwis-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V013-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-af94876b117c34aa.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "fr-FR",
+      "courseId": "ru-fr",
+      "text": "D’accord. Vous voulez aussi du pain ?",
+      "source": "synthetic",
+      "performer": "Piper / fr_FR-siwis-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V013-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-01041854df43afb6.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "fr-FR",
+      "courseId": "ru-fr",
+      "text": "Non, merci.",
+      "source": "synthetic",
+      "performer": "Piper / fr_FR-siwis-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V013-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-9f26f1163542bf5e.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "fr-FR",
+      "courseId": "ru-fr",
+      "text": "On se retrouve au parc samedi ?",
+      "source": "synthetic",
+      "performer": "Piper / fr_FR-siwis-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V013-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-cc6490a5e7df0afd.m4a"
+    },
+    {
+      "character": "*",
+      "locale": "fr-FR",
+      "courseId": "ru-fr",
+      "text": "Oui, à onze heures, devant l’entrée.",
+      "source": "synthetic",
+      "performer": "Piper / fr_FR-siwis-medium / speaker 0",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/PIPER-V013-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/smart-dccde3130b17ee00.m4a"
     }
   ]
 }

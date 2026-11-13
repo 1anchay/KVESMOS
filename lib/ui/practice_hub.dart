@@ -3,11 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/practice_repository.dart';
+import '../data/smart_practice_repository.dart';
 import 'design.dart';
 import 'flight_components.dart';
 import 'character_moment.dart';
 import 'today_page.dart';
-import '../domain/journey.dart';
+import '../domain/study_skills.dart';
 
 const practiceLabels = {
   PracticeMode.words: (
@@ -42,17 +43,30 @@ const practiceLabels = {
   ),
 };
 
-class PracticeHub extends ConsumerWidget {
+class PracticeHub extends ConsumerStatefulWidget {
   const PracticeHub({super.key});
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<PracticeHub> createState() => _PracticeHubState();
+}
+
+class _PracticeHubState extends ConsumerState<PracticeHub> {
+  Object? progress;
+  String? courseId;
+  Future<(SmartPlan, bool)>? recommendation;
+
+  Future<(SmartPlan, bool)> _recommend(
+    SmartPracticeRepository repository,
+  ) async => (await repository.plan(), await repository.hasDraft());
+
+  @override
+  Widget build(BuildContext context) {
     final app = ref.watch(appProvider);
     final theme = Theme.of(context).textTheme;
-    final due = personalPractice(
-      app.repository.vocabulary.values,
-      app.progress,
-      app.repository.now(),
-    );
+    if (!identical(progress, app.progress) || courseId != app.course.id) {
+      progress = app.progress;
+      courseId = app.course.id;
+      recommendation = _recommend(SmartPracticeRepository(app.repository));
+    }
     return pageBody([
       const CharacterMoment(characterId: 'miko', size: 80, animate: false),
       Text('Тренировочная орбита', style: theme.headlineMedium),
@@ -64,17 +78,75 @@ class PracticeHub extends ConsumerWidget {
             : 'Знакомых слов и фраз: ${app.progress.words.length}. Сначала возвращаем те, которым нужно внимание.',
       ),
       const SizedBox(height: 16),
-      FilledButton.icon(
-        onPressed: () =>
-            context.go(due.isEmpty ? nextLessonRoute(app) : '/practice'),
-        icon: Icon(due.isEmpty ? Icons.play_arrow : Icons.bolt_outlined),
-        label: Text(
-          due.isEmpty
-              ? 'Следующий урок · 3–5 минут'
-              : 'Разминка: ${due.length} реплики по расписанию',
-        ),
+      FutureBuilder<(SmartPlan, bool)>(
+        future: recommendation,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState != ConnectionState.done) {
+            return const LinearProgressIndicator();
+          }
+          final plan = snapshot.data?.$1;
+          final resumable = snapshot.data?.$2 ?? false;
+          final skill = plan?.skill;
+          return FlightPanel(
+            accent: true,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Сегодня потренировать', style: theme.titleLarge),
+                if (skill != null) Text(skill.label, style: theme.titleMedium),
+                const SizedBox(height: 8),
+                Text('Почему рекомендовано', style: theme.labelLarge),
+                Text(
+                  plan?.reason ??
+                      'Можно продолжить урок или выбрать знакомый режим.',
+                ),
+                const SizedBox(height: 8),
+                FilledButton.icon(
+                  onPressed: () => context.go(
+                    resumable
+                        ? '/smart-practice'
+                        : switch (plan?.listeningScene) {
+                            final scene? => '/listening/$scene?repeat=1',
+                            null =>
+                              skill == null
+                                  ? nextLessonRoute(app)
+                                  : '/smart-practice',
+                          },
+                  ),
+                  icon: const Icon(Icons.bolt_outlined),
+                  label: Text(
+                    resumable
+                        ? 'Продолжить личную тренировку'
+                        : plan?.listeningScene != null
+                        ? 'Повторить аудиодиалог'
+                        : skill == null
+                        ? 'К следующему уроку'
+                        : 'Начать тренировку · ${plan!.items.length < 4 ? 'короткая подборка' : '3–5 минут'}',
+                  ),
+                ),
+                if (plan != null)
+                  ExpansionTile(
+                    tilePadding: EdgeInsets.zero,
+                    title: const Text('Ответы по навыкам за 30 дней'),
+                    children: [
+                      for (final skill in StudySkill.values)
+                        ListTile(
+                          contentPadding: EdgeInsets.zero,
+                          title: Text(skill.label),
+                          subtitle: Text(
+                            plan.report.evidence[skill]!.attempts == 0
+                                ? 'Пока нет подтверждённых ответов'
+                                : 'Верно: ${plan.report.evidence[skill]!.correct} · '
+                                      'С ошибкой: ${plan.report.evidence[skill]!.errors}',
+                          ),
+                        ),
+                    ],
+                  ),
+              ],
+            ),
+          );
+        },
       ),
-      if (due.isNotEmpty) Text(due.first.reason),
       for (final entry in practiceLabels.entries) ...[
         const SizedBox(height: 12),
         FlightPanel(
@@ -92,6 +164,12 @@ class PracticeHub extends ConsumerWidget {
             onPressed: () => context.go('/pictures'),
             icon: const Icon(Icons.image_outlined),
             label: const Text('Слова по картинкам'),
+          ),
+        if (entry.key == PracticeMode.listen)
+          OutlinedButton.icon(
+            onPressed: () => context.go('/listening'),
+            icon: const Icon(Icons.headphones_outlined),
+            label: const Text('Короткие аудиодиалоги'),
           ),
         if (entry.key == PracticeMode.dialogue)
           OutlinedButton.icon(

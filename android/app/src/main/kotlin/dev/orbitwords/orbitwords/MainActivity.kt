@@ -18,6 +18,7 @@ import android.os.Looper
 import java.io.File
 
 class MainActivity : FlutterActivity() {
+    private var progressDocuments: ProgressDocuments? = null
     private var companionChannel: MethodChannel? = null
     private var channel: MethodChannel? = null
     private var pool: SoundPool? = null
@@ -52,6 +53,7 @@ class MainActivity : FlutterActivity() {
     }
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        progressDocuments = ProgressDocuments(this, flutterEngine.dartExecutor.binaryMessenger)
         companionChannel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "dev.orbitwords/daily_companion")
         companionChannel!!.setMethodCallHandler { call, result ->
             try {
@@ -214,7 +216,14 @@ class MainActivity : FlutterActivity() {
         channel?.invokeMethod("interrupted", null)
         super.onPause()
     }
+    @Deprecated("Android document picker result")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (progressDocuments?.onResult(requestCode, resultCode, data) != true) {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
     override fun onDestroy() {
+        progressDocuments?.dispose()
         stopAudio(); pool?.release(); pool = null
         channel?.setMethodCallHandler(null)
         super.onDestroy()

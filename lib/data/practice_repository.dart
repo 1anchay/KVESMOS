@@ -2,6 +2,7 @@ import 'dart:convert';
 import '../domain/course.dart';
 import '../domain/journey.dart';
 import '../domain/progress.dart';
+import '../domain/study_skills.dart';
 import 'repository.dart';
 
 enum PracticeMode { warmup, words, listen, speak, mistakes, dialogue }
@@ -156,8 +157,9 @@ class PracticeRepository {
   Future<Map<String, dynamic>> advance(
     int expectedIndex,
     int expectedPhase,
-    String input,
-  ) => learning.db.transaction(() async {
+    String input, {
+    bool heard = false,
+  }) => learning.db.transaction(() async {
     final state = await open();
     if (state['index'] != expectedIndex || state['phase'] != expectedPhase) {
       return state;
@@ -174,7 +176,19 @@ class PracticeRepository {
               normalizeAnswer(input) == normalizeAnswer(word.pronunciation!)
           ? word.en
           : input;
-      await learning.review(word, canonical);
+      await learning.review(
+        word,
+        canonical,
+        skill: switch (mode) {
+          PracticeMode.listen => StudySkill.listening,
+          PracticeMode.speak => null,
+          PracticeMode.dialogue => StudySkill.dialogue,
+          _ => StudySkill.words,
+        },
+        evidence:
+            mode != PracticeMode.speak &&
+            (mode != PracticeMode.listen || heard),
+      );
       state['credited'] =
           (state['credited'] as int) + (await learning.progress()).xp - before;
       state['correct'] = normalizeAnswer(canonical) == normalizeAnswer(word.en);

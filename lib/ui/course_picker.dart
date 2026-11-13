@@ -60,6 +60,11 @@ class CoursesPage extends StatelessWidget {
     ),
     const SizedBox(height: 16),
     const CoursePicker(),
+    OutlinedButton.icon(
+      onPressed: () => context.go('/placement'),
+      icon: const Icon(Icons.explore_outlined),
+      label: const Text('Диагностика текущего курса'),
+    ),
   ]);
 }
 

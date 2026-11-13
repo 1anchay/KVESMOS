@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/database.dart';
 import '../domain/course.dart';
+import '../domain/mistake_feedback.dart';
 import '../domain/intro_activity.dart';
 import '../domain/languages.dart';
 import '../domain/progress.dart';
@@ -572,7 +573,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                         key: ValueKey('feedback:${e.id}:$result'),
                         child: AnswerSignal(
                           awardedXp: rehearsal ? 0 : 10,
-                          explanation: e.explanation,
+                          explanation: result == false
+                              ? mistakeExplanation(e, answer)
+                              : e.explanation,
                           correction: result == false
                               ? e.type == ExerciseType.pairs
                                     ? e.pairs

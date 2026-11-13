@@ -17,6 +17,7 @@ import '../domain/missions.dart';
 import 'design.dart';
 import 'character_reactions.dart';
 import 'weekly_activity.dart';
+import 'activity_calendar.dart';
 import 'today_page.dart';
 import 'character_moment.dart';
 import 'profile_achievements.dart';
@@ -115,6 +116,12 @@ class OnboardingPage extends ConsumerWidget {
                 onSelected: (_) => app.savePreferences(newGoal: goal),
               ),
             ),
+          ),
+        if (step == 2)
+          OutlinedButton.icon(
+            onPressed: () => context.go('/placement'),
+            icon: const Icon(Icons.explore_outlined),
+            label: const Text('Я уже немного знаю язык · диагностика'),
           ),
         const SizedBox(height: 32),
         FilledButton(
@@ -505,6 +512,7 @@ class StatsPage extends ConsumerWidget {
       ),
       const SectionTitle('Последние 7 дней'),
       WeeklyActivity(app),
+      ActivityCalendar(app, key: ValueKey(app.course.id)),
       const SizedBox(height: 16),
       ...List.generate(7, (i) {
         final day = DateTime.now().subtract(Duration(days: 6 - i));

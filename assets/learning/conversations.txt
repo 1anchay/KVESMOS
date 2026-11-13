@@ -1,0 +1,133 @@
+# Each scene has a title, goal, prerequisite, opening and two paths.
+# A line is target-language text | Russian meaning | optional pinyin.
+# Each path is request, response, confirmation, final reply, closing.
+##
+en|cafe|Чай на орбите|Выбери напиток и уточни, как его подать.|a1-10
+Would you like tea or water?|Будешь чай или воду?
+I'd like tea, please.|Чай, пожалуйста.
+Of course. I can bring you hot tea.|Конечно. Могу принести горячий чай.
+Hot tea, please.|Горячий чай, пожалуйста.
+Thank you for the tea.|Спасибо за чай.
+You're welcome. Be careful, it's hot.|Пожалуйста. Осторожно, он горячий.
+I'd like water, please.|Воду, пожалуйста.
+Sure. I can bring you cold water.|Конечно. Могу принести холодную воду.
+Cold water, please.|Холодную воду, пожалуйста.
+Thank you for the water.|Спасибо за воду.
+You're welcome. Here's your glass.|Пожалуйста. Вот твой стакан.
+##
+en|station|На какой платформе?|Уточни путь для выбранного транспорта и поблагодари за помощь.|a1-18
+Are you taking the train or the bus?|Ты едешь на поезде или на автобусе?
+I'm taking the train.|Я еду на поезде.
+The train leaves from platform two.|Поезд отправляется со второй платформы.
+Platform two, right?|Вторая платформа, верно?
+Thanks. I'll go to the platform.|Спасибо. Я пойду на платформу.
+That's right. Have a good trip!|Верно. Хорошей поездки!
+I'm taking the bus.|Я еду на автобусе.
+The bus leaves from stop five.|Автобус отправляется с пятой остановки.
+Stop five, right?|Пятая остановка, верно?
+Thanks. I'll go to the bus stop.|Спасибо. Я пойду на автобусную остановку.
+That's right. The stop is outside.|Верно. Остановка на улице.
+##
+es|cafe|Пауза в кафе|Закажи напиток и подтверди, с чем его подать.|es-a1-11
+¿Quieres café o agua?|Хочешь кофе или воду?
+Quiero café, por favor.|Я хочу кофе, пожалуйста.
+Tenemos café sin azúcar.|У нас есть кофе без сахара.
+Sin azúcar, por favor.|Без сахара, пожалуйста.
+Gracias por el café.|Спасибо за кофе.
+De nada. Aquí tienes tu café.|Пожалуйста. Вот твой кофе.
+Quiero agua, por favor.|Я хочу воду, пожалуйста.
+Tenemos agua fría con limón.|У нас есть холодная вода с лимоном.
+Con limón, por favor.|С лимоном, пожалуйста.
+Gracias por el agua.|Спасибо за воду.
+De nada. Aquí tienes tu vaso.|Пожалуйста. Вот твой стакан.
+##
+es|meeting|После урока|Договорись о времени и месте встречи.|es-a1-18
+¿Quedamos a las cuatro o a las cinco?|Встретимся в четыре или в пять?
+A las cuatro me viene bien.|Мне удобно в четыре.
+A las cuatro estaré en la cafetería.|В четыре я буду в кафе.
+Entonces, a las cuatro en la cafetería.|Тогда в четыре в кафе.
+Nos vemos en la cafetería.|Увидимся в кафе.
+Perfecto. Allí te espero.|Отлично. Жду тебя там.
+A las cinco me viene bien.|Мне удобно в пять.
+A las cinco estaré en la estación.|В пять я буду на вокзале.
+Entonces, a las cinco en la estación.|Тогда в пять на вокзале.
+Nos vemos en la estación.|Увидимся на вокзале.
+Muy bien. Te espero en la entrada.|Хорошо. Жду тебя у входа.
+##
+de|train|Билет до города|Выбери город и переспроси время отправления.|de-a1-14
+Möchten Sie nach Berlin oder nach Köln fahren?|Вы хотите поехать в Берлин или Кёльн?
+Eine Fahrkarte nach Berlin, bitte.|Билет до Берлина, пожалуйста.
+Der Zug nach Berlin fährt um zehn Uhr ab.|Поезд в Берлин отправляется в десять.
+Um zehn Uhr, richtig?|В десять, верно?
+Danke für die Fahrkarte nach Berlin.|Спасибо за билет до Берлина.
+Gern. Gute Fahrt nach Berlin!|Пожалуйста. Хорошей поездки в Берлин!
+Eine Fahrkarte nach Köln, bitte.|Билет до Кёльна, пожалуйста.
+Der Zug nach Köln fährt um elf Uhr ab.|Поезд в Кёльн отправляется в одиннадцать.
+Um elf Uhr, richtig?|В одиннадцать, верно?
+Danke für die Fahrkarte nach Köln.|Спасибо за билет до Кёльна.
+Gern. Gute Fahrt nach Köln!|Пожалуйста. Хорошей поездки в Кёльн!
+##
+de|desk|Что взять на занятие|Попроси предмет и уточни, где он лежит.|de-a1-08
+Brauchst du einen Stift oder ein Buch?|Тебе нужна ручка или книга?
+Ich brauche einen Stift.|Мне нужна ручка.
+Der Stift liegt auf dem Tisch.|Ручка лежит на столе.
+Auf dem Tisch?|На столе?
+Danke für den Stift.|Спасибо за ручку.
+Bitte. Du kannst damit schreiben.|Пожалуйста. Можешь ею писать.
+Ich brauche ein Buch.|Мне нужна книга.
+Das Buch liegt in der Tasche.|Книга лежит в сумке.
+In der Tasche?|В сумке?
+Danke für das Buch.|Спасибо за книгу.
+Bitte. Du kannst es mitnehmen.|Пожалуйста. Можешь взять её с собой.
+##
+fr|museum|Касса музея|Закажи нужное число билетов и проверь сумму.|fr-a1-12
+Un billet ou deux billets pour le musée ?|Один билет или два билета в музей?
+Un billet, s'il vous plaît.|Один билет, пожалуйста.
+Un billet coûte trois euros.|Один билет стоит три евро.
+Trois euros, c'est bien ça ?|Три евро, верно?
+Merci pour le billet.|Спасибо за билет.
+Avec plaisir. Bonne visite !|Пожалуйста. Приятного посещения!
+Deux billets, s'il vous plaît.|Два билета, пожалуйста.
+Ça fait six euros pour deux billets.|За два билета получается шесть евро.
+Six euros, c'est bien ça ?|Шесть евро, верно?
+Merci pour les deux billets.|Спасибо за два билета.
+Avec plaisir. Bonne visite à tous les deux !|Пожалуйста. Приятного посещения вам обоим!
+##
+fr|cafe|У окна или у двери|Выбери место и подтверди предложение собеседника.|fr-a1-22
+Vous préférez une table près de la fenêtre ou près de la porte ?|Вы предпочитаете столик у окна или у двери?
+Près de la fenêtre, s'il vous plaît.|У окна, пожалуйста.
+Il y a une table libre près de la fenêtre.|У окна есть свободный столик.
+Une table près de la fenêtre, alors.|Тогда столик у окна.
+Merci, je m'installe près de la fenêtre.|Спасибо, я сяду у окна.
+Très bien. Voici le menu.|Хорошо. Вот меню.
+Près de la porte, s'il vous plaît.|У двери, пожалуйста.
+La table près de la porte est libre.|Столик у двери свободен.
+Une table près de la porte, alors.|Тогда столик у двери.
+Merci, je m'installe près de la porte.|Спасибо, я сяду у двери.
+Très bien. Je vous apporte le menu.|Хорошо. Я принесу вам меню.
+##
+zh|market|Яблоки на рынке|Скажи количество и переспроси общую цену.|zh-a1-09
+你要一个苹果还是两个苹果？|Тебе одно яблоко или два?|Nǐ yào yí ge píngguǒ háishi liǎng ge píngguǒ?
+我要一个苹果。|Я хочу одно яблоко.|Wǒ yào yí ge píngguǒ.
+一个苹果三块钱。|Одно яблоко стоит три юаня.|Yí ge píngguǒ sān kuài qián.
+三块钱，对吗？|Три юаня, верно?|Sān kuài qián, duì ma?
+谢谢，一个苹果。|Спасибо, одно яблоко.|Xièxie, yí ge píngguǒ.
+给你。谢谢！|Вот, держи. Спасибо!|Gěi nǐ. Xièxie!
+我要两个苹果。|Я хочу два яблока.|Wǒ yào liǎng ge píngguǒ.
+两个苹果一共六块钱。|Два яблока стоят шесть юаней.|Liǎng ge píngguǒ yígòng liù kuài qián.
+六块钱，对吗？|Шесть юаней, верно?|Liù kuài qián, duì ma?
+谢谢，两个苹果。|Спасибо, два яблока.|Xièxie, liǎng ge píngguǒ.
+给你两个苹果。|Вот тебе два яблока.|Gěi nǐ liǎng ge píngguǒ.
+##
+zh|tea|Что будем пить?|Выбери напиток и уточни, горячий он или холодный.|zh-a1-18
+你喝茶还是咖啡？|Ты будешь чай или кофе?|Nǐ hē chá háishi kāfēi?
+我想喝茶。|Я хочу чай.|Wǒ xiǎng hē chá.
+我们有热茶。|У нас есть горячий чай.|Wǒmen yǒu rè chá.
+请给我一杯热茶。|Дайте чашку горячего чая.|Qǐng gěi wǒ yì bēi rè chá.
+谢谢你的茶。|Спасибо за чай.|Xièxie nǐ de chá.
+不客气。|Пожалуйста.|Bú kèqi.
+我想喝咖啡。|Я хочу кофе.|Wǒ xiǎng hē kāfēi.
+我们有冰咖啡。|У нас есть кофе со льдом.|Wǒmen yǒu bīng kāfēi.
+请给我一杯冰咖啡。|Дайте стакан кофе со льдом.|Qǐng gěi wǒ yì bēi bīng kāfēi.
+谢谢你的咖啡。|Спасибо за кофе.|Xièxie nǐ de kāfēi.
+不客气，给你。|Пожалуйста, вот.|Bú kèqi, gěi nǐ.

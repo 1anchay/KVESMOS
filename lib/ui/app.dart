@@ -17,6 +17,9 @@ import 'course_picker.dart';
 import 'companion_onboarding.dart';
 import 'unit_guide.dart';
 import 'practice_hub.dart';
+import 'placement_page.dart';
+import 'picture_recall.dart';
+import 'conversation_page.dart';
 import '../data/practice_repository.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
@@ -61,6 +64,25 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           : null,
       initialLocation: app.onboarded ? '/' : app.onboardingRoute,
       routes: [
+        GoRoute(
+          path: '/placement',
+          builder: (_, _) => PlacementPage(key: ValueKey(app.course.id)),
+        ),
+        GoRoute(
+          path: '/pictures',
+          builder: (_, _) => PictureRecallPage(key: ValueKey(app.course.id)),
+        ),
+        GoRoute(
+          path: '/conversations',
+          builder: (_, _) => ConversationPage(key: ValueKey(app.course.id)),
+        ),
+        GoRoute(
+          path: '/conversation/:id',
+          builder: (_, state) => ConversationPage(
+            key: ValueKey('${app.course.id}:${state.uri}'),
+            id: state.pathParameters['id'],
+          ),
+        ),
         GoRoute(
           path: '/companion/reminders',
           builder: (_, _) => const CompanionOnboarding(),

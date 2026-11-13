@@ -1,0 +1,31 @@
+# id|Russian reveal|English|Spanish|German|French|Mandarin|pinyin
+book|книга|book|el libro|das Buch|le livre|书|shū
+table|стол|table|la mesa|der Tisch|la table|桌子|zhuōzi
+house|дом|house|la casa|das Haus|la maison|家|jiā
+bag|сумка|bag|la bolsa|die Tasche|le sac|包|bāo
+bicycle|велосипед|bicycle/bike|la bicicleta|das Fahrrad|le vélo|自行车|zìxíngchē
+car|машина|car|el coche/el carro|das Auto|la voiture|汽车|qìchē
+phone|мобильный телефон|phone/mobile phone|el teléfono|das Handy|le téléphone|手机|shǒujī
+apple|яблоко|apple|la manzana|der Apfel|la pomme|苹果|píngguǒ
+water|вода|water|el agua|das Wasser|l'eau|水|shuǐ
+tea|чай|tea|el té|der Tee|le thé|茶|chá
+coffee|кофе|coffee|el café|der Kaffee|le café|咖啡|kāfēi
+train|поезд|train|el tren|der Zug|le train|火车|huǒchē
+bus|автобус|bus|el autobús|der Bus|le bus|公共汽车|gōnggòng qìchē
+ticket|билет|ticket|el billete/el boleto|die Fahrkarte|le billet|票|piào
+key|ключ|key|la llave|der Schlüssel|la clé/la clef|钥匙|yàoshi
+window|окно|window|la ventana|das Fenster|la fenêtre|窗户|chuānghu
+shirt|рубашка|shirt|la camisa|das Hemd|la chemise|衬衫|chènshān
+room|комната|room|la habitación|das Zimmer|la chambre|房间|fángjiān
+door|дверь|door|la puerta|die Tür|la porte|门|mén
+chair|стул|chair|la silla|der Stuhl|la chaise|椅子|yǐzi
+park|парк|park|el parque|der Park|le parc|公园|gōngyuán
+hotel|гостиница|hotel|el hotel|das Hotel|l'hôtel|酒店/宾馆/旅馆|jiǔdiàn/bīnguǎn/lǚguǎn
+clock|часы|clock|el reloj|die Uhr|l'horloge|钟|zhōng
+one|один|one|uno|eins|un|一|yī
+two|два|two|dos|zwei|deux|二/两|èr/liǎng
+three|три|three|tres|drei|trois|三|sān
+four|четыре|four|cuatro|vier|quatre|四|sì
+five|пять|five|cinco|fünf|cinq|五|wǔ
+ten|десять|ten|diez|zehn|dix|十|shí
+rain|дождь|rain|la lluvia|der Regen|la pluie|雨|yǔ

@@ -88,9 +88,17 @@ class DeviceVoice {
     this.gender,
   });
   String get key => '$locale|$name';
-  bool supports(String requested) =>
-      locale.replaceAll('_', '-').toLowerCase().split('-').first ==
-      requested.toLowerCase().split('-').first;
+  bool supports(String requested) {
+    final target = requested.replaceAll('_', '-').toLowerCase();
+    final parts = locale.replaceAll('_', '-').toLowerCase().split('-');
+    if (target == 'zh-cn') {
+      return parts.first == 'cmn' ||
+          (parts.first == 'zh' &&
+              !parts.contains('hk') &&
+              !parts.contains('mo'));
+    }
+    return parts.first == target.split('-').first;
+  }
 }
 
 abstract class TtsBackend {

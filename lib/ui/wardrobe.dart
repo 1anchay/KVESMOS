@@ -5,6 +5,7 @@ import '../core/controller.dart';
 import '../domain/rewards.dart';
 import '../services/learning_audio.dart';
 import 'collection_components.dart';
+import 'flight_components.dart';
 import 'profile_look.dart';
 import 'rewards_pages.dart' show rarityNames, slotNames, rarityColor;
 import 'design.dart' show pageBody;
@@ -49,9 +50,10 @@ class _InventoryPageState extends ConsumerState<InventoryPage> {
           ),
         ],
       ),
-      LinearProgressIndicator(
-        value: inventory.owned.length / catalog.items.length,
-        minHeight: 5,
+      FlightProgress(
+        value: inventory.owned.length,
+        target: catalog.items.length,
+        label: 'Найденные предметы',
       ),
       const SizedBox(height: 16),
       Wrap(

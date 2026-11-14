@@ -122,9 +122,7 @@ class AchievementCollection extends ConsumerWidget {
           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
         ),
       ),
-      const Text(
-        'Твои знания становятся созвездием. Значки остаются с тобой — ошибки их не отнимают.',
-      ),
+      const Text('Выбери значок, чтобы увидеть условие и свой прогресс.'),
       const SizedBox(height: 20),
       for (final badge in ExplorerBadge.all)
         Padding(

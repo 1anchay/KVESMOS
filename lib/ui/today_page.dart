@@ -129,7 +129,9 @@ class _TodayPageState extends ConsumerState<TodayPage> {
               label: 'Цель дня',
             ),
             const SizedBox(height: 14),
-            Text('ДАЛЬШЕ · ${next.title}', style: type.labelLarge),
+            Text('Следующий урок', style: type.labelLarge),
+            const SizedBox(height: 4),
+            Text(next.title, style: type.titleLarge),
             if (app.repository.learningObjectives[next.id]?.isNotEmpty ==
                 true) ...[
               const SizedBox(height: 6),

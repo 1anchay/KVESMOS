@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/controller.dart';
+import '../data/progress_encryption.dart';
 import '../data/progress_transfer.dart';
 import '../domain/progress.dart';
 import 'design.dart';
@@ -24,6 +25,7 @@ class _ProgressTransferPageState extends ConsumerState<ProgressTransferPage> {
   String? _status;
   ProgressFile? _file;
   TransferPreview? _preview;
+  bool _legacy = false;
 
   Future<void> _run(Future<void> Function(ProgressTransfer) action) async {
     if (_busy) return;
@@ -56,14 +58,19 @@ class _ProgressTransferPageState extends ConsumerState<ProgressTransferPage> {
   }
 
   Future<void> _export() => _run((transfer) async {
-    final bytes = await transfer.export();
+    final password = await _password(protect: true);
+    if (password == null || !mounted) return;
+    final bytes = await ProgressEncryption.encrypt(
+      await transfer.export(),
+      password,
+    );
     if (!mounted) return;
     final saved = await _documents.invokeMethod<bool>('export', {
-      'name': 'KVESMOS-progress-${dayKey(transfer.learning.now())}.json',
+      'name': 'KVESMOS-progress-${dayKey(transfer.learning.now())}.kvesmos',
       'bytes': bytes,
     });
     if (mounted && saved == true) {
-      setState(() => _status = 'Копия прогресса сохранена.');
+      setState(() => _status = 'Защищённая копия сохранена.');
     }
   });
 
@@ -74,15 +81,26 @@ class _ProgressTransferPageState extends ConsumerState<ProgressTransferPage> {
     });
     final bytes = await _documents.invokeMethod<Uint8List>('open');
     if (bytes == null || !mounted) return;
-    final file = await transfer.validate(bytes);
+    final encrypted = ProgressEncryption.isEncrypted(bytes);
+    final password = encrypted ? await _password(protect: false) : null;
+    if (!mounted || encrypted && password == null) return;
+    final file = await transfer.validate(
+      encrypted ? await ProgressEncryption.decrypt(bytes, password!) : bytes,
+    );
     final preview = await transfer.preview(file);
     if (mounted) {
       setState(() {
         _file = file;
         _preview = preview;
+        _legacy = !encrypted;
       });
     }
   });
+
+  Future<String?> _password({required bool protect}) => showDialog<String>(
+    context: context,
+    builder: (_) => _BackupPasswordDialog(protect: protect),
+  );
 
   Future<void> _restore() => _run((transfer) async {
     final app = ref.read(appProvider);
@@ -111,9 +129,9 @@ class _ProgressTransferPageState extends ConsumerState<ProgressTransferPage> {
         const SizedBox(height: 12),
         const FlightPanel(
           child: Text(
-            'В файле есть имя и история занятий. Файл без шифрования. '
-            'Выберите личную папку или носитель, доступный только вам. '
-            'Храните копию отдельно от приложения.',
+            'Новая копия защищена паролем. Сохраните пароль отдельно: '
+            'без него восстановить копию нельзя. В старых JSON-файлах имя '
+            'и история занятий открыты любому, у кого есть файл.',
           ),
         ),
         const SizedBox(height: 16),
@@ -140,6 +158,7 @@ class _ProgressTransferPageState extends ConsumerState<ProgressTransferPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Предпросмотр копии', style: type.titleLarge),
+                if (_legacy) const Text('Старая копия без шифрования.'),
                 Text('Дата: ${dayKey(_file!.created.toLocal())}'),
                 Text('XP на телефоне: ${preview.currentXp}'),
                 Text('XP в копии: ${preview.fileXp}'),
@@ -176,4 +195,87 @@ class _ProgressTransferPageState extends ConsumerState<ProgressTransferPage> {
       ]),
     );
   }
+}
+
+class _BackupPasswordDialog extends StatefulWidget {
+  final bool protect;
+  const _BackupPasswordDialog({required this.protect});
+
+  @override
+  State<_BackupPasswordDialog> createState() => _BackupPasswordDialogState();
+}
+
+class _BackupPasswordDialogState extends State<_BackupPasswordDialog> {
+  final _password = TextEditingController();
+  final _confirmation = TextEditingController();
+  final _form = GlobalKey<FormState>();
+
+  @override
+  void dispose() {
+    _password.dispose();
+    _confirmation.dispose();
+    super.dispose();
+  }
+
+  void _submit() {
+    if (_form.currentState!.validate()) {
+      Navigator.pop(context, _password.text);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) => AlertDialog(
+    scrollable: true,
+    title: Text(widget.protect ? 'Защитить копию' : 'Открыть копию'),
+    content: Form(
+      key: _form,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          TextFormField(
+            controller: _password,
+            obscureText: true,
+            autocorrect: false,
+            enableSuggestions: false,
+            maxLength: 256,
+            decoration: const InputDecoration(labelText: 'Пароль'),
+            validator: (value) {
+              if (value == null || value.trim().isEmpty)
+                return 'Введите пароль';
+              if (widget.protect && value.trim().runes.length < 12) {
+                return 'Введите минимум 12 символов';
+              }
+              return null;
+            },
+            textInputAction: widget.protect
+                ? TextInputAction.next
+                : TextInputAction.done,
+            onFieldSubmitted: widget.protect ? null : (_) => _submit(),
+          ),
+          if (widget.protect)
+            TextFormField(
+              controller: _confirmation,
+              obscureText: true,
+              autocorrect: false,
+              enableSuggestions: false,
+              maxLength: 256,
+              decoration: const InputDecoration(labelText: 'Повторите пароль'),
+              validator: (value) =>
+                  value == _password.text ? null : 'Пароли не совпадают',
+              onFieldSubmitted: (_) => _submit(),
+            ),
+        ],
+      ),
+    ),
+    actions: [
+      TextButton(
+        onPressed: () => Navigator.pop(context),
+        child: const Text('Отмена'),
+      ),
+      FilledButton(
+        onPressed: _submit,
+        child: Text(widget.protect ? 'Сохранить' : 'Открыть'),
+      ),
+    ],
+  );
 }

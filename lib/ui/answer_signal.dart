@@ -6,6 +6,7 @@ class AnswerSignal extends StatelessWidget {
   final bool correct, animate;
   final int combo, awardedXp;
   final String? explanation, correction;
+  final String character;
   const AnswerSignal({
     super.key,
     required this.correct,
@@ -14,6 +15,7 @@ class AnswerSignal extends StatelessWidget {
     this.awardedXp = 10,
     this.explanation,
     this.correction,
+    this.character = 'orbi',
   });
   @override
   Widget build(BuildContext context) => Semantics(
@@ -36,7 +38,7 @@ class AnswerSignal extends StatelessWidget {
             Row(
               children: [
                 CharacterMoment(
-                  characterId: 'orbi',
+                  characterId: character,
                   size: 40,
                   animate: animate,
                   state: correct

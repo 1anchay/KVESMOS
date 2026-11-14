@@ -9,6 +9,32 @@ void main() {
   setUpAll(setupSqlite);
   for (final course in StudyCourse.all) {
     test(
+      '${course.language}: novice and intermediate results differ',
+      () async {
+        final repo = memoryRepository();
+        addTearDown(repo.db.close);
+        await repo.initialize();
+        await repo.selectCourse(course.id);
+        final diagnostic = SmartPlacementRepository(repo);
+        final startingProgress = await repo.allEvents();
+        for (final expected in [0, 1]) {
+          var state = await diagnostic.open(restart: true);
+          for (var index = 0; index < 12; index++) {
+            final question = SmartPlacementRepository.question(state)!;
+            if (expected == 0 && index < 5) expect(question['band'], 0);
+            state = await diagnostic.answer(
+              question['id'],
+              expected == 1 && (question['band'] as int) < 2
+                  ? (question['answers'] as List).first
+                  : '∅',
+            );
+          }
+          expect(state['level'], expected);
+          expect(await repo.allEvents(), startingProgress);
+        }
+      },
+    );
+    test(
       '${course.language}: choose a later start without fictional progress',
       () async {
         final repo = memoryRepository();

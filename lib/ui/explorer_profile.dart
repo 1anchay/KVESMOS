@@ -52,7 +52,7 @@ class ExplorerProfile extends ConsumerWidget {
                   '${p.streak(app.repository.now())}',
                   'дней · рекорд ${app.records.longestStreak}',
                 ),
-                ('${p.completed.length}', 'миссий'),
+                ('${p.completed.length}', 'уроков'),
                 ('${app.inventory.owned.length}', 'находок'),
               ])
                 SizedBox(

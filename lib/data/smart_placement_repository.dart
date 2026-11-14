@@ -119,14 +119,24 @@ class SmartPlacementRepository {
     final remaining = rows.where((q) => !used.contains(q['id'])).toList();
     if (remaining.isEmpty || results.length >= 12) return null;
     final current = results.isEmpty ? 0 : results.last['band'] as int;
-    final recent = results.where((r) => r['band'] == current).toList();
-    final passed = recent.where((r) => r['correct'] == true).length;
-    final target = recent.length >= 2 && passed >= 2
-        ? (current + 1).clamp(0, 2)
-        : recent.length >= 3 && passed <= 1
-        ? (current - 1).clamp(0, 2)
-        : current;
-    // Once a band is exhausted, prefer its neighbour; never repeat a task.
+    final recent = results.reversed
+        .takeWhile((result) => result['band'] == current)
+        .toList();
+    final passedInBand = results
+        .where((r) => r['band'] == current && r['correct'] == true)
+        .length;
+    var target = current;
+    if (current > 0 &&
+        recent.length >= 2 &&
+        recent.take(2).every((r) => r['correct'] == false)) {
+      target--;
+    } else if (current < 2 &&
+        passedInBand >= (current == 0 ? 2 : 3) &&
+        recent.isNotEmpty &&
+        recent.first['correct'] == true) {
+      target++;
+    }
+    // When the preferred band runs out, sample the nearest available band.
     remaining.sort((a, b) {
       final distance = ((a['band'] as int) - target).abs().compareTo(
         ((b['band'] as int) - target).abs(),

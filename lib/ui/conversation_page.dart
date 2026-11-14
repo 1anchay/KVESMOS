@@ -123,44 +123,50 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
     if (!ok) unavailable('Распознавание недоступно. Ответ можно написать.');
   }
 
-  Widget bubble(
-    String name,
-    String character,
-    DialogueLine line,
-  ) => FlightPanel(
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
+  Widget bubble(String name, String character, DialogueLine line) =>
+      FlightPanel(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CharacterMoment(characterId: character, size: 48, animate: false),
-            const SizedBox(width: 8),
-            Expanded(child: Text(name)),
+            Row(
+              children: [
+                SpeakingCharacter(
+                  key: ValueKey((character, line.text)),
+                  audio: app.audio,
+                  character: character,
+                  size: 48,
+                  state: CharacterState.greeting,
+                ),
+                const SizedBox(width: 8),
+                Expanded(child: Text(name)),
+              ],
+            ),
+            Text(line.text, style: Theme.of(context).textTheme.titleLarge),
+            if (line.pronunciation != null) Text(line.pronunciation!),
+            if (help) Text(line.meaning),
+            TextButton.icon(
+              onPressed: () async {
+                voiceTicket++;
+                setState(() => listening = false);
+                await voice.stop();
+                if (!mounted) return;
+                final ok = await app.audio.speak(
+                  line.text,
+                  character: character,
+                );
+                if (!ok && mounted) {
+                  showMessage(
+                    context,
+                    'Голос недоступен. Реплика остаётся на экране.',
+                  );
+                }
+              },
+              icon: const Icon(Icons.volume_up_outlined),
+              label: const Text('Послушать'),
+            ),
           ],
         ),
-        Text(line.text, style: Theme.of(context).textTheme.titleLarge),
-        if (line.pronunciation != null) Text(line.pronunciation!),
-        if (help) Text(line.meaning),
-        TextButton.icon(
-          onPressed: () async {
-            voiceTicket++;
-            setState(() => listening = false);
-            await voice.stop();
-            if (!mounted) return;
-            final ok = await app.audio.speak(line.text, character: character);
-            if (!ok && mounted) {
-              showMessage(
-                context,
-                'Голос недоступен. Реплика остаётся на экране.',
-              );
-            }
-          },
-          icon: const Icon(Icons.volume_up_outlined),
-          label: const Text('Послушать'),
-        ),
-      ],
-    ),
-  );
+      );
 
   @override
   void dispose() {

@@ -93,6 +93,9 @@ class LearningRepository {
     updatedMaterials.clear();
     learningObjectives.clear();
     final legacyInstalled = await setting('installed') != null;
+    final seen = await settingsWithPrefix('kvesmos.pack.seen.v1:');
+    // Only a first install or an app update needs to consult the pack table.
+    Set<String>? installedIds;
     for (final course in StudyCourse.all) {
       final manifest = jsonDecode(await loadAsset(course.manifest));
       if (manifest['sourceLanguage'] != 'ru' ||
@@ -134,21 +137,24 @@ class LearningRepository {
             final marker = 'kvesmos.pack.seen.v1:${info.id}';
             // Old deleted packs stay deleted. New IDs install exactly once;
             // a later app update never overwrites a pinned session or pack.
-            await db.transaction(() async {
-              if (await setting(marker) == null) {
+            if (!seen.containsKey(marker)) {
+              await db.transaction(() async {
+                installedIds ??= await installed();
                 if (!(legacy && legacyInstalled) &&
-                    !(await installed()).contains(info.id)) {
+                    !installedIds!.contains(info.id)) {
                   await installRaw(info.id, raw);
+                  installedIds!.add(info.id);
                 }
                 await setSetting(marker, 'true');
-              }
-            });
+              });
+            }
             final current = legacy
                 ? await loadAsset('assets/courses/demo/${info.id}.json')
                 : raw;
             updatedMaterials[info.id] = current;
-            learningObjectives[info.id] =
-                jsonDecode(current)['objective'] ?? '';
+            learningObjectives[info.id] = legacy
+                ? jsonDecode(current)['objective'] ?? ''
+                : material.objective ?? '';
           }
         }
       }

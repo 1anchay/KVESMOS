@@ -146,7 +146,7 @@ void main() {
       await audio.voices.refresh();
       expect(await audio.speak('Hello!'), false);
       expect(player.requests, isEmpty);
-      expect(audio.lastProblem, contains('немецкого'));
+      expect(audio.lastProblem, contains('Нет установленного голоса'));
       audio.studyLocale = 'en-US';
       expect(await audio.speak('Hello!'), true);
       expect(audio.lastSource, SpeechSource.recording);
@@ -259,7 +259,7 @@ void main() {
     await audio.save(const AudioPreferences());
     tts.installed = [];
     expect(await audio.speak('Other phrase'), false);
-    expect(audio.lastProblem, contains('Нет готового'));
+    expect(audio.lastProblem, contains('Можно прочитать фразу'));
     expect(audio.playback.value, isNull);
   });
   test('selection stays quiet during speech; verdict cancels it', () async {

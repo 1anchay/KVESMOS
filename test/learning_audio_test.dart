@@ -51,6 +51,27 @@ class FakeTts implements TtsBackend {
 }
 
 void main() {
+  test(
+    'Mandarin accepts explicit Mandarin voices and excludes Hong Kong Chinese',
+    () {
+      expect(
+        const DeviceVoice('Mandarin', 'cmn_CN', false).supports('zh-CN'),
+        isTrue,
+      );
+      expect(
+        const DeviceVoice('Chinese', 'zh-Hans-CN', false).supports('zh-CN'),
+        isTrue,
+      );
+      expect(
+        const DeviceVoice('Cantonese', 'zh-HK', false).supports('zh-CN'),
+        isFalse,
+      );
+      expect(
+        const DeviceVoice('Cantonese', 'yue-HK', false).supports('zh-CN'),
+        isFalse,
+      );
+    },
+  );
   TestWidgetsFlutterBinding.ensureInitialized();
   late Map<String, String> storage;
   late FakeTts backend;

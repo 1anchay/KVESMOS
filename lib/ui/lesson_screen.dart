@@ -303,8 +303,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       ? pairs.length == exercise.pairs.length
       : answer.trim().isNotEmpty;
   Future<void> check() async {
-    if (busy) return;
+    if (busy || (result == null && !canCheck)) return;
     FocusScope.of(context).unfocus();
+    final submitted = answer;
     setState(() => busy = true);
     try {
       final app = ref.read(appProvider);
@@ -343,7 +344,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           session!.id,
           session!.position,
           exercise,
-          answer,
+          submitted,
           total: lesson!.exercises.length,
           heardAudio: heardAudio && !revealedAudio,
         );
@@ -572,6 +573,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                       child: SingleChildScrollView(
                         key: ValueKey('feedback:${e.id}:$result'),
                         child: AnswerSignal(
+                          character: e.character,
                           awardedXp: rehearsal ? 0 : 10,
                           explanation: result == false
                               ? mistakeExplanation(e, answer)
@@ -919,13 +921,37 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                     runSpacing: 8,
                     children: order
                         .map(
-                          (i) => InputChip(
-                            label: Text(e.tokens[i]),
-                            onDeleted: () {
-                              unawaited(audio.play(SoundEffect.tap));
-                              setState(() => order.remove(i));
+                          (i) => DragTarget<int>(
+                            onWillAcceptWithDetails: (details) =>
+                                !busy && result == null && details.data != i,
+                            onAcceptWithDetails: (details) {
+                              final from = order.indexOf(details.data);
+                              final to = order.indexOf(i);
+                              if (from < 0 || to < 0) return;
+                              setState(
+                                () => order.insert(to, order.removeAt(from)),
+                              );
                               unawaited(saveDraft());
                             },
+                            builder: (context, candidates, _) =>
+                                LongPressDraggable<int>(
+                                  data: i,
+                                  maxSimultaneousDrags: busy || result != null
+                                      ? 0
+                                      : 1,
+                                  feedback: Material(
+                                    child: Chip(label: Text(e.tokens[i])),
+                                  ),
+                                  child: InputChip(
+                                    selected: candidates.isNotEmpty,
+                                    label: Text(e.tokens[i]),
+                                    onDeleted: () {
+                                      unawaited(audio.play(SoundEffect.tap));
+                                      setState(() => order.remove(i));
+                                      unawaited(saveDraft());
+                                    },
+                                  ),
+                                ),
                           ),
                         )
                         .toList(),

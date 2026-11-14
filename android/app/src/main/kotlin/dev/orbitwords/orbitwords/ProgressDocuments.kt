@@ -33,7 +33,7 @@ internal class ProgressDocuments(private val activity: Activity, messenger: Bina
             }
             val intent = Intent(if (write) Intent.ACTION_CREATE_DOCUMENT else Intent.ACTION_OPEN_DOCUMENT)
                 .addCategory(Intent.CATEGORY_OPENABLE)
-                .setType(if (write) "application/json" else "*/*")
+                .setType(if (write) "application/octet-stream" else "*/*")
             if (write) intent.putExtra(Intent.EXTRA_TITLE, call.argument<String>("name"))
             try {
                 pending = result
@@ -110,6 +110,6 @@ internal class ProgressDocuments(private val activity: Activity, messenger: Bina
 
     companion object {
         private const val REQUEST = 9281
-        private const val LIMIT = 32 * 1024 * 1024
+        private const val LIMIT = 32 * 1024 * 1024 + 52
     }
 }

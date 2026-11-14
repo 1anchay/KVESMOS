@@ -407,7 +407,7 @@ class _ChestSceneState extends ConsumerState<OpenChestDialog>
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CharacterMoment(
-                            characterId: 'pixie',
+                            characterId: 'orbi',
                             state: fresh
                                 ? CharacterState.celebration
                                 : CharacterState.idle,

@@ -32,10 +32,22 @@ class UnitGuidePage extends ConsumerWidget {
       Text('${app.course.name} · цель, пример, применение и повторение'),
       const SizedBox(height: 16),
       if (next != null)
-        FilledButton.icon(
-          onPressed: () => showLessonPreview(context, app, next),
-          icon: const Icon(Icons.play_arrow_rounded),
-          label: Text('Продолжить: ${next.title}'),
+        FlightPanel(
+          accent: true,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              if (current != null)
+                Text(current.section, style: type.labelLarge),
+              Text(next.title, style: type.titleLarge),
+              const SizedBox(height: 10),
+              FilledButton.icon(
+                onPressed: () => showLessonPreview(context, app, next),
+                icon: const Icon(Icons.play_arrow_rounded),
+                label: const Text('Продолжить'),
+              ),
+            ],
+          ),
         ),
       for (final unit in units) ...[
         const SizedBox(height: 20),
@@ -109,6 +121,7 @@ class UnitGuidePage extends ConsumerWidget {
                       : const Icon(Icons.chevron_right),
                 ),
               OutlinedButton.icon(
+                key: ValueKey('unit-guide-${unit.id}'),
                 onPressed: () => _guide(context, app, unit),
                 icon: const Icon(Icons.menu_book_outlined),
                 label: const Text('Перед стартом · справочник'),

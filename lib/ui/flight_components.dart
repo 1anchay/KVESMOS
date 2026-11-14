@@ -69,13 +69,17 @@ class FlightArrival extends StatelessWidget {
   const FlightArrival({super.key, required this.child, required this.animate});
   @override
   Widget build(BuildContext context) => TweenAnimationBuilder<double>(
-    tween: Tween(begin: animate ? 0 : 1, end: 1),
+    tween: Tween(
+      begin: animate && !MediaQuery.disableAnimationsOf(context) ? 0 : 1,
+      end: 1,
+    ),
+    curve: Curves.easeOutCubic,
     duration: animate && !MediaQuery.disableAnimationsOf(context)
-        ? const Duration(milliseconds: 650)
+        ? const Duration(milliseconds: 320)
         : Duration.zero,
     builder: (_, t, child) => Opacity(
-      opacity: .4 + .6 * t,
-      child: Transform.translate(offset: Offset(0, 14 * (1 - t)), child: child),
+      opacity: .65 + .35 * t,
+      child: Transform.translate(offset: Offset(0, 8 * (1 - t)), child: child),
     ),
     child: child,
   );

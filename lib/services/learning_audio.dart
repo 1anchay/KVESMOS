@@ -88,9 +88,17 @@ class DeviceVoice {
     this.gender,
   });
   String get key => '$locale|$name';
-  bool supports(String requested) =>
-      locale.replaceAll('_', '-').toLowerCase().split('-').first ==
-      requested.toLowerCase().split('-').first;
+  bool supports(String requested) {
+    final target = requested.replaceAll('_', '-').toLowerCase();
+    final parts = locale.replaceAll('_', '-').toLowerCase().split('-');
+    if (target == 'zh-cn') {
+      return parts.first == 'cmn' ||
+          (parts.first == 'zh' &&
+              !parts.contains('hk') &&
+              !parts.contains('mo'));
+    }
+    return parts.first == target.split('-').first;
+  }
 }
 
 abstract class TtsBackend {
@@ -538,13 +546,17 @@ class LearningAudio {
       return false;
     }
     try {
-      if (await SoundEffectsService.channel.invokeMethod<bool>('allowSpeech') !=
-          true) {
+      final allowed = await SoundEffectsService.channel.invokeMethod<bool>(
+        'allowSpeech',
+      );
+      if (ticket != _generation) return false;
+      if (allowed != true) {
         lastProblem =
             'Проверьте громкость мультимедиа. Если звук занят другим приложением, повторите прослушивание.';
         return false;
       }
     } catch (_) {
+      if (ticket != _generation) return false;
       lastProblem = 'Системный аудиоплеер недоступен. Фразу можно прочитать.';
       return false;
     }
@@ -599,7 +611,7 @@ class LearningAudio {
     if (!ok && ticket == _generation) {
       playback.value = null;
       lastProblem = voices.voiceFor(character, locale) == null
-          ? 'Нет готового ${{'en': 'английского', 'es': 'испанского', 'de': 'немецкого', 'ru': 'русского'}[locale.split('-').first] ?? locale} голоса. Установите офлайн-пакет в настройках синтеза речи Android и повторите прослушивание.'
+          ? 'Нет установленного голоса для этого языка. Можно прочитать фразу или загрузить голос в настройках синтеза речи устройства.'
           : 'Синтез речи не запустил фразу. Проверьте голос в настройках синтеза речи устройства.';
     }
     return ok && ticket == _generation;

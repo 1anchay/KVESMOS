@@ -91,10 +91,6 @@ Future<void> showLessonPreview(
                         child: Text('${word.en} — ${word.ru}'),
                       ),
                     const SizedBox(height: 8),
-                    const Text(
-                      'Слушай, собирай фразы и отвечай героям. Подсказка доступна в каждом задании.',
-                    ),
-                    const SizedBox(height: 16),
                   ],
                 ),
               ),

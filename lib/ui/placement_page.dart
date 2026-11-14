@@ -8,6 +8,7 @@ import '../domain/course.dart';
 import '../domain/learning_unit.dart';
 import 'character_moment.dart';
 import 'design.dart';
+import 'flight_components.dart';
 import 'lesson_effects.dart';
 
 class PlacementPage extends ConsumerStatefulWidget {
@@ -153,13 +154,27 @@ class _PlacementPageState extends ConsumerState<PlacementPage> {
               const Text(
                 'Это подсказка для выбора темы. XP и награды за тест не начисляются.',
               ),
-              Text(unit?.title ?? info.title, style: type.titleLarge),
-              Text('Первый урок: ${info.title}'),
-              Text(
-                level == 0
-                    ? 'Начни с первых фраз и закрепи их в диалоге.'
-                    : 'Вспомни знакомые конструкции, затем попробуй новые примеры в уроке.',
+              const SizedBox(height: 12),
+              FlightPanel(
+                accent: true,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text('Рекомендуемый раздел', style: type.labelLarge),
+                    const SizedBox(height: 6),
+                    Text(unit?.title ?? info.title, style: type.titleLarge),
+                    const SizedBox(height: 6),
+                    Text('Первый урок: ${info.title}'),
+                    const SizedBox(height: 8),
+                    Text(
+                      level == 0
+                          ? 'Начни с первых фраз и закрепи их в диалоге.'
+                          : 'Вспомни знакомые конструкции, затем попробуй новые примеры в уроке.',
+                    ),
+                  ],
+                ),
               ),
+              const SizedBox(height: 12),
               for (final skill in results.map((r) => r['skill']).toSet())
                 Text(
                   '$skill · ${results.where((r) => r['skill'] == skill && r['correct'] == true).length} из ${results.where((r) => r['skill'] == skill).length}',
@@ -199,10 +214,13 @@ class _PlacementPageState extends ConsumerState<PlacementPage> {
               ),
             ] else if (item != null) ...[
               LessonProgress(done: results.length, total: 12),
+              const SizedBox(height: 12),
               Text('Задание ${results.length + 1}', style: type.titleMedium),
               if (item['scene'] != null) Text(item['scene']),
               if (item['pinyin'] != null) Text(item['pinyin']),
+              const SizedBox(height: 8),
               Text(item['prompt'], style: type.titleLarge),
+              const SizedBox(height: 12),
               if (tokens.isNotEmpty) ...[
                 Text(selected.map((i) => tokens[i]).join(' ')),
                 Wrap(
@@ -236,9 +254,12 @@ class _PlacementPageState extends ConsumerState<PlacementPage> {
                 ),
               ] else if ((item['options'] as List).isNotEmpty)
                 for (final option in List<String>.from(item['options']))
-                  OutlinedButton(
-                    onPressed: busy ? null : () => answer(item['id'], option),
-                    child: Text(option),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 6),
+                    child: OutlinedButton(
+                      onPressed: busy ? null : () => answer(item['id'], option),
+                      child: Text(option),
+                    ),
                   )
               else ...[
                 TextField(

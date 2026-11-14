@@ -123,8 +123,7 @@
       "type": "dialogue",
       "prompt": "Мико говорит: «Hello! My name is Miko.» Что ответишь?",
       "answers": [
-        "Hello, Miko!",
-        "Hi, Miko!"
+        "Hello, Miko!"
       ],
       "explanation": "При знакомстве естественно поздороваться с собеседником по имени.",
       "character": "miko",
@@ -133,7 +132,7 @@
       "hint": "Мико только пришёл. Здесь уместно приветствие, а не прощание.",
       "options": [
         "Hello, Miko!",
-        "Hi, Miko!",
+        "See you tomorrow, Miko!",
         "Goodbye, Miko!"
       ],
       "scene": "Мико: Hello! My name is Miko.",

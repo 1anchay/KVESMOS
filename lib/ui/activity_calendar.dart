@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../core/controller.dart';
 import '../domain/activity_calendar.dart';
 import '../domain/progress.dart';
+import 'flight_components.dart';
 
 class ActivityCalendar extends StatefulWidget {
   final AppController app;
@@ -24,9 +25,9 @@ class _ActivityCalendarState extends State<ActivityCalendar> {
     final lessons = week.fold(0, (total, d) => total + d.lessons);
     final theme = Theme.of(context), colors = theme.colorScheme;
     final local = MaterialLocalizations.of(context);
-    return Card(
+    return FlightPanel(
       child: Padding(
-        padding: const EdgeInsets.all(14),
+        padding: EdgeInsets.zero,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

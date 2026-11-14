@@ -93,36 +93,39 @@ class FlightCompletion extends StatelessWidget {
         child: pageBody([
           FlightArrival(
             animate: celebrate && app.audio.preferences.reactions,
-            child: Column(
-              children: [
-                CharacterMoment(
-                  characterId: 'orbi',
-                  state: CharacterState.celebration,
-                  size: 92,
-                  animate: celebrate && app.audio.preferences.reactions,
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'Ещё одно открытие!',
-                  style: type.headlineMedium,
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 6),
-                Text(lesson.title, style: type.bodyLarge),
-                const SizedBox(height: 12),
-                Text(
-                  '+${summary.xp} XP',
-                  key: const Key('earned-xp'),
-                  style: type.displaySmall?.copyWith(
-                    fontWeight: FontWeight.w800,
-                    color: Theme.of(context).colorScheme.primary,
+            child: FlightPanel(
+              accent: true,
+              child: Column(
+                children: [
+                  CharacterMoment(
+                    characterId: 'orbi',
+                    state: CharacterState.celebration,
+                    size: 92,
+                    animate: celebrate && app.audio.preferences.reactions,
                   ),
-                ),
-                Text(
-                  '${summary.correct} верных ответов · всё сохранено',
-                  style: type.bodySmall,
-                ),
-              ],
+                  const SizedBox(height: 8),
+                  Text(
+                    'Ещё одно открытие!',
+                    style: type.headlineMedium,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 6),
+                  Text(lesson.title, style: type.bodyLarge),
+                  const SizedBox(height: 12),
+                  Text(
+                    '+${summary.xp} XP',
+                    key: const Key('earned-xp'),
+                    style: type.displaySmall?.copyWith(
+                      fontWeight: FontWeight.w800,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  ),
+                  Text(
+                    '${summary.correct} верных ответов · всё сохранено',
+                    style: type.bodySmall,
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 20),

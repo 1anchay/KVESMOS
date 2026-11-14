@@ -1,0 +1,257 @@
+{
+  "id": "de-a1-50",
+  "title": "До конца недели",
+  "topic": "Условия и сроки",
+  "order": 49,
+  "objective": "Различать bis и seit в сообщении о сроке.",
+  "guide": "Bis указывает будущую границу. Seit связывает начало в прошлом с продолжающимся состоянием.",
+  "vocabulary": [
+    {
+      "id": "de:v13:50:p0",
+      "en": "Ich brauche die Antwort bis Freitag.",
+      "ru": "Мне нужен ответ к пятнице."
+    },
+    {
+      "id": "de:v13:50:p1",
+      "en": "Seit Montag warte ich auf die Antwort.",
+      "ru": "Я жду ответа с понедельника."
+    },
+    {
+      "id": "de:v13:50:p2",
+      "en": "Heute kann ich noch nichts bestätigen.",
+      "ru": "Сегодня я пока ничего не могу подтвердить."
+    },
+    {
+      "id": "de:v13:50:p3",
+      "en": "Morgen gebe ich dir Bescheid.",
+      "ru": "Завтра я дам тебе знать."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "До конца недели",
+      "phrase": "Ich brauche die Antwort bis Freitag.",
+      "translation": "Мне нужен ответ к пятнице.",
+      "explanation": "Bis указывает будущую границу. Seit связывает начало в прошлом с продолжающимся состоянием."
+    },
+    {
+      "character": "miko",
+      "title": "До конца недели",
+      "phrase": "Seit Montag warte ich auf die Antwort.",
+      "translation": "Я жду ответа с понедельника.",
+      "explanation": "Seit Montag warte ich auf die Antwort. — Я жду ответа с понедельника."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "До конца недели",
+      "phrase": "Heute kann ich noch nichts bestätigen.",
+      "translation": "Сегодня я пока ничего не могу подтвердить.",
+      "explanation": "Heute kann ich noch nichts bestätigen. — Сегодня я пока ничего не могу подтвердить."
+    },
+    {
+      "character": "orbi",
+      "title": "До конца недели",
+      "phrase": "Morgen gebe ich dir Bescheid.",
+      "translation": "Завтра я дам тебе знать.",
+      "explanation": "Morgen gebe ich dir Bescheid. — Завтра я дам тебе знать."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich brauche die Antwort bis Freitag.",
+      "translation": "Мне нужен ответ к пятнице.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мне нужен ответ к пятнице.",
+      "options": [
+        "Сегодня я пока ничего не могу подтвердить.",
+        "Мне нужен ответ к пятнице.",
+        "Завтра я дам тебе знать."
+      ],
+      "explanation": "Bis указывает будущую границу. Seit связывает начало в прошлом с продолжающимся состоянием."
+    },
+    {
+      "id": "apply",
+      "phrase": "Seit Montag warte ich auf die Antwort.",
+      "translation": "Я жду ответа с понедельника.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Seit Montag warte ich auf die Antwort.",
+      "tokens": [
+        "Seit",
+        "Montag",
+        "warte",
+        "ich",
+        "auf",
+        "die",
+        "Antwort."
+      ],
+      "character": "miko",
+      "explanation": "Seit Montag warte ich auf die Antwort. — Я жду ответа с понедельника."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-50-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Сегодня я пока ничего не могу подтвердить."
+      ],
+      "explanation": "Heute kann ich noch nichts bestätigen. — Сегодня я пока ничего не могу подтвердить.",
+      "wordIds": [
+        "de:v13:50:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Heute kann ich noch nichts bestätigen.",
+      "options": [
+        "Мне нужен ответ к пятнице.",
+        "Сегодня я пока ничего не могу подтвердить.",
+        "Я жду ответа с понедельника."
+      ],
+      "hint": "Heute kann ich noch nichts bestätigen. — Сегодня я пока ничего не могу подтвердить."
+    },
+    {
+      "id": "de-a1-50-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я жду ответа с понедельника.",
+      "answers": [
+        "Seit Montag warte ich auf die Antwort."
+      ],
+      "explanation": "Bis указывает будущую границу. Seit связывает начало в прошлом с продолжающимся состоянием.",
+      "wordIds": [
+        "de:v13:50:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Seit",
+        "Montag",
+        "warte",
+        "ich",
+        "auf",
+        "die",
+        "Antwort."
+      ],
+      "hint": "Seit Montag warte ich auf die Antwort. — Я жду ответа с понедельника."
+    },
+    {
+      "id": "de-a1-50-e03",
+      "type": "dialogue",
+      "prompt": "Какой крайний срок?",
+      "answers": [
+        "Пятница."
+      ],
+      "explanation": "В диалоге: Kann ich am Freitag antworten? / Ja, ich brauche die Antwort bis Freitag. Поэтому: Пятница.",
+      "wordIds": [
+        "de:v13:50:p0",
+        "de:v13:50:p1",
+        "de:v13:50:p2",
+        "de:v13:50:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Kann ich am Freitag antworten?\nМико: Ja, ich brauche die Antwort bis Freitag.",
+      "options": [
+        "Понедельник.",
+        "Завтра утром.",
+        "Пятница."
+      ]
+    },
+    {
+      "id": "de-a1-50-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Мне нужен ответ к пятнице.»?",
+      "answers": [
+        "Ich brauche die Antwort bis Freitag."
+      ],
+      "explanation": "Ich brauche die Antwort bis Freitag. — Мне нужен ответ к пятнице.",
+      "wordIds": [
+        "de:v13:50:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Seit Montag warte ich auf die Antwort.",
+        "Morgen gebe ich dir Bescheid.",
+        "Ich brauche die Antwort bis Freitag."
+      ],
+      "hint": "Ich brauche die Antwort bis Freitag. — Мне нужен ответ к пятнице."
+    },
+    {
+      "id": "de-a1-50-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Seit Montag ich warte auf die Antwort.",
+      "answers": [
+        "Seit Montag warte ich auf die Antwort."
+      ],
+      "explanation": "После обстоятельства Seit Montag спрягаемый глагол занимает второе место.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Seit Montag ich warte auf die Antwort.",
+        "Seit Montag warte ich auf die Antwort."
+      ],
+      "hint": "Bis указывает будущую границу. Seit связывает начало в прошлом с продолжающимся состоянием."
+    },
+    {
+      "id": "de-a1-50-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Завтра я дам тебе знать.». Можно написать вместо микрофона.",
+      "answers": [
+        "Morgen gebe ich dir Bescheid."
+      ],
+      "explanation": "Morgen gebe ich dir Bescheid. — Завтра я дам тебе знать.",
+      "wordIds": [
+        "de:v13:50:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Morgen gebe ich dir Bescheid.",
+      "recall": {
+        "phrase": "Morgen gebe ich dir Bescheid.",
+        "meaning": "Завтра я дам тебе знать."
+      }
+    },
+    {
+      "id": "de-a1-50-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мне нужен ответ к пятнице.",
+      "answers": [
+        "Ich brauche die Antwort bis Freitag."
+      ],
+      "explanation": "Bis указывает будущую границу. Seit связывает начало в прошлом с продолжающимся состоянием.",
+      "wordIds": [
+        "de:v13:50:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich brauche die Antwort bis Freitag.",
+        "meaning": "Мне нужен ответ к пятнице."
+      }
+    },
+    {
+      "id": "de-a1-50-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Возьми, пожалуйста, куртку.",
+      "answers": [
+        "Bring bitte eine Jacke mit."
+      ],
+      "explanation": "Bring bitte eine Jacke mit. — Возьми, пожалуйста, куртку.",
+      "wordIds": [
+        "de:v13:49:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Wenn es regnet, bleiben wir drinnen.",
+        "Sonst gehen wir in den Garten.",
+        "Wir können später entscheiden.",
+        "Bring bitte eine Jacke mit."
+      ]
+    }
+  ]
+}

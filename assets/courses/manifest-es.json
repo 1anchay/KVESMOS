@@ -393,6 +393,174 @@
           ]
         }
       ]
+    },
+    {
+      "id": "es-v13",
+      "title": "Разговоры и решения",
+      "themes": [
+        {
+          "id": "es-v13-1",
+          "title": "Предметы и получатели",
+          "lessons": [
+            {
+              "id": "es-a1-43",
+              "title": "Ключ и записка",
+              "order": 42,
+              "asset": "assets/courses/es-a1-43.json"
+            },
+            {
+              "id": "es-a1-44",
+              "title": "Фото для дедушки",
+              "order": 43,
+              "asset": "assets/courses/es-a1-44.json"
+            }
+          ]
+        },
+        {
+          "id": "es-v13-2",
+          "title": "Привычки и события",
+          "lessons": [
+            {
+              "id": "es-a1-45",
+              "title": "Тихие утра",
+              "order": 44,
+              "asset": "assets/courses/es-a1-45.json"
+            },
+            {
+              "id": "es-a1-46",
+              "title": "Звонок во время ужина",
+              "order": 45,
+              "asset": "assets/courses/es-a1-46.json"
+            }
+          ]
+        },
+        {
+          "id": "es-v13-3",
+          "title": "Впечатления и задержки",
+          "lessons": [
+            {
+              "id": "es-a1-47",
+              "title": "Как было в музее",
+              "order": 46,
+              "asset": "assets/courses/es-a1-47.json"
+            },
+            {
+              "id": "es-a1-48",
+              "title": "Опаздываю на встречу",
+              "order": 47,
+              "asset": "assets/courses/es-a1-48.json"
+            }
+          ]
+        },
+        {
+          "id": "es-v13-4",
+          "title": "Условия и сроки",
+          "lessons": [
+            {
+              "id": "es-a1-49",
+              "title": "План на случай дождя",
+              "order": 48,
+              "asset": "assets/courses/es-a1-49.json"
+            },
+            {
+              "id": "es-a1-50",
+              "title": "Решить до пятницы",
+              "order": 49,
+              "asset": "assets/courses/es-a1-50.json"
+            }
+          ]
+        },
+        {
+          "id": "es-v13-5",
+          "title": "Выбор и согласие",
+          "lessons": [
+            {
+              "id": "es-a1-51",
+              "title": "Поезд отменили",
+              "order": 50,
+              "asset": "assets/courses/es-a1-51.json"
+            },
+            {
+              "id": "es-a1-52",
+              "title": "Я с тобой согласен",
+              "order": 51,
+              "asset": "assets/courses/es-a1-52.json"
+            }
+          ]
+        },
+        {
+          "id": "es-v13-6",
+          "title": "Заказы и прежние привычки",
+          "lessons": [
+            {
+              "id": "es-a1-53",
+              "title": "Собираем заказ",
+              "order": 52,
+              "asset": "assets/courses/es-a1-53.json"
+            },
+            {
+              "id": "es-a1-54",
+              "title": "Раньше по соседству",
+              "order": 53,
+              "asset": "assets/courses/es-a1-54.json"
+            }
+          ]
+        },
+        {
+          "id": "es-v13-7",
+          "title": "Просьбы и передача",
+          "lessons": [
+            {
+              "id": "es-a1-55",
+              "title": "Объяснить правила соседу",
+              "order": 54,
+              "asset": "assets/courses/es-a1-55.json"
+            },
+            {
+              "id": "es-a1-56",
+              "title": "Попросить передать предмет",
+              "order": 55,
+              "asset": "assets/courses/es-a1-56.json"
+            }
+          ]
+        },
+        {
+          "id": "es-v13-8",
+          "title": "Описание и стоимость",
+          "lessons": [
+            {
+              "id": "es-a1-57",
+              "title": "Городской пункт находок",
+              "order": 56,
+              "asset": "assets/courses/es-a1-57.json"
+            },
+            {
+              "id": "es-a1-58",
+              "title": "Сколько стоит вместе",
+              "order": 57,
+              "asset": "assets/courses/es-a1-58.json"
+            }
+          ]
+        },
+        {
+          "id": "es-v13-9",
+          "title": "Причины и новости",
+          "lessons": [
+            {
+              "id": "es-a1-59",
+              "title": "Объяснить, почему выбрали",
+              "order": 58,
+              "asset": "assets/courses/es-a1-59.json"
+            },
+            {
+              "id": "es-a1-60",
+              "title": "Новости для друзей",
+              "order": 59,
+              "asset": "assets/courses/es-a1-60.json"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

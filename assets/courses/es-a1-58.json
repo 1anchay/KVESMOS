@@ -1,0 +1,257 @@
+{
+  "id": "es-a1-58",
+  "title": "Сколько стоит вместе",
+  "topic": "Описание и стоимость",
+  "order": 57,
+  "objective": "Уточнить итоговую стоимость и включённые услуги.",
+  "guide": "Incluido согласуется с предметом. Aparte означает, что услуга оплачивается отдельно.",
+  "vocabulary": [
+    {
+      "id": "es:v13:58:p0",
+      "en": "¿Cuánto cuesta todo junto?",
+      "ru": "Сколько стоит всё вместе?"
+    },
+    {
+      "id": "es:v13:58:p1",
+      "en": "El envío está incluido en el precio.",
+      "ru": "Доставка включена в цену."
+    },
+    {
+      "id": "es:v13:58:p2",
+      "en": "Las bebidas se pagan aparte.",
+      "ru": "Напитки оплачиваются отдельно."
+    },
+    {
+      "id": "es:v13:58:p3",
+      "en": "Prefiero pagar con tarjeta.",
+      "ru": "Я предпочитаю заплатить картой."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сколько стоит вместе",
+      "phrase": "¿Cuánto cuesta todo junto?",
+      "translation": "Сколько стоит всё вместе?",
+      "explanation": "Incluido согласуется с предметом. Aparte означает, что услуга оплачивается отдельно."
+    },
+    {
+      "character": "miko",
+      "title": "Сколько стоит вместе",
+      "phrase": "El envío está incluido en el precio.",
+      "translation": "Доставка включена в цену.",
+      "explanation": "El envío está incluido en el precio. — Доставка включена в цену."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сколько стоит вместе",
+      "phrase": "Las bebidas se pagan aparte.",
+      "translation": "Напитки оплачиваются отдельно.",
+      "explanation": "Las bebidas se pagan aparte. — Напитки оплачиваются отдельно."
+    },
+    {
+      "character": "orbi",
+      "title": "Сколько стоит вместе",
+      "phrase": "Prefiero pagar con tarjeta.",
+      "translation": "Я предпочитаю заплатить картой.",
+      "explanation": "Prefiero pagar con tarjeta. — Я предпочитаю заплатить картой."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "¿Cuánto cuesta todo junto?",
+      "translation": "Сколько стоит всё вместе?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Сколько стоит всё вместе?",
+      "options": [
+        "Напитки оплачиваются отдельно.",
+        "Сколько стоит всё вместе?",
+        "Я предпочитаю заплатить картой."
+      ],
+      "explanation": "Incluido согласуется с предметом. Aparte означает, что услуга оплачивается отдельно."
+    },
+    {
+      "id": "apply",
+      "phrase": "El envío está incluido en el precio.",
+      "translation": "Доставка включена в цену.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "El envío está incluido en el precio.",
+      "tokens": [
+        "El",
+        "envío",
+        "está",
+        "incluido",
+        "en",
+        "el",
+        "precio."
+      ],
+      "character": "miko",
+      "explanation": "El envío está incluido en el precio. — Доставка включена в цену."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-58-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Сколько стоит всё вместе?»?",
+      "answers": [
+        "¿Cuánto cuesta todo junto?"
+      ],
+      "explanation": "¿Cuánto cuesta todo junto? — Сколько стоит всё вместе?",
+      "wordIds": [
+        "es:v13:58:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "El envío está incluido en el precio.",
+        "Prefiero pagar con tarjeta.",
+        "¿Cuánto cuesta todo junto?"
+      ],
+      "hint": "¿Cuánto cuesta todo junto? — Сколько стоит всё вместе?"
+    },
+    {
+      "id": "es-a1-58-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Доставка включена в цену.",
+      "answers": [
+        "El envío está incluido en el precio."
+      ],
+      "explanation": "Incluido согласуется с предметом. Aparte означает, что услуга оплачивается отдельно.",
+      "wordIds": [
+        "es:v13:58:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "El",
+        "envío",
+        "está",
+        "incluido",
+        "en",
+        "el",
+        "precio."
+      ],
+      "hint": "El envío está incluido en el precio. — Доставка включена в цену."
+    },
+    {
+      "id": "es-a1-58-e03",
+      "type": "dialogue",
+      "prompt": "Что оплачивается отдельно?",
+      "answers": [
+        "Сборка."
+      ],
+      "explanation": "В диалоге: ¿El precio incluye el envío? / Sí, el envío está incluido, pero el montaje se paga aparte. Поэтому: Сборка.",
+      "wordIds": [
+        "es:v13:58:p0",
+        "es:v13:58:p1",
+        "es:v13:58:p2",
+        "es:v13:58:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿El precio incluye el envío?\nМико: Sí, el envío está incluido, pero el montaje se paga aparte.",
+      "options": [
+        "Доставка.",
+        "Упаковка.",
+        "Сборка."
+      ]
+    },
+    {
+      "id": "es-a1-58-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Напитки оплачиваются отдельно."
+      ],
+      "explanation": "Las bebidas se pagan aparte. — Напитки оплачиваются отдельно.",
+      "wordIds": [
+        "es:v13:58:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Las bebidas se pagan aparte.",
+      "options": [
+        "Сколько стоит всё вместе?",
+        "Напитки оплачиваются отдельно.",
+        "Доставка включена в цену."
+      ],
+      "hint": "Las bebidas se pagan aparte. — Напитки оплачиваются отдельно."
+    },
+    {
+      "id": "es-a1-58-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: El envío está incluida.",
+      "answers": [
+        "El envío está incluido."
+      ],
+      "explanation": "Envío мужского рода, поэтому incluido.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "El envío está incluida.",
+        "El envío está incluido."
+      ],
+      "hint": "Incluido согласуется с предметом. Aparte означает, что услуга оплачивается отдельно."
+    },
+    {
+      "id": "es-a1-58-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я предпочитаю заплатить картой.». Можно написать вместо микрофона.",
+      "answers": [
+        "Prefiero pagar con tarjeta."
+      ],
+      "explanation": "Prefiero pagar con tarjeta. — Я предпочитаю заплатить картой.",
+      "wordIds": [
+        "es:v13:58:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Prefiero pagar con tarjeta.",
+      "recall": {
+        "phrase": "Prefiero pagar con tarjeta.",
+        "meaning": "Я предпочитаю заплатить картой."
+      }
+    },
+    {
+      "id": "es-a1-58-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Сколько стоит всё вместе?",
+      "answers": [
+        "¿Cuánto cuesta todo junto?"
+      ],
+      "explanation": "Incluido согласуется с предметом. Aparte означает, что услуга оплачивается отдельно.",
+      "wordIds": [
+        "es:v13:58:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "¿Cuánto cuesta todo junto?",
+        "meaning": "Сколько стоит всё вместе?"
+      }
+    },
+    {
+      "id": "es-a1-58-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Могу забрать его сегодня днём.",
+      "answers": [
+        "Puedo recogerla esta tarde."
+      ],
+      "explanation": "Puedo recogerla esta tarde. — Могу забрать его сегодня днём.",
+      "wordIds": [
+        "es:v13:57:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Perdí una mochila de tela.",
+        "La última vez que la vi estaba en el tren.",
+        "Tiene un bolsillo pequeño delante.",
+        "Puedo recogerla esta tarde."
+      ]
+    }
+  ]
+}

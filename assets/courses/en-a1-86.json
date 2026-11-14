@@ -1,0 +1,255 @@
+{
+  "id": "en-a1-86",
+  "title": "Подтвердить получение",
+  "topic": "Поломки и документы",
+  "order": 85,
+  "objective": "Написать ответ о полученном документе и следующем шаге.",
+  "guide": "I've received сообщает о результате к настоящему моменту. I'll let you know обещает сообщить позже.",
+  "vocabulary": [
+    {
+      "id": "en:v13:86:p0",
+      "en": "I've received your application.",
+      "ru": "Я получил ваше заявление."
+    },
+    {
+      "id": "en:v13:86:p1",
+      "en": "I'll check the details this afternoon.",
+      "ru": "Я проверю детали сегодня днём."
+    },
+    {
+      "id": "en:v13:86:p2",
+      "en": "Could you attach a copy of your receipt?",
+      "ru": "Не могли бы вы приложить копию чека?"
+    },
+    {
+      "id": "en:v13:86:p3",
+      "en": "I'll let you know when everything is ready.",
+      "ru": "Сообщу вам, когда всё будет готово."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Подтвердить получение",
+      "phrase": "I've received your application.",
+      "translation": "Я получил ваше заявление.",
+      "explanation": "I've received сообщает о результате к настоящему моменту. I'll let you know обещает сообщить позже."
+    },
+    {
+      "character": "miko",
+      "title": "Подтвердить получение",
+      "phrase": "I'll check the details this afternoon.",
+      "translation": "Я проверю детали сегодня днём.",
+      "explanation": "I'll check the details this afternoon. — Я проверю детали сегодня днём."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Подтвердить получение",
+      "phrase": "Could you attach a copy of your receipt?",
+      "translation": "Не могли бы вы приложить копию чека?",
+      "explanation": "Could you attach a copy of your receipt? — Не могли бы вы приложить копию чека?"
+    },
+    {
+      "character": "orbi",
+      "title": "Подтвердить получение",
+      "phrase": "I'll let you know when everything is ready.",
+      "translation": "Сообщу вам, когда всё будет готово.",
+      "explanation": "I'll let you know when everything is ready. — Сообщу вам, когда всё будет готово."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I've received your application.",
+      "translation": "Я получил ваше заявление.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я получил ваше заявление.",
+      "options": [
+        "Не могли бы вы приложить копию чека?",
+        "Я получил ваше заявление.",
+        "Сообщу вам, когда всё будет готово."
+      ],
+      "explanation": "I've received сообщает о результате к настоящему моменту. I'll let you know обещает сообщить позже."
+    },
+    {
+      "id": "apply",
+      "phrase": "I'll check the details this afternoon.",
+      "translation": "Я проверю детали сегодня днём.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I'll check the details this afternoon.",
+      "tokens": [
+        "I'll",
+        "check",
+        "the",
+        "details",
+        "this",
+        "afternoon."
+      ],
+      "character": "miko",
+      "explanation": "I'll check the details this afternoon. — Я проверю детали сегодня днём."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-86-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Не могли бы вы приложить копию чека?"
+      ],
+      "explanation": "Could you attach a copy of your receipt? — Не могли бы вы приложить копию чека?",
+      "wordIds": [
+        "en:v13:86:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Could you attach a copy of your receipt?",
+      "options": [
+        "Я получил ваше заявление.",
+        "Не могли бы вы приложить копию чека?",
+        "Я проверю детали сегодня днём."
+      ],
+      "hint": "Could you attach a copy of your receipt? — Не могли бы вы приложить копию чека?"
+    },
+    {
+      "id": "en-a1-86-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я проверю детали сегодня днём.",
+      "answers": [
+        "I'll check the details this afternoon."
+      ],
+      "explanation": "I've received сообщает о результате к настоящему моменту. I'll let you know обещает сообщить позже.",
+      "wordIds": [
+        "en:v13:86:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I'll",
+        "check",
+        "the",
+        "details",
+        "this",
+        "afternoon."
+      ],
+      "hint": "I'll check the details this afternoon. — Я проверю детали сегодня днём."
+    },
+    {
+      "id": "en-a1-86-e03",
+      "type": "dialogue",
+      "prompt": "Какого документа не хватает?",
+      "answers": [
+        "Копии чека."
+      ],
+      "explanation": "В диалоге: Have you received the application? / Yes. I still need a copy of your receipt. Поэтому: Копии чека.",
+      "wordIds": [
+        "en:v13:86:p0",
+        "en:v13:86:p1",
+        "en:v13:86:p2",
+        "en:v13:86:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Have you received the application?\nМико: Yes. I still need a copy of your receipt.",
+      "options": [
+        "Заявления.",
+        "Паспорта.",
+        "Копии чека."
+      ]
+    },
+    {
+      "id": "en-a1-86-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я получил ваше заявление.»?",
+      "answers": [
+        "I've received your application."
+      ],
+      "explanation": "I've received your application. — Я получил ваше заявление.",
+      "wordIds": [
+        "en:v13:86:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "I'll check the details this afternoon.",
+        "I'll let you know when everything is ready.",
+        "I've received your application."
+      ],
+      "hint": "I've received your application. — Я получил ваше заявление."
+    },
+    {
+      "id": "en-a1-86-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I'll let you know when everything will be ready.",
+      "answers": [
+        "I'll let you know when everything is ready."
+      ],
+      "explanation": "When вводит момент будущего действия через Present Simple.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I'll let you know when everything will be ready.",
+        "I'll let you know when everything is ready."
+      ],
+      "hint": "I've received сообщает о результате к настоящему моменту. I'll let you know обещает сообщить позже."
+    },
+    {
+      "id": "en-a1-86-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Сообщу вам, когда всё будет готово.». Можно написать вместо микрофона.",
+      "answers": [
+        "I'll let you know when everything is ready."
+      ],
+      "explanation": "I'll let you know when everything is ready. — Сообщу вам, когда всё будет готово.",
+      "wordIds": [
+        "en:v13:86:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I'll let you know when everything is ready.",
+      "recall": {
+        "phrase": "I'll let you know when everything is ready.",
+        "meaning": "Сообщу вам, когда всё будет готово."
+      }
+    },
+    {
+      "id": "en-a1-86-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я получил ваше заявление.",
+      "answers": [
+        "I've received your application."
+      ],
+      "explanation": "I've received сообщает о результате к настоящему моменту. I'll let you know обещает сообщить позже.",
+      "wordIds": [
+        "en:v13:86:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I've received your application.",
+        "meaning": "Я получил ваше заявление."
+      }
+    },
+    {
+      "id": "en-a1-86-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Он совсем не включается.",
+      "answers": [
+        "It won't turn on at all."
+      ],
+      "explanation": "It won't turn on at all. — Он совсем не включается.",
+      "wordIds": [
+        "en:v13:85:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "The heater has stopped working.",
+        "It won't turn on at all.",
+        "Could someone take a look at it today?",
+        "I checked the switch already."
+      ]
+    }
+  ]
+}

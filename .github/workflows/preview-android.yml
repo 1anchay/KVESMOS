@@ -16,6 +16,7 @@ on:
       - codex/kvesmos-v015-road-to-1
       - feature/kvesmos-v1.1-learning-polish
       - feature/kvesmos-v1.2-smart-learning
+      - feature/kvesmos-v1.3-level-and-courses
   workflow_dispatch:
 
 jobs:

@@ -1,0 +1,298 @@
+{
+  "id": "es-a1-51",
+  "title": "Поезд отменили",
+  "topic": "Выбор и согласие",
+  "order": 50,
+  "objective": "Уточнить альтернативу после отмены рейса.",
+  "guide": "En vez de + существительное или инфинитив обозначает замену. Podemos + инфинитив предлагает вариант.",
+  "vocabulary": [
+    {
+      "id": "es:v13:51:p0",
+      "en": "Han cancelado nuestro tren.",
+      "ru": "Наш поезд отменили."
+    },
+    {
+      "id": "es:v13:51:p1",
+      "en": "Podemos tomar el autobús en vez del tren.",
+      "ru": "Мы можем поехать на автобусе вместо поезда."
+    },
+    {
+      "id": "es:v13:51:p2",
+      "en": "¿A qué hora sale el siguiente?",
+      "ru": "Во сколько отправляется следующий?"
+    },
+    {
+      "id": "es:v13:51:p3",
+      "en": "El billete también sirve para el autobús.",
+      "ru": "Билет действует и на автобусе."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Поезд отменили",
+      "phrase": "Han cancelado nuestro tren.",
+      "translation": "Наш поезд отменили.",
+      "explanation": "En vez de + существительное или инфинитив обозначает замену. Podemos + инфинитив предлагает вариант."
+    },
+    {
+      "character": "miko",
+      "title": "Поезд отменили",
+      "phrase": "Podemos tomar el autobús en vez del tren.",
+      "translation": "Мы можем поехать на автобусе вместо поезда.",
+      "explanation": "Podemos tomar el autobús en vez del tren. — Мы можем поехать на автобусе вместо поезда."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Поезд отменили",
+      "phrase": "¿A qué hora sale el siguiente?",
+      "translation": "Во сколько отправляется следующий?",
+      "explanation": "¿A qué hora sale el siguiente? — Во сколько отправляется следующий?"
+    },
+    {
+      "character": "orbi",
+      "title": "Поезд отменили",
+      "phrase": "El billete también sirve para el autobús.",
+      "translation": "Билет действует и на автобусе.",
+      "explanation": "El billete también sirve para el autobús. — Билет действует и на автобусе."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Han cancelado nuestro tren.",
+      "translation": "Наш поезд отменили.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Наш поезд отменили.",
+      "options": [
+        "Во сколько отправляется следующий?",
+        "Наш поезд отменили.",
+        "Билет действует и на автобусе."
+      ],
+      "explanation": "En vez de + существительное или инфинитив обозначает замену. Podemos + инфинитив предлагает вариант."
+    },
+    {
+      "id": "apply",
+      "phrase": "Podemos tomar el autobús en vez del tren.",
+      "translation": "Мы можем поехать на автобусе вместо поезда.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Podemos tomar el autobús en vez del tren.",
+      "tokens": [
+        "Podemos",
+        "tomar",
+        "el",
+        "autobús",
+        "en",
+        "vez",
+        "del",
+        "tren."
+      ],
+      "character": "miko",
+      "explanation": "Podemos tomar el autobús en vez del tren. — Мы можем поехать на автобусе вместо поезда."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-51-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мне нужен ответ до пятницы.",
+      "answers": [
+        "Necesito una respuesta antes del viernes."
+      ],
+      "explanation": "Necesito una respuesta antes del viernes. — Мне нужен ответ до пятницы.",
+      "wordIds": [
+        "es:v13:50:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Necesito una respuesta antes del viernes.",
+        "La oficina abre hasta las seis.",
+        "Te confirmo la hora esta tarde.",
+        "No hace falta llamar hoy."
+      ]
+    },
+    {
+      "id": "es-a1-51-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Наш поезд отменили.»?",
+      "answers": [
+        "Han cancelado nuestro tren."
+      ],
+      "explanation": "Han cancelado nuestro tren. — Наш поезд отменили.",
+      "wordIds": [
+        "es:v13:51:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Podemos tomar el autobús en vez del tren.",
+        "El billete también sirve para el autobús.",
+        "Han cancelado nuestro tren."
+      ],
+      "hint": "Han cancelado nuestro tren. — Наш поезд отменили."
+    },
+    {
+      "id": "es-a1-51-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Мы можем поехать на автобусе вместо поезда.",
+      "answers": [
+        "Podemos tomar el autobús en vez del tren."
+      ],
+      "explanation": "En vez de + существительное или инфинитив обозначает замену. Podemos + инфинитив предлагает вариант.",
+      "wordIds": [
+        "es:v13:51:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Podemos",
+        "tomar",
+        "el",
+        "autobús",
+        "en",
+        "vez",
+        "del",
+        "tren."
+      ],
+      "hint": "Podemos tomar el autobús en vez del tren. — Мы можем поехать на автобусе вместо поезда."
+    },
+    {
+      "id": "es-a1-51-e04",
+      "type": "dialogue",
+      "prompt": "Какое решение предлагают?",
+      "answers": [
+        "Поехать на автобусе по тому же билету."
+      ],
+      "explanation": "В диалоге: El tren está cancelado. ¿Qué hacemos? / Podéis tomar el autobús. El mismo billete sirve. Поэтому: Поехать на автобусе по тому же билету.",
+      "wordIds": [
+        "es:v13:51:p0",
+        "es:v13:51:p1",
+        "es:v13:51:p2",
+        "es:v13:51:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: El tren está cancelado. ¿Qué hacemos?\nМико: Podéis tomar el autobús. El mismo billete sirve.",
+      "options": [
+        "Купить новый билет на поезд.",
+        "Пойти пешком.",
+        "Поехать на автобусе по тому же билету."
+      ]
+    },
+    {
+      "id": "es-a1-51-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Во сколько отправляется следующий?"
+      ],
+      "explanation": "¿A qué hora sale el siguiente? — Во сколько отправляется следующий?",
+      "wordIds": [
+        "es:v13:51:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿A qué hora sale el siguiente?",
+      "options": [
+        "Наш поезд отменили.",
+        "Во сколько отправляется следующий?",
+        "Мы можем поехать на автобусе вместо поезда."
+      ],
+      "hint": "¿A qué hora sale el siguiente? — Во сколько отправляется следующий?"
+    },
+    {
+      "id": "es-a1-51-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:51:p0",
+        "es:v13:51:p1",
+        "es:v13:51:p2",
+        "es:v13:51:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:51:p0",
+          "en": "Han cancelado nuestro tren.",
+          "ru": "Наш поезд отменили."
+        },
+        {
+          "id": "es:v13:51:p1",
+          "en": "Podemos tomar el autobús en vez del tren.",
+          "ru": "Мы можем поехать на автобусе вместо поезда."
+        },
+        {
+          "id": "es:v13:51:p2",
+          "en": "¿A qué hora sale el siguiente?",
+          "ru": "Во сколько отправляется следующий?"
+        },
+        {
+          "id": "es:v13:51:p3",
+          "en": "El billete también sirve para el autobús.",
+          "ru": "Билет действует и на автобусе."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-51-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Podemos tomamos el autobús.",
+      "answers": [
+        "Podemos tomar el autobús."
+      ],
+      "explanation": "После podemos используется инфинитив tomar.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Podemos tomamos el autobús.",
+        "Podemos tomar el autobús."
+      ],
+      "hint": "En vez de + существительное или инфинитив обозначает замену. Podemos + инфинитив предлагает вариант."
+    },
+    {
+      "id": "es-a1-51-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Билет действует и на автобусе.». Можно написать вместо микрофона.",
+      "answers": [
+        "El billete también sirve para el autobús."
+      ],
+      "explanation": "El billete también sirve para el autobús. — Билет действует и на автобусе.",
+      "wordIds": [
+        "es:v13:51:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "El billete también sirve para el autobús.",
+      "recall": {
+        "phrase": "El billete también sirve para el autobús.",
+        "meaning": "Билет действует и на автобусе."
+      }
+    },
+    {
+      "id": "es-a1-51-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Наш поезд отменили.",
+      "answers": [
+        "Han cancelado nuestro tren."
+      ],
+      "explanation": "En vez de + существительное или инфинитив обозначает замену. Podemos + инфинитив предлагает вариант.",
+      "wordIds": [
+        "es:v13:51:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Han cancelado nuestro tren.",
+        "meaning": "Наш поезд отменили."
+      }
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "id": "es-a1-44",
+  "title": "Фото для дедушки",
+  "topic": "Предметы и получатели",
+  "order": 43,
+  "objective": "Назвать получателя и различить le и les.",
+  "guide": "Le обозначает одного получателя, les — нескольких. Предмет можно назвать отдельно.",
+  "vocabulary": [
+    {
+      "id": "es:v13:44:p0",
+      "en": "Le mando una foto a mi abuelo.",
+      "ru": "Я отправляю фото дедушке."
+    },
+    {
+      "id": "es:v13:44:p1",
+      "en": "Les escribo a mis primos.",
+      "ru": "Я пишу двоюродным братьям и сёстрам."
+    },
+    {
+      "id": "es:v13:44:p2",
+      "en": "Le cuento cómo fue el viaje.",
+      "ru": "Я рассказываю ему, как прошла поездка."
+    },
+    {
+      "id": "es:v13:44:p3",
+      "en": "Mis primos me responden enseguida.",
+      "ru": "Кузены отвечают мне сразу."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Фото для дедушки",
+      "phrase": "Le mando una foto a mi abuelo.",
+      "translation": "Я отправляю фото дедушке.",
+      "explanation": "Le обозначает одного получателя, les — нескольких. Предмет можно назвать отдельно."
+    },
+    {
+      "character": "miko",
+      "title": "Фото для дедушки",
+      "phrase": "Les escribo a mis primos.",
+      "translation": "Я пишу двоюродным братьям и сёстрам.",
+      "explanation": "Les escribo a mis primos. — Я пишу двоюродным братьям и сёстрам."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Фото для дедушки",
+      "phrase": "Le cuento cómo fue el viaje.",
+      "translation": "Я рассказываю ему, как прошла поездка.",
+      "explanation": "Le cuento cómo fue el viaje. — Я рассказываю ему, как прошла поездка."
+    },
+    {
+      "character": "orbi",
+      "title": "Фото для дедушки",
+      "phrase": "Mis primos me responden enseguida.",
+      "translation": "Кузены отвечают мне сразу.",
+      "explanation": "Mis primos me responden enseguida. — Кузены отвечают мне сразу."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Le mando una foto a mi abuelo.",
+      "translation": "Я отправляю фото дедушке.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я отправляю фото дедушке.",
+      "options": [
+        "Я рассказываю ему, как прошла поездка.",
+        "Я отправляю фото дедушке.",
+        "Кузены отвечают мне сразу."
+      ],
+      "explanation": "Le обозначает одного получателя, les — нескольких. Предмет можно назвать отдельно."
+    },
+    {
+      "id": "apply",
+      "phrase": "Les escribo a mis primos.",
+      "translation": "Я пишу двоюродным братьям и сёстрам.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Les escribo a mis primos.",
+      "tokens": [
+        "Les",
+        "escribo",
+        "a",
+        "mis",
+        "primos."
+      ],
+      "character": "miko",
+      "explanation": "Les escribo a mis primos. — Я пишу двоюродным братьям и сёстрам."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-44-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я рассказываю ему, как прошла поездка."
+      ],
+      "explanation": "Le cuento cómo fue el viaje. — Я рассказываю ему, как прошла поездка.",
+      "wordIds": [
+        "es:v13:44:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Le cuento cómo fue el viaje.",
+      "options": [
+        "Я отправляю фото дедушке.",
+        "Я рассказываю ему, как прошла поездка.",
+        "Я пишу двоюродным братьям и сёстрам."
+      ],
+      "hint": "Le cuento cómo fue el viaje. — Я рассказываю ему, как прошла поездка."
+    },
+    {
+      "id": "es-a1-44-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я пишу двоюродным братьям и сёстрам.",
+      "answers": [
+        "Les escribo a mis primos."
+      ],
+      "explanation": "Le обозначает одного получателя, les — нескольких. Предмет можно назвать отдельно.",
+      "wordIds": [
+        "es:v13:44:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Les",
+        "escribo",
+        "a",
+        "mis",
+        "primos."
+      ],
+      "hint": "Les escribo a mis primos. — Я пишу двоюродным братьям и сёстрам."
+    },
+    {
+      "id": "es-a1-44-e03",
+      "type": "dialogue",
+      "prompt": "Кто получит фотографию?",
+      "answers": [
+        "Дедушка."
+      ],
+      "explanation": "В диалоге: ¿A quién le mandas la foto? / A mi abuelo. A mis primos les mando un mensaje. Поэтому: Дедушка.",
+      "wordIds": [
+        "es:v13:44:p0",
+        "es:v13:44:p1",
+        "es:v13:44:p2",
+        "es:v13:44:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿A quién le mandas la foto?\nМико: A mi abuelo. A mis primos les mando un mensaje.",
+      "options": [
+        "Кузены.",
+        "Водитель.",
+        "Дедушка."
+      ]
+    },
+    {
+      "id": "es-a1-44-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я отправляю фото дедушке.»?",
+      "answers": [
+        "Le mando una foto a mi abuelo."
+      ],
+      "explanation": "Le mando una foto a mi abuelo. — Я отправляю фото дедушке.",
+      "wordIds": [
+        "es:v13:44:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Les escribo a mis primos.",
+        "Mis primos me responden enseguida.",
+        "Le mando una foto a mi abuelo."
+      ],
+      "hint": "Le mando una foto a mi abuelo. — Я отправляю фото дедушке."
+    },
+    {
+      "id": "es-a1-44-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Le escribo a mis primos.",
+      "answers": [
+        "Les escribo a mis primos."
+      ],
+      "explanation": "Получателей несколько, поэтому les.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Le escribo a mis primos.",
+        "Les escribo a mis primos."
+      ],
+      "hint": "Le обозначает одного получателя, les — нескольких. Предмет можно назвать отдельно."
+    },
+    {
+      "id": "es-a1-44-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Кузены отвечают мне сразу.». Можно написать вместо микрофона.",
+      "answers": [
+        "Mis primos me responden enseguida."
+      ],
+      "explanation": "Mis primos me responden enseguida. — Кузены отвечают мне сразу.",
+      "wordIds": [
+        "es:v13:44:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Mis primos me responden enseguida.",
+      "recall": {
+        "phrase": "Mis primos me responden enseguida.",
+        "meaning": "Кузены отвечают мне сразу."
+      }
+    },
+    {
+      "id": "es-a1-44-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я отправляю фото дедушке.",
+      "answers": [
+        "Le mando una foto a mi abuelo."
+      ],
+      "explanation": "Le обозначает одного получателя, les — нескольких. Предмет можно назвать отдельно.",
+      "wordIds": [
+        "es:v13:44:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Le mando una foto a mi abuelo.",
+        "meaning": "Я отправляю фото дедушке."
+      }
+    },
+    {
+      "id": "es-a1-44-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я оставляю его рядом с запиской.",
+      "answers": [
+        "La dejo junto a la nota."
+      ],
+      "explanation": "La dejo junto a la nota. — Я оставляю его рядом с запиской.",
+      "wordIds": [
+        "es:v13:43:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Dejo la llave en la mesa.",
+        "La dejo junto a la nota.",
+        "El sobre lo llevo yo.",
+        "No lo abras todavía."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "id": "de-a1-47",
+  "title": "После работы",
+  "topic": "Действия во времени",
+  "order": 46,
+  "objective": "Расположить два действия по времени с bevor.",
+  "guide": "В части с bevor спрягаемый глагол в конце: bevor ich nach Hause gehe.",
+  "vocabulary": [
+    {
+      "id": "de:v13:47:p0",
+      "en": "Ich rufe dich an, bevor ich nach Hause gehe.",
+      "ru": "Я позвоню тебе, прежде чем пойду домой."
+    },
+    {
+      "id": "de:v13:47:p1",
+      "en": "Bevor wir gehen, bezahlen wir.",
+      "ru": "Прежде чем уйти, мы заплатим."
+    },
+    {
+      "id": "de:v13:47:p2",
+      "en": "Der Laden schließt um acht.",
+      "ru": "Магазин закрывается в восемь."
+    },
+    {
+      "id": "de:v13:47:p3",
+      "en": "Wir haben noch eine halbe Stunde.",
+      "ru": "У нас ещё полчаса."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "После работы",
+      "phrase": "Ich rufe dich an, bevor ich nach Hause gehe.",
+      "translation": "Я позвоню тебе, прежде чем пойду домой.",
+      "explanation": "В части с bevor спрягаемый глагол в конце: bevor ich nach Hause gehe."
+    },
+    {
+      "character": "miko",
+      "title": "После работы",
+      "phrase": "Bevor wir gehen, bezahlen wir.",
+      "translation": "Прежде чем уйти, мы заплатим.",
+      "explanation": "Bevor wir gehen, bezahlen wir. — Прежде чем уйти, мы заплатим."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "После работы",
+      "phrase": "Der Laden schließt um acht.",
+      "translation": "Магазин закрывается в восемь.",
+      "explanation": "Der Laden schließt um acht. — Магазин закрывается в восемь."
+    },
+    {
+      "character": "orbi",
+      "title": "После работы",
+      "phrase": "Wir haben noch eine halbe Stunde.",
+      "translation": "У нас ещё полчаса.",
+      "explanation": "Wir haben noch eine halbe Stunde. — У нас ещё полчаса."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich rufe dich an, bevor ich nach Hause gehe.",
+      "translation": "Я позвоню тебе, прежде чем пойду домой.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я позвоню тебе, прежде чем пойду домой.",
+      "options": [
+        "Магазин закрывается в восемь.",
+        "Я позвоню тебе, прежде чем пойду домой.",
+        "У нас ещё полчаса."
+      ],
+      "explanation": "В части с bevor спрягаемый глагол в конце: bevor ich nach Hause gehe."
+    },
+    {
+      "id": "apply",
+      "phrase": "Bevor wir gehen, bezahlen wir.",
+      "translation": "Прежде чем уйти, мы заплатим.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Bevor wir gehen, bezahlen wir.",
+      "tokens": [
+        "Bevor",
+        "wir",
+        "gehen,",
+        "bezahlen",
+        "wir."
+      ],
+      "character": "miko",
+      "explanation": "Bevor wir gehen, bezahlen wir. — Прежде чем уйти, мы заплатим."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-47-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Магазин закрывается в восемь."
+      ],
+      "explanation": "Der Laden schließt um acht. — Магазин закрывается в восемь.",
+      "wordIds": [
+        "de:v13:47:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Der Laden schließt um acht.",
+      "options": [
+        "Я позвоню тебе, прежде чем пойду домой.",
+        "Магазин закрывается в восемь.",
+        "Прежде чем уйти, мы заплатим."
+      ],
+      "hint": "Der Laden schließt um acht. — Магазин закрывается в восемь."
+    },
+    {
+      "id": "de-a1-47-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Прежде чем уйти, мы заплатим.",
+      "answers": [
+        "Bevor wir gehen, bezahlen wir."
+      ],
+      "explanation": "В части с bevor спрягаемый глагол в конце: bevor ich nach Hause gehe.",
+      "wordIds": [
+        "de:v13:47:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Bevor",
+        "wir",
+        "gehen,",
+        "bezahlen",
+        "wir."
+      ],
+      "hint": "Bevor wir gehen, bezahlen wir. — Прежде чем уйти, мы заплатим."
+    },
+    {
+      "id": "de-a1-47-e03",
+      "type": "dialogue",
+      "prompt": "Какое действие будет первым?",
+      "answers": [
+        "Оплата."
+      ],
+      "explanation": "В диалоге: Gehen wir jetzt? / Gleich. Bevor wir gehen, bezahlen wir. Поэтому: Оплата.",
+      "wordIds": [
+        "de:v13:47:p0",
+        "de:v13:47:p1",
+        "de:v13:47:p2",
+        "de:v13:47:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Gehen wir jetzt?\nМико: Gleich. Bevor wir gehen, bezahlen wir.",
+      "options": [
+        "Уход.",
+        "Звонок в магазин.",
+        "Оплата."
+      ]
+    },
+    {
+      "id": "de-a1-47-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я позвоню тебе, прежде чем пойду домой.»?",
+      "answers": [
+        "Ich rufe dich an, bevor ich nach Hause gehe."
+      ],
+      "explanation": "Ich rufe dich an, bevor ich nach Hause gehe. — Я позвоню тебе, прежде чем пойду домой.",
+      "wordIds": [
+        "de:v13:47:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Bevor wir gehen, bezahlen wir.",
+        "Wir haben noch eine halbe Stunde.",
+        "Ich rufe dich an, bevor ich nach Hause gehe."
+      ],
+      "hint": "Ich rufe dich an, bevor ich nach Hause gehe. — Я позвоню тебе, прежде чем пойду домой."
+    },
+    {
+      "id": "de-a1-47-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:47:p0",
+        "de:v13:47:p1",
+        "de:v13:47:p2",
+        "de:v13:47:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:47:p0",
+          "en": "Ich rufe dich an, bevor ich nach Hause gehe.",
+          "ru": "Я позвоню тебе, прежде чем пойду домой."
+        },
+        {
+          "id": "de:v13:47:p1",
+          "en": "Bevor wir gehen, bezahlen wir.",
+          "ru": "Прежде чем уйти, мы заплатим."
+        },
+        {
+          "id": "de:v13:47:p2",
+          "en": "Der Laden schließt um acht.",
+          "ru": "Магазин закрывается в восемь."
+        },
+        {
+          "id": "de:v13:47:p3",
+          "en": "Wir haben noch eine halbe Stunde.",
+          "ru": "У нас ещё полчаса."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-47-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Bevor wir gehen, wir bezahlen.",
+      "answers": [
+        "Bevor wir gehen, bezahlen wir."
+      ],
+      "explanation": "Придаточная часть стоит первой целиком, за ней сразу идёт глагол главной части.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Bevor wir gehen, wir bezahlen.",
+        "Bevor wir gehen, bezahlen wir."
+      ],
+      "hint": "В части с bevor спрягаемый глагол в конце: bevor ich nach Hause gehe."
+    },
+    {
+      "id": "de-a1-47-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «У нас ещё полчаса.». Можно написать вместо микрофона.",
+      "answers": [
+        "Wir haben noch eine halbe Stunde."
+      ],
+      "explanation": "Wir haben noch eine halbe Stunde. — У нас ещё полчаса.",
+      "wordIds": [
+        "de:v13:47:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir haben noch eine halbe Stunde.",
+      "recall": {
+        "phrase": "Wir haben noch eine halbe Stunde.",
+        "meaning": "У нас ещё полчаса."
+      }
+    },
+    {
+      "id": "de-a1-47-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я позвоню тебе, прежде чем пойду домой.",
+      "answers": [
+        "Ich rufe dich an, bevor ich nach Hause gehe."
+      ],
+      "explanation": "В части с bevor спрягаемый глагол в конце: bevor ich nach Hause gehe.",
+      "wordIds": [
+        "de:v13:47:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich rufe dich an, bevor ich nach Hause gehe.",
+        "meaning": "Я позвоню тебе, прежде чем пойду домой."
+      }
+    },
+    {
+      "id": "de-a1-47-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я готовлюсь к разговору.",
+      "answers": [
+        "Ich bereite mich auf das Gespräch vor."
+      ],
+      "explanation": "Ich bereite mich auf das Gespräch vor. — Я готовлюсь к разговору.",
+      "wordIds": [
+        "de:v13:46:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich bereite mich auf das Gespräch vor.",
+        "Sie bereitet sich auf den Termin vor.",
+        "Wir üben die Fragen zusammen.",
+        "Morgen ist das Gespräch."
+      ]
+    }
+  ]
+}

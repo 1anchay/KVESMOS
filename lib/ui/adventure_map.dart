@@ -31,9 +31,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
   @override
   Widget build(BuildContext context) {
     final app = ref.watch(appProvider), catalog = app.repository.catalog;
-    final current = catalog
-        .where((l) => !app.progress.completed.contains(l.id))
-        .firstOrNull;
+    final current = app.courseStart.next;
     final regions = JourneyRegion.forCourse(
       app.course.language,
       catalog: app.repository.catalog,
@@ -255,12 +253,7 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
     Color accent,
   ) {
     final done = app.progress.completed.contains(lesson.id);
-    final open =
-        lesson.order == 0 ||
-        done ||
-        app.progress.completed.contains(
-          app.repository.catalog[lesson.order - 1].id,
-        );
+    final open = app.courseStart.available(lesson);
     final active = current == lesson.id;
     return Padding(
       key: active ? currentKey : null,
@@ -273,6 +266,8 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
         label:
             '${lesson.title}. ${done
                 ? 'Пройдено'
+                : app.courseStart.deferred(lesson)
+                ? 'Можно пройти позже'
                 : open
                 ? 'Доступно'
                 : 'После предыдущей миссии'}',

@@ -1,0 +1,294 @@
+{
+  "id": "de-a1-43",
+  "title": "Сумка под столом",
+  "topic": "Место и направление",
+  "order": 42,
+  "objective": "Различать место и направление с unter.",
+  "guide": "Wo? спрашивает о месте и требует Dativ: unter dem Tisch. Wohin? спрашивает о направлении: unter den Tisch.",
+  "vocabulary": [
+    {
+      "id": "de:v13:43:p0",
+      "en": "Die Tasche steht unter dem Tisch.",
+      "ru": "Сумка стоит под столом."
+    },
+    {
+      "id": "de:v13:43:p1",
+      "en": "Stell die Tasche unter den Tisch.",
+      "ru": "Поставь сумку под стол."
+    },
+    {
+      "id": "de:v13:43:p2",
+      "en": "Der Rucksack steht neben der Tür.",
+      "ru": "Рюкзак стоит рядом с дверью."
+    },
+    {
+      "id": "de:v13:43:p3",
+      "en": "Leg den Schlüssel auf den Tisch.",
+      "ru": "Положи ключ на стол."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сумка под столом",
+      "phrase": "Die Tasche steht unter dem Tisch.",
+      "translation": "Сумка стоит под столом.",
+      "explanation": "Wo? спрашивает о месте и требует Dativ: unter dem Tisch. Wohin? спрашивает о направлении: unter den Tisch."
+    },
+    {
+      "character": "miko",
+      "title": "Сумка под столом",
+      "phrase": "Stell die Tasche unter den Tisch.",
+      "translation": "Поставь сумку под стол.",
+      "explanation": "Stell die Tasche unter den Tisch. — Поставь сумку под стол."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сумка под столом",
+      "phrase": "Der Rucksack steht neben der Tür.",
+      "translation": "Рюкзак стоит рядом с дверью.",
+      "explanation": "Der Rucksack steht neben der Tür. — Рюкзак стоит рядом с дверью."
+    },
+    {
+      "character": "orbi",
+      "title": "Сумка под столом",
+      "phrase": "Leg den Schlüssel auf den Tisch.",
+      "translation": "Положи ключ на стол.",
+      "explanation": "Leg den Schlüssel auf den Tisch. — Положи ключ на стол."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Die Tasche steht unter dem Tisch.",
+      "translation": "Сумка стоит под столом.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Сумка стоит под столом.",
+      "options": [
+        "Рюкзак стоит рядом с дверью.",
+        "Сумка стоит под столом.",
+        "Положи ключ на стол."
+      ],
+      "explanation": "Wo? спрашивает о месте и требует Dativ: unter dem Tisch. Wohin? спрашивает о направлении: unter den Tisch."
+    },
+    {
+      "id": "apply",
+      "phrase": "Stell die Tasche unter den Tisch.",
+      "translation": "Поставь сумку под стол.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Stell die Tasche unter den Tisch.",
+      "tokens": [
+        "Stell",
+        "die",
+        "Tasche",
+        "unter",
+        "den",
+        "Tisch."
+      ],
+      "character": "miko",
+      "explanation": "Stell die Tasche unter den Tisch. — Поставь сумку под стол."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-43-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Сумка стоит под столом.»?",
+      "answers": [
+        "Die Tasche steht unter dem Tisch."
+      ],
+      "explanation": "Die Tasche steht unter dem Tisch. — Сумка стоит под столом.",
+      "wordIds": [
+        "de:v13:43:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Stell die Tasche unter den Tisch.",
+        "Leg den Schlüssel auf den Tisch.",
+        "Die Tasche steht unter dem Tisch."
+      ],
+      "hint": "Die Tasche steht unter dem Tisch. — Сумка стоит под столом."
+    },
+    {
+      "id": "de-a1-43-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Поставь сумку под стол.",
+      "answers": [
+        "Stell die Tasche unter den Tisch."
+      ],
+      "explanation": "Wo? спрашивает о месте и требует Dativ: unter dem Tisch. Wohin? спрашивает о направлении: unter den Tisch.",
+      "wordIds": [
+        "de:v13:43:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Stell",
+        "die",
+        "Tasche",
+        "unter",
+        "den",
+        "Tisch."
+      ],
+      "hint": "Stell die Tasche unter den Tisch. — Поставь сумку под стол."
+    },
+    {
+      "id": "de-a1-43-e03",
+      "type": "dialogue",
+      "prompt": "Где сумка?",
+      "answers": [
+        "Под столом."
+      ],
+      "explanation": "В диалоге: Wo steht die Tasche? / Unter dem Tisch, direkt neben meinem Stuhl. Поэтому: Под столом.",
+      "wordIds": [
+        "de:v13:43:p0",
+        "de:v13:43:p1",
+        "de:v13:43:p2",
+        "de:v13:43:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Wo steht die Tasche?\nМико: Unter dem Tisch, direkt neben meinem Stuhl.",
+      "options": [
+        "На стуле.",
+        "У двери.",
+        "Под столом."
+      ]
+    },
+    {
+      "id": "de-a1-43-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Рюкзак стоит рядом с дверью."
+      ],
+      "explanation": "Der Rucksack steht neben der Tür. — Рюкзак стоит рядом с дверью.",
+      "wordIds": [
+        "de:v13:43:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Der Rucksack steht neben der Tür.",
+      "options": [
+        "Сумка стоит под столом.",
+        "Рюкзак стоит рядом с дверью.",
+        "Поставь сумку под стол."
+      ],
+      "hint": "Der Rucksack steht neben der Tür. — Рюкзак стоит рядом с дверью."
+    },
+    {
+      "id": "de-a1-43-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:43:p0",
+        "de:v13:43:p1",
+        "de:v13:43:p2",
+        "de:v13:43:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:43:p0",
+          "en": "Die Tasche steht unter dem Tisch.",
+          "ru": "Сумка стоит под столом."
+        },
+        {
+          "id": "de:v13:43:p1",
+          "en": "Stell die Tasche unter den Tisch.",
+          "ru": "Поставь сумку под стол."
+        },
+        {
+          "id": "de:v13:43:p2",
+          "en": "Der Rucksack steht neben der Tür.",
+          "ru": "Рюкзак стоит рядом с дверью."
+        },
+        {
+          "id": "de:v13:43:p3",
+          "en": "Leg den Schlüssel auf den Tisch.",
+          "ru": "Положи ключ на стол."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-43-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Stell die Tasche unter dem Tisch.",
+      "answers": [
+        "Stell die Tasche unter den Tisch."
+      ],
+      "explanation": "Ставим предмет в новое место, поэтому unter den Tisch.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Stell die Tasche unter dem Tisch.",
+        "Stell die Tasche unter den Tisch."
+      ],
+      "hint": "Wo? спрашивает о месте и требует Dativ: unter dem Tisch. Wohin? спрашивает о направлении: unter den Tisch."
+    },
+    {
+      "id": "de-a1-43-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Положи ключ на стол.». Можно написать вместо микрофона.",
+      "answers": [
+        "Leg den Schlüssel auf den Tisch."
+      ],
+      "explanation": "Leg den Schlüssel auf den Tisch. — Положи ключ на стол.",
+      "wordIds": [
+        "de:v13:43:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Leg den Schlüssel auf den Tisch.",
+      "recall": {
+        "phrase": "Leg den Schlüssel auf den Tisch.",
+        "meaning": "Положи ключ на стол."
+      }
+    },
+    {
+      "id": "de-a1-43-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Сумка стоит под столом.",
+      "answers": [
+        "Die Tasche steht unter dem Tisch."
+      ],
+      "explanation": "Wo? спрашивает о месте и требует Dativ: unter dem Tisch. Wohin? спрашивает о направлении: unter den Tisch.",
+      "wordIds": [
+        "de:v13:43:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Die Tasche steht unter dem Tisch.",
+        "meaning": "Сумка стоит под столом."
+      }
+    },
+    {
+      "id": "de-a1-43-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Вчера мы приехали в Кёльн.",
+      "answers": [
+        "Wir sind gestern in Köln angekommen."
+      ],
+      "explanation": "Wir sind gestern in Köln angekommen. — Вчера мы приехали в Кёльн.",
+      "wordIds": [
+        "de:v015:42:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Wir sind gestern in Köln angekommen.",
+        "Das Hotel war leicht zu finden.",
+        "Wir haben schon den Dom besucht.",
+        "Morgen möchten wir am Rhein spazieren gehen."
+      ]
+    }
+  ]
+}

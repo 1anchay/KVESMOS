@@ -1,0 +1,292 @@
+{
+  "id": "de-a1-51",
+  "title": "Передай ей записку",
+  "topic": "Предметы и люди",
+  "order": 50,
+  "objective": "Различать личные местоимения Dativ и Akkusativ.",
+  "guide": "Ihr может означать «ей», ihn — «его». В ich gebe ihr den Zettel получатель стоит в Dativ.",
+  "vocabulary": [
+    {
+      "id": "de:v13:51:p0",
+      "en": "Ich gebe ihr den Zettel.",
+      "ru": "Я передам ей записку."
+    },
+    {
+      "id": "de:v13:51:p1",
+      "en": "Kannst du ihn heute mitnehmen?",
+      "ru": "Можешь взять её сегодня с собой?"
+    },
+    {
+      "id": "de:v13:51:p2",
+      "en": "Ich bringe ihn morgen zurück.",
+      "ru": "Я принесу её обратно завтра."
+    },
+    {
+      "id": "de:v13:51:p3",
+      "en": "Er liegt neben deinem Handy.",
+      "ru": "Она лежит рядом с твоим телефоном."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Передай ей записку",
+      "phrase": "Ich gebe ihr den Zettel.",
+      "translation": "Я передам ей записку.",
+      "explanation": "Ihr может означать «ей», ihn — «его». В ich gebe ihr den Zettel получатель стоит в Dativ."
+    },
+    {
+      "character": "miko",
+      "title": "Передай ей записку",
+      "phrase": "Kannst du ihn heute mitnehmen?",
+      "translation": "Можешь взять её сегодня с собой?",
+      "explanation": "Kannst du ihn heute mitnehmen? — Можешь взять её сегодня с собой?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Передай ей записку",
+      "phrase": "Ich bringe ihn morgen zurück.",
+      "translation": "Я принесу её обратно завтра.",
+      "explanation": "Ich bringe ihn morgen zurück. — Я принесу её обратно завтра."
+    },
+    {
+      "character": "orbi",
+      "title": "Передай ей записку",
+      "phrase": "Er liegt neben deinem Handy.",
+      "translation": "Она лежит рядом с твоим телефоном.",
+      "explanation": "Er liegt neben deinem Handy. — Она лежит рядом с твоим телефоном."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich gebe ihr den Zettel.",
+      "translation": "Я передам ей записку.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я передам ей записку.",
+      "options": [
+        "Я принесу её обратно завтра.",
+        "Я передам ей записку.",
+        "Она лежит рядом с твоим телефоном."
+      ],
+      "explanation": "Ihr может означать «ей», ihn — «его». В ich gebe ihr den Zettel получатель стоит в Dativ."
+    },
+    {
+      "id": "apply",
+      "phrase": "Kannst du ihn heute mitnehmen?",
+      "translation": "Можешь взять её сегодня с собой?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Kannst du ihn heute mitnehmen?",
+      "tokens": [
+        "Kannst",
+        "du",
+        "ihn",
+        "heute",
+        "mitnehmen?"
+      ],
+      "character": "miko",
+      "explanation": "Kannst du ihn heute mitnehmen? — Можешь взять её сегодня с собой?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-51-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мне нужен ответ к пятнице.",
+      "answers": [
+        "Ich brauche die Antwort bis Freitag."
+      ],
+      "explanation": "Ich brauche die Antwort bis Freitag. — Мне нужен ответ к пятнице.",
+      "wordIds": [
+        "de:v13:50:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ich brauche die Antwort bis Freitag.",
+        "Seit Montag warte ich auf die Antwort.",
+        "Heute kann ich noch nichts bestätigen.",
+        "Morgen gebe ich dir Bescheid."
+      ]
+    },
+    {
+      "id": "de-a1-51-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я передам ей записку.»?",
+      "answers": [
+        "Ich gebe ihr den Zettel."
+      ],
+      "explanation": "Ich gebe ihr den Zettel. — Я передам ей записку.",
+      "wordIds": [
+        "de:v13:51:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Kannst du ihn heute mitnehmen?",
+        "Er liegt neben deinem Handy.",
+        "Ich gebe ihr den Zettel."
+      ],
+      "hint": "Ich gebe ihr den Zettel. — Я передам ей записку."
+    },
+    {
+      "id": "de-a1-51-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Можешь взять её сегодня с собой?",
+      "answers": [
+        "Kannst du ihn heute mitnehmen?"
+      ],
+      "explanation": "Ihr может означать «ей», ihn — «его». В ich gebe ihr den Zettel получатель стоит в Dativ.",
+      "wordIds": [
+        "de:v13:51:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Kannst",
+        "du",
+        "ihn",
+        "heute",
+        "mitnehmen?"
+      ],
+      "hint": "Kannst du ihn heute mitnehmen? — Можешь взять её сегодня с собой?"
+    },
+    {
+      "id": "de-a1-51-e04",
+      "type": "dialogue",
+      "prompt": "Когда Лея получит записку?",
+      "answers": [
+        "После занятия."
+      ],
+      "explanation": "В диалоге: Hat Lea den Zettel schon? / Nein, ich gebe ihn ihr nach dem Kurs. Поэтому: После занятия.",
+      "wordIds": [
+        "de:v13:51:p0",
+        "de:v13:51:p1",
+        "de:v13:51:p2",
+        "de:v13:51:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Hat Lea den Zettel schon?\nМико: Nein, ich gebe ihn ihr nach dem Kurs.",
+      "options": [
+        "До занятия.",
+        "Она уже получила её.",
+        "После занятия."
+      ]
+    },
+    {
+      "id": "de-a1-51-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я принесу её обратно завтра."
+      ],
+      "explanation": "Ich bringe ihn morgen zurück. — Я принесу её обратно завтра.",
+      "wordIds": [
+        "de:v13:51:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ich bringe ihn morgen zurück.",
+      "options": [
+        "Я передам ей записку.",
+        "Я принесу её обратно завтра.",
+        "Можешь взять её сегодня с собой?"
+      ],
+      "hint": "Ich bringe ihn morgen zurück. — Я принесу её обратно завтра."
+    },
+    {
+      "id": "de-a1-51-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:51:p0",
+        "de:v13:51:p1",
+        "de:v13:51:p2",
+        "de:v13:51:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:51:p0",
+          "en": "Ich gebe ihr den Zettel.",
+          "ru": "Я передам ей записку."
+        },
+        {
+          "id": "de:v13:51:p1",
+          "en": "Kannst du ihn heute mitnehmen?",
+          "ru": "Можешь взять её сегодня с собой?"
+        },
+        {
+          "id": "de:v13:51:p2",
+          "en": "Ich bringe ihn morgen zurück.",
+          "ru": "Я принесу её обратно завтра."
+        },
+        {
+          "id": "de:v13:51:p3",
+          "en": "Er liegt neben deinem Handy.",
+          "ru": "Она лежит рядом с твоим телефоном."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-51-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich gebe sie den Zettel.",
+      "answers": [
+        "Ich gebe ihr den Zettel."
+      ],
+      "explanation": "Получатель отвечает на wem?, поэтому ей — ihr.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Ich gebe sie den Zettel.",
+        "Ich gebe ihr den Zettel."
+      ],
+      "hint": "Ihr может означать «ей», ihn — «его». В ich gebe ihr den Zettel получатель стоит в Dativ."
+    },
+    {
+      "id": "de-a1-51-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Она лежит рядом с твоим телефоном.». Можно написать вместо микрофона.",
+      "answers": [
+        "Er liegt neben deinem Handy."
+      ],
+      "explanation": "Er liegt neben deinem Handy. — Она лежит рядом с твоим телефоном.",
+      "wordIds": [
+        "de:v13:51:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Er liegt neben deinem Handy.",
+      "recall": {
+        "phrase": "Er liegt neben deinem Handy.",
+        "meaning": "Она лежит рядом с твоим телефоном."
+      }
+    },
+    {
+      "id": "de-a1-51-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я передам ей записку.",
+      "answers": [
+        "Ich gebe ihr den Zettel."
+      ],
+      "explanation": "Ihr может означать «ей», ihn — «его». В ich gebe ihr den Zettel получатель стоит в Dativ.",
+      "wordIds": [
+        "de:v13:51:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich gebe ihr den Zettel.",
+        "meaning": "Я передам ей записку."
+      }
+    }
+  ]
+}

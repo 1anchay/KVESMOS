@@ -95,20 +95,6 @@ class OnboardingPage extends ConsumerWidget {
             label: const Text('Восстановить прогресс с другого телефона'),
           ),
         if (step == 1) const CoursePicker(onboarding: true),
-        if (step == 2)
-          ...['С нуля', 'Знаю немного'].map(
-            (level) => Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: ChoiceChip(
-                label: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Text(level),
-                ),
-                selected: app.startingLevel == level,
-                onSelected: (_) => app.savePreferences(level: level),
-              ),
-            ),
-          ),
         if (step == 3)
           ...[25, 50, 100].map(
             (goal) => Padding(
@@ -123,29 +109,24 @@ class OnboardingPage extends ConsumerWidget {
               ),
             ),
           ),
-        if (step == 2)
-          OutlinedButton.icon(
-            onPressed: () => context.go('/placement'),
-            icon: const Icon(Icons.explore_outlined),
-            label: const Text('Я уже немного знаю язык · диагностика'),
-          ),
         const SizedBox(height: 32),
-        FilledButton(
-          onPressed: () async {
-            if (app.onboarded) {
-              context.go('/');
-            } else if (step == 3) {
-              await app.repository.setSetting(
-                'kvesmos.onboarding.route.v012',
-                '/companion/reminders',
-              );
-              if (context.mounted) context.go('/companion/reminders');
-            } else {
-              context.go(['/language', '/level', '/goal'][step]);
-            }
-          },
-          child: const Text('Продолжить'),
-        ),
+        if (step != 1)
+          FilledButton(
+            onPressed: () async {
+              if (app.onboarded) {
+                context.go('/');
+              } else if (step == 3) {
+                await app.repository.setSetting(
+                  'kvesmos.onboarding.route.v012',
+                  '/companion/reminders',
+                );
+                if (context.mounted) context.go('/companion/reminders');
+              } else {
+                context.go(['/language', '/level', '/goal'][step]);
+              }
+            },
+            child: const Text('Продолжить'),
+          ),
         const SizedBox(height: 18),
         Text(
           'ШАГ ${step + 1} ИЗ 6',
@@ -1035,6 +1016,10 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
       ),
       const AudioSettings(),
       const SectionTitle('Учебный путь'),
+      ListTile(
+        title: const Text('Точка старта и проверка знаний'),
+        onTap: () => context.go('/placement'),
+      ),
       ListTile(
         title: Text('${app.course.flag} ${app.course.name}'),
         subtitle: const Text('Сменить язык обучения'),

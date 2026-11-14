@@ -1,0 +1,292 @@
+{
+  "id": "es-a1-47",
+  "title": "Как было в музее",
+  "topic": "Впечатления и задержки",
+  "order": 46,
+  "objective": "Описать впечатление и выделить отдельное событие.",
+  "guide": "Era/estaba описывают фон; vimos, entramos называют отдельные события.",
+  "vocabulary": [
+    {
+      "id": "es:v13:47:p0",
+      "en": "La sala estaba casi vacía.",
+      "ru": "Зал был почти пуст."
+    },
+    {
+      "id": "es:v13:47:p1",
+      "en": "Vimos una exposición de fotografía.",
+      "ru": "Мы посмотрели фотовыставку."
+    },
+    {
+      "id": "es:v13:47:p2",
+      "en": "Las fotos eran enormes.",
+      "ru": "Фотографии были огромные."
+    },
+    {
+      "id": "es:v13:47:p3",
+      "en": "La visita duró una hora.",
+      "ru": "Посещение длилось час."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Как было в музее",
+      "phrase": "La sala estaba casi vacía.",
+      "translation": "Зал был почти пуст.",
+      "explanation": "Era/estaba описывают фон; vimos, entramos называют отдельные события."
+    },
+    {
+      "character": "miko",
+      "title": "Как было в музее",
+      "phrase": "Vimos una exposición de fotografía.",
+      "translation": "Мы посмотрели фотовыставку.",
+      "explanation": "Vimos una exposición de fotografía. — Мы посмотрели фотовыставку."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как было в музее",
+      "phrase": "Las fotos eran enormes.",
+      "translation": "Фотографии были огромные.",
+      "explanation": "Las fotos eran enormes. — Фотографии были огромные."
+    },
+    {
+      "character": "orbi",
+      "title": "Как было в музее",
+      "phrase": "La visita duró una hora.",
+      "translation": "Посещение длилось час.",
+      "explanation": "La visita duró una hora. — Посещение длилось час."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "La sala estaba casi vacía.",
+      "translation": "Зал был почти пуст.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Зал был почти пуст.",
+      "options": [
+        "Фотографии были огромные.",
+        "Зал был почти пуст.",
+        "Посещение длилось час."
+      ],
+      "explanation": "Era/estaba описывают фон; vimos, entramos называют отдельные события."
+    },
+    {
+      "id": "apply",
+      "phrase": "Vimos una exposición de fotografía.",
+      "translation": "Мы посмотрели фотовыставку.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Vimos una exposición de fotografía.",
+      "tokens": [
+        "Vimos",
+        "una",
+        "exposición",
+        "de",
+        "fotografía."
+      ],
+      "character": "miko",
+      "explanation": "Vimos una exposición de fotografía. — Мы посмотрели фотовыставку."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-47-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Фотографии были огромные."
+      ],
+      "explanation": "Las fotos eran enormes. — Фотографии были огромные.",
+      "wordIds": [
+        "es:v13:47:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Las fotos eran enormes.",
+      "options": [
+        "Зал был почти пуст.",
+        "Фотографии были огромные.",
+        "Мы посмотрели фотовыставку."
+      ],
+      "hint": "Las fotos eran enormes. — Фотографии были огромные."
+    },
+    {
+      "id": "es-a1-47-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы посмотрели фотовыставку.",
+      "answers": [
+        "Vimos una exposición de fotografía."
+      ],
+      "explanation": "Era/estaba описывают фон; vimos, entramos называют отдельные события.",
+      "wordIds": [
+        "es:v13:47:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Vimos",
+        "una",
+        "exposición",
+        "de",
+        "fotografía."
+      ],
+      "hint": "Vimos una exposición de fotografía. — Мы посмотрели фотовыставку."
+    },
+    {
+      "id": "es-a1-47-e03",
+      "type": "dialogue",
+      "prompt": "Сколько людей было в зале?",
+      "answers": [
+        "Почти никого."
+      ],
+      "explanation": "В диалоге: ¿Había mucha gente? / No, la sala estaba casi vacía cuando entramos. Поэтому: Почти никого.",
+      "wordIds": [
+        "es:v13:47:p0",
+        "es:v13:47:p1",
+        "es:v13:47:p2",
+        "es:v13:47:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Había mucha gente?\nМико: No, la sala estaba casi vacía cuando entramos.",
+      "options": [
+        "Очень много.",
+        "Вход был закрыт.",
+        "Почти никого."
+      ]
+    },
+    {
+      "id": "es-a1-47-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Зал был почти пуст.»?",
+      "answers": [
+        "La sala estaba casi vacía."
+      ],
+      "explanation": "La sala estaba casi vacía. — Зал был почти пуст.",
+      "wordIds": [
+        "es:v13:47:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Vimos una exposición de fotografía.",
+        "La visita duró una hora.",
+        "La sala estaba casi vacía."
+      ],
+      "hint": "La sala estaba casi vacía. — Зал был почти пуст."
+    },
+    {
+      "id": "es-a1-47-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:47:p0",
+        "es:v13:47:p1",
+        "es:v13:47:p2",
+        "es:v13:47:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:47:p0",
+          "en": "La sala estaba casi vacía.",
+          "ru": "Зал был почти пуст."
+        },
+        {
+          "id": "es:v13:47:p1",
+          "en": "Vimos una exposición de fotografía.",
+          "ru": "Мы посмотрели фотовыставку."
+        },
+        {
+          "id": "es:v13:47:p2",
+          "en": "Las fotos eran enormes.",
+          "ru": "Фотографии были огромные."
+        },
+        {
+          "id": "es:v13:47:p3",
+          "en": "La visita duró una hora.",
+          "ru": "Посещение длилось час."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-47-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Las fotos era enormes.",
+      "answers": [
+        "Las fotos eran enormes."
+      ],
+      "explanation": "С las fotos нужна форма eran во множественном числе.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Las fotos era enormes.",
+        "Las fotos eran enormes."
+      ],
+      "hint": "Era/estaba описывают фон; vimos, entramos называют отдельные события."
+    },
+    {
+      "id": "es-a1-47-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Посещение длилось час.». Можно написать вместо микрофона.",
+      "answers": [
+        "La visita duró una hora."
+      ],
+      "explanation": "La visita duró una hora. — Посещение длилось час.",
+      "wordIds": [
+        "es:v13:47:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "La visita duró una hora.",
+      "recall": {
+        "phrase": "La visita duró una hora.",
+        "meaning": "Посещение длилось час."
+      }
+    },
+    {
+      "id": "es-a1-47-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Зал был почти пуст.",
+      "answers": [
+        "La sala estaba casi vacía."
+      ],
+      "explanation": "Era/estaba описывают фон; vimos, entramos называют отдельные события.",
+      "wordIds": [
+        "es:v13:47:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "La sala estaba casi vacía.",
+        "meaning": "Зал был почти пуст."
+      }
+    },
+    {
+      "id": "es-a1-47-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я готовил ужин, когда ты позвонил.",
+      "answers": [
+        "Preparaba la cena cuando llamaste."
+      ],
+      "explanation": "Preparaba la cena cuando llamaste. — Я готовил ужин, когда ты позвонил.",
+      "wordIds": [
+        "es:v13:46:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Preparaba la cena cuando llamaste.",
+        "Mientras cenábamos, sonó el teléfono.",
+        "No pude contestar en ese momento.",
+        "Te devolví la llamada después."
+      ]
+    }
+  ]
+}

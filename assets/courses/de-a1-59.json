@@ -1,0 +1,296 @@
+{
+  "id": "de-a1-59",
+  "title": "Перескажи сообщение",
+  "topic": "Сообщения и встречи",
+  "order": 58,
+  "objective": "Передать факт и вопрос с dass и ob.",
+  "guide": "Dass вводит сообщение. Ob вводит косвенный вопрос «ли». В обоих случаях глагол в конце.",
+  "vocabulary": [
+    {
+      "id": "de:v13:59:p0",
+      "en": "Mila sagt, dass der Termin später beginnt.",
+      "ru": "Мила говорит, что встреча начнётся позже."
+    },
+    {
+      "id": "de:v13:59:p1",
+      "en": "Sie fragt, ob wir länger bleiben können.",
+      "ru": "Она спрашивает, можем ли мы остаться дольше."
+    },
+    {
+      "id": "de:v13:59:p2",
+      "en": "Ich weiß noch nicht, wann wir fertig sind.",
+      "ru": "Я ещё не знаю, когда мы закончим."
+    },
+    {
+      "id": "de:v13:59:p3",
+      "en": "Ich schreibe ihr nach dem Termin.",
+      "ru": "Я напишу ей после встречи."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Перескажи сообщение",
+      "phrase": "Mila sagt, dass der Termin später beginnt.",
+      "translation": "Мила говорит, что встреча начнётся позже.",
+      "explanation": "Dass вводит сообщение. Ob вводит косвенный вопрос «ли». В обоих случаях глагол в конце."
+    },
+    {
+      "character": "miko",
+      "title": "Перескажи сообщение",
+      "phrase": "Sie fragt, ob wir länger bleiben können.",
+      "translation": "Она спрашивает, можем ли мы остаться дольше.",
+      "explanation": "Sie fragt, ob wir länger bleiben können. — Она спрашивает, можем ли мы остаться дольше."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Перескажи сообщение",
+      "phrase": "Ich weiß noch nicht, wann wir fertig sind.",
+      "translation": "Я ещё не знаю, когда мы закончим.",
+      "explanation": "Ich weiß noch nicht, wann wir fertig sind. — Я ещё не знаю, когда мы закончим."
+    },
+    {
+      "character": "orbi",
+      "title": "Перескажи сообщение",
+      "phrase": "Ich schreibe ihr nach dem Termin.",
+      "translation": "Я напишу ей после встречи.",
+      "explanation": "Ich schreibe ihr nach dem Termin. — Я напишу ей после встречи."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Mila sagt, dass der Termin später beginnt.",
+      "translation": "Мила говорит, что встреча начнётся позже.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мила говорит, что встреча начнётся позже.",
+      "options": [
+        "Я ещё не знаю, когда мы закончим.",
+        "Мила говорит, что встреча начнётся позже.",
+        "Я напишу ей после встречи."
+      ],
+      "explanation": "Dass вводит сообщение. Ob вводит косвенный вопрос «ли». В обоих случаях глагол в конце."
+    },
+    {
+      "id": "apply",
+      "phrase": "Sie fragt, ob wir länger bleiben können.",
+      "translation": "Она спрашивает, можем ли мы остаться дольше.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Sie fragt, ob wir länger bleiben können.",
+      "tokens": [
+        "Sie",
+        "fragt,",
+        "ob",
+        "wir",
+        "länger",
+        "bleiben",
+        "können."
+      ],
+      "character": "miko",
+      "explanation": "Sie fragt, ob wir länger bleiben können. — Она спрашивает, можем ли мы остаться дольше."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-59-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я ещё не знаю, когда мы закончим."
+      ],
+      "explanation": "Ich weiß noch nicht, wann wir fertig sind. — Я ещё не знаю, когда мы закончим.",
+      "wordIds": [
+        "de:v13:59:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Ich weiß noch nicht, wann wir fertig sind.",
+      "options": [
+        "Мила говорит, что встреча начнётся позже.",
+        "Я ещё не знаю, когда мы закончим.",
+        "Она спрашивает, можем ли мы остаться дольше."
+      ],
+      "hint": "Ich weiß noch nicht, wann wir fertig sind. — Я ещё не знаю, когда мы закончим."
+    },
+    {
+      "id": "de-a1-59-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Она спрашивает, можем ли мы остаться дольше.",
+      "answers": [
+        "Sie fragt, ob wir länger bleiben können."
+      ],
+      "explanation": "Dass вводит сообщение. Ob вводит косвенный вопрос «ли». В обоих случаях глагол в конце.",
+      "wordIds": [
+        "de:v13:59:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Sie",
+        "fragt,",
+        "ob",
+        "wir",
+        "länger",
+        "bleiben",
+        "können."
+      ],
+      "hint": "Sie fragt, ob wir länger bleiben können. — Она спрашивает, можем ли мы остаться дольше."
+    },
+    {
+      "id": "de-a1-59-e03",
+      "type": "dialogue",
+      "prompt": "Что хочет узнать Мила?",
+      "answers": [
+        "Можем ли мы остаться дольше."
+      ],
+      "explanation": "В диалоге: Was möchte Mila wissen? / Sie fragt, ob wir länger bleiben können. Поэтому: Можем ли мы остаться дольше.",
+      "wordIds": [
+        "de:v13:59:p0",
+        "de:v13:59:p1",
+        "de:v13:59:p2",
+        "de:v13:59:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Was möchte Mila wissen?\nМико: Sie fragt, ob wir länger bleiben können.",
+      "options": [
+        "Будет ли встреча отменена.",
+        "Кто прислал приглашение.",
+        "Можем ли мы остаться дольше."
+      ]
+    },
+    {
+      "id": "de-a1-59-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Мила говорит, что встреча начнётся позже.»?",
+      "answers": [
+        "Mila sagt, dass der Termin später beginnt."
+      ],
+      "explanation": "Mila sagt, dass der Termin später beginnt. — Мила говорит, что встреча начнётся позже.",
+      "wordIds": [
+        "de:v13:59:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Sie fragt, ob wir länger bleiben können.",
+        "Ich schreibe ihr nach dem Termin.",
+        "Mila sagt, dass der Termin später beginnt."
+      ],
+      "hint": "Mila sagt, dass der Termin später beginnt. — Мила говорит, что встреча начнётся позже."
+    },
+    {
+      "id": "de-a1-59-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:59:p0",
+        "de:v13:59:p1",
+        "de:v13:59:p2",
+        "de:v13:59:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:59:p0",
+          "en": "Mila sagt, dass der Termin später beginnt.",
+          "ru": "Мила говорит, что встреча начнётся позже."
+        },
+        {
+          "id": "de:v13:59:p1",
+          "en": "Sie fragt, ob wir länger bleiben können.",
+          "ru": "Она спрашивает, можем ли мы остаться дольше."
+        },
+        {
+          "id": "de:v13:59:p2",
+          "en": "Ich weiß noch nicht, wann wir fertig sind.",
+          "ru": "Я ещё не знаю, когда мы закончим."
+        },
+        {
+          "id": "de:v13:59:p3",
+          "en": "Ich schreibe ihr nach dem Termin.",
+          "ru": "Я напишу ей после встречи."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-59-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Sie fragt, ob können wir länger bleiben.",
+      "answers": [
+        "Sie fragt, ob wir länger bleiben können."
+      ],
+      "explanation": "В вопросе с ob модальный глагол können закрывает придаточную часть.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Sie fragt, ob können wir länger bleiben.",
+        "Sie fragt, ob wir länger bleiben können."
+      ],
+      "hint": "Dass вводит сообщение. Ob вводит косвенный вопрос «ли». В обоих случаях глагол в конце."
+    },
+    {
+      "id": "de-a1-59-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я напишу ей после встречи.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ich schreibe ihr nach dem Termin."
+      ],
+      "explanation": "Ich schreibe ihr nach dem Termin. — Я напишу ей после встречи.",
+      "wordIds": [
+        "de:v13:59:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ich schreibe ihr nach dem Termin.",
+      "recall": {
+        "phrase": "Ich schreibe ihr nach dem Termin.",
+        "meaning": "Я напишу ей после встречи."
+      }
+    },
+    {
+      "id": "de-a1-59-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мила говорит, что встреча начнётся позже.",
+      "answers": [
+        "Mila sagt, dass der Termin später beginnt."
+      ],
+      "explanation": "Dass вводит сообщение. Ob вводит косвенный вопрос «ли». В обоих случаях глагол в конце.",
+      "wordIds": [
+        "de:v13:59:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Mila sagt, dass der Termin später beginnt.",
+        "meaning": "Мила говорит, что встреча начнётся позже."
+      }
+    },
+    {
+      "id": "de-a1-59-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Завтра офис откроется позже.",
+      "answers": [
+        "Morgen öffnet das Büro später."
+      ],
+      "explanation": "Morgen öffnet das Büro später. — Завтра офис откроется позже.",
+      "wordIds": [
+        "de:v13:58:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Morgen öffnet das Büro später.",
+        "Wir werden ab zehn Uhr erreichbar sein.",
+        "Heute bleibt der Eingang geschlossen.",
+        "Bitte kommen Sie erst am Nachmittag."
+      ]
+    }
+  ]
+}

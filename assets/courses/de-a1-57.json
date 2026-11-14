@@ -1,0 +1,292 @@
+{
+  "id": "de-a1-57",
+  "title": "Сначала включите, потом проверьте",
+  "topic": "Инструкции и планы",
+  "order": 56,
+  "objective": "Понять последовательность короткой инструкции.",
+  "guide": "Zuerst отмечает первый шаг. Danach ставит следующее действие, а спрягаемый глагол следует за ним.",
+  "vocabulary": [
+    {
+      "id": "de:v13:57:p0",
+      "en": "Schalten Sie das Gerät zuerst ein.",
+      "ru": "Сначала включите прибор."
+    },
+    {
+      "id": "de:v13:57:p1",
+      "en": "Danach prüfen Sie die Anzeige.",
+      "ru": "Затем проверьте дисплей."
+    },
+    {
+      "id": "de:v13:57:p2",
+      "en": "Drücken Sie kurz auf die Taste.",
+      "ru": "Коротко нажмите на кнопку."
+    },
+    {
+      "id": "de:v13:57:p3",
+      "en": "Das Licht muss grün sein.",
+      "ru": "Индикатор должен быть зелёным."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сначала включите, потом проверьте",
+      "phrase": "Schalten Sie das Gerät zuerst ein.",
+      "translation": "Сначала включите прибор.",
+      "explanation": "Zuerst отмечает первый шаг. Danach ставит следующее действие, а спрягаемый глагол следует за ним."
+    },
+    {
+      "character": "miko",
+      "title": "Сначала включите, потом проверьте",
+      "phrase": "Danach prüfen Sie die Anzeige.",
+      "translation": "Затем проверьте дисплей.",
+      "explanation": "Danach prüfen Sie die Anzeige. — Затем проверьте дисплей."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сначала включите, потом проверьте",
+      "phrase": "Drücken Sie kurz auf die Taste.",
+      "translation": "Коротко нажмите на кнопку.",
+      "explanation": "Drücken Sie kurz auf die Taste. — Коротко нажмите на кнопку."
+    },
+    {
+      "character": "orbi",
+      "title": "Сначала включите, потом проверьте",
+      "phrase": "Das Licht muss grün sein.",
+      "translation": "Индикатор должен быть зелёным.",
+      "explanation": "Das Licht muss grün sein. — Индикатор должен быть зелёным."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Schalten Sie das Gerät zuerst ein.",
+      "translation": "Сначала включите прибор.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Сначала включите прибор.",
+      "options": [
+        "Коротко нажмите на кнопку.",
+        "Сначала включите прибор.",
+        "Индикатор должен быть зелёным."
+      ],
+      "explanation": "Zuerst отмечает первый шаг. Danach ставит следующее действие, а спрягаемый глагол следует за ним."
+    },
+    {
+      "id": "apply",
+      "phrase": "Danach prüfen Sie die Anzeige.",
+      "translation": "Затем проверьте дисплей.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Danach prüfen Sie die Anzeige.",
+      "tokens": [
+        "Danach",
+        "prüfen",
+        "Sie",
+        "die",
+        "Anzeige."
+      ],
+      "character": "miko",
+      "explanation": "Danach prüfen Sie die Anzeige. — Затем проверьте дисплей."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-57-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Следующий автобус отправляется через десять минут.",
+      "answers": [
+        "Der nächste Bus fährt in zehn Minuten."
+      ],
+      "explanation": "Der nächste Bus fährt in zehn Minuten. — Следующий автобус отправляется через десять минут.",
+      "wordIds": [
+        "de:v13:56:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ich komme später, weil mein Zug ausfällt.",
+        "Deshalb nehme ich den Bus.",
+        "Der nächste Bus fährt in zehn Minuten.",
+        "Ihr könnt schon anfangen."
+      ]
+    },
+    {
+      "id": "de-a1-57-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Сначала включите прибор.»?",
+      "answers": [
+        "Schalten Sie das Gerät zuerst ein."
+      ],
+      "explanation": "Schalten Sie das Gerät zuerst ein. — Сначала включите прибор.",
+      "wordIds": [
+        "de:v13:57:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Danach prüfen Sie die Anzeige.",
+        "Das Licht muss grün sein.",
+        "Schalten Sie das Gerät zuerst ein."
+      ],
+      "hint": "Schalten Sie das Gerät zuerst ein. — Сначала включите прибор."
+    },
+    {
+      "id": "de-a1-57-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Затем проверьте дисплей.",
+      "answers": [
+        "Danach prüfen Sie die Anzeige."
+      ],
+      "explanation": "Zuerst отмечает первый шаг. Danach ставит следующее действие, а спрягаемый глагол следует за ним.",
+      "wordIds": [
+        "de:v13:57:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Danach",
+        "prüfen",
+        "Sie",
+        "die",
+        "Anzeige."
+      ],
+      "hint": "Danach prüfen Sie die Anzeige. — Затем проверьте дисплей."
+    },
+    {
+      "id": "de-a1-57-e04",
+      "type": "dialogue",
+      "prompt": "Что проверить после включения?",
+      "answers": [
+        "Дисплей и цвет индикатора."
+      ],
+      "explanation": "В диалоге: Was mache ich nach dem Einschalten? / Prüfen Sie die Anzeige. Das Licht muss grün sein. Поэтому: Дисплей и цвет индикатора.",
+      "wordIds": [
+        "de:v13:57:p0",
+        "de:v13:57:p1",
+        "de:v13:57:p2",
+        "de:v13:57:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Was mache ich nach dem Einschalten?\nМико: Prüfen Sie die Anzeige. Das Licht muss grün sein.",
+      "options": [
+        "Адрес доставки.",
+        "Провод до включения.",
+        "Дисплей и цвет индикатора."
+      ]
+    },
+    {
+      "id": "de-a1-57-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Коротко нажмите на кнопку."
+      ],
+      "explanation": "Drücken Sie kurz auf die Taste. — Коротко нажмите на кнопку.",
+      "wordIds": [
+        "de:v13:57:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Drücken Sie kurz auf die Taste.",
+      "options": [
+        "Сначала включите прибор.",
+        "Коротко нажмите на кнопку.",
+        "Затем проверьте дисплей."
+      ],
+      "hint": "Drücken Sie kurz auf die Taste. — Коротко нажмите на кнопку."
+    },
+    {
+      "id": "de-a1-57-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:57:p0",
+        "de:v13:57:p1",
+        "de:v13:57:p2",
+        "de:v13:57:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:57:p0",
+          "en": "Schalten Sie das Gerät zuerst ein.",
+          "ru": "Сначала включите прибор."
+        },
+        {
+          "id": "de:v13:57:p1",
+          "en": "Danach prüfen Sie die Anzeige.",
+          "ru": "Затем проверьте дисплей."
+        },
+        {
+          "id": "de:v13:57:p2",
+          "en": "Drücken Sie kurz auf die Taste.",
+          "ru": "Коротко нажмите на кнопку."
+        },
+        {
+          "id": "de:v13:57:p3",
+          "en": "Das Licht muss grün sein.",
+          "ru": "Индикатор должен быть зелёным."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-57-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Danach Sie prüfen die Anzeige.",
+      "answers": [
+        "Danach prüfen Sie die Anzeige."
+      ],
+      "explanation": "После Danach в главной части стоит глагол prüfen.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Danach Sie prüfen die Anzeige.",
+        "Danach prüfen Sie die Anzeige."
+      ],
+      "hint": "Zuerst отмечает первый шаг. Danach ставит следующее действие, а спрягаемый глагол следует за ним."
+    },
+    {
+      "id": "de-a1-57-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Индикатор должен быть зелёным.». Можно написать вместо микрофона.",
+      "answers": [
+        "Das Licht muss grün sein."
+      ],
+      "explanation": "Das Licht muss grün sein. — Индикатор должен быть зелёным.",
+      "wordIds": [
+        "de:v13:57:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Das Licht muss grün sein.",
+      "recall": {
+        "phrase": "Das Licht muss grün sein.",
+        "meaning": "Индикатор должен быть зелёным."
+      }
+    },
+    {
+      "id": "de-a1-57-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Сначала включите прибор.",
+      "answers": [
+        "Schalten Sie das Gerät zuerst ein."
+      ],
+      "explanation": "Zuerst отмечает первый шаг. Danach ставит следующее действие, а спрягаемый глагол следует за ним.",
+      "wordIds": [
+        "de:v13:57:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Schalten Sie das Gerät zuerst ein.",
+        "meaning": "Сначала включите прибор."
+      }
+    }
+  ]
+}

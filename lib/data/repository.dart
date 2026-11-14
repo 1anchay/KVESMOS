@@ -3,6 +3,7 @@ import 'package:drift/drift.dart';
 import 'package:flutter/services.dart';
 import 'package:uuid/uuid.dart';
 import '../domain/course.dart';
+import '../domain/course_start.dart';
 import '../domain/intro_activity.dart';
 import '../domain/languages.dart';
 import '../domain/progress.dart';
@@ -25,6 +26,50 @@ class LearningRepository {
     ),
   );
   static const courseKey = 'kvesmos.course.selected.v1';
+  static String courseStartKey(String courseId) =>
+      'kvesmos.course.start.v1:$courseId';
+
+  Future<CourseStart> courseStart([ProgressSnapshot? snapshot]) async {
+    final lessons = catalog;
+    final id = course.id;
+    final lessonIds = lessons.map((l) => l.id).toSet();
+    final retired = await settingsWithPrefix('kvesmos.session.retired.v1:');
+    final unfinished = await (db.select(
+      db.sessions,
+    )..where((t) => t.done.equals(false))).get();
+    return CourseStart(lessons, (snapshot ?? await progress()).completed, {
+      for (final session in unfinished)
+        if (lessonIds.contains(session.lessonId) &&
+            retired['kvesmos.session.retired.v1:${session.id}'] != 'true')
+          session.lessonId,
+    }, await setting(courseStartKey(id)));
+  }
+
+  Future<bool> needsCourseStart() async {
+    final state = await courseStart();
+    if (state.entry != null ||
+        state.active.isNotEmpty ||
+        state.completed.isNotEmpty) {
+      return false;
+    }
+    return !(await allEvents()).any((e) => e.courseId == course.id);
+  }
+
+  Future<void> chooseCourseStart(String lessonId) async {
+    if (!catalog.any((lesson) => lesson.id == lessonId)) {
+      throw ArgumentError('Unknown starting lesson');
+    }
+    await setSetting(courseStartKey(course.id), lessonId);
+  }
+
+  Future<void> ensureLessonAccess(String id) async {
+    final path = await courseStart();
+    final info = path.catalog.where((l) => l.id == id).firstOrNull;
+    if (info == null || !path.available(info)) {
+      throw StateError('Сначала пройдите предыдущий урок.');
+    }
+  }
+
   Future<void> selectCourse(String id) async {
     if (!StudyCourse.all.any((c) => c.id == id)) {
       throw ArgumentError('Unknown course');

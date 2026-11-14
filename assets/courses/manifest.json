@@ -670,6 +670,264 @@
           ]
         }
       ]
+    },
+    {
+      "id": "en-v13",
+      "title": "Разговоры и решения",
+      "themes": [
+        {
+          "id": "en-v13-1",
+          "title": "Роли и сроки",
+          "lessons": [
+            {
+              "id": "en-a1-73",
+              "title": "Кто за что отвечает",
+              "order": 72,
+              "asset": "assets/courses/en-a1-73.json"
+            },
+            {
+              "id": "en-a1-74",
+              "title": "Уточнить срок",
+              "order": 73,
+              "asset": "assets/courses/en-a1-74.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-2",
+          "title": "Сообщения и уточнения",
+          "lessons": [
+            {
+              "id": "en-a1-75",
+              "title": "Передать сообщение",
+              "order": 74,
+              "asset": "assets/courses/en-a1-75.json"
+            },
+            {
+              "id": "en-a1-76",
+              "title": "Короткое уточнение",
+              "order": 75,
+              "asset": "assets/courses/en-a1-76.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-3",
+          "title": "Расписание и причины",
+          "lessons": [
+            {
+              "id": "en-a1-77",
+              "title": "Перенести созвон",
+              "order": 76,
+              "asset": "assets/courses/en-a1-77.json"
+            },
+            {
+              "id": "en-a1-78",
+              "title": "Почему так решили",
+              "order": 77,
+              "asset": "assets/courses/en-a1-78.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-4",
+          "title": "Согласие и выбор",
+          "lessons": [
+            {
+              "id": "en-a1-79",
+              "title": "Согласиться частично",
+              "order": 78,
+              "asset": "assets/courses/en-a1-79.json"
+            },
+            {
+              "id": "en-a1-80",
+              "title": "Плюсы и минусы маршрутов",
+              "order": 79,
+              "asset": "assets/courses/en-a1-80.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-5",
+          "title": "Инструкции и бронирование",
+          "lessons": [
+            {
+              "id": "en-a1-81",
+              "title": "О чём письмо от хозяина",
+              "order": 80,
+              "asset": "assets/courses/en-a1-81.json"
+            },
+            {
+              "id": "en-a1-82",
+              "title": "Ошибка в бронировании",
+              "order": 81,
+              "asset": "assets/courses/en-a1-82.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-6",
+          "title": "Находки и пересадки",
+          "lessons": [
+            {
+              "id": "en-a1-83",
+              "title": "Вещь осталась в поезде",
+              "order": 82,
+              "asset": "assets/courses/en-a1-83.json"
+            },
+            {
+              "id": "en-a1-84",
+              "title": "Успеем на пересадку?",
+              "order": 83,
+              "asset": "assets/courses/en-a1-84.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-7",
+          "title": "Поломки и документы",
+          "lessons": [
+            {
+              "id": "en-a1-85",
+              "title": "Сообщить о поломке",
+              "order": 84,
+              "asset": "assets/courses/en-a1-85.json"
+            },
+            {
+              "id": "en-a1-86",
+              "title": "Подтвердить получение",
+              "order": 85,
+              "asset": "assets/courses/en-a1-86.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-8",
+          "title": "Опыт и уточнения",
+          "lessons": [
+            {
+              "id": "en-a1-87",
+              "title": "Как давно вы здесь",
+              "order": 86,
+              "asset": "assets/courses/en-a1-87.json"
+            },
+            {
+              "id": "en-a1-88",
+              "title": "То, что пригодится в дороге",
+              "order": 87,
+              "asset": "assets/courses/en-a1-88.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-9",
+          "title": "Правила и объявления",
+          "lessons": [
+            {
+              "id": "en-a1-89",
+              "title": "Необязательный шаг",
+              "order": 88,
+              "asset": "assets/courses/en-a1-89.json"
+            },
+            {
+              "id": "en-a1-90",
+              "title": "Изменение в программе",
+              "order": 89,
+              "asset": "assets/courses/en-a1-90.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-10",
+          "title": "Цель и переписка",
+          "lessons": [
+            {
+              "id": "en-a1-91",
+              "title": "Зачем нужен этот шаг",
+              "order": 90,
+              "asset": "assets/courses/en-a1-91.json"
+            },
+            {
+              "id": "en-a1-92",
+              "title": "Просьба в письме",
+              "order": 91,
+              "asset": "assets/courses/en-a1-92.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-11",
+          "title": "Предположения и прошлое",
+          "lessons": [
+            {
+              "id": "en-a1-93",
+              "title": "Было бы удобнее",
+              "order": 92,
+              "asset": "assets/courses/en-a1-93.json"
+            },
+            {
+              "id": "en-a1-94",
+              "title": "Что случилось раньше",
+              "order": 93,
+              "asset": "assets/courses/en-a1-94.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-12",
+          "title": "Пересказ и сравнения",
+          "lessons": [
+            {
+              "id": "en-a1-95",
+              "title": "Передать решение команды",
+              "order": 94,
+              "asset": "assets/courses/en-a1-95.json"
+            },
+            {
+              "id": "en-a1-96",
+              "title": "Сравнить две услуги",
+              "order": 95,
+              "asset": "assets/courses/en-a1-96.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-13",
+          "title": "Отзывы и объявления",
+          "lessons": [
+            {
+              "id": "en-a1-97",
+              "title": "Короткий отзыв",
+              "order": 96,
+              "asset": "assets/courses/en-a1-97.json"
+            },
+            {
+              "id": "en-a1-98",
+              "title": "Официальное объявление",
+              "order": 97,
+              "asset": "assets/courses/en-a1-98.json"
+            }
+          ]
+        },
+        {
+          "id": "en-v13-14",
+          "title": "Рассказы и обновления",
+          "lessons": [
+            {
+              "id": "en-a1-99",
+              "title": "Выходные пошли иначе",
+              "order": 98,
+              "asset": "assets/courses/en-a1-99.json"
+            },
+            {
+              "id": "en-a1-100",
+              "title": "Новости для всей группы",
+              "order": 99,
+              "asset": "assets/courses/en-a1-100.json"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

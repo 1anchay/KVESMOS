@@ -1,0 +1,302 @@
+{
+  "id": "es-a1-57",
+  "title": "Городской пункт находок",
+  "topic": "Описание и стоимость",
+  "order": 56,
+  "objective": "Описать потерянную вещь и её последнее местоположение.",
+  "guide": "De + материал или признак уточняет описание. La última vez que… задаёт момент последней встречи с предметом.",
+  "vocabulary": [
+    {
+      "id": "es:v13:57:p0",
+      "en": "Perdí una mochila de tela.",
+      "ru": "Я потерял тканевый рюкзак."
+    },
+    {
+      "id": "es:v13:57:p1",
+      "en": "La última vez que la vi estaba en el tren.",
+      "ru": "В последний раз я видел его в поезде."
+    },
+    {
+      "id": "es:v13:57:p2",
+      "en": "Tiene un bolsillo pequeño delante.",
+      "ru": "Спереди у него маленький карман."
+    },
+    {
+      "id": "es:v13:57:p3",
+      "en": "Puedo recogerla esta tarde.",
+      "ru": "Могу забрать его сегодня днём."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Городской пункт находок",
+      "phrase": "Perdí una mochila de tela.",
+      "translation": "Я потерял тканевый рюкзак.",
+      "explanation": "De + материал или признак уточняет описание. La última vez que… задаёт момент последней встречи с предметом."
+    },
+    {
+      "character": "miko",
+      "title": "Городской пункт находок",
+      "phrase": "La última vez que la vi estaba en el tren.",
+      "translation": "В последний раз я видел его в поезде.",
+      "explanation": "La última vez que la vi estaba en el tren. — В последний раз я видел его в поезде."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Городской пункт находок",
+      "phrase": "Tiene un bolsillo pequeño delante.",
+      "translation": "Спереди у него маленький карман.",
+      "explanation": "Tiene un bolsillo pequeño delante. — Спереди у него маленький карман."
+    },
+    {
+      "character": "orbi",
+      "title": "Городской пункт находок",
+      "phrase": "Puedo recogerla esta tarde.",
+      "translation": "Могу забрать его сегодня днём.",
+      "explanation": "Puedo recogerla esta tarde. — Могу забрать его сегодня днём."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Perdí una mochila de tela.",
+      "translation": "Я потерял тканевый рюкзак.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я потерял тканевый рюкзак.",
+      "options": [
+        "Спереди у него маленький карман.",
+        "Я потерял тканевый рюкзак.",
+        "Могу забрать его сегодня днём."
+      ],
+      "explanation": "De + материал или признак уточняет описание. La última vez que… задаёт момент последней встречи с предметом."
+    },
+    {
+      "id": "apply",
+      "phrase": "La última vez que la vi estaba en el tren.",
+      "translation": "В последний раз я видел его в поезде.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "La última vez que la vi estaba en el tren.",
+      "tokens": [
+        "La",
+        "última",
+        "vez",
+        "que",
+        "la",
+        "vi",
+        "estaba",
+        "en",
+        "el",
+        "tren."
+      ],
+      "character": "miko",
+      "explanation": "La última vez que la vi estaba en el tren. — В последний раз я видел его в поезде."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-57-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можешь передать ей и записку?",
+      "answers": [
+        "¿Puedes darle también la nota?"
+      ],
+      "explanation": "¿Puedes darle también la nota? — Можешь передать ей и записку?",
+      "wordIds": [
+        "es:v13:56:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Le doy el libro a Marta.",
+        "Se lo doy después de clase.",
+        "¿Puedes darle también la nota?",
+        "Se la llevo ahora mismo."
+      ]
+    },
+    {
+      "id": "es-a1-57-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я потерял тканевый рюкзак.»?",
+      "answers": [
+        "Perdí una mochila de tela."
+      ],
+      "explanation": "Perdí una mochila de tela. — Я потерял тканевый рюкзак.",
+      "wordIds": [
+        "es:v13:57:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "La última vez que la vi estaba en el tren.",
+        "Puedo recogerla esta tarde.",
+        "Perdí una mochila de tela."
+      ],
+      "hint": "Perdí una mochila de tela. — Я потерял тканевый рюкзак."
+    },
+    {
+      "id": "es-a1-57-e03",
+      "type": "order",
+      "prompt": "Собери реплику: В последний раз я видел его в поезде.",
+      "answers": [
+        "La última vez que la vi estaba en el tren."
+      ],
+      "explanation": "De + материал или признак уточняет описание. La última vez que… задаёт момент последней встречи с предметом.",
+      "wordIds": [
+        "es:v13:57:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "La",
+        "última",
+        "vez",
+        "que",
+        "la",
+        "vi",
+        "estaba",
+        "en",
+        "el",
+        "tren."
+      ],
+      "hint": "La última vez que la vi estaba en el tren. — В последний раз я видел его в поезде."
+    },
+    {
+      "id": "es-a1-57-e04",
+      "type": "dialogue",
+      "prompt": "Как опознать рюкзак?",
+      "answers": [
+        "По маленькому переднему карману."
+      ],
+      "explanation": "В диалоге: ¿Cómo es la mochila? / Es de tela y tiene un bolsillo pequeño delante. Поэтому: По маленькому переднему карману.",
+      "wordIds": [
+        "es:v13:57:p0",
+        "es:v13:57:p1",
+        "es:v13:57:p2",
+        "es:v13:57:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: ¿Cómo es la mochila?\nМико: Es de tela y tiene un bolsillo pequeño delante.",
+      "options": [
+        "По большому карману сзади.",
+        "По кожаному ремню.",
+        "По маленькому переднему карману."
+      ]
+    },
+    {
+      "id": "es-a1-57-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Спереди у него маленький карман."
+      ],
+      "explanation": "Tiene un bolsillo pequeño delante. — Спереди у него маленький карман.",
+      "wordIds": [
+        "es:v13:57:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Tiene un bolsillo pequeño delante.",
+      "options": [
+        "Я потерял тканевый рюкзак.",
+        "Спереди у него маленький карман.",
+        "В последний раз я видел его в поезде."
+      ],
+      "hint": "Tiene un bolsillo pequeño delante. — Спереди у него маленький карман."
+    },
+    {
+      "id": "es-a1-57-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:57:p0",
+        "es:v13:57:p1",
+        "es:v13:57:p2",
+        "es:v13:57:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:57:p0",
+          "en": "Perdí una mochila de tela.",
+          "ru": "Я потерял тканевый рюкзак."
+        },
+        {
+          "id": "es:v13:57:p1",
+          "en": "La última vez que la vi estaba en el tren.",
+          "ru": "В последний раз я видел его в поезде."
+        },
+        {
+          "id": "es:v13:57:p2",
+          "en": "Tiene un bolsillo pequeño delante.",
+          "ru": "Спереди у него маленький карман."
+        },
+        {
+          "id": "es:v13:57:p3",
+          "en": "Puedo recogerla esta tarde.",
+          "ru": "Могу забрать его сегодня днём."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-57-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: La última vez que la ver estaba en el tren.",
+      "answers": [
+        "La última vez que la vi estaba en el tren."
+      ],
+      "explanation": "Для «я видел» в законченном прошлом нужна форма vi.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "La última vez que la ver estaba en el tren.",
+        "La última vez que la vi estaba en el tren."
+      ],
+      "hint": "De + материал или признак уточняет описание. La última vez que… задаёт момент последней встречи с предметом."
+    },
+    {
+      "id": "es-a1-57-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Могу забрать его сегодня днём.». Можно написать вместо микрофона.",
+      "answers": [
+        "Puedo recogerla esta tarde."
+      ],
+      "explanation": "Puedo recogerla esta tarde. — Могу забрать его сегодня днём.",
+      "wordIds": [
+        "es:v13:57:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Puedo recogerla esta tarde.",
+      "recall": {
+        "phrase": "Puedo recogerla esta tarde.",
+        "meaning": "Могу забрать его сегодня днём."
+      }
+    },
+    {
+      "id": "es-a1-57-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я потерял тканевый рюкзак.",
+      "answers": [
+        "Perdí una mochila de tela."
+      ],
+      "explanation": "De + материал или признак уточняет описание. La última vez que… задаёт момент последней встречи с предметом.",
+      "wordIds": [
+        "es:v13:57:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Perdí una mochila de tela.",
+        "meaning": "Я потерял тканевый рюкзак."
+      }
+    }
+  ]
+}

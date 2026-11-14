@@ -1,0 +1,292 @@
+{
+  "id": "de-a1-45",
+  "title": "Увидимся перед кино",
+  "topic": "Встречи и подготовка",
+  "order": 44,
+  "objective": "Договориться о встрече с sich treffen.",
+  "guide": "При wir употребляется uns, при ihr — euch. Sich treffen означает «встречаться».",
+  "vocabulary": [
+    {
+      "id": "de:v13:45:p0",
+      "en": "Wir treffen uns vor dem Kino.",
+      "ru": "Мы встретимся перед кинотеатром."
+    },
+    {
+      "id": "de:v13:45:p1",
+      "en": "Trefft ihr euch um sieben?",
+      "ru": "Вы встречаетесь в семь?"
+    },
+    {
+      "id": "de:v13:45:p2",
+      "en": "Ich warte am Eingang.",
+      "ru": "Я подожду у входа."
+    },
+    {
+      "id": "de:v13:45:p3",
+      "en": "Ruf mich an, wenn du da bist.",
+      "ru": "Позвони мне, когда будешь на месте."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Увидимся перед кино",
+      "phrase": "Wir treffen uns vor dem Kino.",
+      "translation": "Мы встретимся перед кинотеатром.",
+      "explanation": "При wir употребляется uns, при ihr — euch. Sich treffen означает «встречаться»."
+    },
+    {
+      "character": "miko",
+      "title": "Увидимся перед кино",
+      "phrase": "Trefft ihr euch um sieben?",
+      "translation": "Вы встречаетесь в семь?",
+      "explanation": "Trefft ihr euch um sieben? — Вы встречаетесь в семь?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Увидимся перед кино",
+      "phrase": "Ich warte am Eingang.",
+      "translation": "Я подожду у входа.",
+      "explanation": "Ich warte am Eingang. — Я подожду у входа."
+    },
+    {
+      "character": "orbi",
+      "title": "Увидимся перед кино",
+      "phrase": "Ruf mich an, wenn du da bist.",
+      "translation": "Позвони мне, когда будешь на месте.",
+      "explanation": "Ruf mich an, wenn du da bist. — Позвони мне, когда будешь на месте."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Wir treffen uns vor dem Kino.",
+      "translation": "Мы встретимся перед кинотеатром.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мы встретимся перед кинотеатром.",
+      "options": [
+        "Я подожду у входа.",
+        "Мы встретимся перед кинотеатром.",
+        "Позвони мне, когда будешь на месте."
+      ],
+      "explanation": "При wir употребляется uns, при ihr — euch. Sich treffen означает «встречаться»."
+    },
+    {
+      "id": "apply",
+      "phrase": "Trefft ihr euch um sieben?",
+      "translation": "Вы встречаетесь в семь?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Trefft ihr euch um sieben?",
+      "tokens": [
+        "Trefft",
+        "ihr",
+        "euch",
+        "um",
+        "sieben?"
+      ],
+      "character": "miko",
+      "explanation": "Trefft ihr euch um sieben? — Вы встречаетесь в семь?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-45-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Над диваном ещё есть место.",
+      "answers": [
+        "Über dem Sofa ist noch Platz."
+      ],
+      "explanation": "Über dem Sofa ist noch Platz. — Над диваном ещё есть место.",
+      "wordIds": [
+        "de:v13:44:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Das Bild hängt an der Wand.",
+        "Häng das Bild an die Wand.",
+        "Über dem Sofa ist noch Platz.",
+        "Wir hängen es etwas höher."
+      ]
+    },
+    {
+      "id": "de-a1-45-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Мы встретимся перед кинотеатром.»?",
+      "answers": [
+        "Wir treffen uns vor dem Kino."
+      ],
+      "explanation": "Wir treffen uns vor dem Kino. — Мы встретимся перед кинотеатром.",
+      "wordIds": [
+        "de:v13:45:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Trefft ihr euch um sieben?",
+        "Ruf mich an, wenn du da bist.",
+        "Wir treffen uns vor dem Kino."
+      ],
+      "hint": "Wir treffen uns vor dem Kino. — Мы встретимся перед кинотеатром."
+    },
+    {
+      "id": "de-a1-45-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Вы встречаетесь в семь?",
+      "answers": [
+        "Trefft ihr euch um sieben?"
+      ],
+      "explanation": "При wir употребляется uns, при ihr — euch. Sich treffen означает «встречаться».",
+      "wordIds": [
+        "de:v13:45:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Trefft",
+        "ihr",
+        "euch",
+        "um",
+        "sieben?"
+      ],
+      "hint": "Trefft ihr euch um sieben? — Вы встречаетесь в семь?"
+    },
+    {
+      "id": "de-a1-45-e04",
+      "type": "dialogue",
+      "prompt": "Где встреча?",
+      "answers": [
+        "Перед кинотеатром."
+      ],
+      "explanation": "В диалоге: Wo treffen wir uns? / Vor dem Kino, nicht am Bahnhof. Поэтому: Перед кинотеатром.",
+      "wordIds": [
+        "de:v13:45:p0",
+        "de:v13:45:p1",
+        "de:v13:45:p2",
+        "de:v13:45:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Wo treffen wir uns?\nМико: Vor dem Kino, nicht am Bahnhof.",
+      "options": [
+        "У вокзала.",
+        "Внутри кинотеатра.",
+        "Перед кинотеатром."
+      ]
+    },
+    {
+      "id": "de-a1-45-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я подожду у входа."
+      ],
+      "explanation": "Ich warte am Eingang. — Я подожду у входа.",
+      "wordIds": [
+        "de:v13:45:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ich warte am Eingang.",
+      "options": [
+        "Мы встретимся перед кинотеатром.",
+        "Я подожду у входа.",
+        "Вы встречаетесь в семь?"
+      ],
+      "hint": "Ich warte am Eingang. — Я подожду у входа."
+    },
+    {
+      "id": "de-a1-45-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:45:p0",
+        "de:v13:45:p1",
+        "de:v13:45:p2",
+        "de:v13:45:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:45:p0",
+          "en": "Wir treffen uns vor dem Kino.",
+          "ru": "Мы встретимся перед кинотеатром."
+        },
+        {
+          "id": "de:v13:45:p1",
+          "en": "Trefft ihr euch um sieben?",
+          "ru": "Вы встречаетесь в семь?"
+        },
+        {
+          "id": "de:v13:45:p2",
+          "en": "Ich warte am Eingang.",
+          "ru": "Я подожду у входа."
+        },
+        {
+          "id": "de:v13:45:p3",
+          "en": "Ruf mich an, wenn du da bist.",
+          "ru": "Позвони мне, когда будешь на месте."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-45-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wir treffen euch vor dem Kino.",
+      "answers": [
+        "Wir treffen uns vor dem Kino."
+      ],
+      "explanation": "Для «мы встречаемся друг с другом» нужно uns.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Wir treffen euch vor dem Kino.",
+        "Wir treffen uns vor dem Kino."
+      ],
+      "hint": "При wir употребляется uns, при ihr — euch. Sich treffen означает «встречаться»."
+    },
+    {
+      "id": "de-a1-45-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Позвони мне, когда будешь на месте.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ruf mich an, wenn du da bist."
+      ],
+      "explanation": "Ruf mich an, wenn du da bist. — Позвони мне, когда будешь на месте.",
+      "wordIds": [
+        "de:v13:45:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ruf mich an, wenn du da bist.",
+      "recall": {
+        "phrase": "Ruf mich an, wenn du da bist.",
+        "meaning": "Позвони мне, когда будешь на месте."
+      }
+    },
+    {
+      "id": "de-a1-45-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мы встретимся перед кинотеатром.",
+      "answers": [
+        "Wir treffen uns vor dem Kino."
+      ],
+      "explanation": "При wir употребляется uns, при ihr — euch. Sich treffen означает «встречаться».",
+      "wordIds": [
+        "de:v13:45:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Wir treffen uns vor dem Kino.",
+        "meaning": "Мы встретимся перед кинотеатром."
+      }
+    }
+  ]
+}

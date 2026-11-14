@@ -1,0 +1,257 @@
+{
+  "id": "de-a1-48",
+  "title": "Когда я жил в Кёльне",
+  "topic": "Действия во времени",
+  "order": 47,
+  "objective": "Различить als для одного периода и wenn для повторов.",
+  "guide": "Als вводит один период в прошлом. Wenn подходит для повторяющихся случаев.",
+  "vocabulary": [
+    {
+      "id": "de:v13:48:p0",
+      "en": "Als ich in Köln wohnte, fuhr ich oft Rad.",
+      "ru": "Когда я жил в Кёльне, я часто ездил на велосипеде."
+    },
+    {
+      "id": "de:v13:48:p1",
+      "en": "Wenn es regnete, nahm ich den Bus.",
+      "ru": "Когда шёл дождь, я ездил на автобусе."
+    },
+    {
+      "id": "de:v13:48:p2",
+      "en": "Heute gehe ich meistens zu Fuß.",
+      "ru": "Сейчас я обычно хожу пешком."
+    },
+    {
+      "id": "de:v13:48:p3",
+      "en": "Damals war mein Weg kürzer.",
+      "ru": "Тогда моя дорога была короче."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Когда я жил в Кёльне",
+      "phrase": "Als ich in Köln wohnte, fuhr ich oft Rad.",
+      "translation": "Когда я жил в Кёльне, я часто ездил на велосипеде.",
+      "explanation": "Als вводит один период в прошлом. Wenn подходит для повторяющихся случаев."
+    },
+    {
+      "character": "miko",
+      "title": "Когда я жил в Кёльне",
+      "phrase": "Wenn es regnete, nahm ich den Bus.",
+      "translation": "Когда шёл дождь, я ездил на автобусе.",
+      "explanation": "Wenn es regnete, nahm ich den Bus. — Когда шёл дождь, я ездил на автобусе."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Когда я жил в Кёльне",
+      "phrase": "Heute gehe ich meistens zu Fuß.",
+      "translation": "Сейчас я обычно хожу пешком.",
+      "explanation": "Heute gehe ich meistens zu Fuß. — Сейчас я обычно хожу пешком."
+    },
+    {
+      "character": "orbi",
+      "title": "Когда я жил в Кёльне",
+      "phrase": "Damals war mein Weg kürzer.",
+      "translation": "Тогда моя дорога была короче.",
+      "explanation": "Damals war mein Weg kürzer. — Тогда моя дорога была короче."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Als ich in Köln wohnte, fuhr ich oft Rad.",
+      "translation": "Когда я жил в Кёльне, я часто ездил на велосипеде.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Когда я жил в Кёльне, я часто ездил на велосипеде.",
+      "options": [
+        "Сейчас я обычно хожу пешком.",
+        "Когда я жил в Кёльне, я часто ездил на велосипеде.",
+        "Тогда моя дорога была короче."
+      ],
+      "explanation": "Als вводит один период в прошлом. Wenn подходит для повторяющихся случаев."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wenn es regnete, nahm ich den Bus.",
+      "translation": "Когда шёл дождь, я ездил на автобусе.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wenn es regnete, nahm ich den Bus.",
+      "tokens": [
+        "Wenn",
+        "es",
+        "regnete,",
+        "nahm",
+        "ich",
+        "den",
+        "Bus."
+      ],
+      "character": "miko",
+      "explanation": "Wenn es regnete, nahm ich den Bus. — Когда шёл дождь, я ездил на автобусе."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-48-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Прежде чем уйти, мы заплатим.",
+      "answers": [
+        "Bevor wir gehen, bezahlen wir."
+      ],
+      "explanation": "Bevor wir gehen, bezahlen wir. — Прежде чем уйти, мы заплатим.",
+      "wordIds": [
+        "de:v13:47:p1"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Ich rufe dich an, bevor ich nach Hause gehe.",
+        "Bevor wir gehen, bezahlen wir.",
+        "Der Laden schließt um acht.",
+        "Wir haben noch eine halbe Stunde."
+      ]
+    },
+    {
+      "id": "de-a1-48-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Когда я жил в Кёльне, я часто ездил на велосипеде.»?",
+      "answers": [
+        "Als ich in Köln wohnte, fuhr ich oft Rad."
+      ],
+      "explanation": "Als ich in Köln wohnte, fuhr ich oft Rad. — Когда я жил в Кёльне, я часто ездил на велосипеде.",
+      "wordIds": [
+        "de:v13:48:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wenn es regnete, nahm ich den Bus.",
+        "Damals war mein Weg kürzer.",
+        "Als ich in Köln wohnte, fuhr ich oft Rad."
+      ],
+      "hint": "Als ich in Köln wohnte, fuhr ich oft Rad. — Когда я жил в Кёльне, я часто ездил на велосипеде."
+    },
+    {
+      "id": "de-a1-48-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Когда шёл дождь, я ездил на автобусе.",
+      "answers": [
+        "Wenn es regnete, nahm ich den Bus."
+      ],
+      "explanation": "Als вводит один период в прошлом. Wenn подходит для повторяющихся случаев.",
+      "wordIds": [
+        "de:v13:48:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wenn",
+        "es",
+        "regnete,",
+        "nahm",
+        "ich",
+        "den",
+        "Bus."
+      ],
+      "hint": "Wenn es regnete, nahm ich den Bus. — Когда шёл дождь, я ездил на автобусе."
+    },
+    {
+      "id": "de-a1-48-e04",
+      "type": "dialogue",
+      "prompt": "На чём ездили в дождь?",
+      "answers": [
+        "На автобусе."
+      ],
+      "explanation": "В диалоге: Wie bist du früher zur Arbeit gekommen? / Wenn es regnete, nahm ich den Bus. Sonst fuhr ich Rad. Поэтому: На автобусе.",
+      "wordIds": [
+        "de:v13:48:p0",
+        "de:v13:48:p1",
+        "de:v13:48:p2",
+        "de:v13:48:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Wie bist du früher zur Arbeit gekommen?\nМико: Wenn es regnete, nahm ich den Bus. Sonst fuhr ich Rad.",
+      "options": [
+        "На велосипеде.",
+        "На поезде.",
+        "На автобусе."
+      ]
+    },
+    {
+      "id": "de-a1-48-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Сейчас я обычно хожу пешком."
+      ],
+      "explanation": "Heute gehe ich meistens zu Fuß. — Сейчас я обычно хожу пешком.",
+      "wordIds": [
+        "de:v13:48:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Heute gehe ich meistens zu Fuß.",
+      "options": [
+        "Когда я жил в Кёльне, я часто ездил на велосипеде.",
+        "Сейчас я обычно хожу пешком.",
+        "Когда шёл дождь, я ездил на автобусе."
+      ],
+      "hint": "Heute gehe ich meistens zu Fuß. — Сейчас я обычно хожу пешком."
+    },
+    {
+      "id": "de-a1-48-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Als wohnte ich in Köln, fuhr ich oft Rad.",
+      "answers": [
+        "Als ich in Köln wohnte, fuhr ich oft Rad."
+      ],
+      "explanation": "В части с als форма wohnte стоит в конце.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Als wohnte ich in Köln, fuhr ich oft Rad.",
+        "Als ich in Köln wohnte, fuhr ich oft Rad."
+      ],
+      "hint": "Als вводит один период в прошлом. Wenn подходит для повторяющихся случаев."
+    },
+    {
+      "id": "de-a1-48-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Тогда моя дорога была короче.». Можно написать вместо микрофона.",
+      "answers": [
+        "Damals war mein Weg kürzer."
+      ],
+      "explanation": "Damals war mein Weg kürzer. — Тогда моя дорога была короче.",
+      "wordIds": [
+        "de:v13:48:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Damals war mein Weg kürzer.",
+      "recall": {
+        "phrase": "Damals war mein Weg kürzer.",
+        "meaning": "Тогда моя дорога была короче."
+      }
+    },
+    {
+      "id": "de-a1-48-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Когда я жил в Кёльне, я часто ездил на велосипеде.",
+      "answers": [
+        "Als ich in Köln wohnte, fuhr ich oft Rad."
+      ],
+      "explanation": "Als вводит один период в прошлом. Wenn подходит для повторяющихся случаев.",
+      "wordIds": [
+        "de:v13:48:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Als ich in Köln wohnte, fuhr ich oft Rad.",
+        "meaning": "Когда я жил в Кёльне, я часто ездил на велосипеде."
+      }
+    }
+  ]
+}

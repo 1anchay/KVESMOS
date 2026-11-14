@@ -1,0 +1,255 @@
+{
+  "id": "es-a1-56",
+  "title": "Попросить передать предмет",
+  "topic": "Просьбы и передача",
+  "order": 55,
+  "objective": "Соединить два местоимения в просьбе.",
+  "guide": "Перед lo, la, los, las местоимение le/les заменяется на se: le doy el libro → se lo doy.",
+  "vocabulary": [
+    {
+      "id": "es:v13:56:p0",
+      "en": "Le doy el libro a Marta.",
+      "ru": "Я даю книгу Марте."
+    },
+    {
+      "id": "es:v13:56:p1",
+      "en": "Se lo doy después de clase.",
+      "ru": "Я дам ей её после урока."
+    },
+    {
+      "id": "es:v13:56:p2",
+      "en": "¿Puedes darle también la nota?",
+      "ru": "Можешь передать ей и записку?"
+    },
+    {
+      "id": "es:v13:56:p3",
+      "en": "Se la llevo ahora mismo.",
+      "ru": "Я отнесу ей её сейчас же."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Попросить передать предмет",
+      "phrase": "Le doy el libro a Marta.",
+      "translation": "Я даю книгу Марте.",
+      "explanation": "Перед lo, la, los, las местоимение le/les заменяется на se: le doy el libro → se lo doy."
+    },
+    {
+      "character": "miko",
+      "title": "Попросить передать предмет",
+      "phrase": "Se lo doy después de clase.",
+      "translation": "Я дам ей её после урока.",
+      "explanation": "Se lo doy después de clase. — Я дам ей её после урока."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Попросить передать предмет",
+      "phrase": "¿Puedes darle también la nota?",
+      "translation": "Можешь передать ей и записку?",
+      "explanation": "¿Puedes darle también la nota? — Можешь передать ей и записку?"
+    },
+    {
+      "character": "orbi",
+      "title": "Попросить передать предмет",
+      "phrase": "Se la llevo ahora mismo.",
+      "translation": "Я отнесу ей её сейчас же.",
+      "explanation": "Se la llevo ahora mismo. — Я отнесу ей её сейчас же."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Le doy el libro a Marta.",
+      "translation": "Я даю книгу Марте.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я даю книгу Марте.",
+      "options": [
+        "Можешь передать ей и записку?",
+        "Я даю книгу Марте.",
+        "Я отнесу ей её сейчас же."
+      ],
+      "explanation": "Перед lo, la, los, las местоимение le/les заменяется на se: le doy el libro → se lo doy."
+    },
+    {
+      "id": "apply",
+      "phrase": "Se lo doy después de clase.",
+      "translation": "Я дам ей её после урока.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Se lo doy después de clase.",
+      "tokens": [
+        "Se",
+        "lo",
+        "doy",
+        "después",
+        "de",
+        "clase."
+      ],
+      "character": "miko",
+      "explanation": "Se lo doy después de clase. — Я дам ей её после урока."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-56-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Можешь передать ей и записку?"
+      ],
+      "explanation": "¿Puedes darle también la nota? — Можешь передать ей и записку?",
+      "wordIds": [
+        "es:v13:56:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "¿Puedes darle también la nota?",
+      "options": [
+        "Я даю книгу Марте.",
+        "Можешь передать ей и записку?",
+        "Я дам ей её после урока."
+      ],
+      "hint": "¿Puedes darle también la nota? — Можешь передать ей и записку?"
+    },
+    {
+      "id": "es-a1-56-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я дам ей её после урока.",
+      "answers": [
+        "Se lo doy después de clase."
+      ],
+      "explanation": "Перед lo, la, los, las местоимение le/les заменяется на se: le doy el libro → se lo doy.",
+      "wordIds": [
+        "es:v13:56:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Se",
+        "lo",
+        "doy",
+        "después",
+        "de",
+        "clase."
+      ],
+      "hint": "Se lo doy después de clase. — Я дам ей её после урока."
+    },
+    {
+      "id": "es-a1-56-e03",
+      "type": "dialogue",
+      "prompt": "Что передадут после урока?",
+      "answers": [
+        "Книгу."
+      ],
+      "explanation": "В диалоге: ¿Cuándo le das el libro a Marta? / Se lo doy después de clase. La nota se la llevo ahora. Поэтому: Книгу.",
+      "wordIds": [
+        "es:v13:56:p0",
+        "es:v13:56:p1",
+        "es:v13:56:p2",
+        "es:v13:56:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Cuándo le das el libro a Marta?\nМико: Se lo doy después de clase. La nota se la llevo ahora.",
+      "options": [
+        "Записку.",
+        "Ключ.",
+        "Книгу."
+      ]
+    },
+    {
+      "id": "es-a1-56-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я даю книгу Марте.»?",
+      "answers": [
+        "Le doy el libro a Marta."
+      ],
+      "explanation": "Le doy el libro a Marta. — Я даю книгу Марте.",
+      "wordIds": [
+        "es:v13:56:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Se lo doy después de clase.",
+        "Se la llevo ahora mismo.",
+        "Le doy el libro a Marta."
+      ],
+      "hint": "Le doy el libro a Marta. — Я даю книгу Марте."
+    },
+    {
+      "id": "es-a1-56-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Le lo doy después de clase.",
+      "answers": [
+        "Se lo doy después de clase."
+      ],
+      "explanation": "В сочетании с lo форма le заменяется на se.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Le lo doy después de clase.",
+        "Se lo doy después de clase."
+      ],
+      "hint": "Перед lo, la, los, las местоимение le/les заменяется на se: le doy el libro → se lo doy."
+    },
+    {
+      "id": "es-a1-56-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я отнесу ей её сейчас же.». Можно написать вместо микрофона.",
+      "answers": [
+        "Se la llevo ahora mismo."
+      ],
+      "explanation": "Se la llevo ahora mismo. — Я отнесу ей её сейчас же.",
+      "wordIds": [
+        "es:v13:56:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Se la llevo ahora mismo.",
+      "recall": {
+        "phrase": "Se la llevo ahora mismo.",
+        "meaning": "Я отнесу ей её сейчас же."
+      }
+    },
+    {
+      "id": "es-a1-56-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я даю книгу Марте.",
+      "answers": [
+        "Le doy el libro a Marta."
+      ],
+      "explanation": "Перед lo, la, los, las местоимение le/les заменяется на se: le doy el libro → se lo doy.",
+      "wordIds": [
+        "es:v13:56:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Le doy el libro a Marta.",
+        "meaning": "Я даю книгу Марте."
+      }
+    },
+    {
+      "id": "es-a1-56-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Не оставляй велосипед на лестнице.",
+      "answers": [
+        "No dejes la bici en la escalera."
+      ],
+      "explanation": "No dejes la bici en la escalera. — Не оставляй велосипед на лестнице.",
+      "wordIds": [
+        "es:v13:55:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Deja los zapatos junto a la puerta.",
+        "No dejes la bici en la escalera.",
+        "Cierra la puerta al salir.",
+        "Puedes guardar la bici en el patio."
+      ]
+    }
+  ]
+}

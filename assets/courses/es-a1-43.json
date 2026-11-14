@@ -1,0 +1,294 @@
+{
+  "id": "es-a1-43",
+  "title": "Ключ и записка",
+  "topic": "Предметы и получатели",
+  "order": 42,
+  "objective": "Заменить уже названный предмет на lo или la.",
+  "guide": "Lo и la перед спрягаемым глаголом заменяют прямое дополнение: la llave → la dejo.",
+  "vocabulary": [
+    {
+      "id": "es:v13:43:p0",
+      "en": "Dejo la llave en la mesa.",
+      "ru": "Я оставляю ключ на столе."
+    },
+    {
+      "id": "es:v13:43:p1",
+      "en": "La dejo junto a la nota.",
+      "ru": "Я оставляю его рядом с запиской."
+    },
+    {
+      "id": "es:v13:43:p2",
+      "en": "El sobre lo llevo yo.",
+      "ru": "Конверт отнесу я."
+    },
+    {
+      "id": "es:v13:43:p3",
+      "en": "No lo abras todavía.",
+      "ru": "Пока не открывай его."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Ключ и записка",
+      "phrase": "Dejo la llave en la mesa.",
+      "translation": "Я оставляю ключ на столе.",
+      "explanation": "Lo и la перед спрягаемым глаголом заменяют прямое дополнение: la llave → la dejo."
+    },
+    {
+      "character": "miko",
+      "title": "Ключ и записка",
+      "phrase": "La dejo junto a la nota.",
+      "translation": "Я оставляю его рядом с запиской.",
+      "explanation": "La dejo junto a la nota. — Я оставляю его рядом с запиской."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Ключ и записка",
+      "phrase": "El sobre lo llevo yo.",
+      "translation": "Конверт отнесу я.",
+      "explanation": "El sobre lo llevo yo. — Конверт отнесу я."
+    },
+    {
+      "character": "orbi",
+      "title": "Ключ и записка",
+      "phrase": "No lo abras todavía.",
+      "translation": "Пока не открывай его.",
+      "explanation": "No lo abras todavía. — Пока не открывай его."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Dejo la llave en la mesa.",
+      "translation": "Я оставляю ключ на столе.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я оставляю ключ на столе.",
+      "options": [
+        "Конверт отнесу я.",
+        "Я оставляю ключ на столе.",
+        "Пока не открывай его."
+      ],
+      "explanation": "Lo и la перед спрягаемым глаголом заменяют прямое дополнение: la llave → la dejo."
+    },
+    {
+      "id": "apply",
+      "phrase": "La dejo junto a la nota.",
+      "translation": "Я оставляю его рядом с запиской.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "La dejo junto a la nota.",
+      "tokens": [
+        "La",
+        "dejo",
+        "junto",
+        "a",
+        "la",
+        "nota."
+      ],
+      "character": "miko",
+      "explanation": "La dejo junto a la nota. — Я оставляю его рядом с запиской."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-43-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я оставляю ключ на столе.»?",
+      "answers": [
+        "Dejo la llave en la mesa."
+      ],
+      "explanation": "Dejo la llave en la mesa. — Я оставляю ключ на столе.",
+      "wordIds": [
+        "es:v13:43:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "La dejo junto a la nota.",
+        "No lo abras todavía.",
+        "Dejo la llave en la mesa."
+      ],
+      "hint": "Dejo la llave en la mesa. — Я оставляю ключ на столе."
+    },
+    {
+      "id": "es-a1-43-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я оставляю его рядом с запиской.",
+      "answers": [
+        "La dejo junto a la nota."
+      ],
+      "explanation": "Lo и la перед спрягаемым глаголом заменяют прямое дополнение: la llave → la dejo.",
+      "wordIds": [
+        "es:v13:43:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "La",
+        "dejo",
+        "junto",
+        "a",
+        "la",
+        "nota."
+      ],
+      "hint": "La dejo junto a la nota. — Я оставляю его рядом с запиской."
+    },
+    {
+      "id": "es-a1-43-e03",
+      "type": "dialogue",
+      "prompt": "Где искать ключ?",
+      "answers": [
+        "Рядом с запиской на столе."
+      ],
+      "explanation": "В диалоге: ¿Dónde dejas la llave? / La dejo junto a la nota, en la mesa. Поэтому: Рядом с запиской на столе.",
+      "wordIds": [
+        "es:v13:43:p0",
+        "es:v13:43:p1",
+        "es:v13:43:p2",
+        "es:v13:43:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Dónde dejas la llave?\nМико: La dejo junto a la nota, en la mesa.",
+      "options": [
+        "В конверте.",
+        "Возле двери.",
+        "Рядом с запиской на столе."
+      ]
+    },
+    {
+      "id": "es-a1-43-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Конверт отнесу я."
+      ],
+      "explanation": "El sobre lo llevo yo. — Конверт отнесу я.",
+      "wordIds": [
+        "es:v13:43:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "El sobre lo llevo yo.",
+      "options": [
+        "Я оставляю ключ на столе.",
+        "Конверт отнесу я.",
+        "Я оставляю его рядом с запиской."
+      ],
+      "hint": "El sobre lo llevo yo. — Конверт отнесу я."
+    },
+    {
+      "id": "es-a1-43-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:43:p0",
+        "es:v13:43:p1",
+        "es:v13:43:p2",
+        "es:v13:43:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:43:p0",
+          "en": "Dejo la llave en la mesa.",
+          "ru": "Я оставляю ключ на столе."
+        },
+        {
+          "id": "es:v13:43:p1",
+          "en": "La dejo junto a la nota.",
+          "ru": "Я оставляю его рядом с запиской."
+        },
+        {
+          "id": "es:v13:43:p2",
+          "en": "El sobre lo llevo yo.",
+          "ru": "Конверт отнесу я."
+        },
+        {
+          "id": "es:v13:43:p3",
+          "en": "No lo abras todavía.",
+          "ru": "Пока не открывай его."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-43-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Dejo la junto a la nota.",
+      "answers": [
+        "La dejo junto a la nota."
+      ],
+      "explanation": "La заменяет llave и ставится перед dejo.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Dejo la junto a la nota.",
+        "La dejo junto a la nota."
+      ],
+      "hint": "Lo и la перед спрягаемым глаголом заменяют прямое дополнение: la llave → la dejo."
+    },
+    {
+      "id": "es-a1-43-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Пока не открывай его.». Можно написать вместо микрофона.",
+      "answers": [
+        "No lo abras todavía."
+      ],
+      "explanation": "No lo abras todavía. — Пока не открывай его.",
+      "wordIds": [
+        "es:v13:43:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "No lo abras todavía.",
+      "recall": {
+        "phrase": "No lo abras todavía.",
+        "meaning": "Пока не открывай его."
+      }
+    },
+    {
+      "id": "es-a1-43-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я оставляю ключ на столе.",
+      "answers": [
+        "Dejo la llave en la mesa."
+      ],
+      "explanation": "Lo и la перед спрягаемым глаголом заменяют прямое дополнение: la llave → la dejo.",
+      "wordIds": [
+        "es:v13:43:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Dejo la llave en la mesa.",
+        "meaning": "Я оставляю ключ на столе."
+      }
+    },
+    {
+      "id": "es-a1-43-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я хотел бы подтвердить свою бронь.",
+      "answers": [
+        "Quisiera confirmar mi reserva."
+      ],
+      "explanation": "Quisiera confirmar mi reserva. — Я хотел бы подтвердить свою бронь.",
+      "wordIds": [
+        "es:v015:42:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Quisiera confirmar mi reserva.",
+        "Llegamos el viernes por la tarde.",
+        "Reservé una habitación para dos personas.",
+        "¿Podría confirmar el precio?"
+      ]
+    }
+  ]
+}

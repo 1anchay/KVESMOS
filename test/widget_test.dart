@@ -33,12 +33,15 @@ void main() {
     );
     await tester.pumpAndSettle();
     expect(find.text('Первое открытие — сегодня.'), findsOneWidget);
-    for (var i = 0; i < 3; i++) {
-      final next = find.widgetWithText(FilledButton, 'Продолжить');
+    for (final next in [
+      find.widgetWithText(FilledButton, 'Продолжить'),
+      find.byKey(const ValueKey('course-ru-en')),
+      find.widgetWithText(FilledButton, 'Начать с нуля'),
+    ]) {
       await tester.scrollUntilVisible(next, 250);
       await tester.pumpAndSettle();
       await tester.tap(next);
-      await tester.pumpAndSettle();
+      await flushDb(tester);
     }
     final start = find.widgetWithText(FilledButton, 'Продолжить');
     await tester.scrollUntilVisible(start, 250);
@@ -52,9 +55,6 @@ void main() {
       await flushDb(tester);
     }
     expect(app.companion.preferences.enabled, isFalse);
-    expect(find.textContaining('АНГЛИЙСКИЙ ·'), findsOneWidget);
-    await tester.tap(find.byKey(const Key('today-start')));
-    await flushDb(tester);
     await advanceTeaching(tester);
     expect(
       find.text(

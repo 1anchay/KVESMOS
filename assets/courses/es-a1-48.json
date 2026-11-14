@@ -1,0 +1,253 @@
+{
+  "id": "es-a1-48",
+  "title": "Опаздываю на встречу",
+  "topic": "Впечатления и задержки",
+  "order": 47,
+  "objective": "Написать о причине задержки и новом времени.",
+  "guide": "Dentro de diez minutos значит «через десять минут», hace diez minutos — «десять минут назад».",
+  "vocabulary": [
+    {
+      "id": "es:v13:48:p0",
+      "en": "He perdido el autobús.",
+      "ru": "Я опоздал на автобус."
+    },
+    {
+      "id": "es:v13:48:p1",
+      "en": "Llego dentro de diez minutos.",
+      "ru": "Буду через десять минут."
+    },
+    {
+      "id": "es:v13:48:p2",
+      "en": "¿Puedes esperarme en la entrada?",
+      "ru": "Можешь подождать меня у входа?"
+    },
+    {
+      "id": "es:v13:48:p3",
+      "en": "Si llegas antes, entra sin mí.",
+      "ru": "Если придёшь раньше, заходи без меня."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Опаздываю на встречу",
+      "phrase": "He perdido el autobús.",
+      "translation": "Я опоздал на автобус.",
+      "explanation": "Dentro de diez minutos значит «через десять минут», hace diez minutos — «десять минут назад»."
+    },
+    {
+      "character": "miko",
+      "title": "Опаздываю на встречу",
+      "phrase": "Llego dentro de diez minutos.",
+      "translation": "Буду через десять минут.",
+      "explanation": "Llego dentro de diez minutos. — Буду через десять минут."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Опаздываю на встречу",
+      "phrase": "¿Puedes esperarme en la entrada?",
+      "translation": "Можешь подождать меня у входа?",
+      "explanation": "¿Puedes esperarme en la entrada? — Можешь подождать меня у входа?"
+    },
+    {
+      "character": "orbi",
+      "title": "Опаздываю на встречу",
+      "phrase": "Si llegas antes, entra sin mí.",
+      "translation": "Если придёшь раньше, заходи без меня.",
+      "explanation": "Si llegas antes, entra sin mí. — Если придёшь раньше, заходи без меня."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "He perdido el autobús.",
+      "translation": "Я опоздал на автобус.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я опоздал на автобус.",
+      "options": [
+        "Можешь подождать меня у входа?",
+        "Я опоздал на автобус.",
+        "Если придёшь раньше, заходи без меня."
+      ],
+      "explanation": "Dentro de diez minutos значит «через десять минут», hace diez minutos — «десять минут назад»."
+    },
+    {
+      "id": "apply",
+      "phrase": "Llego dentro de diez minutos.",
+      "translation": "Буду через десять минут.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Llego dentro de diez minutos.",
+      "tokens": [
+        "Llego",
+        "dentro",
+        "de",
+        "diez",
+        "minutos."
+      ],
+      "character": "miko",
+      "explanation": "Llego dentro de diez minutos. — Буду через десять минут."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-48-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы посмотрели фотовыставку.",
+      "answers": [
+        "Vimos una exposición de fotografía."
+      ],
+      "explanation": "Vimos una exposición de fotografía. — Мы посмотрели фотовыставку.",
+      "wordIds": [
+        "es:v13:47:p1"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "La sala estaba casi vacía.",
+        "Vimos una exposición de fotografía.",
+        "Las fotos eran enormes.",
+        "La visita duró una hora."
+      ]
+    },
+    {
+      "id": "es-a1-48-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я опоздал на автобус.»?",
+      "answers": [
+        "He perdido el autobús."
+      ],
+      "explanation": "He perdido el autobús. — Я опоздал на автобус.",
+      "wordIds": [
+        "es:v13:48:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Llego dentro de diez minutos.",
+        "Si llegas antes, entra sin mí.",
+        "He perdido el autobús."
+      ],
+      "hint": "He perdido el autobús. — Я опоздал на автобус."
+    },
+    {
+      "id": "es-a1-48-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Буду через десять минут.",
+      "answers": [
+        "Llego dentro de diez minutos."
+      ],
+      "explanation": "Dentro de diez minutos значит «через десять минут», hace diez minutos — «десять минут назад».",
+      "wordIds": [
+        "es:v13:48:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Llego",
+        "dentro",
+        "de",
+        "diez",
+        "minutos."
+      ],
+      "hint": "Llego dentro de diez minutos. — Буду через десять минут."
+    },
+    {
+      "id": "es-a1-48-e04",
+      "type": "dialogue",
+      "prompt": "Где просят подождать?",
+      "answers": [
+        "У входа."
+      ],
+      "explanation": "В диалоге: ¿Dónde estás? / En el metro. Llego dentro de diez minutos. Espérame en la entrada, por favor. Поэтому: У входа.",
+      "wordIds": [
+        "es:v13:48:p0",
+        "es:v13:48:p1",
+        "es:v13:48:p2",
+        "es:v13:48:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: ¿Dónde estás?\nМико: En el metro. Llego dentro de diez minutos. Espérame en la entrada, por favor.",
+      "options": [
+        "В вагоне метро.",
+        "На автобусной остановке.",
+        "У входа."
+      ]
+    },
+    {
+      "id": "es-a1-48-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Можешь подождать меня у входа?"
+      ],
+      "explanation": "¿Puedes esperarme en la entrada? — Можешь подождать меня у входа?",
+      "wordIds": [
+        "es:v13:48:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "¿Puedes esperarme en la entrada?",
+      "options": [
+        "Я опоздал на автобус.",
+        "Можешь подождать меня у входа?",
+        "Буду через десять минут."
+      ],
+      "hint": "¿Puedes esperarme en la entrada? — Можешь подождать меня у входа?"
+    },
+    {
+      "id": "es-a1-48-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Llego hace diez minutos.",
+      "answers": [
+        "Llego dentro de diez minutos."
+      ],
+      "explanation": "Для времени до будущего события нужно dentro de.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Llego hace diez minutos.",
+        "Llego dentro de diez minutos."
+      ],
+      "hint": "Dentro de diez minutos значит «через десять минут», hace diez minutos — «десять минут назад»."
+    },
+    {
+      "id": "es-a1-48-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Если придёшь раньше, заходи без меня.». Можно написать вместо микрофона.",
+      "answers": [
+        "Si llegas antes, entra sin mí."
+      ],
+      "explanation": "Si llegas antes, entra sin mí. — Если придёшь раньше, заходи без меня.",
+      "wordIds": [
+        "es:v13:48:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Si llegas antes, entra sin mí.",
+      "recall": {
+        "phrase": "Si llegas antes, entra sin mí.",
+        "meaning": "Если придёшь раньше, заходи без меня."
+      }
+    },
+    {
+      "id": "es-a1-48-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я опоздал на автобус.",
+      "answers": [
+        "He perdido el autobús."
+      ],
+      "explanation": "Dentro de diez minutos значит «через десять минут», hace diez minutos — «десять минут назад».",
+      "wordIds": [
+        "es:v13:48:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "He perdido el autobús.",
+        "meaning": "Я опоздал на автобус."
+      }
+    }
+  ]
+}

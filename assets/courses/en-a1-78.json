@@ -1,0 +1,259 @@
+{
+  "id": "en-a1-78",
+  "title": "Почему так решили",
+  "topic": "Расписание и причины",
+  "order": 77,
+  "objective": "Связать решение с причиной и последствием.",
+  "guide": "Because вводит причину, so — следствие. После so обычно идёт самостоятельная часть.",
+  "vocabulary": [
+    {
+      "id": "en:v13:78:p0",
+      "en": "The lift was broken, so we took the stairs.",
+      "ru": "Лифт сломался, поэтому мы пошли по лестнице."
+    },
+    {
+      "id": "en:v13:78:p1",
+      "en": "We arrived late because the road was closed.",
+      "ru": "Мы приехали поздно, потому что дорогу перекрыли."
+    },
+    {
+      "id": "en:v13:78:p2",
+      "en": "It took longer than we expected.",
+      "ru": "Это заняло больше времени, чем мы ожидали."
+    },
+    {
+      "id": "en:v13:78:p3",
+      "en": "Next time we'll leave earlier.",
+      "ru": "В следующий раз мы выйдем раньше."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Почему так решили",
+      "phrase": "The lift was broken, so we took the stairs.",
+      "translation": "Лифт сломался, поэтому мы пошли по лестнице.",
+      "explanation": "Because вводит причину, so — следствие. После so обычно идёт самостоятельная часть."
+    },
+    {
+      "character": "miko",
+      "title": "Почему так решили",
+      "phrase": "We arrived late because the road was closed.",
+      "translation": "Мы приехали поздно, потому что дорогу перекрыли.",
+      "explanation": "We arrived late because the road was closed. — Мы приехали поздно, потому что дорогу перекрыли."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Почему так решили",
+      "phrase": "It took longer than we expected.",
+      "translation": "Это заняло больше времени, чем мы ожидали.",
+      "explanation": "It took longer than we expected. — Это заняло больше времени, чем мы ожидали."
+    },
+    {
+      "character": "orbi",
+      "title": "Почему так решили",
+      "phrase": "Next time we'll leave earlier.",
+      "translation": "В следующий раз мы выйдем раньше.",
+      "explanation": "Next time we'll leave earlier. — В следующий раз мы выйдем раньше."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "The lift was broken, so we took the stairs.",
+      "translation": "Лифт сломался, поэтому мы пошли по лестнице.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Лифт сломался, поэтому мы пошли по лестнице.",
+      "options": [
+        "Это заняло больше времени, чем мы ожидали.",
+        "Лифт сломался, поэтому мы пошли по лестнице.",
+        "В следующий раз мы выйдем раньше."
+      ],
+      "explanation": "Because вводит причину, so — следствие. После so обычно идёт самостоятельная часть."
+    },
+    {
+      "id": "apply",
+      "phrase": "We arrived late because the road was closed.",
+      "translation": "Мы приехали поздно, потому что дорогу перекрыли.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "We arrived late because the road was closed.",
+      "tokens": [
+        "We",
+        "arrived",
+        "late",
+        "because",
+        "the",
+        "road",
+        "was",
+        "closed."
+      ],
+      "character": "miko",
+      "explanation": "We arrived late because the road was closed. — Мы приехали поздно, потому что дорогу перекрыли."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-78-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Тебе подходит утро пятницы?",
+      "answers": [
+        "Does Friday morning work for you?"
+      ],
+      "explanation": "Does Friday morning work for you? — Тебе подходит утро пятницы?",
+      "wordIds": [
+        "en:v13:77:p1"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Can we move the call to Friday?",
+        "Does Friday morning work for you?",
+        "I'm tied up until noon.",
+        "Let's make it one o'clock."
+      ]
+    },
+    {
+      "id": "en-a1-78-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Лифт сломался, поэтому мы пошли по лестнице.»?",
+      "answers": [
+        "The lift was broken, so we took the stairs."
+      ],
+      "explanation": "The lift was broken, so we took the stairs. — Лифт сломался, поэтому мы пошли по лестнице.",
+      "wordIds": [
+        "en:v13:78:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "We arrived late because the road was closed.",
+        "Next time we'll leave earlier.",
+        "The lift was broken, so we took the stairs."
+      ],
+      "hint": "The lift was broken, so we took the stairs. — Лифт сломался, поэтому мы пошли по лестнице."
+    },
+    {
+      "id": "en-a1-78-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Мы приехали поздно, потому что дорогу перекрыли.",
+      "answers": [
+        "We arrived late because the road was closed."
+      ],
+      "explanation": "Because вводит причину, so — следствие. После so обычно идёт самостоятельная часть.",
+      "wordIds": [
+        "en:v13:78:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "We",
+        "arrived",
+        "late",
+        "because",
+        "the",
+        "road",
+        "was",
+        "closed."
+      ],
+      "hint": "We arrived late because the road was closed. — Мы приехали поздно, потому что дорогу перекрыли."
+    },
+    {
+      "id": "en-a1-78-e04",
+      "type": "dialogue",
+      "prompt": "Почему пошли по лестнице?",
+      "answers": [
+        "Лифт не работал."
+      ],
+      "explanation": "В диалоге: Why did you take the stairs? / The lift was broken, so we had no choice. Поэтому: Лифт не работал.",
+      "wordIds": [
+        "en:v13:78:p0",
+        "en:v13:78:p1",
+        "en:v13:78:p2",
+        "en:v13:78:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Why did you take the stairs?\nМико: The lift was broken, so we had no choice.",
+      "options": [
+        "Лестница была короче.",
+        "Дорогу перекрыли.",
+        "Лифт не работал."
+      ]
+    },
+    {
+      "id": "en-a1-78-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Это заняло больше времени, чем мы ожидали."
+      ],
+      "explanation": "It took longer than we expected. — Это заняло больше времени, чем мы ожидали.",
+      "wordIds": [
+        "en:v13:78:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "It took longer than we expected.",
+      "options": [
+        "Лифт сломался, поэтому мы пошли по лестнице.",
+        "Это заняло больше времени, чем мы ожидали.",
+        "Мы приехали поздно, потому что дорогу перекрыли."
+      ],
+      "hint": "It took longer than we expected. — Это заняло больше времени, чем мы ожидали."
+    },
+    {
+      "id": "en-a1-78-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We were late so the road was closed.",
+      "answers": [
+        "We were late because the road was closed."
+      ],
+      "explanation": "Закрытая дорога — причина опоздания, поэтому because.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We were late so the road was closed.",
+        "We were late because the road was closed."
+      ],
+      "hint": "Because вводит причину, so — следствие. После so обычно идёт самостоятельная часть."
+    },
+    {
+      "id": "en-a1-78-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «В следующий раз мы выйдем раньше.». Можно написать вместо микрофона.",
+      "answers": [
+        "Next time we'll leave earlier."
+      ],
+      "explanation": "Next time we'll leave earlier. — В следующий раз мы выйдем раньше.",
+      "wordIds": [
+        "en:v13:78:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Next time we'll leave earlier.",
+      "recall": {
+        "phrase": "Next time we'll leave earlier.",
+        "meaning": "В следующий раз мы выйдем раньше."
+      }
+    },
+    {
+      "id": "en-a1-78-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Лифт сломался, поэтому мы пошли по лестнице.",
+      "answers": [
+        "The lift was broken, so we took the stairs."
+      ],
+      "explanation": "Because вводит причину, so — следствие. После so обычно идёт самостоятельная часть.",
+      "wordIds": [
+        "en:v13:78:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "The lift was broken, so we took the stairs.",
+        "meaning": "Лифт сломался, поэтому мы пошли по лестнице."
+      }
+    }
+  ]
+}

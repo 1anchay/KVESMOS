@@ -1,0 +1,294 @@
+{
+  "id": "en-a1-97",
+  "title": "Короткий отзыв",
+  "topic": "Отзывы и объявления",
+  "order": 96,
+  "objective": "Объяснить, что понравилось, и предложить улучшение.",
+  "guide": "Although вводит уступку. It would help if… формулирует мягкое предложение.",
+  "vocabulary": [
+    {
+      "id": "en:v13:97:p0",
+      "en": "Although the room was small, it was quiet.",
+      "ru": "Хотя комната была маленькой, в ней было тихо."
+    },
+    {
+      "id": "en:v13:97:p1",
+      "en": "The staff were friendly and helpful.",
+      "ru": "Сотрудники были приветливы и помогали."
+    },
+    {
+      "id": "en:v13:97:p2",
+      "en": "It would help if the signs were clearer.",
+      "ru": "Было бы лучше, если бы указатели были понятнее."
+    },
+    {
+      "id": "en:v13:97:p3",
+      "en": "I'd stay there again.",
+      "ru": "Я бы остановился там снова."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Короткий отзыв",
+      "phrase": "Although the room was small, it was quiet.",
+      "translation": "Хотя комната была маленькой, в ней было тихо.",
+      "explanation": "Although вводит уступку. It would help if… формулирует мягкое предложение."
+    },
+    {
+      "character": "miko",
+      "title": "Короткий отзыв",
+      "phrase": "The staff were friendly and helpful.",
+      "translation": "Сотрудники были приветливы и помогали.",
+      "explanation": "The staff were friendly and helpful. — Сотрудники были приветливы и помогали."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Короткий отзыв",
+      "phrase": "It would help if the signs were clearer.",
+      "translation": "Было бы лучше, если бы указатели были понятнее.",
+      "explanation": "It would help if the signs were clearer. — Было бы лучше, если бы указатели были понятнее."
+    },
+    {
+      "character": "orbi",
+      "title": "Короткий отзыв",
+      "phrase": "I'd stay there again.",
+      "translation": "Я бы остановился там снова.",
+      "explanation": "I'd stay there again. — Я бы остановился там снова."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Although the room was small, it was quiet.",
+      "translation": "Хотя комната была маленькой, в ней было тихо.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Хотя комната была маленькой, в ней было тихо.",
+      "options": [
+        "Было бы лучше, если бы указатели были понятнее.",
+        "Хотя комната была маленькой, в ней было тихо.",
+        "Я бы остановился там снова."
+      ],
+      "explanation": "Although вводит уступку. It would help if… формулирует мягкое предложение."
+    },
+    {
+      "id": "apply",
+      "phrase": "The staff were friendly and helpful.",
+      "translation": "Сотрудники были приветливы и помогали.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The staff were friendly and helpful.",
+      "tokens": [
+        "The",
+        "staff",
+        "were",
+        "friendly",
+        "and",
+        "helpful."
+      ],
+      "character": "miko",
+      "explanation": "The staff were friendly and helpful. — Сотрудники были приветливы и помогали."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-97-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Хотя комната была маленькой, в ней было тихо.»?",
+      "answers": [
+        "Although the room was small, it was quiet."
+      ],
+      "explanation": "Although the room was small, it was quiet. — Хотя комната была маленькой, в ней было тихо.",
+      "wordIds": [
+        "en:v13:97:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The staff were friendly and helpful.",
+        "I'd stay there again.",
+        "Although the room was small, it was quiet."
+      ],
+      "hint": "Although the room was small, it was quiet. — Хотя комната была маленькой, в ней было тихо."
+    },
+    {
+      "id": "en-a1-97-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Сотрудники были приветливы и помогали.",
+      "answers": [
+        "The staff were friendly and helpful."
+      ],
+      "explanation": "Although вводит уступку. It would help if… формулирует мягкое предложение.",
+      "wordIds": [
+        "en:v13:97:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "staff",
+        "were",
+        "friendly",
+        "and",
+        "helpful."
+      ],
+      "hint": "The staff were friendly and helpful. — Сотрудники были приветливы и помогали."
+    },
+    {
+      "id": "en-a1-97-e03",
+      "type": "dialogue",
+      "prompt": "Что предлагают улучшить?",
+      "answers": [
+        "Указатели."
+      ],
+      "explanation": "В диалоге: What could be improved? / The signs. It took us a while to find the entrance. Поэтому: Указатели.",
+      "wordIds": [
+        "en:v13:97:p0",
+        "en:v13:97:p1",
+        "en:v13:97:p2",
+        "en:v13:97:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: What could be improved?\nМико: The signs. It took us a while to find the entrance.",
+      "options": [
+        "Размер комнаты.",
+        "Работу персонала.",
+        "Указатели."
+      ]
+    },
+    {
+      "id": "en-a1-97-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Было бы лучше, если бы указатели были понятнее."
+      ],
+      "explanation": "It would help if the signs were clearer. — Было бы лучше, если бы указатели были понятнее.",
+      "wordIds": [
+        "en:v13:97:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "It would help if the signs were clearer.",
+      "options": [
+        "Хотя комната была маленькой, в ней было тихо.",
+        "Было бы лучше, если бы указатели были понятнее.",
+        "Сотрудники были приветливы и помогали."
+      ],
+      "hint": "It would help if the signs were clearer. — Было бы лучше, если бы указатели были понятнее."
+    },
+    {
+      "id": "en-a1-97-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:97:p0",
+        "en:v13:97:p1",
+        "en:v13:97:p2",
+        "en:v13:97:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:97:p0",
+          "en": "Although the room was small, it was quiet.",
+          "ru": "Хотя комната была маленькой, в ней было тихо."
+        },
+        {
+          "id": "en:v13:97:p1",
+          "en": "The staff were friendly and helpful.",
+          "ru": "Сотрудники были приветливы и помогали."
+        },
+        {
+          "id": "en:v13:97:p2",
+          "en": "It would help if the signs were clearer.",
+          "ru": "Было бы лучше, если бы указатели были понятнее."
+        },
+        {
+          "id": "en:v13:97:p3",
+          "en": "I'd stay there again.",
+          "ru": "Я бы остановился там снова."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-97-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Although the room was small, but it was quiet.",
+      "answers": [
+        "Although the room was small, it was quiet."
+      ],
+      "explanation": "После although не нужен дополнительный but между этими частями.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Although the room was small, but it was quiet.",
+        "Although the room was small, it was quiet."
+      ],
+      "hint": "Although вводит уступку. It would help if… формулирует мягкое предложение."
+    },
+    {
+      "id": "en-a1-97-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я бы остановился там снова.». Можно написать вместо микрофона.",
+      "answers": [
+        "I'd stay there again."
+      ],
+      "explanation": "I'd stay there again. — Я бы остановился там снова.",
+      "wordIds": [
+        "en:v13:97:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I'd stay there again.",
+      "recall": {
+        "phrase": "I'd stay there again.",
+        "meaning": "Я бы остановился там снова."
+      }
+    },
+    {
+      "id": "en-a1-97-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Хотя комната была маленькой, в ней было тихо.",
+      "answers": [
+        "Although the room was small, it was quiet."
+      ],
+      "explanation": "Although вводит уступку. It would help if… формулирует мягкое предложение.",
+      "wordIds": [
+        "en:v13:97:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Although the room was small, it was quiet.",
+        "meaning": "Хотя комната была маленькой, в ней было тихо."
+      }
+    },
+    {
+      "id": "en-a1-97-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Первый тариф включает доставку.",
+      "answers": [
+        "The first plan includes delivery."
+      ],
+      "explanation": "The first plan includes delivery. — Первый тариф включает доставку.",
+      "wordIds": [
+        "en:v13:96:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "The first plan includes delivery.",
+        "The second is cheaper, whereas delivery costs extra.",
+        "Both plans cover the first month.",
+        "The first one works out cheaper for us."
+      ]
+    }
+  ]
+}

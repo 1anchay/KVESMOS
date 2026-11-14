@@ -1,0 +1,292 @@
+{
+  "id": "fr-a1-33",
+  "title": "Сколько ещё осталось?",
+  "topic": "Места и покупки",
+  "order": 32,
+  "objective": "Заменить уже названный предмет на en и назвать количество.",
+  "guide": "В il en reste trois слово en отсылает к уже названным местам. Количество остаётся после глагола.",
+  "vocabulary": [
+    {
+      "id": "fr:v13:33:p0",
+      "en": "Il reste des places pour ce soir ?",
+      "ru": "На сегодня вечером остались места?"
+    },
+    {
+      "id": "fr:v13:33:p1",
+      "en": "Oui, il en reste trois.",
+      "ru": "Да, осталось три."
+    },
+    {
+      "id": "fr:v13:33:p2",
+      "en": "Nous en prenons deux.",
+      "ru": "Мы берём два."
+    },
+    {
+      "id": "fr:v13:33:p3",
+      "en": "Je vous réserve les deux places.",
+      "ru": "Я забронирую для вас два места."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сколько ещё осталось?",
+      "phrase": "Il reste des places pour ce soir ?",
+      "translation": "На сегодня вечером остались места?",
+      "explanation": "В il en reste trois слово en отсылает к уже названным местам. Количество остаётся после глагола."
+    },
+    {
+      "character": "miko",
+      "title": "Сколько ещё осталось?",
+      "phrase": "Oui, il en reste trois.",
+      "translation": "Да, осталось три.",
+      "explanation": "Oui, il en reste trois. — Да, осталось три."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сколько ещё осталось?",
+      "phrase": "Nous en prenons deux.",
+      "translation": "Мы берём два.",
+      "explanation": "Nous en prenons deux. — Мы берём два."
+    },
+    {
+      "character": "orbi",
+      "title": "Сколько ещё осталось?",
+      "phrase": "Je vous réserve les deux places.",
+      "translation": "Я забронирую для вас два места.",
+      "explanation": "Je vous réserve les deux places. — Я забронирую для вас два места."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Il reste des places pour ce soir ?",
+      "translation": "На сегодня вечером остались места?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "На сегодня вечером остались места?",
+      "options": [
+        "Мы берём два.",
+        "На сегодня вечером остались места?",
+        "Я забронирую для вас два места."
+      ],
+      "explanation": "В il en reste trois слово en отсылает к уже названным местам. Количество остаётся после глагола."
+    },
+    {
+      "id": "apply",
+      "phrase": "Oui, il en reste trois.",
+      "translation": "Да, осталось три.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Oui, il en reste trois.",
+      "tokens": [
+        "Oui,",
+        "il",
+        "en",
+        "reste",
+        "trois."
+      ],
+      "character": "miko",
+      "explanation": "Oui, il en reste trois. — Да, осталось три."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-33-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «На сегодня вечером остались места?»?",
+      "answers": [
+        "Il reste des places pour ce soir ?"
+      ],
+      "explanation": "Il reste des places pour ce soir ? — На сегодня вечером остались места?",
+      "wordIds": [
+        "fr:v13:33:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Oui, il en reste trois.",
+        "Je vous réserve les deux places.",
+        "Il reste des places pour ce soir ?"
+      ],
+      "hint": "Il reste des places pour ce soir ? — На сегодня вечером остались места?"
+    },
+    {
+      "id": "fr-a1-33-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Да, осталось три.",
+      "answers": [
+        "Oui, il en reste trois."
+      ],
+      "explanation": "В il en reste trois слово en отсылает к уже названным местам. Количество остаётся после глагола.",
+      "wordIds": [
+        "fr:v13:33:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Oui,",
+        "il",
+        "en",
+        "reste",
+        "trois."
+      ],
+      "hint": "Oui, il en reste trois. — Да, осталось три."
+    },
+    {
+      "id": "fr-a1-33-e03",
+      "type": "dialogue",
+      "prompt": "Что важно при выборе оставшихся мест?",
+      "answers": [
+        "Они не рядом."
+      ],
+      "explanation": "В диалоге: Il reste des places pour ce soir ? / Oui, il en reste trois, mais pas côte à côte. Поэтому: Они не рядом.",
+      "wordIds": [
+        "fr:v13:33:p0",
+        "fr:v13:33:p1",
+        "fr:v13:33:p2",
+        "fr:v13:33:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Il reste des places pour ce soir ?\nМико: Oui, il en reste trois, mais pas côte à côte.",
+      "options": [
+        "Их только два.",
+        "Они на завтра.",
+        "Они не рядом."
+      ]
+    },
+    {
+      "id": "fr-a1-33-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы берём два."
+      ],
+      "explanation": "Nous en prenons deux. — Мы берём два.",
+      "wordIds": [
+        "fr:v13:33:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Nous en prenons deux.",
+      "options": [
+        "На сегодня вечером остались места?",
+        "Мы берём два.",
+        "Да, осталось три."
+      ],
+      "hint": "Nous en prenons deux. — Мы берём два."
+    },
+    {
+      "id": "fr-a1-33-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "fr:v13:33:p0",
+        "fr:v13:33:p1",
+        "fr:v13:33:p2",
+        "fr:v13:33:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "fr:v13:33:p0",
+          "en": "Il reste des places pour ce soir ?",
+          "ru": "На сегодня вечером остались места?"
+        },
+        {
+          "id": "fr:v13:33:p1",
+          "en": "Oui, il en reste trois.",
+          "ru": "Да, осталось три."
+        },
+        {
+          "id": "fr:v13:33:p2",
+          "en": "Nous en prenons deux.",
+          "ru": "Мы берём два."
+        },
+        {
+          "id": "fr:v13:33:p3",
+          "en": "Je vous réserve les deux places.",
+          "ru": "Я забронирую для вас два места."
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-33-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Il reste en trois.",
+      "answers": [
+        "Il en reste trois."
+      ],
+      "explanation": "En ставится перед reste; число остаётся после глагола.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Il reste en trois.",
+        "Il en reste trois."
+      ],
+      "hint": "В il en reste trois слово en отсылает к уже названным местам. Количество остаётся после глагола."
+    },
+    {
+      "id": "fr-a1-33-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я забронирую для вас два места.». Можно написать вместо микрофона.",
+      "answers": [
+        "Je vous réserve les deux places."
+      ],
+      "explanation": "Je vous réserve les deux places. — Я забронирую для вас два места.",
+      "wordIds": [
+        "fr:v13:33:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Je vous réserve les deux places.",
+      "recall": {
+        "phrase": "Je vous réserve les deux places.",
+        "meaning": "Я забронирую для вас два места."
+      }
+    },
+    {
+      "id": "fr-a1-33-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: На сегодня вечером остались места?",
+      "answers": [
+        "Il reste des places pour ce soir ?"
+      ],
+      "explanation": "В il en reste trois слово en отсылает к уже названным местам. Количество остаётся после глагола.",
+      "wordIds": [
+        "fr:v13:33:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Il reste des places pour ce soir ?",
+        "meaning": "На сегодня вечером остались места?"
+      }
+    },
+    {
+      "id": "fr-a1-33-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы с Леа приехали вчера.",
+      "answers": [
+        "Léa et moi, nous sommes arrivées hier."
+      ],
+      "explanation": "Léa et moi, nous sommes arrivées hier. — Мы с Леа приехали вчера.",
+      "wordIds": [
+        "fr:v015:32:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Léa et moi, nous sommes arrivées hier.",
+        "Il faisait beau à notre arrivée.",
+        "Nous avons déjà visité le centre-ville.",
+        "Demain, nous allons prendre le bateau."
+      ]
+    }
+  ]
+}

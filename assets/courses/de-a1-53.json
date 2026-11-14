@@ -1,0 +1,300 @@
+{
+  "id": "de-a1-53",
+  "title": "Согласны не во всём",
+  "topic": "Оговорки и сравнения",
+  "order": 52,
+  "objective": "Выразить частичное согласие и уточнить возражение.",
+  "guide": "Zwar предваряет уступку, aber вводит возражение. В каждой части сохраняется обычный порядок слов.",
+  "vocabulary": [
+    {
+      "id": "de:v13:53:p0",
+      "en": "Die Idee gefällt mir.",
+      "ru": "Мне нравится идея."
+    },
+    {
+      "id": "de:v13:53:p1",
+      "en": "Der Weg ist zwar kurz, aber er ist steil.",
+      "ru": "Путь хоть и короткий, но крутой."
+    },
+    {
+      "id": "de:v13:53:p2",
+      "en": "Ich würde lieber den anderen Weg nehmen.",
+      "ru": "Я бы предпочёл другой путь."
+    },
+    {
+      "id": "de:v13:53:p3",
+      "en": "Damit bin ich einverstanden.",
+      "ru": "С этим я согласен."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Согласны не во всём",
+      "phrase": "Die Idee gefällt mir.",
+      "translation": "Мне нравится идея.",
+      "explanation": "Zwar предваряет уступку, aber вводит возражение. В каждой части сохраняется обычный порядок слов."
+    },
+    {
+      "character": "miko",
+      "title": "Согласны не во всём",
+      "phrase": "Der Weg ist zwar kurz, aber er ist steil.",
+      "translation": "Путь хоть и короткий, но крутой.",
+      "explanation": "Der Weg ist zwar kurz, aber er ist steil. — Путь хоть и короткий, но крутой."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Согласны не во всём",
+      "phrase": "Ich würde lieber den anderen Weg nehmen.",
+      "translation": "Я бы предпочёл другой путь.",
+      "explanation": "Ich würde lieber den anderen Weg nehmen. — Я бы предпочёл другой путь."
+    },
+    {
+      "character": "orbi",
+      "title": "Согласны не во всём",
+      "phrase": "Damit bin ich einverstanden.",
+      "translation": "С этим я согласен.",
+      "explanation": "Damit bin ich einverstanden. — С этим я согласен."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Die Idee gefällt mir.",
+      "translation": "Мне нравится идея.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мне нравится идея.",
+      "options": [
+        "Я бы предпочёл другой путь.",
+        "Мне нравится идея.",
+        "С этим я согласен."
+      ],
+      "explanation": "Zwar предваряет уступку, aber вводит возражение. В каждой части сохраняется обычный порядок слов."
+    },
+    {
+      "id": "apply",
+      "phrase": "Der Weg ist zwar kurz, aber er ist steil.",
+      "translation": "Путь хоть и короткий, но крутой.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Der Weg ist zwar kurz, aber er ist steil.",
+      "tokens": [
+        "Der",
+        "Weg",
+        "ist",
+        "zwar",
+        "kurz,",
+        "aber",
+        "er",
+        "ist",
+        "steil."
+      ],
+      "character": "miko",
+      "explanation": "Der Weg ist zwar kurz, aber er ist steil. — Путь хоть и короткий, но крутой."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-53-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я бы предпочёл другой путь."
+      ],
+      "explanation": "Ich würde lieber den anderen Weg nehmen. — Я бы предпочёл другой путь.",
+      "wordIds": [
+        "de:v13:53:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Ich würde lieber den anderen Weg nehmen.",
+      "options": [
+        "Мне нравится идея.",
+        "Я бы предпочёл другой путь.",
+        "Путь хоть и короткий, но крутой."
+      ],
+      "hint": "Ich würde lieber den anderen Weg nehmen. — Я бы предпочёл другой путь."
+    },
+    {
+      "id": "de-a1-53-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Путь хоть и короткий, но крутой.",
+      "answers": [
+        "Der Weg ist zwar kurz, aber er ist steil."
+      ],
+      "explanation": "Zwar предваряет уступку, aber вводит возражение. В каждой части сохраняется обычный порядок слов.",
+      "wordIds": [
+        "de:v13:53:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Der",
+        "Weg",
+        "ist",
+        "zwar",
+        "kurz,",
+        "aber",
+        "er",
+        "ist",
+        "steil."
+      ],
+      "hint": "Der Weg ist zwar kurz, aber er ist steil. — Путь хоть и короткий, но крутой."
+    },
+    {
+      "id": "de-a1-53-e03",
+      "type": "dialogue",
+      "prompt": "Почему предлагают другой путь?",
+      "answers": [
+        "Короткий путь очень крутой."
+      ],
+      "explanation": "В диалоге: Nehmen wir den kurzen Weg? / Er ist zwar kurz, aber sehr steil. Ich gehe lieber außen herum. Поэтому: Короткий путь очень крутой.",
+      "wordIds": [
+        "de:v13:53:p0",
+        "de:v13:53:p1",
+        "de:v13:53:p2",
+        "de:v13:53:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Nehmen wir den kurzen Weg?\nМико: Er ist zwar kurz, aber sehr steil. Ich gehe lieber außen herum.",
+      "options": [
+        "Он закрыт.",
+        "Он длиннее.",
+        "Короткий путь очень крутой."
+      ]
+    },
+    {
+      "id": "de-a1-53-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Мне нравится идея.»?",
+      "answers": [
+        "Die Idee gefällt mir."
+      ],
+      "explanation": "Die Idee gefällt mir. — Мне нравится идея.",
+      "wordIds": [
+        "de:v13:53:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Der Weg ist zwar kurz, aber er ist steil.",
+        "Damit bin ich einverstanden.",
+        "Die Idee gefällt mir."
+      ],
+      "hint": "Die Idee gefällt mir. — Мне нравится идея."
+    },
+    {
+      "id": "de-a1-53-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:53:p0",
+        "de:v13:53:p1",
+        "de:v13:53:p2",
+        "de:v13:53:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:53:p0",
+          "en": "Die Idee gefällt mir.",
+          "ru": "Мне нравится идея."
+        },
+        {
+          "id": "de:v13:53:p1",
+          "en": "Der Weg ist zwar kurz, aber er ist steil.",
+          "ru": "Путь хоть и короткий, но крутой."
+        },
+        {
+          "id": "de:v13:53:p2",
+          "en": "Ich würde lieber den anderen Weg nehmen.",
+          "ru": "Я бы предпочёл другой путь."
+        },
+        {
+          "id": "de:v13:53:p3",
+          "en": "Damit bin ich einverstanden.",
+          "ru": "С этим я согласен."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-53-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Der Weg ist kurz zwar, aber er ist steil.",
+      "answers": [
+        "Der Weg ist zwar kurz, aber er ist steil."
+      ],
+      "explanation": "Zwar стоит перед признаком, который признаём: kurz.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Der Weg ist kurz zwar, aber er ist steil.",
+        "Der Weg ist zwar kurz, aber er ist steil."
+      ],
+      "hint": "Zwar предваряет уступку, aber вводит возражение. В каждой части сохраняется обычный порядок слов."
+    },
+    {
+      "id": "de-a1-53-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «С этим я согласен.». Можно написать вместо микрофона.",
+      "answers": [
+        "Damit bin ich einverstanden."
+      ],
+      "explanation": "Damit bin ich einverstanden. — С этим я согласен.",
+      "wordIds": [
+        "de:v13:53:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Damit bin ich einverstanden.",
+      "recall": {
+        "phrase": "Damit bin ich einverstanden.",
+        "meaning": "С этим я согласен."
+      }
+    },
+    {
+      "id": "de-a1-53-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мне нравится идея.",
+      "answers": [
+        "Die Idee gefällt mir."
+      ],
+      "explanation": "Zwar предваряет уступку, aber вводит возражение. В каждой части сохраняется обычный порядок слов.",
+      "wordIds": [
+        "de:v13:53:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Die Idee gefällt mir.",
+        "meaning": "Мне нравится идея."
+      }
+    },
+    {
+      "id": "de-a1-53-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Кому принадлежит этот ключ?",
+      "answers": [
+        "Wem gehört dieser Schlüssel?"
+      ],
+      "explanation": "Wem gehört dieser Schlüssel? — Кому принадлежит этот ключ?",
+      "wordIds": [
+        "de:v13:52:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Der Schlüssel ist bei mir.",
+        "Ich hole ihn bei dir ab.",
+        "Wem gehört dieser Schlüssel?",
+        "Er gehört unserer Nachbarin."
+      ]
+    }
+  ]
+}

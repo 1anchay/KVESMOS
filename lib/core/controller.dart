@@ -10,6 +10,7 @@ import '../data/missions_repository.dart';
 import '../domain/missions.dart';
 import '../domain/rewards.dart';
 import '../domain/progress.dart';
+import '../domain/course_start.dart';
 import '../domain/languages.dart';
 import '../domain/language_passport.dart';
 import '../domain/explorer_profile.dart';
@@ -37,6 +38,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Inventory inventory = Inventory();
   List<String> featuredAchievements = [];
   ProgressSnapshot progress = ProgressSnapshot();
+  CourseStart courseStart = const CourseStart([], {}, {}, null);
+  bool smartStartInvitation = false;
   ProgressSnapshot globalProgress = ProgressSnapshot();
   List<LanguagePassport> passports = [];
   StudyCourse get course => repository.course;
@@ -200,6 +203,12 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
     progress = ProgressSnapshot.fromEvents(
       events.where((e) => e.courseId == course.id),
     );
+    courseStart = await repository.courseStart(progress);
+    smartStartInvitation =
+        onboarded &&
+        courseStart.entry == null &&
+        (courseStart.active.isNotEmpty || progress.completed.isNotEmpty) &&
+        await repository.setting('kvesmos.smartStart.invite.v1') != 'seen';
     records = ExplorerRecords.fromEvents(events, progress);
     installed = await repository.installed();
     await rewards.reconcile();
@@ -232,31 +241,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   /// Read-only route selection. Never completes a game, creates a lesson
   /// session or awards anything. Existing unfinished lessons retain priority.
   Future<String> learningContinuationRoute() async {
-    bool available(String id) {
-      final lesson = repository.catalog.where((l) => l.id == id).firstOrNull;
-      return lesson != null &&
-          (lesson.order == 0 ||
-              progress.completed.contains(id) ||
-              progress.completed.contains(
-                repository.catalog[lesson.order - 1].id,
-              ));
-    }
-
-    final drafts = await (repository.db.select(
-      repository.db.sessions,
-    )..where((s) => s.done.equals(false))).get();
-    for (final draft in drafts) {
-      if (available(draft.lessonId) &&
-          await repository.setting('kvesmos.session.retired.v1:${draft.id}') !=
-              'true') {
-        return installed.contains(draft.lessonId)
-            ? '/lesson/${draft.lessonId}'
-            : '/offline';
-      }
-    }
-    final next = repository.catalog
-        .where((l) => !progress.completed.contains(l.id) && available(l.id))
-        .firstOrNull;
+    final next = (await repository.courseStart()).next;
     return next == null
         ? '/map'
         : installed.contains(next.id)
@@ -273,6 +258,12 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Future<void> dismissCompanionInvitation() async {
     await repository.setSetting('kvesmos.companion.invitation.v012', 'seen');
     companionInvitation = false;
+    if (!_disposed) notifyListeners();
+  }
+
+  Future<void> dismissSmartStartInvitation() async {
+    await repository.setSetting('kvesmos.smartStart.invite.v1', 'seen');
+    smartStartInvitation = false;
     if (!_disposed) notifyListeners();
   }
 

@@ -1,0 +1,72 @@
+##
+Сколько ещё осталось?|Заменить уже названный предмет на en и назвать количество.|В il en reste trois слово en отсылает к уже названным местам. Количество остаётся после глагола.
+Il reste des places pour ce soir ?~На сегодня вечером остались места?
+Oui, il en reste trois.~Да, осталось три.
+Nous en prenons deux.~Мы берём два.
+Je vous réserve les deux places.~Я забронирую для вас два места.
+Il reste des places pour ce soir ? / Oui, il en reste trois, mais pas côte à côte.
+Что важно при выборе оставшихся мест?|Они не рядом.|Их только два.|Они на завтра.
+Il reste en trois.~Il en reste trois.~En ставится перед reste; число остаётся после глагола.
+##
+Возьми молока|Попросить купить продукты и уточнить количество.|Du и de la употребляются для неопределённого количества. После un litre ставится de.
+Tu peux prendre du lait ?~Можешь взять молока?
+Prends un litre de lait.~Возьми литр молока.
+On a déjà du beurre.~Масло у нас уже есть.
+Il nous faut aussi de la farine.~Нам нужна ещё мука.
+Tu peux prendre du lait et du beurre ? / Du lait, oui. On a déjà du beurre, mais il nous faut de la farine.
+Что нужно купить помимо молока?|Муку.|Масло.|Хлеб.
+Prends un litre du lait.~Prends un litre de lait.~После меры un litre для обычного названия продукта требуется de.
+##
+Ключ у соседки|Заменить названный предмет местоимением le, la или les.|Le, la и les обычно стоят перед глаголом, к которому относятся. La clé → je la laisse.
+Je laisse la clé chez la voisine.~Я оставляю ключ у соседки.
+Tu peux la récupérer ce soir.~Ты можешь забрать его сегодня вечером.
+Les lettres sont sur la table.~Письма на столе.
+Je les prendrai demain.~Я заберу их завтра.
+Tu as la clé ? / Je la laisse chez la voisine. Elle rentre à six heures.
+Где забрать ключ?|У соседки.|На почте.|На столе.
+Je laisse la chez la voisine.~Je la laisse chez la voisine.~La заменяет la clé и ставится перед laisse.
+##
+Вернуться туда|Использовать y для уже названного места.|Y заменяет указание места. В j’y retourne собеседнику уже известно, куда именно.
+Je suis allé au marché ce matin.~Я ходил на рынок сегодня утром.
+J’y retourne après le déjeuner.~Я вернусь туда после обеда.
+Le magasin ferme à trois heures.~Магазин закрывается в три.
+On se retrouve devant l’entrée.~Встретимся перед входом.
+Tu es encore au marché ? / Non, mais j’y retourne après le déjeuner.
+Когда собеседник снова пойдёт на рынок?|После обеда.|До завтрака.|В три часа.
+Je retourne y après le déjeuner.~J’y retourne après le déjeuner.~Y ставится перед глаголом. Je перед ним сокращается до j’.
+##
+Автобус больше не ходит|Объяснить изменение маршрута с ne… plus.|Ne… plus означает «больше не». В настоящем времени оно обрамляет глагол: ne passe plus.
+Ce bus ne passe plus ici.~Этот автобус здесь больше не ходит.
+Il faut prendre la ligne six.~Нужно сесть на шестой маршрут.
+L’arrêt a changé de place.~Остановка переехала.
+Le prochain bus arrive dans dix minutes.~Следующий автобус прибудет через десять минут.
+La ligne quatre passe encore ici ? / Non, elle ne passe plus ici. Prenez la ligne six.
+Какой маршрут советуют?|Шестой.|Четвёртый.|Десятый.
+Ce bus plus ne passe ici.~Ce bus ne passe plus ici.~Ne идёт перед passe, plus — после него.
+##
+Пока я готовил|Различить фон рассказа и неожиданное событие.|Imparfait описывает происходившее в тот момент. Passé composé отмечает событие на этом фоне.
+Je préparais le dîner quand tu as appelé.~Я готовил ужин, когда ты позвонил.
+La porte était ouverte.~Дверь была открыта.
+Le chat est entré dans la cuisine.~Кот вошёл на кухню.
+Il s’est caché sous la table.~Он спрятался под столом.
+Que faisais-tu quand le chat est entré ? / Je préparais le dîner. Je ne l’ai pas vu tout de suite.
+Чем был занят рассказчик?|Готовил ужин.|Звонил другу.|Закрывал окно.
+Le chat a entré dans la cuisine.~Le chat est entré dans la cuisine.~Для entrer в значении «войти» здесь нужен вспомогательный être.
+##
+Если будет свободно|Согласовать бронирование с возможным условием.|После si для возможного условия употребляют настоящее. Будущее возможно в главной части.
+S’il reste une table, je réserverai pour deux.~Если столик останется, я забронирую на двоих.
+Je t’appellerai après le travail.~Я позвоню тебе после работы.
+On peut dîner plus tard.~Мы можем поужинать позже.
+Sinon, on mangera à la maison.~Иначе поедим дома.
+Tu vas réserver ? / Oui, s’il reste une table. Sinon, on mangera à la maison.
+Каков запасной план?|Поесть дома.|Поехать на вокзал.|Позвать ещё двоих.
+S’il restera une table, je réserverai.~S’il reste une table, je réserverai.~После si условие стоит в présent, в главной части подходит futur.
+##
+Объяснить задержку|Сообщить причину задержки и новое время прибытия.|Parce que вводит причину, donc — последствие. Для уже прошедшего события подойдёт j’ai raté.
+J’ai raté mon train.~Я опоздал на поезд.
+Je prendrai donc le suivant.~Поэтому я сяду на следующий.
+Je serai là vers neuf heures.~Я буду там около девяти.
+Ne m’attendez pas pour dîner.~Не ждите меня к ужину.
+Tu seras là pour dîner ? / Non, j’ai raté mon train. Je serai là vers neuf heures.
+Когда ждать собеседника?|Около девяти.|Ровно в восемь.|До ужина.
+Ne attendez pas pour dîner.~Ne m’attendez pas pour dîner.~Для «меня» нужно m’ перед attendez. Pas стоит после глагола.

@@ -1,0 +1,253 @@
+{
+  "id": "es-a1-46",
+  "title": "Звонок во время ужина",
+  "topic": "Привычки и события",
+  "order": 45,
+  "objective": "Построить короткий рассказ о фоновом и внезапном событии.",
+  "guide": "Mientras + imperfecto описывает фон. Llamó в простом прошедшем называет отдельный звонок.",
+  "vocabulary": [
+    {
+      "id": "es:v13:46:p0",
+      "en": "Preparaba la cena cuando llamaste.",
+      "ru": "Я готовил ужин, когда ты позвонил."
+    },
+    {
+      "id": "es:v13:46:p1",
+      "en": "Mientras cenábamos, sonó el teléfono.",
+      "ru": "Пока мы ужинали, зазвонил телефон."
+    },
+    {
+      "id": "es:v13:46:p2",
+      "en": "No pude contestar en ese momento.",
+      "ru": "Я не смог тогда ответить."
+    },
+    {
+      "id": "es:v13:46:p3",
+      "en": "Te devolví la llamada después.",
+      "ru": "Я перезвонил тебе позже."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Звонок во время ужина",
+      "phrase": "Preparaba la cena cuando llamaste.",
+      "translation": "Я готовил ужин, когда ты позвонил.",
+      "explanation": "Mientras + imperfecto описывает фон. Llamó в простом прошедшем называет отдельный звонок."
+    },
+    {
+      "character": "miko",
+      "title": "Звонок во время ужина",
+      "phrase": "Mientras cenábamos, sonó el teléfono.",
+      "translation": "Пока мы ужинали, зазвонил телефон.",
+      "explanation": "Mientras cenábamos, sonó el teléfono. — Пока мы ужинали, зазвонил телефон."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Звонок во время ужина",
+      "phrase": "No pude contestar en ese momento.",
+      "translation": "Я не смог тогда ответить.",
+      "explanation": "No pude contestar en ese momento. — Я не смог тогда ответить."
+    },
+    {
+      "character": "orbi",
+      "title": "Звонок во время ужина",
+      "phrase": "Te devolví la llamada después.",
+      "translation": "Я перезвонил тебе позже.",
+      "explanation": "Te devolví la llamada después. — Я перезвонил тебе позже."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Preparaba la cena cuando llamaste.",
+      "translation": "Я готовил ужин, когда ты позвонил.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я готовил ужин, когда ты позвонил.",
+      "options": [
+        "Я не смог тогда ответить.",
+        "Я готовил ужин, когда ты позвонил.",
+        "Я перезвонил тебе позже."
+      ],
+      "explanation": "Mientras + imperfecto описывает фон. Llamó в простом прошедшем называет отдельный звонок."
+    },
+    {
+      "id": "apply",
+      "phrase": "Mientras cenábamos, sonó el teléfono.",
+      "translation": "Пока мы ужинали, зазвонил телефон.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Mientras cenábamos, sonó el teléfono.",
+      "tokens": [
+        "Mientras",
+        "cenábamos,",
+        "sonó",
+        "el",
+        "teléfono."
+      ],
+      "character": "miko",
+      "explanation": "Mientras cenábamos, sonó el teléfono. — Пока мы ужинали, зазвонил телефон."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-46-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я готовил ужин, когда ты позвонил.»?",
+      "answers": [
+        "Preparaba la cena cuando llamaste."
+      ],
+      "explanation": "Preparaba la cena cuando llamaste. — Я готовил ужин, когда ты позвонил.",
+      "wordIds": [
+        "es:v13:46:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Mientras cenábamos, sonó el teléfono.",
+        "Te devolví la llamada después.",
+        "Preparaba la cena cuando llamaste."
+      ],
+      "hint": "Preparaba la cena cuando llamaste. — Я готовил ужин, когда ты позвонил."
+    },
+    {
+      "id": "es-a1-46-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Пока мы ужинали, зазвонил телефон.",
+      "answers": [
+        "Mientras cenábamos, sonó el teléfono."
+      ],
+      "explanation": "Mientras + imperfecto описывает фон. Llamó в простом прошедшем называет отдельный звонок.",
+      "wordIds": [
+        "es:v13:46:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Mientras",
+        "cenábamos,",
+        "sonó",
+        "el",
+        "teléfono."
+      ],
+      "hint": "Mientras cenábamos, sonó el teléfono. — Пока мы ужинали, зазвонил телефон."
+    },
+    {
+      "id": "es-a1-46-e03",
+      "type": "dialogue",
+      "prompt": "Почему ответили позже?",
+      "answers": [
+        "Семья ужинала."
+      ],
+      "explanation": "В диалоге: ¿Por qué no contestaste? / Estábamos cenando. Te llamé después. Поэтому: Семья ужинала.",
+      "wordIds": [
+        "es:v13:46:p0",
+        "es:v13:46:p1",
+        "es:v13:46:p2",
+        "es:v13:46:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Por qué no contestaste?\nМико: Estábamos cenando. Te llamé después.",
+      "options": [
+        "Телефон потерялся.",
+        "Звонка не было.",
+        "Семья ужинала."
+      ]
+    },
+    {
+      "id": "es-a1-46-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я не смог тогда ответить."
+      ],
+      "explanation": "No pude contestar en ese momento. — Я не смог тогда ответить.",
+      "wordIds": [
+        "es:v13:46:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "No pude contestar en ese momento.",
+      "options": [
+        "Я готовил ужин, когда ты позвонил.",
+        "Я не смог тогда ответить.",
+        "Пока мы ужинали, зазвонил телефон."
+      ],
+      "hint": "No pude contestar en ese momento. — Я не смог тогда ответить."
+    },
+    {
+      "id": "es-a1-46-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Mientras cenábamos, sonar el teléfono.",
+      "answers": [
+        "Mientras cenábamos, sonó el teléfono."
+      ],
+      "explanation": "Вторая часть сообщает событие, поэтому нужен спрягаемый глагол sonó.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Mientras cenábamos, sonar el teléfono.",
+        "Mientras cenábamos, sonó el teléfono."
+      ],
+      "hint": "Mientras + imperfecto описывает фон. Llamó в простом прошедшем называет отдельный звонок."
+    },
+    {
+      "id": "es-a1-46-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я перезвонил тебе позже.». Можно написать вместо микрофона.",
+      "answers": [
+        "Te devolví la llamada después."
+      ],
+      "explanation": "Te devolví la llamada después. — Я перезвонил тебе позже.",
+      "wordIds": [
+        "es:v13:46:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Te devolví la llamada después.",
+      "recall": {
+        "phrase": "Te devolví la llamada después.",
+        "meaning": "Я перезвонил тебе позже."
+      }
+    },
+    {
+      "id": "es-a1-46-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я готовил ужин, когда ты позвонил.",
+      "answers": [
+        "Preparaba la cena cuando llamaste."
+      ],
+      "explanation": "Mientras + imperfecto описывает фон. Llamó в простом прошедшем называет отдельный звонок.",
+      "wordIds": [
+        "es:v13:46:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Preparaba la cena cuando llamaste.",
+        "meaning": "Я готовил ужин, когда ты позвонил."
+      }
+    },
+    {
+      "id": "es-a1-46-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сейчас я покупаю хлеб рядом с домом.",
+      "answers": [
+        "Ahora compro pan cerca de casa."
+      ],
+      "explanation": "Ahora compro pan cerca de casa. — Сейчас я покупаю хлеб рядом с домом.",
+      "wordIds": [
+        "es:v13:45:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "De niño iba al mercado con mi padre.",
+        "Comprábamos pan todos los sábados.",
+        "La panadería abría temprano.",
+        "Ahora compro pan cerca de casa."
+      ]
+    }
+  ]
+}

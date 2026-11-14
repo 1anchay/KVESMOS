@@ -16,10 +16,9 @@ class UnitGuidePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final app = ref.watch(appProvider);
     final units = LearningUnit.fromCatalog(app.repository.catalog);
-    final current = units.where((u) => !u.mastered(app.progress)).firstOrNull;
+    final next = app.courseStart.next;
+    final current = units.where((u) => u.lessons.contains(next)).firstOrNull;
     final type = Theme.of(context).textTheme;
-    final currentOrder =
-        current?.next(app.progress)?.order ?? app.repository.catalog.length;
     return pageBody([
       Row(
         children: [
@@ -32,12 +31,11 @@ class UnitGuidePage extends ConsumerWidget {
       ),
       Text('${app.course.name} · цель, пример, применение и повторение'),
       const SizedBox(height: 16),
-      if (current != null)
+      if (next != null)
         FilledButton.icon(
-          onPressed: () =>
-              showLessonPreview(context, app, current.next(app.progress)!),
+          onPressed: () => showLessonPreview(context, app, next),
           icon: const Icon(Icons.play_arrow_rounded),
-          label: Text('Продолжить: ${current.next(app.progress)!.title}'),
+          label: Text('Продолжить: ${next.title}'),
         ),
       for (final unit in units) ...[
         const SizedBox(height: 20),
@@ -92,17 +90,21 @@ class UnitGuidePage extends ConsumerWidget {
                   ),
                   title: Text(lesson.title),
                   subtitle: Text(
-                    app.repository.learningObjectives[lesson.id] ??
-                        lesson.topic,
+                    [
+                      if (app.courseStart.entry?.id == lesson.id &&
+                          lesson.order > 0)
+                        'Выбранная точка старта',
+                      if (app.courseStart.deferred(lesson))
+                        'Можно пройти позже',
+                      if (next?.id == lesson.id) 'Текущий урок',
+                      app.repository.learningObjectives[lesson.id] ??
+                          lesson.topic,
+                    ].join('\n'),
                   ),
-                  onTap:
-                      lesson.order <= currentOrder ||
-                          app.progress.completed.contains(lesson.id)
+                  onTap: app.courseStart.available(lesson)
                       ? () => showLessonPreview(context, app, lesson)
                       : null,
-                  trailing:
-                      lesson.order > currentOrder &&
-                          !app.progress.completed.contains(lesson.id)
+                  trailing: !app.courseStart.available(lesson)
                       ? const Icon(Icons.lock_outline)
                       : const Icon(Icons.chevron_right),
                 ),

@@ -1,0 +1,253 @@
+{
+  "id": "es-a1-60",
+  "title": "Новости для друзей",
+  "topic": "Причины и новости",
+  "order": 59,
+  "objective": "Написать сообщение с событием, фоном и следующим шагом.",
+  "guide": "Событие в законченном прошлом можно выразить формой llegamos. Фон — hacía frío. Согласованный план — vamos a…",
+  "vocabulary": [
+    {
+      "id": "es:v13:60:p0",
+      "en": "Llegamos ayer por la noche.",
+      "ru": "Мы приехали вчера вечером."
+    },
+    {
+      "id": "es:v13:60:p1",
+      "en": "Hacía frío, pero no llovía.",
+      "ru": "Было холодно, но дождя не было."
+    },
+    {
+      "id": "es:v13:60:p2",
+      "en": "Mañana vamos a visitar el puerto.",
+      "ru": "Завтра мы собираемся посетить порт."
+    },
+    {
+      "id": "es:v13:60:p3",
+      "en": "Os mando fotos cuando vuelva.",
+      "ru": "Пришлю вам фото, когда вернусь."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новости для друзей",
+      "phrase": "Llegamos ayer por la noche.",
+      "translation": "Мы приехали вчера вечером.",
+      "explanation": "Событие в законченном прошлом можно выразить формой llegamos. Фон — hacía frío. Согласованный план — vamos a…"
+    },
+    {
+      "character": "miko",
+      "title": "Новости для друзей",
+      "phrase": "Hacía frío, pero no llovía.",
+      "translation": "Было холодно, но дождя не было.",
+      "explanation": "Hacía frío, pero no llovía. — Было холодно, но дождя не было."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Новости для друзей",
+      "phrase": "Mañana vamos a visitar el puerto.",
+      "translation": "Завтра мы собираемся посетить порт.",
+      "explanation": "Mañana vamos a visitar el puerto. — Завтра мы собираемся посетить порт."
+    },
+    {
+      "character": "orbi",
+      "title": "Новости для друзей",
+      "phrase": "Os mando fotos cuando vuelva.",
+      "translation": "Пришлю вам фото, когда вернусь.",
+      "explanation": "Os mando fotos cuando vuelva. — Пришлю вам фото, когда вернусь."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Llegamos ayer por la noche.",
+      "translation": "Мы приехали вчера вечером.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мы приехали вчера вечером.",
+      "options": [
+        "Завтра мы собираемся посетить порт.",
+        "Мы приехали вчера вечером.",
+        "Пришлю вам фото, когда вернусь."
+      ],
+      "explanation": "Событие в законченном прошлом можно выразить формой llegamos. Фон — hacía frío. Согласованный план — vamos a…"
+    },
+    {
+      "id": "apply",
+      "phrase": "Hacía frío, pero no llovía.",
+      "translation": "Было холодно, но дождя не было.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Hacía frío, pero no llovía.",
+      "tokens": [
+        "Hacía",
+        "frío,",
+        "pero",
+        "no",
+        "llovía."
+      ],
+      "character": "miko",
+      "explanation": "Hacía frío, pero no llovía. — Было холодно, но дождя не было."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-60-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Были пробки, поэтому мы поехали на метро.",
+      "answers": [
+        "Había mucho tráfico; por eso fuimos en metro."
+      ],
+      "explanation": "Había mucho tráfico; por eso fuimos en metro. — Были пробки, поэтому мы поехали на метро.",
+      "wordIds": [
+        "es:v13:59:p1"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Elegimos este hotel porque queda cerca.",
+        "Había mucho tráfico; por eso fuimos en metro.",
+        "El trayecto duró veinte minutos.",
+        "Volveremos a tomar el metro mañana."
+      ]
+    },
+    {
+      "id": "es-a1-60-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Мы приехали вчера вечером.»?",
+      "answers": [
+        "Llegamos ayer por la noche."
+      ],
+      "explanation": "Llegamos ayer por la noche. — Мы приехали вчера вечером.",
+      "wordIds": [
+        "es:v13:60:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Hacía frío, pero no llovía.",
+        "Os mando fotos cuando vuelva.",
+        "Llegamos ayer por la noche."
+      ],
+      "hint": "Llegamos ayer por la noche. — Мы приехали вчера вечером."
+    },
+    {
+      "id": "es-a1-60-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Было холодно, но дождя не было.",
+      "answers": [
+        "Hacía frío, pero no llovía."
+      ],
+      "explanation": "Событие в законченном прошлом можно выразить формой llegamos. Фон — hacía frío. Согласованный план — vamos a…",
+      "wordIds": [
+        "es:v13:60:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Hacía",
+        "frío,",
+        "pero",
+        "no",
+        "llovía."
+      ],
+      "hint": "Hacía frío, pero no llovía. — Было холодно, но дождя не было."
+    },
+    {
+      "id": "es-a1-60-e04",
+      "type": "dialogue",
+      "prompt": "Когда друзья планируют посетить порт?",
+      "answers": [
+        "Завтра."
+      ],
+      "explanation": "В диалоге: ¿Ya llegasteis? / Sí, anoche. Hoy descansamos y mañana vamos al puerto. Поэтому: Завтра.",
+      "wordIds": [
+        "es:v13:60:p0",
+        "es:v13:60:p1",
+        "es:v13:60:p2",
+        "es:v13:60:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: ¿Ya llegasteis?\nМико: Sí, anoche. Hoy descansamos y mañana vamos al puerto.",
+      "options": [
+        "Сегодня вечером.",
+        "Они уже там были.",
+        "Завтра."
+      ]
+    },
+    {
+      "id": "es-a1-60-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Завтра мы собираемся посетить порт."
+      ],
+      "explanation": "Mañana vamos a visitar el puerto. — Завтра мы собираемся посетить порт.",
+      "wordIds": [
+        "es:v13:60:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Mañana vamos a visitar el puerto.",
+      "options": [
+        "Мы приехали вчера вечером.",
+        "Завтра мы собираемся посетить порт.",
+        "Было холодно, но дождя не было."
+      ],
+      "hint": "Mañana vamos a visitar el puerto. — Завтра мы собираемся посетить порт."
+    },
+    {
+      "id": "es-a1-60-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ayer llegar por la noche.",
+      "answers": [
+        "Ayer llegamos por la noche."
+      ],
+      "explanation": "Для завершённого события с nosotros нужен глагол llegamos.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ayer llegar por la noche.",
+        "Ayer llegamos por la noche."
+      ],
+      "hint": "Событие в законченном прошлом можно выразить формой llegamos. Фон — hacía frío. Согласованный план — vamos a…"
+    },
+    {
+      "id": "es-a1-60-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Пришлю вам фото, когда вернусь.». Можно написать вместо микрофона.",
+      "answers": [
+        "Os mando fotos cuando vuelva."
+      ],
+      "explanation": "Os mando fotos cuando vuelva. — Пришлю вам фото, когда вернусь.",
+      "wordIds": [
+        "es:v13:60:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Os mando fotos cuando vuelva.",
+      "recall": {
+        "phrase": "Os mando fotos cuando vuelva.",
+        "meaning": "Пришлю вам фото, когда вернусь."
+      }
+    },
+    {
+      "id": "es-a1-60-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мы приехали вчера вечером.",
+      "answers": [
+        "Llegamos ayer por la noche."
+      ],
+      "explanation": "Событие в законченном прошлом можно выразить формой llegamos. Фон — hacía frío. Согласованный план — vamos a…",
+      "wordIds": [
+        "es:v13:60:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Llegamos ayer por la noche.",
+        "meaning": "Мы приехали вчера вечером."
+      }
+    }
+  ]
+}

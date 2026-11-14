@@ -1,0 +1,253 @@
+{
+  "id": "es-a1-52",
+  "title": "Я с тобой согласен",
+  "topic": "Выбор и согласие",
+  "order": 51,
+  "objective": "Выразить согласие и вежливо добавить оговорку.",
+  "guide": "Estoy de acuerdo — «я согласен». Pero можно ввести конкретную оговорку.",
+  "vocabulary": [
+    {
+      "id": "es:v13:52:p0",
+      "en": "Estoy de acuerdo con tu idea.",
+      "ru": "Я согласен с твоей идеей."
+    },
+    {
+      "id": "es:v13:52:p1",
+      "en": "Pero primero tenemos que llamar.",
+      "ru": "Но сначала нам нужно позвонить."
+    },
+    {
+      "id": "es:v13:52:p2",
+      "en": "Me parece una buena solución.",
+      "ru": "Мне кажется, это хорошее решение."
+    },
+    {
+      "id": "es:v13:52:p3",
+      "en": "Prefiero hablarlo mañana con calma.",
+      "ru": "Я предпочитаю спокойно обсудить это завтра."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Я с тобой согласен",
+      "phrase": "Estoy de acuerdo con tu idea.",
+      "translation": "Я согласен с твоей идеей.",
+      "explanation": "Estoy de acuerdo — «я согласен». Pero можно ввести конкретную оговорку."
+    },
+    {
+      "character": "miko",
+      "title": "Я с тобой согласен",
+      "phrase": "Pero primero tenemos que llamar.",
+      "translation": "Но сначала нам нужно позвонить.",
+      "explanation": "Pero primero tenemos que llamar. — Но сначала нам нужно позвонить."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Я с тобой согласен",
+      "phrase": "Me parece una buena solución.",
+      "translation": "Мне кажется, это хорошее решение.",
+      "explanation": "Me parece una buena solución. — Мне кажется, это хорошее решение."
+    },
+    {
+      "character": "orbi",
+      "title": "Я с тобой согласен",
+      "phrase": "Prefiero hablarlo mañana con calma.",
+      "translation": "Я предпочитаю спокойно обсудить это завтра.",
+      "explanation": "Prefiero hablarlo mañana con calma. — Я предпочитаю спокойно обсудить это завтра."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Estoy de acuerdo con tu idea.",
+      "translation": "Я согласен с твоей идеей.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я согласен с твоей идеей.",
+      "options": [
+        "Мне кажется, это хорошее решение.",
+        "Я согласен с твоей идеей.",
+        "Я предпочитаю спокойно обсудить это завтра."
+      ],
+      "explanation": "Estoy de acuerdo — «я согласен». Pero можно ввести конкретную оговорку."
+    },
+    {
+      "id": "apply",
+      "phrase": "Pero primero tenemos que llamar.",
+      "translation": "Но сначала нам нужно позвонить.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Pero primero tenemos que llamar.",
+      "tokens": [
+        "Pero",
+        "primero",
+        "tenemos",
+        "que",
+        "llamar."
+      ],
+      "character": "miko",
+      "explanation": "Pero primero tenemos que llamar. — Но сначала нам нужно позвонить."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-52-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я согласен с твоей идеей.»?",
+      "answers": [
+        "Estoy de acuerdo con tu idea."
+      ],
+      "explanation": "Estoy de acuerdo con tu idea. — Я согласен с твоей идеей.",
+      "wordIds": [
+        "es:v13:52:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Pero primero tenemos que llamar.",
+        "Prefiero hablarlo mañana con calma.",
+        "Estoy de acuerdo con tu idea."
+      ],
+      "hint": "Estoy de acuerdo con tu idea. — Я согласен с твоей идеей."
+    },
+    {
+      "id": "es-a1-52-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Но сначала нам нужно позвонить.",
+      "answers": [
+        "Pero primero tenemos que llamar."
+      ],
+      "explanation": "Estoy de acuerdo — «я согласен». Pero можно ввести конкретную оговорку.",
+      "wordIds": [
+        "es:v13:52:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Pero",
+        "primero",
+        "tenemos",
+        "que",
+        "llamar."
+      ],
+      "hint": "Pero primero tenemos que llamar. — Но сначала нам нужно позвонить."
+    },
+    {
+      "id": "es-a1-52-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно сделать прежде всего?",
+      "answers": [
+        "Позвонить."
+      ],
+      "explanation": "В диалоге: ¿Te parece bien reservar ya? / Sí, estoy de acuerdo, pero primero tenemos que llamar. Поэтому: Позвонить.",
+      "wordIds": [
+        "es:v13:52:p0",
+        "es:v13:52:p1",
+        "es:v13:52:p2",
+        "es:v13:52:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Te parece bien reservar ya?\nМико: Sí, estoy de acuerdo, pero primero tenemos que llamar.",
+      "options": [
+        "Заплатить.",
+        "Прийти завтра.",
+        "Позвонить."
+      ]
+    },
+    {
+      "id": "es-a1-52-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мне кажется, это хорошее решение."
+      ],
+      "explanation": "Me parece una buena solución. — Мне кажется, это хорошее решение.",
+      "wordIds": [
+        "es:v13:52:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Me parece una buena solución.",
+      "options": [
+        "Я согласен с твоей идеей.",
+        "Мне кажется, это хорошее решение.",
+        "Но сначала нам нужно позвонить."
+      ],
+      "hint": "Me parece una buena solución. — Мне кажется, это хорошее решение."
+    },
+    {
+      "id": "es-a1-52-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Soy de acuerdo con tu idea.",
+      "answers": [
+        "Estoy de acuerdo con tu idea."
+      ],
+      "explanation": "Устойчивое выражение — estar de acuerdo.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Soy de acuerdo con tu idea.",
+        "Estoy de acuerdo con tu idea."
+      ],
+      "hint": "Estoy de acuerdo — «я согласен». Pero можно ввести конкретную оговорку."
+    },
+    {
+      "id": "es-a1-52-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я предпочитаю спокойно обсудить это завтра.». Можно написать вместо микрофона.",
+      "answers": [
+        "Prefiero hablarlo mañana con calma."
+      ],
+      "explanation": "Prefiero hablarlo mañana con calma. — Я предпочитаю спокойно обсудить это завтра.",
+      "wordIds": [
+        "es:v13:52:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Prefiero hablarlo mañana con calma.",
+      "recall": {
+        "phrase": "Prefiero hablarlo mañana con calma.",
+        "meaning": "Я предпочитаю спокойно обсудить это завтра."
+      }
+    },
+    {
+      "id": "es-a1-52-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я согласен с твоей идеей.",
+      "answers": [
+        "Estoy de acuerdo con tu idea."
+      ],
+      "explanation": "Estoy de acuerdo — «я согласен». Pero можно ввести конкретную оговорку.",
+      "wordIds": [
+        "es:v13:52:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Estoy de acuerdo con tu idea.",
+        "meaning": "Я согласен с твоей идеей."
+      }
+    },
+    {
+      "id": "es-a1-52-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы можем поехать на автобусе вместо поезда.",
+      "answers": [
+        "Podemos tomar el autobús en vez del tren."
+      ],
+      "explanation": "Podemos tomar el autobús en vez del tren. — Мы можем поехать на автобусе вместо поезда.",
+      "wordIds": [
+        "es:v13:51:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Han cancelado nuestro tren.",
+        "Podemos tomar el autobús en vez del tren.",
+        "¿A qué hora sale el siguiente?",
+        "El billete también sirve para el autobús."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "id": "en-a1-93",
+  "title": "Было бы удобнее",
+  "topic": "Предположения и прошлое",
+  "order": 92,
+  "objective": "Обсудить воображаемый вариант и его результат.",
+  "guide": "If + Past Simple и would + глагол выражают предположение о воображаемом выборе.",
+  "vocabulary": [
+    {
+      "id": "en:v13:93:p0",
+      "en": "If we lived closer, we'd walk to work.",
+      "ru": "Если бы мы жили ближе, ходили бы на работу пешком."
+    },
+    {
+      "id": "en:v13:93:p1",
+      "en": "It would be easier if we had a car.",
+      "ru": "Было бы проще, если бы у нас была машина."
+    },
+    {
+      "id": "en:v13:93:p2",
+      "en": "The rent is lower outside the city.",
+      "ru": "За городом аренда ниже."
+    },
+    {
+      "id": "en:v13:93:p3",
+      "en": "I'd still choose the flat near the station.",
+      "ru": "Я всё равно выбрал бы квартиру у станции."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Было бы удобнее",
+      "phrase": "If we lived closer, we'd walk to work.",
+      "translation": "Если бы мы жили ближе, ходили бы на работу пешком.",
+      "explanation": "If + Past Simple и would + глагол выражают предположение о воображаемом выборе."
+    },
+    {
+      "character": "miko",
+      "title": "Было бы удобнее",
+      "phrase": "It would be easier if we had a car.",
+      "translation": "Было бы проще, если бы у нас была машина.",
+      "explanation": "It would be easier if we had a car. — Было бы проще, если бы у нас была машина."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Было бы удобнее",
+      "phrase": "The rent is lower outside the city.",
+      "translation": "За городом аренда ниже.",
+      "explanation": "The rent is lower outside the city. — За городом аренда ниже."
+    },
+    {
+      "character": "orbi",
+      "title": "Было бы удобнее",
+      "phrase": "I'd still choose the flat near the station.",
+      "translation": "Я всё равно выбрал бы квартиру у станции.",
+      "explanation": "I'd still choose the flat near the station. — Я всё равно выбрал бы квартиру у станции."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "If we lived closer, we'd walk to work.",
+      "translation": "Если бы мы жили ближе, ходили бы на работу пешком.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Если бы мы жили ближе, ходили бы на работу пешком.",
+      "options": [
+        "За городом аренда ниже.",
+        "Если бы мы жили ближе, ходили бы на работу пешком.",
+        "Я всё равно выбрал бы квартиру у станции."
+      ],
+      "explanation": "If + Past Simple и would + глагол выражают предположение о воображаемом выборе."
+    },
+    {
+      "id": "apply",
+      "phrase": "It would be easier if we had a car.",
+      "translation": "Было бы проще, если бы у нас была машина.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "It would be easier if we had a car.",
+      "tokens": [
+        "It",
+        "would",
+        "be",
+        "easier",
+        "if",
+        "we",
+        "had",
+        "a",
+        "car."
+      ],
+      "character": "miko",
+      "explanation": "It would be easier if we had a car. — Было бы проще, если бы у нас была машина."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-93-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Не могли бы вы сказать, когда прибудет посылка?",
+      "answers": [
+        "Could you tell me when the parcel will arrive?"
+      ],
+      "explanation": "Could you tell me when the parcel will arrive? — Не могли бы вы сказать, когда прибудет посылка?",
+      "wordIds": [
+        "en:v13:92:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Could you tell me when the parcel will arrive?",
+        "I'd like to know where I can collect it.",
+        "The address on the label is correct.",
+        "Thank you for looking into this."
+      ]
+    },
+    {
+      "id": "en-a1-93-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Если бы мы жили ближе, ходили бы на работу пешком.»?",
+      "answers": [
+        "If we lived closer, we'd walk to work."
+      ],
+      "explanation": "If we lived closer, we'd walk to work. — Если бы мы жили ближе, ходили бы на работу пешком.",
+      "wordIds": [
+        "en:v13:93:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "It would be easier if we had a car.",
+        "I'd still choose the flat near the station.",
+        "If we lived closer, we'd walk to work."
+      ],
+      "hint": "If we lived closer, we'd walk to work. — Если бы мы жили ближе, ходили бы на работу пешком."
+    },
+    {
+      "id": "en-a1-93-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Было бы проще, если бы у нас была машина.",
+      "answers": [
+        "It would be easier if we had a car."
+      ],
+      "explanation": "If + Past Simple и would + глагол выражают предположение о воображаемом выборе.",
+      "wordIds": [
+        "en:v13:93:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "It",
+        "would",
+        "be",
+        "easier",
+        "if",
+        "we",
+        "had",
+        "a",
+        "car."
+      ],
+      "hint": "It would be easier if we had a car. — Было бы проще, если бы у нас была машина."
+    },
+    {
+      "id": "en-a1-93-e04",
+      "type": "dialogue",
+      "prompt": "Что могло бы повлиять на решение?",
+      "answers": [
+        "Более частые автобусы."
+      ],
+      "explanation": "В диалоге: Would you move farther out? / If the buses were more frequent, I would. Поэтому: Более частые автобусы.",
+      "wordIds": [
+        "en:v13:93:p0",
+        "en:v13:93:p1",
+        "en:v13:93:p2",
+        "en:v13:93:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Would you move farther out?\nМико: If the buses were more frequent, I would.",
+      "options": [
+        "Подорожание аренды.",
+        "Смена работы.",
+        "Более частые автобусы."
+      ]
+    },
+    {
+      "id": "en-a1-93-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "За городом аренда ниже."
+      ],
+      "explanation": "The rent is lower outside the city. — За городом аренда ниже.",
+      "wordIds": [
+        "en:v13:93:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "The rent is lower outside the city.",
+      "options": [
+        "Если бы мы жили ближе, ходили бы на работу пешком.",
+        "За городом аренда ниже.",
+        "Было бы проще, если бы у нас была машина."
+      ],
+      "hint": "The rent is lower outside the city. — За городом аренда ниже."
+    },
+    {
+      "id": "en-a1-93-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:93:p0",
+        "en:v13:93:p1",
+        "en:v13:93:p2",
+        "en:v13:93:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:93:p0",
+          "en": "If we lived closer, we'd walk to work.",
+          "ru": "Если бы мы жили ближе, ходили бы на работу пешком."
+        },
+        {
+          "id": "en:v13:93:p1",
+          "en": "It would be easier if we had a car.",
+          "ru": "Было бы проще, если бы у нас была машина."
+        },
+        {
+          "id": "en:v13:93:p2",
+          "en": "The rent is lower outside the city.",
+          "ru": "За городом аренда ниже."
+        },
+        {
+          "id": "en:v13:93:p3",
+          "en": "I'd still choose the flat near the station.",
+          "ru": "Я всё равно выбрал бы квартиру у станции."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-93-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: If we would live closer, we'd walk to work.",
+      "answers": [
+        "If we lived closer, we'd walk to work."
+      ],
+      "explanation": "В части с if нужна форма lived; would стоит в результате.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "If we would live closer, we'd walk to work.",
+        "If we lived closer, we'd walk to work."
+      ],
+      "hint": "If + Past Simple и would + глагол выражают предположение о воображаемом выборе."
+    },
+    {
+      "id": "en-a1-93-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я всё равно выбрал бы квартиру у станции.». Можно написать вместо микрофона.",
+      "answers": [
+        "I'd still choose the flat near the station."
+      ],
+      "explanation": "I'd still choose the flat near the station. — Я всё равно выбрал бы квартиру у станции.",
+      "wordIds": [
+        "en:v13:93:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I'd still choose the flat near the station.",
+      "recall": {
+        "phrase": "I'd still choose the flat near the station.",
+        "meaning": "Я всё равно выбрал бы квартиру у станции."
+      }
+    },
+    {
+      "id": "en-a1-93-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Если бы мы жили ближе, ходили бы на работу пешком.",
+      "answers": [
+        "If we lived closer, we'd walk to work."
+      ],
+      "explanation": "If + Past Simple и would + глагол выражают предположение о воображаемом выборе.",
+      "wordIds": [
+        "en:v13:93:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "If we lived closer, we'd walk to work.",
+        "meaning": "Если бы мы жили ближе, ходили бы на работу пешком."
+      }
+    }
+  ]
+}

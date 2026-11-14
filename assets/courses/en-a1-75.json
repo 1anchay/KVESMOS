@@ -1,0 +1,296 @@
+{
+  "id": "en-a1-75",
+  "title": "Передать сообщение",
+  "topic": "Сообщения и уточнения",
+  "order": 74,
+  "objective": "Сообщить, кто звонил, и передать просьбу.",
+  "guide": "Ask + получатель + to + действие. Please call her back просит перезвонить.",
+  "vocabulary": [
+    {
+      "id": "en:v13:75:p0",
+      "en": "Maya called while you were out.",
+      "ru": "Майя звонила, пока тебя не было."
+    },
+    {
+      "id": "en:v13:75:p1",
+      "en": "She asked you to call her back.",
+      "ru": "Она попросила тебя ей перезвонить."
+    },
+    {
+      "id": "en:v13:75:p2",
+      "en": "She'll be free after three.",
+      "ru": "Она освободится после трёх."
+    },
+    {
+      "id": "en:v13:75:p3",
+      "en": "I've left her number on your desk.",
+      "ru": "Я оставил её номер на твоём столе."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Передать сообщение",
+      "phrase": "Maya called while you were out.",
+      "translation": "Майя звонила, пока тебя не было.",
+      "explanation": "Ask + получатель + to + действие. Please call her back просит перезвонить."
+    },
+    {
+      "character": "miko",
+      "title": "Передать сообщение",
+      "phrase": "She asked you to call her back.",
+      "translation": "Она попросила тебя ей перезвонить.",
+      "explanation": "She asked you to call her back. — Она попросила тебя ей перезвонить."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Передать сообщение",
+      "phrase": "She'll be free after three.",
+      "translation": "Она освободится после трёх.",
+      "explanation": "She'll be free after three. — Она освободится после трёх."
+    },
+    {
+      "character": "orbi",
+      "title": "Передать сообщение",
+      "phrase": "I've left her number on your desk.",
+      "translation": "Я оставил её номер на твоём столе.",
+      "explanation": "I've left her number on your desk. — Я оставил её номер на твоём столе."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Maya called while you were out.",
+      "translation": "Майя звонила, пока тебя не было.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Майя звонила, пока тебя не было.",
+      "options": [
+        "Она освободится после трёх.",
+        "Майя звонила, пока тебя не было.",
+        "Я оставил её номер на твоём столе."
+      ],
+      "explanation": "Ask + получатель + to + действие. Please call her back просит перезвонить."
+    },
+    {
+      "id": "apply",
+      "phrase": "She asked you to call her back.",
+      "translation": "Она попросила тебя ей перезвонить.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "She asked you to call her back.",
+      "tokens": [
+        "She",
+        "asked",
+        "you",
+        "to",
+        "call",
+        "her",
+        "back."
+      ],
+      "character": "miko",
+      "explanation": "She asked you to call her back. — Она попросила тебя ей перезвонить."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-75-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Завтра могу прислать черновик.",
+      "answers": [
+        "I can send you a draft tomorrow."
+      ],
+      "explanation": "I can send you a draft tomorrow. — Завтра могу прислать черновик.",
+      "wordIds": [
+        "en:v13:74:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Can you finish it by Friday?",
+        "I'll work on it until Thursday evening.",
+        "I can send you a draft tomorrow.",
+        "We need time to check the figures."
+      ]
+    },
+    {
+      "id": "en-a1-75-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Майя звонила, пока тебя не было.»?",
+      "answers": [
+        "Maya called while you were out."
+      ],
+      "explanation": "Maya called while you were out. — Майя звонила, пока тебя не было.",
+      "wordIds": [
+        "en:v13:75:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "She asked you to call her back.",
+        "I've left her number on your desk.",
+        "Maya called while you were out."
+      ],
+      "hint": "Maya called while you were out. — Майя звонила, пока тебя не было."
+    },
+    {
+      "id": "en-a1-75-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Она попросила тебя ей перезвонить.",
+      "answers": [
+        "She asked you to call her back."
+      ],
+      "explanation": "Ask + получатель + to + действие. Please call her back просит перезвонить.",
+      "wordIds": [
+        "en:v13:75:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "She",
+        "asked",
+        "you",
+        "to",
+        "call",
+        "her",
+        "back."
+      ],
+      "hint": "She asked you to call her back. — Она попросила тебя ей перезвонить."
+    },
+    {
+      "id": "en-a1-75-e04",
+      "type": "dialogue",
+      "prompt": "Когда стоит перезвонить?",
+      "answers": [
+        "После трёх."
+      ],
+      "explanation": "В диалоге: Did Maya leave a message? / Yes. She asked you to call after three. Поэтому: После трёх.",
+      "wordIds": [
+        "en:v13:75:p0",
+        "en:v13:75:p1",
+        "en:v13:75:p2",
+        "en:v13:75:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Did Maya leave a message?\nМико: Yes. She asked you to call after three.",
+      "options": [
+        "Ровно в три ночи.",
+        "До трёх.",
+        "После трёх."
+      ]
+    },
+    {
+      "id": "en-a1-75-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Она освободится после трёх."
+      ],
+      "explanation": "She'll be free after three. — Она освободится после трёх.",
+      "wordIds": [
+        "en:v13:75:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "She'll be free after three.",
+      "options": [
+        "Майя звонила, пока тебя не было.",
+        "Она освободится после трёх.",
+        "Она попросила тебя ей перезвонить."
+      ],
+      "hint": "She'll be free after three. — Она освободится после трёх."
+    },
+    {
+      "id": "en-a1-75-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:75:p0",
+        "en:v13:75:p1",
+        "en:v13:75:p2",
+        "en:v13:75:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:75:p0",
+          "en": "Maya called while you were out.",
+          "ru": "Майя звонила, пока тебя не было."
+        },
+        {
+          "id": "en:v13:75:p1",
+          "en": "She asked you to call her back.",
+          "ru": "Она попросила тебя ей перезвонить."
+        },
+        {
+          "id": "en:v13:75:p2",
+          "en": "She'll be free after three.",
+          "ru": "Она освободится после трёх."
+        },
+        {
+          "id": "en:v13:75:p3",
+          "en": "I've left her number on your desk.",
+          "ru": "Я оставил её номер на твоём столе."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-75-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: She asked you call her back.",
+      "answers": [
+        "She asked you to call her back."
+      ],
+      "explanation": "После asked you здесь требуется to.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "She asked you call her back.",
+        "She asked you to call her back."
+      ],
+      "hint": "Ask + получатель + to + действие. Please call her back просит перезвонить."
+    },
+    {
+      "id": "en-a1-75-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я оставил её номер на твоём столе.». Можно написать вместо микрофона.",
+      "answers": [
+        "I've left her number on your desk."
+      ],
+      "explanation": "I've left her number on your desk. — Я оставил её номер на твоём столе.",
+      "wordIds": [
+        "en:v13:75:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I've left her number on your desk.",
+      "recall": {
+        "phrase": "I've left her number on your desk.",
+        "meaning": "Я оставил её номер на твоём столе."
+      }
+    },
+    {
+      "id": "en-a1-75-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Майя звонила, пока тебя не было.",
+      "answers": [
+        "Maya called while you were out."
+      ],
+      "explanation": "Ask + получатель + to + действие. Please call her back просит перезвонить.",
+      "wordIds": [
+        "en:v13:75:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Maya called while you were out.",
+        "meaning": "Майя звонила, пока тебя не было."
+      }
+    }
+  ]
+}

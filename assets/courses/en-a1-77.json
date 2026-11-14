@@ -1,0 +1,294 @@
+{
+  "id": "en-a1-77",
+  "title": "Перенести созвон",
+  "topic": "Расписание и причины",
+  "order": 76,
+  "objective": "Предложить новое время и подтвердить его.",
+  "guide": "Move a meeting to Friday обозначает перенос на пятницу. Does Friday work for you? проверяет удобство.",
+  "vocabulary": [
+    {
+      "id": "en:v13:77:p0",
+      "en": "Can we move the call to Friday?",
+      "ru": "Можем перенести звонок на пятницу?"
+    },
+    {
+      "id": "en:v13:77:p1",
+      "en": "Does Friday morning work for you?",
+      "ru": "Тебе подходит утро пятницы?"
+    },
+    {
+      "id": "en:v13:77:p2",
+      "en": "I'm tied up until noon.",
+      "ru": "До полудня я занят."
+    },
+    {
+      "id": "en:v13:77:p3",
+      "en": "Let's make it one o'clock.",
+      "ru": "Давай назначим на час."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Перенести созвон",
+      "phrase": "Can we move the call to Friday?",
+      "translation": "Можем перенести звонок на пятницу?",
+      "explanation": "Move a meeting to Friday обозначает перенос на пятницу. Does Friday work for you? проверяет удобство."
+    },
+    {
+      "character": "miko",
+      "title": "Перенести созвон",
+      "phrase": "Does Friday morning work for you?",
+      "translation": "Тебе подходит утро пятницы?",
+      "explanation": "Does Friday morning work for you? — Тебе подходит утро пятницы?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Перенести созвон",
+      "phrase": "I'm tied up until noon.",
+      "translation": "До полудня я занят.",
+      "explanation": "I'm tied up until noon. — До полудня я занят."
+    },
+    {
+      "character": "orbi",
+      "title": "Перенести созвон",
+      "phrase": "Let's make it one o'clock.",
+      "translation": "Давай назначим на час.",
+      "explanation": "Let's make it one o'clock. — Давай назначим на час."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Can we move the call to Friday?",
+      "translation": "Можем перенести звонок на пятницу?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Можем перенести звонок на пятницу?",
+      "options": [
+        "До полудня я занят.",
+        "Можем перенести звонок на пятницу?",
+        "Давай назначим на час."
+      ],
+      "explanation": "Move a meeting to Friday обозначает перенос на пятницу. Does Friday work for you? проверяет удобство."
+    },
+    {
+      "id": "apply",
+      "phrase": "Does Friday morning work for you?",
+      "translation": "Тебе подходит утро пятницы?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Does Friday morning work for you?",
+      "tokens": [
+        "Does",
+        "Friday",
+        "morning",
+        "work",
+        "for",
+        "you?"
+      ],
+      "character": "miko",
+      "explanation": "Does Friday morning work for you? — Тебе подходит утро пятницы?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-77-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "До полудня я занят."
+      ],
+      "explanation": "I'm tied up until noon. — До полудня я занят.",
+      "wordIds": [
+        "en:v13:77:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "I'm tied up until noon.",
+      "options": [
+        "Можем перенести звонок на пятницу?",
+        "До полудня я занят.",
+        "Тебе подходит утро пятницы?"
+      ],
+      "hint": "I'm tied up until noon. — До полудня я занят."
+    },
+    {
+      "id": "en-a1-77-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Тебе подходит утро пятницы?",
+      "answers": [
+        "Does Friday morning work for you?"
+      ],
+      "explanation": "Move a meeting to Friday обозначает перенос на пятницу. Does Friday work for you? проверяет удобство.",
+      "wordIds": [
+        "en:v13:77:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Does",
+        "Friday",
+        "morning",
+        "work",
+        "for",
+        "you?"
+      ],
+      "hint": "Does Friday morning work for you? — Тебе подходит утро пятницы?"
+    },
+    {
+      "id": "en-a1-77-e03",
+      "type": "dialogue",
+      "prompt": "На какое время предлагают перенести звонок?",
+      "answers": [
+        "На час дня."
+      ],
+      "explanation": "В диалоге: Does Friday morning work for you? / I'm tied up until noon. How about one? Поэтому: На час дня.",
+      "wordIds": [
+        "en:v13:77:p0",
+        "en:v13:77:p1",
+        "en:v13:77:p2",
+        "en:v13:77:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Does Friday morning work for you?\nМико: I'm tied up until noon. How about one?",
+      "options": [
+        "На полдень.",
+        "На утро.",
+        "На час дня."
+      ]
+    },
+    {
+      "id": "en-a1-77-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Можем перенести звонок на пятницу?»?",
+      "answers": [
+        "Can we move the call to Friday?"
+      ],
+      "explanation": "Can we move the call to Friday? — Можем перенести звонок на пятницу?",
+      "wordIds": [
+        "en:v13:77:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Does Friday morning work for you?",
+        "Let's make it one o'clock.",
+        "Can we move the call to Friday?"
+      ],
+      "hint": "Can we move the call to Friday? — Можем перенести звонок на пятницу?"
+    },
+    {
+      "id": "en-a1-77-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:77:p0",
+        "en:v13:77:p1",
+        "en:v13:77:p2",
+        "en:v13:77:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:77:p0",
+          "en": "Can we move the call to Friday?",
+          "ru": "Можем перенести звонок на пятницу?"
+        },
+        {
+          "id": "en:v13:77:p1",
+          "en": "Does Friday morning work for you?",
+          "ru": "Тебе подходит утро пятницы?"
+        },
+        {
+          "id": "en:v13:77:p2",
+          "en": "I'm tied up until noon.",
+          "ru": "До полудня я занят."
+        },
+        {
+          "id": "en:v13:77:p3",
+          "en": "Let's make it one o'clock.",
+          "ru": "Давай назначим на час."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-77-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Can we move the call on Friday instead of Thursday?",
+      "answers": [
+        "Can we move the call to Friday instead of Thursday?"
+      ],
+      "explanation": "Для нового времени встречи нужно to Friday.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Can we move the call on Friday instead of Thursday?",
+        "Can we move the call to Friday instead of Thursday?"
+      ],
+      "hint": "Move a meeting to Friday обозначает перенос на пятницу. Does Friday work for you? проверяет удобство."
+    },
+    {
+      "id": "en-a1-77-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Давай назначим на час.». Можно написать вместо микрофона.",
+      "answers": [
+        "Let's make it one o'clock."
+      ],
+      "explanation": "Let's make it one o'clock. — Давай назначим на час.",
+      "wordIds": [
+        "en:v13:77:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Let's make it one o'clock.",
+      "recall": {
+        "phrase": "Let's make it one o'clock.",
+        "meaning": "Давай назначим на час."
+      }
+    },
+    {
+      "id": "en-a1-77-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Можем перенести звонок на пятницу?",
+      "answers": [
+        "Can we move the call to Friday?"
+      ],
+      "explanation": "Move a meeting to Friday обозначает перенос на пятницу. Does Friday work for you? проверяет удобство.",
+      "wordIds": [
+        "en:v13:77:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Can we move the call to Friday?",
+        "meaning": "Можем перенести звонок на пятницу?"
+      }
+    },
+    {
+      "id": "en-a1-77-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Ты имеешь в виду следующий вторник?",
+      "answers": [
+        "Do you mean next Tuesday?"
+      ],
+      "explanation": "Do you mean next Tuesday? — Ты имеешь в виду следующий вторник?",
+      "wordIds": [
+        "en:v13:76:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Do you mean next Tuesday?",
+        "Let me check the date first.",
+        "So we meet online, is that right?",
+        "Yes, I'll send you the link."
+      ]
+    }
+  ]
+}

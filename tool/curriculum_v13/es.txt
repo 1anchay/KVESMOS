@@ -1,0 +1,162 @@
+##
+Ключ и записка|Заменить уже названный предмет на lo или la.|Lo и la перед спрягаемым глаголом заменяют прямое дополнение: la llave → la dejo.
+Dejo la llave en la mesa.~Я оставляю ключ на столе.
+La dejo junto a la nota.~Я оставляю его рядом с запиской.
+El sobre lo llevo yo.~Конверт отнесу я.
+No lo abras todavía.~Пока не открывай его.
+¿Dónde dejas la llave? / La dejo junto a la nota, en la mesa.
+Где искать ключ?|Рядом с запиской на столе.|В конверте.|Возле двери.
+Dejo la junto a la nota.~La dejo junto a la nota.~La заменяет llave и ставится перед dejo.
+##
+Фото для дедушки|Назвать получателя и различить le и les.|Le обозначает одного получателя, les — нескольких. Предмет можно назвать отдельно.
+Le mando una foto a mi abuelo.~Я отправляю фото дедушке.
+Les escribo a mis primos.~Я пишу двоюродным братьям и сёстрам.
+Le cuento cómo fue el viaje.~Я рассказываю ему, как прошла поездка.
+Mis primos me responden enseguida.~Кузены отвечают мне сразу.
+¿A quién le mandas la foto? / A mi abuelo. A mis primos les mando un mensaje.
+Кто получит фотографию?|Дедушка.|Кузены.|Водитель.
+Le escribo a mis primos.~Les escribo a mis primos.~Получателей несколько, поэтому les.
+##
+Тихие утра|Описать привычный распорядок в прошлом.|Imperfecto указывает на повторявшееся действие: de niño iba…; обычно точную границу периода не называют.
+De niño iba al mercado con mi padre.~В детстве я ходил на рынок с отцом.
+Comprábamos pan todos los sábados.~Мы покупали хлеб каждую субботу.
+La panadería abría temprano.~Пекарня открывалась рано.
+Ahora compro pan cerca de casa.~Сейчас я покупаю хлеб рядом с домом.
+¿Qué hacíais los sábados? / Íbamos al mercado y comprábamos pan.
+О каком действии идёт речь?|О регулярных походах на рынок.|Об одной поездке вчера.|О планах на завтра.
+Comprabamos pan todos los sábados de pequeños.~Comprábamos pan todos los sábados de pequeños.~Форма comprábamos описывает привычку, а ударение на á обозначается знаком на письме.
+##
+Звонок во время ужина|Построить короткий рассказ о фоновом и внезапном событии.|Mientras + imperfecto описывает фон. Llamó в простом прошедшем называет отдельный звонок.
+Preparaba la cena cuando llamaste.~Я готовил ужин, когда ты позвонил.
+Mientras cenábamos, sonó el teléfono.~Пока мы ужинали, зазвонил телефон.
+No pude contestar en ese momento.~Я не смог тогда ответить.
+Te devolví la llamada después.~Я перезвонил тебе позже.
+¿Por qué no contestaste? / Estábamos cenando. Te llamé después.
+Почему ответили позже?|Семья ужинала.|Телефон потерялся.|Звонка не было.
+Mientras cenábamos, sonar el teléfono.~Mientras cenábamos, sonó el teléfono.~Вторая часть сообщает событие, поэтому нужен спрягаемый глагол sonó.
+##
+Как было в музее|Описать впечатление и выделить отдельное событие.|Era/estaba описывают фон; vimos, entramos называют отдельные события.
+La sala estaba casi vacía.~Зал был почти пуст.
+Vimos una exposición de fotografía.~Мы посмотрели фотовыставку.
+Las fotos eran enormes.~Фотографии были огромные.
+La visita duró una hora.~Посещение длилось час.
+¿Había mucha gente? / No, la sala estaba casi vacía cuando entramos.
+Сколько людей было в зале?|Почти никого.|Очень много.|Вход был закрыт.
+Las fotos era enormes.~Las fotos eran enormes.~С las fotos нужна форма eran во множественном числе.
+##
+Опаздываю на встречу|Написать о причине задержки и новом времени.|Dentro de diez minutos значит «через десять минут», hace diez minutos — «десять минут назад».
+He perdido el autobús.~Я опоздал на автобус.
+Llego dentro de diez minutos.~Буду через десять минут.
+¿Puedes esperarme en la entrada?~Можешь подождать меня у входа?
+Si llegas antes, entra sin mí.~Если придёшь раньше, заходи без меня.
+¿Dónde estás? / En el metro. Llego dentro de diez minutos. Espérame en la entrada, por favor.
+Где просят подождать?|У входа.|В вагоне метро.|На автобусной остановке.
+Llego hace diez minutos.~Llego dentro de diez minutos.~Для времени до будущего события нужно dentro de.
+##
+План на случай дождя|Предложить запасной план с si.|В реальном условии после si ставят настоящее: si llueve. Последствие можно выразить через ir a.
+Si llueve, vamos a quedarnos en casa.~Если будет дождь, останемся дома.
+Si sale el sol, iremos al parque.~Если выйдет солнце, пойдём в парк.
+Lleva un paraguas por si acaso.~Возьми зонт на всякий случай.
+Podemos decidir después de comer.~Можем решить после обеда.
+¿Vamos al parque esta tarde? / Sí, si sale el sol. Si llueve, nos quedamos en casa.
+При каком условии пойдут в парк?|Если выйдет солнце.|Если начнётся дождь.|Если закроется кафе.
+Si lloverá, nos quedamos en casa.~Si llueve, nos quedamos en casa.~После si в таком условии нужна форма настоящего llueve.
+##
+Решить до пятницы|Уточнить срок и время доступности.|Antes de выражает крайний срок. Hasta описывает продолжительность до обозначенной границы.
+Necesito una respuesta antes del viernes.~Мне нужен ответ до пятницы.
+La oficina abre hasta las seis.~Офис открыт до шести.
+Te confirmo la hora esta tarde.~Подтвержу время сегодня днём.
+No hace falta llamar hoy.~Сегодня звонить необязательно.
+¿Puedo responder el viernes? / Mejor antes del viernes. El viernes por la mañana ya enviamos la lista.
+Когда нужен ответ?|До пятницы.|В пятницу вечером.|На следующей неделе.
+Necesito una respuesta antes el viernes.~Necesito una respuesta antes del viernes.~Antes требует de, а de + el сокращается до del.
+##
+Поезд отменили|Уточнить альтернативу после отмены рейса.|En vez de + существительное или инфинитив обозначает замену. Podemos + инфинитив предлагает вариант.
+Han cancelado nuestro tren.~Наш поезд отменили.
+Podemos tomar el autobús en vez del tren.~Мы можем поехать на автобусе вместо поезда.
+¿A qué hora sale el siguiente?~Во сколько отправляется следующий?
+El billete también sirve para el autobús.~Билет действует и на автобусе.
+El tren está cancelado. ¿Qué hacemos? / Podéis tomar el autobús. El mismo billete sirve.
+Какое решение предлагают?|Поехать на автобусе по тому же билету.|Купить новый билет на поезд.|Пойти пешком.
+Podemos tomamos el autobús.~Podemos tomar el autobús.~После podemos используется инфинитив tomar.
+##
+Я с тобой согласен|Выразить согласие и вежливо добавить оговорку.|Estoy de acuerdo — «я согласен». Pero можно ввести конкретную оговорку.
+Estoy de acuerdo con tu idea.~Я согласен с твоей идеей.
+Pero primero tenemos que llamar.~Но сначала нам нужно позвонить.
+Me parece una buena solución.~Мне кажется, это хорошее решение.
+Prefiero hablarlo mañana con calma.~Я предпочитаю спокойно обсудить это завтра.
+¿Te parece bien reservar ya? / Sí, estoy de acuerdo, pero primero tenemos que llamar.
+Что нужно сделать прежде всего?|Позвонить.|Заплатить.|Прийти завтра.
+Soy de acuerdo con tu idea.~Estoy de acuerdo con tu idea.~Устойчивое выражение — estar de acuerdo.
+##
+Собираем заказ|Выразить требования к составу заказа.|Sin указывает на отсутствие ингредиента. Para llevar обозначает заказ с собой.
+Una tortilla sin cebolla, por favor.~Омлет без лука, пожалуйста.
+La quiero para llevar.~Я хочу её с собой.
+¿Lleva queso esta ensalada?~В этом салате есть сыр?
+Prefiero pedir otra cosa.~Я предпочту заказать что-нибудь другое.
+¿La tortilla es para comer aquí? / Para llevar, por favor. Y sin cebolla.
+Какой заказ просит клиент?|С собой и без лука.|Здесь и с луком.|С собой с дополнительным сыром.
+La quiero por llevar.~La quiero para llevar.~Для заказа с собой используется para llevar.
+##
+Раньше по соседству|Рассказать, где жили раньше, и сравнить условия.|Antes vivía описывает прежнее длительное состояние. Desde hace отмечает длительность до настоящего.
+Antes vivía cerca del centro.~Раньше я жил рядом с центром.
+Vivo aquí desde hace dos años.~Я живу здесь уже два года.
+El barrio es más tranquilo ahora.~Район сейчас спокойнее.
+Echo de menos a mis antiguos vecinos.~Я скучаю по прежним соседям.
+¿Hace mucho que vives aquí? / Desde hace dos años. Antes vivía cerca del centro.
+Как долго человек живёт здесь?|Два года.|Два месяца.|Со вчерашнего дня.
+Vivo aquí desde dos años.~Vivo aquí desde hace dos años.~После desde hace ставят период времени; после desde — дату или точку начала.
+##
+Объяснить правила соседу|Передать просьбу с повелительной формой tú.|Для запрета с tú употребляют no + форму вроде dejes. Для утвердительной просьбы подходит deja.
+Deja los zapatos junto a la puerta.~Оставь обувь у двери.
+No dejes la bici en la escalera.~Не оставляй велосипед на лестнице.
+Cierra la puerta al salir.~Закрой дверь, когда будешь выходить.
+Puedes guardar la bici en el patio.~Можешь оставить велосипед во дворе.
+¿Dejo la bici aquí? / No la dejes en la escalera. Puedes dejarla en el patio.
+Куда можно поставить велосипед?|Во двор.|На лестницу.|В лифт.
+No deja la bici en la escalera.~No dejes la bici en la escalera.~Для запрета при обращении на tú используется no dejes.
+##
+Попросить передать предмет|Соединить два местоимения в просьбе.|Перед lo, la, los, las местоимение le/les заменяется на se: le doy el libro → se lo doy.
+Le doy el libro a Marta.~Я даю книгу Марте.
+Se lo doy después de clase.~Я дам ей её после урока.
+¿Puedes darle también la nota?~Можешь передать ей и записку?
+Se la llevo ahora mismo.~Я отнесу ей её сейчас же.
+¿Cuándo le das el libro a Marta? / Se lo doy después de clase. La nota se la llevo ahora.
+Что передадут после урока?|Книгу.|Записку.|Ключ.
+Le lo doy después de clase.~Se lo doy después de clase.~В сочетании с lo форма le заменяется на se.
+##
+Городской пункт находок|Описать потерянную вещь и её последнее местоположение.|De + материал или признак уточняет описание. La última vez que… задаёт момент последней встречи с предметом.
+Perdí una mochila de tela.~Я потерял тканевый рюкзак.
+La última vez que la vi estaba en el tren.~В последний раз я видел его в поезде.
+Tiene un bolsillo pequeño delante.~Спереди у него маленький карман.
+Puedo recogerla esta tarde.~Могу забрать его сегодня днём.
+¿Cómo es la mochila? / Es de tela y tiene un bolsillo pequeño delante.
+Как опознать рюкзак?|По маленькому переднему карману.|По большому карману сзади.|По кожаному ремню.
+La última vez que la ver estaba en el tren.~La última vez que la vi estaba en el tren.~Для «я видел» в законченном прошлом нужна форма vi.
+##
+Сколько стоит вместе|Уточнить итоговую стоимость и включённые услуги.|Incluido согласуется с предметом. Aparte означает, что услуга оплачивается отдельно.
+¿Cuánto cuesta todo junto?~Сколько стоит всё вместе?
+El envío está incluido en el precio.~Доставка включена в цену.
+Las bebidas se pagan aparte.~Напитки оплачиваются отдельно.
+Prefiero pagar con tarjeta.~Я предпочитаю заплатить картой.
+¿El precio incluye el envío? / Sí, el envío está incluido, pero el montaje se paga aparte.
+Что оплачивается отдельно?|Сборка.|Доставка.|Упаковка.
+El envío está incluida.~El envío está incluido.~Envío мужского рода, поэтому incluido.
+##
+Объяснить, почему выбрали|Связать причину и следствие в рассказе о выборе.|Porque вводит причину. Por eso начинает следствие в следующей части.
+Elegimos este hotel porque queda cerca.~Мы выбрали этот отель, потому что он рядом.
+Había mucho tráfico; por eso fuimos en metro.~Были пробки, поэтому мы поехали на метро.
+El trayecto duró veinte minutos.~Дорога заняла двадцать минут.
+Volveremos a tomar el metro mañana.~Завтра снова поедем на метро.
+¿Por qué fuisteis en metro? / Había mucho tráfico. Por eso dejamos el coche en casa.
+Почему поехали на метро?|На дорогах были пробки.|Автомобиль потерялся.|Метро было бесплатным.
+Fuimos en metro por eso había tráfico.~Fuimos en metro porque había tráfico.~В этой части называем причину, поэтому подходит porque.
+##
+Новости для друзей|Написать сообщение с событием, фоном и следующим шагом.|Событие в законченном прошлом можно выразить формой llegamos. Фон — hacía frío. Согласованный план — vamos a…
+Llegamos ayer por la noche.~Мы приехали вчера вечером.
+Hacía frío, pero no llovía.~Было холодно, но дождя не было.
+Mañana vamos a visitar el puerto.~Завтра мы собираемся посетить порт.
+Os mando fotos cuando vuelva.~Пришлю вам фото, когда вернусь.
+¿Ya llegasteis? / Sí, anoche. Hoy descansamos y mañana vamos al puerto.
+Когда друзья планируют посетить порт?|Завтра.|Сегодня вечером.|Они уже там были.
+Ayer llegar por la noche.~Ayer llegamos por la noche.~Для завершённого события с nosotros нужен глагол llegamos.

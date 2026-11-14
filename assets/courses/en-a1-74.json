@@ -1,0 +1,257 @@
+{
+  "id": "en-a1-74",
+  "title": "Уточнить срок",
+  "topic": "Роли и сроки",
+  "order": 73,
+  "objective": "Договориться о крайнем сроке и времени работы.",
+  "guide": "By Friday — к пятнице, until Friday — до пятницы как граница продолжающегося действия.",
+  "vocabulary": [
+    {
+      "id": "en:v13:74:p0",
+      "en": "Can you finish it by Friday?",
+      "ru": "Ты можешь закончить это к пятнице?"
+    },
+    {
+      "id": "en:v13:74:p1",
+      "en": "I'll work on it until Thursday evening.",
+      "ru": "Я буду работать над этим до вечера четверга."
+    },
+    {
+      "id": "en:v13:74:p2",
+      "en": "I can send you a draft tomorrow.",
+      "ru": "Завтра могу прислать черновик."
+    },
+    {
+      "id": "en:v13:74:p3",
+      "en": "We need time to check the figures.",
+      "ru": "Нам нужно время проверить цифры."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Уточнить срок",
+      "phrase": "Can you finish it by Friday?",
+      "translation": "Ты можешь закончить это к пятнице?",
+      "explanation": "By Friday — к пятнице, until Friday — до пятницы как граница продолжающегося действия."
+    },
+    {
+      "character": "miko",
+      "title": "Уточнить срок",
+      "phrase": "I'll work on it until Thursday evening.",
+      "translation": "Я буду работать над этим до вечера четверга.",
+      "explanation": "I'll work on it until Thursday evening. — Я буду работать над этим до вечера четверга."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Уточнить срок",
+      "phrase": "I can send you a draft tomorrow.",
+      "translation": "Завтра могу прислать черновик.",
+      "explanation": "I can send you a draft tomorrow. — Завтра могу прислать черновик."
+    },
+    {
+      "character": "orbi",
+      "title": "Уточнить срок",
+      "phrase": "We need time to check the figures.",
+      "translation": "Нам нужно время проверить цифры.",
+      "explanation": "We need time to check the figures. — Нам нужно время проверить цифры."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Can you finish it by Friday?",
+      "translation": "Ты можешь закончить это к пятнице?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Ты можешь закончить это к пятнице?",
+      "options": [
+        "Завтра могу прислать черновик.",
+        "Ты можешь закончить это к пятнице?",
+        "Нам нужно время проверить цифры."
+      ],
+      "explanation": "By Friday — к пятнице, until Friday — до пятницы как граница продолжающегося действия."
+    },
+    {
+      "id": "apply",
+      "phrase": "I'll work on it until Thursday evening.",
+      "translation": "Я буду работать над этим до вечера четверга.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I'll work on it until Thursday evening.",
+      "tokens": [
+        "I'll",
+        "work",
+        "on",
+        "it",
+        "until",
+        "Thursday",
+        "evening."
+      ],
+      "character": "miko",
+      "explanation": "I'll work on it until Thursday evening. — Я буду работать над этим до вечера четверга."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-74-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Завтра могу прислать черновик."
+      ],
+      "explanation": "I can send you a draft tomorrow. — Завтра могу прислать черновик.",
+      "wordIds": [
+        "en:v13:74:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "I can send you a draft tomorrow.",
+      "options": [
+        "Ты можешь закончить это к пятнице?",
+        "Завтра могу прислать черновик.",
+        "Я буду работать над этим до вечера четверга."
+      ],
+      "hint": "I can send you a draft tomorrow. — Завтра могу прислать черновик."
+    },
+    {
+      "id": "en-a1-74-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я буду работать над этим до вечера четверга.",
+      "answers": [
+        "I'll work on it until Thursday evening."
+      ],
+      "explanation": "By Friday — к пятнице, until Friday — до пятницы как граница продолжающегося действия.",
+      "wordIds": [
+        "en:v13:74:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I'll",
+        "work",
+        "on",
+        "it",
+        "until",
+        "Thursday",
+        "evening."
+      ],
+      "hint": "I'll work on it until Thursday evening. — Я буду работать над этим до вечера четверга."
+    },
+    {
+      "id": "en-a1-74-e03",
+      "type": "dialogue",
+      "prompt": "Когда нужен черновик?",
+      "answers": [
+        "Не позднее четверга в полдень."
+      ],
+      "explanation": "В диалоге: When do you need the draft? / By Thursday at noon, so I can check the figures. Поэтому: Не позднее четверга в полдень.",
+      "wordIds": [
+        "en:v13:74:p0",
+        "en:v13:74:p1",
+        "en:v13:74:p2",
+        "en:v13:74:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: When do you need the draft?\nМико: By Thursday at noon, so I can check the figures.",
+      "options": [
+        "В пятницу вечером.",
+        "После проверки цифр.",
+        "Не позднее четверга в полдень."
+      ]
+    },
+    {
+      "id": "en-a1-74-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Ты можешь закончить это к пятнице?»?",
+      "answers": [
+        "Can you finish it by Friday?"
+      ],
+      "explanation": "Can you finish it by Friday? — Ты можешь закончить это к пятнице?",
+      "wordIds": [
+        "en:v13:74:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "I'll work on it until Thursday evening.",
+        "We need time to check the figures.",
+        "Can you finish it by Friday?"
+      ],
+      "hint": "Can you finish it by Friday? — Ты можешь закончить это к пятнице?"
+    },
+    {
+      "id": "en-a1-74-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Please finish it until Friday.",
+      "answers": [
+        "Please finish it by Friday."
+      ],
+      "explanation": "Finish обозначает завершение к сроку, поэтому by.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Please finish it until Friday.",
+        "Please finish it by Friday."
+      ],
+      "hint": "By Friday — к пятнице, until Friday — до пятницы как граница продолжающегося действия."
+    },
+    {
+      "id": "en-a1-74-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Нам нужно время проверить цифры.». Можно написать вместо микрофона.",
+      "answers": [
+        "We need time to check the figures."
+      ],
+      "explanation": "We need time to check the figures. — Нам нужно время проверить цифры.",
+      "wordIds": [
+        "en:v13:74:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "We need time to check the figures.",
+      "recall": {
+        "phrase": "We need time to check the figures.",
+        "meaning": "Нам нужно время проверить цифры."
+      }
+    },
+    {
+      "id": "en-a1-74-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Ты можешь закончить это к пятнице?",
+      "answers": [
+        "Can you finish it by Friday?"
+      ],
+      "explanation": "By Friday — к пятнице, until Friday — до пятницы как граница продолжающегося действия.",
+      "wordIds": [
+        "en:v13:74:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Can you finish it by Friday?",
+        "meaning": "Ты можешь закончить это к пятнице?"
+      }
+    },
+    {
+      "id": "en-a1-74-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Не мог бы ты отправить повестку?",
+      "answers": [
+        "Could you send the agenda?"
+      ],
+      "explanation": "Could you send the agenda? — Не мог бы ты отправить повестку?",
+      "wordIds": [
+        "en:v13:73:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I'm in charge of the slides.",
+        "Could you send the agenda?",
+        "I'll take notes during the meeting.",
+        "Let's check everything at noon."
+      ]
+    }
+  ]
+}

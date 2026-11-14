@@ -14,11 +14,7 @@ import 'flight_components.dart';
 import 'design.dart';
 
 String nextLessonRoute(AppController app) {
-  final next =
-      app.repository.catalog
-          .where((l) => !app.progress.completed.contains(l.id))
-          .firstOrNull ??
-      app.repository.catalog.first;
+  final next = app.courseStart.next ?? app.repository.catalog.first;
   return app.installed.contains(next.id) ? '/lesson/${next.id}' : '/offline';
 }
 
@@ -56,11 +52,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     final day = dayKey(app.repository.now());
     arrival(app, day);
     final today = TodayJourney(app.progress, app.repository.now(), app.goal);
-    final next =
-        app.repository.catalog
-            .where((l) => !app.progress.completed.contains(l.id))
-            .firstOrNull ??
-        app.repository.catalog.first;
+    final next = app.courseStart.next ?? app.repository.catalog.first;
     final type = Theme.of(context).textTheme;
     final largeText = MediaQuery.textScalerOf(context).scale(16) > 22;
     final companion = CharacterMoment(
@@ -182,6 +174,30 @@ class _TodayPageState extends ConsumerState<TodayPage> {
         ),
       ),
       const SizedBox(height: 12),
+      if (app.smartStartInvitation)
+        FlightPanel(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Хочешь проверить, с какой темы продолжить?'),
+              Wrap(
+                children: [
+                  TextButton(
+                    onPressed: () async {
+                      await app.dismissSmartStartInvitation();
+                      if (context.mounted) context.go('/placement');
+                    },
+                    child: const Text('Проверить знания'),
+                  ),
+                  TextButton(
+                    onPressed: app.dismissSmartStartInvitation,
+                    child: const Text('Не сейчас'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       if (personalPractice(
         app.repository.vocabulary.values,
         app.progress,

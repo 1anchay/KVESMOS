@@ -1,0 +1,292 @@
+{
+  "id": "en-a1-89",
+  "title": "Необязательный шаг",
+  "topic": "Правила и объявления",
+  "order": 88,
+  "objective": "Объяснить, что нужно сделать, а что оставлено на выбор.",
+  "guide": "Don't have to выражает отсутствие обязанности. Mustn't выражает запрет.",
+  "vocabulary": [
+    {
+      "id": "en:v13:89:p0",
+      "en": "You don't have to print the ticket.",
+      "ru": "Распечатывать билет необязательно."
+    },
+    {
+      "id": "en:v13:89:p1",
+      "en": "You mustn't block the doors.",
+      "ru": "Нельзя заграждать двери."
+    },
+    {
+      "id": "en:v13:89:p2",
+      "en": "Keep the code on your phone.",
+      "ru": "Сохрани код на телефоне."
+    },
+    {
+      "id": "en:v13:89:p3",
+      "en": "You have to show it at the entrance.",
+      "ru": "Его нужно показать у входа."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Необязательный шаг",
+      "phrase": "You don't have to print the ticket.",
+      "translation": "Распечатывать билет необязательно.",
+      "explanation": "Don't have to выражает отсутствие обязанности. Mustn't выражает запрет."
+    },
+    {
+      "character": "miko",
+      "title": "Необязательный шаг",
+      "phrase": "You mustn't block the doors.",
+      "translation": "Нельзя заграждать двери.",
+      "explanation": "You mustn't block the doors. — Нельзя заграждать двери."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Необязательный шаг",
+      "phrase": "Keep the code on your phone.",
+      "translation": "Сохрани код на телефоне.",
+      "explanation": "Keep the code on your phone. — Сохрани код на телефоне."
+    },
+    {
+      "character": "orbi",
+      "title": "Необязательный шаг",
+      "phrase": "You have to show it at the entrance.",
+      "translation": "Его нужно показать у входа.",
+      "explanation": "You have to show it at the entrance. — Его нужно показать у входа."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "You don't have to print the ticket.",
+      "translation": "Распечатывать билет необязательно.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Распечатывать билет необязательно.",
+      "options": [
+        "Сохрани код на телефоне.",
+        "Распечатывать билет необязательно.",
+        "Его нужно показать у входа."
+      ],
+      "explanation": "Don't have to выражает отсутствие обязанности. Mustn't выражает запрет."
+    },
+    {
+      "id": "apply",
+      "phrase": "You mustn't block the doors.",
+      "translation": "Нельзя заграждать двери.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "You mustn't block the doors.",
+      "tokens": [
+        "You",
+        "mustn't",
+        "block",
+        "the",
+        "doors."
+      ],
+      "character": "miko",
+      "explanation": "You mustn't block the doors. — Нельзя заграждать двери."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-89-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Сохрани код на телефоне."
+      ],
+      "explanation": "Keep the code on your phone. — Сохрани код на телефоне.",
+      "wordIds": [
+        "en:v13:89:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Keep the code on your phone.",
+      "options": [
+        "Распечатывать билет необязательно.",
+        "Сохрани код на телефоне.",
+        "Нельзя заграждать двери."
+      ],
+      "hint": "Keep the code on your phone. — Сохрани код на телефоне."
+    },
+    {
+      "id": "en-a1-89-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Нельзя заграждать двери.",
+      "answers": [
+        "You mustn't block the doors."
+      ],
+      "explanation": "Don't have to выражает отсутствие обязанности. Mustn't выражает запрет.",
+      "wordIds": [
+        "en:v13:89:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "You",
+        "mustn't",
+        "block",
+        "the",
+        "doors."
+      ],
+      "hint": "You mustn't block the doors. — Нельзя заграждать двери."
+    },
+    {
+      "id": "en-a1-89-e03",
+      "type": "dialogue",
+      "prompt": "Что обязательно?",
+      "answers": [
+        "Показать код у входа."
+      ],
+      "explanation": "В диалоге: Do I need a printed ticket? / No. You just have to show the code at the entrance. Поэтому: Показать код у входа.",
+      "wordIds": [
+        "en:v13:89:p0",
+        "en:v13:89:p1",
+        "en:v13:89:p2",
+        "en:v13:89:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Do I need a printed ticket?\nМико: No. You just have to show the code at the entrance.",
+      "options": [
+        "Распечатать билет.",
+        "Позвонить на стойку.",
+        "Показать код у входа."
+      ]
+    },
+    {
+      "id": "en-a1-89-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Распечатывать билет необязательно.»?",
+      "answers": [
+        "You don't have to print the ticket."
+      ],
+      "explanation": "You don't have to print the ticket. — Распечатывать билет необязательно.",
+      "wordIds": [
+        "en:v13:89:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "You mustn't block the doors.",
+        "You have to show it at the entrance.",
+        "You don't have to print the ticket."
+      ],
+      "hint": "You don't have to print the ticket. — Распечатывать билет необязательно."
+    },
+    {
+      "id": "en-a1-89-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:89:p0",
+        "en:v13:89:p1",
+        "en:v13:89:p2",
+        "en:v13:89:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:89:p0",
+          "en": "You don't have to print the ticket.",
+          "ru": "Распечатывать билет необязательно."
+        },
+        {
+          "id": "en:v13:89:p1",
+          "en": "You mustn't block the doors.",
+          "ru": "Нельзя заграждать двери."
+        },
+        {
+          "id": "en:v13:89:p2",
+          "en": "Keep the code on your phone.",
+          "ru": "Сохрани код на телефоне."
+        },
+        {
+          "id": "en:v13:89:p3",
+          "en": "You have to show it at the entrance.",
+          "ru": "Его нужно показать у входа."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-89-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: You mustn't print the ticket if you prefer to show the code.",
+      "answers": [
+        "You don't have to print the ticket if you prefer to show the code."
+      ],
+      "explanation": "Речь о выборе, поэтому don't have to.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "You mustn't print the ticket if you prefer to show the code.",
+        "You don't have to print the ticket if you prefer to show the code."
+      ],
+      "hint": "Don't have to выражает отсутствие обязанности. Mustn't выражает запрет."
+    },
+    {
+      "id": "en-a1-89-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Его нужно показать у входа.». Можно написать вместо микрофона.",
+      "answers": [
+        "You have to show it at the entrance."
+      ],
+      "explanation": "You have to show it at the entrance. — Его нужно показать у входа.",
+      "wordIds": [
+        "en:v13:89:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "You have to show it at the entrance.",
+      "recall": {
+        "phrase": "You have to show it at the entrance.",
+        "meaning": "Его нужно показать у входа."
+      }
+    },
+    {
+      "id": "en-a1-89-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Распечатывать билет необязательно.",
+      "answers": [
+        "You don't have to print the ticket."
+      ],
+      "explanation": "Don't have to выражает отсутствие обязанности. Mustn't выражает запрет.",
+      "wordIds": [
+        "en:v13:89:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "You don't have to print the ticket.",
+        "meaning": "Распечатывать билет необязательно."
+      }
+    },
+    {
+      "id": "en-a1-89-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Возьми сумку с плечевым ремнём.",
+      "answers": [
+        "Take the bag that has a shoulder strap."
+      ],
+      "explanation": "Take the bag that has a shoulder strap. — Возьми сумку с плечевым ремнём.",
+      "wordIds": [
+        "en:v13:88:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Take the bag that has a shoulder strap.",
+        "The person who sold it works upstairs.",
+        "The pocket that closes is on the front.",
+        "This is the charger that fits my phone."
+      ]
+    }
+  ]
+}

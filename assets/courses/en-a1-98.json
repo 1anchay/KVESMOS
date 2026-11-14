@@ -1,0 +1,255 @@
+{
+  "id": "en-a1-98",
+  "title": "Официальное объявление",
+  "topic": "Отзывы и объявления",
+  "order": 97,
+  "objective": "Извлечь из объявления дату, ограничение и доступную альтернативу.",
+  "guide": "From Monday задаёт начало. Remain open сообщает, что работа продолжается.",
+  "vocabulary": [
+    {
+      "id": "en:v13:98:p0",
+      "en": "The main entrance will be closed from Monday.",
+      "ru": "Главный вход будет закрыт с понедельника."
+    },
+    {
+      "id": "en:v13:98:p1",
+      "en": "Please use the side entrance instead.",
+      "ru": "Пожалуйста, пользуйтесь боковым входом."
+    },
+    {
+      "id": "en:v13:98:p2",
+      "en": "The information desk will remain open.",
+      "ru": "Справочная стойка продолжит работать."
+    },
+    {
+      "id": "en:v13:98:p3",
+      "en": "There will be signs along the path.",
+      "ru": "Вдоль дорожки будут указатели."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Официальное объявление",
+      "phrase": "The main entrance will be closed from Monday.",
+      "translation": "Главный вход будет закрыт с понедельника.",
+      "explanation": "From Monday задаёт начало. Remain open сообщает, что работа продолжается."
+    },
+    {
+      "character": "miko",
+      "title": "Официальное объявление",
+      "phrase": "Please use the side entrance instead.",
+      "translation": "Пожалуйста, пользуйтесь боковым входом.",
+      "explanation": "Please use the side entrance instead. — Пожалуйста, пользуйтесь боковым входом."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Официальное объявление",
+      "phrase": "The information desk will remain open.",
+      "translation": "Справочная стойка продолжит работать.",
+      "explanation": "The information desk will remain open. — Справочная стойка продолжит работать."
+    },
+    {
+      "character": "orbi",
+      "title": "Официальное объявление",
+      "phrase": "There will be signs along the path.",
+      "translation": "Вдоль дорожки будут указатели.",
+      "explanation": "There will be signs along the path. — Вдоль дорожки будут указатели."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "The main entrance will be closed from Monday.",
+      "translation": "Главный вход будет закрыт с понедельника.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Главный вход будет закрыт с понедельника.",
+      "options": [
+        "Справочная стойка продолжит работать.",
+        "Главный вход будет закрыт с понедельника.",
+        "Вдоль дорожки будут указатели."
+      ],
+      "explanation": "From Monday задаёт начало. Remain open сообщает, что работа продолжается."
+    },
+    {
+      "id": "apply",
+      "phrase": "Please use the side entrance instead.",
+      "translation": "Пожалуйста, пользуйтесь боковым входом.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Please use the side entrance instead.",
+      "tokens": [
+        "Please",
+        "use",
+        "the",
+        "side",
+        "entrance",
+        "instead."
+      ],
+      "character": "miko",
+      "explanation": "Please use the side entrance instead. — Пожалуйста, пользуйтесь боковым входом."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-98-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Справочная стойка продолжит работать."
+      ],
+      "explanation": "The information desk will remain open. — Справочная стойка продолжит работать.",
+      "wordIds": [
+        "en:v13:98:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "The information desk will remain open.",
+      "options": [
+        "Главный вход будет закрыт с понедельника.",
+        "Справочная стойка продолжит работать.",
+        "Пожалуйста, пользуйтесь боковым входом."
+      ],
+      "hint": "The information desk will remain open. — Справочная стойка продолжит работать."
+    },
+    {
+      "id": "en-a1-98-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Пожалуйста, пользуйтесь боковым входом.",
+      "answers": [
+        "Please use the side entrance instead."
+      ],
+      "explanation": "From Monday задаёт начало. Remain open сообщает, что работа продолжается.",
+      "wordIds": [
+        "en:v13:98:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Please",
+        "use",
+        "the",
+        "side",
+        "entrance",
+        "instead."
+      ],
+      "hint": "Please use the side entrance instead. — Пожалуйста, пользуйтесь боковым входом."
+    },
+    {
+      "id": "en-a1-98-e03",
+      "type": "dialogue",
+      "prompt": "Что останется доступным?",
+      "answers": [
+        "Справочная стойка."
+      ],
+      "explanation": "В диалоге: Is the information desk closing too? / No. Only the main entrance will close. Поэтому: Справочная стойка.",
+      "wordIds": [
+        "en:v13:98:p0",
+        "en:v13:98:p1",
+        "en:v13:98:p2",
+        "en:v13:98:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Is the information desk closing too?\nМико: No. Only the main entrance will close.",
+      "options": [
+        "Главный вход.",
+        "Только указатели.",
+        "Справочная стойка."
+      ]
+    },
+    {
+      "id": "en-a1-98-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Главный вход будет закрыт с понедельника.»?",
+      "answers": [
+        "The main entrance will be closed from Monday."
+      ],
+      "explanation": "The main entrance will be closed from Monday. — Главный вход будет закрыт с понедельника.",
+      "wordIds": [
+        "en:v13:98:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Please use the side entrance instead.",
+        "There will be signs along the path.",
+        "The main entrance will be closed from Monday."
+      ],
+      "hint": "The main entrance will be closed from Monday. — Главный вход будет закрыт с понедельника."
+    },
+    {
+      "id": "en-a1-98-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Please to use the side entrance instead.",
+      "answers": [
+        "Please use the side entrance instead."
+      ],
+      "explanation": "В просьбе с please используется глагол use без to.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Please to use the side entrance instead.",
+        "Please use the side entrance instead."
+      ],
+      "hint": "From Monday задаёт начало. Remain open сообщает, что работа продолжается."
+    },
+    {
+      "id": "en-a1-98-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Вдоль дорожки будут указатели.». Можно написать вместо микрофона.",
+      "answers": [
+        "There will be signs along the path."
+      ],
+      "explanation": "There will be signs along the path. — Вдоль дорожки будут указатели.",
+      "wordIds": [
+        "en:v13:98:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "There will be signs along the path.",
+      "recall": {
+        "phrase": "There will be signs along the path.",
+        "meaning": "Вдоль дорожки будут указатели."
+      }
+    },
+    {
+      "id": "en-a1-98-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Главный вход будет закрыт с понедельника.",
+      "answers": [
+        "The main entrance will be closed from Monday."
+      ],
+      "explanation": "From Monday задаёт начало. Remain open сообщает, что работа продолжается.",
+      "wordIds": [
+        "en:v13:98:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "The main entrance will be closed from Monday.",
+        "meaning": "Главный вход будет закрыт с понедельника."
+      }
+    },
+    {
+      "id": "en-a1-98-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сотрудники были приветливы и помогали.",
+      "answers": [
+        "The staff were friendly and helpful."
+      ],
+      "explanation": "The staff were friendly and helpful. — Сотрудники были приветливы и помогали.",
+      "wordIds": [
+        "en:v13:97:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Although the room was small, it was quiet.",
+        "The staff were friendly and helpful.",
+        "It would help if the signs were clearer.",
+        "I'd stay there again."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "id": "es-a1-54",
+  "title": "Раньше по соседству",
+  "topic": "Заказы и прежние привычки",
+  "order": 53,
+  "objective": "Рассказать, где жили раньше, и сравнить условия.",
+  "guide": "Antes vivía описывает прежнее длительное состояние. Desde hace отмечает длительность до настоящего.",
+  "vocabulary": [
+    {
+      "id": "es:v13:54:p0",
+      "en": "Antes vivía cerca del centro.",
+      "ru": "Раньше я жил рядом с центром."
+    },
+    {
+      "id": "es:v13:54:p1",
+      "en": "Vivo aquí desde hace dos años.",
+      "ru": "Я живу здесь уже два года."
+    },
+    {
+      "id": "es:v13:54:p2",
+      "en": "El barrio es más tranquilo ahora.",
+      "ru": "Район сейчас спокойнее."
+    },
+    {
+      "id": "es:v13:54:p3",
+      "en": "Echo de menos a mis antiguos vecinos.",
+      "ru": "Я скучаю по прежним соседям."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Раньше по соседству",
+      "phrase": "Antes vivía cerca del centro.",
+      "translation": "Раньше я жил рядом с центром.",
+      "explanation": "Antes vivía описывает прежнее длительное состояние. Desde hace отмечает длительность до настоящего."
+    },
+    {
+      "character": "miko",
+      "title": "Раньше по соседству",
+      "phrase": "Vivo aquí desde hace dos años.",
+      "translation": "Я живу здесь уже два года.",
+      "explanation": "Vivo aquí desde hace dos años. — Я живу здесь уже два года."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Раньше по соседству",
+      "phrase": "El barrio es más tranquilo ahora.",
+      "translation": "Район сейчас спокойнее.",
+      "explanation": "El barrio es más tranquilo ahora. — Район сейчас спокойнее."
+    },
+    {
+      "character": "orbi",
+      "title": "Раньше по соседству",
+      "phrase": "Echo de menos a mis antiguos vecinos.",
+      "translation": "Я скучаю по прежним соседям.",
+      "explanation": "Echo de menos a mis antiguos vecinos. — Я скучаю по прежним соседям."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Antes vivía cerca del centro.",
+      "translation": "Раньше я жил рядом с центром.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Раньше я жил рядом с центром.",
+      "options": [
+        "Район сейчас спокойнее.",
+        "Раньше я жил рядом с центром.",
+        "Я скучаю по прежним соседям."
+      ],
+      "explanation": "Antes vivía описывает прежнее длительное состояние. Desde hace отмечает длительность до настоящего."
+    },
+    {
+      "id": "apply",
+      "phrase": "Vivo aquí desde hace dos años.",
+      "translation": "Я живу здесь уже два года.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Vivo aquí desde hace dos años.",
+      "tokens": [
+        "Vivo",
+        "aquí",
+        "desde",
+        "hace",
+        "dos",
+        "años."
+      ],
+      "character": "miko",
+      "explanation": "Vivo aquí desde hace dos años. — Я живу здесь уже два года."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-54-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я предпочту заказать что-нибудь другое.",
+      "answers": [
+        "Prefiero pedir otra cosa."
+      ],
+      "explanation": "Prefiero pedir otra cosa. — Я предпочту заказать что-нибудь другое.",
+      "wordIds": [
+        "es:v13:53:p3"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Una tortilla sin cebolla, por favor.",
+        "La quiero para llevar.",
+        "¿Lleva queso esta ensalada?",
+        "Prefiero pedir otra cosa."
+      ]
+    },
+    {
+      "id": "es-a1-54-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Раньше я жил рядом с центром.»?",
+      "answers": [
+        "Antes vivía cerca del centro."
+      ],
+      "explanation": "Antes vivía cerca del centro. — Раньше я жил рядом с центром.",
+      "wordIds": [
+        "es:v13:54:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Vivo aquí desde hace dos años.",
+        "Echo de menos a mis antiguos vecinos.",
+        "Antes vivía cerca del centro."
+      ],
+      "hint": "Antes vivía cerca del centro. — Раньше я жил рядом с центром."
+    },
+    {
+      "id": "es-a1-54-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Я живу здесь уже два года.",
+      "answers": [
+        "Vivo aquí desde hace dos años."
+      ],
+      "explanation": "Antes vivía описывает прежнее длительное состояние. Desde hace отмечает длительность до настоящего.",
+      "wordIds": [
+        "es:v13:54:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Vivo",
+        "aquí",
+        "desde",
+        "hace",
+        "dos",
+        "años."
+      ],
+      "hint": "Vivo aquí desde hace dos años. — Я живу здесь уже два года."
+    },
+    {
+      "id": "es-a1-54-e04",
+      "type": "dialogue",
+      "prompt": "Как долго человек живёт здесь?",
+      "answers": [
+        "Два года."
+      ],
+      "explanation": "В диалоге: ¿Hace mucho que vives aquí? / Desde hace dos años. Antes vivía cerca del centro. Поэтому: Два года.",
+      "wordIds": [
+        "es:v13:54:p0",
+        "es:v13:54:p1",
+        "es:v13:54:p2",
+        "es:v13:54:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: ¿Hace mucho que vives aquí?\nМико: Desde hace dos años. Antes vivía cerca del centro.",
+      "options": [
+        "Два месяца.",
+        "Со вчерашнего дня.",
+        "Два года."
+      ]
+    },
+    {
+      "id": "es-a1-54-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Район сейчас спокойнее."
+      ],
+      "explanation": "El barrio es más tranquilo ahora. — Район сейчас спокойнее.",
+      "wordIds": [
+        "es:v13:54:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "El barrio es más tranquilo ahora.",
+      "options": [
+        "Раньше я жил рядом с центром.",
+        "Район сейчас спокойнее.",
+        "Я живу здесь уже два года."
+      ],
+      "hint": "El barrio es más tranquilo ahora. — Район сейчас спокойнее."
+    },
+    {
+      "id": "es-a1-54-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Vivo aquí desde dos años.",
+      "answers": [
+        "Vivo aquí desde hace dos años."
+      ],
+      "explanation": "После desde hace ставят период времени; после desde — дату или точку начала.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Vivo aquí desde dos años.",
+        "Vivo aquí desde hace dos años."
+      ],
+      "hint": "Antes vivía описывает прежнее длительное состояние. Desde hace отмечает длительность до настоящего."
+    },
+    {
+      "id": "es-a1-54-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я скучаю по прежним соседям.». Можно написать вместо микрофона.",
+      "answers": [
+        "Echo de menos a mis antiguos vecinos."
+      ],
+      "explanation": "Echo de menos a mis antiguos vecinos. — Я скучаю по прежним соседям.",
+      "wordIds": [
+        "es:v13:54:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Echo de menos a mis antiguos vecinos.",
+      "recall": {
+        "phrase": "Echo de menos a mis antiguos vecinos.",
+        "meaning": "Я скучаю по прежним соседям."
+      }
+    },
+    {
+      "id": "es-a1-54-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Раньше я жил рядом с центром.",
+      "answers": [
+        "Antes vivía cerca del centro."
+      ],
+      "explanation": "Antes vivía описывает прежнее длительное состояние. Desde hace отмечает длительность до настоящего.",
+      "wordIds": [
+        "es:v13:54:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Antes vivía cerca del centro.",
+        "meaning": "Раньше я жил рядом с центром."
+      }
+    }
+  ]
+}

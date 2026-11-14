@@ -1,0 +1,255 @@
+{
+  "id": "de-a1-60",
+  "title": "Встреча переносится",
+  "topic": "Сообщения и встречи",
+  "order": 59,
+  "objective": "Составить сообщение об изменении, причине и следующем шаге.",
+  "guide": "Событие в прошлом можно передать Perfekt. В новом предложении deshalb связывает решение с причиной.",
+  "vocabulary": [
+    {
+      "id": "de:v13:60:p0",
+      "en": "Der Raum ist heute nicht frei.",
+      "ru": "Помещение сегодня занято."
+    },
+    {
+      "id": "de:v13:60:p1",
+      "en": "Wir haben den Termin deshalb verschoben.",
+      "ru": "Поэтому мы перенесли встречу."
+    },
+    {
+      "id": "de:v13:60:p2",
+      "en": "Der neue Termin ist am Dienstag.",
+      "ru": "Новая встреча во вторник."
+    },
+    {
+      "id": "de:v13:60:p3",
+      "en": "Gib mir bitte bis morgen Bescheid.",
+      "ru": "Дай мне знать до завтра, пожалуйста."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Встреча переносится",
+      "phrase": "Der Raum ist heute nicht frei.",
+      "translation": "Помещение сегодня занято.",
+      "explanation": "Событие в прошлом можно передать Perfekt. В новом предложении deshalb связывает решение с причиной."
+    },
+    {
+      "character": "miko",
+      "title": "Встреча переносится",
+      "phrase": "Wir haben den Termin deshalb verschoben.",
+      "translation": "Поэтому мы перенесли встречу.",
+      "explanation": "Wir haben den Termin deshalb verschoben. — Поэтому мы перенесли встречу."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Встреча переносится",
+      "phrase": "Der neue Termin ist am Dienstag.",
+      "translation": "Новая встреча во вторник.",
+      "explanation": "Der neue Termin ist am Dienstag. — Новая встреча во вторник."
+    },
+    {
+      "character": "orbi",
+      "title": "Встреча переносится",
+      "phrase": "Gib mir bitte bis morgen Bescheid.",
+      "translation": "Дай мне знать до завтра, пожалуйста.",
+      "explanation": "Gib mir bitte bis morgen Bescheid. — Дай мне знать до завтра, пожалуйста."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Der Raum ist heute nicht frei.",
+      "translation": "Помещение сегодня занято.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Помещение сегодня занято.",
+      "options": [
+        "Новая встреча во вторник.",
+        "Помещение сегодня занято.",
+        "Дай мне знать до завтра, пожалуйста."
+      ],
+      "explanation": "Событие в прошлом можно передать Perfekt. В новом предложении deshalb связывает решение с причиной."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wir haben den Termin deshalb verschoben.",
+      "translation": "Поэтому мы перенесли встречу.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wir haben den Termin deshalb verschoben.",
+      "tokens": [
+        "Wir",
+        "haben",
+        "den",
+        "Termin",
+        "deshalb",
+        "verschoben."
+      ],
+      "character": "miko",
+      "explanation": "Wir haben den Termin deshalb verschoben. — Поэтому мы перенесли встречу."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-60-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Она спрашивает, можем ли мы остаться дольше.",
+      "answers": [
+        "Sie fragt, ob wir länger bleiben können."
+      ],
+      "explanation": "Sie fragt, ob wir länger bleiben können. — Она спрашивает, можем ли мы остаться дольше.",
+      "wordIds": [
+        "de:v13:59:p1"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Mila sagt, dass der Termin später beginnt.",
+        "Sie fragt, ob wir länger bleiben können.",
+        "Ich weiß noch nicht, wann wir fertig sind.",
+        "Ich schreibe ihr nach dem Termin."
+      ]
+    },
+    {
+      "id": "de-a1-60-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Помещение сегодня занято.»?",
+      "answers": [
+        "Der Raum ist heute nicht frei."
+      ],
+      "explanation": "Der Raum ist heute nicht frei. — Помещение сегодня занято.",
+      "wordIds": [
+        "de:v13:60:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wir haben den Termin deshalb verschoben.",
+        "Gib mir bitte bis morgen Bescheid.",
+        "Der Raum ist heute nicht frei."
+      ],
+      "hint": "Der Raum ist heute nicht frei. — Помещение сегодня занято."
+    },
+    {
+      "id": "de-a1-60-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Поэтому мы перенесли встречу.",
+      "answers": [
+        "Wir haben den Termin deshalb verschoben."
+      ],
+      "explanation": "Событие в прошлом можно передать Perfekt. В новом предложении deshalb связывает решение с причиной.",
+      "wordIds": [
+        "de:v13:60:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wir",
+        "haben",
+        "den",
+        "Termin",
+        "deshalb",
+        "verschoben."
+      ],
+      "hint": "Wir haben den Termin deshalb verschoben. — Поэтому мы перенесли встречу."
+    },
+    {
+      "id": "de-a1-60-e04",
+      "type": "dialogue",
+      "prompt": "Когда теперь встреча?",
+      "answers": [
+        "Во вторник."
+      ],
+      "explanation": "В диалоге: Warum treffen wir uns heute nicht? / Der Raum ist nicht frei. Der neue Termin ist am Dienstag. Поэтому: Во вторник.",
+      "wordIds": [
+        "de:v13:60:p0",
+        "de:v13:60:p1",
+        "de:v13:60:p2",
+        "de:v13:60:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Warum treffen wir uns heute nicht?\nМико: Der Raum ist nicht frei. Der neue Termin ist am Dienstag.",
+      "options": [
+        "Сегодня вечером.",
+        "В понедельник.",
+        "Во вторник."
+      ]
+    },
+    {
+      "id": "de-a1-60-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Новая встреча во вторник."
+      ],
+      "explanation": "Der neue Termin ist am Dienstag. — Новая встреча во вторник.",
+      "wordIds": [
+        "de:v13:60:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Der neue Termin ist am Dienstag.",
+      "options": [
+        "Помещение сегодня занято.",
+        "Новая встреча во вторник.",
+        "Поэтому мы перенесли встречу."
+      ],
+      "hint": "Der neue Termin ist am Dienstag. — Новая встреча во вторник."
+    },
+    {
+      "id": "de-a1-60-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wir haben den Termin deshalb verschieben.",
+      "answers": [
+        "Wir haben den Termin deshalb verschoben."
+      ],
+      "explanation": "Perfekt с haben требует Partizip II verschoben.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Wir haben den Termin deshalb verschieben.",
+        "Wir haben den Termin deshalb verschoben."
+      ],
+      "hint": "Событие в прошлом можно передать Perfekt. В новом предложении deshalb связывает решение с причиной."
+    },
+    {
+      "id": "de-a1-60-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Дай мне знать до завтра, пожалуйста.». Можно написать вместо микрофона.",
+      "answers": [
+        "Gib mir bitte bis morgen Bescheid."
+      ],
+      "explanation": "Gib mir bitte bis morgen Bescheid. — Дай мне знать до завтра, пожалуйста.",
+      "wordIds": [
+        "de:v13:60:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Gib mir bitte bis morgen Bescheid.",
+      "recall": {
+        "phrase": "Gib mir bitte bis morgen Bescheid.",
+        "meaning": "Дай мне знать до завтра, пожалуйста."
+      }
+    },
+    {
+      "id": "de-a1-60-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Помещение сегодня занято.",
+      "answers": [
+        "Der Raum ist heute nicht frei."
+      ],
+      "explanation": "Событие в прошлом можно передать Perfekt. В новом предложении deshalb связывает решение с причиной.",
+      "wordIds": [
+        "de:v13:60:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Der Raum ist heute nicht frei.",
+        "meaning": "Помещение сегодня занято."
+      }
+    }
+  ]
+}

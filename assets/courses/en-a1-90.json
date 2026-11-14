@@ -1,0 +1,255 @@
+{
+  "id": "en-a1-90",
+  "title": "Изменение в программе",
+  "topic": "Правила и объявления",
+  "order": 89,
+  "objective": "Понять объявление с пассивной конструкцией.",
+  "guide": "Was moved означает, что перенесли само событие. Перенос на новое место выражает to.",
+  "vocabulary": [
+    {
+      "id": "en:v13:90:p0",
+      "en": "The talk was moved to room five.",
+      "ru": "Доклад перенесли в аудиторию пять."
+    },
+    {
+      "id": "en:v13:90:p1",
+      "en": "The old room is being repaired.",
+      "ru": "Старую аудиторию сейчас ремонтируют."
+    },
+    {
+      "id": "en:v13:90:p2",
+      "en": "The start time hasn't changed.",
+      "ru": "Время начала не изменилось."
+    },
+    {
+      "id": "en:v13:90:p3",
+      "en": "The notice was posted this morning.",
+      "ru": "Объявление разместили сегодня утром."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Изменение в программе",
+      "phrase": "The talk was moved to room five.",
+      "translation": "Доклад перенесли в аудиторию пять.",
+      "explanation": "Was moved означает, что перенесли само событие. Перенос на новое место выражает to."
+    },
+    {
+      "character": "miko",
+      "title": "Изменение в программе",
+      "phrase": "The old room is being repaired.",
+      "translation": "Старую аудиторию сейчас ремонтируют.",
+      "explanation": "The old room is being repaired. — Старую аудиторию сейчас ремонтируют."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Изменение в программе",
+      "phrase": "The start time hasn't changed.",
+      "translation": "Время начала не изменилось.",
+      "explanation": "The start time hasn't changed. — Время начала не изменилось."
+    },
+    {
+      "character": "orbi",
+      "title": "Изменение в программе",
+      "phrase": "The notice was posted this morning.",
+      "translation": "Объявление разместили сегодня утром.",
+      "explanation": "The notice was posted this morning. — Объявление разместили сегодня утром."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "The talk was moved to room five.",
+      "translation": "Доклад перенесли в аудиторию пять.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Доклад перенесли в аудиторию пять.",
+      "options": [
+        "Время начала не изменилось.",
+        "Доклад перенесли в аудиторию пять.",
+        "Объявление разместили сегодня утром."
+      ],
+      "explanation": "Was moved означает, что перенесли само событие. Перенос на новое место выражает to."
+    },
+    {
+      "id": "apply",
+      "phrase": "The old room is being repaired.",
+      "translation": "Старую аудиторию сейчас ремонтируют.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The old room is being repaired.",
+      "tokens": [
+        "The",
+        "old",
+        "room",
+        "is",
+        "being",
+        "repaired."
+      ],
+      "character": "miko",
+      "explanation": "The old room is being repaired. — Старую аудиторию сейчас ремонтируют."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-90-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Нельзя заграждать двери.",
+      "answers": [
+        "You mustn't block the doors."
+      ],
+      "explanation": "You mustn't block the doors. — Нельзя заграждать двери.",
+      "wordIds": [
+        "en:v13:89:p1"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "You don't have to print the ticket.",
+        "You mustn't block the doors.",
+        "Keep the code on your phone.",
+        "You have to show it at the entrance."
+      ]
+    },
+    {
+      "id": "en-a1-90-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Доклад перенесли в аудиторию пять.»?",
+      "answers": [
+        "The talk was moved to room five."
+      ],
+      "explanation": "The talk was moved to room five. — Доклад перенесли в аудиторию пять.",
+      "wordIds": [
+        "en:v13:90:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The old room is being repaired.",
+        "The notice was posted this morning.",
+        "The talk was moved to room five."
+      ],
+      "hint": "The talk was moved to room five. — Доклад перенесли в аудиторию пять."
+    },
+    {
+      "id": "en-a1-90-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Старую аудиторию сейчас ремонтируют.",
+      "answers": [
+        "The old room is being repaired."
+      ],
+      "explanation": "Was moved означает, что перенесли само событие. Перенос на новое место выражает to.",
+      "wordIds": [
+        "en:v13:90:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "old",
+        "room",
+        "is",
+        "being",
+        "repaired."
+      ],
+      "hint": "The old room is being repaired. — Старую аудиторию сейчас ремонтируют."
+    },
+    {
+      "id": "en-a1-90-e04",
+      "type": "dialogue",
+      "prompt": "Что изменилось?",
+      "answers": [
+        "Аудитория."
+      ],
+      "explanation": "В диалоге: Is the talk still at ten? / Yes, but it was moved to room five. Поэтому: Аудитория.",
+      "wordIds": [
+        "en:v13:90:p0",
+        "en:v13:90:p1",
+        "en:v13:90:p2",
+        "en:v13:90:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Is the talk still at ten?\nМико: Yes, but it was moved to room five.",
+      "options": [
+        "Время начала.",
+        "Тема доклада.",
+        "Аудитория."
+      ]
+    },
+    {
+      "id": "en-a1-90-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Время начала не изменилось."
+      ],
+      "explanation": "The start time hasn't changed. — Время начала не изменилось.",
+      "wordIds": [
+        "en:v13:90:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "The start time hasn't changed.",
+      "options": [
+        "Доклад перенесли в аудиторию пять.",
+        "Время начала не изменилось.",
+        "Старую аудиторию сейчас ремонтируют."
+      ],
+      "hint": "The start time hasn't changed. — Время начала не изменилось."
+    },
+    {
+      "id": "en-a1-90-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: The talk was move to room five.",
+      "answers": [
+        "The talk was moved to room five."
+      ],
+      "explanation": "После was в пассиве нужно причастие moved.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "The talk was move to room five.",
+        "The talk was moved to room five."
+      ],
+      "hint": "Was moved означает, что перенесли само событие. Перенос на новое место выражает to."
+    },
+    {
+      "id": "en-a1-90-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Объявление разместили сегодня утром.». Можно написать вместо микрофона.",
+      "answers": [
+        "The notice was posted this morning."
+      ],
+      "explanation": "The notice was posted this morning. — Объявление разместили сегодня утром.",
+      "wordIds": [
+        "en:v13:90:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "The notice was posted this morning.",
+      "recall": {
+        "phrase": "The notice was posted this morning.",
+        "meaning": "Объявление разместили сегодня утром."
+      }
+    },
+    {
+      "id": "en-a1-90-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Доклад перенесли в аудиторию пять.",
+      "answers": [
+        "The talk was moved to room five."
+      ],
+      "explanation": "Was moved означает, что перенесли само событие. Перенос на новое место выражает to.",
+      "wordIds": [
+        "en:v13:90:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "The talk was moved to room five.",
+        "meaning": "Доклад перенесли в аудиторию пять."
+      }
+    }
+  ]
+}

@@ -10,6 +10,7 @@ Future<void> showLessonPreview(
   AppController app,
   LessonInfo info,
 ) async {
+  if (!app.courseStart.available(info)) return;
   if (!app.installed.contains(info.id)) {
     context.go('/offline');
     return;

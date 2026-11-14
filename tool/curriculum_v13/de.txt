@@ -1,0 +1,162 @@
+##
+Сумка под столом|Различать место и направление с unter.|Wo? спрашивает о месте и требует Dativ: unter dem Tisch. Wohin? спрашивает о направлении: unter den Tisch.
+Die Tasche steht unter dem Tisch.~Сумка стоит под столом.
+Stell die Tasche unter den Tisch.~Поставь сумку под стол.
+Der Rucksack steht neben der Tür.~Рюкзак стоит рядом с дверью.
+Leg den Schlüssel auf den Tisch.~Положи ключ на стол.
+Wo steht die Tasche? / Unter dem Tisch, direkt neben meinem Stuhl.
+Где сумка?|Под столом.|На стуле.|У двери.
+Stell die Tasche unter dem Tisch.~Stell die Tasche unter den Tisch.~Ставим предмет в новое место, поэтому unter den Tisch.
+##
+Вешаем картину|Сообщить, где висит предмет и куда его повесить.|Hängen может обозначать положение или действие. Падеж зависит от смысла: an der Wand и an die Wand.
+Das Bild hängt an der Wand.~Картина висит на стене.
+Häng das Bild an die Wand.~Повесь картину на стену.
+Über dem Sofa ist noch Platz.~Над диваном ещё есть место.
+Wir hängen es etwas höher.~Мы повесим её чуть выше.
+Wohin hängen wir das Bild? / An die Wand über dem Sofa.
+Куда повесят картину?|На стену над диваном.|За дверь.|На стену над кроватью.
+Das Bild hängt an die Wand.~Das Bild hängt an der Wand.~Здесь картина уже висит, поэтому Dativ an der Wand.
+##
+Увидимся перед кино|Договориться о встрече с sich treffen.|При wir употребляется uns, при ihr — euch. Sich treffen означает «встречаться».
+Wir treffen uns vor dem Kino.~Мы встретимся перед кинотеатром.
+Trefft ihr euch um sieben?~Вы встречаетесь в семь?
+Ich warte am Eingang.~Я подожду у входа.
+Ruf mich an, wenn du da bist.~Позвони мне, когда будешь на месте.
+Wo treffen wir uns? / Vor dem Kino, nicht am Bahnhof.
+Где встреча?|Перед кинотеатром.|У вокзала.|Внутри кинотеатра.
+Wir treffen euch vor dem Kino.~Wir treffen uns vor dem Kino.~Для «мы встречаемся друг с другом» нужно uns.
+##
+Как подготовиться|Использовать sich vorbereiten auf и описать подготовку.|При ich возвратная форма mich. В главном предложении приставка vor отделяется.
+Ich bereite mich auf das Gespräch vor.~Я готовлюсь к разговору.
+Sie bereitet sich auf den Termin vor.~Она готовится к встрече.
+Wir üben die Fragen zusammen.~Мы вместе тренируем вопросы.
+Morgen ist das Gespräch.~Разговор завтра.
+Wann ist der Termin? / Morgen. Wir bereiten uns heute darauf vor.
+Когда готовятся к встрече?|Сегодня.|Завтра после встречи.|На следующей неделе.
+Ich vorbereite mich auf das Gespräch.~Ich bereite mich auf das Gespräch vor.~В главной части спрягается bereite, а приставка vor уходит в конец.
+##
+После работы|Расположить два действия по времени с bevor.|В части с bevor спрягаемый глагол в конце: bevor ich nach Hause gehe.
+Ich rufe dich an, bevor ich nach Hause gehe.~Я позвоню тебе, прежде чем пойду домой.
+Bevor wir gehen, bezahlen wir.~Прежде чем уйти, мы заплатим.
+Der Laden schließt um acht.~Магазин закрывается в восемь.
+Wir haben noch eine halbe Stunde.~У нас ещё полчаса.
+Gehen wir jetzt? / Gleich. Bevor wir gehen, bezahlen wir.
+Какое действие будет первым?|Оплата.|Уход.|Звонок в магазин.
+Bevor wir gehen, wir bezahlen.~Bevor wir gehen, bezahlen wir.~Придаточная часть стоит первой целиком, за ней сразу идёт глагол главной части.
+##
+Когда я жил в Кёльне|Различить als для одного периода и wenn для повторов.|Als вводит один период в прошлом. Wenn подходит для повторяющихся случаев.
+Als ich in Köln wohnte, fuhr ich oft Rad.~Когда я жил в Кёльне, я часто ездил на велосипеде.
+Wenn es regnete, nahm ich den Bus.~Когда шёл дождь, я ездил на автобусе.
+Heute gehe ich meistens zu Fuß.~Сейчас я обычно хожу пешком.
+Damals war mein Weg kürzer.~Тогда моя дорога была короче.
+Wie bist du früher zur Arbeit gekommen? / Wenn es regnete, nahm ich den Bus. Sonst fuhr ich Rad.
+На чём ездили в дождь?|На автобусе.|На велосипеде.|На поезде.
+Als wohnte ich in Köln, fuhr ich oft Rad.~Als ich in Köln wohnte, fuhr ich oft Rad.~В части с als форма wohnte стоит в конце.
+##
+Запасной план|Предложить решение с wenn и sonst.|В придаточной с wenn глагол в конце. Sonst вводит альтернативу в отдельном главном предложении.
+Wenn es regnet, bleiben wir drinnen.~Если будет дождь, останемся внутри.
+Sonst gehen wir in den Garten.~Иначе пойдём в сад.
+Wir können später entscheiden.~Мы можем решить позже.
+Bring bitte eine Jacke mit.~Возьми, пожалуйста, куртку.
+Bleiben wir im Haus? / Nur wenn es regnet. Sonst gehen wir in den Garten.
+Куда пойдут без дождя?|В сад.|В дом.|В магазин.
+Wenn regnet es, bleiben wir drinnen.~Wenn es regnet, bleiben wir drinnen.~После wenn подлежащее es стоит перед regnet.
+##
+До конца недели|Различать bis и seit в сообщении о сроке.|Bis указывает будущую границу. Seit связывает начало в прошлом с продолжающимся состоянием.
+Ich brauche die Antwort bis Freitag.~Мне нужен ответ к пятнице.
+Seit Montag warte ich auf die Antwort.~Я жду ответа с понедельника.
+Heute kann ich noch nichts bestätigen.~Сегодня я пока ничего не могу подтвердить.
+Morgen gebe ich dir Bescheid.~Завтра я дам тебе знать.
+Kann ich am Freitag antworten? / Ja, ich brauche die Antwort bis Freitag.
+Какой крайний срок?|Пятница.|Понедельник.|Завтра утром.
+Seit Montag ich warte auf die Antwort.~Seit Montag warte ich auf die Antwort.~После обстоятельства Seit Montag спрягаемый глагол занимает второе место.
+##
+Передай ей записку|Различать личные местоимения Dativ и Akkusativ.|Ihr может означать «ей», ihn — «его». В ich gebe ihr den Zettel получатель стоит в Dativ.
+Ich gebe ihr den Zettel.~Я передам ей записку.
+Kannst du ihn heute mitnehmen?~Можешь взять её сегодня с собой?
+Ich bringe ihn morgen zurück.~Я принесу её обратно завтра.
+Er liegt neben deinem Handy.~Она лежит рядом с твоим телефоном.
+Hat Lea den Zettel schon? / Nein, ich gebe ihn ihr nach dem Kurs.
+Когда Лея получит записку?|После занятия.|До занятия.|Она уже получила её.
+Ich gebe sie den Zettel.~Ich gebe ihr den Zettel.~Получатель отвечает на wem?, поэтому ей — ihr.
+##
+У кого он сейчас|Уточнить владельца или текущее местонахождение предмета.|Bei требует Dativ. Bei mir означает «у меня» и не сообщает, кому вещь принадлежит.
+Der Schlüssel ist bei mir.~Ключ у меня.
+Ich hole ihn bei dir ab.~Я заберу его у тебя.
+Wem gehört dieser Schlüssel?~Кому принадлежит этот ключ?
+Er gehört unserer Nachbarin.~Он принадлежит нашей соседке.
+Ist das dein Schlüssel? / Nein, er gehört unserer Nachbarin. Er ist nur gerade bei mir.
+Кому принадлежит ключ?|Соседке.|Говорящему.|Собеседнику.
+Der Schlüssel ist bei mich.~Der Schlüssel ist bei mir.~После bei нужно mir, форма Dativ.
+##
+Согласны не во всём|Выразить частичное согласие и уточнить возражение.|Zwar предваряет уступку, aber вводит возражение. В каждой части сохраняется обычный порядок слов.
+Die Idee gefällt mir.~Мне нравится идея.
+Der Weg ist zwar kurz, aber er ist steil.~Путь хоть и короткий, но крутой.
+Ich würde lieber den anderen Weg nehmen.~Я бы предпочёл другой путь.
+Damit bin ich einverstanden.~С этим я согласен.
+Nehmen wir den kurzen Weg? / Er ist zwar kurz, aber sehr steil. Ich gehe lieber außen herum.
+Почему предлагают другой путь?|Короткий путь очень крутой.|Он закрыт.|Он длиннее.
+Der Weg ist kurz zwar, aber er ist steil.~Der Weg ist zwar kurz, aber er ist steil.~Zwar стоит перед признаком, который признаём: kurz.
+##
+Одинаковая цена|Сравнить два предложения с als и wie.|Bei gleich или so… wie выражается равенство; после сравнительной формы употребляется als.
+Die zweite Wohnung ist heller als die erste.~Вторая квартира светлее первой.
+Sie ist genauso teuer wie die erste.~Она стоит столько же, сколько первая.
+Die Küche ist dort größer.~Кухня там больше.
+Wir sehen uns beide Wohnungen an.~Мы посмотрим обе квартиры.
+Ist die zweite Wohnung teurer? / Nein, sie ist genauso teuer wie die erste. Aber sie ist heller.
+Что различается?|Освещённость.|Цена.|Обе квартиры стоят по-разному и одинаково светлые.
+Sie ist heller wie die erste.~Sie ist heller als die erste.~Для неравенства после heller употребляется als.
+##
+Исправить адрес|Написать короткую просьбу о смене контактных данных.|Könnten Sie…? образует вежливый вопрос. Das Verb ändern остаётся в инфинитиве в конце.
+Meine Adresse hat sich geändert.~Мой адрес изменился.
+Könnten Sie die Adresse im Formular ändern?~Не могли бы вы изменить адрес в формуляре?
+Die alte Nummer gilt nicht mehr.~Старый номер больше не действует.
+Ich schicke Ihnen die neuen Daten.~Я пришлю вам новые данные.
+Ist die Adresse noch richtig? / Nein. Ich schicke Ihnen gleich die neue Adresse.
+Что пришлёт собеседник?|Новый адрес.|Старую квитанцию.|Новое расписание.
+Könnten Sie die Adresse im Formular ändern Sie?~Könnten Sie die Adresse im Formular ändern?~Подлежащее Sie уже стоит после Könnten и в конце не повторяется.
+##
+Две причины задержки|Объяснить причину с weil и следствие с deshalb.|В части с weil глагол в конце. После deshalb первым идёт спрягаемый глагол.
+Ich komme später, weil mein Zug ausfällt.~Я приеду позже, потому что мой поезд отменили.
+Deshalb nehme ich den Bus.~Поэтому я поеду на автобусе.
+Der nächste Bus fährt in zehn Minuten.~Следующий автобус отправляется через десять минут.
+Ihr könnt schon anfangen.~Можете уже начинать.
+Warum kommst du später? / Mein Zug fällt aus. Deshalb nehme ich den Bus.
+Как человек доберётся?|На автобусе.|На следующем поезде.|На такси.
+Deshalb ich nehme den Bus.~Deshalb nehme ich den Bus.~Deshalb занимает первое место, за ним идёт nehme.
+##
+Сначала включите, потом проверьте|Понять последовательность короткой инструкции.|Zuerst отмечает первый шаг. Danach ставит следующее действие, а спрягаемый глагол следует за ним.
+Schalten Sie das Gerät zuerst ein.~Сначала включите прибор.
+Danach prüfen Sie die Anzeige.~Затем проверьте дисплей.
+Drücken Sie kurz auf die Taste.~Коротко нажмите на кнопку.
+Das Licht muss grün sein.~Индикатор должен быть зелёным.
+Was mache ich nach dem Einschalten? / Prüfen Sie die Anzeige. Das Licht muss grün sein.
+Что проверить после включения?|Дисплей и цвет индикатора.|Адрес доставки.|Провод до включения.
+Danach Sie prüfen die Anzeige.~Danach prüfen Sie die Anzeige.~После Danach в главной части стоит глагол prüfen.
+##
+Завтра будет открыто?|Уточнить будущий план через настоящее и Futur I.|В расписании время часто понятно из morgen и Präsens. В Futur I после werden инфинитив в конце.
+Morgen öffnet das Büro später.~Завтра офис откроется позже.
+Wir werden ab zehn Uhr erreichbar sein.~Мы будем доступны с десяти.
+Heute bleibt der Eingang geschlossen.~Сегодня вход закрыт.
+Bitte kommen Sie erst am Nachmittag.~Приходите, пожалуйста, только после обеда.
+Kann ich morgen um neun anrufen? / Lieber nicht. Wir sind erst ab zehn Uhr erreichbar.
+С какого времени можно звонить?|С десяти.|С девяти.|Только вечером.
+Wir werden ab zehn Uhr erreichbar sind.~Wir werden ab zehn Uhr erreichbar sein.~После спрягаемого werden нужна форма инфинитива sein.
+##
+Перескажи сообщение|Передать факт и вопрос с dass и ob.|Dass вводит сообщение. Ob вводит косвенный вопрос «ли». В обоих случаях глагол в конце.
+Mila sagt, dass der Termin später beginnt.~Мила говорит, что встреча начнётся позже.
+Sie fragt, ob wir länger bleiben können.~Она спрашивает, можем ли мы остаться дольше.
+Ich weiß noch nicht, wann wir fertig sind.~Я ещё не знаю, когда мы закончим.
+Ich schreibe ihr nach dem Termin.~Я напишу ей после встречи.
+Was möchte Mila wissen? / Sie fragt, ob wir länger bleiben können.
+Что хочет узнать Мила?|Можем ли мы остаться дольше.|Будет ли встреча отменена.|Кто прислал приглашение.
+Sie fragt, ob können wir länger bleiben.~Sie fragt, ob wir länger bleiben können.~В вопросе с ob модальный глагол können закрывает придаточную часть.
+##
+Встреча переносится|Составить сообщение об изменении, причине и следующем шаге.|Событие в прошлом можно передать Perfekt. В новом предложении deshalb связывает решение с причиной.
+Der Raum ist heute nicht frei.~Помещение сегодня занято.
+Wir haben den Termin deshalb verschoben.~Поэтому мы перенесли встречу.
+Der neue Termin ist am Dienstag.~Новая встреча во вторник.
+Gib mir bitte bis morgen Bescheid.~Дай мне знать до завтра, пожалуйста.
+Warum treffen wir uns heute nicht? / Der Raum ist nicht frei. Der neue Termin ist am Dienstag.
+Когда теперь встреча?|Во вторник.|Сегодня вечером.|В понедельник.
+Wir haben den Termin deshalb verschieben.~Wir haben den Termin deshalb verschoben.~Perfekt с haben требует Partizip II verschoben.

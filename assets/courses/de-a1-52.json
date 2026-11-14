@@ -1,0 +1,255 @@
+{
+  "id": "de-a1-52",
+  "title": "У кого он сейчас",
+  "topic": "Предметы и люди",
+  "order": 51,
+  "objective": "Уточнить владельца или текущее местонахождение предмета.",
+  "guide": "Bei требует Dativ. Bei mir означает «у меня» и не сообщает, кому вещь принадлежит.",
+  "vocabulary": [
+    {
+      "id": "de:v13:52:p0",
+      "en": "Der Schlüssel ist bei mir.",
+      "ru": "Ключ у меня."
+    },
+    {
+      "id": "de:v13:52:p1",
+      "en": "Ich hole ihn bei dir ab.",
+      "ru": "Я заберу его у тебя."
+    },
+    {
+      "id": "de:v13:52:p2",
+      "en": "Wem gehört dieser Schlüssel?",
+      "ru": "Кому принадлежит этот ключ?"
+    },
+    {
+      "id": "de:v13:52:p3",
+      "en": "Er gehört unserer Nachbarin.",
+      "ru": "Он принадлежит нашей соседке."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "У кого он сейчас",
+      "phrase": "Der Schlüssel ist bei mir.",
+      "translation": "Ключ у меня.",
+      "explanation": "Bei требует Dativ. Bei mir означает «у меня» и не сообщает, кому вещь принадлежит."
+    },
+    {
+      "character": "miko",
+      "title": "У кого он сейчас",
+      "phrase": "Ich hole ihn bei dir ab.",
+      "translation": "Я заберу его у тебя.",
+      "explanation": "Ich hole ihn bei dir ab. — Я заберу его у тебя."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "У кого он сейчас",
+      "phrase": "Wem gehört dieser Schlüssel?",
+      "translation": "Кому принадлежит этот ключ?",
+      "explanation": "Wem gehört dieser Schlüssel? — Кому принадлежит этот ключ?"
+    },
+    {
+      "character": "orbi",
+      "title": "У кого он сейчас",
+      "phrase": "Er gehört unserer Nachbarin.",
+      "translation": "Он принадлежит нашей соседке.",
+      "explanation": "Er gehört unserer Nachbarin. — Он принадлежит нашей соседке."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Der Schlüssel ist bei mir.",
+      "translation": "Ключ у меня.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Ключ у меня.",
+      "options": [
+        "Кому принадлежит этот ключ?",
+        "Ключ у меня.",
+        "Он принадлежит нашей соседке."
+      ],
+      "explanation": "Bei требует Dativ. Bei mir означает «у меня» и не сообщает, кому вещь принадлежит."
+    },
+    {
+      "id": "apply",
+      "phrase": "Ich hole ihn bei dir ab.",
+      "translation": "Я заберу его у тебя.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Ich hole ihn bei dir ab.",
+      "tokens": [
+        "Ich",
+        "hole",
+        "ihn",
+        "bei",
+        "dir",
+        "ab."
+      ],
+      "character": "miko",
+      "explanation": "Ich hole ihn bei dir ab. — Я заберу его у тебя."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-52-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Ключ у меня.»?",
+      "answers": [
+        "Der Schlüssel ist bei mir."
+      ],
+      "explanation": "Der Schlüssel ist bei mir. — Ключ у меня.",
+      "wordIds": [
+        "de:v13:52:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Ich hole ihn bei dir ab.",
+        "Er gehört unserer Nachbarin.",
+        "Der Schlüssel ist bei mir."
+      ],
+      "hint": "Der Schlüssel ist bei mir. — Ключ у меня."
+    },
+    {
+      "id": "de-a1-52-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я заберу его у тебя.",
+      "answers": [
+        "Ich hole ihn bei dir ab."
+      ],
+      "explanation": "Bei требует Dativ. Bei mir означает «у меня» и не сообщает, кому вещь принадлежит.",
+      "wordIds": [
+        "de:v13:52:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Ich",
+        "hole",
+        "ihn",
+        "bei",
+        "dir",
+        "ab."
+      ],
+      "hint": "Ich hole ihn bei dir ab. — Я заберу его у тебя."
+    },
+    {
+      "id": "de-a1-52-e03",
+      "type": "dialogue",
+      "prompt": "Кому принадлежит ключ?",
+      "answers": [
+        "Соседке."
+      ],
+      "explanation": "В диалоге: Ist das dein Schlüssel? / Nein, er gehört unserer Nachbarin. Er ist nur gerade bei mir. Поэтому: Соседке.",
+      "wordIds": [
+        "de:v13:52:p0",
+        "de:v13:52:p1",
+        "de:v13:52:p2",
+        "de:v13:52:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Ist das dein Schlüssel?\nМико: Nein, er gehört unserer Nachbarin. Er ist nur gerade bei mir.",
+      "options": [
+        "Говорящему.",
+        "Собеседнику.",
+        "Соседке."
+      ]
+    },
+    {
+      "id": "de-a1-52-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Кому принадлежит этот ключ?"
+      ],
+      "explanation": "Wem gehört dieser Schlüssel? — Кому принадлежит этот ключ?",
+      "wordIds": [
+        "de:v13:52:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wem gehört dieser Schlüssel?",
+      "options": [
+        "Ключ у меня.",
+        "Кому принадлежит этот ключ?",
+        "Я заберу его у тебя."
+      ],
+      "hint": "Wem gehört dieser Schlüssel? — Кому принадлежит этот ключ?"
+    },
+    {
+      "id": "de-a1-52-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Der Schlüssel ist bei mich.",
+      "answers": [
+        "Der Schlüssel ist bei mir."
+      ],
+      "explanation": "После bei нужно mir, форма Dativ.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Der Schlüssel ist bei mich.",
+        "Der Schlüssel ist bei mir."
+      ],
+      "hint": "Bei требует Dativ. Bei mir означает «у меня» и не сообщает, кому вещь принадлежит."
+    },
+    {
+      "id": "de-a1-52-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Он принадлежит нашей соседке.». Можно написать вместо микрофона.",
+      "answers": [
+        "Er gehört unserer Nachbarin."
+      ],
+      "explanation": "Er gehört unserer Nachbarin. — Он принадлежит нашей соседке.",
+      "wordIds": [
+        "de:v13:52:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Er gehört unserer Nachbarin.",
+      "recall": {
+        "phrase": "Er gehört unserer Nachbarin.",
+        "meaning": "Он принадлежит нашей соседке."
+      }
+    },
+    {
+      "id": "de-a1-52-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Ключ у меня.",
+      "answers": [
+        "Der Schlüssel ist bei mir."
+      ],
+      "explanation": "Bei требует Dativ. Bei mir означает «у меня» и не сообщает, кому вещь принадлежит.",
+      "wordIds": [
+        "de:v13:52:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Der Schlüssel ist bei mir.",
+        "meaning": "Ключ у меня."
+      }
+    },
+    {
+      "id": "de-a1-52-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можешь взять её сегодня с собой?",
+      "answers": [
+        "Kannst du ihn heute mitnehmen?"
+      ],
+      "explanation": "Kannst du ihn heute mitnehmen? — Можешь взять её сегодня с собой?",
+      "wordIds": [
+        "de:v13:51:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich gebe ihr den Zettel.",
+        "Kannst du ihn heute mitnehmen?",
+        "Ich bringe ihn morgen zurück.",
+        "Er liegt neben deinem Handy."
+      ]
+    }
+  ]
+}

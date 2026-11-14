@@ -1,0 +1,263 @@
+{
+  "id": "en-a1-100",
+  "title": "Новости для всей группы",
+  "topic": "Рассказы и обновления",
+  "order": 99,
+  "objective": "Написать понятное обновление о причине, решении и новом сроке.",
+  "guide": "Since может вводить причину. Please reply by… задаёт крайний срок ответа.",
+  "vocabulary": [
+    {
+      "id": "en:v13:100:p0",
+      "en": "Since the first room is unavailable, we've booked another one.",
+      "ru": "Поскольку первая комната недоступна, мы забронировали другую."
+    },
+    {
+      "id": "en:v13:100:p1",
+      "en": "The address has changed, but the time is the same.",
+      "ru": "Адрес изменился, а время осталось прежним."
+    },
+    {
+      "id": "en:v13:100:p2",
+      "en": "Please reply by noon if you can join us.",
+      "ru": "Ответьте, пожалуйста, к полудню, если сможете присоединиться."
+    },
+    {
+      "id": "en:v13:100:p3",
+      "en": "I'll send a map to anyone who needs one.",
+      "ru": "Я пришлю карту всем, кому она понадобится."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Новости для всей группы",
+      "phrase": "Since the first room is unavailable, we've booked another one.",
+      "translation": "Поскольку первая комната недоступна, мы забронировали другую.",
+      "explanation": "Since может вводить причину. Please reply by… задаёт крайний срок ответа."
+    },
+    {
+      "character": "miko",
+      "title": "Новости для всей группы",
+      "phrase": "The address has changed, but the time is the same.",
+      "translation": "Адрес изменился, а время осталось прежним.",
+      "explanation": "The address has changed, but the time is the same. — Адрес изменился, а время осталось прежним."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Новости для всей группы",
+      "phrase": "Please reply by noon if you can join us.",
+      "translation": "Ответьте, пожалуйста, к полудню, если сможете присоединиться.",
+      "explanation": "Please reply by noon if you can join us. — Ответьте, пожалуйста, к полудню, если сможете присоединиться."
+    },
+    {
+      "character": "orbi",
+      "title": "Новости для всей группы",
+      "phrase": "I'll send a map to anyone who needs one.",
+      "translation": "Я пришлю карту всем, кому она понадобится.",
+      "explanation": "I'll send a map to anyone who needs one. — Я пришлю карту всем, кому она понадобится."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Since the first room is unavailable, we've booked another one.",
+      "translation": "Поскольку первая комната недоступна, мы забронировали другую.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Поскольку первая комната недоступна, мы забронировали другую.",
+      "options": [
+        "Ответьте, пожалуйста, к полудню, если сможете присоединиться.",
+        "Поскольку первая комната недоступна, мы забронировали другую.",
+        "Я пришлю карту всем, кому она понадобится."
+      ],
+      "explanation": "Since может вводить причину. Please reply by… задаёт крайний срок ответа."
+    },
+    {
+      "id": "apply",
+      "phrase": "The address has changed, but the time is the same.",
+      "translation": "Адрес изменился, а время осталось прежним.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The address has changed, but the time is the same.",
+      "tokens": [
+        "The",
+        "address",
+        "has",
+        "changed,",
+        "but",
+        "the",
+        "time",
+        "is",
+        "the",
+        "same."
+      ],
+      "character": "miko",
+      "explanation": "The address has changed, but the time is the same. — Адрес изменился, а время осталось прежним."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-100-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Поскольку первая комната недоступна, мы забронировали другую.»?",
+      "answers": [
+        "Since the first room is unavailable, we've booked another one."
+      ],
+      "explanation": "Since the first room is unavailable, we've booked another one. — Поскольку первая комната недоступна, мы забронировали другую.",
+      "wordIds": [
+        "en:v13:100:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The address has changed, but the time is the same.",
+        "I'll send a map to anyone who needs one.",
+        "Since the first room is unavailable, we've booked another one."
+      ],
+      "hint": "Since the first room is unavailable, we've booked another one. — Поскольку первая комната недоступна, мы забронировали другую."
+    },
+    {
+      "id": "en-a1-100-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Адрес изменился, а время осталось прежним.",
+      "answers": [
+        "The address has changed, but the time is the same."
+      ],
+      "explanation": "Since может вводить причину. Please reply by… задаёт крайний срок ответа.",
+      "wordIds": [
+        "en:v13:100:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "address",
+        "has",
+        "changed,",
+        "but",
+        "the",
+        "time",
+        "is",
+        "the",
+        "same."
+      ],
+      "hint": "The address has changed, but the time is the same. — Адрес изменился, а время осталось прежним."
+    },
+    {
+      "id": "en-a1-100-e03",
+      "type": "dialogue",
+      "prompt": "Что нужно сделать к полудню?",
+      "answers": [
+        "Ответить, получится ли прийти."
+      ],
+      "explanation": "В диалоге: Do we still meet at the same time? / Yes. Only the address has changed. Please reply by noon. Поэтому: Ответить, получится ли прийти.",
+      "wordIds": [
+        "en:v13:100:p0",
+        "en:v13:100:p1",
+        "en:v13:100:p2",
+        "en:v13:100:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Do we still meet at the same time?\nМико: Yes. Only the address has changed. Please reply by noon.",
+      "options": [
+        "Прийти по новому адресу.",
+        "Найти первую комнату.",
+        "Ответить, получится ли прийти."
+      ]
+    },
+    {
+      "id": "en-a1-100-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Ответьте, пожалуйста, к полудню, если сможете присоединиться."
+      ],
+      "explanation": "Please reply by noon if you can join us. — Ответьте, пожалуйста, к полудню, если сможете присоединиться.",
+      "wordIds": [
+        "en:v13:100:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Please reply by noon if you can join us.",
+      "options": [
+        "Поскольку первая комната недоступна, мы забронировали другую.",
+        "Ответьте, пожалуйста, к полудню, если сможете присоединиться.",
+        "Адрес изменился, а время осталось прежним."
+      ],
+      "hint": "Please reply by noon if you can join us. — Ответьте, пожалуйста, к полудню, если сможете присоединиться."
+    },
+    {
+      "id": "en-a1-100-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: The address has change, but the time is the same.",
+      "answers": [
+        "The address has changed, but the time is the same."
+      ],
+      "explanation": "Для результата к настоящему после has требуется changed.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "The address has change, but the time is the same.",
+        "The address has changed, but the time is the same."
+      ],
+      "hint": "Since может вводить причину. Please reply by… задаёт крайний срок ответа."
+    },
+    {
+      "id": "en-a1-100-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я пришлю карту всем, кому она понадобится.». Можно написать вместо микрофона.",
+      "answers": [
+        "I'll send a map to anyone who needs one."
+      ],
+      "explanation": "I'll send a map to anyone who needs one. — Я пришлю карту всем, кому она понадобится.",
+      "wordIds": [
+        "en:v13:100:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I'll send a map to anyone who needs one.",
+      "recall": {
+        "phrase": "I'll send a map to anyone who needs one.",
+        "meaning": "Я пришлю карту всем, кому она понадобится."
+      }
+    },
+    {
+      "id": "en-a1-100-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Поскольку первая комната недоступна, мы забронировали другую.",
+      "answers": [
+        "Since the first room is unavailable, we've booked another one."
+      ],
+      "explanation": "Since может вводить причину. Please reply by… задаёт крайний срок ответа.",
+      "wordIds": [
+        "en:v13:100:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Since the first room is unavailable, we've booked another one.",
+        "meaning": "Поскольку первая комната недоступна, мы забронировали другую."
+      }
+    },
+    {
+      "id": "en-a1-100-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: В итоге день оказался чудесным.",
+      "answers": [
+        "It turned out to be a lovely afternoon."
+      ],
+      "explanation": "It turned out to be a lovely afternoon. — В итоге день оказался чудесным.",
+      "wordIds": [
+        "en:v13:99:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "We were going to cycle to the coast.",
+        "It started raining before we left.",
+        "We ended up visiting the museum instead.",
+        "It turned out to be a lovely afternoon."
+      ]
+    }
+  ]
+}

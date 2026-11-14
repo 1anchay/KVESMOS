@@ -1,0 +1,253 @@
+{
+  "id": "fr-a1-40",
+  "title": "Объяснить задержку",
+  "topic": "Условия и новости",
+  "order": 39,
+  "objective": "Сообщить причину задержки и новое время прибытия.",
+  "guide": "Parce que вводит причину, donc — последствие. Для уже прошедшего события подойдёт j’ai raté.",
+  "vocabulary": [
+    {
+      "id": "fr:v13:40:p0",
+      "en": "J’ai raté mon train.",
+      "ru": "Я опоздал на поезд."
+    },
+    {
+      "id": "fr:v13:40:p1",
+      "en": "Je prendrai donc le suivant.",
+      "ru": "Поэтому я сяду на следующий."
+    },
+    {
+      "id": "fr:v13:40:p2",
+      "en": "Je serai là vers neuf heures.",
+      "ru": "Я буду там около девяти."
+    },
+    {
+      "id": "fr:v13:40:p3",
+      "en": "Ne m’attendez pas pour dîner.",
+      "ru": "Не ждите меня к ужину."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Объяснить задержку",
+      "phrase": "J’ai raté mon train.",
+      "translation": "Я опоздал на поезд.",
+      "explanation": "Parce que вводит причину, donc — последствие. Для уже прошедшего события подойдёт j’ai raté."
+    },
+    {
+      "character": "miko",
+      "title": "Объяснить задержку",
+      "phrase": "Je prendrai donc le suivant.",
+      "translation": "Поэтому я сяду на следующий.",
+      "explanation": "Je prendrai donc le suivant. — Поэтому я сяду на следующий."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Объяснить задержку",
+      "phrase": "Je serai là vers neuf heures.",
+      "translation": "Я буду там около девяти.",
+      "explanation": "Je serai là vers neuf heures. — Я буду там около девяти."
+    },
+    {
+      "character": "orbi",
+      "title": "Объяснить задержку",
+      "phrase": "Ne m’attendez pas pour dîner.",
+      "translation": "Не ждите меня к ужину.",
+      "explanation": "Ne m’attendez pas pour dîner. — Не ждите меня к ужину."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "J’ai raté mon train.",
+      "translation": "Я опоздал на поезд.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я опоздал на поезд.",
+      "options": [
+        "Я буду там около девяти.",
+        "Я опоздал на поезд.",
+        "Не ждите меня к ужину."
+      ],
+      "explanation": "Parce que вводит причину, donc — последствие. Для уже прошедшего события подойдёт j’ai raté."
+    },
+    {
+      "id": "apply",
+      "phrase": "Je prendrai donc le suivant.",
+      "translation": "Поэтому я сяду на следующий.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Je prendrai donc le suivant.",
+      "tokens": [
+        "Je",
+        "prendrai",
+        "donc",
+        "le",
+        "suivant."
+      ],
+      "character": "miko",
+      "explanation": "Je prendrai donc le suivant. — Поэтому я сяду на следующий."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fr-a1-40-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я буду там около девяти."
+      ],
+      "explanation": "Je serai là vers neuf heures. — Я буду там около девяти.",
+      "wordIds": [
+        "fr:v13:40:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Je serai là vers neuf heures.",
+      "options": [
+        "Я опоздал на поезд.",
+        "Я буду там около девяти.",
+        "Поэтому я сяду на следующий."
+      ],
+      "hint": "Je serai là vers neuf heures. — Я буду там около девяти."
+    },
+    {
+      "id": "fr-a1-40-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Поэтому я сяду на следующий.",
+      "answers": [
+        "Je prendrai donc le suivant."
+      ],
+      "explanation": "Parce que вводит причину, donc — последствие. Для уже прошедшего события подойдёт j’ai raté.",
+      "wordIds": [
+        "fr:v13:40:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Je",
+        "prendrai",
+        "donc",
+        "le",
+        "suivant."
+      ],
+      "hint": "Je prendrai donc le suivant. — Поэтому я сяду на следующий."
+    },
+    {
+      "id": "fr-a1-40-e03",
+      "type": "dialogue",
+      "prompt": "Когда ждать собеседника?",
+      "answers": [
+        "Около девяти."
+      ],
+      "explanation": "В диалоге: Tu seras là pour dîner ? / Non, j’ai raté mon train. Je serai là vers neuf heures. Поэтому: Около девяти.",
+      "wordIds": [
+        "fr:v13:40:p0",
+        "fr:v13:40:p1",
+        "fr:v13:40:p2",
+        "fr:v13:40:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Tu seras là pour dîner ?\nМико: Non, j’ai raté mon train. Je serai là vers neuf heures.",
+      "options": [
+        "Ровно в восемь.",
+        "До ужина.",
+        "Около девяти."
+      ]
+    },
+    {
+      "id": "fr-a1-40-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я опоздал на поезд.»?",
+      "answers": [
+        "J’ai raté mon train."
+      ],
+      "explanation": "J’ai raté mon train. — Я опоздал на поезд.",
+      "wordIds": [
+        "fr:v13:40:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Je prendrai donc le suivant.",
+        "Ne m’attendez pas pour dîner.",
+        "J’ai raté mon train."
+      ],
+      "hint": "J’ai raté mon train. — Я опоздал на поезд."
+    },
+    {
+      "id": "fr-a1-40-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ne attendez pas pour dîner.",
+      "answers": [
+        "Ne m’attendez pas pour dîner."
+      ],
+      "explanation": "Для «меня» нужно m’ перед attendez. Pas стоит после глагола.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ne attendez pas pour dîner.",
+        "Ne m’attendez pas pour dîner."
+      ],
+      "hint": "Parce que вводит причину, donc — последствие. Для уже прошедшего события подойдёт j’ai raté."
+    },
+    {
+      "id": "fr-a1-40-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Не ждите меня к ужину.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ne m’attendez pas pour dîner."
+      ],
+      "explanation": "Ne m’attendez pas pour dîner. — Не ждите меня к ужину.",
+      "wordIds": [
+        "fr:v13:40:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Ne m’attendez pas pour dîner.",
+      "recall": {
+        "phrase": "Ne m’attendez pas pour dîner.",
+        "meaning": "Не ждите меня к ужину."
+      }
+    },
+    {
+      "id": "fr-a1-40-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я опоздал на поезд.",
+      "answers": [
+        "J’ai raté mon train."
+      ],
+      "explanation": "Parce que вводит причину, donc — последствие. Для уже прошедшего события подойдёт j’ai raté.",
+      "wordIds": [
+        "fr:v13:40:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "J’ai raté mon train.",
+        "meaning": "Я опоздал на поезд."
+      }
+    },
+    {
+      "id": "fr-a1-40-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Иначе поедим дома.",
+      "answers": [
+        "Sinon, on mangera à la maison."
+      ],
+      "explanation": "Sinon, on mangera à la maison. — Иначе поедим дома.",
+      "wordIds": [
+        "fr:v13:39:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "S’il reste une table, je réserverai pour deux.",
+        "Je t’appellerai après le travail.",
+        "On peut dîner plus tard.",
+        "Sinon, on mangera à la maison."
+      ]
+    }
+  ]
+}

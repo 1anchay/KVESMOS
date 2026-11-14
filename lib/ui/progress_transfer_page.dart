@@ -240,8 +240,9 @@ class _BackupPasswordDialogState extends State<_BackupPasswordDialog> {
             maxLength: 256,
             decoration: const InputDecoration(labelText: 'Пароль'),
             validator: (value) {
-              if (value == null || value.trim().isEmpty)
+              if (value == null || value.trim().isEmpty) {
                 return 'Введите пароль';
+              }
               if (widget.protect && value.trim().runes.length < 12) {
                 return 'Введите минимум 12 символов';
               }

@@ -89,7 +89,10 @@ void main() {
       await capture('placement-$lang');
       final placement = SmartPlacementRepository(r);
       var state = (await placement.saved())!;
-      while (SmartPlacementRepository.question(state) case final question?) {
+      final beforePlacement = await r.progress();
+      final beforeGrants = app.inventory.grants.length;
+      for (var step = 0; step < 12; step++) {
+        final question = SmartPlacementRepository.question(state)!;
         final answer = (question['answers'] as List).first as String;
         final tokens = question['tokens'] as List;
         if (tokens.isNotEmpty) {
@@ -108,7 +111,10 @@ void main() {
           await tap(find.widgetWithText(FilledButton, 'Ответить'));
         }
         final next = (await placement.saved())!;
-        expect((next['results'] as List).length, (state['results'] as List).length + 1);
+        expect(
+          (next['results'] as List).length,
+          (state['results'] as List).length + 1,
+        );
         state = next;
         if (lang == 'en' && (state['results'] as List).length == 1) {
           await tap(find.byTooltip('Сохранить и выйти'));
@@ -118,13 +124,17 @@ void main() {
         }
       }
       expect(state['level'], greaterThan(0));
-      expect((await r.progress()).xp, 0);
+      expect((await r.progress()).xp, beforePlacement.xp);
       await capture('recommendation-$lang');
       await tap(find.widgetWithText(FilledButton, 'Начать с рекомендованного'));
-      expect(tester.widget<LessonScreen>(find.byType(LessonScreen)).lessonId,
-          state['recommendation']);
-      expect((await r.progress()).completed, isEmpty);
+      expect(
+        tester.widget<LessonScreen>(find.byType(LessonScreen)).lessonId,
+        state['recommendation'],
+      );
+      expect((await r.progress()).completed, beforePlacement.completed);
+      expect(app.inventory.grants.length, beforeGrants);
       await capture('recommended-lesson-$lang');
+      if (lang == 'en' || lang == 'zh') await marker('VIDEO_DONE:$lang');
       await r.chooseCourseStart(r.catalog.first.id);
       await app.refresh();
 
@@ -229,7 +239,6 @@ void main() {
       await go('/stats');
       await show(find.text('30 дней занятий'));
       await capture('calendar-$lang');
-      if (lang == 'en' || lang == 'zh') await marker('VIDEO_DONE:$lang');
     }
     await marker('DONE');
     await tester.pumpWidget(const SizedBox.shrink());

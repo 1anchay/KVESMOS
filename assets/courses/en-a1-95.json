@@ -1,0 +1,294 @@
+{
+  "id": "en-a1-95",
+  "title": "Передать решение команды",
+  "topic": "Пересказ и сравнения",
+  "order": 94,
+  "objective": "Кратко пересказать сказанное и отделить факт от предложения.",
+  "guide": "Said that передаёт сообщение. Suggested + форма на -ing передаёт предложение действия.",
+  "vocabulary": [
+    {
+      "id": "en:v13:95:p0",
+      "en": "Nina said that the room was free.",
+      "ru": "Нина сказала, что помещение свободно."
+    },
+    {
+      "id": "en:v13:95:p1",
+      "en": "She suggested meeting there at ten.",
+      "ru": "Она предложила встретиться там в десять."
+    },
+    {
+      "id": "en:v13:95:p2",
+      "en": "Leo asked whether we needed a screen.",
+      "ru": "Лео спросил, нужен ли нам экран."
+    },
+    {
+      "id": "en:v13:95:p3",
+      "en": "We agreed to bring our own laptop.",
+      "ru": "Мы договорились принести свой ноутбук."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Передать решение команды",
+      "phrase": "Nina said that the room was free.",
+      "translation": "Нина сказала, что помещение свободно.",
+      "explanation": "Said that передаёт сообщение. Suggested + форма на -ing передаёт предложение действия."
+    },
+    {
+      "character": "miko",
+      "title": "Передать решение команды",
+      "phrase": "She suggested meeting there at ten.",
+      "translation": "Она предложила встретиться там в десять.",
+      "explanation": "She suggested meeting there at ten. — Она предложила встретиться там в десять."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Передать решение команды",
+      "phrase": "Leo asked whether we needed a screen.",
+      "translation": "Лео спросил, нужен ли нам экран.",
+      "explanation": "Leo asked whether we needed a screen. — Лео спросил, нужен ли нам экран."
+    },
+    {
+      "character": "orbi",
+      "title": "Передать решение команды",
+      "phrase": "We agreed to bring our own laptop.",
+      "translation": "Мы договорились принести свой ноутбук.",
+      "explanation": "We agreed to bring our own laptop. — Мы договорились принести свой ноутбук."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Nina said that the room was free.",
+      "translation": "Нина сказала, что помещение свободно.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Нина сказала, что помещение свободно.",
+      "options": [
+        "Лео спросил, нужен ли нам экран.",
+        "Нина сказала, что помещение свободно.",
+        "Мы договорились принести свой ноутбук."
+      ],
+      "explanation": "Said that передаёт сообщение. Suggested + форма на -ing передаёт предложение действия."
+    },
+    {
+      "id": "apply",
+      "phrase": "She suggested meeting there at ten.",
+      "translation": "Она предложила встретиться там в десять.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "She suggested meeting there at ten.",
+      "tokens": [
+        "She",
+        "suggested",
+        "meeting",
+        "there",
+        "at",
+        "ten."
+      ],
+      "character": "miko",
+      "explanation": "She suggested meeting there at ten. — Она предложила встретиться там в десять."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-95-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Лео спросил, нужен ли нам экран."
+      ],
+      "explanation": "Leo asked whether we needed a screen. — Лео спросил, нужен ли нам экран.",
+      "wordIds": [
+        "en:v13:95:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Leo asked whether we needed a screen.",
+      "options": [
+        "Нина сказала, что помещение свободно.",
+        "Лео спросил, нужен ли нам экран.",
+        "Она предложила встретиться там в десять."
+      ],
+      "hint": "Leo asked whether we needed a screen. — Лео спросил, нужен ли нам экран."
+    },
+    {
+      "id": "en-a1-95-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Она предложила встретиться там в десять.",
+      "answers": [
+        "She suggested meeting there at ten."
+      ],
+      "explanation": "Said that передаёт сообщение. Suggested + форма на -ing передаёт предложение действия.",
+      "wordIds": [
+        "en:v13:95:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "She",
+        "suggested",
+        "meeting",
+        "there",
+        "at",
+        "ten."
+      ],
+      "hint": "She suggested meeting there at ten. — Она предложила встретиться там в десять."
+    },
+    {
+      "id": "en-a1-95-e03",
+      "type": "dialogue",
+      "prompt": "Что предложила Нина?",
+      "answers": [
+        "Встретиться в свободной комнате в десять."
+      ],
+      "explanation": "В диалоге: What did Nina suggest? / Meeting in the free room at ten. Поэтому: Встретиться в свободной комнате в десять.",
+      "wordIds": [
+        "en:v13:95:p0",
+        "en:v13:95:p1",
+        "en:v13:95:p2",
+        "en:v13:95:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: What did Nina suggest?\nМико: Meeting in the free room at ten.",
+      "options": [
+        "Купить ноутбук.",
+        "Перенести встречу на завтра.",
+        "Встретиться в свободной комнате в десять."
+      ]
+    },
+    {
+      "id": "en-a1-95-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Нина сказала, что помещение свободно.»?",
+      "answers": [
+        "Nina said that the room was free."
+      ],
+      "explanation": "Nina said that the room was free. — Нина сказала, что помещение свободно.",
+      "wordIds": [
+        "en:v13:95:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "She suggested meeting there at ten.",
+        "We agreed to bring our own laptop.",
+        "Nina said that the room was free."
+      ],
+      "hint": "Nina said that the room was free. — Нина сказала, что помещение свободно."
+    },
+    {
+      "id": "en-a1-95-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:95:p0",
+        "en:v13:95:p1",
+        "en:v13:95:p2",
+        "en:v13:95:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:95:p0",
+          "en": "Nina said that the room was free.",
+          "ru": "Нина сказала, что помещение свободно."
+        },
+        {
+          "id": "en:v13:95:p1",
+          "en": "She suggested meeting there at ten.",
+          "ru": "Она предложила встретиться там в десять."
+        },
+        {
+          "id": "en:v13:95:p2",
+          "en": "Leo asked whether we needed a screen.",
+          "ru": "Лео спросил, нужен ли нам экран."
+        },
+        {
+          "id": "en:v13:95:p3",
+          "en": "We agreed to bring our own laptop.",
+          "ru": "Мы договорились принести свой ноутбук."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-95-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: She suggested to meet there at ten.",
+      "answers": [
+        "She suggested meeting there at ten."
+      ],
+      "explanation": "После suggest для предложенного действия подходит meeting.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "She suggested to meet there at ten.",
+        "She suggested meeting there at ten."
+      ],
+      "hint": "Said that передаёт сообщение. Suggested + форма на -ing передаёт предложение действия."
+    },
+    {
+      "id": "en-a1-95-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы договорились принести свой ноутбук.». Можно написать вместо микрофона.",
+      "answers": [
+        "We agreed to bring our own laptop."
+      ],
+      "explanation": "We agreed to bring our own laptop. — Мы договорились принести свой ноутбук.",
+      "wordIds": [
+        "en:v13:95:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "We agreed to bring our own laptop.",
+      "recall": {
+        "phrase": "We agreed to bring our own laptop.",
+        "meaning": "Мы договорились принести свой ноутбук."
+      }
+    },
+    {
+      "id": "en-a1-95-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Нина сказала, что помещение свободно.",
+      "answers": [
+        "Nina said that the room was free."
+      ],
+      "explanation": "Said that передаёт сообщение. Suggested + форма на -ing передаёт предложение действия.",
+      "wordIds": [
+        "en:v13:95:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Nina said that the room was free.",
+        "meaning": "Нина сказала, что помещение свободно."
+      }
+    },
+    {
+      "id": "en-a1-95-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы подождали десять минут и ушли.",
+      "answers": [
+        "We waited for ten minutes and then left."
+      ],
+      "explanation": "We waited for ten minutes and then left. — Мы подождали десять минут и ушли.",
+      "wordIds": [
+        "en:v13:94:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "The shop had closed before we arrived.",
+        "I'd already called them when I got your message.",
+        "We waited for ten minutes and then left.",
+        "I didn't know the hours had changed."
+      ]
+    }
+  ]
+}

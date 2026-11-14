@@ -18,10 +18,9 @@ void main() => courseUiTests('en');
 void courseUiTests(String language) {
   setUpAll(setupSqlite);
   for (final id in [
-    for (var n = 21; n <= 72; n++) 'en-a1-$n',
-    for (final lang in ['es', 'de', 'fr', 'zh'])
-      for (var n = 1; n <= (lang == 'es' || lang == 'de' ? 42 : 32); n++)
-        '$lang-a1-${n.toString().padLeft(2, '0')}',
+    for (final course in StudyCourse.all)
+      for (var n = course.language == 'en' ? 21 : 1; n <= course.lessons; n++)
+        '${course.language}-a1-${n.toString().padLeft(2, '0')}',
   ].where((id) => id.startsWith(language))) {
     testWidgets('$id completes through UI with language-specific fallback', (
       tester,

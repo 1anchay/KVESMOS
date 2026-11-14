@@ -276,7 +276,9 @@
         "Léa et moi, nous sommes arrivées hier."
       ],
       "explanation": "Léa et moi, nous sommes arrivées hier. — Мы с Леа приехали вчера.",
-      "wordIds": [],
+      "wordIds": [
+        "fr:v015:32:p0"
+      ],
       "character": "zig_quartz",
       "phase": "Применяем",
       "options": [

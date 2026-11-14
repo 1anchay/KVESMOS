@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-82",
+  "title": "Ошибка в бронировании",
+  "topic": "Инструкции и бронирование",
+  "order": 81,
+  "objective": "Объяснить несоответствие и попросить проверить запись.",
+  "guide": "A room for two указывает, на сколько людей бронь. I booked… сообщает, что именно заказали.",
+  "vocabulary": [
+    {
+      "id": "en:v13:82:p0",
+      "en": "I booked a room for two people.",
+      "ru": "Я забронировал номер на двоих."
+    },
+    {
+      "id": "en:v13:82:p1",
+      "en": "The confirmation says one guest.",
+      "ru": "В подтверждении указан один гость."
+    },
+    {
+      "id": "en:v13:82:p2",
+      "en": "Could you check the reservation again?",
+      "ru": "Не могли бы вы снова проверить бронь?"
+    },
+    {
+      "id": "en:v13:82:p3",
+      "en": "I'll send you the booking number.",
+      "ru": "Я пришлю вам номер бронирования."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Ошибка в бронировании",
+      "phrase": "I booked a room for two people.",
+      "translation": "Я забронировал номер на двоих.",
+      "explanation": "A room for two указывает, на сколько людей бронь. I booked… сообщает, что именно заказали."
+    },
+    {
+      "character": "miko",
+      "title": "Ошибка в бронировании",
+      "phrase": "The confirmation says one guest.",
+      "translation": "В подтверждении указан один гость.",
+      "explanation": "The confirmation says one guest. — В подтверждении указан один гость."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Ошибка в бронировании",
+      "phrase": "Could you check the reservation again?",
+      "translation": "Не могли бы вы снова проверить бронь?",
+      "explanation": "Could you check the reservation again? — Не могли бы вы снова проверить бронь?"
+    },
+    {
+      "character": "orbi",
+      "title": "Ошибка в бронировании",
+      "phrase": "I'll send you the booking number.",
+      "translation": "Я пришлю вам номер бронирования.",
+      "explanation": "I'll send you the booking number. — Я пришлю вам номер бронирования."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I booked a room for two people.",
+      "translation": "Я забронировал номер на двоих.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я забронировал номер на двоих.",
+      "options": [
+        "Не могли бы вы снова проверить бронь?",
+        "Я забронировал номер на двоих.",
+        "Я пришлю вам номер бронирования."
+      ],
+      "explanation": "A room for two указывает, на сколько людей бронь. I booked… сообщает, что именно заказали."
+    },
+    {
+      "id": "apply",
+      "phrase": "The confirmation says one guest.",
+      "translation": "В подтверждении указан один гость.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The confirmation says one guest.",
+      "tokens": [
+        "The",
+        "confirmation",
+        "says",
+        "one",
+        "guest."
+      ],
+      "character": "miko",
+      "explanation": "The confirmation says one guest. — В подтверждении указан один гость."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-82-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я забронировал номер на двоих.»?",
+      "answers": [
+        "I booked a room for two people."
+      ],
+      "explanation": "I booked a room for two people. — Я забронировал номер на двоих.",
+      "wordIds": [
+        "en:v13:82:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The confirmation says one guest.",
+        "I'll send you the booking number.",
+        "I booked a room for two people."
+      ],
+      "hint": "I booked a room for two people. — Я забронировал номер на двоих."
+    },
+    {
+      "id": "en-a1-82-e02",
+      "type": "order",
+      "prompt": "Собери реплику: В подтверждении указан один гость.",
+      "answers": [
+        "The confirmation says one guest."
+      ],
+      "explanation": "A room for two указывает, на сколько людей бронь. I booked… сообщает, что именно заказали.",
+      "wordIds": [
+        "en:v13:82:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "confirmation",
+        "says",
+        "one",
+        "guest."
+      ],
+      "hint": "The confirmation says one guest. — В подтверждении указан один гость."
+    },
+    {
+      "id": "en-a1-82-e03",
+      "type": "dialogue",
+      "prompt": "В чём ошибка?",
+      "answers": [
+        "В подтверждении указан один гость."
+      ],
+      "explanation": "В диалоге: What's wrong with the booking? / I booked for two, but the confirmation says one guest. Поэтому: В подтверждении указан один гость.",
+      "wordIds": [
+        "en:v13:82:p0",
+        "en:v13:82:p1",
+        "en:v13:82:p2",
+        "en:v13:82:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: What's wrong with the booking?\nМико: I booked for two, but the confirmation says one guest.",
+      "options": [
+        "В брони неверная дата.",
+        "Номер уже занят.",
+        "В подтверждении указан один гость."
+      ]
+    },
+    {
+      "id": "en-a1-82-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Не могли бы вы снова проверить бронь?"
+      ],
+      "explanation": "Could you check the reservation again? — Не могли бы вы снова проверить бронь?",
+      "wordIds": [
+        "en:v13:82:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Could you check the reservation again?",
+      "options": [
+        "Я забронировал номер на двоих.",
+        "Не могли бы вы снова проверить бронь?",
+        "В подтверждении указан один гость."
+      ],
+      "hint": "Could you check the reservation again? — Не могли бы вы снова проверить бронь?"
+    },
+    {
+      "id": "en-a1-82-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I booked a room to two people.",
+      "answers": [
+        "I booked a room for two people."
+      ],
+      "explanation": "For указывает, для скольких людей предназначен номер.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I booked a room to two people.",
+        "I booked a room for two people."
+      ],
+      "hint": "A room for two указывает, на сколько людей бронь. I booked… сообщает, что именно заказали."
+    },
+    {
+      "id": "en-a1-82-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я пришлю вам номер бронирования.». Можно написать вместо микрофона.",
+      "answers": [
+        "I'll send you the booking number."
+      ],
+      "explanation": "I'll send you the booking number. — Я пришлю вам номер бронирования.",
+      "wordIds": [
+        "en:v13:82:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I'll send you the booking number.",
+      "recall": {
+        "phrase": "I'll send you the booking number.",
+        "meaning": "Я пришлю вам номер бронирования."
+      }
+    },
+    {
+      "id": "en-a1-82-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я забронировал номер на двоих.",
+      "answers": [
+        "I booked a room for two people."
+      ],
+      "explanation": "A room for two указывает, на сколько людей бронь. I booked… сообщает, что именно заказали.",
+      "wordIds": [
+        "en:v13:82:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I booked a room for two people.",
+        "meaning": "Я забронировал номер на двоих."
+      }
+    },
+    {
+      "id": "en-a1-82-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Стойка закрывается в восемь вечера.",
+      "answers": [
+        "The desk closes at eight in the evening."
+      ],
+      "explanation": "The desk closes at eight in the evening. — Стойка закрывается в восемь вечера.",
+      "wordIds": [
+        "en:v13:81:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "You can pick up the keys at reception.",
+        "The desk closes at eight in the evening.",
+        "If you arrive later, call this number.",
+        "Please keep the front door closed."
+      ]
+    }
+  ]
+}

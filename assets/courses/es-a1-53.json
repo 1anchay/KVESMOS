@@ -1,0 +1,290 @@
+{
+  "id": "es-a1-53",
+  "title": "Собираем заказ",
+  "topic": "Заказы и прежние привычки",
+  "order": 52,
+  "objective": "Выразить требования к составу заказа.",
+  "guide": "Sin указывает на отсутствие ингредиента. Para llevar обозначает заказ с собой.",
+  "vocabulary": [
+    {
+      "id": "es:v13:53:p0",
+      "en": "Una tortilla sin cebolla, por favor.",
+      "ru": "Омлет без лука, пожалуйста."
+    },
+    {
+      "id": "es:v13:53:p1",
+      "en": "La quiero para llevar.",
+      "ru": "Я хочу её с собой."
+    },
+    {
+      "id": "es:v13:53:p2",
+      "en": "¿Lleva queso esta ensalada?",
+      "ru": "В этом салате есть сыр?"
+    },
+    {
+      "id": "es:v13:53:p3",
+      "en": "Prefiero pedir otra cosa.",
+      "ru": "Я предпочту заказать что-нибудь другое."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Собираем заказ",
+      "phrase": "Una tortilla sin cebolla, por favor.",
+      "translation": "Омлет без лука, пожалуйста.",
+      "explanation": "Sin указывает на отсутствие ингредиента. Para llevar обозначает заказ с собой."
+    },
+    {
+      "character": "miko",
+      "title": "Собираем заказ",
+      "phrase": "La quiero para llevar.",
+      "translation": "Я хочу её с собой.",
+      "explanation": "La quiero para llevar. — Я хочу её с собой."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Собираем заказ",
+      "phrase": "¿Lleva queso esta ensalada?",
+      "translation": "В этом салате есть сыр?",
+      "explanation": "¿Lleva queso esta ensalada? — В этом салате есть сыр?"
+    },
+    {
+      "character": "orbi",
+      "title": "Собираем заказ",
+      "phrase": "Prefiero pedir otra cosa.",
+      "translation": "Я предпочту заказать что-нибудь другое.",
+      "explanation": "Prefiero pedir otra cosa. — Я предпочту заказать что-нибудь другое."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Una tortilla sin cebolla, por favor.",
+      "translation": "Омлет без лука, пожалуйста.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Омлет без лука, пожалуйста.",
+      "options": [
+        "В этом салате есть сыр?",
+        "Омлет без лука, пожалуйста.",
+        "Я предпочту заказать что-нибудь другое."
+      ],
+      "explanation": "Sin указывает на отсутствие ингредиента. Para llevar обозначает заказ с собой."
+    },
+    {
+      "id": "apply",
+      "phrase": "La quiero para llevar.",
+      "translation": "Я хочу её с собой.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "La quiero para llevar.",
+      "tokens": [
+        "La",
+        "quiero",
+        "para",
+        "llevar."
+      ],
+      "character": "miko",
+      "explanation": "La quiero para llevar. — Я хочу её с собой."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-53-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "В этом салате есть сыр?"
+      ],
+      "explanation": "¿Lleva queso esta ensalada? — В этом салате есть сыр?",
+      "wordIds": [
+        "es:v13:53:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "¿Lleva queso esta ensalada?",
+      "options": [
+        "Омлет без лука, пожалуйста.",
+        "В этом салате есть сыр?",
+        "Я хочу её с собой."
+      ],
+      "hint": "¿Lleva queso esta ensalada? — В этом салате есть сыр?"
+    },
+    {
+      "id": "es-a1-53-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я хочу её с собой.",
+      "answers": [
+        "La quiero para llevar."
+      ],
+      "explanation": "Sin указывает на отсутствие ингредиента. Para llevar обозначает заказ с собой.",
+      "wordIds": [
+        "es:v13:53:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "La",
+        "quiero",
+        "para",
+        "llevar."
+      ],
+      "hint": "La quiero para llevar. — Я хочу её с собой."
+    },
+    {
+      "id": "es-a1-53-e03",
+      "type": "dialogue",
+      "prompt": "Какой заказ просит клиент?",
+      "answers": [
+        "С собой и без лука."
+      ],
+      "explanation": "В диалоге: ¿La tortilla es para comer aquí? / Para llevar, por favor. Y sin cebolla. Поэтому: С собой и без лука.",
+      "wordIds": [
+        "es:v13:53:p0",
+        "es:v13:53:p1",
+        "es:v13:53:p2",
+        "es:v13:53:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿La tortilla es para comer aquí?\nМико: Para llevar, por favor. Y sin cebolla.",
+      "options": [
+        "Здесь и с луком.",
+        "С собой с дополнительным сыром.",
+        "С собой и без лука."
+      ]
+    },
+    {
+      "id": "es-a1-53-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Омлет без лука, пожалуйста.»?",
+      "answers": [
+        "Una tortilla sin cebolla, por favor."
+      ],
+      "explanation": "Una tortilla sin cebolla, por favor. — Омлет без лука, пожалуйста.",
+      "wordIds": [
+        "es:v13:53:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "La quiero para llevar.",
+        "Prefiero pedir otra cosa.",
+        "Una tortilla sin cebolla, por favor."
+      ],
+      "hint": "Una tortilla sin cebolla, por favor. — Омлет без лука, пожалуйста."
+    },
+    {
+      "id": "es-a1-53-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:53:p0",
+        "es:v13:53:p1",
+        "es:v13:53:p2",
+        "es:v13:53:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:53:p0",
+          "en": "Una tortilla sin cebolla, por favor.",
+          "ru": "Омлет без лука, пожалуйста."
+        },
+        {
+          "id": "es:v13:53:p1",
+          "en": "La quiero para llevar.",
+          "ru": "Я хочу её с собой."
+        },
+        {
+          "id": "es:v13:53:p2",
+          "en": "¿Lleva queso esta ensalada?",
+          "ru": "В этом салате есть сыр?"
+        },
+        {
+          "id": "es:v13:53:p3",
+          "en": "Prefiero pedir otra cosa.",
+          "ru": "Я предпочту заказать что-нибудь другое."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-53-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: La quiero por llevar.",
+      "answers": [
+        "La quiero para llevar."
+      ],
+      "explanation": "Для заказа с собой используется para llevar.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "La quiero por llevar.",
+        "La quiero para llevar."
+      ],
+      "hint": "Sin указывает на отсутствие ингредиента. Para llevar обозначает заказ с собой."
+    },
+    {
+      "id": "es-a1-53-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я предпочту заказать что-нибудь другое.». Можно написать вместо микрофона.",
+      "answers": [
+        "Prefiero pedir otra cosa."
+      ],
+      "explanation": "Prefiero pedir otra cosa. — Я предпочту заказать что-нибудь другое.",
+      "wordIds": [
+        "es:v13:53:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Prefiero pedir otra cosa.",
+      "recall": {
+        "phrase": "Prefiero pedir otra cosa.",
+        "meaning": "Я предпочту заказать что-нибудь другое."
+      }
+    },
+    {
+      "id": "es-a1-53-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Омлет без лука, пожалуйста.",
+      "answers": [
+        "Una tortilla sin cebolla, por favor."
+      ],
+      "explanation": "Sin указывает на отсутствие ингредиента. Para llevar обозначает заказ с собой.",
+      "wordIds": [
+        "es:v13:53:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Una tortilla sin cebolla, por favor.",
+        "meaning": "Омлет без лука, пожалуйста."
+      }
+    },
+    {
+      "id": "es-a1-53-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мне кажется, это хорошее решение.",
+      "answers": [
+        "Me parece una buena solución."
+      ],
+      "explanation": "Me parece una buena solución. — Мне кажется, это хорошее решение.",
+      "wordIds": [
+        "es:v13:52:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Estoy de acuerdo con tu idea.",
+        "Pero primero tenemos que llamar.",
+        "Me parece una buena solución.",
+        "Prefiero hablarlo mañana con calma."
+      ]
+    }
+  ]
+}

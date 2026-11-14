@@ -1,0 +1,253 @@
+{
+  "id": "en-a1-84",
+  "title": "Успеем на пересадку?",
+  "topic": "Находки и пересадки",
+  "order": 83,
+  "objective": "Решить, хватит ли времени на следующий рейс.",
+  "guide": "Enough стоит перед существительным time. После time можно добавить to change trains и уточнить, на что нужно время.",
+  "vocabulary": [
+    {
+      "id": "en:v13:84:p0",
+      "en": "Do we have enough time to change trains?",
+      "ru": "Хватит ли нам времени на пересадку?"
+    },
+    {
+      "id": "en:v13:84:p1",
+      "en": "We only have seven minutes.",
+      "ru": "У нас всего семь минут."
+    },
+    {
+      "id": "en:v13:84:p2",
+      "en": "The next train leaves from platform four.",
+      "ru": "Следующий поезд отправляется с четвёртой платформы."
+    },
+    {
+      "id": "en:v13:84:p3",
+      "en": "Let's ask if there's a later train.",
+      "ru": "Давай спросим, есть ли поезд позже."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Успеем на пересадку?",
+      "phrase": "Do we have enough time to change trains?",
+      "translation": "Хватит ли нам времени на пересадку?",
+      "explanation": "Enough стоит перед существительным time. После time можно добавить to change trains и уточнить, на что нужно время."
+    },
+    {
+      "character": "miko",
+      "title": "Успеем на пересадку?",
+      "phrase": "We only have seven minutes.",
+      "translation": "У нас всего семь минут.",
+      "explanation": "We only have seven minutes. — У нас всего семь минут."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Успеем на пересадку?",
+      "phrase": "The next train leaves from platform four.",
+      "translation": "Следующий поезд отправляется с четвёртой платформы.",
+      "explanation": "The next train leaves from platform four. — Следующий поезд отправляется с четвёртой платформы."
+    },
+    {
+      "character": "orbi",
+      "title": "Успеем на пересадку?",
+      "phrase": "Let's ask if there's a later train.",
+      "translation": "Давай спросим, есть ли поезд позже.",
+      "explanation": "Let's ask if there's a later train. — Давай спросим, есть ли поезд позже."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Do we have enough time to change trains?",
+      "translation": "Хватит ли нам времени на пересадку?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Хватит ли нам времени на пересадку?",
+      "options": [
+        "Следующий поезд отправляется с четвёртой платформы.",
+        "Хватит ли нам времени на пересадку?",
+        "Давай спросим, есть ли поезд позже."
+      ],
+      "explanation": "Enough стоит перед существительным time. После time можно добавить to change trains и уточнить, на что нужно время."
+    },
+    {
+      "id": "apply",
+      "phrase": "We only have seven minutes.",
+      "translation": "У нас всего семь минут.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "We only have seven minutes.",
+      "tokens": [
+        "We",
+        "only",
+        "have",
+        "seven",
+        "minutes."
+      ],
+      "character": "miko",
+      "explanation": "We only have seven minutes. — У нас всего семь минут."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-84-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сообщите мне, пожалуйста, если найдёте его.",
+      "answers": [
+        "Could you let me know if you find it?"
+      ],
+      "explanation": "Could you let me know if you find it? — Сообщите мне, пожалуйста, если найдёте его.",
+      "wordIds": [
+        "en:v13:83:p3"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "I left a small backpack on the train.",
+        "I last saw it under my seat.",
+        "It's blue with a red zip.",
+        "Could you let me know if you find it?"
+      ]
+    },
+    {
+      "id": "en-a1-84-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Хватит ли нам времени на пересадку?»?",
+      "answers": [
+        "Do we have enough time to change trains?"
+      ],
+      "explanation": "Do we have enough time to change trains? — Хватит ли нам времени на пересадку?",
+      "wordIds": [
+        "en:v13:84:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "We only have seven minutes.",
+        "Let's ask if there's a later train.",
+        "Do we have enough time to change trains?"
+      ],
+      "hint": "Do we have enough time to change trains? — Хватит ли нам времени на пересадку?"
+    },
+    {
+      "id": "en-a1-84-e03",
+      "type": "order",
+      "prompt": "Собери реплику: У нас всего семь минут.",
+      "answers": [
+        "We only have seven minutes."
+      ],
+      "explanation": "Enough стоит перед существительным time. После time можно добавить to change trains и уточнить, на что нужно время.",
+      "wordIds": [
+        "en:v13:84:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "We",
+        "only",
+        "have",
+        "seven",
+        "minutes."
+      ],
+      "hint": "We only have seven minutes. — У нас всего семь минут."
+    },
+    {
+      "id": "en-a1-84-e04",
+      "type": "dialogue",
+      "prompt": "Почему пересадка может не получиться?",
+      "answers": [
+        "Мало времени и платформы далеко."
+      ],
+      "explanation": "В диалоге: Can we make the connection? / We only have seven minutes, and the platforms are far apart. Поэтому: Мало времени и платформы далеко.",
+      "wordIds": [
+        "en:v13:84:p0",
+        "en:v13:84:p1",
+        "en:v13:84:p2",
+        "en:v13:84:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Can we make the connection?\nМико: We only have seven minutes, and the platforms are far apart.",
+      "options": [
+        "Поезд уже отменили.",
+        "Билеты стоят слишком дорого.",
+        "Мало времени и платформы далеко."
+      ]
+    },
+    {
+      "id": "en-a1-84-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Следующий поезд отправляется с четвёртой платформы."
+      ],
+      "explanation": "The next train leaves from platform four. — Следующий поезд отправляется с четвёртой платформы.",
+      "wordIds": [
+        "en:v13:84:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "The next train leaves from platform four.",
+      "options": [
+        "Хватит ли нам времени на пересадку?",
+        "Следующий поезд отправляется с четвёртой платформы.",
+        "У нас всего семь минут."
+      ],
+      "hint": "The next train leaves from platform four. — Следующий поезд отправляется с четвёртой платформы."
+    },
+    {
+      "id": "en-a1-84-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Do we have time enough to change trains?",
+      "answers": [
+        "Do we have enough time to change trains?"
+      ],
+      "explanation": "В нейтральной фразе enough ставится перед time.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Do we have time enough to change trains?",
+        "Do we have enough time to change trains?"
+      ],
+      "hint": "Enough стоит перед существительным time. После time можно добавить to change trains и уточнить, на что нужно время."
+    },
+    {
+      "id": "en-a1-84-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Давай спросим, есть ли поезд позже.». Можно написать вместо микрофона.",
+      "answers": [
+        "Let's ask if there's a later train."
+      ],
+      "explanation": "Let's ask if there's a later train. — Давай спросим, есть ли поезд позже.",
+      "wordIds": [
+        "en:v13:84:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Let's ask if there's a later train.",
+      "recall": {
+        "phrase": "Let's ask if there's a later train.",
+        "meaning": "Давай спросим, есть ли поезд позже."
+      }
+    },
+    {
+      "id": "en-a1-84-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Хватит ли нам времени на пересадку?",
+      "answers": [
+        "Do we have enough time to change trains?"
+      ],
+      "explanation": "Enough стоит перед существительным time. После time можно добавить to change trains и уточнить, на что нужно время.",
+      "wordIds": [
+        "en:v13:84:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Do we have enough time to change trains?",
+        "meaning": "Хватит ли нам времени на пересадку?"
+      }
+    }
+  ]
+}

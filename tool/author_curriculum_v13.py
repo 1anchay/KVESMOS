@@ -14,6 +14,23 @@ UNIT_TITLES.update(zh=[
 UNIT_TITLES["fr"] = [
     "Места и покупки", "Предметы и адреса", "Изменения и события", "Условия и новости",
 ]
+UNIT_TITLES["es"] = [
+    "Предметы и получатели", "Привычки и события", "Впечатления и задержки",
+    "Условия и сроки", "Выбор и согласие", "Заказы и прежние привычки",
+    "Просьбы и передача", "Описание и стоимость", "Причины и новости",
+]
+UNIT_TITLES["de"] = [
+    "Место и направление", "Встречи и подготовка", "Действия во времени",
+    "Условия и сроки", "Предметы и люди", "Оговорки и сравнения",
+    "Изменения и причины", "Инструкции и планы", "Сообщения и встречи",
+]
+UNIT_TITLES["en"] = [
+    "Роли и сроки", "Сообщения и уточнения", "Расписание и причины",
+    "Согласие и выбор", "Инструкции и бронирование", "Находки и пересадки",
+    "Поломки и документы", "Опыт и уточнения", "Правила и объявления",
+    "Цель и переписка", "Предположения и прошлое", "Пересказ и сравнения",
+    "Отзывы и объявления", "Рассказы и обновления",
+]
 
 
 def rows(lang):
@@ -50,16 +67,25 @@ def install(lang):
     if lang == "zh":
         ZH_TOKENS.clear()
     material = build(lang)
+    previous = compiler.read(ROOT / f"assets/courses/{lang}-a1-{COUNTS[lang][0]:02}.json")
     section = dict(id=section_id, title="Разговоры и решения", themes=[])
     for offset in range(0, len(material), 2):
         theme = dict(id=f"{section_id}-{offset // 2 + 1}",
                      title=UNIT_TITLES[lang][offset // 2], lessons=[])
         for lesson in material[offset:offset + 2]:
             asset = f'assets/courses/{lesson["id"]}.json'
+            # Link the review to the same word record used in the prior lesson.
+            for exercise in lesson["exercises"]:
+                if exercise["type"] == "review":
+                    word = next(w for w in previous["vocabulary"] if w["en"] == exercise["answers"][0])
+                    exercise["wordIds"] = [word["id"]]
+                    if "pronunciation" in word:
+                        exercise["pronunciation"] = word["pronunciation"]
             old_prefix = f"{lang}:v015:{lesson['order'] + 1}:"
             new_prefix = f"{lang}:v13:{lesson['order'] + 1}:"
             raw = json.dumps(lesson, ensure_ascii=False, indent=2).replace(old_prefix, new_prefix)
             (ROOT / asset).write_text(raw + "\n", encoding="utf-8")
+            previous = json.loads(raw)
             theme["lessons"].append(dict(id=lesson["id"], title=lesson["title"],
                                          order=lesson["order"], asset=asset))
         section["themes"].append(theme)

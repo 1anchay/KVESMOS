@@ -1,0 +1,298 @@
+{
+  "id": "es-a1-59",
+  "title": "Объяснить, почему выбрали",
+  "topic": "Причины и новости",
+  "order": 58,
+  "objective": "Связать причину и следствие в рассказе о выборе.",
+  "guide": "Porque вводит причину. Por eso начинает следствие в следующей части.",
+  "vocabulary": [
+    {
+      "id": "es:v13:59:p0",
+      "en": "Elegimos este hotel porque queda cerca.",
+      "ru": "Мы выбрали этот отель, потому что он рядом."
+    },
+    {
+      "id": "es:v13:59:p1",
+      "en": "Había mucho tráfico; por eso fuimos en metro.",
+      "ru": "Были пробки, поэтому мы поехали на метро."
+    },
+    {
+      "id": "es:v13:59:p2",
+      "en": "El trayecto duró veinte minutos.",
+      "ru": "Дорога заняла двадцать минут."
+    },
+    {
+      "id": "es:v13:59:p3",
+      "en": "Volveremos a tomar el metro mañana.",
+      "ru": "Завтра снова поедем на метро."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Объяснить, почему выбрали",
+      "phrase": "Elegimos este hotel porque queda cerca.",
+      "translation": "Мы выбрали этот отель, потому что он рядом.",
+      "explanation": "Porque вводит причину. Por eso начинает следствие в следующей части."
+    },
+    {
+      "character": "miko",
+      "title": "Объяснить, почему выбрали",
+      "phrase": "Había mucho tráfico; por eso fuimos en metro.",
+      "translation": "Были пробки, поэтому мы поехали на метро.",
+      "explanation": "Había mucho tráfico; por eso fuimos en metro. — Были пробки, поэтому мы поехали на метро."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Объяснить, почему выбрали",
+      "phrase": "El trayecto duró veinte minutos.",
+      "translation": "Дорога заняла двадцать минут.",
+      "explanation": "El trayecto duró veinte minutos. — Дорога заняла двадцать минут."
+    },
+    {
+      "character": "orbi",
+      "title": "Объяснить, почему выбрали",
+      "phrase": "Volveremos a tomar el metro mañana.",
+      "translation": "Завтра снова поедем на метро.",
+      "explanation": "Volveremos a tomar el metro mañana. — Завтра снова поедем на метро."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Elegimos este hotel porque queda cerca.",
+      "translation": "Мы выбрали этот отель, потому что он рядом.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мы выбрали этот отель, потому что он рядом.",
+      "options": [
+        "Дорога заняла двадцать минут.",
+        "Мы выбрали этот отель, потому что он рядом.",
+        "Завтра снова поедем на метро."
+      ],
+      "explanation": "Porque вводит причину. Por eso начинает следствие в следующей части."
+    },
+    {
+      "id": "apply",
+      "phrase": "Había mucho tráfico; por eso fuimos en metro.",
+      "translation": "Были пробки, поэтому мы поехали на метро.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Había mucho tráfico; por eso fuimos en metro.",
+      "tokens": [
+        "Había",
+        "mucho",
+        "tráfico;",
+        "por",
+        "eso",
+        "fuimos",
+        "en",
+        "metro."
+      ],
+      "character": "miko",
+      "explanation": "Había mucho tráfico; por eso fuimos en metro. — Были пробки, поэтому мы поехали на метро."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-59-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Дорога заняла двадцать минут."
+      ],
+      "explanation": "El trayecto duró veinte minutos. — Дорога заняла двадцать минут.",
+      "wordIds": [
+        "es:v13:59:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "El trayecto duró veinte minutos.",
+      "options": [
+        "Мы выбрали этот отель, потому что он рядом.",
+        "Дорога заняла двадцать минут.",
+        "Были пробки, поэтому мы поехали на метро."
+      ],
+      "hint": "El trayecto duró veinte minutos. — Дорога заняла двадцать минут."
+    },
+    {
+      "id": "es-a1-59-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Были пробки, поэтому мы поехали на метро.",
+      "answers": [
+        "Había mucho tráfico; por eso fuimos en metro."
+      ],
+      "explanation": "Porque вводит причину. Por eso начинает следствие в следующей части.",
+      "wordIds": [
+        "es:v13:59:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Había",
+        "mucho",
+        "tráfico;",
+        "por",
+        "eso",
+        "fuimos",
+        "en",
+        "metro."
+      ],
+      "hint": "Había mucho tráfico; por eso fuimos en metro. — Были пробки, поэтому мы поехали на метро."
+    },
+    {
+      "id": "es-a1-59-e03",
+      "type": "dialogue",
+      "prompt": "Почему поехали на метро?",
+      "answers": [
+        "На дорогах были пробки."
+      ],
+      "explanation": "В диалоге: ¿Por qué fuisteis en metro? / Había mucho tráfico. Por eso dejamos el coche en casa. Поэтому: На дорогах были пробки.",
+      "wordIds": [
+        "es:v13:59:p0",
+        "es:v13:59:p1",
+        "es:v13:59:p2",
+        "es:v13:59:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Por qué fuisteis en metro?\nМико: Había mucho tráfico. Por eso dejamos el coche en casa.",
+      "options": [
+        "Автомобиль потерялся.",
+        "Метро было бесплатным.",
+        "На дорогах были пробки."
+      ]
+    },
+    {
+      "id": "es-a1-59-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Мы выбрали этот отель, потому что он рядом.»?",
+      "answers": [
+        "Elegimos este hotel porque queda cerca."
+      ],
+      "explanation": "Elegimos este hotel porque queda cerca. — Мы выбрали этот отель, потому что он рядом.",
+      "wordIds": [
+        "es:v13:59:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Había mucho tráfico; por eso fuimos en metro.",
+        "Volveremos a tomar el metro mañana.",
+        "Elegimos este hotel porque queda cerca."
+      ],
+      "hint": "Elegimos este hotel porque queda cerca. — Мы выбрали этот отель, потому что он рядом."
+    },
+    {
+      "id": "es-a1-59-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:59:p0",
+        "es:v13:59:p1",
+        "es:v13:59:p2",
+        "es:v13:59:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:59:p0",
+          "en": "Elegimos este hotel porque queda cerca.",
+          "ru": "Мы выбрали этот отель, потому что он рядом."
+        },
+        {
+          "id": "es:v13:59:p1",
+          "en": "Había mucho tráfico; por eso fuimos en metro.",
+          "ru": "Были пробки, поэтому мы поехали на метро."
+        },
+        {
+          "id": "es:v13:59:p2",
+          "en": "El trayecto duró veinte minutos.",
+          "ru": "Дорога заняла двадцать минут."
+        },
+        {
+          "id": "es:v13:59:p3",
+          "en": "Volveremos a tomar el metro mañana.",
+          "ru": "Завтра снова поедем на метро."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-59-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Fuimos en metro por eso había tráfico.",
+      "answers": [
+        "Fuimos en metro porque había tráfico."
+      ],
+      "explanation": "В этой части называем причину, поэтому подходит porque.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Fuimos en metro por eso había tráfico.",
+        "Fuimos en metro porque había tráfico."
+      ],
+      "hint": "Porque вводит причину. Por eso начинает следствие в следующей части."
+    },
+    {
+      "id": "es-a1-59-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Завтра снова поедем на метро.». Можно написать вместо микрофона.",
+      "answers": [
+        "Volveremos a tomar el metro mañana."
+      ],
+      "explanation": "Volveremos a tomar el metro mañana. — Завтра снова поедем на метро.",
+      "wordIds": [
+        "es:v13:59:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Volveremos a tomar el metro mañana.",
+      "recall": {
+        "phrase": "Volveremos a tomar el metro mañana.",
+        "meaning": "Завтра снова поедем на метро."
+      }
+    },
+    {
+      "id": "es-a1-59-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мы выбрали этот отель, потому что он рядом.",
+      "answers": [
+        "Elegimos este hotel porque queda cerca."
+      ],
+      "explanation": "Porque вводит причину. Por eso начинает следствие в следующей части.",
+      "wordIds": [
+        "es:v13:59:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Elegimos este hotel porque queda cerca.",
+        "meaning": "Мы выбрали этот отель, потому что он рядом."
+      }
+    },
+    {
+      "id": "es-a1-59-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сколько стоит всё вместе?",
+      "answers": [
+        "¿Cuánto cuesta todo junto?"
+      ],
+      "explanation": "¿Cuánto cuesta todo junto? — Сколько стоит всё вместе?",
+      "wordIds": [
+        "es:v13:58:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "¿Cuánto cuesta todo junto?",
+        "El envío está incluido en el precio.",
+        "Las bebidas se pagan aparte.",
+        "Prefiero pagar con tarjeta."
+      ]
+    }
+  ]
+}

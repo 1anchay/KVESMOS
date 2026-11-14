@@ -276,7 +276,9 @@
         "Le chat est entré dans la cuisine."
       ],
       "explanation": "Le chat est entré dans la cuisine. — Кот вошёл на кухню.",
-      "wordIds": [],
+      "wordIds": [
+        "fr:v13:38:p2"
+      ],
       "character": "zig_quartz",
       "phase": "Применяем",
       "options": [

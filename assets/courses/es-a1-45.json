@@ -1,0 +1,292 @@
+{
+  "id": "es-a1-45",
+  "title": "Тихие утра",
+  "topic": "Привычки и события",
+  "order": 44,
+  "objective": "Описать привычный распорядок в прошлом.",
+  "guide": "Imperfecto указывает на повторявшееся действие: de niño iba…; обычно точную границу периода не называют.",
+  "vocabulary": [
+    {
+      "id": "es:v13:45:p0",
+      "en": "De niño iba al mercado con mi padre.",
+      "ru": "В детстве я ходил на рынок с отцом."
+    },
+    {
+      "id": "es:v13:45:p1",
+      "en": "Comprábamos pan todos los sábados.",
+      "ru": "Мы покупали хлеб каждую субботу."
+    },
+    {
+      "id": "es:v13:45:p2",
+      "en": "La panadería abría temprano.",
+      "ru": "Пекарня открывалась рано."
+    },
+    {
+      "id": "es:v13:45:p3",
+      "en": "Ahora compro pan cerca de casa.",
+      "ru": "Сейчас я покупаю хлеб рядом с домом."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Тихие утра",
+      "phrase": "De niño iba al mercado con mi padre.",
+      "translation": "В детстве я ходил на рынок с отцом.",
+      "explanation": "Imperfecto указывает на повторявшееся действие: de niño iba…; обычно точную границу периода не называют."
+    },
+    {
+      "character": "miko",
+      "title": "Тихие утра",
+      "phrase": "Comprábamos pan todos los sábados.",
+      "translation": "Мы покупали хлеб каждую субботу.",
+      "explanation": "Comprábamos pan todos los sábados. — Мы покупали хлеб каждую субботу."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Тихие утра",
+      "phrase": "La panadería abría temprano.",
+      "translation": "Пекарня открывалась рано.",
+      "explanation": "La panadería abría temprano. — Пекарня открывалась рано."
+    },
+    {
+      "character": "orbi",
+      "title": "Тихие утра",
+      "phrase": "Ahora compro pan cerca de casa.",
+      "translation": "Сейчас я покупаю хлеб рядом с домом.",
+      "explanation": "Ahora compro pan cerca de casa. — Сейчас я покупаю хлеб рядом с домом."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "De niño iba al mercado con mi padre.",
+      "translation": "В детстве я ходил на рынок с отцом.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "В детстве я ходил на рынок с отцом.",
+      "options": [
+        "Пекарня открывалась рано.",
+        "В детстве я ходил на рынок с отцом.",
+        "Сейчас я покупаю хлеб рядом с домом."
+      ],
+      "explanation": "Imperfecto указывает на повторявшееся действие: de niño iba…; обычно точную границу периода не называют."
+    },
+    {
+      "id": "apply",
+      "phrase": "Comprábamos pan todos los sábados.",
+      "translation": "Мы покупали хлеб каждую субботу.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Comprábamos pan todos los sábados.",
+      "tokens": [
+        "Comprábamos",
+        "pan",
+        "todos",
+        "los",
+        "sábados."
+      ],
+      "character": "miko",
+      "explanation": "Comprábamos pan todos los sábados. — Мы покупали хлеб каждую субботу."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-45-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я рассказываю ему, как прошла поездка.",
+      "answers": [
+        "Le cuento cómo fue el viaje."
+      ],
+      "explanation": "Le cuento cómo fue el viaje. — Я рассказываю ему, как прошла поездка.",
+      "wordIds": [
+        "es:v13:44:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "Le mando una foto a mi abuelo.",
+        "Les escribo a mis primos.",
+        "Le cuento cómo fue el viaje.",
+        "Mis primos me responden enseguida."
+      ]
+    },
+    {
+      "id": "es-a1-45-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «В детстве я ходил на рынок с отцом.»?",
+      "answers": [
+        "De niño iba al mercado con mi padre."
+      ],
+      "explanation": "De niño iba al mercado con mi padre. — В детстве я ходил на рынок с отцом.",
+      "wordIds": [
+        "es:v13:45:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Comprábamos pan todos los sábados.",
+        "Ahora compro pan cerca de casa.",
+        "De niño iba al mercado con mi padre."
+      ],
+      "hint": "De niño iba al mercado con mi padre. — В детстве я ходил на рынок с отцом."
+    },
+    {
+      "id": "es-a1-45-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Мы покупали хлеб каждую субботу.",
+      "answers": [
+        "Comprábamos pan todos los sábados."
+      ],
+      "explanation": "Imperfecto указывает на повторявшееся действие: de niño iba…; обычно точную границу периода не называют.",
+      "wordIds": [
+        "es:v13:45:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Comprábamos",
+        "pan",
+        "todos",
+        "los",
+        "sábados."
+      ],
+      "hint": "Comprábamos pan todos los sábados. — Мы покупали хлеб каждую субботу."
+    },
+    {
+      "id": "es-a1-45-e04",
+      "type": "dialogue",
+      "prompt": "О каком действии идёт речь?",
+      "answers": [
+        "О регулярных походах на рынок."
+      ],
+      "explanation": "В диалоге: ¿Qué hacíais los sábados? / Íbamos al mercado y comprábamos pan. Поэтому: О регулярных походах на рынок.",
+      "wordIds": [
+        "es:v13:45:p0",
+        "es:v13:45:p1",
+        "es:v13:45:p2",
+        "es:v13:45:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: ¿Qué hacíais los sábados?\nМико: Íbamos al mercado y comprábamos pan.",
+      "options": [
+        "Об одной поездке вчера.",
+        "О планах на завтра.",
+        "О регулярных походах на рынок."
+      ]
+    },
+    {
+      "id": "es-a1-45-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Пекарня открывалась рано."
+      ],
+      "explanation": "La panadería abría temprano. — Пекарня открывалась рано.",
+      "wordIds": [
+        "es:v13:45:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "La panadería abría temprano.",
+      "options": [
+        "В детстве я ходил на рынок с отцом.",
+        "Пекарня открывалась рано.",
+        "Мы покупали хлеб каждую субботу."
+      ],
+      "hint": "La panadería abría temprano. — Пекарня открывалась рано."
+    },
+    {
+      "id": "es-a1-45-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:45:p0",
+        "es:v13:45:p1",
+        "es:v13:45:p2",
+        "es:v13:45:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:45:p0",
+          "en": "De niño iba al mercado con mi padre.",
+          "ru": "В детстве я ходил на рынок с отцом."
+        },
+        {
+          "id": "es:v13:45:p1",
+          "en": "Comprábamos pan todos los sábados.",
+          "ru": "Мы покупали хлеб каждую субботу."
+        },
+        {
+          "id": "es:v13:45:p2",
+          "en": "La panadería abría temprano.",
+          "ru": "Пекарня открывалась рано."
+        },
+        {
+          "id": "es:v13:45:p3",
+          "en": "Ahora compro pan cerca de casa.",
+          "ru": "Сейчас я покупаю хлеб рядом с домом."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-45-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Comprabamos pan todos los sábados de pequeños.",
+      "answers": [
+        "Comprábamos pan todos los sábados de pequeños."
+      ],
+      "explanation": "Форма comprábamos описывает привычку, а ударение на á обозначается знаком на письме.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Comprabamos pan todos los sábados de pequeños.",
+        "Comprábamos pan todos los sábados de pequeños."
+      ],
+      "hint": "Imperfecto указывает на повторявшееся действие: de niño iba…; обычно точную границу периода не называют."
+    },
+    {
+      "id": "es-a1-45-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Сейчас я покупаю хлеб рядом с домом.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ahora compro pan cerca de casa."
+      ],
+      "explanation": "Ahora compro pan cerca de casa. — Сейчас я покупаю хлеб рядом с домом.",
+      "wordIds": [
+        "es:v13:45:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ahora compro pan cerca de casa.",
+      "recall": {
+        "phrase": "Ahora compro pan cerca de casa.",
+        "meaning": "Сейчас я покупаю хлеб рядом с домом."
+      }
+    },
+    {
+      "id": "es-a1-45-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: В детстве я ходил на рынок с отцом.",
+      "answers": [
+        "De niño iba al mercado con mi padre."
+      ],
+      "explanation": "Imperfecto указывает на повторявшееся действие: de niño iba…; обычно точную границу периода не называют.",
+      "wordIds": [
+        "es:v13:45:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "De niño iba al mercado con mi padre.",
+        "meaning": "В детстве я ходил на рынок с отцом."
+      }
+    }
+  ]
+}

@@ -9,12 +9,13 @@ import 'package:orbitwords/core/controller.dart';
 import 'package:orbitwords/data/conversation_repository.dart';
 import 'package:orbitwords/data/database.dart';
 import 'package:orbitwords/data/picture_repository.dart';
-import 'package:orbitwords/data/placement_repository.dart';
 import 'package:orbitwords/data/repository.dart';
+import 'package:orbitwords/data/smart_placement_repository.dart';
 import 'package:orbitwords/domain/course.dart';
 import 'package:orbitwords/domain/mistake_feedback.dart';
 import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/ui/app.dart';
+import 'package:orbitwords/ui/lesson_screen.dart';
 
 Future<void> marker(String value) =>
     Process.run('/system/bin/log', ['-t', 'KVESMOS11', value]);
@@ -76,24 +77,56 @@ void main() {
     }
 
     for (final (index, lang) in ['en', 'es', 'de', 'fr', 'zh'].indexed) {
-      await app.selectCourse('ru-$lang');
       await app.savePreferences(
         newTheme: index.isEven ? ThemeMode.light : ThemeMode.dark,
       );
       if (lang == 'en' || lang == 'zh') await marker('VIDEO_START:$lang');
-      await go('/placement');
+      await go('/courses');
+      await tap(find.byKey(ValueKey('course-ru-$lang')));
+      expect(find.text('С чего начнём?'), findsOneWidget);
+      final test = find.widgetWithText(OutlinedButton, 'Проверить мои знания');
+      await tap(test);
       await capture('placement-$lang');
-      final placement = await PlacementRepository(r).open();
-      for (final question in placement['questions'] as List) {
-        await tap(
-          find.widgetWithText(
-            OutlinedButton,
-            (question['answers'] as List).first,
-          ),
-        );
+      final placement = SmartPlacementRepository(r);
+      var state = (await placement.saved())!;
+      while (SmartPlacementRepository.question(state) case final question?) {
+        final answer = (question['answers'] as List).first as String;
+        final tokens = question['tokens'] as List;
+        if (tokens.isNotEmpty) {
+          for (var i = 0; i < tokens.length; i++) {
+            await tap(find.byKey(ValueKey('placement-token-$i')));
+          }
+          await tap(find.widgetWithText(FilledButton, 'Ответить'));
+        } else if ((question['options'] as List).isNotEmpty) {
+          await tap(find.widgetWithText(OutlinedButton, answer));
+        } else {
+          final input = find.byType(TextField);
+          await show(input);
+          await tester.enterText(input, answer);
+          FocusManager.instance.primaryFocus?.unfocus();
+          await tester.pumpAndSettle();
+          await tap(find.widgetWithText(FilledButton, 'Ответить'));
+        }
+        final next = (await placement.saved())!;
+        expect((next['results'] as List).length, (state['results'] as List).length + 1);
+        state = next;
+        if (lang == 'en' && (state['results'] as List).length == 1) {
+          await tap(find.byTooltip('Сохранить и выйти'));
+          await tap(find.byKey(ValueKey('course-ru-$lang')));
+          await tap(test);
+          expect(find.text('Задание 2'), findsOneWidget);
+        }
       }
+      expect(state['level'], greaterThan(0));
       expect((await r.progress()).xp, 0);
       await capture('recommendation-$lang');
+      await tap(find.widgetWithText(FilledButton, 'Начать с рекомендованного'));
+      expect(tester.widget<LessonScreen>(find.byType(LessonScreen)).lessonId,
+          state['recommendation']);
+      expect((await r.progress()).completed, isEmpty);
+      await capture('recommended-lesson-$lang');
+      await r.chooseCourseStart(r.catalog.first.id);
+      await app.refresh();
 
       final pictures = PictureRepository(r);
       final cards = await pictures.cards;

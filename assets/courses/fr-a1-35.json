@@ -98,7 +98,9 @@
         "On a déjà du beurre."
       ],
       "explanation": "On a déjà du beurre. — Масло у нас уже есть.",
-      "wordIds": [],
+      "wordIds": [
+        "fr:v13:34:p2"
+      ],
       "character": "zig_quartz",
       "phase": "Разогреваемся",
       "options": [

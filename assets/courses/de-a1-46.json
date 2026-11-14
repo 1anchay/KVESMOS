@@ -1,0 +1,257 @@
+{
+  "id": "de-a1-46",
+  "title": "Как подготовиться",
+  "topic": "Встречи и подготовка",
+  "order": 45,
+  "objective": "Использовать sich vorbereiten auf и описать подготовку.",
+  "guide": "При ich возвратная форма mich. В главном предложении приставка vor отделяется.",
+  "vocabulary": [
+    {
+      "id": "de:v13:46:p0",
+      "en": "Ich bereite mich auf das Gespräch vor.",
+      "ru": "Я готовлюсь к разговору."
+    },
+    {
+      "id": "de:v13:46:p1",
+      "en": "Sie bereitet sich auf den Termin vor.",
+      "ru": "Она готовится к встрече."
+    },
+    {
+      "id": "de:v13:46:p2",
+      "en": "Wir üben die Fragen zusammen.",
+      "ru": "Мы вместе тренируем вопросы."
+    },
+    {
+      "id": "de:v13:46:p3",
+      "en": "Morgen ist das Gespräch.",
+      "ru": "Разговор завтра."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Как подготовиться",
+      "phrase": "Ich bereite mich auf das Gespräch vor.",
+      "translation": "Я готовлюсь к разговору.",
+      "explanation": "При ich возвратная форма mich. В главном предложении приставка vor отделяется."
+    },
+    {
+      "character": "miko",
+      "title": "Как подготовиться",
+      "phrase": "Sie bereitet sich auf den Termin vor.",
+      "translation": "Она готовится к встрече.",
+      "explanation": "Sie bereitet sich auf den Termin vor. — Она готовится к встрече."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как подготовиться",
+      "phrase": "Wir üben die Fragen zusammen.",
+      "translation": "Мы вместе тренируем вопросы.",
+      "explanation": "Wir üben die Fragen zusammen. — Мы вместе тренируем вопросы."
+    },
+    {
+      "character": "orbi",
+      "title": "Как подготовиться",
+      "phrase": "Morgen ist das Gespräch.",
+      "translation": "Разговор завтра.",
+      "explanation": "Morgen ist das Gespräch. — Разговор завтра."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich bereite mich auf das Gespräch vor.",
+      "translation": "Я готовлюсь к разговору.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я готовлюсь к разговору.",
+      "options": [
+        "Мы вместе тренируем вопросы.",
+        "Я готовлюсь к разговору.",
+        "Разговор завтра."
+      ],
+      "explanation": "При ich возвратная форма mich. В главном предложении приставка vor отделяется."
+    },
+    {
+      "id": "apply",
+      "phrase": "Sie bereitet sich auf den Termin vor.",
+      "translation": "Она готовится к встрече.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Sie bereitet sich auf den Termin vor.",
+      "tokens": [
+        "Sie",
+        "bereitet",
+        "sich",
+        "auf",
+        "den",
+        "Termin",
+        "vor."
+      ],
+      "character": "miko",
+      "explanation": "Sie bereitet sich auf den Termin vor. — Она готовится к встрече."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-46-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я готовлюсь к разговору.»?",
+      "answers": [
+        "Ich bereite mich auf das Gespräch vor."
+      ],
+      "explanation": "Ich bereite mich auf das Gespräch vor. — Я готовлюсь к разговору.",
+      "wordIds": [
+        "de:v13:46:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Sie bereitet sich auf den Termin vor.",
+        "Morgen ist das Gespräch.",
+        "Ich bereite mich auf das Gespräch vor."
+      ],
+      "hint": "Ich bereite mich auf das Gespräch vor. — Я готовлюсь к разговору."
+    },
+    {
+      "id": "de-a1-46-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Она готовится к встрече.",
+      "answers": [
+        "Sie bereitet sich auf den Termin vor."
+      ],
+      "explanation": "При ich возвратная форма mich. В главном предложении приставка vor отделяется.",
+      "wordIds": [
+        "de:v13:46:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Sie",
+        "bereitet",
+        "sich",
+        "auf",
+        "den",
+        "Termin",
+        "vor."
+      ],
+      "hint": "Sie bereitet sich auf den Termin vor. — Она готовится к встрече."
+    },
+    {
+      "id": "de-a1-46-e03",
+      "type": "dialogue",
+      "prompt": "Когда готовятся к встрече?",
+      "answers": [
+        "Сегодня."
+      ],
+      "explanation": "В диалоге: Wann ist der Termin? / Morgen. Wir bereiten uns heute darauf vor. Поэтому: Сегодня.",
+      "wordIds": [
+        "de:v13:46:p0",
+        "de:v13:46:p1",
+        "de:v13:46:p2",
+        "de:v13:46:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Wann ist der Termin?\nМико: Morgen. Wir bereiten uns heute darauf vor.",
+      "options": [
+        "Завтра после встречи.",
+        "На следующей неделе.",
+        "Сегодня."
+      ]
+    },
+    {
+      "id": "de-a1-46-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы вместе тренируем вопросы."
+      ],
+      "explanation": "Wir üben die Fragen zusammen. — Мы вместе тренируем вопросы.",
+      "wordIds": [
+        "de:v13:46:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir üben die Fragen zusammen.",
+      "options": [
+        "Я готовлюсь к разговору.",
+        "Мы вместе тренируем вопросы.",
+        "Она готовится к встрече."
+      ],
+      "hint": "Wir üben die Fragen zusammen. — Мы вместе тренируем вопросы."
+    },
+    {
+      "id": "de-a1-46-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Ich vorbereite mich auf das Gespräch.",
+      "answers": [
+        "Ich bereite mich auf das Gespräch vor."
+      ],
+      "explanation": "В главной части спрягается bereite, а приставка vor уходит в конец.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Ich vorbereite mich auf das Gespräch.",
+        "Ich bereite mich auf das Gespräch vor."
+      ],
+      "hint": "При ich возвратная форма mich. В главном предложении приставка vor отделяется."
+    },
+    {
+      "id": "de-a1-46-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Разговор завтра.». Можно написать вместо микрофона.",
+      "answers": [
+        "Morgen ist das Gespräch."
+      ],
+      "explanation": "Morgen ist das Gespräch. — Разговор завтра.",
+      "wordIds": [
+        "de:v13:46:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Morgen ist das Gespräch.",
+      "recall": {
+        "phrase": "Morgen ist das Gespräch.",
+        "meaning": "Разговор завтра."
+      }
+    },
+    {
+      "id": "de-a1-46-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я готовлюсь к разговору.",
+      "answers": [
+        "Ich bereite mich auf das Gespräch vor."
+      ],
+      "explanation": "При ich возвратная форма mich. В главном предложении приставка vor отделяется.",
+      "wordIds": [
+        "de:v13:46:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich bereite mich auf das Gespräch vor.",
+        "meaning": "Я готовлюсь к разговору."
+      }
+    },
+    {
+      "id": "de-a1-46-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Позвони мне, когда будешь на месте.",
+      "answers": [
+        "Ruf mich an, wenn du da bist."
+      ],
+      "explanation": "Ruf mich an, wenn du da bist. — Позвони мне, когда будешь на месте.",
+      "wordIds": [
+        "de:v13:45:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Wir treffen uns vor dem Kino.",
+        "Trefft ihr euch um sieben?",
+        "Ich warte am Eingang.",
+        "Ruf mich an, wenn du da bist."
+      ]
+    }
+  ]
+}

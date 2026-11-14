@@ -1,0 +1,257 @@
+{
+  "id": "de-a1-58",
+  "title": "Завтра будет открыто?",
+  "topic": "Инструкции и планы",
+  "order": 57,
+  "objective": "Уточнить будущий план через настоящее и Futur I.",
+  "guide": "В расписании время часто понятно из morgen и Präsens. В Futur I после werden инфинитив в конце.",
+  "vocabulary": [
+    {
+      "id": "de:v13:58:p0",
+      "en": "Morgen öffnet das Büro später.",
+      "ru": "Завтра офис откроется позже."
+    },
+    {
+      "id": "de:v13:58:p1",
+      "en": "Wir werden ab zehn Uhr erreichbar sein.",
+      "ru": "Мы будем доступны с десяти."
+    },
+    {
+      "id": "de:v13:58:p2",
+      "en": "Heute bleibt der Eingang geschlossen.",
+      "ru": "Сегодня вход закрыт."
+    },
+    {
+      "id": "de:v13:58:p3",
+      "en": "Bitte kommen Sie erst am Nachmittag.",
+      "ru": "Приходите, пожалуйста, только после обеда."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Завтра будет открыто?",
+      "phrase": "Morgen öffnet das Büro später.",
+      "translation": "Завтра офис откроется позже.",
+      "explanation": "В расписании время часто понятно из morgen и Präsens. В Futur I после werden инфинитив в конце."
+    },
+    {
+      "character": "miko",
+      "title": "Завтра будет открыто?",
+      "phrase": "Wir werden ab zehn Uhr erreichbar sein.",
+      "translation": "Мы будем доступны с десяти.",
+      "explanation": "Wir werden ab zehn Uhr erreichbar sein. — Мы будем доступны с десяти."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Завтра будет открыто?",
+      "phrase": "Heute bleibt der Eingang geschlossen.",
+      "translation": "Сегодня вход закрыт.",
+      "explanation": "Heute bleibt der Eingang geschlossen. — Сегодня вход закрыт."
+    },
+    {
+      "character": "orbi",
+      "title": "Завтра будет открыто?",
+      "phrase": "Bitte kommen Sie erst am Nachmittag.",
+      "translation": "Приходите, пожалуйста, только после обеда.",
+      "explanation": "Bitte kommen Sie erst am Nachmittag. — Приходите, пожалуйста, только после обеда."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Morgen öffnet das Büro später.",
+      "translation": "Завтра офис откроется позже.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Завтра офис откроется позже.",
+      "options": [
+        "Сегодня вход закрыт.",
+        "Завтра офис откроется позже.",
+        "Приходите, пожалуйста, только после обеда."
+      ],
+      "explanation": "В расписании время часто понятно из morgen и Präsens. В Futur I после werden инфинитив в конце."
+    },
+    {
+      "id": "apply",
+      "phrase": "Wir werden ab zehn Uhr erreichbar sein.",
+      "translation": "Мы будем доступны с десяти.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Wir werden ab zehn Uhr erreichbar sein.",
+      "tokens": [
+        "Wir",
+        "werden",
+        "ab",
+        "zehn",
+        "Uhr",
+        "erreichbar",
+        "sein."
+      ],
+      "character": "miko",
+      "explanation": "Wir werden ab zehn Uhr erreichbar sein. — Мы будем доступны с десяти."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-58-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Завтра офис откроется позже.»?",
+      "answers": [
+        "Morgen öffnet das Büro später."
+      ],
+      "explanation": "Morgen öffnet das Büro später. — Завтра офис откроется позже.",
+      "wordIds": [
+        "de:v13:58:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Wir werden ab zehn Uhr erreichbar sein.",
+        "Bitte kommen Sie erst am Nachmittag.",
+        "Morgen öffnet das Büro später."
+      ],
+      "hint": "Morgen öffnet das Büro später. — Завтра офис откроется позже."
+    },
+    {
+      "id": "de-a1-58-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Мы будем доступны с десяти.",
+      "answers": [
+        "Wir werden ab zehn Uhr erreichbar sein."
+      ],
+      "explanation": "В расписании время часто понятно из morgen и Präsens. В Futur I после werden инфинитив в конце.",
+      "wordIds": [
+        "de:v13:58:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Wir",
+        "werden",
+        "ab",
+        "zehn",
+        "Uhr",
+        "erreichbar",
+        "sein."
+      ],
+      "hint": "Wir werden ab zehn Uhr erreichbar sein. — Мы будем доступны с десяти."
+    },
+    {
+      "id": "de-a1-58-e03",
+      "type": "dialogue",
+      "prompt": "С какого времени можно звонить?",
+      "answers": [
+        "С десяти."
+      ],
+      "explanation": "В диалоге: Kann ich morgen um neun anrufen? / Lieber nicht. Wir sind erst ab zehn Uhr erreichbar. Поэтому: С десяти.",
+      "wordIds": [
+        "de:v13:58:p0",
+        "de:v13:58:p1",
+        "de:v13:58:p2",
+        "de:v13:58:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Kann ich morgen um neun anrufen?\nМико: Lieber nicht. Wir sind erst ab zehn Uhr erreichbar.",
+      "options": [
+        "С девяти.",
+        "Только вечером.",
+        "С десяти."
+      ]
+    },
+    {
+      "id": "de-a1-58-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Сегодня вход закрыт."
+      ],
+      "explanation": "Heute bleibt der Eingang geschlossen. — Сегодня вход закрыт.",
+      "wordIds": [
+        "de:v13:58:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Heute bleibt der Eingang geschlossen.",
+      "options": [
+        "Завтра офис откроется позже.",
+        "Сегодня вход закрыт.",
+        "Мы будем доступны с десяти."
+      ],
+      "hint": "Heute bleibt der Eingang geschlossen. — Сегодня вход закрыт."
+    },
+    {
+      "id": "de-a1-58-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wir werden ab zehn Uhr erreichbar sind.",
+      "answers": [
+        "Wir werden ab zehn Uhr erreichbar sein."
+      ],
+      "explanation": "После спрягаемого werden нужна форма инфинитива sein.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Wir werden ab zehn Uhr erreichbar sind.",
+        "Wir werden ab zehn Uhr erreichbar sein."
+      ],
+      "hint": "В расписании время часто понятно из morgen и Präsens. В Futur I после werden инфинитив в конце."
+    },
+    {
+      "id": "de-a1-58-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Приходите, пожалуйста, только после обеда.». Можно написать вместо микрофона.",
+      "answers": [
+        "Bitte kommen Sie erst am Nachmittag."
+      ],
+      "explanation": "Bitte kommen Sie erst am Nachmittag. — Приходите, пожалуйста, только после обеда.",
+      "wordIds": [
+        "de:v13:58:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Bitte kommen Sie erst am Nachmittag.",
+      "recall": {
+        "phrase": "Bitte kommen Sie erst am Nachmittag.",
+        "meaning": "Приходите, пожалуйста, только после обеда."
+      }
+    },
+    {
+      "id": "de-a1-58-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Завтра офис откроется позже.",
+      "answers": [
+        "Morgen öffnet das Büro später."
+      ],
+      "explanation": "В расписании время часто понятно из morgen и Präsens. В Futur I после werden инфинитив в конце.",
+      "wordIds": [
+        "de:v13:58:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Morgen öffnet das Büro später.",
+        "meaning": "Завтра офис откроется позже."
+      }
+    },
+    {
+      "id": "de-a1-58-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Индикатор должен быть зелёным.",
+      "answers": [
+        "Das Licht muss grün sein."
+      ],
+      "explanation": "Das Licht muss grün sein. — Индикатор должен быть зелёным.",
+      "wordIds": [
+        "de:v13:57:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Schalten Sie das Gerät zuerst ein.",
+        "Danach prüfen Sie die Anzeige.",
+        "Drücken Sie kurz auf die Taste.",
+        "Das Licht muss grün sein."
+      ]
+    }
+  ]
+}

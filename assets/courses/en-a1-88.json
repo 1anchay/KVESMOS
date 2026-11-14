@@ -1,0 +1,257 @@
+{
+  "id": "en-a1-88",
+  "title": "То, что пригодится в дороге",
+  "topic": "Опыт и уточнения",
+  "order": 87,
+  "objective": "Выбрать вещь по описанию с относительным предложением.",
+  "guide": "That уточняет предмет, who — человека. Уточнение ставят сразу после нужного существительного.",
+  "vocabulary": [
+    {
+      "id": "en:v13:88:p0",
+      "en": "Take the bag that has a shoulder strap.",
+      "ru": "Возьми сумку с плечевым ремнём."
+    },
+    {
+      "id": "en:v13:88:p1",
+      "en": "The person who sold it works upstairs.",
+      "ru": "Человек, который её продал, работает наверху."
+    },
+    {
+      "id": "en:v13:88:p2",
+      "en": "The pocket that closes is on the front.",
+      "ru": "Карман с застёжкой находится спереди."
+    },
+    {
+      "id": "en:v13:88:p3",
+      "en": "This is the charger that fits my phone.",
+      "ru": "Это зарядка, которая подходит к моему телефону."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "То, что пригодится в дороге",
+      "phrase": "Take the bag that has a shoulder strap.",
+      "translation": "Возьми сумку с плечевым ремнём.",
+      "explanation": "That уточняет предмет, who — человека. Уточнение ставят сразу после нужного существительного."
+    },
+    {
+      "character": "miko",
+      "title": "То, что пригодится в дороге",
+      "phrase": "The person who sold it works upstairs.",
+      "translation": "Человек, который её продал, работает наверху.",
+      "explanation": "The person who sold it works upstairs. — Человек, который её продал, работает наверху."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "То, что пригодится в дороге",
+      "phrase": "The pocket that closes is on the front.",
+      "translation": "Карман с застёжкой находится спереди.",
+      "explanation": "The pocket that closes is on the front. — Карман с застёжкой находится спереди."
+    },
+    {
+      "character": "orbi",
+      "title": "То, что пригодится в дороге",
+      "phrase": "This is the charger that fits my phone.",
+      "translation": "Это зарядка, которая подходит к моему телефону.",
+      "explanation": "This is the charger that fits my phone. — Это зарядка, которая подходит к моему телефону."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Take the bag that has a shoulder strap.",
+      "translation": "Возьми сумку с плечевым ремнём.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Возьми сумку с плечевым ремнём.",
+      "options": [
+        "Карман с застёжкой находится спереди.",
+        "Возьми сумку с плечевым ремнём.",
+        "Это зарядка, которая подходит к моему телефону."
+      ],
+      "explanation": "That уточняет предмет, who — человека. Уточнение ставят сразу после нужного существительного."
+    },
+    {
+      "id": "apply",
+      "phrase": "The person who sold it works upstairs.",
+      "translation": "Человек, который её продал, работает наверху.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The person who sold it works upstairs.",
+      "tokens": [
+        "The",
+        "person",
+        "who",
+        "sold",
+        "it",
+        "works",
+        "upstairs."
+      ],
+      "character": "miko",
+      "explanation": "The person who sold it works upstairs. — Человек, который её продал, работает наверху."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-88-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Возьми сумку с плечевым ремнём.»?",
+      "answers": [
+        "Take the bag that has a shoulder strap."
+      ],
+      "explanation": "Take the bag that has a shoulder strap. — Возьми сумку с плечевым ремнём.",
+      "wordIds": [
+        "en:v13:88:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The person who sold it works upstairs.",
+        "This is the charger that fits my phone.",
+        "Take the bag that has a shoulder strap."
+      ],
+      "hint": "Take the bag that has a shoulder strap. — Возьми сумку с плечевым ремнём."
+    },
+    {
+      "id": "en-a1-88-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Человек, который её продал, работает наверху.",
+      "answers": [
+        "The person who sold it works upstairs."
+      ],
+      "explanation": "That уточняет предмет, who — человека. Уточнение ставят сразу после нужного существительного.",
+      "wordIds": [
+        "en:v13:88:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "person",
+        "who",
+        "sold",
+        "it",
+        "works",
+        "upstairs."
+      ],
+      "hint": "The person who sold it works upstairs. — Человек, который её продал, работает наверху."
+    },
+    {
+      "id": "en-a1-88-e03",
+      "type": "dialogue",
+      "prompt": "Какую сумку предлагают взять?",
+      "answers": [
+        "С плечевым ремнём."
+      ],
+      "explanation": "В диалоге: Which bag should I take? / The one that has a shoulder strap. Поэтому: С плечевым ремнём.",
+      "wordIds": [
+        "en:v13:88:p0",
+        "en:v13:88:p1",
+        "en:v13:88:p2",
+        "en:v13:88:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Which bag should I take?\nМико: The one that has a shoulder strap.",
+      "options": [
+        "Без карманов.",
+        "Самую маленькую.",
+        "С плечевым ремнём."
+      ]
+    },
+    {
+      "id": "en-a1-88-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Карман с застёжкой находится спереди."
+      ],
+      "explanation": "The pocket that closes is on the front. — Карман с застёжкой находится спереди.",
+      "wordIds": [
+        "en:v13:88:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "The pocket that closes is on the front.",
+      "options": [
+        "Возьми сумку с плечевым ремнём.",
+        "Карман с застёжкой находится спереди.",
+        "Человек, который её продал, работает наверху."
+      ],
+      "hint": "The pocket that closes is on the front. — Карман с застёжкой находится спереди."
+    },
+    {
+      "id": "en-a1-88-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Take the bag who has a shoulder strap.",
+      "answers": [
+        "Take the bag that has a shoulder strap."
+      ],
+      "explanation": "Для bag подходит that, who относится к человеку.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Take the bag who has a shoulder strap.",
+        "Take the bag that has a shoulder strap."
+      ],
+      "hint": "That уточняет предмет, who — человека. Уточнение ставят сразу после нужного существительного."
+    },
+    {
+      "id": "en-a1-88-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Это зарядка, которая подходит к моему телефону.». Можно написать вместо микрофона.",
+      "answers": [
+        "This is the charger that fits my phone."
+      ],
+      "explanation": "This is the charger that fits my phone. — Это зарядка, которая подходит к моему телефону.",
+      "wordIds": [
+        "en:v13:88:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "This is the charger that fits my phone.",
+      "recall": {
+        "phrase": "This is the charger that fits my phone.",
+        "meaning": "Это зарядка, которая подходит к моему телефону."
+      }
+    },
+    {
+      "id": "en-a1-88-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Возьми сумку с плечевым ремнём.",
+      "answers": [
+        "Take the bag that has a shoulder strap."
+      ],
+      "explanation": "That уточняет предмет, who — человека. Уточнение ставят сразу после нужного существительного.",
+      "wordIds": [
+        "en:v13:88:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Take the bag that has a shoulder strap.",
+        "meaning": "Возьми сумку с плечевым ремнём."
+      }
+    },
+    {
+      "id": "en-a1-88-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы всё ещё работаем над одним проектом.",
+      "answers": [
+        "We still work on the same project."
+      ],
+      "explanation": "We still work on the same project. — Мы всё ещё работаем над одним проектом.",
+      "wordIds": [
+        "en:v13:87:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I've worked here for six months.",
+        "I've known Lena since January.",
+        "She joined the team last summer.",
+        "We still work on the same project."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "id": "en-a1-81",
+  "title": "О чём письмо от хозяина",
+  "topic": "Инструкции и бронирование",
+  "order": 80,
+  "objective": "Понять условия получения ключей в коротком сообщении.",
+  "guide": "Pick up означает «забрать». If you arrive later вводит условие для инструкции call this number.",
+  "vocabulary": [
+    {
+      "id": "en:v13:81:p0",
+      "en": "You can pick up the keys at reception.",
+      "ru": "Ключи можно забрать на стойке."
+    },
+    {
+      "id": "en:v13:81:p1",
+      "en": "The desk closes at eight in the evening.",
+      "ru": "Стойка закрывается в восемь вечера."
+    },
+    {
+      "id": "en:v13:81:p2",
+      "en": "If you arrive later, call this number.",
+      "ru": "Если приедете позже, позвоните по этому номеру."
+    },
+    {
+      "id": "en:v13:81:p3",
+      "en": "Please keep the front door closed.",
+      "ru": "Пожалуйста, держите входную дверь закрытой."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "О чём письмо от хозяина",
+      "phrase": "You can pick up the keys at reception.",
+      "translation": "Ключи можно забрать на стойке.",
+      "explanation": "Pick up означает «забрать». If you arrive later вводит условие для инструкции call this number."
+    },
+    {
+      "character": "miko",
+      "title": "О чём письмо от хозяина",
+      "phrase": "The desk closes at eight in the evening.",
+      "translation": "Стойка закрывается в восемь вечера.",
+      "explanation": "The desk closes at eight in the evening. — Стойка закрывается в восемь вечера."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "О чём письмо от хозяина",
+      "phrase": "If you arrive later, call this number.",
+      "translation": "Если приедете позже, позвоните по этому номеру.",
+      "explanation": "If you arrive later, call this number. — Если приедете позже, позвоните по этому номеру."
+    },
+    {
+      "character": "orbi",
+      "title": "О чём письмо от хозяина",
+      "phrase": "Please keep the front door closed.",
+      "translation": "Пожалуйста, держите входную дверь закрытой.",
+      "explanation": "Please keep the front door closed. — Пожалуйста, держите входную дверь закрытой."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "You can pick up the keys at reception.",
+      "translation": "Ключи можно забрать на стойке.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Ключи можно забрать на стойке.",
+      "options": [
+        "Если приедете позже, позвоните по этому номеру.",
+        "Ключи можно забрать на стойке.",
+        "Пожалуйста, держите входную дверь закрытой."
+      ],
+      "explanation": "Pick up означает «забрать». If you arrive later вводит условие для инструкции call this number."
+    },
+    {
+      "id": "apply",
+      "phrase": "The desk closes at eight in the evening.",
+      "translation": "Стойка закрывается в восемь вечера.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The desk closes at eight in the evening.",
+      "tokens": [
+        "The",
+        "desk",
+        "closes",
+        "at",
+        "eight",
+        "in",
+        "the",
+        "evening."
+      ],
+      "character": "miko",
+      "explanation": "The desk closes at eight in the evening. — Стойка закрывается в восемь вечера."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-81-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Автобус дешевле поезда.",
+      "answers": [
+        "The bus is less expensive than the train."
+      ],
+      "explanation": "The bus is less expensive than the train. — Автобус дешевле поезда.",
+      "wordIds": [
+        "en:v13:80:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "The bus is less expensive than the train.",
+        "This route is just as fast as the other one.",
+        "There are fewer transfers on the train.",
+        "I'd rather pay a little more."
+      ]
+    },
+    {
+      "id": "en-a1-81-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Ключи можно забрать на стойке.»?",
+      "answers": [
+        "You can pick up the keys at reception."
+      ],
+      "explanation": "You can pick up the keys at reception. — Ключи можно забрать на стойке.",
+      "wordIds": [
+        "en:v13:81:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The desk closes at eight in the evening.",
+        "Please keep the front door closed.",
+        "You can pick up the keys at reception."
+      ],
+      "hint": "You can pick up the keys at reception. — Ключи можно забрать на стойке."
+    },
+    {
+      "id": "en-a1-81-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Стойка закрывается в восемь вечера.",
+      "answers": [
+        "The desk closes at eight in the evening."
+      ],
+      "explanation": "Pick up означает «забрать». If you arrive later вводит условие для инструкции call this number.",
+      "wordIds": [
+        "en:v13:81:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "desk",
+        "closes",
+        "at",
+        "eight",
+        "in",
+        "the",
+        "evening."
+      ],
+      "hint": "The desk closes at eight in the evening. — Стойка закрывается в восемь вечера."
+    },
+    {
+      "id": "en-a1-81-e04",
+      "type": "dialogue",
+      "prompt": "Что делать после восьми?",
+      "answers": [
+        "Позвонить хозяину."
+      ],
+      "explanation": "В диалоге: Where are the keys after eight? / Call me when you arrive. I'll bring them down. Поэтому: Позвонить хозяину.",
+      "wordIds": [
+        "en:v13:81:p0",
+        "en:v13:81:p1",
+        "en:v13:81:p2",
+        "en:v13:81:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Where are the keys after eight?\nМико: Call me when you arrive. I'll bring them down.",
+      "options": [
+        "Подождать до утра.",
+        "Искать ключи в номере.",
+        "Позвонить хозяину."
+      ]
+    },
+    {
+      "id": "en-a1-81-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Если приедете позже, позвоните по этому номеру."
+      ],
+      "explanation": "If you arrive later, call this number. — Если приедете позже, позвоните по этому номеру.",
+      "wordIds": [
+        "en:v13:81:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "If you arrive later, call this number.",
+      "options": [
+        "Ключи можно забрать на стойке.",
+        "Если приедете позже, позвоните по этому номеру.",
+        "Стойка закрывается в восемь вечера."
+      ],
+      "hint": "If you arrive later, call this number. — Если приедете позже, позвоните по этому номеру."
+    },
+    {
+      "id": "en-a1-81-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:81:p0",
+        "en:v13:81:p1",
+        "en:v13:81:p2",
+        "en:v13:81:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:81:p0",
+          "en": "You can pick up the keys at reception.",
+          "ru": "Ключи можно забрать на стойке."
+        },
+        {
+          "id": "en:v13:81:p1",
+          "en": "The desk closes at eight in the evening.",
+          "ru": "Стойка закрывается в восемь вечера."
+        },
+        {
+          "id": "en:v13:81:p2",
+          "en": "If you arrive later, call this number.",
+          "ru": "Если приедете позже, позвоните по этому номеру."
+        },
+        {
+          "id": "en:v13:81:p3",
+          "en": "Please keep the front door closed.",
+          "ru": "Пожалуйста, держите входную дверь закрытой."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-81-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: You can to pick up the keys at reception.",
+      "answers": [
+        "You can pick up the keys at reception."
+      ],
+      "explanation": "После can нет частицы to.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "You can to pick up the keys at reception.",
+        "You can pick up the keys at reception."
+      ],
+      "hint": "Pick up означает «забрать». If you arrive later вводит условие для инструкции call this number."
+    },
+    {
+      "id": "en-a1-81-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Пожалуйста, держите входную дверь закрытой.». Можно написать вместо микрофона.",
+      "answers": [
+        "Please keep the front door closed."
+      ],
+      "explanation": "Please keep the front door closed. — Пожалуйста, держите входную дверь закрытой.",
+      "wordIds": [
+        "en:v13:81:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Please keep the front door closed.",
+      "recall": {
+        "phrase": "Please keep the front door closed.",
+        "meaning": "Пожалуйста, держите входную дверь закрытой."
+      }
+    },
+    {
+      "id": "en-a1-81-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Ключи можно забрать на стойке.",
+      "answers": [
+        "You can pick up the keys at reception."
+      ],
+      "explanation": "Pick up означает «забрать». If you arrive later вводит условие для инструкции call this number.",
+      "wordIds": [
+        "en:v13:81:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "You can pick up the keys at reception.",
+        "meaning": "Ключи можно забрать на стойке."
+      }
+    }
+  ]
+}

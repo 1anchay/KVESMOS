@@ -1,0 +1,296 @@
+{
+  "id": "en-a1-83",
+  "title": "Вещь осталась в поезде",
+  "topic": "Находки и пересадки",
+  "order": 82,
+  "objective": "Описать предмет и место, где его видели в последний раз.",
+  "guide": "Last saw + предмет отмечает конкретный момент. With a red zip описывает признак предмета.",
+  "vocabulary": [
+    {
+      "id": "en:v13:83:p0",
+      "en": "I left a small backpack on the train.",
+      "ru": "Я оставил маленький рюкзак в поезде."
+    },
+    {
+      "id": "en:v13:83:p1",
+      "en": "I last saw it under my seat.",
+      "ru": "В последний раз я видел его под своим сиденьем."
+    },
+    {
+      "id": "en:v13:83:p2",
+      "en": "It's blue with a red zip.",
+      "ru": "Он синий, с красной молнией."
+    },
+    {
+      "id": "en:v13:83:p3",
+      "en": "Could you let me know if you find it?",
+      "ru": "Сообщите мне, пожалуйста, если найдёте его."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Вещь осталась в поезде",
+      "phrase": "I left a small backpack on the train.",
+      "translation": "Я оставил маленький рюкзак в поезде.",
+      "explanation": "Last saw + предмет отмечает конкретный момент. With a red zip описывает признак предмета."
+    },
+    {
+      "character": "miko",
+      "title": "Вещь осталась в поезде",
+      "phrase": "I last saw it under my seat.",
+      "translation": "В последний раз я видел его под своим сиденьем.",
+      "explanation": "I last saw it under my seat. — В последний раз я видел его под своим сиденьем."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вещь осталась в поезде",
+      "phrase": "It's blue with a red zip.",
+      "translation": "Он синий, с красной молнией.",
+      "explanation": "It's blue with a red zip. — Он синий, с красной молнией."
+    },
+    {
+      "character": "orbi",
+      "title": "Вещь осталась в поезде",
+      "phrase": "Could you let me know if you find it?",
+      "translation": "Сообщите мне, пожалуйста, если найдёте его.",
+      "explanation": "Could you let me know if you find it? — Сообщите мне, пожалуйста, если найдёте его."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I left a small backpack on the train.",
+      "translation": "Я оставил маленький рюкзак в поезде.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я оставил маленький рюкзак в поезде.",
+      "options": [
+        "Он синий, с красной молнией.",
+        "Я оставил маленький рюкзак в поезде.",
+        "Сообщите мне, пожалуйста, если найдёте его."
+      ],
+      "explanation": "Last saw + предмет отмечает конкретный момент. With a red zip описывает признак предмета."
+    },
+    {
+      "id": "apply",
+      "phrase": "I last saw it under my seat.",
+      "translation": "В последний раз я видел его под своим сиденьем.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I last saw it under my seat.",
+      "tokens": [
+        "I",
+        "last",
+        "saw",
+        "it",
+        "under",
+        "my",
+        "seat."
+      ],
+      "character": "miko",
+      "explanation": "I last saw it under my seat. — В последний раз я видел его под своим сиденьем."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-83-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Он синий, с красной молнией."
+      ],
+      "explanation": "It's blue with a red zip. — Он синий, с красной молнией.",
+      "wordIds": [
+        "en:v13:83:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "It's blue with a red zip.",
+      "options": [
+        "Я оставил маленький рюкзак в поезде.",
+        "Он синий, с красной молнией.",
+        "В последний раз я видел его под своим сиденьем."
+      ],
+      "hint": "It's blue with a red zip. — Он синий, с красной молнией."
+    },
+    {
+      "id": "en-a1-83-e02",
+      "type": "order",
+      "prompt": "Собери реплику: В последний раз я видел его под своим сиденьем.",
+      "answers": [
+        "I last saw it under my seat."
+      ],
+      "explanation": "Last saw + предмет отмечает конкретный момент. With a red zip описывает признак предмета.",
+      "wordIds": [
+        "en:v13:83:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I",
+        "last",
+        "saw",
+        "it",
+        "under",
+        "my",
+        "seat."
+      ],
+      "hint": "I last saw it under my seat. — В последний раз я видел его под своим сиденьем."
+    },
+    {
+      "id": "en-a1-83-e03",
+      "type": "dialogue",
+      "prompt": "Какая отличительная деталь у рюкзака?",
+      "answers": [
+        "Красная молния."
+      ],
+      "explanation": "В диалоге: Can you describe the backpack? / It's blue with a red zip. I left it under my seat. Поэтому: Красная молния.",
+      "wordIds": [
+        "en:v13:83:p0",
+        "en:v13:83:p1",
+        "en:v13:83:p2",
+        "en:v13:83:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Can you describe the backpack?\nМико: It's blue with a red zip. I left it under my seat.",
+      "options": [
+        "Красная ручка.",
+        "Белая нашивка.",
+        "Красная молния."
+      ]
+    },
+    {
+      "id": "en-a1-83-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я оставил маленький рюкзак в поезде.»?",
+      "answers": [
+        "I left a small backpack on the train."
+      ],
+      "explanation": "I left a small backpack on the train. — Я оставил маленький рюкзак в поезде.",
+      "wordIds": [
+        "en:v13:83:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "I last saw it under my seat.",
+        "Could you let me know if you find it?",
+        "I left a small backpack on the train."
+      ],
+      "hint": "I left a small backpack on the train. — Я оставил маленький рюкзак в поезде."
+    },
+    {
+      "id": "en-a1-83-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:83:p0",
+        "en:v13:83:p1",
+        "en:v13:83:p2",
+        "en:v13:83:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:83:p0",
+          "en": "I left a small backpack on the train.",
+          "ru": "Я оставил маленький рюкзак в поезде."
+        },
+        {
+          "id": "en:v13:83:p1",
+          "en": "I last saw it under my seat.",
+          "ru": "В последний раз я видел его под своим сиденьем."
+        },
+        {
+          "id": "en:v13:83:p2",
+          "en": "It's blue with a red zip.",
+          "ru": "Он синий, с красной молнией."
+        },
+        {
+          "id": "en:v13:83:p3",
+          "en": "Could you let me know if you find it?",
+          "ru": "Сообщите мне, пожалуйста, если найдёте его."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-83-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I have last seen it yesterday under my seat.",
+      "answers": [
+        "I last saw it yesterday under my seat."
+      ],
+      "explanation": "Yesterday задаёт завершённое время, поэтому Past Simple saw.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I have last seen it yesterday under my seat.",
+        "I last saw it yesterday under my seat."
+      ],
+      "hint": "Last saw + предмет отмечает конкретный момент. With a red zip описывает признак предмета."
+    },
+    {
+      "id": "en-a1-83-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Сообщите мне, пожалуйста, если найдёте его.». Можно написать вместо микрофона.",
+      "answers": [
+        "Could you let me know if you find it?"
+      ],
+      "explanation": "Could you let me know if you find it? — Сообщите мне, пожалуйста, если найдёте его.",
+      "wordIds": [
+        "en:v13:83:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Could you let me know if you find it?",
+      "recall": {
+        "phrase": "Could you let me know if you find it?",
+        "meaning": "Сообщите мне, пожалуйста, если найдёте его."
+      }
+    },
+    {
+      "id": "en-a1-83-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я оставил маленький рюкзак в поезде.",
+      "answers": [
+        "I left a small backpack on the train."
+      ],
+      "explanation": "Last saw + предмет отмечает конкретный момент. With a red zip описывает признак предмета.",
+      "wordIds": [
+        "en:v13:83:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I left a small backpack on the train.",
+        "meaning": "Я оставил маленький рюкзак в поезде."
+      }
+    },
+    {
+      "id": "en-a1-83-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Не могли бы вы снова проверить бронь?",
+      "answers": [
+        "Could you check the reservation again?"
+      ],
+      "explanation": "Could you check the reservation again? — Не могли бы вы снова проверить бронь?",
+      "wordIds": [
+        "en:v13:82:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I booked a room for two people.",
+        "The confirmation says one guest.",
+        "Could you check the reservation again?",
+        "I'll send you the booking number."
+      ]
+    }
+  ]
+}

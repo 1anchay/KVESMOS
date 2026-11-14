@@ -237,7 +237,9 @@
         "Oui, il en reste trois."
       ],
       "explanation": "Oui, il en reste trois. — Да, осталось три.",
-      "wordIds": [],
+      "wordIds": [
+        "fr:v13:33:p1"
+      ],
       "character": "miko",
       "phase": "Применяем",
       "options": [

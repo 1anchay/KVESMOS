@@ -302,7 +302,9 @@
         "我更想看电影。"
       ],
       "explanation": "我更想看电影。 — Я больше хочу посмотреть фильм.",
-      "wordIds": [],
+      "wordIds": [
+        "zh:v13:38:p2"
+      ],
       "character": "zig_quartz",
       "phase": "Применяем",
       "options": [
@@ -310,7 +312,8 @@
         "我们可以看电影或者听音乐。",
         "我更想看电影。",
         "那我们先买票吧。"
-      ]
+      ],
+      "pronunciation": "Wǒ gèng xiǎng kàn diànyǐng."
     }
   ]
 }

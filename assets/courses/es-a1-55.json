@@ -1,0 +1,296 @@
+{
+  "id": "es-a1-55",
+  "title": "Объяснить правила соседу",
+  "topic": "Просьбы и передача",
+  "order": 54,
+  "objective": "Передать просьбу с повелительной формой tú.",
+  "guide": "Для запрета с tú употребляют no + форму вроде dejes. Для утвердительной просьбы подходит deja.",
+  "vocabulary": [
+    {
+      "id": "es:v13:55:p0",
+      "en": "Deja los zapatos junto a la puerta.",
+      "ru": "Оставь обувь у двери."
+    },
+    {
+      "id": "es:v13:55:p1",
+      "en": "No dejes la bici en la escalera.",
+      "ru": "Не оставляй велосипед на лестнице."
+    },
+    {
+      "id": "es:v13:55:p2",
+      "en": "Cierra la puerta al salir.",
+      "ru": "Закрой дверь, когда будешь выходить."
+    },
+    {
+      "id": "es:v13:55:p3",
+      "en": "Puedes guardar la bici en el patio.",
+      "ru": "Можешь оставить велосипед во дворе."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Объяснить правила соседу",
+      "phrase": "Deja los zapatos junto a la puerta.",
+      "translation": "Оставь обувь у двери.",
+      "explanation": "Для запрета с tú употребляют no + форму вроде dejes. Для утвердительной просьбы подходит deja."
+    },
+    {
+      "character": "miko",
+      "title": "Объяснить правила соседу",
+      "phrase": "No dejes la bici en la escalera.",
+      "translation": "Не оставляй велосипед на лестнице.",
+      "explanation": "No dejes la bici en la escalera. — Не оставляй велосипед на лестнице."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Объяснить правила соседу",
+      "phrase": "Cierra la puerta al salir.",
+      "translation": "Закрой дверь, когда будешь выходить.",
+      "explanation": "Cierra la puerta al salir. — Закрой дверь, когда будешь выходить."
+    },
+    {
+      "character": "orbi",
+      "title": "Объяснить правила соседу",
+      "phrase": "Puedes guardar la bici en el patio.",
+      "translation": "Можешь оставить велосипед во дворе.",
+      "explanation": "Puedes guardar la bici en el patio. — Можешь оставить велосипед во дворе."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Deja los zapatos junto a la puerta.",
+      "translation": "Оставь обувь у двери.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Оставь обувь у двери.",
+      "options": [
+        "Закрой дверь, когда будешь выходить.",
+        "Оставь обувь у двери.",
+        "Можешь оставить велосипед во дворе."
+      ],
+      "explanation": "Для запрета с tú употребляют no + форму вроде dejes. Для утвердительной просьбы подходит deja."
+    },
+    {
+      "id": "apply",
+      "phrase": "No dejes la bici en la escalera.",
+      "translation": "Не оставляй велосипед на лестнице.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "No dejes la bici en la escalera.",
+      "tokens": [
+        "No",
+        "dejes",
+        "la",
+        "bici",
+        "en",
+        "la",
+        "escalera."
+      ],
+      "character": "miko",
+      "explanation": "No dejes la bici en la escalera. — Не оставляй велосипед на лестнице."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-55-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Оставь обувь у двери.»?",
+      "answers": [
+        "Deja los zapatos junto a la puerta."
+      ],
+      "explanation": "Deja los zapatos junto a la puerta. — Оставь обувь у двери.",
+      "wordIds": [
+        "es:v13:55:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "No dejes la bici en la escalera.",
+        "Puedes guardar la bici en el patio.",
+        "Deja los zapatos junto a la puerta."
+      ],
+      "hint": "Deja los zapatos junto a la puerta. — Оставь обувь у двери."
+    },
+    {
+      "id": "es-a1-55-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Не оставляй велосипед на лестнице.",
+      "answers": [
+        "No dejes la bici en la escalera."
+      ],
+      "explanation": "Для запрета с tú употребляют no + форму вроде dejes. Для утвердительной просьбы подходит deja.",
+      "wordIds": [
+        "es:v13:55:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "No",
+        "dejes",
+        "la",
+        "bici",
+        "en",
+        "la",
+        "escalera."
+      ],
+      "hint": "No dejes la bici en la escalera. — Не оставляй велосипед на лестнице."
+    },
+    {
+      "id": "es-a1-55-e03",
+      "type": "dialogue",
+      "prompt": "Куда можно поставить велосипед?",
+      "answers": [
+        "Во двор."
+      ],
+      "explanation": "В диалоге: ¿Dejo la bici aquí? / No la dejes en la escalera. Puedes dejarla en el patio. Поэтому: Во двор.",
+      "wordIds": [
+        "es:v13:55:p0",
+        "es:v13:55:p1",
+        "es:v13:55:p2",
+        "es:v13:55:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Dejo la bici aquí?\nМико: No la dejes en la escalera. Puedes dejarla en el patio.",
+      "options": [
+        "На лестницу.",
+        "В лифт.",
+        "Во двор."
+      ]
+    },
+    {
+      "id": "es-a1-55-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Закрой дверь, когда будешь выходить."
+      ],
+      "explanation": "Cierra la puerta al salir. — Закрой дверь, когда будешь выходить.",
+      "wordIds": [
+        "es:v13:55:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Cierra la puerta al salir.",
+      "options": [
+        "Оставь обувь у двери.",
+        "Закрой дверь, когда будешь выходить.",
+        "Не оставляй велосипед на лестнице."
+      ],
+      "hint": "Cierra la puerta al salir. — Закрой дверь, когда будешь выходить."
+    },
+    {
+      "id": "es-a1-55-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:55:p0",
+        "es:v13:55:p1",
+        "es:v13:55:p2",
+        "es:v13:55:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:55:p0",
+          "en": "Deja los zapatos junto a la puerta.",
+          "ru": "Оставь обувь у двери."
+        },
+        {
+          "id": "es:v13:55:p1",
+          "en": "No dejes la bici en la escalera.",
+          "ru": "Не оставляй велосипед на лестнице."
+        },
+        {
+          "id": "es:v13:55:p2",
+          "en": "Cierra la puerta al salir.",
+          "ru": "Закрой дверь, когда будешь выходить."
+        },
+        {
+          "id": "es:v13:55:p3",
+          "en": "Puedes guardar la bici en el patio.",
+          "ru": "Можешь оставить велосипед во дворе."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-55-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: No deja la bici en la escalera.",
+      "answers": [
+        "No dejes la bici en la escalera."
+      ],
+      "explanation": "Для запрета при обращении на tú используется no dejes.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "No deja la bici en la escalera.",
+        "No dejes la bici en la escalera."
+      ],
+      "hint": "Для запрета с tú употребляют no + форму вроде dejes. Для утвердительной просьбы подходит deja."
+    },
+    {
+      "id": "es-a1-55-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Можешь оставить велосипед во дворе.». Можно написать вместо микрофона.",
+      "answers": [
+        "Puedes guardar la bici en el patio."
+      ],
+      "explanation": "Puedes guardar la bici en el patio. — Можешь оставить велосипед во дворе.",
+      "wordIds": [
+        "es:v13:55:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Puedes guardar la bici en el patio.",
+      "recall": {
+        "phrase": "Puedes guardar la bici en el patio.",
+        "meaning": "Можешь оставить велосипед во дворе."
+      }
+    },
+    {
+      "id": "es-a1-55-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Оставь обувь у двери.",
+      "answers": [
+        "Deja los zapatos junto a la puerta."
+      ],
+      "explanation": "Для запрета с tú употребляют no + форму вроде dejes. Для утвердительной просьбы подходит deja.",
+      "wordIds": [
+        "es:v13:55:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Deja los zapatos junto a la puerta.",
+        "meaning": "Оставь обувь у двери."
+      }
+    },
+    {
+      "id": "es-a1-55-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Раньше я жил рядом с центром.",
+      "answers": [
+        "Antes vivía cerca del centro."
+      ],
+      "explanation": "Antes vivía cerca del centro. — Раньше я жил рядом с центром.",
+      "wordIds": [
+        "es:v13:54:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Antes vivía cerca del centro.",
+        "Vivo aquí desde hace dos años.",
+        "El barrio es más tranquilo ahora.",
+        "Echo de menos a mis antiguos vecinos."
+      ]
+    }
+  ]
+}

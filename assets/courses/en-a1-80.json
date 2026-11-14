@@ -1,0 +1,263 @@
+{
+  "id": "en-a1-80",
+  "title": "Плюсы и минусы маршрутов",
+  "topic": "Согласие и выбор",
+  "order": 79,
+  "objective": "Сравнить длительность, стоимость и удобство двух маршрутов.",
+  "guide": "Less expensive than — дешевле, just as fast as — так же быстро. Few transfers описывает число пересадок.",
+  "vocabulary": [
+    {
+      "id": "en:v13:80:p0",
+      "en": "The bus is less expensive than the train.",
+      "ru": "Автобус дешевле поезда."
+    },
+    {
+      "id": "en:v13:80:p1",
+      "en": "This route is just as fast as the other one.",
+      "ru": "Этот маршрут такой же быстрый, как другой."
+    },
+    {
+      "id": "en:v13:80:p2",
+      "en": "There are fewer transfers on the train.",
+      "ru": "На поезде меньше пересадок."
+    },
+    {
+      "id": "en:v13:80:p3",
+      "en": "I'd rather pay a little more.",
+      "ru": "Я бы предпочёл заплатить чуть больше."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Плюсы и минусы маршрутов",
+      "phrase": "The bus is less expensive than the train.",
+      "translation": "Автобус дешевле поезда.",
+      "explanation": "Less expensive than — дешевле, just as fast as — так же быстро. Few transfers описывает число пересадок."
+    },
+    {
+      "character": "miko",
+      "title": "Плюсы и минусы маршрутов",
+      "phrase": "This route is just as fast as the other one.",
+      "translation": "Этот маршрут такой же быстрый, как другой.",
+      "explanation": "This route is just as fast as the other one. — Этот маршрут такой же быстрый, как другой."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Плюсы и минусы маршрутов",
+      "phrase": "There are fewer transfers on the train.",
+      "translation": "На поезде меньше пересадок.",
+      "explanation": "There are fewer transfers on the train. — На поезде меньше пересадок."
+    },
+    {
+      "character": "orbi",
+      "title": "Плюсы и минусы маршрутов",
+      "phrase": "I'd rather pay a little more.",
+      "translation": "Я бы предпочёл заплатить чуть больше.",
+      "explanation": "I'd rather pay a little more. — Я бы предпочёл заплатить чуть больше."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "The bus is less expensive than the train.",
+      "translation": "Автобус дешевле поезда.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Автобус дешевле поезда.",
+      "options": [
+        "На поезде меньше пересадок.",
+        "Автобус дешевле поезда.",
+        "Я бы предпочёл заплатить чуть больше."
+      ],
+      "explanation": "Less expensive than — дешевле, just as fast as — так же быстро. Few transfers описывает число пересадок."
+    },
+    {
+      "id": "apply",
+      "phrase": "This route is just as fast as the other one.",
+      "translation": "Этот маршрут такой же быстрый, как другой.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "This route is just as fast as the other one.",
+      "tokens": [
+        "This",
+        "route",
+        "is",
+        "just",
+        "as",
+        "fast",
+        "as",
+        "the",
+        "other",
+        "one."
+      ],
+      "character": "miko",
+      "explanation": "This route is just as fast as the other one. — Этот маршрут такой же быстрый, как другой."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-80-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "На поезде меньше пересадок."
+      ],
+      "explanation": "There are fewer transfers on the train. — На поезде меньше пересадок.",
+      "wordIds": [
+        "en:v13:80:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "There are fewer transfers on the train.",
+      "options": [
+        "Автобус дешевле поезда.",
+        "На поезде меньше пересадок.",
+        "Этот маршрут такой же быстрый, как другой."
+      ],
+      "hint": "There are fewer transfers on the train. — На поезде меньше пересадок."
+    },
+    {
+      "id": "en-a1-80-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Этот маршрут такой же быстрый, как другой.",
+      "answers": [
+        "This route is just as fast as the other one."
+      ],
+      "explanation": "Less expensive than — дешевле, just as fast as — так же быстро. Few transfers описывает число пересадок.",
+      "wordIds": [
+        "en:v13:80:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "This",
+        "route",
+        "is",
+        "just",
+        "as",
+        "fast",
+        "as",
+        "the",
+        "other",
+        "one."
+      ],
+      "hint": "This route is just as fast as the other one. — Этот маршрут такой же быстрый, как другой."
+    },
+    {
+      "id": "en-a1-80-e03",
+      "type": "dialogue",
+      "prompt": "Чем варианты отличаются?",
+      "answers": [
+        "Числом пересадок."
+      ],
+      "explanation": "В диалоге: Is the bus slower? / No, it's just as fast. But you have to change twice. Поэтому: Числом пересадок.",
+      "wordIds": [
+        "en:v13:80:p0",
+        "en:v13:80:p1",
+        "en:v13:80:p2",
+        "en:v13:80:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Is the bus slower?\nМико: No, it's just as fast. But you have to change twice.",
+      "options": [
+        "Временем в пути.",
+        "Оба идут без пересадок.",
+        "Числом пересадок."
+      ]
+    },
+    {
+      "id": "en-a1-80-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Автобус дешевле поезда.»?",
+      "answers": [
+        "The bus is less expensive than the train."
+      ],
+      "explanation": "The bus is less expensive than the train. — Автобус дешевле поезда.",
+      "wordIds": [
+        "en:v13:80:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "This route is just as fast as the other one.",
+        "I'd rather pay a little more.",
+        "The bus is less expensive than the train."
+      ],
+      "hint": "The bus is less expensive than the train. — Автобус дешевле поезда."
+    },
+    {
+      "id": "en-a1-80-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: This route is as fast than the other one.",
+      "answers": [
+        "This route is as fast as the other one."
+      ],
+      "explanation": "Сравнение равенства строится с двумя as.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "This route is as fast than the other one.",
+        "This route is as fast as the other one."
+      ],
+      "hint": "Less expensive than — дешевле, just as fast as — так же быстро. Few transfers описывает число пересадок."
+    },
+    {
+      "id": "en-a1-80-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я бы предпочёл заплатить чуть больше.». Можно написать вместо микрофона.",
+      "answers": [
+        "I'd rather pay a little more."
+      ],
+      "explanation": "I'd rather pay a little more. — Я бы предпочёл заплатить чуть больше.",
+      "wordIds": [
+        "en:v13:80:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I'd rather pay a little more.",
+      "recall": {
+        "phrase": "I'd rather pay a little more.",
+        "meaning": "Я бы предпочёл заплатить чуть больше."
+      }
+    },
+    {
+      "id": "en-a1-80-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Автобус дешевле поезда.",
+      "answers": [
+        "The bus is less expensive than the train."
+      ],
+      "explanation": "Less expensive than — дешевле, just as fast as — так же быстро. Few transfers описывает число пересадок.",
+      "wordIds": [
+        "en:v13:80:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "The bus is less expensive than the train.",
+        "meaning": "Автобус дешевле поезда."
+      }
+    },
+    {
+      "id": "en-a1-80-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мне это кажется практичнее.",
+      "answers": [
+        "That sounds more practical to me."
+      ],
+      "explanation": "That sounds more practical to me. — Мне это кажется практичнее.",
+      "wordIds": [
+        "en:v13:79:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I see your point about the cost.",
+        "My concern is the travel time.",
+        "Could we look at a closer option?",
+        "That sounds more practical to me."
+      ]
+    }
+  ]
+}

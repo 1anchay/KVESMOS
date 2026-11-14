@@ -1,0 +1,255 @@
+{
+  "id": "de-a1-44",
+  "title": "Вешаем картину",
+  "topic": "Место и направление",
+  "order": 43,
+  "objective": "Сообщить, где висит предмет и куда его повесить.",
+  "guide": "Hängen может обозначать положение или действие. Падеж зависит от смысла: an der Wand и an die Wand.",
+  "vocabulary": [
+    {
+      "id": "de:v13:44:p0",
+      "en": "Das Bild hängt an der Wand.",
+      "ru": "Картина висит на стене."
+    },
+    {
+      "id": "de:v13:44:p1",
+      "en": "Häng das Bild an die Wand.",
+      "ru": "Повесь картину на стену."
+    },
+    {
+      "id": "de:v13:44:p2",
+      "en": "Über dem Sofa ist noch Platz.",
+      "ru": "Над диваном ещё есть место."
+    },
+    {
+      "id": "de:v13:44:p3",
+      "en": "Wir hängen es etwas höher.",
+      "ru": "Мы повесим её чуть выше."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Вешаем картину",
+      "phrase": "Das Bild hängt an der Wand.",
+      "translation": "Картина висит на стене.",
+      "explanation": "Hängen может обозначать положение или действие. Падеж зависит от смысла: an der Wand и an die Wand."
+    },
+    {
+      "character": "miko",
+      "title": "Вешаем картину",
+      "phrase": "Häng das Bild an die Wand.",
+      "translation": "Повесь картину на стену.",
+      "explanation": "Häng das Bild an die Wand. — Повесь картину на стену."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Вешаем картину",
+      "phrase": "Über dem Sofa ist noch Platz.",
+      "translation": "Над диваном ещё есть место.",
+      "explanation": "Über dem Sofa ist noch Platz. — Над диваном ещё есть место."
+    },
+    {
+      "character": "orbi",
+      "title": "Вешаем картину",
+      "phrase": "Wir hängen es etwas höher.",
+      "translation": "Мы повесим её чуть выше.",
+      "explanation": "Wir hängen es etwas höher. — Мы повесим её чуть выше."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Das Bild hängt an der Wand.",
+      "translation": "Картина висит на стене.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Картина висит на стене.",
+      "options": [
+        "Над диваном ещё есть место.",
+        "Картина висит на стене.",
+        "Мы повесим её чуть выше."
+      ],
+      "explanation": "Hängen может обозначать положение или действие. Падеж зависит от смысла: an der Wand и an die Wand."
+    },
+    {
+      "id": "apply",
+      "phrase": "Häng das Bild an die Wand.",
+      "translation": "Повесь картину на стену.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Häng das Bild an die Wand.",
+      "tokens": [
+        "Häng",
+        "das",
+        "Bild",
+        "an",
+        "die",
+        "Wand."
+      ],
+      "character": "miko",
+      "explanation": "Häng das Bild an die Wand. — Повесь картину на стену."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-44-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Над диваном ещё есть место."
+      ],
+      "explanation": "Über dem Sofa ist noch Platz. — Над диваном ещё есть место.",
+      "wordIds": [
+        "de:v13:44:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Über dem Sofa ist noch Platz.",
+      "options": [
+        "Картина висит на стене.",
+        "Над диваном ещё есть место.",
+        "Повесь картину на стену."
+      ],
+      "hint": "Über dem Sofa ist noch Platz. — Над диваном ещё есть место."
+    },
+    {
+      "id": "de-a1-44-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Повесь картину на стену.",
+      "answers": [
+        "Häng das Bild an die Wand."
+      ],
+      "explanation": "Hängen может обозначать положение или действие. Падеж зависит от смысла: an der Wand и an die Wand.",
+      "wordIds": [
+        "de:v13:44:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Häng",
+        "das",
+        "Bild",
+        "an",
+        "die",
+        "Wand."
+      ],
+      "hint": "Häng das Bild an die Wand. — Повесь картину на стену."
+    },
+    {
+      "id": "de-a1-44-e03",
+      "type": "dialogue",
+      "prompt": "Куда повесят картину?",
+      "answers": [
+        "На стену над диваном."
+      ],
+      "explanation": "В диалоге: Wohin hängen wir das Bild? / An die Wand über dem Sofa. Поэтому: На стену над диваном.",
+      "wordIds": [
+        "de:v13:44:p0",
+        "de:v13:44:p1",
+        "de:v13:44:p2",
+        "de:v13:44:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Wohin hängen wir das Bild?\nМико: An die Wand über dem Sofa.",
+      "options": [
+        "За дверь.",
+        "На стену над кроватью.",
+        "На стену над диваном."
+      ]
+    },
+    {
+      "id": "de-a1-44-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Картина висит на стене.»?",
+      "answers": [
+        "Das Bild hängt an der Wand."
+      ],
+      "explanation": "Das Bild hängt an der Wand. — Картина висит на стене.",
+      "wordIds": [
+        "de:v13:44:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Häng das Bild an die Wand.",
+        "Wir hängen es etwas höher.",
+        "Das Bild hängt an der Wand."
+      ],
+      "hint": "Das Bild hängt an der Wand. — Картина висит на стене."
+    },
+    {
+      "id": "de-a1-44-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Das Bild hängt an die Wand.",
+      "answers": [
+        "Das Bild hängt an der Wand."
+      ],
+      "explanation": "Здесь картина уже висит, поэтому Dativ an der Wand.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Das Bild hängt an die Wand.",
+        "Das Bild hängt an der Wand."
+      ],
+      "hint": "Hängen может обозначать положение или действие. Падеж зависит от смысла: an der Wand и an die Wand."
+    },
+    {
+      "id": "de-a1-44-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы повесим её чуть выше.». Можно написать вместо микрофона.",
+      "answers": [
+        "Wir hängen es etwas höher."
+      ],
+      "explanation": "Wir hängen es etwas höher. — Мы повесим её чуть выше.",
+      "wordIds": [
+        "de:v13:44:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Wir hängen es etwas höher.",
+      "recall": {
+        "phrase": "Wir hängen es etwas höher.",
+        "meaning": "Мы повесим её чуть выше."
+      }
+    },
+    {
+      "id": "de-a1-44-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Картина висит на стене.",
+      "answers": [
+        "Das Bild hängt an der Wand."
+      ],
+      "explanation": "Hängen может обозначать положение или действие. Падеж зависит от смысла: an der Wand и an die Wand.",
+      "wordIds": [
+        "de:v13:44:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Das Bild hängt an der Wand.",
+        "meaning": "Картина висит на стене."
+      }
+    },
+    {
+      "id": "de-a1-44-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Поставь сумку под стол.",
+      "answers": [
+        "Stell die Tasche unter den Tisch."
+      ],
+      "explanation": "Stell die Tasche unter den Tisch. — Поставь сумку под стол.",
+      "wordIds": [
+        "de:v13:43:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Die Tasche steht unter dem Tisch.",
+        "Stell die Tasche unter den Tisch.",
+        "Der Rucksack steht neben der Tür.",
+        "Leg den Schlüssel auf den Tisch."
+      ]
+    }
+  ]
+}

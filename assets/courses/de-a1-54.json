@@ -1,0 +1,257 @@
+{
+  "id": "de-a1-54",
+  "title": "Одинаковая цена",
+  "topic": "Оговорки и сравнения",
+  "order": 53,
+  "objective": "Сравнить два предложения с als и wie.",
+  "guide": "Bei gleich или so… wie выражается равенство; после сравнительной формы употребляется als.",
+  "vocabulary": [
+    {
+      "id": "de:v13:54:p0",
+      "en": "Die zweite Wohnung ist heller als die erste.",
+      "ru": "Вторая квартира светлее первой."
+    },
+    {
+      "id": "de:v13:54:p1",
+      "en": "Sie ist genauso teuer wie die erste.",
+      "ru": "Она стоит столько же, сколько первая."
+    },
+    {
+      "id": "de:v13:54:p2",
+      "en": "Die Küche ist dort größer.",
+      "ru": "Кухня там больше."
+    },
+    {
+      "id": "de:v13:54:p3",
+      "en": "Wir sehen uns beide Wohnungen an.",
+      "ru": "Мы посмотрим обе квартиры."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Одинаковая цена",
+      "phrase": "Die zweite Wohnung ist heller als die erste.",
+      "translation": "Вторая квартира светлее первой.",
+      "explanation": "Bei gleich или so… wie выражается равенство; после сравнительной формы употребляется als."
+    },
+    {
+      "character": "miko",
+      "title": "Одинаковая цена",
+      "phrase": "Sie ist genauso teuer wie die erste.",
+      "translation": "Она стоит столько же, сколько первая.",
+      "explanation": "Sie ist genauso teuer wie die erste. — Она стоит столько же, сколько первая."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Одинаковая цена",
+      "phrase": "Die Küche ist dort größer.",
+      "translation": "Кухня там больше.",
+      "explanation": "Die Küche ist dort größer. — Кухня там больше."
+    },
+    {
+      "character": "orbi",
+      "title": "Одинаковая цена",
+      "phrase": "Wir sehen uns beide Wohnungen an.",
+      "translation": "Мы посмотрим обе квартиры.",
+      "explanation": "Wir sehen uns beide Wohnungen an. — Мы посмотрим обе квартиры."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Die zweite Wohnung ist heller als die erste.",
+      "translation": "Вторая квартира светлее первой.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Вторая квартира светлее первой.",
+      "options": [
+        "Кухня там больше.",
+        "Вторая квартира светлее первой.",
+        "Мы посмотрим обе квартиры."
+      ],
+      "explanation": "Bei gleich или so… wie выражается равенство; после сравнительной формы употребляется als."
+    },
+    {
+      "id": "apply",
+      "phrase": "Sie ist genauso teuer wie die erste.",
+      "translation": "Она стоит столько же, сколько первая.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Sie ist genauso teuer wie die erste.",
+      "tokens": [
+        "Sie",
+        "ist",
+        "genauso",
+        "teuer",
+        "wie",
+        "die",
+        "erste."
+      ],
+      "character": "miko",
+      "explanation": "Sie ist genauso teuer wie die erste. — Она стоит столько же, сколько первая."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-54-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: С этим я согласен.",
+      "answers": [
+        "Damit bin ich einverstanden."
+      ],
+      "explanation": "Damit bin ich einverstanden. — С этим я согласен.",
+      "wordIds": [
+        "de:v13:53:p3"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Die Idee gefällt mir.",
+        "Der Weg ist zwar kurz, aber er ist steil.",
+        "Ich würde lieber den anderen Weg nehmen.",
+        "Damit bin ich einverstanden."
+      ]
+    },
+    {
+      "id": "de-a1-54-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Вторая квартира светлее первой.»?",
+      "answers": [
+        "Die zweite Wohnung ist heller als die erste."
+      ],
+      "explanation": "Die zweite Wohnung ist heller als die erste. — Вторая квартира светлее первой.",
+      "wordIds": [
+        "de:v13:54:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Sie ist genauso teuer wie die erste.",
+        "Wir sehen uns beide Wohnungen an.",
+        "Die zweite Wohnung ist heller als die erste."
+      ],
+      "hint": "Die zweite Wohnung ist heller als die erste. — Вторая квартира светлее первой."
+    },
+    {
+      "id": "de-a1-54-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Она стоит столько же, сколько первая.",
+      "answers": [
+        "Sie ist genauso teuer wie die erste."
+      ],
+      "explanation": "Bei gleich или so… wie выражается равенство; после сравнительной формы употребляется als.",
+      "wordIds": [
+        "de:v13:54:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Sie",
+        "ist",
+        "genauso",
+        "teuer",
+        "wie",
+        "die",
+        "erste."
+      ],
+      "hint": "Sie ist genauso teuer wie die erste. — Она стоит столько же, сколько первая."
+    },
+    {
+      "id": "de-a1-54-e04",
+      "type": "dialogue",
+      "prompt": "Что различается?",
+      "answers": [
+        "Освещённость."
+      ],
+      "explanation": "В диалоге: Ist die zweite Wohnung teurer? / Nein, sie ist genauso teuer wie die erste. Aber sie ist heller. Поэтому: Освещённость.",
+      "wordIds": [
+        "de:v13:54:p0",
+        "de:v13:54:p1",
+        "de:v13:54:p2",
+        "de:v13:54:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Ist die zweite Wohnung teurer?\nМико: Nein, sie ist genauso teuer wie die erste. Aber sie ist heller.",
+      "options": [
+        "Цена.",
+        "Обе квартиры стоят по-разному и одинаково светлые.",
+        "Освещённость."
+      ]
+    },
+    {
+      "id": "de-a1-54-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Кухня там больше."
+      ],
+      "explanation": "Die Küche ist dort größer. — Кухня там больше.",
+      "wordIds": [
+        "de:v13:54:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Die Küche ist dort größer.",
+      "options": [
+        "Вторая квартира светлее первой.",
+        "Кухня там больше.",
+        "Она стоит столько же, сколько первая."
+      ],
+      "hint": "Die Küche ist dort größer. — Кухня там больше."
+    },
+    {
+      "id": "de-a1-54-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Sie ist heller wie die erste.",
+      "answers": [
+        "Sie ist heller als die erste."
+      ],
+      "explanation": "Для неравенства после heller употребляется als.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Sie ist heller wie die erste.",
+        "Sie ist heller als die erste."
+      ],
+      "hint": "Bei gleich или so… wie выражается равенство; после сравнительной формы употребляется als."
+    },
+    {
+      "id": "de-a1-54-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы посмотрим обе квартиры.». Можно написать вместо микрофона.",
+      "answers": [
+        "Wir sehen uns beide Wohnungen an."
+      ],
+      "explanation": "Wir sehen uns beide Wohnungen an. — Мы посмотрим обе квартиры.",
+      "wordIds": [
+        "de:v13:54:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Wir sehen uns beide Wohnungen an.",
+      "recall": {
+        "phrase": "Wir sehen uns beide Wohnungen an.",
+        "meaning": "Мы посмотрим обе квартиры."
+      }
+    },
+    {
+      "id": "de-a1-54-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Вторая квартира светлее первой.",
+      "answers": [
+        "Die zweite Wohnung ist heller als die erste."
+      ],
+      "explanation": "Bei gleich или so… wie выражается равенство; после сравнительной формы употребляется als.",
+      "wordIds": [
+        "de:v13:54:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Die zweite Wohnung ist heller als die erste.",
+        "meaning": "Вторая квартира светлее первой."
+      }
+    }
+  ]
+}

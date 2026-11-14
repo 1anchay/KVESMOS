@@ -1,0 +1,296 @@
+{
+  "id": "de-a1-55",
+  "title": "Исправить адрес",
+  "topic": "Изменения и причины",
+  "order": 54,
+  "objective": "Написать короткую просьбу о смене контактных данных.",
+  "guide": "Könnten Sie…? образует вежливый вопрос. Das Verb ändern остаётся в инфинитиве в конце.",
+  "vocabulary": [
+    {
+      "id": "de:v13:55:p0",
+      "en": "Meine Adresse hat sich geändert.",
+      "ru": "Мой адрес изменился."
+    },
+    {
+      "id": "de:v13:55:p1",
+      "en": "Könnten Sie die Adresse im Formular ändern?",
+      "ru": "Не могли бы вы изменить адрес в формуляре?"
+    },
+    {
+      "id": "de:v13:55:p2",
+      "en": "Die alte Nummer gilt nicht mehr.",
+      "ru": "Старый номер больше не действует."
+    },
+    {
+      "id": "de:v13:55:p3",
+      "en": "Ich schicke Ihnen die neuen Daten.",
+      "ru": "Я пришлю вам новые данные."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Исправить адрес",
+      "phrase": "Meine Adresse hat sich geändert.",
+      "translation": "Мой адрес изменился.",
+      "explanation": "Könnten Sie…? образует вежливый вопрос. Das Verb ändern остаётся в инфинитиве в конце."
+    },
+    {
+      "character": "miko",
+      "title": "Исправить адрес",
+      "phrase": "Könnten Sie die Adresse im Formular ändern?",
+      "translation": "Не могли бы вы изменить адрес в формуляре?",
+      "explanation": "Könnten Sie die Adresse im Formular ändern? — Не могли бы вы изменить адрес в формуляре?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Исправить адрес",
+      "phrase": "Die alte Nummer gilt nicht mehr.",
+      "translation": "Старый номер больше не действует.",
+      "explanation": "Die alte Nummer gilt nicht mehr. — Старый номер больше не действует."
+    },
+    {
+      "character": "orbi",
+      "title": "Исправить адрес",
+      "phrase": "Ich schicke Ihnen die neuen Daten.",
+      "translation": "Я пришлю вам новые данные.",
+      "explanation": "Ich schicke Ihnen die neuen Daten. — Я пришлю вам новые данные."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Meine Adresse hat sich geändert.",
+      "translation": "Мой адрес изменился.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мой адрес изменился.",
+      "options": [
+        "Старый номер больше не действует.",
+        "Мой адрес изменился.",
+        "Я пришлю вам новые данные."
+      ],
+      "explanation": "Könnten Sie…? образует вежливый вопрос. Das Verb ändern остаётся в инфинитиве в конце."
+    },
+    {
+      "id": "apply",
+      "phrase": "Könnten Sie die Adresse im Formular ändern?",
+      "translation": "Не могли бы вы изменить адрес в формуляре?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Könnten Sie die Adresse im Formular ändern?",
+      "tokens": [
+        "Könnten",
+        "Sie",
+        "die",
+        "Adresse",
+        "im",
+        "Formular",
+        "ändern?"
+      ],
+      "character": "miko",
+      "explanation": "Könnten Sie die Adresse im Formular ändern? — Не могли бы вы изменить адрес в формуляре?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-55-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Мой адрес изменился.»?",
+      "answers": [
+        "Meine Adresse hat sich geändert."
+      ],
+      "explanation": "Meine Adresse hat sich geändert. — Мой адрес изменился.",
+      "wordIds": [
+        "de:v13:55:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Könnten Sie die Adresse im Formular ändern?",
+        "Ich schicke Ihnen die neuen Daten.",
+        "Meine Adresse hat sich geändert."
+      ],
+      "hint": "Meine Adresse hat sich geändert. — Мой адрес изменился."
+    },
+    {
+      "id": "de-a1-55-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Не могли бы вы изменить адрес в формуляре?",
+      "answers": [
+        "Könnten Sie die Adresse im Formular ändern?"
+      ],
+      "explanation": "Könnten Sie…? образует вежливый вопрос. Das Verb ändern остаётся в инфинитиве в конце.",
+      "wordIds": [
+        "de:v13:55:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Könnten",
+        "Sie",
+        "die",
+        "Adresse",
+        "im",
+        "Formular",
+        "ändern?"
+      ],
+      "hint": "Könnten Sie die Adresse im Formular ändern? — Не могли бы вы изменить адрес в формуляре?"
+    },
+    {
+      "id": "de-a1-55-e03",
+      "type": "dialogue",
+      "prompt": "Что пришлёт собеседник?",
+      "answers": [
+        "Новый адрес."
+      ],
+      "explanation": "В диалоге: Ist die Adresse noch richtig? / Nein. Ich schicke Ihnen gleich die neue Adresse. Поэтому: Новый адрес.",
+      "wordIds": [
+        "de:v13:55:p0",
+        "de:v13:55:p1",
+        "de:v13:55:p2",
+        "de:v13:55:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Ist die Adresse noch richtig?\nМико: Nein. Ich schicke Ihnen gleich die neue Adresse.",
+      "options": [
+        "Старую квитанцию.",
+        "Новое расписание.",
+        "Новый адрес."
+      ]
+    },
+    {
+      "id": "de-a1-55-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Старый номер больше не действует."
+      ],
+      "explanation": "Die alte Nummer gilt nicht mehr. — Старый номер больше не действует.",
+      "wordIds": [
+        "de:v13:55:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Die alte Nummer gilt nicht mehr.",
+      "options": [
+        "Мой адрес изменился.",
+        "Старый номер больше не действует.",
+        "Не могли бы вы изменить адрес в формуляре?"
+      ],
+      "hint": "Die alte Nummer gilt nicht mehr. — Старый номер больше не действует."
+    },
+    {
+      "id": "de-a1-55-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:55:p0",
+        "de:v13:55:p1",
+        "de:v13:55:p2",
+        "de:v13:55:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:55:p0",
+          "en": "Meine Adresse hat sich geändert.",
+          "ru": "Мой адрес изменился."
+        },
+        {
+          "id": "de:v13:55:p1",
+          "en": "Könnten Sie die Adresse im Formular ändern?",
+          "ru": "Не могли бы вы изменить адрес в формуляре?"
+        },
+        {
+          "id": "de:v13:55:p2",
+          "en": "Die alte Nummer gilt nicht mehr.",
+          "ru": "Старый номер больше не действует."
+        },
+        {
+          "id": "de:v13:55:p3",
+          "en": "Ich schicke Ihnen die neuen Daten.",
+          "ru": "Я пришлю вам новые данные."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-55-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Könnten Sie die Adresse im Formular ändern Sie?",
+      "answers": [
+        "Könnten Sie die Adresse im Formular ändern?"
+      ],
+      "explanation": "Подлежащее Sie уже стоит после Könnten и в конце не повторяется.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Könnten Sie die Adresse im Formular ändern Sie?",
+        "Könnten Sie die Adresse im Formular ändern?"
+      ],
+      "hint": "Könnten Sie…? образует вежливый вопрос. Das Verb ändern остаётся в инфинитиве в конце."
+    },
+    {
+      "id": "de-a1-55-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я пришлю вам новые данные.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ich schicke Ihnen die neuen Daten."
+      ],
+      "explanation": "Ich schicke Ihnen die neuen Daten. — Я пришлю вам новые данные.",
+      "wordIds": [
+        "de:v13:55:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Ich schicke Ihnen die neuen Daten.",
+      "recall": {
+        "phrase": "Ich schicke Ihnen die neuen Daten.",
+        "meaning": "Я пришлю вам новые данные."
+      }
+    },
+    {
+      "id": "de-a1-55-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мой адрес изменился.",
+      "answers": [
+        "Meine Adresse hat sich geändert."
+      ],
+      "explanation": "Könnten Sie…? образует вежливый вопрос. Das Verb ändern остаётся в инфинитиве в конце.",
+      "wordIds": [
+        "de:v13:55:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Meine Adresse hat sich geändert.",
+        "meaning": "Мой адрес изменился."
+      }
+    },
+    {
+      "id": "de-a1-55-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Вторая квартира светлее первой.",
+      "answers": [
+        "Die zweite Wohnung ist heller als die erste."
+      ],
+      "explanation": "Die zweite Wohnung ist heller als die erste. — Вторая квартира светлее первой.",
+      "wordIds": [
+        "de:v13:54:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Die zweite Wohnung ist heller als die erste.",
+        "Sie ist genauso teuer wie die erste.",
+        "Die Küche ist dort größer.",
+        "Wir sehen uns beide Wohnungen an."
+      ]
+    }
+  ]
+}

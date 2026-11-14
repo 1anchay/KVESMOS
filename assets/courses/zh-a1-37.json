@@ -304,7 +304,9 @@
         "你买好票了吗？"
       ],
       "explanation": "你买好票了吗？ — Ты уже купил билет?",
-      "wordIds": [],
+      "wordIds": [
+        "zh:v13:36:p0"
+      ],
       "character": "zig_quartz",
       "phase": "Применяем",
       "options": [
@@ -312,7 +314,8 @@
         "我已经把票买好了。",
         "我还没订房间。",
         "我今晚再订。"
-      ]
+      ],
+      "pronunciation": "Nǐ mǎihǎo piào le ma?"
     }
   ]
 }

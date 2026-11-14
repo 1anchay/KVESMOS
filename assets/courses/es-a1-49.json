@@ -1,0 +1,296 @@
+{
+  "id": "es-a1-49",
+  "title": "План на случай дождя",
+  "topic": "Условия и сроки",
+  "order": 48,
+  "objective": "Предложить запасной план с si.",
+  "guide": "В реальном условии после si ставят настоящее: si llueve. Последствие можно выразить через ir a.",
+  "vocabulary": [
+    {
+      "id": "es:v13:49:p0",
+      "en": "Si llueve, vamos a quedarnos en casa.",
+      "ru": "Если будет дождь, останемся дома."
+    },
+    {
+      "id": "es:v13:49:p1",
+      "en": "Si sale el sol, iremos al parque.",
+      "ru": "Если выйдет солнце, пойдём в парк."
+    },
+    {
+      "id": "es:v13:49:p2",
+      "en": "Lleva un paraguas por si acaso.",
+      "ru": "Возьми зонт на всякий случай."
+    },
+    {
+      "id": "es:v13:49:p3",
+      "en": "Podemos decidir después de comer.",
+      "ru": "Можем решить после обеда."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "План на случай дождя",
+      "phrase": "Si llueve, vamos a quedarnos en casa.",
+      "translation": "Если будет дождь, останемся дома.",
+      "explanation": "В реальном условии после si ставят настоящее: si llueve. Последствие можно выразить через ir a."
+    },
+    {
+      "character": "miko",
+      "title": "План на случай дождя",
+      "phrase": "Si sale el sol, iremos al parque.",
+      "translation": "Если выйдет солнце, пойдём в парк.",
+      "explanation": "Si sale el sol, iremos al parque. — Если выйдет солнце, пойдём в парк."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "План на случай дождя",
+      "phrase": "Lleva un paraguas por si acaso.",
+      "translation": "Возьми зонт на всякий случай.",
+      "explanation": "Lleva un paraguas por si acaso. — Возьми зонт на всякий случай."
+    },
+    {
+      "character": "orbi",
+      "title": "План на случай дождя",
+      "phrase": "Podemos decidir después de comer.",
+      "translation": "Можем решить после обеда.",
+      "explanation": "Podemos decidir después de comer. — Можем решить после обеда."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Si llueve, vamos a quedarnos en casa.",
+      "translation": "Если будет дождь, останемся дома.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Если будет дождь, останемся дома.",
+      "options": [
+        "Возьми зонт на всякий случай.",
+        "Если будет дождь, останемся дома.",
+        "Можем решить после обеда."
+      ],
+      "explanation": "В реальном условии после si ставят настоящее: si llueve. Последствие можно выразить через ir a."
+    },
+    {
+      "id": "apply",
+      "phrase": "Si sale el sol, iremos al parque.",
+      "translation": "Если выйдет солнце, пойдём в парк.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Si sale el sol, iremos al parque.",
+      "tokens": [
+        "Si",
+        "sale",
+        "el",
+        "sol,",
+        "iremos",
+        "al",
+        "parque."
+      ],
+      "character": "miko",
+      "explanation": "Si sale el sol, iremos al parque. — Если выйдет солнце, пойдём в парк."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-49-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Если будет дождь, останемся дома.»?",
+      "answers": [
+        "Si llueve, vamos a quedarnos en casa."
+      ],
+      "explanation": "Si llueve, vamos a quedarnos en casa. — Если будет дождь, останемся дома.",
+      "wordIds": [
+        "es:v13:49:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Si sale el sol, iremos al parque.",
+        "Podemos decidir después de comer.",
+        "Si llueve, vamos a quedarnos en casa."
+      ],
+      "hint": "Si llueve, vamos a quedarnos en casa. — Если будет дождь, останемся дома."
+    },
+    {
+      "id": "es-a1-49-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Если выйдет солнце, пойдём в парк.",
+      "answers": [
+        "Si sale el sol, iremos al parque."
+      ],
+      "explanation": "В реальном условии после si ставят настоящее: si llueve. Последствие можно выразить через ir a.",
+      "wordIds": [
+        "es:v13:49:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Si",
+        "sale",
+        "el",
+        "sol,",
+        "iremos",
+        "al",
+        "parque."
+      ],
+      "hint": "Si sale el sol, iremos al parque. — Если выйдет солнце, пойдём в парк."
+    },
+    {
+      "id": "es-a1-49-e03",
+      "type": "dialogue",
+      "prompt": "При каком условии пойдут в парк?",
+      "answers": [
+        "Если выйдет солнце."
+      ],
+      "explanation": "В диалоге: ¿Vamos al parque esta tarde? / Sí, si sale el sol. Si llueve, nos quedamos en casa. Поэтому: Если выйдет солнце.",
+      "wordIds": [
+        "es:v13:49:p0",
+        "es:v13:49:p1",
+        "es:v13:49:p2",
+        "es:v13:49:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Vamos al parque esta tarde?\nМико: Sí, si sale el sol. Si llueve, nos quedamos en casa.",
+      "options": [
+        "Если начнётся дождь.",
+        "Если закроется кафе.",
+        "Если выйдет солнце."
+      ]
+    },
+    {
+      "id": "es-a1-49-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Возьми зонт на всякий случай."
+      ],
+      "explanation": "Lleva un paraguas por si acaso. — Возьми зонт на всякий случай.",
+      "wordIds": [
+        "es:v13:49:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Lleva un paraguas por si acaso.",
+      "options": [
+        "Если будет дождь, останемся дома.",
+        "Возьми зонт на всякий случай.",
+        "Если выйдет солнце, пойдём в парк."
+      ],
+      "hint": "Lleva un paraguas por si acaso. — Возьми зонт на всякий случай."
+    },
+    {
+      "id": "es-a1-49-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "es:v13:49:p0",
+        "es:v13:49:p1",
+        "es:v13:49:p2",
+        "es:v13:49:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "es:v13:49:p0",
+          "en": "Si llueve, vamos a quedarnos en casa.",
+          "ru": "Если будет дождь, останемся дома."
+        },
+        {
+          "id": "es:v13:49:p1",
+          "en": "Si sale el sol, iremos al parque.",
+          "ru": "Если выйдет солнце, пойдём в парк."
+        },
+        {
+          "id": "es:v13:49:p2",
+          "en": "Lleva un paraguas por si acaso.",
+          "ru": "Возьми зонт на всякий случай."
+        },
+        {
+          "id": "es:v13:49:p3",
+          "en": "Podemos decidir después de comer.",
+          "ru": "Можем решить после обеда."
+        }
+      ]
+    },
+    {
+      "id": "es-a1-49-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Si lloverá, nos quedamos en casa.",
+      "answers": [
+        "Si llueve, nos quedamos en casa."
+      ],
+      "explanation": "После si в таком условии нужна форма настоящего llueve.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Si lloverá, nos quedamos en casa.",
+        "Si llueve, nos quedamos en casa."
+      ],
+      "hint": "В реальном условии после si ставят настоящее: si llueve. Последствие можно выразить через ir a."
+    },
+    {
+      "id": "es-a1-49-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Можем решить после обеда.». Можно написать вместо микрофона.",
+      "answers": [
+        "Podemos decidir después de comer."
+      ],
+      "explanation": "Podemos decidir después de comer. — Можем решить после обеда.",
+      "wordIds": [
+        "es:v13:49:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Podemos decidir después de comer.",
+      "recall": {
+        "phrase": "Podemos decidir después de comer.",
+        "meaning": "Можем решить после обеда."
+      }
+    },
+    {
+      "id": "es-a1-49-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Если будет дождь, останемся дома.",
+      "answers": [
+        "Si llueve, vamos a quedarnos en casa."
+      ],
+      "explanation": "В реальном условии после si ставят настоящее: si llueve. Последствие можно выразить через ir a.",
+      "wordIds": [
+        "es:v13:49:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Si llueve, vamos a quedarnos en casa.",
+        "meaning": "Если будет дождь, останемся дома."
+      }
+    },
+    {
+      "id": "es-a1-49-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можешь подождать меня у входа?",
+      "answers": [
+        "¿Puedes esperarme en la entrada?"
+      ],
+      "explanation": "¿Puedes esperarme en la entrada? — Можешь подождать меня у входа?",
+      "wordIds": [
+        "es:v13:48:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "He perdido el autobús.",
+        "Llego dentro de diez minutos.",
+        "¿Puedes esperarme en la entrada?",
+        "Si llegas antes, entra sin mí."
+      ]
+    }
+  ]
+}

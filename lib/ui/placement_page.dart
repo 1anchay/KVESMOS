@@ -211,6 +211,7 @@ class _PlacementPageState extends ConsumerState<PlacementPage> {
                     for (final (index, token)
                         in tokens.indexed.toList().reversed)
                       OutlinedButton(
+                        key: ValueKey('placement-token-$index'),
                         onPressed: busy || selected.contains(index)
                             ? null
                             : () => setState(() => selected.add(index)),

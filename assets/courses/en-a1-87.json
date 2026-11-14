@@ -1,0 +1,292 @@
+{
+  "id": "en-a1-87",
+  "title": "Как давно вы здесь",
+  "topic": "Опыт и уточнения",
+  "order": 86,
+  "objective": "Различить длительность и дату начала работы.",
+  "guide": "For отвечает на «как долго?», since — «с какого момента?». Have worked связывает период с настоящим.",
+  "vocabulary": [
+    {
+      "id": "en:v13:87:p0",
+      "en": "I've worked here for six months.",
+      "ru": "Я работаю здесь полгода."
+    },
+    {
+      "id": "en:v13:87:p1",
+      "en": "I've known Lena since January.",
+      "ru": "Я знаю Лену с января."
+    },
+    {
+      "id": "en:v13:87:p2",
+      "en": "She joined the team last summer.",
+      "ru": "Она пришла в команду прошлым летом."
+    },
+    {
+      "id": "en:v13:87:p3",
+      "en": "We still work on the same project.",
+      "ru": "Мы всё ещё работаем над одним проектом."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Как давно вы здесь",
+      "phrase": "I've worked here for six months.",
+      "translation": "Я работаю здесь полгода.",
+      "explanation": "For отвечает на «как долго?», since — «с какого момента?». Have worked связывает период с настоящим."
+    },
+    {
+      "character": "miko",
+      "title": "Как давно вы здесь",
+      "phrase": "I've known Lena since January.",
+      "translation": "Я знаю Лену с января.",
+      "explanation": "I've known Lena since January. — Я знаю Лену с января."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Как давно вы здесь",
+      "phrase": "She joined the team last summer.",
+      "translation": "Она пришла в команду прошлым летом.",
+      "explanation": "She joined the team last summer. — Она пришла в команду прошлым летом."
+    },
+    {
+      "character": "orbi",
+      "title": "Как давно вы здесь",
+      "phrase": "We still work on the same project.",
+      "translation": "Мы всё ещё работаем над одним проектом.",
+      "explanation": "We still work on the same project. — Мы всё ещё работаем над одним проектом."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I've worked here for six months.",
+      "translation": "Я работаю здесь полгода.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я работаю здесь полгода.",
+      "options": [
+        "Она пришла в команду прошлым летом.",
+        "Я работаю здесь полгода.",
+        "Мы всё ещё работаем над одним проектом."
+      ],
+      "explanation": "For отвечает на «как долго?», since — «с какого момента?». Have worked связывает период с настоящим."
+    },
+    {
+      "id": "apply",
+      "phrase": "I've known Lena since January.",
+      "translation": "Я знаю Лену с января.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I've known Lena since January.",
+      "tokens": [
+        "I've",
+        "known",
+        "Lena",
+        "since",
+        "January."
+      ],
+      "character": "miko",
+      "explanation": "I've known Lena since January. — Я знаю Лену с января."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-87-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Не могли бы вы приложить копию чека?",
+      "answers": [
+        "Could you attach a copy of your receipt?"
+      ],
+      "explanation": "Could you attach a copy of your receipt? — Не могли бы вы приложить копию чека?",
+      "wordIds": [
+        "en:v13:86:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "I've received your application.",
+        "I'll check the details this afternoon.",
+        "Could you attach a copy of your receipt?",
+        "I'll let you know when everything is ready."
+      ]
+    },
+    {
+      "id": "en-a1-87-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Я работаю здесь полгода.»?",
+      "answers": [
+        "I've worked here for six months."
+      ],
+      "explanation": "I've worked here for six months. — Я работаю здесь полгода.",
+      "wordIds": [
+        "en:v13:87:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I've known Lena since January.",
+        "We still work on the same project.",
+        "I've worked here for six months."
+      ],
+      "hint": "I've worked here for six months. — Я работаю здесь полгода."
+    },
+    {
+      "id": "en-a1-87-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Я знаю Лену с января.",
+      "answers": [
+        "I've known Lena since January."
+      ],
+      "explanation": "For отвечает на «как долго?», since — «с какого момента?». Have worked связывает период с настоящим.",
+      "wordIds": [
+        "en:v13:87:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I've",
+        "known",
+        "Lena",
+        "since",
+        "January."
+      ],
+      "hint": "I've known Lena since January. — Я знаю Лену с января."
+    },
+    {
+      "id": "en-a1-87-e04",
+      "type": "dialogue",
+      "prompt": "Как долго работает первый человек?",
+      "answers": [
+        "Полгода."
+      ],
+      "explanation": "В диалоге: How long have you worked here? / For six months. Lena has been here since last summer. Поэтому: Полгода.",
+      "wordIds": [
+        "en:v13:87:p0",
+        "en:v13:87:p1",
+        "en:v13:87:p2",
+        "en:v13:87:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: How long have you worked here?\nМико: For six months. Lena has been here since last summer.",
+      "options": [
+        "С прошлого лета.",
+        "С января.",
+        "Полгода."
+      ]
+    },
+    {
+      "id": "en-a1-87-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Она пришла в команду прошлым летом."
+      ],
+      "explanation": "She joined the team last summer. — Она пришла в команду прошлым летом.",
+      "wordIds": [
+        "en:v13:87:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "She joined the team last summer.",
+      "options": [
+        "Я работаю здесь полгода.",
+        "Она пришла в команду прошлым летом.",
+        "Я знаю Лену с января."
+      ],
+      "hint": "She joined the team last summer. — Она пришла в команду прошлым летом."
+    },
+    {
+      "id": "en-a1-87-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:87:p0",
+        "en:v13:87:p1",
+        "en:v13:87:p2",
+        "en:v13:87:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:87:p0",
+          "en": "I've worked here for six months.",
+          "ru": "Я работаю здесь полгода."
+        },
+        {
+          "id": "en:v13:87:p1",
+          "en": "I've known Lena since January.",
+          "ru": "Я знаю Лену с января."
+        },
+        {
+          "id": "en:v13:87:p2",
+          "en": "She joined the team last summer.",
+          "ru": "Она пришла в команду прошлым летом."
+        },
+        {
+          "id": "en:v13:87:p3",
+          "en": "We still work on the same project.",
+          "ru": "Мы всё ещё работаем над одним проектом."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-87-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I've worked here since six months.",
+      "answers": [
+        "I've worked here for six months."
+      ],
+      "explanation": "Six months — период, поэтому for.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I've worked here since six months.",
+        "I've worked here for six months."
+      ],
+      "hint": "For отвечает на «как долго?», since — «с какого момента?». Have worked связывает период с настоящим."
+    },
+    {
+      "id": "en-a1-87-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мы всё ещё работаем над одним проектом.». Можно написать вместо микрофона.",
+      "answers": [
+        "We still work on the same project."
+      ],
+      "explanation": "We still work on the same project. — Мы всё ещё работаем над одним проектом.",
+      "wordIds": [
+        "en:v13:87:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "We still work on the same project.",
+      "recall": {
+        "phrase": "We still work on the same project.",
+        "meaning": "Мы всё ещё работаем над одним проектом."
+      }
+    },
+    {
+      "id": "en-a1-87-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я работаю здесь полгода.",
+      "answers": [
+        "I've worked here for six months."
+      ],
+      "explanation": "For отвечает на «как долго?», since — «с какого момента?». Have worked связывает период с настоящим.",
+      "wordIds": [
+        "en:v13:87:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I've worked here for six months.",
+        "meaning": "Я работаю здесь полгода."
+      }
+    }
+  ]
+}

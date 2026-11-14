@@ -1,0 +1,255 @@
+{
+  "id": "es-a1-50",
+  "title": "Решить до пятницы",
+  "topic": "Условия и сроки",
+  "order": 49,
+  "objective": "Уточнить срок и время доступности.",
+  "guide": "Antes de выражает крайний срок. Hasta описывает продолжительность до обозначенной границы.",
+  "vocabulary": [
+    {
+      "id": "es:v13:50:p0",
+      "en": "Necesito una respuesta antes del viernes.",
+      "ru": "Мне нужен ответ до пятницы."
+    },
+    {
+      "id": "es:v13:50:p1",
+      "en": "La oficina abre hasta las seis.",
+      "ru": "Офис открыт до шести."
+    },
+    {
+      "id": "es:v13:50:p2",
+      "en": "Te confirmo la hora esta tarde.",
+      "ru": "Подтвержу время сегодня днём."
+    },
+    {
+      "id": "es:v13:50:p3",
+      "en": "No hace falta llamar hoy.",
+      "ru": "Сегодня звонить необязательно."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Решить до пятницы",
+      "phrase": "Necesito una respuesta antes del viernes.",
+      "translation": "Мне нужен ответ до пятницы.",
+      "explanation": "Antes de выражает крайний срок. Hasta описывает продолжительность до обозначенной границы."
+    },
+    {
+      "character": "miko",
+      "title": "Решить до пятницы",
+      "phrase": "La oficina abre hasta las seis.",
+      "translation": "Офис открыт до шести.",
+      "explanation": "La oficina abre hasta las seis. — Офис открыт до шести."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Решить до пятницы",
+      "phrase": "Te confirmo la hora esta tarde.",
+      "translation": "Подтвержу время сегодня днём.",
+      "explanation": "Te confirmo la hora esta tarde. — Подтвержу время сегодня днём."
+    },
+    {
+      "character": "orbi",
+      "title": "Решить до пятницы",
+      "phrase": "No hace falta llamar hoy.",
+      "translation": "Сегодня звонить необязательно.",
+      "explanation": "No hace falta llamar hoy. — Сегодня звонить необязательно."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Necesito una respuesta antes del viernes.",
+      "translation": "Мне нужен ответ до пятницы.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мне нужен ответ до пятницы.",
+      "options": [
+        "Подтвержу время сегодня днём.",
+        "Мне нужен ответ до пятницы.",
+        "Сегодня звонить необязательно."
+      ],
+      "explanation": "Antes de выражает крайний срок. Hasta описывает продолжительность до обозначенной границы."
+    },
+    {
+      "id": "apply",
+      "phrase": "La oficina abre hasta las seis.",
+      "translation": "Офис открыт до шести.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "La oficina abre hasta las seis.",
+      "tokens": [
+        "La",
+        "oficina",
+        "abre",
+        "hasta",
+        "las",
+        "seis."
+      ],
+      "character": "miko",
+      "explanation": "La oficina abre hasta las seis. — Офис открыт до шести."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "es-a1-50-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Подтвержу время сегодня днём."
+      ],
+      "explanation": "Te confirmo la hora esta tarde. — Подтвержу время сегодня днём.",
+      "wordIds": [
+        "es:v13:50:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Te confirmo la hora esta tarde.",
+      "options": [
+        "Мне нужен ответ до пятницы.",
+        "Подтвержу время сегодня днём.",
+        "Офис открыт до шести."
+      ],
+      "hint": "Te confirmo la hora esta tarde. — Подтвержу время сегодня днём."
+    },
+    {
+      "id": "es-a1-50-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Офис открыт до шести.",
+      "answers": [
+        "La oficina abre hasta las seis."
+      ],
+      "explanation": "Antes de выражает крайний срок. Hasta описывает продолжительность до обозначенной границы.",
+      "wordIds": [
+        "es:v13:50:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "La",
+        "oficina",
+        "abre",
+        "hasta",
+        "las",
+        "seis."
+      ],
+      "hint": "La oficina abre hasta las seis. — Офис открыт до шести."
+    },
+    {
+      "id": "es-a1-50-e03",
+      "type": "dialogue",
+      "prompt": "Когда нужен ответ?",
+      "answers": [
+        "До пятницы."
+      ],
+      "explanation": "В диалоге: ¿Puedo responder el viernes? / Mejor antes del viernes. El viernes por la mañana ya enviamos la lista. Поэтому: До пятницы.",
+      "wordIds": [
+        "es:v13:50:p0",
+        "es:v13:50:p1",
+        "es:v13:50:p2",
+        "es:v13:50:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: ¿Puedo responder el viernes?\nМико: Mejor antes del viernes. El viernes por la mañana ya enviamos la lista.",
+      "options": [
+        "В пятницу вечером.",
+        "На следующей неделе.",
+        "До пятницы."
+      ]
+    },
+    {
+      "id": "es-a1-50-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Мне нужен ответ до пятницы.»?",
+      "answers": [
+        "Necesito una respuesta antes del viernes."
+      ],
+      "explanation": "Necesito una respuesta antes del viernes. — Мне нужен ответ до пятницы.",
+      "wordIds": [
+        "es:v13:50:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "La oficina abre hasta las seis.",
+        "No hace falta llamar hoy.",
+        "Necesito una respuesta antes del viernes."
+      ],
+      "hint": "Necesito una respuesta antes del viernes. — Мне нужен ответ до пятницы."
+    },
+    {
+      "id": "es-a1-50-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Necesito una respuesta antes el viernes.",
+      "answers": [
+        "Necesito una respuesta antes del viernes."
+      ],
+      "explanation": "Antes требует de, а de + el сокращается до del.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Necesito una respuesta antes el viernes.",
+        "Necesito una respuesta antes del viernes."
+      ],
+      "hint": "Antes de выражает крайний срок. Hasta описывает продолжительность до обозначенной границы."
+    },
+    {
+      "id": "es-a1-50-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Сегодня звонить необязательно.». Можно написать вместо микрофона.",
+      "answers": [
+        "No hace falta llamar hoy."
+      ],
+      "explanation": "No hace falta llamar hoy. — Сегодня звонить необязательно.",
+      "wordIds": [
+        "es:v13:50:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "No hace falta llamar hoy.",
+      "recall": {
+        "phrase": "No hace falta llamar hoy.",
+        "meaning": "Сегодня звонить необязательно."
+      }
+    },
+    {
+      "id": "es-a1-50-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мне нужен ответ до пятницы.",
+      "answers": [
+        "Necesito una respuesta antes del viernes."
+      ],
+      "explanation": "Antes de выражает крайний срок. Hasta описывает продолжительность до обозначенной границы.",
+      "wordIds": [
+        "es:v13:50:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Necesito una respuesta antes del viernes.",
+        "meaning": "Мне нужен ответ до пятницы."
+      }
+    },
+    {
+      "id": "es-a1-50-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Можем решить после обеда.",
+      "answers": [
+        "Podemos decidir después de comer."
+      ],
+      "explanation": "Podemos decidir después de comer. — Можем решить после обеда.",
+      "wordIds": [
+        "es:v13:49:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Si llueve, vamos a quedarnos en casa.",
+        "Si sale el sol, iremos al parque.",
+        "Lleva un paraguas por si acaso.",
+        "Podemos decidir después de comer."
+      ]
+    }
+  ]
+}

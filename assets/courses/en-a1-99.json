@@ -1,0 +1,294 @@
+{
+  "id": "en-a1-99",
+  "title": "Выходные пошли иначе",
+  "topic": "Рассказы и обновления",
+  "order": 98,
+  "objective": "Связать план, неожиданное событие и новое решение.",
+  "guide": "Was going to передаёт прежний план. Ended up + -ing говорит, чем всё закончилось.",
+  "vocabulary": [
+    {
+      "id": "en:v13:99:p0",
+      "en": "We were going to cycle to the coast.",
+      "ru": "Мы собирались поехать к побережью на велосипедах."
+    },
+    {
+      "id": "en:v13:99:p1",
+      "en": "It started raining before we left.",
+      "ru": "Дождь начался до того, как мы вышли."
+    },
+    {
+      "id": "en:v13:99:p2",
+      "en": "We ended up visiting the museum instead.",
+      "ru": "В итоге мы сходили в музей."
+    },
+    {
+      "id": "en:v13:99:p3",
+      "en": "It turned out to be a lovely afternoon.",
+      "ru": "В итоге день оказался чудесным."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Выходные пошли иначе",
+      "phrase": "We were going to cycle to the coast.",
+      "translation": "Мы собирались поехать к побережью на велосипедах.",
+      "explanation": "Was going to передаёт прежний план. Ended up + -ing говорит, чем всё закончилось."
+    },
+    {
+      "character": "miko",
+      "title": "Выходные пошли иначе",
+      "phrase": "It started raining before we left.",
+      "translation": "Дождь начался до того, как мы вышли.",
+      "explanation": "It started raining before we left. — Дождь начался до того, как мы вышли."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Выходные пошли иначе",
+      "phrase": "We ended up visiting the museum instead.",
+      "translation": "В итоге мы сходили в музей.",
+      "explanation": "We ended up visiting the museum instead. — В итоге мы сходили в музей."
+    },
+    {
+      "character": "orbi",
+      "title": "Выходные пошли иначе",
+      "phrase": "It turned out to be a lovely afternoon.",
+      "translation": "В итоге день оказался чудесным.",
+      "explanation": "It turned out to be a lovely afternoon. — В итоге день оказался чудесным."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "We were going to cycle to the coast.",
+      "translation": "Мы собирались поехать к побережью на велосипедах.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Мы собирались поехать к побережью на велосипедах.",
+      "options": [
+        "В итоге мы сходили в музей.",
+        "Мы собирались поехать к побережью на велосипедах.",
+        "В итоге день оказался чудесным."
+      ],
+      "explanation": "Was going to передаёт прежний план. Ended up + -ing говорит, чем всё закончилось."
+    },
+    {
+      "id": "apply",
+      "phrase": "It started raining before we left.",
+      "translation": "Дождь начался до того, как мы вышли.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "It started raining before we left.",
+      "tokens": [
+        "It",
+        "started",
+        "raining",
+        "before",
+        "we",
+        "left."
+      ],
+      "character": "miko",
+      "explanation": "It started raining before we left. — Дождь начался до того, как мы вышли."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-99-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Справочная стойка продолжит работать.",
+      "answers": [
+        "The information desk will remain open."
+      ],
+      "explanation": "The information desk will remain open. — Справочная стойка продолжит работать.",
+      "wordIds": [
+        "en:v13:98:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Разогреваемся",
+      "options": [
+        "The main entrance will be closed from Monday.",
+        "Please use the side entrance instead.",
+        "The information desk will remain open.",
+        "There will be signs along the path."
+      ]
+    },
+    {
+      "id": "en-a1-99-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Мы собирались поехать к побережью на велосипедах.»?",
+      "answers": [
+        "We were going to cycle to the coast."
+      ],
+      "explanation": "We were going to cycle to the coast. — Мы собирались поехать к побережью на велосипедах.",
+      "wordIds": [
+        "en:v13:99:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "It started raining before we left.",
+        "It turned out to be a lovely afternoon.",
+        "We were going to cycle to the coast."
+      ],
+      "hint": "We were going to cycle to the coast. — Мы собирались поехать к побережью на велосипедах."
+    },
+    {
+      "id": "en-a1-99-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Дождь начался до того, как мы вышли.",
+      "answers": [
+        "It started raining before we left."
+      ],
+      "explanation": "Was going to передаёт прежний план. Ended up + -ing говорит, чем всё закончилось.",
+      "wordIds": [
+        "en:v13:99:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "It",
+        "started",
+        "raining",
+        "before",
+        "we",
+        "left."
+      ],
+      "hint": "It started raining before we left. — Дождь начался до того, как мы вышли."
+    },
+    {
+      "id": "en-a1-99-e04",
+      "type": "dialogue",
+      "prompt": "Что сделали вместо поездки?",
+      "answers": [
+        "Посетили музей."
+      ],
+      "explanation": "В диалоге: Did you cycle to the coast? / No, it started raining, so we went to the museum instead. Поэтому: Посетили музей.",
+      "wordIds": [
+        "en:v13:99:p0",
+        "en:v13:99:p1",
+        "en:v13:99:p2",
+        "en:v13:99:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Did you cycle to the coast?\nМико: No, it started raining, so we went to the museum instead.",
+      "options": [
+        "Пошли в кино.",
+        "Поехали на побережье на поезде.",
+        "Посетили музей."
+      ]
+    },
+    {
+      "id": "en-a1-99-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "В итоге мы сходили в музей."
+      ],
+      "explanation": "We ended up visiting the museum instead. — В итоге мы сходили в музей.",
+      "wordIds": [
+        "en:v13:99:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "We ended up visiting the museum instead.",
+      "options": [
+        "Мы собирались поехать к побережью на велосипедах.",
+        "В итоге мы сходили в музей.",
+        "Дождь начался до того, как мы вышли."
+      ],
+      "hint": "We ended up visiting the museum instead. — В итоге мы сходили в музей."
+    },
+    {
+      "id": "en-a1-99-e06",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:99:p0",
+        "en:v13:99:p1",
+        "en:v13:99:p2",
+        "en:v13:99:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:99:p0",
+          "en": "We were going to cycle to the coast.",
+          "ru": "Мы собирались поехать к побережью на велосипедах."
+        },
+        {
+          "id": "en:v13:99:p1",
+          "en": "It started raining before we left.",
+          "ru": "Дождь начался до того, как мы вышли."
+        },
+        {
+          "id": "en:v13:99:p2",
+          "en": "We ended up visiting the museum instead.",
+          "ru": "В итоге мы сходили в музей."
+        },
+        {
+          "id": "en:v13:99:p3",
+          "en": "It turned out to be a lovely afternoon.",
+          "ru": "В итоге день оказался чудесным."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-99-e07",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: We ended up to visit the museum.",
+      "answers": [
+        "We ended up visiting the museum."
+      ],
+      "explanation": "После ended up нужен visiting.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "We ended up to visit the museum.",
+        "We ended up visiting the museum."
+      ],
+      "hint": "Was going to передаёт прежний план. Ended up + -ing говорит, чем всё закончилось."
+    },
+    {
+      "id": "en-a1-99-e08",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «В итоге день оказался чудесным.». Можно написать вместо микрофона.",
+      "answers": [
+        "It turned out to be a lovely afternoon."
+      ],
+      "explanation": "It turned out to be a lovely afternoon. — В итоге день оказался чудесным.",
+      "wordIds": [
+        "en:v13:99:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "It turned out to be a lovely afternoon.",
+      "recall": {
+        "phrase": "It turned out to be a lovely afternoon.",
+        "meaning": "В итоге день оказался чудесным."
+      }
+    },
+    {
+      "id": "en-a1-99-e09",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Мы собирались поехать к побережью на велосипедах.",
+      "answers": [
+        "We were going to cycle to the coast."
+      ],
+      "explanation": "Was going to передаёт прежний план. Ended up + -ing говорит, чем всё закончилось.",
+      "wordIds": [
+        "en:v13:99:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "We were going to cycle to the coast.",
+        "meaning": "Мы собирались поехать к побережью на велосипедах."
+      }
+    }
+  ]
+}

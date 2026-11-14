@@ -1,0 +1,255 @@
+{
+  "id": "en-a1-76",
+  "title": "Короткое уточнение",
+  "topic": "Сообщения и уточнения",
+  "order": 75,
+  "objective": "Переспросить и подтвердить услышанные детали.",
+  "guide": "Do you mean…? проверяет интерпретацию. Is that right? просит подтвердить её.",
+  "vocabulary": [
+    {
+      "id": "en:v13:76:p0",
+      "en": "Do you mean next Tuesday?",
+      "ru": "Ты имеешь в виду следующий вторник?"
+    },
+    {
+      "id": "en:v13:76:p1",
+      "en": "Let me check the date first.",
+      "ru": "Дай сначала проверить дату."
+    },
+    {
+      "id": "en:v13:76:p2",
+      "en": "So we meet online, is that right?",
+      "ru": "Значит, встречаемся онлайн, верно?"
+    },
+    {
+      "id": "en:v13:76:p3",
+      "en": "Yes, I'll send you the link.",
+      "ru": "Да, я пришлю тебе ссылку."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Короткое уточнение",
+      "phrase": "Do you mean next Tuesday?",
+      "translation": "Ты имеешь в виду следующий вторник?",
+      "explanation": "Do you mean…? проверяет интерпретацию. Is that right? просит подтвердить её."
+    },
+    {
+      "character": "miko",
+      "title": "Короткое уточнение",
+      "phrase": "Let me check the date first.",
+      "translation": "Дай сначала проверить дату.",
+      "explanation": "Let me check the date first. — Дай сначала проверить дату."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Короткое уточнение",
+      "phrase": "So we meet online, is that right?",
+      "translation": "Значит, встречаемся онлайн, верно?",
+      "explanation": "So we meet online, is that right? — Значит, встречаемся онлайн, верно?"
+    },
+    {
+      "character": "orbi",
+      "title": "Короткое уточнение",
+      "phrase": "Yes, I'll send you the link.",
+      "translation": "Да, я пришлю тебе ссылку.",
+      "explanation": "Yes, I'll send you the link. — Да, я пришлю тебе ссылку."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Do you mean next Tuesday?",
+      "translation": "Ты имеешь в виду следующий вторник?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Ты имеешь в виду следующий вторник?",
+      "options": [
+        "Значит, встречаемся онлайн, верно?",
+        "Ты имеешь в виду следующий вторник?",
+        "Да, я пришлю тебе ссылку."
+      ],
+      "explanation": "Do you mean…? проверяет интерпретацию. Is that right? просит подтвердить её."
+    },
+    {
+      "id": "apply",
+      "phrase": "Let me check the date first.",
+      "translation": "Дай сначала проверить дату.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Let me check the date first.",
+      "tokens": [
+        "Let",
+        "me",
+        "check",
+        "the",
+        "date",
+        "first."
+      ],
+      "character": "miko",
+      "explanation": "Let me check the date first. — Дай сначала проверить дату."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-76-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Ты имеешь в виду следующий вторник?»?",
+      "answers": [
+        "Do you mean next Tuesday?"
+      ],
+      "explanation": "Do you mean next Tuesday? — Ты имеешь в виду следующий вторник?",
+      "wordIds": [
+        "en:v13:76:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Let me check the date first.",
+        "Yes, I'll send you the link.",
+        "Do you mean next Tuesday?"
+      ],
+      "hint": "Do you mean next Tuesday? — Ты имеешь в виду следующий вторник?"
+    },
+    {
+      "id": "en-a1-76-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Дай сначала проверить дату.",
+      "answers": [
+        "Let me check the date first."
+      ],
+      "explanation": "Do you mean…? проверяет интерпретацию. Is that right? просит подтвердить её.",
+      "wordIds": [
+        "en:v13:76:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Let",
+        "me",
+        "check",
+        "the",
+        "date",
+        "first."
+      ],
+      "hint": "Let me check the date first. — Дай сначала проверить дату."
+    },
+    {
+      "id": "en-a1-76-e03",
+      "type": "dialogue",
+      "prompt": "На какой вторник договорились?",
+      "answers": [
+        "На ближайший вторник."
+      ],
+      "explanation": "В диалоге: Do you mean next Tuesday? / No, this Tuesday. I'll send the link today. Поэтому: На ближайший вторник.",
+      "wordIds": [
+        "en:v13:76:p0",
+        "en:v13:76:p1",
+        "en:v13:76:p2",
+        "en:v13:76:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Do you mean next Tuesday?\nМико: No, this Tuesday. I'll send the link today.",
+      "options": [
+        "На следующий после ближайшего.",
+        "День ещё неизвестен.",
+        "На ближайший вторник."
+      ]
+    },
+    {
+      "id": "en-a1-76-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Значит, встречаемся онлайн, верно?"
+      ],
+      "explanation": "So we meet online, is that right? — Значит, встречаемся онлайн, верно?",
+      "wordIds": [
+        "en:v13:76:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "So we meet online, is that right?",
+      "options": [
+        "Ты имеешь в виду следующий вторник?",
+        "Значит, встречаемся онлайн, верно?",
+        "Дай сначала проверить дату."
+      ],
+      "hint": "So we meet online, is that right? — Значит, встречаемся онлайн, верно?"
+    },
+    {
+      "id": "en-a1-76-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Do you means next Tuesday?",
+      "answers": [
+        "Do you mean next Tuesday?"
+      ],
+      "explanation": "После do идёт исходная форма mean.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Do you means next Tuesday?",
+        "Do you mean next Tuesday?"
+      ],
+      "hint": "Do you mean…? проверяет интерпретацию. Is that right? просит подтвердить её."
+    },
+    {
+      "id": "en-a1-76-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Да, я пришлю тебе ссылку.». Можно написать вместо микрофона.",
+      "answers": [
+        "Yes, I'll send you the link."
+      ],
+      "explanation": "Yes, I'll send you the link. — Да, я пришлю тебе ссылку.",
+      "wordIds": [
+        "en:v13:76:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Yes, I'll send you the link.",
+      "recall": {
+        "phrase": "Yes, I'll send you the link.",
+        "meaning": "Да, я пришлю тебе ссылку."
+      }
+    },
+    {
+      "id": "en-a1-76-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Ты имеешь в виду следующий вторник?",
+      "answers": [
+        "Do you mean next Tuesday?"
+      ],
+      "explanation": "Do you mean…? проверяет интерпретацию. Is that right? просит подтвердить её.",
+      "wordIds": [
+        "en:v13:76:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Do you mean next Tuesday?",
+        "meaning": "Ты имеешь в виду следующий вторник?"
+      }
+    },
+    {
+      "id": "en-a1-76-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Я оставил её номер на твоём столе.",
+      "answers": [
+        "I've left her number on your desk."
+      ],
+      "explanation": "I've left her number on your desk. — Я оставил её номер на твоём столе.",
+      "wordIds": [
+        "en:v13:75:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Maya called while you were out.",
+        "She asked you to call her back.",
+        "She'll be free after three.",
+        "I've left her number on your desk."
+      ]
+    }
+  ]
+}

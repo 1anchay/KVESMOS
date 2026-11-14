@@ -278,7 +278,9 @@
         "Je suis allé au marché ce matin."
       ],
       "explanation": "Je suis allé au marché ce matin. — Я ходил на рынок сегодня утром.",
-      "wordIds": [],
+      "wordIds": [
+        "fr:v13:36:p0"
+      ],
       "character": "zig_quartz",
       "phase": "Применяем",
       "options": [

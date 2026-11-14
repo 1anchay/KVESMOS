@@ -237,7 +237,9 @@
         "Sinon, on mangera à la maison."
       ],
       "explanation": "Sinon, on mangera à la maison. — Иначе поедим дома.",
-      "wordIds": [],
+      "wordIds": [
+        "fr:v13:39:p3"
+      ],
       "character": "miko",
       "phase": "Применяем",
       "options": [

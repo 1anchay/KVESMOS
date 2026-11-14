@@ -1,0 +1,261 @@
+{
+  "id": "en-a1-92",
+  "title": "Просьба в письме",
+  "topic": "Цель и переписка",
+  "order": 91,
+  "objective": "Задать вежливый косвенный вопрос о доставке.",
+  "guide": "Could you tell me when…? требует обычного порядка слов после when: the parcel will arrive.",
+  "vocabulary": [
+    {
+      "id": "en:v13:92:p0",
+      "en": "Could you tell me when the parcel will arrive?",
+      "ru": "Не могли бы вы сказать, когда прибудет посылка?"
+    },
+    {
+      "id": "en:v13:92:p1",
+      "en": "I'd like to know where I can collect it.",
+      "ru": "Я хотел бы узнать, где её можно забрать."
+    },
+    {
+      "id": "en:v13:92:p2",
+      "en": "The address on the label is correct.",
+      "ru": "На наклейке правильный адрес."
+    },
+    {
+      "id": "en:v13:92:p3",
+      "en": "Thank you for looking into this.",
+      "ru": "Спасибо, что разбираетесь с этим."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Просьба в письме",
+      "phrase": "Could you tell me when the parcel will arrive?",
+      "translation": "Не могли бы вы сказать, когда прибудет посылка?",
+      "explanation": "Could you tell me when…? требует обычного порядка слов после when: the parcel will arrive."
+    },
+    {
+      "character": "miko",
+      "title": "Просьба в письме",
+      "phrase": "I'd like to know where I can collect it.",
+      "translation": "Я хотел бы узнать, где её можно забрать.",
+      "explanation": "I'd like to know where I can collect it. — Я хотел бы узнать, где её можно забрать."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Просьба в письме",
+      "phrase": "The address on the label is correct.",
+      "translation": "На наклейке правильный адрес.",
+      "explanation": "The address on the label is correct. — На наклейке правильный адрес."
+    },
+    {
+      "character": "orbi",
+      "title": "Просьба в письме",
+      "phrase": "Thank you for looking into this.",
+      "translation": "Спасибо, что разбираетесь с этим.",
+      "explanation": "Thank you for looking into this. — Спасибо, что разбираетесь с этим."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Could you tell me when the parcel will arrive?",
+      "translation": "Не могли бы вы сказать, когда прибудет посылка?",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Не могли бы вы сказать, когда прибудет посылка?",
+      "options": [
+        "На наклейке правильный адрес.",
+        "Не могли бы вы сказать, когда прибудет посылка?",
+        "Спасибо, что разбираетесь с этим."
+      ],
+      "explanation": "Could you tell me when…? требует обычного порядка слов после when: the parcel will arrive."
+    },
+    {
+      "id": "apply",
+      "phrase": "I'd like to know where I can collect it.",
+      "translation": "Я хотел бы узнать, где её можно забрать.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I'd like to know where I can collect it.",
+      "tokens": [
+        "I'd",
+        "like",
+        "to",
+        "know",
+        "where",
+        "I",
+        "can",
+        "collect",
+        "it."
+      ],
+      "character": "miko",
+      "explanation": "I'd like to know where I can collect it. — Я хотел бы узнать, где её можно забрать."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-92-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "На наклейке правильный адрес."
+      ],
+      "explanation": "The address on the label is correct. — На наклейке правильный адрес.",
+      "wordIds": [
+        "en:v13:92:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "The address on the label is correct.",
+      "options": [
+        "Не могли бы вы сказать, когда прибудет посылка?",
+        "На наклейке правильный адрес.",
+        "Я хотел бы узнать, где её можно забрать."
+      ],
+      "hint": "The address on the label is correct. — На наклейке правильный адрес."
+    },
+    {
+      "id": "en-a1-92-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я хотел бы узнать, где её можно забрать.",
+      "answers": [
+        "I'd like to know where I can collect it."
+      ],
+      "explanation": "Could you tell me when…? требует обычного порядка слов после when: the parcel will arrive.",
+      "wordIds": [
+        "en:v13:92:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I'd",
+        "like",
+        "to",
+        "know",
+        "where",
+        "I",
+        "can",
+        "collect",
+        "it."
+      ],
+      "hint": "I'd like to know where I can collect it. — Я хотел бы узнать, где её можно забрать."
+    },
+    {
+      "id": "en-a1-92-e03",
+      "type": "dialogue",
+      "prompt": "Где забрать посылку?",
+      "answers": [
+        "На почте возле станции."
+      ],
+      "explanation": "В диалоге: Could you tell me where I can collect it? / At the post office near the station. Поэтому: На почте возле станции.",
+      "wordIds": [
+        "en:v13:92:p0",
+        "en:v13:92:p1",
+        "en:v13:92:p2",
+        "en:v13:92:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Could you tell me where I can collect it?\nМико: At the post office near the station.",
+      "options": [
+        "У стойки гостиницы.",
+        "В магазине рядом с домом.",
+        "На почте возле станции."
+      ]
+    },
+    {
+      "id": "en-a1-92-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Не могли бы вы сказать, когда прибудет посылка?»?",
+      "answers": [
+        "Could you tell me when the parcel will arrive?"
+      ],
+      "explanation": "Could you tell me when the parcel will arrive? — Не могли бы вы сказать, когда прибудет посылка?",
+      "wordIds": [
+        "en:v13:92:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "I'd like to know where I can collect it.",
+        "Thank you for looking into this.",
+        "Could you tell me when the parcel will arrive?"
+      ],
+      "hint": "Could you tell me when the parcel will arrive? — Не могли бы вы сказать, когда прибудет посылка?"
+    },
+    {
+      "id": "en-a1-92-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Could you tell me where can I collect it?",
+      "answers": [
+        "Could you tell me where I can collect it?"
+      ],
+      "explanation": "В косвенном вопросе I стоит перед can.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Could you tell me where can I collect it?",
+        "Could you tell me where I can collect it?"
+      ],
+      "hint": "Could you tell me when…? требует обычного порядка слов после when: the parcel will arrive."
+    },
+    {
+      "id": "en-a1-92-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Спасибо, что разбираетесь с этим.». Можно написать вместо микрофона.",
+      "answers": [
+        "Thank you for looking into this."
+      ],
+      "explanation": "Thank you for looking into this. — Спасибо, что разбираетесь с этим.",
+      "wordIds": [
+        "en:v13:92:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Thank you for looking into this.",
+      "recall": {
+        "phrase": "Thank you for looking into this.",
+        "meaning": "Спасибо, что разбираетесь с этим."
+      }
+    },
+    {
+      "id": "en-a1-92-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Не могли бы вы сказать, когда прибудет посылка?",
+      "answers": [
+        "Could you tell me when the parcel will arrive?"
+      ],
+      "explanation": "Could you tell me when…? требует обычного порядка слов после when: the parcel will arrive.",
+      "wordIds": [
+        "en:v13:92:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Could you tell me when the parcel will arrive?",
+        "meaning": "Не могли бы вы сказать, когда прибудет посылка?"
+      }
+    },
+    {
+      "id": "en-a1-92-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Храни оба файла в одной папке.",
+      "answers": [
+        "Keep both files in the same folder."
+      ],
+      "explanation": "Keep both files in the same folder. — Храни оба файла в одной папке.",
+      "wordIds": [
+        "en:v13:91:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "I saved a copy to keep the original safe.",
+        "I'll label it so that everyone can find it.",
+        "Check the date before you send it.",
+        "Keep both files in the same folder."
+      ]
+    }
+  ]
+}

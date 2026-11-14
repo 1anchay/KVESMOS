@@ -128,7 +128,7 @@ void main() {
       await transfer.restore(file);
       expect(await target.setting('name'), 'Орбита');
       expect(await target.setting(LearningRepository.courseKey), 'ru-zh');
-      expect(await target.installed(), hasLength(236));
+      expect(await target.installed(), hasLength(300));
       for (final row in drafts.entries) {
         expect(
           (await target.session(row.key)).draft,

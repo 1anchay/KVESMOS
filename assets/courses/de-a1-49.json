@@ -1,0 +1,294 @@
+{
+  "id": "de-a1-49",
+  "title": "Запасной план",
+  "topic": "Условия и сроки",
+  "order": 48,
+  "objective": "Предложить решение с wenn и sonst.",
+  "guide": "В придаточной с wenn глагол в конце. Sonst вводит альтернативу в отдельном главном предложении.",
+  "vocabulary": [
+    {
+      "id": "de:v13:49:p0",
+      "en": "Wenn es regnet, bleiben wir drinnen.",
+      "ru": "Если будет дождь, останемся внутри."
+    },
+    {
+      "id": "de:v13:49:p1",
+      "en": "Sonst gehen wir in den Garten.",
+      "ru": "Иначе пойдём в сад."
+    },
+    {
+      "id": "de:v13:49:p2",
+      "en": "Wir können später entscheiden.",
+      "ru": "Мы можем решить позже."
+    },
+    {
+      "id": "de:v13:49:p3",
+      "en": "Bring bitte eine Jacke mit.",
+      "ru": "Возьми, пожалуйста, куртку."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Запасной план",
+      "phrase": "Wenn es regnet, bleiben wir drinnen.",
+      "translation": "Если будет дождь, останемся внутри.",
+      "explanation": "В придаточной с wenn глагол в конце. Sonst вводит альтернативу в отдельном главном предложении."
+    },
+    {
+      "character": "miko",
+      "title": "Запасной план",
+      "phrase": "Sonst gehen wir in den Garten.",
+      "translation": "Иначе пойдём в сад.",
+      "explanation": "Sonst gehen wir in den Garten. — Иначе пойдём в сад."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Запасной план",
+      "phrase": "Wir können später entscheiden.",
+      "translation": "Мы можем решить позже.",
+      "explanation": "Wir können später entscheiden. — Мы можем решить позже."
+    },
+    {
+      "character": "orbi",
+      "title": "Запасной план",
+      "phrase": "Bring bitte eine Jacke mit.",
+      "translation": "Возьми, пожалуйста, куртку.",
+      "explanation": "Bring bitte eine Jacke mit. — Возьми, пожалуйста, куртку."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Wenn es regnet, bleiben wir drinnen.",
+      "translation": "Если будет дождь, останемся внутри.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Если будет дождь, останемся внутри.",
+      "options": [
+        "Мы можем решить позже.",
+        "Если будет дождь, останемся внутри.",
+        "Возьми, пожалуйста, куртку."
+      ],
+      "explanation": "В придаточной с wenn глагол в конце. Sonst вводит альтернативу в отдельном главном предложении."
+    },
+    {
+      "id": "apply",
+      "phrase": "Sonst gehen wir in den Garten.",
+      "translation": "Иначе пойдём в сад.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Sonst gehen wir in den Garten.",
+      "tokens": [
+        "Sonst",
+        "gehen",
+        "wir",
+        "in",
+        "den",
+        "Garten."
+      ],
+      "character": "miko",
+      "explanation": "Sonst gehen wir in den Garten. — Иначе пойдём в сад."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-49-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Если будет дождь, останемся внутри.»?",
+      "answers": [
+        "Wenn es regnet, bleiben wir drinnen."
+      ],
+      "explanation": "Wenn es regnet, bleiben wir drinnen. — Если будет дождь, останемся внутри.",
+      "wordIds": [
+        "de:v13:49:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Sonst gehen wir in den Garten.",
+        "Bring bitte eine Jacke mit.",
+        "Wenn es regnet, bleiben wir drinnen."
+      ],
+      "hint": "Wenn es regnet, bleiben wir drinnen. — Если будет дождь, останемся внутри."
+    },
+    {
+      "id": "de-a1-49-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Иначе пойдём в сад.",
+      "answers": [
+        "Sonst gehen wir in den Garten."
+      ],
+      "explanation": "В придаточной с wenn глагол в конце. Sonst вводит альтернативу в отдельном главном предложении.",
+      "wordIds": [
+        "de:v13:49:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Sonst",
+        "gehen",
+        "wir",
+        "in",
+        "den",
+        "Garten."
+      ],
+      "hint": "Sonst gehen wir in den Garten. — Иначе пойдём в сад."
+    },
+    {
+      "id": "de-a1-49-e03",
+      "type": "dialogue",
+      "prompt": "Куда пойдут без дождя?",
+      "answers": [
+        "В сад."
+      ],
+      "explanation": "В диалоге: Bleiben wir im Haus? / Nur wenn es regnet. Sonst gehen wir in den Garten. Поэтому: В сад.",
+      "wordIds": [
+        "de:v13:49:p0",
+        "de:v13:49:p1",
+        "de:v13:49:p2",
+        "de:v13:49:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Bleiben wir im Haus?\nМико: Nur wenn es regnet. Sonst gehen wir in den Garten.",
+      "options": [
+        "В дом.",
+        "В магазин.",
+        "В сад."
+      ]
+    },
+    {
+      "id": "de-a1-49-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы можем решить позже."
+      ],
+      "explanation": "Wir können später entscheiden. — Мы можем решить позже.",
+      "wordIds": [
+        "de:v13:49:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Wir können später entscheiden.",
+      "options": [
+        "Если будет дождь, останемся внутри.",
+        "Мы можем решить позже.",
+        "Иначе пойдём в сад."
+      ],
+      "hint": "Wir können später entscheiden. — Мы можем решить позже."
+    },
+    {
+      "id": "de-a1-49-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "de:v13:49:p0",
+        "de:v13:49:p1",
+        "de:v13:49:p2",
+        "de:v13:49:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "de:v13:49:p0",
+          "en": "Wenn es regnet, bleiben wir drinnen.",
+          "ru": "Если будет дождь, останемся внутри."
+        },
+        {
+          "id": "de:v13:49:p1",
+          "en": "Sonst gehen wir in den Garten.",
+          "ru": "Иначе пойдём в сад."
+        },
+        {
+          "id": "de:v13:49:p2",
+          "en": "Wir können später entscheiden.",
+          "ru": "Мы можем решить позже."
+        },
+        {
+          "id": "de:v13:49:p3",
+          "en": "Bring bitte eine Jacke mit.",
+          "ru": "Возьми, пожалуйста, куртку."
+        }
+      ]
+    },
+    {
+      "id": "de-a1-49-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Wenn regnet es, bleiben wir drinnen.",
+      "answers": [
+        "Wenn es regnet, bleiben wir drinnen."
+      ],
+      "explanation": "После wenn подлежащее es стоит перед regnet.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Wenn regnet es, bleiben wir drinnen.",
+        "Wenn es regnet, bleiben wir drinnen."
+      ],
+      "hint": "В придаточной с wenn глагол в конце. Sonst вводит альтернативу в отдельном главном предложении."
+    },
+    {
+      "id": "de-a1-49-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Возьми, пожалуйста, куртку.». Можно написать вместо микрофона.",
+      "answers": [
+        "Bring bitte eine Jacke mit."
+      ],
+      "explanation": "Bring bitte eine Jacke mit. — Возьми, пожалуйста, куртку.",
+      "wordIds": [
+        "de:v13:49:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Bring bitte eine Jacke mit.",
+      "recall": {
+        "phrase": "Bring bitte eine Jacke mit.",
+        "meaning": "Возьми, пожалуйста, куртку."
+      }
+    },
+    {
+      "id": "de-a1-49-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Если будет дождь, останемся внутри.",
+      "answers": [
+        "Wenn es regnet, bleiben wir drinnen."
+      ],
+      "explanation": "В придаточной с wenn глагол в конце. Sonst вводит альтернативу в отдельном главном предложении.",
+      "wordIds": [
+        "de:v13:49:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Wenn es regnet, bleiben wir drinnen.",
+        "meaning": "Если будет дождь, останемся внутри."
+      }
+    },
+    {
+      "id": "de-a1-49-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Сейчас я обычно хожу пешком.",
+      "answers": [
+        "Heute gehe ich meistens zu Fuß."
+      ],
+      "explanation": "Heute gehe ich meistens zu Fuß. — Сейчас я обычно хожу пешком.",
+      "wordIds": [
+        "de:v13:48:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "Als ich in Köln wohnte, fuhr ich oft Rad.",
+        "Wenn es regnete, nahm ich den Bus.",
+        "Heute gehe ich meistens zu Fuß.",
+        "Damals war mein Weg kürzer."
+      ]
+    }
+  ]
+}

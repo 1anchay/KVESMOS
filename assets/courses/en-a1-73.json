@@ -1,0 +1,292 @@
+{
+  "id": "en-a1-73",
+  "title": "Кто за что отвечает",
+  "topic": "Роли и сроки",
+  "order": 72,
+  "objective": "Уточнить распределение задач перед встречей.",
+  "guide": "Be in charge of связывает ответственного с задачей. После of можно употребить форму на -ing.",
+  "vocabulary": [
+    {
+      "id": "en:v13:73:p0",
+      "en": "I'm in charge of the slides.",
+      "ru": "Я отвечаю за слайды."
+    },
+    {
+      "id": "en:v13:73:p1",
+      "en": "Could you send the agenda?",
+      "ru": "Не мог бы ты отправить повестку?"
+    },
+    {
+      "id": "en:v13:73:p2",
+      "en": "I'll take notes during the meeting.",
+      "ru": "Я буду делать заметки во время встречи."
+    },
+    {
+      "id": "en:v13:73:p3",
+      "en": "Let's check everything at noon.",
+      "ru": "Давай проверим всё в полдень."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Кто за что отвечает",
+      "phrase": "I'm in charge of the slides.",
+      "translation": "Я отвечаю за слайды.",
+      "explanation": "Be in charge of связывает ответственного с задачей. После of можно употребить форму на -ing."
+    },
+    {
+      "character": "miko",
+      "title": "Кто за что отвечает",
+      "phrase": "Could you send the agenda?",
+      "translation": "Не мог бы ты отправить повестку?",
+      "explanation": "Could you send the agenda? — Не мог бы ты отправить повестку?"
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Кто за что отвечает",
+      "phrase": "I'll take notes during the meeting.",
+      "translation": "Я буду делать заметки во время встречи.",
+      "explanation": "I'll take notes during the meeting. — Я буду делать заметки во время встречи."
+    },
+    {
+      "character": "orbi",
+      "title": "Кто за что отвечает",
+      "phrase": "Let's check everything at noon.",
+      "translation": "Давай проверим всё в полдень.",
+      "explanation": "Let's check everything at noon. — Давай проверим всё в полдень."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I'm in charge of the slides.",
+      "translation": "Я отвечаю за слайды.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я отвечаю за слайды.",
+      "options": [
+        "Я буду делать заметки во время встречи.",
+        "Я отвечаю за слайды.",
+        "Давай проверим всё в полдень."
+      ],
+      "explanation": "Be in charge of связывает ответственного с задачей. После of можно употребить форму на -ing."
+    },
+    {
+      "id": "apply",
+      "phrase": "Could you send the agenda?",
+      "translation": "Не мог бы ты отправить повестку?",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Could you send the agenda?",
+      "tokens": [
+        "Could",
+        "you",
+        "send",
+        "the",
+        "agenda?"
+      ],
+      "character": "miko",
+      "explanation": "Could you send the agenda? — Не мог бы ты отправить повестку?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-73-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я отвечаю за слайды.»?",
+      "answers": [
+        "I'm in charge of the slides."
+      ],
+      "explanation": "I'm in charge of the slides. — Я отвечаю за слайды.",
+      "wordIds": [
+        "en:v13:73:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "Could you send the agenda?",
+        "Let's check everything at noon.",
+        "I'm in charge of the slides."
+      ],
+      "hint": "I'm in charge of the slides. — Я отвечаю за слайды."
+    },
+    {
+      "id": "en-a1-73-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Не мог бы ты отправить повестку?",
+      "answers": [
+        "Could you send the agenda?"
+      ],
+      "explanation": "Be in charge of связывает ответственного с задачей. После of можно употребить форму на -ing.",
+      "wordIds": [
+        "en:v13:73:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Could",
+        "you",
+        "send",
+        "the",
+        "agenda?"
+      ],
+      "hint": "Could you send the agenda? — Не мог бы ты отправить повестку?"
+    },
+    {
+      "id": "en-a1-73-e03",
+      "type": "dialogue",
+      "prompt": "За что отвечает Нина?",
+      "answers": [
+        "За слайды."
+      ],
+      "explanation": "В диалоге: Who will take notes? / I will. Nina is in charge of the slides. Поэтому: За слайды.",
+      "wordIds": [
+        "en:v13:73:p0",
+        "en:v13:73:p1",
+        "en:v13:73:p2",
+        "en:v13:73:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Who will take notes?\nМико: I will. Nina is in charge of the slides.",
+      "options": [
+        "За заметки.",
+        "За бронирование комнаты.",
+        "За слайды."
+      ]
+    },
+    {
+      "id": "en-a1-73-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Я буду делать заметки во время встречи."
+      ],
+      "explanation": "I'll take notes during the meeting. — Я буду делать заметки во время встречи.",
+      "wordIds": [
+        "en:v13:73:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "I'll take notes during the meeting.",
+      "options": [
+        "Я отвечаю за слайды.",
+        "Я буду делать заметки во время встречи.",
+        "Не мог бы ты отправить повестку?"
+      ],
+      "hint": "I'll take notes during the meeting. — Я буду делать заметки во время встречи."
+    },
+    {
+      "id": "en-a1-73-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:73:p0",
+        "en:v13:73:p1",
+        "en:v13:73:p2",
+        "en:v13:73:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:73:p0",
+          "en": "I'm in charge of the slides.",
+          "ru": "Я отвечаю за слайды."
+        },
+        {
+          "id": "en:v13:73:p1",
+          "en": "Could you send the agenda?",
+          "ru": "Не мог бы ты отправить повестку?"
+        },
+        {
+          "id": "en:v13:73:p2",
+          "en": "I'll take notes during the meeting.",
+          "ru": "Я буду делать заметки во время встречи."
+        },
+        {
+          "id": "en:v13:73:p3",
+          "en": "Let's check everything at noon.",
+          "ru": "Давай проверим всё в полдень."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-73-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I'm in charge to prepare the slides.",
+      "answers": [
+        "I'm in charge of preparing the slides."
+      ],
+      "explanation": "Устойчивое сочетание in charge of требует preparing после of.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I'm in charge to prepare the slides.",
+        "I'm in charge of preparing the slides."
+      ],
+      "hint": "Be in charge of связывает ответственного с задачей. После of можно употребить форму на -ing."
+    },
+    {
+      "id": "en-a1-73-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Давай проверим всё в полдень.». Можно написать вместо микрофона.",
+      "answers": [
+        "Let's check everything at noon."
+      ],
+      "explanation": "Let's check everything at noon. — Давай проверим всё в полдень.",
+      "wordIds": [
+        "en:v13:73:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Let's check everything at noon.",
+      "recall": {
+        "phrase": "Let's check everything at noon.",
+        "meaning": "Давай проверим всё в полдень."
+      }
+    },
+    {
+      "id": "en-a1-73-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я отвечаю за слайды.",
+      "answers": [
+        "I'm in charge of the slides."
+      ],
+      "explanation": "Be in charge of связывает ответственного с задачей. После of можно употребить форму на -ing.",
+      "wordIds": [
+        "en:v13:73:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I'm in charge of the slides.",
+        "meaning": "Я отвечаю за слайды."
+      }
+    },
+    {
+      "id": "en-a1-73-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы приехали вчера днём.",
+      "answers": [
+        "We arrived yesterday afternoon."
+      ],
+      "explanation": "We arrived yesterday afternoon. — Мы приехали вчера днём.",
+      "wordIds": [
+        "en:v015:72:p0"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "We arrived yesterday afternoon.",
+        "We've already explored the old town.",
+        "The hotel is quieter than we expected.",
+        "Tomorrow we're going to visit the museum."
+      ]
+    }
+  ]
+}

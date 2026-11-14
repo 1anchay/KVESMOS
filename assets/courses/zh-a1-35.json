@@ -108,7 +108,9 @@
         "坐公交车更快。"
       ],
       "explanation": "坐公交车更快。 — На автобусе быстрее.",
-      "wordIds": [],
+      "wordIds": [
+        "zh:v13:34:p2"
+      ],
       "character": "zig_quartz",
       "phase": "Разогреваемся",
       "options": [
@@ -116,7 +118,8 @@
         "走路要十五分钟。",
         "坐公交车更快。",
         "我们还是走路吧。"
-      ]
+      ],
+      "pronunciation": "Zuò gōngjiāochē gèng kuài."
     },
     {
       "id": "zh-a1-35-e02",

@@ -237,7 +237,9 @@
         "Je les prendrai demain."
       ],
       "explanation": "Je les prendrai demain. — Я заберу их завтра.",
-      "wordIds": [],
+      "wordIds": [
+        "fr:v13:35:p3"
+      ],
       "character": "miko",
       "phase": "Применяем",
       "options": [

@@ -1,0 +1,261 @@
+{
+  "id": "en-a1-94",
+  "title": "Что случилось раньше",
+  "topic": "Предположения и прошлое",
+  "order": 93,
+  "objective": "Расставить события в рассказе о задержке.",
+  "guide": "Past Perfect выделяет то, что уже случилось до другого события в прошлом.",
+  "vocabulary": [
+    {
+      "id": "en:v13:94:p0",
+      "en": "The shop had closed before we arrived.",
+      "ru": "Магазин закрылся до нашего приезда."
+    },
+    {
+      "id": "en:v13:94:p1",
+      "en": "I'd already called them when I got your message.",
+      "ru": "Я уже позвонил им, когда получил твоё сообщение."
+    },
+    {
+      "id": "en:v13:94:p2",
+      "en": "We waited for ten minutes and then left.",
+      "ru": "Мы подождали десять минут и ушли."
+    },
+    {
+      "id": "en:v13:94:p3",
+      "en": "I didn't know the hours had changed.",
+      "ru": "Я не знал, что часы работы изменились."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Что случилось раньше",
+      "phrase": "The shop had closed before we arrived.",
+      "translation": "Магазин закрылся до нашего приезда.",
+      "explanation": "Past Perfect выделяет то, что уже случилось до другого события в прошлом."
+    },
+    {
+      "character": "miko",
+      "title": "Что случилось раньше",
+      "phrase": "I'd already called them when I got your message.",
+      "translation": "Я уже позвонил им, когда получил твоё сообщение.",
+      "explanation": "I'd already called them when I got your message. — Я уже позвонил им, когда получил твоё сообщение."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Что случилось раньше",
+      "phrase": "We waited for ten minutes and then left.",
+      "translation": "Мы подождали десять минут и ушли.",
+      "explanation": "We waited for ten minutes and then left. — Мы подождали десять минут и ушли."
+    },
+    {
+      "character": "orbi",
+      "title": "Что случилось раньше",
+      "phrase": "I didn't know the hours had changed.",
+      "translation": "Я не знал, что часы работы изменились.",
+      "explanation": "I didn't know the hours had changed. — Я не знал, что часы работы изменились."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "The shop had closed before we arrived.",
+      "translation": "Магазин закрылся до нашего приезда.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Магазин закрылся до нашего приезда.",
+      "options": [
+        "Мы подождали десять минут и ушли.",
+        "Магазин закрылся до нашего приезда.",
+        "Я не знал, что часы работы изменились."
+      ],
+      "explanation": "Past Perfect выделяет то, что уже случилось до другого события в прошлом."
+    },
+    {
+      "id": "apply",
+      "phrase": "I'd already called them when I got your message.",
+      "translation": "Я уже позвонил им, когда получил твоё сообщение.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I'd already called them when I got your message.",
+      "tokens": [
+        "I'd",
+        "already",
+        "called",
+        "them",
+        "when",
+        "I",
+        "got",
+        "your",
+        "message."
+      ],
+      "character": "miko",
+      "explanation": "I'd already called them when I got your message. — Я уже позвонил им, когда получил твоё сообщение."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-94-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Магазин закрылся до нашего приезда.»?",
+      "answers": [
+        "The shop had closed before we arrived."
+      ],
+      "explanation": "The shop had closed before we arrived. — Магазин закрылся до нашего приезда.",
+      "wordIds": [
+        "en:v13:94:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I'd already called them when I got your message.",
+        "I didn't know the hours had changed.",
+        "The shop had closed before we arrived."
+      ],
+      "hint": "The shop had closed before we arrived. — Магазин закрылся до нашего приезда."
+    },
+    {
+      "id": "en-a1-94-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я уже позвонил им, когда получил твоё сообщение.",
+      "answers": [
+        "I'd already called them when I got your message."
+      ],
+      "explanation": "Past Perfect выделяет то, что уже случилось до другого события в прошлом.",
+      "wordIds": [
+        "en:v13:94:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I'd",
+        "already",
+        "called",
+        "them",
+        "when",
+        "I",
+        "got",
+        "your",
+        "message."
+      ],
+      "hint": "I'd already called them when I got your message. — Я уже позвонил им, когда получил твоё сообщение."
+    },
+    {
+      "id": "en-a1-94-e03",
+      "type": "dialogue",
+      "prompt": "Какое событие произошло первым?",
+      "answers": [
+        "Магазин закрылся."
+      ],
+      "explanation": "В диалоге: Did you collect the order? / No. The shop had closed before we arrived. Поэтому: Магазин закрылся.",
+      "wordIds": [
+        "en:v13:94:p0",
+        "en:v13:94:p1",
+        "en:v13:94:p2",
+        "en:v13:94:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Did you collect the order?\nМико: No. The shop had closed before we arrived.",
+      "options": [
+        "Покупатели приехали.",
+        "Заказ забрали.",
+        "Магазин закрылся."
+      ]
+    },
+    {
+      "id": "en-a1-94-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Мы подождали десять минут и ушли."
+      ],
+      "explanation": "We waited for ten minutes and then left. — Мы подождали десять минут и ушли.",
+      "wordIds": [
+        "en:v13:94:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "We waited for ten minutes and then left.",
+      "options": [
+        "Магазин закрылся до нашего приезда.",
+        "Мы подождали десять минут и ушли.",
+        "Я уже позвонил им, когда получил твоё сообщение."
+      ],
+      "hint": "We waited for ten minutes and then left. — Мы подождали десять минут и ушли."
+    },
+    {
+      "id": "en-a1-94-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: The shop had close before we arrived.",
+      "answers": [
+        "The shop had closed before we arrived."
+      ],
+      "explanation": "После had используется причастие closed.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "The shop had close before we arrived.",
+        "The shop had closed before we arrived."
+      ],
+      "hint": "Past Perfect выделяет то, что уже случилось до другого события в прошлом."
+    },
+    {
+      "id": "en-a1-94-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Я не знал, что часы работы изменились.». Можно написать вместо микрофона.",
+      "answers": [
+        "I didn't know the hours had changed."
+      ],
+      "explanation": "I didn't know the hours had changed. — Я не знал, что часы работы изменились.",
+      "wordIds": [
+        "en:v13:94:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "I didn't know the hours had changed.",
+      "recall": {
+        "phrase": "I didn't know the hours had changed.",
+        "meaning": "Я не знал, что часы работы изменились."
+      }
+    },
+    {
+      "id": "en-a1-94-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Магазин закрылся до нашего приезда.",
+      "answers": [
+        "The shop had closed before we arrived."
+      ],
+      "explanation": "Past Perfect выделяет то, что уже случилось до другого события в прошлом.",
+      "wordIds": [
+        "en:v13:94:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "The shop had closed before we arrived.",
+        "meaning": "Магазин закрылся до нашего приезда."
+      }
+    },
+    {
+      "id": "en-a1-94-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Было бы проще, если бы у нас была машина.",
+      "answers": [
+        "It would be easier if we had a car."
+      ],
+      "explanation": "It would be easier if we had a car. — Было бы проще, если бы у нас была машина.",
+      "wordIds": [
+        "en:v13:93:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "If we lived closer, we'd walk to work.",
+        "It would be easier if we had a car.",
+        "The rent is lower outside the city.",
+        "I'd still choose the flat near the station."
+      ]
+    }
+  ]
+}

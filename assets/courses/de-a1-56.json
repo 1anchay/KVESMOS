@@ -1,0 +1,253 @@
+{
+  "id": "de-a1-56",
+  "title": "Две причины задержки",
+  "topic": "Изменения и причины",
+  "order": 55,
+  "objective": "Объяснить причину с weil и следствие с deshalb.",
+  "guide": "В части с weil глагол в конце. После deshalb первым идёт спрягаемый глагол.",
+  "vocabulary": [
+    {
+      "id": "de:v13:56:p0",
+      "en": "Ich komme später, weil mein Zug ausfällt.",
+      "ru": "Я приеду позже, потому что мой поезд отменили."
+    },
+    {
+      "id": "de:v13:56:p1",
+      "en": "Deshalb nehme ich den Bus.",
+      "ru": "Поэтому я поеду на автобусе."
+    },
+    {
+      "id": "de:v13:56:p2",
+      "en": "Der nächste Bus fährt in zehn Minuten.",
+      "ru": "Следующий автобус отправляется через десять минут."
+    },
+    {
+      "id": "de:v13:56:p3",
+      "en": "Ihr könnt schon anfangen.",
+      "ru": "Можете уже начинать."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Две причины задержки",
+      "phrase": "Ich komme später, weil mein Zug ausfällt.",
+      "translation": "Я приеду позже, потому что мой поезд отменили.",
+      "explanation": "В части с weil глагол в конце. После deshalb первым идёт спрягаемый глагол."
+    },
+    {
+      "character": "miko",
+      "title": "Две причины задержки",
+      "phrase": "Deshalb nehme ich den Bus.",
+      "translation": "Поэтому я поеду на автобусе.",
+      "explanation": "Deshalb nehme ich den Bus. — Поэтому я поеду на автобусе."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Две причины задержки",
+      "phrase": "Der nächste Bus fährt in zehn Minuten.",
+      "translation": "Следующий автобус отправляется через десять минут.",
+      "explanation": "Der nächste Bus fährt in zehn Minuten. — Следующий автобус отправляется через десять минут."
+    },
+    {
+      "character": "orbi",
+      "title": "Две причины задержки",
+      "phrase": "Ihr könnt schon anfangen.",
+      "translation": "Можете уже начинать.",
+      "explanation": "Ihr könnt schon anfangen. — Можете уже начинать."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "Ich komme später, weil mein Zug ausfällt.",
+      "translation": "Я приеду позже, потому что мой поезд отменили.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я приеду позже, потому что мой поезд отменили.",
+      "options": [
+        "Следующий автобус отправляется через десять минут.",
+        "Я приеду позже, потому что мой поезд отменили.",
+        "Можете уже начинать."
+      ],
+      "explanation": "В части с weil глагол в конце. После deshalb первым идёт спрягаемый глагол."
+    },
+    {
+      "id": "apply",
+      "phrase": "Deshalb nehme ich den Bus.",
+      "translation": "Поэтому я поеду на автобусе.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "Deshalb nehme ich den Bus.",
+      "tokens": [
+        "Deshalb",
+        "nehme",
+        "ich",
+        "den",
+        "Bus."
+      ],
+      "character": "miko",
+      "explanation": "Deshalb nehme ich den Bus. — Поэтому я поеду на автобусе."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-a1-56-e01",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Следующий автобус отправляется через десять минут."
+      ],
+      "explanation": "Der nächste Bus fährt in zehn Minuten. — Следующий автобус отправляется через десять минут.",
+      "wordIds": [
+        "de:v13:56:p2"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "audio": "Der nächste Bus fährt in zehn Minuten.",
+      "options": [
+        "Я приеду позже, потому что мой поезд отменили.",
+        "Следующий автобус отправляется через десять минут.",
+        "Поэтому я поеду на автобусе."
+      ],
+      "hint": "Der nächste Bus fährt in zehn Minuten. — Следующий автобус отправляется через десять минут."
+    },
+    {
+      "id": "de-a1-56-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Поэтому я поеду на автобусе.",
+      "answers": [
+        "Deshalb nehme ich den Bus."
+      ],
+      "explanation": "В части с weil глагол в конце. После deshalb первым идёт спрягаемый глагол.",
+      "wordIds": [
+        "de:v13:56:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "Deshalb",
+        "nehme",
+        "ich",
+        "den",
+        "Bus."
+      ],
+      "hint": "Deshalb nehme ich den Bus. — Поэтому я поеду на автобусе."
+    },
+    {
+      "id": "de-a1-56-e03",
+      "type": "dialogue",
+      "prompt": "Как человек доберётся?",
+      "answers": [
+        "На автобусе."
+      ],
+      "explanation": "В диалоге: Warum kommst du später? / Mein Zug fällt aus. Deshalb nehme ich den Bus. Поэтому: На автобусе.",
+      "wordIds": [
+        "de:v13:56:p0",
+        "de:v13:56:p1",
+        "de:v13:56:p2",
+        "de:v13:56:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Warum kommst du später?\nМико: Mein Zug fällt aus. Deshalb nehme ich den Bus.",
+      "options": [
+        "На следующем поезде.",
+        "На такси.",
+        "На автобусе."
+      ]
+    },
+    {
+      "id": "de-a1-56-e04",
+      "type": "choice",
+      "prompt": "Как сказать: «Я приеду позже, потому что мой поезд отменили.»?",
+      "answers": [
+        "Ich komme später, weil mein Zug ausfällt."
+      ],
+      "explanation": "Ich komme später, weil mein Zug ausfällt. — Я приеду позже, потому что мой поезд отменили.",
+      "wordIds": [
+        "de:v13:56:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "options": [
+        "Deshalb nehme ich den Bus.",
+        "Ihr könnt schon anfangen.",
+        "Ich komme später, weil mein Zug ausfällt."
+      ],
+      "hint": "Ich komme später, weil mein Zug ausfällt. — Я приеду позже, потому что мой поезд отменили."
+    },
+    {
+      "id": "de-a1-56-e05",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: Deshalb ich nehme den Bus.",
+      "answers": [
+        "Deshalb nehme ich den Bus."
+      ],
+      "explanation": "Deshalb занимает первое место, за ним идёт nehme.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Deshalb ich nehme den Bus.",
+        "Deshalb nehme ich den Bus."
+      ],
+      "hint": "В части с weil глагол в конце. После deshalb первым идёт спрягаемый глагол."
+    },
+    {
+      "id": "de-a1-56-e06",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Можете уже начинать.». Можно написать вместо микрофона.",
+      "answers": [
+        "Ihr könnt schon anfangen."
+      ],
+      "explanation": "Ihr könnt schon anfangen. — Можете уже начинать.",
+      "wordIds": [
+        "de:v13:56:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "Ihr könnt schon anfangen.",
+      "recall": {
+        "phrase": "Ihr könnt schon anfangen.",
+        "meaning": "Можете уже начинать."
+      }
+    },
+    {
+      "id": "de-a1-56-e07",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я приеду позже, потому что мой поезд отменили.",
+      "answers": [
+        "Ich komme später, weil mein Zug ausfällt."
+      ],
+      "explanation": "В части с weil глагол в конце. После deshalb первым идёт спрягаемый глагол.",
+      "wordIds": [
+        "de:v13:56:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "Ich komme später, weil mein Zug ausfällt.",
+        "meaning": "Я приеду позже, потому что мой поезд отменили."
+      }
+    },
+    {
+      "id": "de-a1-56-e08",
+      "type": "review",
+      "prompt": "Из прошлой темы: Не могли бы вы изменить адрес в формуляре?",
+      "answers": [
+        "Könnten Sie die Adresse im Formular ändern?"
+      ],
+      "explanation": "Könnten Sie die Adresse im Formular ändern? — Не могли бы вы изменить адрес в формуляре?",
+      "wordIds": [
+        "de:v13:55:p1"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "Meine Adresse hat sich geändert.",
+        "Könnten Sie die Adresse im Formular ändern?",
+        "Die alte Nummer gilt nicht mehr.",
+        "Ich schicke Ihnen die neuen Daten."
+      ]
+    }
+  ]
+}

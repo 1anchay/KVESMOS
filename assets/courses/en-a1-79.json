@@ -1,0 +1,294 @@
+{
+  "id": "en-a1-79",
+  "title": "Согласиться частично",
+  "topic": "Согласие и выбор",
+  "order": 78,
+  "objective": "Признать довод и добавить конкретное возражение.",
+  "guide": "I see your point признаёт аргумент. My concern is… позволяет назвать конкретное сомнение.",
+  "vocabulary": [
+    {
+      "id": "en:v13:79:p0",
+      "en": "I see your point about the cost.",
+      "ru": "Я понимаю твой аргумент о стоимости."
+    },
+    {
+      "id": "en:v13:79:p1",
+      "en": "My concern is the travel time.",
+      "ru": "Меня беспокоит время в пути."
+    },
+    {
+      "id": "en:v13:79:p2",
+      "en": "Could we look at a closer option?",
+      "ru": "Можем рассмотреть вариант поближе?"
+    },
+    {
+      "id": "en:v13:79:p3",
+      "en": "That sounds more practical to me.",
+      "ru": "Мне это кажется практичнее."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Согласиться частично",
+      "phrase": "I see your point about the cost.",
+      "translation": "Я понимаю твой аргумент о стоимости.",
+      "explanation": "I see your point признаёт аргумент. My concern is… позволяет назвать конкретное сомнение."
+    },
+    {
+      "character": "miko",
+      "title": "Согласиться частично",
+      "phrase": "My concern is the travel time.",
+      "translation": "Меня беспокоит время в пути.",
+      "explanation": "My concern is the travel time. — Меня беспокоит время в пути."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Согласиться частично",
+      "phrase": "Could we look at a closer option?",
+      "translation": "Можем рассмотреть вариант поближе?",
+      "explanation": "Could we look at a closer option? — Можем рассмотреть вариант поближе?"
+    },
+    {
+      "character": "orbi",
+      "title": "Согласиться частично",
+      "phrase": "That sounds more practical to me.",
+      "translation": "Мне это кажется практичнее.",
+      "explanation": "That sounds more practical to me. — Мне это кажется практичнее."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I see your point about the cost.",
+      "translation": "Я понимаю твой аргумент о стоимости.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я понимаю твой аргумент о стоимости.",
+      "options": [
+        "Можем рассмотреть вариант поближе?",
+        "Я понимаю твой аргумент о стоимости.",
+        "Мне это кажется практичнее."
+      ],
+      "explanation": "I see your point признаёт аргумент. My concern is… позволяет назвать конкретное сомнение."
+    },
+    {
+      "id": "apply",
+      "phrase": "My concern is the travel time.",
+      "translation": "Меня беспокоит время в пути.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "My concern is the travel time.",
+      "tokens": [
+        "My",
+        "concern",
+        "is",
+        "the",
+        "travel",
+        "time."
+      ],
+      "character": "miko",
+      "explanation": "My concern is the travel time. — Меня беспокоит время в пути."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-79-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я понимаю твой аргумент о стоимости.»?",
+      "answers": [
+        "I see your point about the cost."
+      ],
+      "explanation": "I see your point about the cost. — Я понимаю твой аргумент о стоимости.",
+      "wordIds": [
+        "en:v13:79:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "My concern is the travel time.",
+        "That sounds more practical to me.",
+        "I see your point about the cost."
+      ],
+      "hint": "I see your point about the cost. — Я понимаю твой аргумент о стоимости."
+    },
+    {
+      "id": "en-a1-79-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Меня беспокоит время в пути.",
+      "answers": [
+        "My concern is the travel time."
+      ],
+      "explanation": "I see your point признаёт аргумент. My concern is… позволяет назвать конкретное сомнение.",
+      "wordIds": [
+        "en:v13:79:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "My",
+        "concern",
+        "is",
+        "the",
+        "travel",
+        "time."
+      ],
+      "hint": "My concern is the travel time. — Меня беспокоит время в пути."
+    },
+    {
+      "id": "en-a1-79-e03",
+      "type": "dialogue",
+      "prompt": "Что вызывает сомнение?",
+      "answers": [
+        "Расстояние до станции."
+      ],
+      "explanation": "В диалоге: The room is cheap. Shall we book it? / I see your point, but it's far from the station. Поэтому: Расстояние до станции.",
+      "wordIds": [
+        "en:v13:79:p0",
+        "en:v13:79:p1",
+        "en:v13:79:p2",
+        "en:v13:79:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: The room is cheap. Shall we book it?\nМико: I see your point, but it's far from the station.",
+      "options": [
+        "Высокая цена.",
+        "Размер комнаты.",
+        "Расстояние до станции."
+      ]
+    },
+    {
+      "id": "en-a1-79-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Можем рассмотреть вариант поближе?"
+      ],
+      "explanation": "Could we look at a closer option? — Можем рассмотреть вариант поближе?",
+      "wordIds": [
+        "en:v13:79:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Could we look at a closer option?",
+      "options": [
+        "Я понимаю твой аргумент о стоимости.",
+        "Можем рассмотреть вариант поближе?",
+        "Меня беспокоит время в пути."
+      ],
+      "hint": "Could we look at a closer option? — Можем рассмотреть вариант поближе?"
+    },
+    {
+      "id": "en-a1-79-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:79:p0",
+        "en:v13:79:p1",
+        "en:v13:79:p2",
+        "en:v13:79:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:79:p0",
+          "en": "I see your point about the cost.",
+          "ru": "Я понимаю твой аргумент о стоимости."
+        },
+        {
+          "id": "en:v13:79:p1",
+          "en": "My concern is the travel time.",
+          "ru": "Меня беспокоит время в пути."
+        },
+        {
+          "id": "en:v13:79:p2",
+          "en": "Could we look at a closer option?",
+          "ru": "Можем рассмотреть вариант поближе?"
+        },
+        {
+          "id": "en:v13:79:p3",
+          "en": "That sounds more practical to me.",
+          "ru": "Мне это кажется практичнее."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-79-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I agree your point.",
+      "answers": [
+        "I agree with your point."
+      ],
+      "explanation": "Чтобы согласиться с доводом, употребляем agree with.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I agree your point.",
+        "I agree with your point."
+      ],
+      "hint": "I see your point признаёт аргумент. My concern is… позволяет назвать конкретное сомнение."
+    },
+    {
+      "id": "en-a1-79-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Мне это кажется практичнее.». Можно написать вместо микрофона.",
+      "answers": [
+        "That sounds more practical to me."
+      ],
+      "explanation": "That sounds more practical to me. — Мне это кажется практичнее.",
+      "wordIds": [
+        "en:v13:79:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "That sounds more practical to me.",
+      "recall": {
+        "phrase": "That sounds more practical to me.",
+        "meaning": "Мне это кажется практичнее."
+      }
+    },
+    {
+      "id": "en-a1-79-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я понимаю твой аргумент о стоимости.",
+      "answers": [
+        "I see your point about the cost."
+      ],
+      "explanation": "I see your point признаёт аргумент. My concern is… позволяет назвать конкретное сомнение.",
+      "wordIds": [
+        "en:v13:79:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I see your point about the cost.",
+        "meaning": "Я понимаю твой аргумент о стоимости."
+      }
+    },
+    {
+      "id": "en-a1-79-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Это заняло больше времени, чем мы ожидали.",
+      "answers": [
+        "It took longer than we expected."
+      ],
+      "explanation": "It took longer than we expected. — Это заняло больше времени, чем мы ожидали.",
+      "wordIds": [
+        "en:v13:78:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "The lift was broken, so we took the stairs.",
+        "We arrived late because the road was closed.",
+        "It took longer than we expected.",
+        "Next time we'll leave earlier."
+      ]
+    }
+  ]
+}

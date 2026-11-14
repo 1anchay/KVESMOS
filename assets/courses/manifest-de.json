@@ -393,6 +393,174 @@
           ]
         }
       ]
+    },
+    {
+      "id": "de-v13",
+      "title": "Разговоры и решения",
+      "themes": [
+        {
+          "id": "de-v13-1",
+          "title": "Место и направление",
+          "lessons": [
+            {
+              "id": "de-a1-43",
+              "title": "Сумка под столом",
+              "order": 42,
+              "asset": "assets/courses/de-a1-43.json"
+            },
+            {
+              "id": "de-a1-44",
+              "title": "Вешаем картину",
+              "order": 43,
+              "asset": "assets/courses/de-a1-44.json"
+            }
+          ]
+        },
+        {
+          "id": "de-v13-2",
+          "title": "Встречи и подготовка",
+          "lessons": [
+            {
+              "id": "de-a1-45",
+              "title": "Увидимся перед кино",
+              "order": 44,
+              "asset": "assets/courses/de-a1-45.json"
+            },
+            {
+              "id": "de-a1-46",
+              "title": "Как подготовиться",
+              "order": 45,
+              "asset": "assets/courses/de-a1-46.json"
+            }
+          ]
+        },
+        {
+          "id": "de-v13-3",
+          "title": "Действия во времени",
+          "lessons": [
+            {
+              "id": "de-a1-47",
+              "title": "После работы",
+              "order": 46,
+              "asset": "assets/courses/de-a1-47.json"
+            },
+            {
+              "id": "de-a1-48",
+              "title": "Когда я жил в Кёльне",
+              "order": 47,
+              "asset": "assets/courses/de-a1-48.json"
+            }
+          ]
+        },
+        {
+          "id": "de-v13-4",
+          "title": "Условия и сроки",
+          "lessons": [
+            {
+              "id": "de-a1-49",
+              "title": "Запасной план",
+              "order": 48,
+              "asset": "assets/courses/de-a1-49.json"
+            },
+            {
+              "id": "de-a1-50",
+              "title": "До конца недели",
+              "order": 49,
+              "asset": "assets/courses/de-a1-50.json"
+            }
+          ]
+        },
+        {
+          "id": "de-v13-5",
+          "title": "Предметы и люди",
+          "lessons": [
+            {
+              "id": "de-a1-51",
+              "title": "Передай ей записку",
+              "order": 50,
+              "asset": "assets/courses/de-a1-51.json"
+            },
+            {
+              "id": "de-a1-52",
+              "title": "У кого он сейчас",
+              "order": 51,
+              "asset": "assets/courses/de-a1-52.json"
+            }
+          ]
+        },
+        {
+          "id": "de-v13-6",
+          "title": "Оговорки и сравнения",
+          "lessons": [
+            {
+              "id": "de-a1-53",
+              "title": "Согласны не во всём",
+              "order": 52,
+              "asset": "assets/courses/de-a1-53.json"
+            },
+            {
+              "id": "de-a1-54",
+              "title": "Одинаковая цена",
+              "order": 53,
+              "asset": "assets/courses/de-a1-54.json"
+            }
+          ]
+        },
+        {
+          "id": "de-v13-7",
+          "title": "Изменения и причины",
+          "lessons": [
+            {
+              "id": "de-a1-55",
+              "title": "Исправить адрес",
+              "order": 54,
+              "asset": "assets/courses/de-a1-55.json"
+            },
+            {
+              "id": "de-a1-56",
+              "title": "Две причины задержки",
+              "order": 55,
+              "asset": "assets/courses/de-a1-56.json"
+            }
+          ]
+        },
+        {
+          "id": "de-v13-8",
+          "title": "Инструкции и планы",
+          "lessons": [
+            {
+              "id": "de-a1-57",
+              "title": "Сначала включите, потом проверьте",
+              "order": 56,
+              "asset": "assets/courses/de-a1-57.json"
+            },
+            {
+              "id": "de-a1-58",
+              "title": "Завтра будет открыто?",
+              "order": 57,
+              "asset": "assets/courses/de-a1-58.json"
+            }
+          ]
+        },
+        {
+          "id": "de-v13-9",
+          "title": "Сообщения и встречи",
+          "lessons": [
+            {
+              "id": "de-a1-59",
+              "title": "Перескажи сообщение",
+              "order": 58,
+              "asset": "assets/courses/de-a1-59.json"
+            },
+            {
+              "id": "de-a1-60",
+              "title": "Встреча переносится",
+              "order": 59,
+              "asset": "assets/courses/de-a1-60.json"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

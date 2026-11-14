@@ -1,0 +1,259 @@
+{
+  "id": "en-a1-96",
+  "title": "Сравнить две услуги",
+  "topic": "Пересказ и сравнения",
+  "order": 95,
+  "objective": "Сопоставить условия и понять, какой вариант подходит.",
+  "guide": "Whereas подчёркивает различие двух условий. Included означает, что услуга входит в стоимость.",
+  "vocabulary": [
+    {
+      "id": "en:v13:96:p0",
+      "en": "The first plan includes delivery.",
+      "ru": "Первый тариф включает доставку."
+    },
+    {
+      "id": "en:v13:96:p1",
+      "en": "The second is cheaper, whereas delivery costs extra.",
+      "ru": "Второй дешевле, но доставка оплачивается отдельно."
+    },
+    {
+      "id": "en:v13:96:p2",
+      "en": "Both plans cover the first month.",
+      "ru": "Оба тарифа действуют в первый месяц."
+    },
+    {
+      "id": "en:v13:96:p3",
+      "en": "The first one works out cheaper for us.",
+      "ru": "Первый вариант в итоге для нас дешевле."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Сравнить две услуги",
+      "phrase": "The first plan includes delivery.",
+      "translation": "Первый тариф включает доставку.",
+      "explanation": "Whereas подчёркивает различие двух условий. Included означает, что услуга входит в стоимость."
+    },
+    {
+      "character": "miko",
+      "title": "Сравнить две услуги",
+      "phrase": "The second is cheaper, whereas delivery costs extra.",
+      "translation": "Второй дешевле, но доставка оплачивается отдельно.",
+      "explanation": "The second is cheaper, whereas delivery costs extra. — Второй дешевле, но доставка оплачивается отдельно."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Сравнить две услуги",
+      "phrase": "Both plans cover the first month.",
+      "translation": "Оба тарифа действуют в первый месяц.",
+      "explanation": "Both plans cover the first month. — Оба тарифа действуют в первый месяц."
+    },
+    {
+      "character": "orbi",
+      "title": "Сравнить две услуги",
+      "phrase": "The first one works out cheaper for us.",
+      "translation": "Первый вариант в итоге для нас дешевле.",
+      "explanation": "The first one works out cheaper for us. — Первый вариант в итоге для нас дешевле."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "The first plan includes delivery.",
+      "translation": "Первый тариф включает доставку.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Первый тариф включает доставку.",
+      "options": [
+        "Оба тарифа действуют в первый месяц.",
+        "Первый тариф включает доставку.",
+        "Первый вариант в итоге для нас дешевле."
+      ],
+      "explanation": "Whereas подчёркивает различие двух условий. Included означает, что услуга входит в стоимость."
+    },
+    {
+      "id": "apply",
+      "phrase": "The second is cheaper, whereas delivery costs extra.",
+      "translation": "Второй дешевле, но доставка оплачивается отдельно.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "The second is cheaper, whereas delivery costs extra.",
+      "tokens": [
+        "The",
+        "second",
+        "is",
+        "cheaper,",
+        "whereas",
+        "delivery",
+        "costs",
+        "extra."
+      ],
+      "character": "miko",
+      "explanation": "The second is cheaper, whereas delivery costs extra. — Второй дешевле, но доставка оплачивается отдельно."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-96-e01",
+      "type": "review",
+      "prompt": "Из прошлой темы: Мы договорились принести свой ноутбук.",
+      "answers": [
+        "We agreed to bring our own laptop."
+      ],
+      "explanation": "We agreed to bring our own laptop. — Мы договорились принести свой ноутбук.",
+      "wordIds": [
+        "en:v13:95:p3"
+      ],
+      "character": "miko",
+      "phase": "Разогреваемся",
+      "options": [
+        "Nina said that the room was free.",
+        "She suggested meeting there at ten.",
+        "Leo asked whether we needed a screen.",
+        "We agreed to bring our own laptop."
+      ]
+    },
+    {
+      "id": "en-a1-96-e02",
+      "type": "choice",
+      "prompt": "Как сказать: «Первый тариф включает доставку.»?",
+      "answers": [
+        "The first plan includes delivery."
+      ],
+      "explanation": "The first plan includes delivery. — Первый тариф включает доставку.",
+      "wordIds": [
+        "en:v13:96:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "The second is cheaper, whereas delivery costs extra.",
+        "The first one works out cheaper for us.",
+        "The first plan includes delivery."
+      ],
+      "hint": "The first plan includes delivery. — Первый тариф включает доставку."
+    },
+    {
+      "id": "en-a1-96-e03",
+      "type": "order",
+      "prompt": "Собери реплику: Второй дешевле, но доставка оплачивается отдельно.",
+      "answers": [
+        "The second is cheaper, whereas delivery costs extra."
+      ],
+      "explanation": "Whereas подчёркивает различие двух условий. Included означает, что услуга входит в стоимость.",
+      "wordIds": [
+        "en:v13:96:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "The",
+        "second",
+        "is",
+        "cheaper,",
+        "whereas",
+        "delivery",
+        "costs",
+        "extra."
+      ],
+      "hint": "The second is cheaper, whereas delivery costs extra. — Второй дешевле, но доставка оплачивается отдельно."
+    },
+    {
+      "id": "en-a1-96-e04",
+      "type": "dialogue",
+      "prompt": "Почему выбирают тариф с большей ценой?",
+      "answers": [
+        "В него входит доставка."
+      ],
+      "explanation": "В диалоге: Why choose the higher price? / It includes delivery. The cheaper plan charges extra. Поэтому: В него входит доставка.",
+      "wordIds": [
+        "en:v13:96:p0",
+        "en:v13:96:p1",
+        "en:v13:96:p2",
+        "en:v13:96:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "scene": "Орби: Why choose the higher price?\nМико: It includes delivery. The cheaper plan charges extra.",
+      "options": [
+        "Он действует два месяца.",
+        "Только он доступен сегодня.",
+        "В него входит доставка."
+      ]
+    },
+    {
+      "id": "en-a1-96-e05",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Оба тарифа действуют в первый месяц."
+      ],
+      "explanation": "Both plans cover the first month. — Оба тарифа действуют в первый месяц.",
+      "wordIds": [
+        "en:v13:96:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Both plans cover the first month.",
+      "options": [
+        "Первый тариф включает доставку.",
+        "Оба тарифа действуют в первый месяц.",
+        "Второй дешевле, но доставка оплачивается отдельно."
+      ],
+      "hint": "Both plans cover the first month. — Оба тарифа действуют в первый месяц."
+    },
+    {
+      "id": "en-a1-96-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: The plan is include delivery.",
+      "answers": [
+        "The plan includes delivery."
+      ],
+      "explanation": "Includes — спрягаемый глагол и не требует is.",
+      "wordIds": [],
+      "character": "miko",
+      "phase": "Применяем",
+      "options": [
+        "The plan is include delivery.",
+        "The plan includes delivery."
+      ],
+      "hint": "Whereas подчёркивает различие двух условий. Included означает, что услуга входит в стоимость."
+    },
+    {
+      "id": "en-a1-96-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Первый вариант в итоге для нас дешевле.». Можно написать вместо микрофона.",
+      "answers": [
+        "The first one works out cheaper for us."
+      ],
+      "explanation": "The first one works out cheaper for us. — Первый вариант в итоге для нас дешевле.",
+      "wordIds": [
+        "en:v13:96:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "audio": "The first one works out cheaper for us.",
+      "recall": {
+        "phrase": "The first one works out cheaper for us.",
+        "meaning": "Первый вариант в итоге для нас дешевле."
+      }
+    },
+    {
+      "id": "en-a1-96-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Первый тариф включает доставку.",
+      "answers": [
+        "The first plan includes delivery."
+      ],
+      "explanation": "Whereas подчёркивает различие двух условий. Included означает, что услуга входит в стоимость.",
+      "wordIds": [
+        "en:v13:96:p0"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "The first plan includes delivery.",
+        "meaning": "Первый тариф включает доставку."
+      }
+    }
+  ]
+}

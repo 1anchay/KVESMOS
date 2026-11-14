@@ -1,0 +1,300 @@
+{
+  "id": "en-a1-91",
+  "title": "Зачем нужен этот шаг",
+  "topic": "Цель и переписка",
+  "order": 90,
+  "objective": "Объяснить цель действия простым способом.",
+  "guide": "To + инфинитив выражает цель. So that вводит часть со своим подлежащим.",
+  "vocabulary": [
+    {
+      "id": "en:v13:91:p0",
+      "en": "I saved a copy to keep the original safe.",
+      "ru": "Я сохранил копию, чтобы оригинал был в безопасности."
+    },
+    {
+      "id": "en:v13:91:p1",
+      "en": "I'll label it so that everyone can find it.",
+      "ru": "Я подпишу её, чтобы все могли её найти."
+    },
+    {
+      "id": "en:v13:91:p2",
+      "en": "Check the date before you send it.",
+      "ru": "Проверь дату перед отправкой."
+    },
+    {
+      "id": "en:v13:91:p3",
+      "en": "Keep both files in the same folder.",
+      "ru": "Храни оба файла в одной папке."
+    }
+  ],
+  "teachingSteps": [
+    {
+      "character": "orbi",
+      "title": "Зачем нужен этот шаг",
+      "phrase": "I saved a copy to keep the original safe.",
+      "translation": "Я сохранил копию, чтобы оригинал был в безопасности.",
+      "explanation": "To + инфинитив выражает цель. So that вводит часть со своим подлежащим."
+    },
+    {
+      "character": "miko",
+      "title": "Зачем нужен этот шаг",
+      "phrase": "I'll label it so that everyone can find it.",
+      "translation": "Я подпишу её, чтобы все могли её найти.",
+      "explanation": "I'll label it so that everyone can find it. — Я подпишу её, чтобы все могли её найти."
+    },
+    {
+      "character": "zig_quartz",
+      "title": "Зачем нужен этот шаг",
+      "phrase": "Check the date before you send it.",
+      "translation": "Проверь дату перед отправкой.",
+      "explanation": "Check the date before you send it. — Проверь дату перед отправкой."
+    },
+    {
+      "character": "orbi",
+      "title": "Зачем нужен этот шаг",
+      "phrase": "Keep both files in the same folder.",
+      "translation": "Храни оба файла в одной папке.",
+      "explanation": "Keep both files in the same folder. — Храни оба файла в одной папке."
+    }
+  ],
+  "introActivities": [
+    {
+      "id": "recognize",
+      "phrase": "I saved a copy to keep the original safe.",
+      "translation": "Я сохранил копию, чтобы оригинал был в безопасности.",
+      "prompt": "Выбери смысл реплики",
+      "answer": "Я сохранил копию, чтобы оригинал был в безопасности.",
+      "options": [
+        "Проверь дату перед отправкой.",
+        "Я сохранил копию, чтобы оригинал был в безопасности.",
+        "Храни оба файла в одной папке."
+      ],
+      "explanation": "To + инфинитив выражает цель. So that вводит часть со своим подлежащим."
+    },
+    {
+      "id": "apply",
+      "phrase": "I'll label it so that everyone can find it.",
+      "translation": "Я подпишу её, чтобы все могли её найти.",
+      "prompt": "Собери ответ по образцу",
+      "answer": "I'll label it so that everyone can find it.",
+      "tokens": [
+        "I'll",
+        "label",
+        "it",
+        "so",
+        "that",
+        "everyone",
+        "can",
+        "find",
+        "it."
+      ],
+      "character": "miko",
+      "explanation": "I'll label it so that everyone can find it. — Я подпишу её, чтобы все могли её найти."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "en-a1-91-e01",
+      "type": "choice",
+      "prompt": "Как сказать: «Я сохранил копию, чтобы оригинал был в безопасности.»?",
+      "answers": [
+        "I saved a copy to keep the original safe."
+      ],
+      "explanation": "I saved a copy to keep the original safe. — Я сохранил копию, чтобы оригинал был в безопасности.",
+      "wordIds": [
+        "en:v13:91:p0"
+      ],
+      "character": "orbi",
+      "phase": "Понимаем",
+      "options": [
+        "I'll label it so that everyone can find it.",
+        "Keep both files in the same folder.",
+        "I saved a copy to keep the original safe."
+      ],
+      "hint": "I saved a copy to keep the original safe. — Я сохранил копию, чтобы оригинал был в безопасности."
+    },
+    {
+      "id": "en-a1-91-e02",
+      "type": "order",
+      "prompt": "Собери реплику: Я подпишу её, чтобы все могли её найти.",
+      "answers": [
+        "I'll label it so that everyone can find it."
+      ],
+      "explanation": "To + инфинитив выражает цель. So that вводит часть со своим подлежащим.",
+      "wordIds": [
+        "en:v13:91:p1"
+      ],
+      "character": "miko",
+      "phase": "Понимаем",
+      "tokens": [
+        "I'll",
+        "label",
+        "it",
+        "so",
+        "that",
+        "everyone",
+        "can",
+        "find",
+        "it."
+      ],
+      "hint": "I'll label it so that everyone can find it. — Я подпишу её, чтобы все могли её найти."
+    },
+    {
+      "id": "en-a1-91-e03",
+      "type": "dialogue",
+      "prompt": "Зачем подписали копию?",
+      "answers": [
+        "Чтобы её было легко найти."
+      ],
+      "explanation": "В диалоге: Why did you label the copy? / So that everyone can find the right file. Поэтому: Чтобы её было легко найти.",
+      "wordIds": [
+        "en:v13:91:p0",
+        "en:v13:91:p1",
+        "en:v13:91:p2",
+        "en:v13:91:p3"
+      ],
+      "character": "zig_quartz",
+      "phase": "Понимаем",
+      "scene": "Орби: Why did you label the copy?\nМико: So that everyone can find the right file.",
+      "options": [
+        "Чтобы удалить оригинал.",
+        "Чтобы скрыть её от команды.",
+        "Чтобы её было легко найти."
+      ]
+    },
+    {
+      "id": "en-a1-91-e04",
+      "type": "listen",
+      "prompt": "Послушай реплику и выбери её смысл. При необходимости открой текст.",
+      "answers": [
+        "Проверь дату перед отправкой."
+      ],
+      "explanation": "Check the date before you send it. — Проверь дату перед отправкой.",
+      "wordIds": [
+        "en:v13:91:p2"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Check the date before you send it.",
+      "options": [
+        "Я сохранил копию, чтобы оригинал был в безопасности.",
+        "Проверь дату перед отправкой.",
+        "Я подпишу её, чтобы все могли её найти."
+      ],
+      "hint": "Check the date before you send it. — Проверь дату перед отправкой."
+    },
+    {
+      "id": "en-a1-91-e05",
+      "type": "pairs",
+      "prompt": "Соедини реплики и их значения.",
+      "answers": [
+        "matched"
+      ],
+      "explanation": "Сопоставь каждую ситуацию с подходящей репликой.",
+      "wordIds": [
+        "en:v13:91:p0",
+        "en:v13:91:p1",
+        "en:v13:91:p2",
+        "en:v13:91:p3"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "pairs": [
+        {
+          "id": "en:v13:91:p0",
+          "en": "I saved a copy to keep the original safe.",
+          "ru": "Я сохранил копию, чтобы оригинал был в безопасности."
+        },
+        {
+          "id": "en:v13:91:p1",
+          "en": "I'll label it so that everyone can find it.",
+          "ru": "Я подпишу её, чтобы все могли её найти."
+        },
+        {
+          "id": "en:v13:91:p2",
+          "en": "Check the date before you send it.",
+          "ru": "Проверь дату перед отправкой."
+        },
+        {
+          "id": "en:v13:91:p3",
+          "en": "Keep both files in the same folder.",
+          "ru": "Храни оба файла в одной папке."
+        }
+      ]
+    },
+    {
+      "id": "en-a1-91-e06",
+      "type": "correct",
+      "prompt": "Исправь одну ошибку: I'll label it so that can everyone find it.",
+      "answers": [
+        "I'll label it so that everyone can find it."
+      ],
+      "explanation": "После so that идёт обычный порядок everyone can.",
+      "wordIds": [],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "I'll label it so that can everyone find it.",
+        "I'll label it so that everyone can find it."
+      ],
+      "hint": "To + инфинитив выражает цель. So that вводит часть со своим подлежащим."
+    },
+    {
+      "id": "en-a1-91-e07",
+      "type": "speak",
+      "prompt": "Передай собеседнику: «Храни оба файла в одной папке.». Можно написать вместо микрофона.",
+      "answers": [
+        "Keep both files in the same folder."
+      ],
+      "explanation": "Keep both files in the same folder. — Храни оба файла в одной папке.",
+      "wordIds": [
+        "en:v13:91:p3"
+      ],
+      "character": "orbi",
+      "phase": "Применяем",
+      "audio": "Keep both files in the same folder.",
+      "recall": {
+        "phrase": "Keep both files in the same folder.",
+        "meaning": "Храни оба файла в одной папке."
+      }
+    },
+    {
+      "id": "en-a1-91-e08",
+      "type": "translate",
+      "prompt": "Вспомни реплику без вариантов: Я сохранил копию, чтобы оригинал был в безопасности.",
+      "answers": [
+        "I saved a copy to keep the original safe."
+      ],
+      "explanation": "To + инфинитив выражает цель. So that вводит часть со своим подлежащим.",
+      "wordIds": [
+        "en:v13:91:p0"
+      ],
+      "character": "miko",
+      "phase": "Применяем",
+      "recall": {
+        "phrase": "I saved a copy to keep the original safe.",
+        "meaning": "Я сохранил копию, чтобы оригинал был в безопасности."
+      }
+    },
+    {
+      "id": "en-a1-91-e09",
+      "type": "review",
+      "prompt": "Из прошлой темы: Время начала не изменилось.",
+      "answers": [
+        "The start time hasn't changed."
+      ],
+      "explanation": "The start time hasn't changed. — Время начала не изменилось.",
+      "wordIds": [
+        "en:v13:90:p2"
+      ],
+      "character": "zig_quartz",
+      "phase": "Применяем",
+      "options": [
+        "The talk was moved to room five.",
+        "The old room is being repaired.",
+        "The start time hasn't changed.",
+        "The notice was posted this morning."
+      ]
+    }
+  ]
+}

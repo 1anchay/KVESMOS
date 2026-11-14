@@ -298,7 +298,9 @@
         "我们昨天到北京了。"
       ],
       "explanation": "我们昨天到北京了。 — Мы вчера приехали в Пекин.",
-      "wordIds": [],
+      "wordIds": [
+        "zh:v015:32:p0"
+      ],
       "character": "zig_quartz",
       "phase": "Применяем",
       "options": [
@@ -306,7 +308,8 @@
         "我已经尝过北京烤鸭了。",
         "我们还没去长城。",
         "明天我们先吃早饭，再去长城。"
-      ]
+      ],
+      "pronunciation": "Wǒmen zuótiān dào Běijīng le."
     }
   ]
 }

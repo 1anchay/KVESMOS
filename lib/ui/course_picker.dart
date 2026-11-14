@@ -36,10 +36,13 @@ class CoursePicker extends ConsumerWidget {
                     ? const Icon(Icons.check_circle)
                     : null,
                 onTap: () async {
+                  final router = GoRouter.of(context);
+                  final source = router.routeInformationProvider.value.uri;
                   await app.selectCourse(course.id);
                   final needsStart = await app.repository.needsCourseStart();
-                  if (context.mounted) {
-                    context.go(
+                  if (app.course.id == course.id &&
+                      router.routeInformationProvider.value.uri == source) {
+                    router.go(
                       needsStart
                           ? '/placement'
                           : onboarding

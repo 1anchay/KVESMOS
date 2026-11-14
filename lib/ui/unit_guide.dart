@@ -121,6 +121,7 @@ class UnitGuidePage extends ConsumerWidget {
                       : const Icon(Icons.chevron_right),
                 ),
               OutlinedButton.icon(
+                key: ValueKey('unit-guide-${unit.id}'),
                 onPressed: () => _guide(context, app, unit),
                 icon: const Icon(Icons.menu_book_outlined),
                 label: const Text('Перед стартом · справочник'),

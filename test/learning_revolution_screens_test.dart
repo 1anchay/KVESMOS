@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:orbitwords/domain/learning_unit.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
@@ -99,12 +100,12 @@ void main() {
           await tester.runAsync(() => app.selectCourse('ru-zh'));
           router.go('/map');
           await flushDb(tester);
-          final guide = find.text('Перед стартом · справочник').first;
-          await tester.scrollUntilVisible(
-            guide,
-            200,
-            scrollable: find.byType(Scrollable).first,
-          );
+          final firstUnit = LearningUnit.fromCatalog(r.catalog).first;
+          final guide = find.byKey(ValueKey('unit-guide-${firstUnit.id}'));
+          final scroll = find.byType(Scrollable).first;
+          tester.state<ScrollableState>(scroll).position.jumpTo(0);
+          await tester.pumpAndSettle();
+          await tester.scrollUntilVisible(guide, 200, scrollable: scroll);
           await tester.ensureVisible(guide);
           await tester.pumpAndSettle();
           await tester.tap(guide);

@@ -35,8 +35,8 @@ void main() {
       app.courseStart = CourseStart(catalog, {}, {first}, null);
       expect(recommendedStudy(app).label, 'Продолжить урок');
       app.installed = {...app.installed}..remove(first);
-      expect(recommendedStudy(app).route, '/offline');
-      expect(recommendedStudy(app).label, 'Загрузить урок');
+      expect(recommendedStudy(app).route, '/offline?lesson=$first');
+      expect(recommendedStudy(app).label, 'Восстановить урок');
 
       final completed = catalog.map((lesson) => lesson.id).toSet();
       app.courseStart = CourseStart(

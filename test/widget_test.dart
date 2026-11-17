@@ -43,6 +43,11 @@ void main() {
       await tester.tap(next);
       await flushDb(tester);
     }
+    await tester.tap(find.byTooltip('Назад'));
+    await flushDb(tester);
+    expect(find.text('Начать с нуля'), findsOneWidget);
+    await tester.tap(find.text('Начать с нуля'));
+    await flushDb(tester);
     final start = find.widgetWithText(FilledButton, 'К уроку');
     await tester.scrollUntilVisible(start, 250);
     await tester.pumpAndSettle();
@@ -84,6 +89,33 @@ void main() {
     await flushDb(tester);
     final resumed = (await tester.runAsync(() => r.startLesson('a1-01')))!;
     expect(resumed.session.position, 1);
+    expect(find.text(resumed.lesson.exercises[1].prompt), findsOneWidget);
+    await tester.tap(find.byTooltip('Закрыть и сохранить'));
+    await tester.pumpAndSettle();
+    await tester.runAsync(() async {
+      await r.uninstall(resumed.lesson.id);
+      await app.refresh();
+    });
+    await flushDb(tester);
+    await tester.tap(find.widgetWithText(FilledButton, 'Восстановить урок'));
+    await tester.pumpAndSettle();
+    final catalogTitle = r.catalog
+        .firstWhere((info) => info.id == resumed.lesson.id)
+        .title;
+    expect(find.text(catalogTitle), findsWidgets);
+    await tester.tap(
+      find.widgetWithText(FilledButton, 'Восстановить и открыть'),
+    );
+    for (
+      var retry = 0;
+      retry < 25 &&
+          find.text(resumed.lesson.exercises[1].prompt).evaluate().isEmpty;
+      retry++
+    ) {
+      await flushDb(tester);
+    }
+    expect(app.installed, contains(resumed.lesson.id));
+    expect(app.progress.xp, 10);
     expect(find.text(resumed.lesson.exercises[1].prompt), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();

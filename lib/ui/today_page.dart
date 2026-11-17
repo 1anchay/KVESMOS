@@ -16,7 +16,9 @@ import 'design.dart';
 
 String nextLessonRoute(AppController app) {
   final next = app.courseStart.next ?? app.repository.catalog.first;
-  return app.installed.contains(next.id) ? '/lesson/${next.id}' : '/offline';
+  return app.installed.contains(next.id)
+      ? '/lesson/${next.id}'
+      : '/offline?lesson=${next.id}';
 }
 
 ({LessonInfo? lesson, String route, String label, IconData icon})
@@ -33,9 +35,9 @@ recommendedStudy(AppController app) {
   if (!app.installed.contains(lesson.id)) {
     return (
       lesson: lesson,
-      route: '/offline',
-      label: 'Загрузить урок',
-      icon: Icons.download_rounded,
+      route: '/offline?lesson=${lesson.id}',
+      label: 'Восстановить урок',
+      icon: Icons.restore_rounded,
     );
   }
   return (

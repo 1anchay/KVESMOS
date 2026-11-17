@@ -12,7 +12,7 @@ Future<void> showLessonPreview(
 ) async {
   if (!app.courseStart.available(info)) return;
   if (!app.installed.contains(info.id)) {
-    context.go('/offline');
+    context.go('/offline?lesson=${info.id}');
     return;
   }
   try {

@@ -38,9 +38,11 @@ class OnboardingPage extends ConsumerWidget {
         title: const Text('KVESMOS'),
         leading: step > 0
             ? IconButton(
+                tooltip: 'Назад',
                 icon: const Icon(Icons.arrow_back),
-                onPressed: () =>
-                    context.go(['/welcome', '/language', '/level'][step - 1]),
+                onPressed: () => context.go(
+                  ['/welcome', '/language', '/placement'][step - 1],
+                ),
               )
             : null,
       ),
@@ -666,28 +668,90 @@ class QuestsPage extends ConsumerWidget {
 }
 
 class OfflinePage extends ConsumerStatefulWidget {
-  const OfflinePage({super.key});
+  final String? lessonId;
+  const OfflinePage({super.key, this.lessonId});
   @override
   ConsumerState<OfflinePage> createState() => _OfflinePageState();
 }
 
 class _OfflinePageState extends ConsumerState<OfflinePage> {
   bool busy = false;
+
+  Future<void> _updateCopy(
+    LessonInfo lesson, {
+    required bool remove,
+    bool openAfter = false,
+  }) async {
+    if (busy) return;
+    final app = ref.read(appProvider);
+    final course = app.course.id;
+    setState(() => busy = true);
+    try {
+      if (remove) {
+        await app.repository.uninstall(lesson.id);
+      } else {
+        await app.repository.install(lesson);
+      }
+      await app.refresh();
+      if (mounted &&
+          openAfter &&
+          widget.lessonId == lesson.id &&
+          app.course.id == course) {
+        context.go('/lesson/${lesson.id}');
+      }
+    } catch (_) {
+      if (mounted) {
+        showMessage(
+          context,
+          'Операция не выполнена. Проверьте свободное место.',
+        );
+      }
+    } finally {
+      if (mounted) setState(() => busy = false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final app = ref.watch(appProvider);
+    final target = app.repository.catalog
+        .where(
+          (lesson) =>
+              lesson.id == widget.lessonId && app.courseStart.available(lesson),
+        )
+        .firstOrNull;
+    final available = target != null && app.installed.contains(target.id);
     return pageBody([
       const SectionTitle(
         'Обучение без сети',
-        subtitle:
-            'Курс включён в приложение. Сохранение переносит урок в локальную SQLite-базу и не требует интернета.',
+        subtitle: 'Уроки можно восстановить из приложения без интернета.',
       ),
+      if (target != null) ...[
+        Text(target.title, style: Theme.of(context).textTheme.titleLarge),
+        const SizedBox(height: 8),
+        FilledButton.icon(
+          onPressed: busy
+              ? null
+              : available
+              ? () => context.go('/lesson/${target.id}')
+              : () => _updateCopy(target, remove: false, openAfter: true),
+          icon: Icon(available ? Icons.arrow_forward_rounded : Icons.restore),
+          label: Text(
+            busy
+                ? 'Восстанавливаем…'
+                : available
+                ? 'Открыть урок'
+                : 'Восстановить и открыть',
+          ),
+        ),
+        const SizedBox(height: 20),
+      ],
       Text(
         '${app.course.name}: ${app.repository.catalog.where((l) => app.installed.contains(l.id)).length} из ${app.repository.catalog.length} уроков сохранено',
       ),
       const SizedBox(height: 12),
       const Text(
-        'Новый материал озвучивается установленным голосом выбранного языка. Для старых английских фраз есть встроенные записи. Распознавание речи зависит от устройства; ввод текста доступен всегда.',
+        'Часть фраз озвучена в приложении. Для остальных нужен установленный голос устройства. В заданиях с микрофоном можно ответить текстом.',
       ),
       const SizedBox(height: 20),
       ...app.repository.catalog.map(
@@ -705,26 +769,10 @@ class _OfflinePageState extends ConsumerState<OfflinePage> {
                   : 'Сохранить урок',
               onPressed: busy
                   ? null
-                  : () async {
-                      setState(() => busy = true);
-                      try {
-                        if (app.installed.contains(lesson.id)) {
-                          await app.repository.uninstall(lesson.id);
-                        } else {
-                          await app.repository.install(lesson);
-                        }
-                        await app.refresh();
-                      } catch (_) {
-                        if (context.mounted) {
-                          showMessage(
-                            context,
-                            'Операция не выполнена. Проверьте свободное место.',
-                          );
-                        }
-                      } finally {
-                        if (mounted) setState(() => busy = false);
-                      }
-                    },
+                  : () => _updateCopy(
+                      lesson,
+                      remove: app.installed.contains(lesson.id),
+                    ),
               icon: Icon(
                 app.installed.contains(lesson.id)
                     ? Icons.delete_outline

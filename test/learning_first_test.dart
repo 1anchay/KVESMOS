@@ -86,7 +86,10 @@ void main() {
       expect(await subject.learningContinuationRoute(), '/lesson/a1-01');
       await repo.uninstall('a1-01');
       await subject.refresh();
-      expect(await subject.learningContinuationRoute(), '/offline');
+      expect(
+        await subject.learningContinuationRoute(),
+        '/offline?lesson=a1-01',
+      );
       for (final lesson in repo.catalog) {
         await repo.append(
           repo.event('complete', {

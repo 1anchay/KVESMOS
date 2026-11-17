@@ -246,7 +246,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
         ? '/map'
         : installed.contains(next.id)
         ? '/lesson/${next.id}'
-        : '/offline';
+        : '/offline?lesson=${next.id}';
   }
 
   Future<void> saveReminders(ReminderPreferences value) async {

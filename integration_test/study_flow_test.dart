@@ -46,7 +46,10 @@ void main() {
     Future<void> settle() async {
       for (var attempt = 0; attempt < 30; attempt++) {
         await tester.pumpAndSettle();
-        if (find.text('Сохраняем…').evaluate().isEmpty) return;
+        if (find.text('Сохраняем…').evaluate().isEmpty &&
+            find.text('Восстанавливаем…').evaluate().isEmpty) {
+          return;
+        }
         await Future<void>.delayed(const Duration(milliseconds: 80));
       }
       fail('The lesson did not finish saving');
@@ -171,7 +174,16 @@ void main() {
             expect(app.progress.xp, xp);
             expect(find.text('Продолжить урок'), findsOneWidget);
             await capture('05-resume-after-reopen');
+            await repository.uninstall(id);
+            await app.refresh();
+            await settle();
+            expect(find.text('Восстановить урок'), findsOneWidget);
             await tap(find.byKey(const Key('today-start')));
+            expect(find.text('Восстановить и открыть'), findsOneWidget);
+            await capture('06-offline-restore');
+            await tap(find.text('Восстановить и открыть'));
+            expect(app.installed, contains(id));
+            expect(app.progress.xp, xp);
             expect(find.byType(LessonIntroduction), findsNothing);
             final after = (await repository.previewLesson(id)).session!;
             expect(after.id, before.id);

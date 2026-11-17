@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import '../services/learning_audio.dart';
+import 'character_animation_catalog.dart';
 
 /// States are independent of the renderer: licensed frame sets can replace the
 /// current pose/gesture renderer without changing lesson or playback logic.
@@ -119,7 +120,25 @@ class _CharacterMomentState extends State<CharacterMoment>
   CharacterState? interaction;
   double gaze = 0;
   CharacterState get activeState => interaction ?? widget.effectiveState;
+  List<String> _castFrames = const [];
   void play() {
+    if (CharacterAnimationCatalog.cast.contains(widget.characterId)) {
+      _castFrames =
+          widget.frames[activeState] ??
+          CharacterAnimationCatalog.frames(
+            widget.characterId,
+            activeState.name,
+          );
+      for (final asset in _castFrames) {
+        precacheImage(
+          AssetImage(asset),
+          context,
+          onError: (error, _) {
+            debugPrint('Missing crew pose: $asset');
+          },
+        );
+      }
+    }
     controller.duration = Duration(
       milliseconds:
           (CharacterMotion.forState(activeState).milliseconds *
@@ -152,6 +171,19 @@ class _CharacterMomentState extends State<CharacterMoment>
     }
   }
 
+  void _react() {
+    setState(
+      () => interaction = switch (interaction) {
+        CharacterState.greeting => CharacterState.thinking,
+        CharacterState.thinking => CharacterState.celebration,
+        CharacterState.celebration => CharacterState.support,
+        CharacterState.support => CharacterState.surprise,
+        _ => CharacterState.greeting,
+      },
+    );
+    play();
+  }
+
   @override
   void dispose() {
     controller.dispose();
@@ -176,6 +208,52 @@ class _CharacterMomentState extends State<CharacterMoment>
       CharacterState.surprise => 'удивляется',
       CharacterState.goodbye => 'прощается',
     };
+    if (_castFrames.isNotEmpty) {
+      return Semantics(
+        label: '$name $label',
+        image: true,
+        button: true,
+        onTap: _react,
+        child: GestureDetector(
+          excludeFromSemantics: true,
+          onTap: _react,
+          child: SizedBox(
+            width: widget.size + 20,
+            height: widget.size + 22,
+            child: AnimatedBuilder(
+              animation: controller,
+              builder: (context, _) {
+                final t = controller.value;
+                final index = _castFrames.length == 1
+                    ? 0
+                    : t < .28
+                    ? 0
+                    : _castFrames.length - 1;
+                return AnimatedSwitcher(
+                  duration: reduce || !widget.animate
+                      ? Duration.zero
+                      : const Duration(milliseconds: 135),
+                  child: Image.asset(
+                    _castFrames[index],
+                    key: ValueKey(_castFrames[index]),
+                    fit: BoxFit.contain,
+                    width: widget.size + 12,
+                    height: widget.size + 12,
+                    excludeFromSemantics: true,
+                    errorBuilder: (_, _, _) => Image.asset(
+                      CharacterAnimationCatalog.neutral(widget.characterId),
+                      width: widget.size,
+                      height: widget.size,
+                      excludeFromSemantics: true,
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ),
+      );
+    }
     final pose = switch (state) {
       CharacterState.correct || CharacterState.goodbye => 'wink_thumbsup',
       CharacterState.celebration => 'happy',

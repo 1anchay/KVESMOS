@@ -68,7 +68,12 @@ class _PracticeHubState extends ConsumerState<PracticeHub> {
       recommendation = _recommend(SmartPracticeRepository(app.repository));
     }
     return pageBody([
-      const CharacterMoment(characterId: 'miko', size: 80, animate: false),
+      CharacterMoment(
+        characterId: 'miko',
+        size: 80,
+        state: CharacterState.greeting,
+        animate: app.audio.preferences.reactions,
+      ),
       Text('Тренировочная орбита', style: theme.headlineMedium),
       Text('${app.course.name} · выбери, что хочется закрепить'),
       const SizedBox(height: 12),

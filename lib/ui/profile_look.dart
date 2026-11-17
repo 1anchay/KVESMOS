@@ -28,7 +28,7 @@ class ProfileLook extends StatelessWidget {
     final big = MediaQuery.textScalerOf(context).scale(16) > 24;
     final portrait = SizedBox(
       width: 132,
-      height: 146,
+      height: 132,
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -55,41 +55,12 @@ class ProfileLook extends StatelessWidget {
                 child: CollectionArt(frame.asset, label: frame.name, size: 132),
               ),
             ),
-          Positioned(
-            bottom: 0,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
-              decoration: BoxDecoration(
-                color: colors.accent,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Text(
-                'LV ${app.globalProgress.level.toString().padLeft(2, '0')}',
-                style: TextStyle(
-                  color: colors.dark ? const Color(0xFF142F3B) : Colors.white,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 1,
-                ),
-              ),
-            ),
-          ),
         ],
       ),
     );
     final identity = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'ИССЛЕДОВАТЕЛЬ',
-          style: TextStyle(
-            color: colors.accent,
-            fontSize: 10,
-            letterSpacing: 1.4,
-            fontWeight: FontWeight.w800,
-          ),
-        ),
-        const SizedBox(height: 5),
         Text(
           app.name,
           style: TextStyle(
@@ -98,23 +69,6 @@ class ProfileLook extends StatelessWidget {
             fontWeight: FontWeight.w800,
             height: 1.1,
           ),
-        ),
-        const SizedBox(height: 14),
-        Text(
-          '${app.globalProgress.xp} XP всех языков · уровень ${app.globalProgress.level}',
-          style: TextStyle(color: colors.muted, fontSize: 12),
-        ),
-        const SizedBox(height: 7),
-        LinearProgressIndicator(
-          value: (app.globalProgress.xp % 250) / 250,
-          minHeight: 5,
-          color: colors.accent,
-          backgroundColor: colors.stroke,
-        ),
-        const SizedBox(height: 5),
-        Text(
-          'Ещё ${250 - app.globalProgress.xp % 250} XP до уровня ${app.globalProgress.level + 1}',
-          style: TextStyle(color: colors.muted, fontSize: 11),
         ),
       ],
     );

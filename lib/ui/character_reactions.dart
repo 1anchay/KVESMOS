@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../domain/course.dart';
 import '../domain/progress.dart';
 import 'design.dart';
+import 'character_moment.dart';
 
 /// UI reactions never award XP, change answers or write learning state.
 class CharacterCue {
@@ -100,12 +101,13 @@ bool hasDailyXpRecord(ProgressSnapshot progress, DateTime localNow) {
 class CharacterReaction extends StatefulWidget {
   final CharacterCue cue;
   final Object eventKey;
-  final bool announce;
+  final bool announce, animate;
   const CharacterReaction({
     super.key,
     required this.cue,
     required this.eventKey,
     this.announce = true,
+    this.animate = true,
   });
   @override
   State<CharacterReaction> createState() => _CharacterReactionState();
@@ -150,19 +152,42 @@ class _CharacterReactionState extends State<CharacterReaction> {
                 TweenAnimationBuilder<double>(
                   key: ValueKey((widget.eventKey, cue.id, line)),
                   tween: Tween(begin: 0, end: 1),
-                  duration: reduce
+                  duration: reduce || !widget.animate || cue.id != 'orbi'
                       ? Duration.zero
                       : const Duration(milliseconds: 420),
                   builder: (_, t, child) => Transform.translate(
-                    offset: Offset(0, reduce ? 0 : 6 * (1 - t)),
+                    offset: Offset(
+                      0,
+                      reduce || !widget.animate || cue.id != 'orbi'
+                          ? 0
+                          : 6 * (1 - t),
+                    ),
                     child: Transform.rotate(
-                      angle: reduce ? 0 : math.sin(math.pi * t) * .05,
+                      angle: reduce || !widget.animate || cue.id != 'orbi'
+                          ? 0
+                          : math.sin(math.pi * t) * .05,
                       child: child,
                     ),
                   ),
                   child: cue.id == 'orbi'
                       ? OrbitRobot(size: 70, emotion: cue.emotion)
-                      : CharacterPortrait(cue.id, size: 70),
+                      : IgnorePointer(
+                          child: CharacterMoment(
+                            characterId: cue.id,
+                            size: 64,
+                            animate: widget.animate,
+                            state: line > 0
+                                ? CharacterState.support
+                                : switch (cue.id) {
+                                    'aster' ||
+                                    'vespa' ||
+                                    'nox' ||
+                                    'fox_scholar' => CharacterState.thinking,
+                                    'pixie' => CharacterState.surprise,
+                                    _ => CharacterState.greeting,
+                                  },
+                          ),
+                        ),
                 ),
                 const SizedBox(width: 12),
                 Expanded(

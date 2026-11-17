@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
+import '../data/smart_placement_repository.dart';
 import '../domain/explorer_profile.dart';
 import '../domain/journey.dart';
 import '../domain/progress.dart';
+import '../domain/study_skills.dart';
 import 'collection_components.dart';
 import 'profile_look.dart';
 import 'profile_achievements.dart';
@@ -38,9 +40,10 @@ class ExplorerProfile extends ConsumerWidget {
           ),
         ),
         ProfileLook(app, showCustomizeButton: false),
-        Text(
-          '${app.course.name}: ${p.xp} XP · Все языки: ${app.globalProgress.xp} XP',
-        ),
+        _LanguageLevel(key: ValueKey(app.course.id), app: app),
+        const SizedBox(height: 16),
+        Text('Игровые награды', style: Theme.of(context).textTheme.titleMedium),
+        Text('${app.globalProgress.xp} XP · Все языки'),
         const SizedBox(height: 14),
         LayoutBuilder(
           builder: (context, c) => Wrap(
@@ -267,6 +270,90 @@ class ExplorerProfile extends ConsumerWidget {
           child: const Text('Продолжить путешествие'),
         ),
       ],
+    );
+  }
+}
+
+class _LanguageLevel extends StatefulWidget {
+  final AppController app;
+  const _LanguageLevel({super.key, required this.app});
+
+  @override
+  State<_LanguageLevel> createState() => _LanguageLevelState();
+}
+
+class _LanguageLevelState extends State<_LanguageLevel> {
+  late final course = widget.app.course;
+  late final result = SmartPlacementRepository(widget.app.repository).saved();
+  late final evidence = widget.app.repository.allEvents().then(
+    (events) => SkillReport.fromEvents(
+      events,
+      course: course.id,
+      now: widget.app.repository.now(),
+      historicalSkill: (_) => null,
+    ),
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    final type = Theme.of(context).textTheme;
+    return CollectionPanel(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          FutureBuilder(
+            future: result,
+            builder: (context, snapshot) {
+              final state = snapshot.data;
+              final level = state?['level'] ?? state?['previous']?['level'];
+              final description = switch (level) {
+                0 => 'Начинаю',
+                1 => 'Знаю основы',
+                2 => 'Уверенно использую знакомые темы',
+                _ => 'Уровень ещё не определён',
+              };
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '${course.flag} ${course.name} — $description',
+                    style: type.titleLarge,
+                  ),
+                  if (level != null)
+                    const Text('Стартовая оценка по диагностике'),
+                ],
+              );
+            },
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Пройдено ${widget.app.progress.completed.length} из ${course.lessons} уроков',
+          ),
+          FutureBuilder(
+            future: evidence,
+            builder: (context, snapshot) {
+              final supported = snapshot.data?.evidence.entries
+                  .where(
+                    (entry) =>
+                        entry.value.correct >= 5 &&
+                        entry.value.correct >= entry.value.errors * 3,
+                  )
+                  .map((entry) => entry.key.label)
+                  .toList();
+              if (supported == null || supported.isEmpty) {
+                return const SizedBox.shrink();
+              }
+              return Text(
+                'Уверенные ответы за 30 дней: ${supported.join(', ')}',
+              );
+            },
+          ),
+          OutlinedButton(
+            onPressed: () => context.go('/placement'),
+            child: const Text('Проверить уровень'),
+          ),
+        ],
+      ),
     );
   }
 }

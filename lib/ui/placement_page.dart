@@ -1,3 +1,4 @@
+import 'course_answer_field.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -262,7 +263,8 @@ class _PlacementPageState extends ConsumerState<PlacementPage> {
                     ),
                   )
               else ...[
-                TextField(
+                CourseAnswerField(
+                  accepted: List<String>.from(item['answers']),
                   controller: input,
                   maxLength: 400,
                   decoration: const InputDecoration(labelText: 'Твой ответ'),

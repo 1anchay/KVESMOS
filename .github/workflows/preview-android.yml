@@ -18,6 +18,7 @@ on:
       - feature/kvesmos-v1.2-smart-learning
       - feature/kvesmos-v1.3-level-and-courses
       - feature/kvesmos-v1.4-quality-polish
+      - feature/kvesmos-v1.4.1-core-learning-fixes
   workflow_dispatch:
 
 jobs:

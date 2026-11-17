@@ -188,8 +188,14 @@ class SystemTtsBackend
       await tts.setSharedInstance(true);
       await tts.setIosAudioCategory(IosTextToSpeechAudioCategory.playback, []);
     }
-    await tts.setLanguage(voice.locale);
-    await tts.setVoice({'name': voice.name, 'locale': voice.locale});
+    final language = await tts.setLanguage(voice.locale);
+    final selected = await tts.setVoice({
+      'name': voice.name,
+      'locale': voice.locale,
+    });
+    if (Platform.isAndroid && (language != 1 || selected != 1)) {
+      throw StateError('Android rejected the selected language or voice');
+    }
     await tts.setSpeechRate(rate);
     await tts.setPitch(pitch);
     await tts.setVolume(volume);

@@ -1,3 +1,4 @@
+import 'course_answer_field.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -312,7 +313,8 @@ class _SmartPracticePageState extends ConsumerState<SmartPracticePage> {
                         child: Text(option),
                       )
                   else ...[
-                    TextField(
+                    CourseAnswerField(
+                      accepted: exercise.answers,
                       controller: input,
                       enabled: !busy,
                       maxLength: 400,

@@ -1,3 +1,4 @@
+import 'course_answer_field.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -309,9 +310,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
     setState(() => busy = true);
     try {
       final app = ref.read(appProvider);
+      await voice.stop();
       await audio.stop();
       if (result == true) {
-        await voice.stop();
         session = await app.repository.session(session!.id);
         if (session!.done) lessonResult = await _readSummary(session!.id);
         prepare();
@@ -811,8 +812,12 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 onPressed: result != null || busy
                     ? null
                     : () async {
+                        if (voice.active) {
+                          await voice.stop(keepResult: true);
+                          return;
+                        }
                         await audio.stop();
-                        final ok = await voice.listen(
+                        await voice.listen(
                           (text) {
                             if (mounted && result == null) {
                               setState(() => input.text = text);
@@ -823,16 +828,20 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                             if (mounted) showMessage(context, message);
                           },
                           language: ref.read(appProvider).course.language,
+                          allowNetwork:
+                              await ref
+                                  .read(appProvider)
+                                  .repository
+                                  .setting(VoiceService.networkSetting) ==
+                              'true',
                         );
-                        if (!ok && context.mounted) {
-                          showMessage(
-                            context,
-                            'Микрофон или распознавание недоступны. Введите фразу вручную.',
-                          );
-                        }
                       },
                 icon: const Icon(Icons.mic_none),
-                label: const Text('Произнести фразу'),
+                label: ValueListenableBuilder(
+                  valueListenable: voice.status,
+                  builder: (_, value, _) =>
+                      Text(voice.active ? value : 'Произнести фразу'),
+                ),
               ),
               const SizedBox(height: 10),
               const Text(
@@ -1072,7 +1081,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         ],
       );
     }
-    return TextField(
+    return CourseAnswerField(
+      accepted: e.answers,
       controller: input,
       minLines: 2,
       maxLines: 4,

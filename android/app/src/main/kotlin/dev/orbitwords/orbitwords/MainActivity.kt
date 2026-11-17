@@ -18,6 +18,7 @@ import android.os.Looper
 import java.io.File
 
 class MainActivity : FlutterActivity() {
+    private var learningSpeech: LearningSpeech? = null
     private var progressDocuments: ProgressDocuments? = null
     private var companionChannel: MethodChannel? = null
     private var channel: MethodChannel? = null
@@ -29,6 +30,8 @@ class MainActivity : FlutterActivity() {
     private var focusEpoch = 0
     private var speechActive = false
     private var speechPlayer: MediaPlayer? = null
+    private var pendingSpeech: MethodChannel.Result? = null
+    private var lastSpeechProblem: String? = null
     private val manager get() = getSystemService(Context.AUDIO_SERVICE) as AudioManager
     private val focusListener = AudioManager.OnAudioFocusChangeListener { change ->
         if (change < 0) {
@@ -53,6 +56,8 @@ class MainActivity : FlutterActivity() {
     }
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        volumeControlStream = AudioManager.STREAM_MUSIC
+        learningSpeech = LearningSpeech(this, flutterEngine.dartExecutor.binaryMessenger)
         progressDocuments = ProgressDocuments(this, flutterEngine.dartExecutor.binaryMessenger)
         companionChannel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "dev.orbitwords/daily_companion")
         companionChannel!!.setMethodCallHandler { call, result ->
@@ -96,11 +101,15 @@ class MainActivity : FlutterActivity() {
                     }
                 }
                 "allowSpeech" -> {
-                    speechActive = true
-                    // Explicit lesson playback follows media volume. Muting
-                    // calls/notifications must not disable a requested phrase.
-                    result.success(canSpeak() && takeFocus())
+                    val allowed = permitSpeech()
+                    speechActive = allowed
+                    result.success(allowed)
                 }
+                "audioStatus" -> result.success(mapOf(
+                    "volume" to manager.getStreamVolume(AudioManager.STREAM_MUSIC),
+                    "maximum" to manager.getStreamMaxVolume(AudioManager.STREAM_MUSIC),
+                    "muted" to manager.isStreamMute(AudioManager.STREAM_MUSIC),
+                    "problem" to lastSpeechProblem))
                 "speechFinished" -> {
                     if (speechActive && speechPlayer == null) stopAudio()
                     result.success(null)
@@ -110,19 +119,27 @@ class MainActivity : FlutterActivity() {
                     val asset = call.argument<String>("asset") ?: ""
                     val request = call.argument<Number>("request")?.toInt()
                     if (!asset.startsWith("assets/audio/voices/") || asset.contains("..") ||
-                        asset.contains(":") || asset.contains("\\") || request == null || !canSpeak() || !takeFocus()) {
+                        asset.contains(":") || asset.contains("\\") || request == null || !permitSpeech()) {
                         result.success(false)
                     } else {
                         try {
-                            val target = File(cacheDir, "kvesmos-speech-current")
-                            assets.open("flutter_assets/$asset").use { input ->
-                                target.outputStream().use { input.copyTo(it) }
-                            }
                             val player = MediaPlayer()
                             speechPlayer = player
+                            pendingSpeech = result
                             player.setAudioAttributes(AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA)
                                 .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build())
-                            player.setDataSource(target.absolutePath)
+                            val path = "flutter_assets/$asset"
+                            try {
+                                assets.openFd(path).use {
+                                    player.setDataSource(it.fileDescriptor, it.startOffset, it.length)
+                                }
+                            } catch (_: java.io.IOException) {
+                                val target = File(cacheDir, "kvesmos-speech-current")
+                                assets.open(path).use { input ->
+                                    target.outputStream().use { input.copyTo(it) }
+                                }
+                                player.setDataSource(target.absolutePath)
+                            }
                             val volume = (call.argument<Double>("volume") ?: .85).coerceIn(0.0, 1.0).toFloat()
                             player.setVolume(volume, volume)
                             player.setOnCompletionListener {
@@ -133,20 +150,34 @@ class MainActivity : FlutterActivity() {
                             }
                             player.setOnErrorListener { failed, _, _ ->
                                 if (speechPlayer === failed) {
+                                    lastSpeechProblem = "decoder"
                                     stopAudio()
                                     channel?.invokeMethod("recordingFailed", request)
                                 }
                                 true
                             }
-                            player.prepare()
                             val rate = (call.argument<Double>("rate") ?: 1.0).coerceIn(.7, 1.0).toFloat()
-                            player.playbackParams = PlaybackParams().setSpeed(rate).setPitch(1f)
                             speechActive = true
-                            player.start()
-                            result.success(true)
+                            player.setOnPreparedListener {
+                                if (speechPlayer === it) {
+                                    try {
+                                        it.start()
+                                        if (rate != 1f) it.playbackParams = PlaybackParams().setSpeed(rate).setPitch(1f)
+                                        android.util.Log.i("KVESMOSAudio", "bundled playback started, rate=$rate")
+                                        pendingSpeech?.success(true)
+                                        pendingSpeech = null
+                                    } catch (_: Exception) {
+                                        lastSpeechProblem = "decoder"
+                                        stopAudio()
+                                    }
+                                }
+                            }
+                            player.prepareAsync()
                         } catch (_: Exception) {
+                            lastSpeechProblem = "asset"
+                            val pending = pendingSpeech
                             stopAudio()
-                            result.success(false)
+                            if (pending == null) result.success(false)
                         }
                     }
                 }
@@ -186,6 +217,14 @@ class MainActivity : FlutterActivity() {
         manager.getStreamVolume(AudioManager.STREAM_MUSIC) > 0
     private fun canSpeak() = manager.getStreamVolume(AudioManager.STREAM_MUSIC) > 0 &&
         !manager.isStreamMute(AudioManager.STREAM_MUSIC)
+    private fun permitSpeech(): Boolean {
+        lastSpeechProblem = when {
+            !canSpeak() -> "muted"
+            !takeFocus() -> "focus"
+            else -> null
+        }
+        return lastSpeechProblem == null
+    }
     @Suppress("DEPRECATION")
     private fun takeFocus(): Boolean {
         focusEpoch++
@@ -208,10 +247,13 @@ class MainActivity : FlutterActivity() {
         else manager.abandonAudioFocus(focusListener)
     }
     private fun stopRecording() {
+        pendingSpeech?.success(false)
+        pendingSpeech = null
         speechPlayer?.release()
         speechPlayer = null
     }
     override fun onPause() {
+        learningSpeech?.interrupt()
         stopAudio()
         channel?.invokeMethod("interrupted", null)
         super.onPause()
@@ -223,9 +265,15 @@ class MainActivity : FlutterActivity() {
         }
     }
     override fun onDestroy() {
+        learningSpeech?.dispose()
         progressDocuments?.dispose()
         stopAudio(); pool?.release(); pool = null
         channel?.setMethodCallHandler(null)
         super.onDestroy()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        learningSpeech?.onPermissionResult(requestCode)
     }
 }

@@ -1,3 +1,4 @@
+import 'course_answer_field.dart';
 import 'explorer_profile.dart';
 import 'course_picker.dart';
 import 'companion_settings.dart';
@@ -353,7 +354,8 @@ class _ReviewPageState extends ConsumerState<ReviewPage> {
           style: Theme.of(context).textTheme.headlineLarge,
         ),
         const SizedBox(height: 20),
-        TextField(
+        CourseAnswerField(
+          accepted: [queue![index].en],
           controller: input,
           enabled: correct == null,
           decoration: const InputDecoration(
@@ -490,7 +492,7 @@ class StatsPage extends ConsumerWidget {
         ),
       ),
       SectionTitle(
-        'Уровень ${p.level}',
+        'Игровой уровень ${p.level}',
         subtitle: 'Следующий уровень через ${250 - p.xp % 250} XP',
       ),
       LinearProgressIndicator(value: (p.xp % 250) / 250, minHeight: 8),
@@ -1013,6 +1015,11 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
         leading: const Icon(Icons.save_alt),
         title: const Text('Сохранение и перенос прогресса'),
         onTap: () => context.push('/progress-transfer'),
+      ),
+      ListTile(
+        leading: const Icon(Icons.headphones),
+        title: const Text('Проверить звук и микрофон'),
+        onTap: () => context.push('/device-learning-check'),
       ),
       const AudioSettings(),
       const SectionTitle('Учебный путь'),

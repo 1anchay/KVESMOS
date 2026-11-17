@@ -1,3 +1,4 @@
+import 'device_learning_check.dart';
 import 'unit_mastery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -224,6 +225,10 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             GoRoute(path: '/quests', builder: (_, _) => const QuestsPage()),
             GoRoute(path: '/profile', builder: (_, _) => const ProfilePage()),
             GoRoute(path: '/courses', builder: (_, _) => const CoursesPage()),
+            GoRoute(
+              path: '/device-learning-check',
+              builder: (_, _) => const DeviceLearningCheck(),
+            ),
             GoRoute(path: '/settings', builder: (_, _) => const SettingsPage()),
             GoRoute(path: '/offline', builder: (_, _) => const OfflinePage()),
           ],

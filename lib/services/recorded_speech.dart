@@ -87,6 +87,9 @@ class RecordedSpeechCatalog {
                 r.locale == locale &&
                 _phrase(r.text) == _phrase(text),
           )
+          .firstOrNull ??
+      recordings
+          .where((r) => r.locale == locale && _phrase(r.text) == _phrase(text))
           .firstOrNull;
   static String _phrase(String text) => text
       .trim()
@@ -114,13 +117,15 @@ abstract interface class PausableRecordedSpeech {
 class NativeRecordedSpeech
     implements RecordedSpeechBackend, PausableRecordedSpeech {
   static const channel = MethodChannel('dev.orbitwords/learning_audio');
-  bool _active = false;
+  int? _activeRequest;
   @override
   Future<bool> pause() async =>
-      _active && await channel.invokeMethod<bool>('pauseSpeech') == true;
+      _activeRequest != null &&
+      await channel.invokeMethod<bool>('pauseSpeech') == true;
   @override
   Future<bool> resume() async =>
-      _active && await channel.invokeMethod<bool>('resumeSpeech') == true;
+      _activeRequest != null &&
+      await channel.invokeMethod<bool>('resumeSpeech') == true;
   @override
   Future<bool> play(
     SpeechRecording clip, {
@@ -128,7 +133,7 @@ class NativeRecordedSpeech
     required double volume,
     required int request,
   }) async {
-    _active = true;
+    _activeRequest = request;
     try {
       final started =
           await channel.invokeMethod<bool>('playSpeech', {
@@ -140,18 +145,18 @@ class NativeRecordedSpeech
             'request': request,
           }) ??
           false;
-      if (!started) _active = false;
+      if (!started && _activeRequest == request) _activeRequest = null;
       return started;
     } catch (_) {
-      _active = false;
+      if (_activeRequest == request) _activeRequest = null;
       rethrow;
     }
   }
 
   @override
   Future<void> stop() async {
-    if (!_active) return;
-    _active = false;
+    if (_activeRequest == null) return;
+    _activeRequest = null;
     try {
       await channel.invokeMethod<void>('stopSpeech');
     } catch (_) {

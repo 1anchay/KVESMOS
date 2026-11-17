@@ -44,7 +44,7 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
         Text(
           audio.recordings.recordings.isEmpty
               ? 'Студийные записи персонажей пока не добавлены. Доступна резервная озвучка голосами устройства.'
-              : 'Офлайн: ${audio.recordings.recordings.length} английских реплик, ${audio.recordings.recordings.map((r) => r.performer).toSet().length} синтезированных голоса. Обычные и медленные версии. Это синтез, не запись актёров. Для остальных фраз — системный голос.',
+              : 'Офлайн: ${audio.recordings.recordings.length} реплик на разных языках, ${audio.recordings.recordings.map((r) => r.performer).toSet().length} синтезированных голоса. Обычные и медленные версии. Это синтез, не запись актёров. Для остальных фраз — системный голос.',
         ),
         SwitchListTile(
           contentPadding: EdgeInsets.zero,

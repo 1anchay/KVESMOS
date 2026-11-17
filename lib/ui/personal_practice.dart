@@ -1,3 +1,4 @@
+import 'course_answer_field.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -320,8 +321,12 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
             onPressed: busy
                 ? null
                 : () async {
+                    if (voice.active) {
+                      await voice.stop(keepResult: true);
+                      return;
+                    }
                     await audio.stop();
-                    final ok = await voice.listen(
+                    await voice.listen(
                       (text) {
                         if (mounted &&
                             !busy &&
@@ -335,24 +340,29 @@ class _PersonalPracticePageState extends ConsumerState<PersonalPracticePage> {
                         if (mounted) showMessage(context, message);
                       },
                       language: app.course.language,
+                      allowNetwork:
+                          await ref
+                              .read(appProvider)
+                              .repository
+                              .setting(VoiceService.networkSetting) ==
+                          'true',
                     );
-                    if (!ok && context.mounted) {
-                      showMessage(
-                        context,
-                        'Распознавание недоступно. Можно ввести ответ текстом.',
-                      );
-                    }
                   },
             icon: const Icon(Icons.mic_none),
-            label: const Text('Произнести фразу'),
+            label: ValueListenableBuilder(
+              valueListenable: voice.status,
+              builder: (_, value, _) =>
+                  Text(voice.active ? value : 'Произнести фразу'),
+            ),
           ),
           const Text(
             'Проверяем распознанный текст, а не произношение. Текстовый ответ доступен всегда.',
           ),
         ],
         const SizedBox(height: 16),
-        TextField(
-          key: const Key('practice-input'),
+        CourseAnswerField(
+          fieldKey: const Key('practice-input'),
+          accepted: [word.en],
           controller: input,
           textInputAction: TextInputAction.done,
           enabled: !busy,

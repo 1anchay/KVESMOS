@@ -1,3 +1,4 @@
+import 'course_answer_field.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -99,10 +100,14 @@ class _PictureRecallPageState extends ConsumerState<PictureRecallPage> {
   }
 
   Future<void> record() async {
+    if (voice.active) {
+      await voice.stop(keepResult: true);
+      return;
+    }
     final generation = ++voiceGeneration;
     await app.audio.stop();
     if (!mounted || generation != voiceGeneration) return;
-    final ok = await voice.listen(
+    await voice.listen(
       (text) {
         if (!mounted || generation != voiceGeneration || busy) return;
         input.text = text;
@@ -114,10 +119,13 @@ class _PictureRecallPageState extends ConsumerState<PictureRecallPage> {
         }
       },
       language: repository.language,
+      allowNetwork:
+          await ref
+              .read(appProvider)
+              .repository
+              .setting(VoiceService.networkSetting) ==
+          'true',
     );
-    if (!ok && mounted && generation == voiceGeneration) {
-      showMessage(context, 'Распознавание недоступно. Введи ответ текстом.');
-    }
   }
 
   @override
@@ -188,8 +196,9 @@ class _PictureRecallPageState extends ConsumerState<PictureRecallPage> {
                 PictureArt(card.id),
                 const SizedBox(height: 16),
                 if (!checked) ...[
-                  TextField(
-                    key: const Key('picture-input'),
+                  CourseAnswerField(
+                    fieldKey: const Key('picture-input'),
+                    accepted: card.forms,
                     controller: input,
                     enabled: !busy,
                     textInputAction: TextInputAction.done,

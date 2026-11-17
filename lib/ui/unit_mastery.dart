@@ -1,3 +1,4 @@
+import 'course_answer_field.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -230,8 +231,9 @@ class _UnitMasteryPageState extends ConsumerState<UnitMasteryPage> {
                               const SizedBox(height: 16),
                               Text(item!['meaning'], style: type.headlineSmall),
                               const SizedBox(height: 20),
-                              TextField(
-                                key: const Key('mastery-input'),
+                              CourseAnswerField(
+                                fieldKey: const Key('mastery-input'),
+                                accepted: [item['phrase'] as String],
                                 controller: input,
                                 enabled: !busy && !checked,
                                 minLines: 1,

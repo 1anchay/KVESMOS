@@ -1,3 +1,4 @@
+import 'course_answer_field.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -92,12 +93,11 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
   }
 
   Future<void> _voice() async {
-    final ticket = ++voiceTicket;
     if (listening) {
-      setState(() => listening = false);
-      await voice.stop();
+      await voice.stop(keepResult: true);
       return;
     }
+    final ticket = ++voiceTicket;
     setState(() => listening = true);
     await app.audio.stop();
     if (!mounted || ticket != voiceTicket) return;
@@ -108,7 +108,7 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
       showMessage(context, message);
     }
 
-    final ok = await voice.listen(
+    await voice.listen(
       (words) {
         if (!mounted || ticket != voiceTicket || words.isEmpty) return;
         input.text = words;
@@ -116,11 +116,16 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
       },
       unavailable,
       language: app.course.language,
+      allowNetwork:
+          await ref
+              .read(appProvider)
+              .repository
+              .setting(VoiceService.networkSetting) ==
+          'true',
       onDone: () {
         if (mounted && ticket == voiceTicket) setState(() => listening = false);
       },
     );
-    if (!ok) unavailable('Распознавание недоступно. Ответ можно написать.');
   }
 
   Widget bubble(String name, String character, DialogueLine line) =>
@@ -326,7 +331,8 @@ class _ConversationPageState extends ConsumerState<ConversationPage> {
                   ),
                 ),
               if (step == 2 && typing) ...[
-                TextField(
+                CourseAnswerField(
+                  accepted: [path.farewell.text],
                   controller: input,
                   enabled: !busy,
                   decoration: const InputDecoration(

@@ -42,6 +42,7 @@ void main() {
         }
         await tester.pumpWidget(
           MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: orbitTheme(theme),
             home: Scaffold(
               appBar: AppBar(title: const Text('Команда KVESMOS')),
@@ -63,6 +64,7 @@ void main() {
                       Text(switch (state) {
                         CharacterState.idle => 'Ожидание',
                         CharacterState.greeting => 'Приветствие',
+                        CharacterState.surprise => 'Удивление',
                         CharacterState.thinking => 'Размышление',
                         CharacterState.celebration => 'Радость',
                         _ => 'Поддержка',
@@ -75,7 +77,9 @@ void main() {
           ),
         );
         await capture('$hue-${id.replaceAll('_', '-')}-neutral');
-        motion.value = CharacterState.greeting;
+        motion.value = id == 'pixie'
+            ? CharacterState.surprise
+            : CharacterState.greeting;
         await tester.pump();
         await Future<void>.delayed(const Duration(milliseconds: 600));
         await capture('$hue-${id.replaceAll('_', '-')}-gesture');

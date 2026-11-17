@@ -117,23 +117,15 @@ class OnboardingPage extends ConsumerWidget {
               if (app.onboarded) {
                 context.go('/');
               } else if (step == 3) {
-                await app.repository.setSetting(
-                  'kvesmos.onboarding.route.v012',
-                  '/companion/reminders',
-                );
-                if (context.mounted) context.go('/companion/reminders');
+                final route = await app.learningContinuationRoute();
+                await app.finishOnboarding();
+                if (context.mounted) context.go(route);
               } else {
                 context.go(['/language', '/level', '/goal'][step]);
               }
             },
-            child: const Text('Продолжить'),
+            child: Text(step == 3 ? 'К уроку' : 'Продолжить'),
           ),
-        const SizedBox(height: 18),
-        Text(
-          'ШАГ ${step + 1} ИЗ 6',
-          textAlign: TextAlign.center,
-          style: const TextStyle(letterSpacing: 2, fontSize: 12),
-        ),
       ]),
     );
   }

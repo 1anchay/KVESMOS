@@ -377,6 +377,8 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   Future<void> finishOnboarding() async {
     await repository.setSetting('onboarded', 'true');
     onboarded = true;
+    companionInvitation =
+        await repository.setting('kvesmos.companion.invitation.v012') != 'seen';
     notifyListeners();
   }
 

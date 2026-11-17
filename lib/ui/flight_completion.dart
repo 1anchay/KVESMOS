@@ -69,11 +69,25 @@ class FlightCompletion extends StatelessWidget {
         top: false,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 10, 20, 12),
-          child: FilledButton.icon(
-            key: const Key('completion-next'),
-            onPressed: () => context.go(showReward ? '/rewards' : next.route),
-            icon: Icon(showReward ? Icons.redeem_rounded : next.icon),
-            label: Text(showReward ? 'Открыть находки' : next.label),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              if (showReward) ...[
+                OutlinedButton.icon(
+                  onPressed: () => context.go('/rewards'),
+                  icon: const Icon(Icons.redeem_rounded),
+                  label: const Text('Открыть находки'),
+                ),
+                const SizedBox(height: 4),
+              ],
+              FilledButton.icon(
+                key: const Key('completion-next'),
+                onPressed: () => context.go(next.route),
+                icon: Icon(next.icon),
+                label: Text(next.label),
+              ),
+            ],
           ),
         ),
       ),
@@ -334,12 +348,6 @@ class FlightCompletion extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          if (showReward)
-            OutlinedButton.icon(
-              onPressed: () => context.go(next.route),
-              icon: Icon(next.icon),
-              label: Text(next.label),
-            ),
           TextButton(
             onPressed: () => context.go('/'),
             child: const Text('На сегодня достаточно'),

@@ -148,6 +148,13 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.text('Дальше'));
       await flushDb(tester);
+      final next = find.byKey(const Key('completion-next'));
+      expect(next.hitTestable(), findsOneWidget);
+      expect(
+        find.descendant(of: next, matching: find.text('Начать урок')),
+        findsOneWidget,
+      );
+      expect(find.text('Открыть находки').hitTestable(), findsOneWidget);
       await tester.scrollUntilVisible(find.text('+120 XP'), 250);
       await tester.pumpAndSettle();
       expect(find.text('+120 XP'), findsOneWidget);

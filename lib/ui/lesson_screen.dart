@@ -33,7 +33,7 @@ import '../services/learning_audio.dart';
 
 const exerciseNames = {
   ExerciseType.translate: 'Переведите предложение',
-  ExerciseType.choice: 'Выберите перевод',
+  ExerciseType.choice: 'Выберите ответ',
   ExerciseType.order: 'Соберите предложение',
   ExerciseType.gap: 'Заполните пропуск',
   ExerciseType.listen: 'Поймайте сигнал',

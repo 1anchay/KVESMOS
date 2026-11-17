@@ -43,19 +43,16 @@ void main() {
       await tester.tap(next);
       await flushDb(tester);
     }
-    final start = find.widgetWithText(FilledButton, 'Продолжить');
+    final start = find.widgetWithText(FilledButton, 'К уроку');
     await tester.scrollUntilVisible(start, 250);
     await tester.pumpAndSettle();
     await tester.tap(start);
     await flushDb(tester);
-    for (var decision = 0; decision < 2; decision++) {
-      final later = find.widgetWithText(TextButton, 'Не сейчас');
-      await tester.scrollUntilVisible(later, 250);
-      await tester.tap(later);
-      await flushDb(tester);
-    }
+    expect(app.onboarded, isTrue);
+    expect(app.companionInvitation, isTrue);
     expect(app.companion.preferences.enabled, isFalse);
     await advanceTeaching(tester);
+    expect(find.text('Выберите ответ'), findsOneWidget);
     expect(
       find.text(
         'Орби встречает тебя на космической станции. Что ему ответить?',

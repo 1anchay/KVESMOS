@@ -88,12 +88,9 @@ void main() {
       await tap(find.text('Продолжить'));
       await tap(find.byKey(const ValueKey('course-ru-en')));
       await tap(find.text('Начать с нуля'));
-      await tap(find.text('Продолжить'));
-      await tap(find.text('Не сейчас'));
-      await tap(find.text('Не сейчас'));
-      if (find.byKey(const Key('today-start')).evaluate().isNotEmpty) {
-        await tap(find.byKey(const Key('today-start')));
-      }
+      await tap(find.text('К уроку'));
+      expect(app.onboarded, isTrue);
+      expect(app.companion.preferences.enabled, isFalse);
 
       var totalCorrect = 0;
       for (var number = 1; number <= 3; number++) {
@@ -185,16 +182,13 @@ void main() {
         expect(app.progress.correct, totalCorrect);
         expect(app.progress.errors, 1);
         expect(find.text('Ещё одно открытие!'), findsOneWidget);
-        await capture('lesson-$number-completion');
-        if (number < 3) {
-          final primary = find.byKey(const Key('completion-next'));
-          final start = find.text('Начать урок');
-          await tap(
-            find.descendant(of: primary, matching: start).evaluate().isEmpty
-                ? start
-                : primary,
-          );
+        final next = find.byKey(const Key('completion-next'));
+        expect(next.hitTestable(), findsOneWidget);
+        if (number == 1) {
+          expect(find.text('Открыть находки').hitTestable(), findsOneWidget);
         }
+        await capture('lesson-$number-completion');
+        if (number < 3) await tap(next);
       }
       expect(app.progress.completed, {'a1-01', 'a1-02', 'a1-03'});
       final router = GoRouter.of(tester.element(find.byType(LessonScreen)));

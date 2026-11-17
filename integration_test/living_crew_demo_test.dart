@@ -35,10 +35,11 @@ void main() {
         final hue = theme.name;
         final motion = ValueNotifier(CharacterState.idle);
         final name = CharacterVoiceProfile.forId(id).name;
-        if (index == 0)
+        if (index == 0) {
           await marker(
             'VIDEO_START:${theme == Brightness.light ? 'en' : 'zh'}',
           );
+        }
         await tester.pumpWidget(
           MaterialApp(
             theme: orbitTheme(theme),

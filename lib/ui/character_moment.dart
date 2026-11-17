@@ -138,6 +138,8 @@ class _CharacterMomentState extends State<CharacterMoment>
           },
         );
       }
+    } else {
+      _castFrames = const [];
     }
     controller.duration = Duration(
       milliseconds:
@@ -165,6 +167,7 @@ class _CharacterMomentState extends State<CharacterMoment>
     super.didUpdateWidget(old);
     if (old.effectiveState != widget.effectiveState ||
         old.characterId != widget.characterId ||
+        old.frames != widget.frames ||
         old.animate != widget.animate) {
       interaction = null;
       play();

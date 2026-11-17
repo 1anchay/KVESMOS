@@ -200,7 +200,8 @@ void main() {
       );
       final audio = LearningAudio(read, write, backend: backend);
       await audio.initialize();
-      expect(await audio.speak('Hello'), true);
+      const unrecorded = 'The telescope waits outside.';
+      expect(await audio.speak(unrecorded), true);
       final stops = backend.stops;
       expect(await audio.play(SoundEffect.correct), true);
       expect(backend.stops, greaterThan(stops));
@@ -220,7 +221,7 @@ void main() {
       expect(reopened.preferences.encode(), audio.preferences.encode());
       expect(await reopened.speak('muted'), false);
       expect(await reopened.play(SoundEffect.xp), false);
-      expect(backend.spoken, ['Hello']);
+      expect(backend.spoken, [unrecorded]);
       expect(
         jsonDecode(storage[LearningAudio.preferencesKey]!)['reactions'],
         false,

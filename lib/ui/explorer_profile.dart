@@ -13,6 +13,12 @@ import 'profile_look.dart';
 import 'profile_achievements.dart';
 import 'language_passport.dart';
 
+String _themeLabel(ThemeMode mode) => switch (mode) {
+  ThemeMode.system => 'Как в системе',
+  ThemeMode.light => 'Светлая',
+  ThemeMode.dark => 'Тёмная',
+};
+
 class ExplorerProfile extends ConsumerWidget {
   const ExplorerProfile({super.key});
   @override
@@ -39,11 +45,38 @@ class ExplorerProfile extends ConsumerWidget {
             ),
           ),
         ),
-        ProfileLook(app, showCustomizeButton: false),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: PopupMenuButton<ThemeMode>(
+            key: const Key('profile-theme'),
+            tooltip: 'Оформление',
+            initialValue: app.theme,
+            onSelected: (mode) => app.savePreferences(newTheme: mode),
+            itemBuilder: (_) => [
+              for (final mode in ThemeMode.values)
+                PopupMenuItem(value: mode, child: Text(_themeLabel(mode))),
+            ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.contrast_rounded, size: 20),
+                  const SizedBox(width: 8),
+                  Flexible(child: Text('Тема · ${_themeLabel(app.theme)}')),
+                  const Icon(Icons.expand_more_rounded),
+                ],
+              ),
+            ),
+          ),
+        ),
+        ProfileLook(app),
         _LanguageLevel(key: ValueKey(app.course.id), app: app),
         const SizedBox(height: 16),
         Text('Игровые награды', style: Theme.of(context).textTheme.titleMedium),
-        Text('${app.globalProgress.xp} XP · Все языки'),
+        Text(
+          'Игровой уровень ${app.globalProgress.level} · ${app.globalProgress.xp} XP',
+        ),
         const SizedBox(height: 14),
         LayoutBuilder(
           builder: (context, c) => Wrap(
@@ -108,11 +141,6 @@ class ExplorerProfile extends ConsumerWidget {
           spacing: 10,
           runSpacing: 8,
           children: [
-            FilledButton.icon(
-              onPressed: () => context.go('/inventory'),
-              icon: const Icon(Icons.tune),
-              label: const Text('Мой гардероб'),
-            ),
             OutlinedButton.icon(
               onPressed: () => context.go('/rewards'),
               icon: const Icon(Icons.redeem_outlined),

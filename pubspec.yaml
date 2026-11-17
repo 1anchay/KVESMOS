@@ -1,7 +1,7 @@
 name: orbitwords
 description: Free offline language journeys. English, Spanish, German, French and Mandarin starter courses for Russian speakers.
 publish_to: none
-version: 1.4.1+23
+version: 1.4.2+24
 environment:
   sdk: '>=3.8.0 <4.0.0'
 dependencies:
@@ -51,6 +51,7 @@ flutter:
     - assets/fonts/HANZI-OFL.txt
     - assets/courses/
     - assets/kvesmos/
+    - assets/kvesmos/crew_motion/
     - assets/audio/effects/
     - assets/audio/voices/
     - assets/audio/voices/clips/

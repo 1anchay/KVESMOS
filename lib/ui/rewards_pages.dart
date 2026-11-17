@@ -1,3 +1,4 @@
+import 'character_moment.dart';
 export 'profile_look.dart';
 export 'chest_scene.dart';
 export 'wardrobe.dart';
@@ -115,15 +116,26 @@ class CrewPage extends ConsumerWidget {
               padding: const EdgeInsets.all(16),
               child: Row(
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(
-                      c['asset_path'],
-                      width: 90,
-                      height: 108,
-                      fit: BoxFit.contain,
+                  if (c['id'] == 'orbi')
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        c['asset_path'],
+                        width: 90,
+                        height: 108,
+                        fit: BoxFit.contain,
+                      ),
+                    )
+                  else
+                    CharacterMoment(
+                      characterId: c['id'] as String,
+                      size: 72,
+                      animate: ref
+                          .watch(appProvider)
+                          .audio
+                          .preferences
+                          .reactions,
                     ),
-                  ),
                   const SizedBox(width: 16),
                   Expanded(
                     child: Column(

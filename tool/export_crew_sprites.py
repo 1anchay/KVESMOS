@@ -6,7 +6,7 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
-from scipy.ndimage import label
+from scipy.ndimage import binary_fill_holes, label
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "docs/design-handoff/01_approved/characters"
@@ -20,7 +20,7 @@ CELLS = {
     "nox": [(423,237,499,341),(506,237,583,341),(252,234,331,341),(588,237,668,341),(337,237,417,341),(413,353,579,573)],
     "reyvo": [(478,212,538,309),(703,213,758,307),(546,213,614,310),(622,211,690,307),(414,212,474,308),(350,315,474,488)],
     "vespa": [(420,221,483,309),(699,221,762,308),(491,219,549,307),(557,220,619,308),(216,223,275,307),(320,329,482,500)],
-    "zig_quartz": [(551,233,649,327),(665,233,761,329),(446,234,544,328),(360,233,441,326),(255,232,348,326),(4,377,225,505)],
+    "zig_quartz": [(551,233,649,327),(665,233,761,329),(446,234,544,328),(360,233,441,326),(255,232,348,326),(4,362,225,505)],
 }
 STATES = ("think", "support", "surprise", "happy", "talk", "gesture")
 
@@ -40,7 +40,12 @@ def cutout(cell, background, keep_props):
         keep = areas >= (areas[largest] * .006)
     else:
         keep = np.arange(len(areas)) == largest
-    alpha *= keep[regions]
+    silhouette = keep[regions]
+    alpha *= silhouette
+    # Keep interior highlights intact, particularly the characters' eyes.
+    holes, _ = label(binary_fill_holes(silhouette) & ~silhouette)
+    sizes = np.bincount(holes.ravel())
+    alpha[(holes != 0) & (sizes[holes] < areas[largest] * .03)] = 1
     # Undo the white/beige matte on translucent outer pixels.
     straight = np.clip(bg + (rgb - bg) / np.maximum(alpha[..., None], .03), 0, 255)
     return Image.fromarray(np.dstack((straight, alpha * 255)).astype("uint8"))
@@ -61,6 +66,11 @@ def main():
     args = parser.parse_args()
     OUT.mkdir(exist_ok=True)
     for name, cells in CELLS.items():
+        neutral = Image.open(ROOT / "assets/kvesmos" / f"{name}.png").convert("RGB")
+        pixels = np.asarray(neutral)
+        corners = np.concatenate((pixels[:20, :20], pixels[:20, -20:]), axis=1)
+        neutral_matte = np.median(corners, axis=(0, 1))
+        save(cutout(neutral, neutral_matte, True), name, "neutral")
         sheet = Image.open(SOURCE / f"{name}_sheet.png").convert("RGB")
         ratio = sheet.width / 768
         background = np.median(np.asarray(sheet)[:25, -25:, :], axis=(0, 1))

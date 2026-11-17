@@ -17,7 +17,10 @@ abstract final class CharacterAnimationCatalog {
       'assets/kvesmos/crew_motion/${id}_$pose.webp';
 
   static List<String> frames(String id, String state) {
-    if (!cast.contains(id) || state == 'idle') return [neutral(id)];
+    if (!cast.contains(id)) return [neutral(id)];
+    if (state == 'idle') {
+      return [id == 'pixie' ? neutral(id) : artwork(id, 'neutral')];
+    }
     if (id == 'pixie') {
       return switch (state) {
         'greeting' ||

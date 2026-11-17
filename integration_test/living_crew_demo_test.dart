@@ -76,6 +76,15 @@ void main() {
             ),
           ),
         );
+        final portrait = find.descendant(
+          of: find.byType(CharacterMoment),
+          matching: find.byType(Image),
+        );
+        final portraitContext = tester.element(portrait);
+        await precacheImage(
+          tester.widget<Image>(portrait).image,
+          portraitContext,
+        );
         await capture('$hue-${id.replaceAll('_', '-')}-neutral');
         motion.value = id == 'pixie'
             ? CharacterState.surprise

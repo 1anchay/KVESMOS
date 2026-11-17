@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
+import '../domain/course.dart';
 import '../domain/missions.dart';
 import '../domain/today.dart';
 import '../domain/journey.dart';
@@ -16,6 +17,35 @@ import 'design.dart';
 String nextLessonRoute(AppController app) {
   final next = app.courseStart.next ?? app.repository.catalog.first;
   return app.installed.contains(next.id) ? '/lesson/${next.id}' : '/offline';
+}
+
+({LessonInfo? lesson, String route, String label, IconData icon})
+recommendedStudy(AppController app) {
+  final lesson = app.courseStart.next;
+  if (lesson == null) {
+    return (
+      lesson: null,
+      route: '/review',
+      label: 'Повторить слова',
+      icon: Icons.refresh_rounded,
+    );
+  }
+  if (!app.installed.contains(lesson.id)) {
+    return (
+      lesson: lesson,
+      route: '/offline',
+      label: 'Загрузить урок',
+      icon: Icons.download_rounded,
+    );
+  }
+  return (
+    lesson: lesson,
+    route: '/lesson/${lesson.id}',
+    label: app.courseStart.active.contains(lesson.id)
+        ? 'Продолжить урок'
+        : 'Начать урок',
+    icon: Icons.arrow_forward_rounded,
+  );
 }
 
 bool reviewReadyToday(AppController app) => app.progress.words.values.any(
@@ -52,7 +82,9 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     final day = dayKey(app.repository.now());
     arrival(app, day);
     final today = TodayJourney(app.progress, app.repository.now(), app.goal);
-    final next = app.courseStart.next ?? app.repository.catalog.first;
+    final recommendation = recommendedStudy(app);
+    final next = recommendation.lesson;
+    final objective = app.repository.learningObjectives[next?.id];
     final type = Theme.of(context).textTheme;
     final largeText = MediaQuery.textScalerOf(context).scale(16) > 22;
     final companion = CharacterMoment(
@@ -129,16 +161,18 @@ class _TodayPageState extends ConsumerState<TodayPage> {
               label: 'Цель дня',
             ),
             const SizedBox(height: 14),
-            Text('Следующий урок', style: type.labelLarge),
+            Text(
+              next == null ? 'Курс завершён' : 'Следующий урок',
+              style: type.labelLarge,
+            ),
             const SizedBox(height: 4),
-            Text(next.title, style: type.titleLarge),
-            if (app.repository.learningObjectives[next.id]?.isNotEmpty ==
-                true) ...[
+            Text(
+              next?.title ?? 'Закрепи знакомые слова',
+              style: type.titleLarge,
+            ),
+            if (objective != null && objective.isNotEmpty) ...[
               const SizedBox(height: 6),
-              Text(
-                app.repository.learningObjectives[next.id]!,
-                style: type.bodyMedium,
-              ),
+              Text(objective, style: type.bodyMedium),
             ],
             const SizedBox(height: 10),
             SizedBox(
@@ -147,10 +181,10 @@ class _TodayPageState extends ConsumerState<TodayPage> {
                 key: const Key('today-start'),
                 onPressed: () {
                   unawaited(app.audio.play(SoundEffect.tap));
-                  context.go(nextLessonRoute(app));
+                  context.go(recommendation.route);
                 },
-                icon: const Icon(Icons.arrow_forward_rounded),
-                label: const Text('Продолжить урок'),
+                icon: Icon(recommendation.icon),
+                label: Text(recommendation.label),
               ),
             ),
           ],

@@ -72,13 +72,13 @@ class AnswerSignal extends StatelessWidget {
                 ),
               ],
             ),
-            if (explanation != null) ...[
-              const SizedBox(height: 8),
-              Text(explanation!, style: Theme.of(context).textTheme.bodyMedium),
-            ],
             if (correction != null) ...[
-              const SizedBox(height: 6),
+              const SizedBox(height: 8),
               Text(correction!, style: Theme.of(context).textTheme.titleSmall),
+            ],
+            if (explanation != null) ...[
+              const SizedBox(height: 6),
+              Text(explanation!, style: Theme.of(context).textTheme.bodyMedium),
             ],
           ],
         ),

@@ -84,7 +84,7 @@ void main() {
       expect(find.text('120'), findsOneWidget);
       router.go('/');
       await tester.pumpAndSettle();
-      expect(find.text('Продолжить урок'), findsOneWidget);
+      expect(find.text('Начать урок'), findsOneWidget);
     },
   );
 }

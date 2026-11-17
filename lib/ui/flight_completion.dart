@@ -39,6 +39,12 @@ class FlightCompletion extends StatelessWidget {
   Widget build(BuildContext context) {
     final today = TodayJourney(app.progress, app.repository.now(), app.goal);
     final type = Theme.of(context).textTheme;
+    final next = recommendedStudy(app);
+    final showReward = newChests > 0 && app.inventory.unopened > 0;
+    final attempts = summary.correct + summary.errors;
+    final accuracy = attempts == 0
+        ? null
+        : '${(100 * summary.correct / attempts).round()}%';
     final region = JourneyRegion.forOrder(
       lesson.order,
       language: app.course.language,
@@ -65,27 +71,9 @@ class FlightCompletion extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(20, 10, 20, 12),
           child: FilledButton.icon(
             key: const Key('completion-next'),
-            onPressed: () => context.go(
-              newChests > 0 && app.inventory.unopened > 0
-                  ? '/rewards'
-                  : app.progress.completed.length ==
-                        app.repository.catalog.length
-                  ? '/review'
-                  : nextLessonRoute(app),
-            ),
-            icon: Icon(
-              newChests > 0 && app.inventory.unopened > 0
-                  ? Icons.redeem_rounded
-                  : Icons.arrow_forward_rounded,
-            ),
-            label: Text(
-              newChests > 0 && app.inventory.unopened > 0
-                  ? 'Открыть находки'
-                  : app.progress.completed.length ==
-                        app.repository.catalog.length
-                  ? 'Короткое повторение'
-                  : 'Следующий урок',
-            ),
+            onPressed: () => context.go(showReward ? '/rewards' : next.route),
+            icon: Icon(showReward ? Icons.redeem_rounded : next.icon),
+            label: Text(showReward ? 'Открыть находки' : next.label),
           ),
         ),
       ),
@@ -123,7 +111,27 @@ class FlightCompletion extends StatelessWidget {
                   Text(
                     '${summary.correct} верных ответов · всё сохранено',
                     style: type.bodySmall,
+                    textAlign: TextAlign.center,
                   ),
+                  if (accuracy != null) ...[
+                    const SizedBox(height: 8),
+                    Text(
+                      accuracy,
+                      style: type.titleMedium,
+                      semanticsLabel: 'Точность всех попыток: $accuracy',
+                    ),
+                    Text(
+                      'Точность всех попыток · ошибок: ${summary.errors}',
+                      style: type.bodySmall,
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                  if (bestCombo > 1)
+                    Text(
+                      'Лучшая серия: $bestCombo ответов подряд',
+                      textAlign: TextAlign.center,
+                      style: type.bodySmall,
+                    ),
                 ],
               ),
             ),
@@ -326,11 +334,11 @@ class FlightCompletion extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          if (newChests > 0 && app.inventory.unopened > 0)
+          if (showReward)
             OutlinedButton.icon(
-              onPressed: () => context.go(nextLessonRoute(app)),
-              icon: const Icon(Icons.arrow_forward_rounded),
-              label: const Text('Продолжить учиться'),
+              onPressed: () => context.go(next.route),
+              icon: Icon(next.icon),
+              label: Text(next.label),
             ),
           TextButton(
             onPressed: () => context.go('/'),
@@ -346,29 +354,6 @@ class FlightCompletion extends StatelessWidget {
               child: const Text('Разобрать ошибки сейчас'),
             ),
           ],
-          const SizedBox(height: 12),
-          Wrap(
-            alignment: WrapAlignment.center,
-            spacing: 8,
-            children: [
-              Text(
-                summary.correct + summary.errors == 0
-                    ? '—'
-                    : '${(100 * summary.correct / (summary.correct + summary.errors)).round()}%',
-                style: type.titleMedium,
-              ),
-              Text(
-                'точность всех попыток · ошибок: ${summary.errors}',
-                style: type.bodySmall,
-              ),
-            ],
-          ),
-          if (bestCombo > 1)
-            Text(
-              'Лучшая серия: $bestCombo ответов подряд',
-              textAlign: TextAlign.center,
-              style: type.bodySmall,
-            ),
         ]),
       ),
     );

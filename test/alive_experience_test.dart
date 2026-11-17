@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:orbitwords/core/controller.dart';
+import 'package:orbitwords/domain/course_start.dart';
 import 'package:orbitwords/domain/today.dart';
 import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/ui/app.dart';
@@ -15,6 +16,41 @@ import 'audio_settings_test.dart' show loadPreviewFonts, capturePreview;
 
 void main() {
   setUpAll(setupSqlite);
+  test(
+    'the study action follows the course start and installed materials',
+    () async {
+      final r = memoryRepository();
+      final app = AppController(r);
+      await app.initialize();
+      addTearDown(() async {
+        app.dispose();
+        await r.db.close();
+      });
+      final catalog = r.catalog;
+      final first = catalog.first.id;
+      final second = catalog[1].id;
+
+      expect(recommendedStudy(app).label, 'Начать урок');
+      expect(recommendedStudy(app).route, '/lesson/$first');
+      app.courseStart = CourseStart(catalog, {}, {first}, null);
+      expect(recommendedStudy(app).label, 'Продолжить урок');
+      app.installed = {...app.installed}..remove(first);
+      expect(recommendedStudy(app).route, '/offline');
+      expect(recommendedStudy(app).label, 'Загрузить урок');
+
+      final completed = catalog.map((lesson) => lesson.id).toSet();
+      app.courseStart = CourseStart(
+        catalog,
+        {...completed}..remove(first),
+        {},
+        second,
+      );
+      expect(recommendedStudy(app).lesson?.id, first);
+      app.courseStart = CourseStart(catalog, completed, {}, second);
+      expect(recommendedStudy(app).lesson, isNull);
+      expect(recommendedStudy(app).route, '/review');
+    },
+  );
   test('six newly learned words wait for the real SM-2 review date', () async {
     var now = DateTime(2026, 10, 26, 12);
     final r = memoryRepository(now: () => now);

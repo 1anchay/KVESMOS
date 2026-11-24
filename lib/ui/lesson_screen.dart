@@ -1033,10 +1033,12 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                 vertical: 12,
                               ),
                             ),
-                            onPressed: () {
-                              unawaited(audio.play(SoundEffect.tap));
-                              setState(() => activePair = v.id);
-                            },
+                            onPressed: busy || result != null
+                                ? null
+                                : () {
+                                    unawaited(audio.play(SoundEffect.tap));
+                                    setState(() => activePair = v.id);
+                                  },
                             child: Text(v.en),
                           ),
                         ),
@@ -1064,7 +1066,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                     ).colorScheme.primaryContainer
                                   : null,
                             ),
-                            onPressed: activePair == null
+                            onPressed:
+                                busy || result != null || activePair == null
                                 ? null
                                 : () {
                                     unawaited(audio.play(SoundEffect.tap));
@@ -1095,6 +1098,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       );
     }
     return CourseAnswerField(
+      enabled: !busy && result == null,
       accepted: e.answers,
       controller: input,
       minLines: 2,

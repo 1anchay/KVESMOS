@@ -11,6 +11,73 @@ import 'widget_test.dart' show flushDb;
 
 void main() {
   setUpAll(setupSqlite);
+  testWidgets('checked word order stays fixed until the next question', (
+    tester,
+  ) async {
+    final r = memoryRepository();
+    final app = AppController(r);
+    await tester.runAsync(() async {
+      await app.initialize();
+      final material = await r.startLesson('a1-01');
+      for (var i = 0; i < 2; i++) {
+        final exercise = material.lesson.exercises[i];
+        await r.answer(
+          material.session.id,
+          i,
+          exercise,
+          exercise.answers.first,
+          total: material.lesson.exercises.length,
+        );
+      }
+      await app.refresh();
+    });
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [appProvider.overrideWith((_) => app)],
+        child: MaterialApp(home: const LessonScreen(lessonId: 'a1-01')),
+      ),
+    );
+    await flushDb(tester);
+    final material = (await tester.runAsync(() => r.previewLesson('a1-01')))!;
+    final exercise = material.lesson.exercises[2];
+    expect(exercise.type, ExerciseType.order);
+    for (final token in exercise.tokens) {
+      final chip = find
+          .byWidgetPredicate(
+            (widget) =>
+                widget is ActionChip &&
+                widget.onPressed != null &&
+                widget.label is Text &&
+                (widget.label as Text).data == token,
+          )
+          .first;
+      await tester.scrollUntilVisible(chip, 150);
+      await tester.tap(chip);
+      await flushDb(tester);
+    }
+    await tester.tap(find.text('Проверить'));
+    await flushDb(tester);
+    expect(find.text('Есть контакт! +10 XP'), findsOneWidget);
+    expect(
+      tester
+          .widgetList<InputChip>(find.byType(InputChip))
+          .every((chip) => chip.onDeleted == null),
+      isTrue,
+    );
+    expect(
+      tester
+          .widgetList<ActionChip>(find.byType(ActionChip))
+          .every((chip) => chip.onPressed == null),
+      isTrue,
+    );
+    expect(app.progress.xp, 30);
+    await tester.tap(find.text('Дальше'));
+    await flushDb(tester);
+    expect(app.progress.xp, 30);
+    expect(tester.takeException(), isNull);
+    await tester.pumpWidget(const SizedBox.shrink());
+    await tester.runAsync(r.db.close);
+  });
   testWidgets(
     'wrong answer supports retry; saved success animates XP and advances exactly once',
     (tester) async {

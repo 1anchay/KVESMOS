@@ -917,7 +917,16 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             constraints: const BoxConstraints(minHeight: 90),
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              border: Border.all(color: violet),
+              color: result == true
+                  ? Theme.of(context).colorScheme.primaryContainer
+                  : null,
+              border: Border.all(
+                color: result == false
+                    ? const Color(0xFFAC671C)
+                    : result == true
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).colorScheme.outlineVariant,
+              ),
               borderRadius: BorderRadius.circular(18),
             ),
             child: order.isEmpty
@@ -954,11 +963,15 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                   child: InputChip(
                                     selected: candidates.isNotEmpty,
                                     label: Text(e.tokens[i]),
-                                    onDeleted: () {
-                                      unawaited(audio.play(SoundEffect.tap));
-                                      setState(() => order.remove(i));
-                                      unawaited(saveDraft());
-                                    },
+                                    onDeleted: busy || result != null
+                                        ? null
+                                        : () {
+                                            unawaited(
+                                              audio.play(SoundEffect.tap),
+                                            );
+                                            setState(() => order.remove(i));
+                                            unawaited(saveDraft());
+                                          },
                                   ),
                                 ),
                           ),
@@ -974,7 +987,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 .map(
                   (i) => ActionChip(
                     label: Text(e.tokens[i]),
-                    onPressed: order.contains(i)
+                    onPressed: busy || result != null || order.contains(i)
                         ? null
                         : () {
                             unawaited(audio.play(SoundEffect.tap));

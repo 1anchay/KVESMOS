@@ -962,7 +962,14 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                   ),
                                   child: InputChip(
                                     selected: candidates.isNotEmpty,
-                                    label: Text(e.tokens[i]),
+                                    label: Text(
+                                      e.tokens[i],
+                                      style: TextStyle(
+                                        color: Theme.of(
+                                          context,
+                                        ).colorScheme.onSurface,
+                                      ),
+                                    ),
                                     onDeleted: busy || result != null
                                         ? null
                                         : () {

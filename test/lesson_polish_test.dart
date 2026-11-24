@@ -64,6 +64,13 @@ void main() {
           .every((chip) => chip.onDeleted == null),
       isTrue,
     );
+    final chip = tester.widget<InputChip>(find.byType(InputChip).first);
+    expect(
+      (chip.label as Text).style?.color,
+      Theme.of(
+        tester.element(find.byType(InputChip).first),
+      ).colorScheme.onSurface,
+    );
     expect(
       tester
           .widgetList<ActionChip>(find.byType(ActionChip))

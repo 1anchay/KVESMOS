@@ -960,26 +960,30 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                   feedback: Material(
                                     child: Chip(label: Text(e.tokens[i])),
                                   ),
-                                  child: InputChip(
-                                    selected: candidates.isNotEmpty,
-                                    label: Text(
-                                      e.tokens[i],
-                                      style: TextStyle(
-                                        color: Theme.of(
-                                          context,
-                                        ).colorScheme.onSurface,
-                                      ),
-                                    ),
-                                    onDeleted: busy || result != null
-                                        ? null
-                                        : () {
-                                            unawaited(
-                                              audio.play(SoundEffect.tap),
-                                            );
-                                            setState(() => order.remove(i));
-                                            unawaited(saveDraft());
-                                          },
-                                  ),
+                                  child: result != null
+                                      ? Chip(label: Text(e.tokens[i]))
+                                      : InputChip(
+                                          selected: candidates.isNotEmpty,
+                                          label: Text(
+                                            e.tokens[i],
+                                            style: TextStyle(
+                                              color: Theme.of(
+                                                context,
+                                              ).colorScheme.onSurface,
+                                            ),
+                                          ),
+                                          onDeleted: busy || result != null
+                                              ? null
+                                              : () {
+                                                  unawaited(
+                                                    audio.play(SoundEffect.tap),
+                                                  );
+                                                  setState(
+                                                    () => order.remove(i),
+                                                  );
+                                                  unawaited(saveDraft());
+                                                },
+                                        ),
                                 ),
                           ),
                         )

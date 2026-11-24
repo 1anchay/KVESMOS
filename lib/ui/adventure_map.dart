@@ -77,18 +77,15 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                 showCheckmark: false,
                 tooltip: r.title,
                 label: Text('${r.index + 1}'),
-                avatar: Icon(
-                  r.complete(app.progress.completed, catalog)
-                      ? Icons.check
-                      : r.index >
-                            JourneyRegion.forOrder(
-                              current?.order ?? catalog.last.order,
-                              language: app.course.language,
-                              catalog: app.repository.catalog,
-                            ).index
-                      ? Icons.lock_outline
-                      : Icons.public,
-                  size: 18,
+                avatar: SizedBox(
+                  width: 36,
+                  height: 36,
+                  child: CustomPaint(
+                    painter: JourneyPlanetPainter(
+                      r.index,
+                      regionColors[r.index % regionColors.length],
+                    ),
+                  ),
                 ),
                 onSelected: (_) => setState(() => selected = r.index),
               ),

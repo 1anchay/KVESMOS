@@ -1,20 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'character_moment.dart';
-import 'galaxy_components.dart';
-import 'journey_planet.dart';
+import 'cutout_actor.dart';
+import '../services/learning_audio.dart';
 
 /// The bridge reflects completed learning. It has no separate reward ledger.
 class CommandBridge extends StatelessWidget {
-  final Widget companion;
   final int completed;
   final bool animate;
+  final LearningAudio audio;
+  final bool greeting;
   const CommandBridge({
     super.key,
-    required this.companion,
     required this.completed,
     required this.animate,
+    required this.audio,
+    this.greeting = false,
   });
+
+  Widget _actor(String id, double size, ActorAction action) =>
+      ValueListenableBuilder<SpeechPlayback?>(
+        valueListenable: audio.playback,
+        builder: (_, speech, _) => CutoutActor(
+          character: id,
+          size: size,
+          animate: animate,
+          action: speech?.playing == true && speech?.character == id
+              ? ActorAction.talking
+              : action,
+        ),
+      );
 
   @override
   Widget build(BuildContext context) => ClipRRect(
@@ -24,14 +38,11 @@ class CommandBridge extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          GalaxyField(
-            child: CustomPaint(
-              painter: _BridgeInterior(
-                Theme.of(context).brightness == Brightness.dark,
-                completed,
-              ),
-              child: const SizedBox.expand(),
-            ),
+          Image.asset(
+            'assets/kvesmos/scenes/painted_bridge.webp',
+            fit: BoxFit.cover,
+            excludeFromSemantics: true,
+            cacheWidth: 1024,
           ),
           const DecoratedBox(
             decoration: BoxDecoration(
@@ -61,7 +72,15 @@ class CommandBridge extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(right: 20, bottom: 8, child: companion),
+          Positioned(
+            right: 22,
+            bottom: 0,
+            child: _actor(
+              'orbi',
+              76,
+              greeting ? ActorAction.greeting : ActorAction.idle,
+            ),
+          ),
           Positioned(
             left: 14,
             bottom: 8,
@@ -74,13 +93,12 @@ class CommandBridge extends StatelessWidget {
                   onTap: () => context.go('/training'),
                   child: ExcludeSemantics(
                     child: IgnorePointer(
-                      child: CharacterMoment(
-                        characterId: 'miko',
-                        size: 64,
-                        animate: animate,
-                        state: completed > 0
-                            ? CharacterState.greeting
-                            : CharacterState.thinking,
+                      child: _actor(
+                        'miko',
+                        70,
+                        completed > 0
+                            ? ActorAction.interaction
+                            : ActorAction.idle,
                       ),
                     ),
                   ),
@@ -115,63 +133,4 @@ class CommandBridge extends StatelessWidget {
       ),
     ),
   );
-}
-
-class _BridgeInterior extends CustomPainter {
-  final bool dark;
-  final int completed;
-  const _BridgeInterior(this.dark, this.completed);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final frame = Paint()..color = const Color(0xFF20304D);
-    final window = RRect.fromRectAndRadius(
-      Rect.fromLTWH(8, 4, size.width - 16, size.height - 20),
-      const Radius.circular(35),
-    );
-    canvas.drawRRect(
-      window,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 12
-        ..color = dark ? const Color(0xFF334663) : const Color(0xFF8290AD),
-    );
-    canvas.save();
-    canvas.translate(size.width * .53, 20);
-    JourneyPlanetPainter(
-      completed ~/ 4,
-      const Color(0xFF168B92),
-    ).paint(canvas, const Size(82, 82));
-    canvas.restore();
-    final deck = Path()
-      ..moveTo(0, size.height - 28)
-      ..lineTo(size.width * .3, size.height - 39)
-      ..lineTo(size.width * .7, size.height - 39)
-      ..lineTo(size.width, size.height - 28)
-      ..lineTo(size.width, size.height)
-      ..lineTo(0, size.height)
-      ..close();
-    canvas.drawPath(deck, frame);
-    for (final left in [false, true]) {
-      final x = left ? 10.0 : size.width - 63;
-      canvas.drawRRect(
-        RRect.fromRectAndRadius(
-          Rect.fromLTWH(x, size.height - 30, 53, 17),
-          const Radius.circular(4),
-        ),
-        Paint()..color = const Color(0xFF435976),
-      );
-      canvas.drawLine(
-        Offset(x + 8, size.height - 23),
-        Offset(x + 44, size.height - 23),
-        Paint()
-          ..color = const Color(0xFF74E6E2)
-          ..strokeWidth = 3,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(_BridgeInterior old) =>
-      old.dark != dark || old.completed != completed;
 }

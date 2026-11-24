@@ -37,7 +37,7 @@ class AnswerSignal extends StatelessWidget {
           children: [
             Row(
               children: [
-                CharacterMoment(
+                LearningCharacter(
                   characterId: character,
                   size: 40,
                   animate: animate,

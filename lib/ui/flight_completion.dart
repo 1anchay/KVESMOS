@@ -99,7 +99,7 @@ class FlightCompletion extends StatelessWidget {
               accent: true,
               child: Column(
                 children: [
-                  CharacterMoment(
+                  LearningCharacter(
                     characterId: 'orbi',
                     state: CharacterState.celebration,
                     size: 92,

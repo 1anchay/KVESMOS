@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import '../services/learning_audio.dart';
 import 'character_animation_catalog.dart';
+import 'cutout_actor.dart';
 
 /// States are independent of the renderer: licensed frame sets can replace the
 /// current pose/gesture renderer without changing lesson or playback logic.
@@ -16,6 +17,50 @@ enum CharacterState {
   celebration,
   surprise,
   goodbye,
+}
+
+/// Learning surfaces use the new layered art where available. Explicit frame
+/// previews and unprepared cast members retain the existing renderer.
+class LearningCharacter extends StatelessWidget {
+  final String characterId;
+  final CharacterState state;
+  final double size;
+  final bool animate;
+  const LearningCharacter({
+    super.key,
+    required this.characterId,
+    this.state = CharacterState.idle,
+    this.size = 76,
+    this.animate = true,
+  });
+  @override
+  Widget build(BuildContext context) {
+    if (characterId != 'orbi' && characterId != 'miko') {
+      return CharacterMoment(
+        characterId: characterId,
+        state: state,
+        size: size,
+        animate: animate,
+      );
+    }
+    return CutoutActor(
+      character: characterId,
+      size: size,
+      animate: animate,
+      action: switch (state) {
+        CharacterState.idle => ActorAction.idle,
+        CharacterState.greeting => ActorAction.greeting,
+        CharacterState.talking => ActorAction.talking,
+        CharacterState.listening => ActorAction.listening,
+        CharacterState.thinking => ActorAction.thinking,
+        CharacterState.correct => ActorAction.happy,
+        CharacterState.support => ActorAction.support,
+        CharacterState.celebration => ActorAction.celebration,
+        CharacterState.surprise => ActorAction.surprise,
+        CharacterState.goodbye => ActorAction.goodbye,
+      },
+    );
+  }
 }
 
 class SpeakingCharacter extends StatelessWidget {
@@ -33,7 +78,7 @@ class SpeakingCharacter extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ValueListenableBuilder<SpeechPlayback?>(
     valueListenable: audio.playback,
-    builder: (context, playback, _) => CharacterMoment(
+    builder: (context, playback, _) => LearningCharacter(
       characterId: character,
       size: size,
       animate: audio.preferences.reactions,

@@ -10,7 +10,6 @@ import '../domain/today.dart';
 import '../domain/journey.dart';
 import '../domain/progress.dart';
 import '../services/learning_audio.dart';
-import 'character_moment.dart';
 import 'flight_components.dart';
 import 'design.dart';
 import 'command_bridge.dart';
@@ -90,17 +89,6 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     final objective = app.repository.learningObjectives[next?.id];
     final type = Theme.of(context).textTheme;
     final largeText = MediaQuery.textScalerOf(context).scale(16) > 22;
-    final companion = CharacterMoment(
-      key: ValueKey((day, greet, today.mood)),
-      characterId: 'orbi',
-      size: 64,
-      animate: greet && app.audio.preferences.reactions,
-      state: today.mood == TodayMood.complete
-          ? CharacterState.celebration
-          : today.mood == TodayMood.returning
-          ? CharacterState.support
-          : CharacterState.greeting,
-    );
     final greeting = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -130,9 +118,10 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     );
     return pageBody([
       CommandBridge(
-        companion: companion,
+        audio: app.audio,
+        greeting: greet,
         completed: app.progress.completed.length,
-        animate: greet && app.audio.preferences.reactions,
+        animate: app.audio.preferences.reactions,
       ),
       const SizedBox(height: 12),
       greeting,

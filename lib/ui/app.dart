@@ -1,5 +1,6 @@
 import 'device_learning_check.dart';
 import 'unit_mastery.dart';
+import 'animation_gallery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -171,6 +172,10 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
               builder: (_, _) => const InventoryPage(),
             ),
             GoRoute(path: '/crew', builder: (_, _) => const CrewPage()),
+            GoRoute(
+              path: '/animation-gallery',
+              builder: (_, _) => const AnimationGallery(),
+            ),
             GoRoute(path: '/', builder: (_, _) => const HomePage()),
             GoRoute(path: '/units', builder: (_, _) => const UnitGuidePage()),
             GoRoute(path: '/map', builder: (_, _) => const UnitGuidePage()),

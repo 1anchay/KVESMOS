@@ -1,0 +1,127 @@
+﻿character,action,source,rights,implementation,verification
+orbi,idle,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,blink,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,breathing,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,greeting,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,walk,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,talking,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,listening,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,thinking,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,happy,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,support,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,requires dedicated animation,QA video prototype; art acceptance open
+orbi,surprise,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,requires dedicated animation,QA video prototype; art acceptance open
+orbi,celebration,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,goodbye,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+orbi,interaction,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,idle,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,blink,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,breathing,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,greeting,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,walk,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,talking,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,listening,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,thinking,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,happy,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,support,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,requires dedicated animation,QA video prototype; art acceptance open
+miko,surprise,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,requires dedicated animation,QA video prototype; art acceptance open
+miko,celebration,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,goodbye,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+miko,interaction,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
+pixie,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+pixie,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+aster,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+reyvo,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+zig_quartz,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+vespa,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+nox,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+fox_scholar,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig

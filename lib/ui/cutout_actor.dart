@@ -22,6 +22,7 @@ enum ActorAction {
 
 /// Independent head, torso and four jointed limbs over a shared texture atlas.
 class CutoutActor extends StatefulWidget {
+  static const supported = {'orbi', 'miko', 'pixie'};
   final String character;
   final ActorAction action;
   final bool animate;
@@ -144,12 +145,16 @@ class _CutoutActorState extends State<CutoutActor>
   Widget build(BuildContext context) => Semantics(
     image: true,
     label:
-        '${widget.character == 'orbi' ? 'Орби' : 'Мико'} · ${switch (widget.action) {
+        '${switch (widget.character) {
+          'orbi' => 'Орби',
+          'pixie' => 'Пикси',
+          _ => 'Мико',
+        }} · ${switch (widget.action) {
           ActorAction.idle => 'рядом',
           ActorAction.blink => 'моргает',
           ActorAction.breathing => 'дышит',
           ActorAction.greeting => 'приветствует',
-          ActorAction.walk => 'идёт',
+          ActorAction.walk => widget.character == 'pixie' ? 'летит' : 'идёт',
           ActorAction.talking => 'говорит',
           ActorAction.listening => 'слушает',
           ActorAction.thinking => 'размышляет',
@@ -158,7 +163,7 @@ class _CutoutActorState extends State<CutoutActor>
           ActorAction.surprise => 'удивляется',
           ActorAction.celebration => 'празднует',
           ActorAction.goodbye => 'прощается',
-          ActorAction.interaction => 'работает с пультом',
+          ActorAction.interaction => widget.character == 'pixie' ? 'перебирает находки' : 'работает с пультом',
         }}',
     child: SizedBox(
       width: widget.size,
@@ -246,6 +251,50 @@ class _ActorPainter extends CustomPainter {
         Paint()..filterQuality = FilterQuality.medium,
       );
       canvas.restore();
+    }
+
+    if (character == 'pixie') {
+      // Pixie has no humanoid torso or legs: antennae, hands and satchel have
+      // their own roots and follow-through around the floating teardrop body.
+      final hover = math.sin(phase) * 1.8;
+      part(
+        7,
+        Rect.fromLTWH(6, 22 + hover, 48, 40),
+        const Offset(47, 57),
+        -.10 * motion,
+      );
+      part(
+        6,
+        Rect.fromLTWH(46, hover, 65, 62),
+        const Offset(53, 57),
+        .08 * math.sin(phase - .4),
+      );
+      part(
+        4,
+        Rect.fromLTWH(0, 76 + hover, 48, 38),
+        const Offset(43, 93),
+        leftArm * .35,
+      );
+      part(
+        5,
+        Rect.fromLTWH(82, 76 + hover, 38, 34),
+        const Offset(84, 92),
+        rightArm * .35,
+      );
+      part(
+        head,
+        Rect.fromLTWH(25, 40 + hover - breath, 76, 88 + breath),
+        const Offset(62, 87),
+        motion * .015,
+      );
+      part(
+        3,
+        Rect.fromLTWH(11, 93 + hover, 53, 49),
+        const Offset(50, 96),
+        math.sin(phase - .5) * (action == ActorAction.interaction ? .13 : .035),
+      );
+      canvas.restore();
+      return;
     }
 
     // Back-to-front drawing. Joint positions stay fixed while limbs rotate.

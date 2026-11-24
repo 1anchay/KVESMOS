@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui' show FrameTiming;
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
@@ -9,6 +10,10 @@ void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   binding.framePolicy = LiveTestWidgetsFlutterBindingFramePolicy.fullyLive;
   testWidgets('joint animation preview on Android', (tester) async {
+    final timings = <FrameTiming>[];
+    void collect(List<FrameTiming> frames) => timings.addAll(frames);
+    binding.addTimingsCallback(collect);
+    addTearDown(() => binding.removeTimingsCallback(collect));
     Future<void> marker(String text) async {
       final result = await Process.run('/system/bin/log', [
         '-t',
@@ -19,7 +24,7 @@ void main() {
     }
 
     await marker('VIDEO_START:en');
-    for (final id in ['orbi', 'miko']) {
+    for (final id in CutoutActor.supported) {
       for (final action in ActorAction.values) {
         await tester.pumpWidget(
           MaterialApp(
@@ -53,6 +58,19 @@ void main() {
       }
     }
     await marker('VIDEO_DONE:en');
+    if (timings.length > 10) {
+      final frames = timings.skip(10).toList();
+      final build =
+          frames.map((f) => f.buildDuration.inMicroseconds / 1000).toList()
+            ..sort();
+      final raster =
+          frames.map((f) => f.rasterDuration.inMicroseconds / 1000).toList()
+            ..sort();
+      // Debug/emulator measurements are diagnostics, not a release FPS claim.
+      debugPrint(
+        'ART_FRAME_TIMINGS debug emulator: count=${frames.length}, build_p95_ms=${build[(build.length * .95).floor()]}, raster_p95_ms=${raster[(raster.length * .95).floor()]}',
+      );
+    }
     await tester.pumpWidget(const SizedBox.shrink());
     await marker('DONE');
   });

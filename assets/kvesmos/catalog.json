@@ -204,8 +204,8 @@
       "name_ru": "Орбита новичка",
       "slot": "frame",
       "rarity": "common",
-      "asset_path": "assets/kvesmos/frame_common.png",
-      "asset_status": "concept_crop",
+      "asset_path": "assets/kvesmos/cosmetics/beginner-orbit.webp",
+      "asset_status": "generated_derivative_review_pending",
       "usable_with_characters": "profile"
     },
     {

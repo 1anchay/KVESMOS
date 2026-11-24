@@ -103,6 +103,12 @@ void main() {
         'VIDEO_START:en',
       ]);
       await capture('art-home');
+      await app.savePreferences(newTheme: ThemeMode.light);
+      await settle();
+      await capture('art-home-light');
+      await app.savePreferences(newTheme: ThemeMode.dark);
+      await settle();
+      await capture('art-home-dark');
       await tap(find.byTooltip('Открыть карту галактики'));
       expect(find.text('Твой маршрут'), findsOneWidget);
       await capture('art-galaxy');

@@ -35,7 +35,7 @@ class LearningCharacter extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    if (characterId != 'orbi' && characterId != 'miko') {
+    if (!CutoutActor.supported.contains(characterId)) {
       return CharacterMoment(
         characterId: characterId,
         state: state,

@@ -58,11 +58,12 @@ class CommandBridge extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 16,
-            right: 66,
+            left: 100,
+            right: 100,
             top: 12,
             child: Text(
-              'МОСТИК · ${completed == 0 ? 'ПЕРВЫЙ СИГНАЛ' : 'СВЯЗЬ УСТАНОВЛЕНА'}',
+              'МОСТИК',
+              textAlign: TextAlign.center,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: Theme.of(context).textTheme.labelSmall?.copyWith(
@@ -107,24 +108,43 @@ class CommandBridge extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: 12,
-            top: 5,
-            child: IconButton(
-              tooltip: 'Открыть карту галактики',
-              onPressed: () => context.go('/galaxy'),
-              icon: const Icon(Icons.explore_outlined, color: Colors.white),
+            left: 98,
+            right: 98,
+            bottom: 10,
+            child: Tooltip(
+              message: 'Открыть карту галактики',
+              child: MediaQuery.textScalerOf(context).scale(14) > 20
+                  ? IconButton(
+                      onPressed: () => context.go('/galaxy'),
+                      color: Colors.white,
+                      style: IconButton.styleFrom(
+                        backgroundColor: const Color(0x990A1630),
+                      ),
+                      icon: const Icon(Icons.explore_outlined),
+                    )
+                  : TextButton.icon(
+                      onPressed: () => context.go('/galaxy'),
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: const Color(0x990A1630),
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        minimumSize: const Size(48, 48),
+                      ),
+                      icon: const Icon(Icons.explore_outlined, size: 18),
+                      label: const Text('Карта'),
+                    ),
             ),
           ),
           if (completed >= 4)
             Positioned(
-              left: 100,
-              bottom: 18,
+              left: 83,
+              bottom: 0,
               child: Tooltip(
                 message: 'Завершено не менее четырёх учебных миссий',
                 child: Image.asset(
                   'assets/kvesmos/explorer_closed.png',
-                  width: 48,
-                  height: 44,
+                  width: 25,
+                  height: 23,
                   excludeFromSemantics: true,
                 ),
               ),

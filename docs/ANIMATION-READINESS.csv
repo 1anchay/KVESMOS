@@ -1,46 +1,46 @@
-﻿character,action,source,rights,implementation,verification
-orbi,idle,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,blink,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,breathing,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,greeting,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,walk,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,talking,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,listening,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,thinking,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,happy,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,support,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,requires dedicated animation,QA video prototype; art acceptance open
-orbi,surprise,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,requires dedicated animation,QA video prototype; art acceptance open
-orbi,celebration,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,goodbye,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-orbi,interaction,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,idle,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,blink,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,breathing,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,greeting,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,walk,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,talking,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,listening,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,thinking,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,happy,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,support,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,requires dedicated animation,QA video prototype; art acceptance open
-miko,surprise,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,requires dedicated animation,QA video prototype; art acceptance open
-miko,celebration,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,goodbye,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-miko,interaction,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,QA video prototype; art acceptance open
-pixie,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-pixie,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+character,action,source,rights,implementation,verification
+orbi,idle,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,blink,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,breathing,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,greeting,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,walk,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,talking,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,listening,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,thinking,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,happy,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,support,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,surprise,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,celebration,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,goodbye,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+orbi,interaction,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,idle,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,blink,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,breathing,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,greeting,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,walk,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,talking,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,listening,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,thinking,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,happy,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,support,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,surprise,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,celebration,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,goodbye,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+miko,interaction,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
+pixie,idle,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,blink,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,breathing,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,greeting,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,walk,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,talking,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,listening,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,thinking,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,happy,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,support,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,surprise,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,celebration,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,goodbye,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
+pixie,interaction,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
 aster,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
 aster,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
 aster,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig

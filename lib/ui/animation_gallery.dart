@@ -16,7 +16,7 @@ class _AnimationGalleryState extends State<AnimationGallery> {
   bool animate = true;
   @override
   Widget build(BuildContext context) {
-    final rigged = character == 'orbi' || character == 'miko';
+    final rigged = CutoutActor.supported.contains(character);
     return Scaffold(
       appBar: AppBar(title: const Text('Animation Gallery · QA')),
       body: ListView(

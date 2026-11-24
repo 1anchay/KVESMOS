@@ -18,14 +18,18 @@ for cell in range(8):
     bottom = round(source.height * (cell // 4 + 1) / 2)
     layer = source.crop((left + 5, top + 5, right - 5, bottom - 5))
     rgb = np.asarray(layer.convert("RGB"))
-    matte = np.median(np.concatenate(
-        (rgb[:8, :8], rgb[:8, -8:]), axis=1), axis=(0, 1))
-    background = np.max(np.abs(rgb.astype(float) - matte), axis=2) < 45
-    edge = np.zeros(background.shape, dtype=bool)
-    edge[[0, -1], :] = True
-    edge[:, [0, -1]] = True
-    outside = binary_propagation(edge & background, mask=background)
-    layer = Image.fromarray(np.dstack((rgb, (~outside).astype("uint8") * 255)))
+    alpha = np.asarray(layer.getchannel("A"))
+    if np.median(np.concatenate((alpha[:8, :8], alpha[:8, -8:]), axis=1)) > 8:
+        # Older generated sheets contain a semiopaque matte. Preserve valid
+        # alpha on newer sheets rather than making their translucent edges solid.
+        matte = np.median(np.concatenate(
+            (rgb[:8, :8], rgb[:8, -8:]), axis=1), axis=(0, 1))
+        background = np.max(np.abs(rgb.astype(float) - matte), axis=2) < 45
+        edge = np.zeros(background.shape, dtype=bool)
+        edge[[0, -1], :] = True
+        edge[:, [0, -1]] = True
+        outside = binary_propagation(edge & background, mask=background)
+        layer = Image.fromarray(np.dstack((rgb, (~outside).astype("uint8") * 255)))
     bounds = layer.getbbox()
     if bounds is None:
         raise ValueError(f"Empty animation layer {cell}")

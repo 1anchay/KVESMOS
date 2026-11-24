@@ -33,7 +33,7 @@ import '../services/learning_audio.dart';
 
 const exerciseNames = {
   ExerciseType.translate: 'Переведите предложение',
-  ExerciseType.choice: 'Выберите перевод',
+  ExerciseType.choice: 'Выберите ответ',
   ExerciseType.order: 'Соберите предложение',
   ExerciseType.gap: 'Заполните пропуск',
   ExerciseType.listen: 'Поймайте сигнал',
@@ -917,7 +917,16 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
             constraints: const BoxConstraints(minHeight: 90),
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              border: Border.all(color: violet),
+              color: result == true
+                  ? Theme.of(context).colorScheme.primaryContainer
+                  : null,
+              border: Border.all(
+                color: result == false
+                    ? const Color(0xFFAC671C)
+                    : result == true
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).colorScheme.outlineVariant,
+              ),
               borderRadius: BorderRadius.circular(18),
             ),
             child: order.isEmpty
@@ -951,15 +960,30 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                   feedback: Material(
                                     child: Chip(label: Text(e.tokens[i])),
                                   ),
-                                  child: InputChip(
-                                    selected: candidates.isNotEmpty,
-                                    label: Text(e.tokens[i]),
-                                    onDeleted: () {
-                                      unawaited(audio.play(SoundEffect.tap));
-                                      setState(() => order.remove(i));
-                                      unawaited(saveDraft());
-                                    },
-                                  ),
+                                  child: result != null
+                                      ? Chip(label: Text(e.tokens[i]))
+                                      : InputChip(
+                                          selected: candidates.isNotEmpty,
+                                          label: Text(
+                                            e.tokens[i],
+                                            style: TextStyle(
+                                              color: Theme.of(
+                                                context,
+                                              ).colorScheme.onSurface,
+                                            ),
+                                          ),
+                                          onDeleted: busy || result != null
+                                              ? null
+                                              : () {
+                                                  unawaited(
+                                                    audio.play(SoundEffect.tap),
+                                                  );
+                                                  setState(
+                                                    () => order.remove(i),
+                                                  );
+                                                  unawaited(saveDraft());
+                                                },
+                                        ),
                                 ),
                           ),
                         )
@@ -974,7 +998,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                 .map(
                   (i) => ActionChip(
                     label: Text(e.tokens[i]),
-                    onPressed: order.contains(i)
+                    onPressed: busy || result != null || order.contains(i)
                         ? null
                         : () {
                             unawaited(audio.play(SoundEffect.tap));
@@ -1020,10 +1044,12 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                 vertical: 12,
                               ),
                             ),
-                            onPressed: () {
-                              unawaited(audio.play(SoundEffect.tap));
-                              setState(() => activePair = v.id);
-                            },
+                            onPressed: busy || result != null
+                                ? null
+                                : () {
+                                    unawaited(audio.play(SoundEffect.tap));
+                                    setState(() => activePair = v.id);
+                                  },
                             child: Text(v.en),
                           ),
                         ),
@@ -1051,7 +1077,8 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                                     ).colorScheme.primaryContainer
                                   : null,
                             ),
-                            onPressed: activePair == null
+                            onPressed:
+                                busy || result != null || activePair == null
                                 ? null
                                 : () {
                                     unawaited(audio.play(SoundEffect.tap));
@@ -1082,6 +1109,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       );
     }
     return CourseAnswerField(
+      enabled: !busy && result == null,
       accepted: e.answers,
       controller: input,
       minLines: 2,

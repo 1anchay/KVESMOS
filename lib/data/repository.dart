@@ -80,6 +80,8 @@ class LearningRepository {
 
   final Map<String, String> updatedMaterials = {};
   final Map<String, String> learningObjectives = {};
+  static final _legacyLessonId = RegExp(r'^a1-\d{2}$');
+  static const _packSeenPrefix = 'kvesmos.pack.seen.v1:';
   LearningRepository(
     this.db, {
     DateTime Function()? now,
@@ -92,16 +94,15 @@ class LearningRepository {
     allVocabulary.clear();
     updatedMaterials.clear();
     learningObjectives.clear();
-    final legacyInstalled = await setting('installed') != null;
-    final seen = await settingsWithPrefix('kvesmos.pack.seen.v1:');
-    // Only a first install or an app update needs to consult the pack table.
-    Set<String>? installedIds;
+    final seen = await settingsWithPrefix(_packSeenPrefix);
+    final ids = <String>{};
     for (final course in StudyCourse.all) {
       final manifest = jsonDecode(await loadAsset(course.manifest));
       if (manifest['sourceLanguage'] != 'ru' ||
           manifest['targetLanguage'] != course.language) {
         throw const FormatException('Неверный язык каталога');
       }
+      final courseLessons = <LessonInfo>[];
       for (final section in manifest['sections']) {
         for (final theme in section['themes']) {
           for (final lesson in theme['lessons']) {
@@ -113,61 +114,93 @@ class LearningRepository {
               lesson['asset'],
               lesson['order'],
             );
-            if (allCatalog.any((l) => l.id == info.id) ||
+            if (!ids.add(info.id) ||
                 StudyCourse.forContent(info.id).id != course.id ||
                 !info.asset.startsWith('assets/courses/') ||
                 info.asset.contains('..')) {
               throw const FormatException('Неверный идентификатор урока');
             }
-            allCatalog.add(info);
-            final raw = await loadAsset(info.asset);
-            final material = Lesson.fromJson(jsonDecode(raw));
-            if (material.id != info.id ||
-                material.order != info.order ||
-                material.exercises.isEmpty ||
-                material.vocabulary.any(
-                  (v) => StudyCourse.forContent(v.id).id != course.id,
-                )) {
-              throw const FormatException('Неверный учебный пакет');
+            if (info.order != courseLessons.length) {
+              throw const FormatException('Нарушен порядок курса');
             }
-            for (final word in material.vocabulary) {
-              allVocabulary[word.id] = word;
-            }
-            final legacy = RegExp(r'^a1-\d{2}$').hasMatch(info.id);
-            final marker = 'kvesmos.pack.seen.v1:${info.id}';
-            // Old deleted packs stay deleted. New IDs install exactly once;
-            // a later app update never overwrites a pinned session or pack.
-            if (!seen.containsKey(marker)) {
-              await db.transaction(() async {
-                installedIds ??= await installed();
-                if (!(legacy && legacyInstalled) &&
-                    !installedIds!.contains(info.id)) {
-                  await installRaw(info.id, raw);
-                  installedIds!.add(info.id);
-                }
-                await setSetting(marker, 'true');
-              });
-            }
-            final current = legacy
-                ? await loadAsset('assets/courses/demo/${info.id}.json')
-                : raw;
-            updatedMaterials[info.id] = current;
-            learningObjectives[info.id] = legacy
-                ? jsonDecode(current)['objective'] ?? ''
-                : material.objective ?? '';
+            courseLessons.add(info);
           }
         }
       }
-      final orders = allCatalog
-          .where((l) => StudyCourse.forContent(l.id).id == course.id)
-          .map((l) => l.order)
-          .toList();
-      if (orders.asMap().entries.any((e) => e.key != e.value)) {
-        throw const FormatException('Нарушен порядок курса');
+      final unseen = <String, String>{};
+      // Open a few assets together, then validate in catalogue order so
+      // vocabulary entries shared by several lessons retain their precedence.
+      const readGroupSize = 12;
+      for (
+        var offset = 0;
+        offset < courseLessons.length;
+        offset += readGroupSize
+      ) {
+        final loaded = await Future.wait(
+          courseLessons.skip(offset).take(readGroupSize).map((info) async {
+            final legacy = _legacyLessonId.hasMatch(info.id);
+            final raw = await loadAsset(info.asset);
+            final current = legacy
+                ? await loadAsset('assets/courses/demo/${info.id}.json')
+                : raw;
+            return (info: info, legacy: legacy, raw: raw, current: current);
+          }),
+        );
+        for (final pack in loaded) {
+          final info = pack.info;
+          final material = Lesson.fromJson(jsonDecode(pack.raw));
+          if (material.id != info.id ||
+              material.order != info.order ||
+              material.exercises.isEmpty ||
+              material.vocabulary.any(
+                (word) => StudyCourse.forContent(word.id).id != course.id,
+              )) {
+            throw const FormatException('Неверный учебный пакет');
+          }
+          for (final word in material.vocabulary) {
+            allVocabulary[word.id] = word;
+          }
+          if (!seen.containsKey('$_packSeenPrefix${info.id}')) {
+            unseen[info.id] = pack.raw;
+          }
+          updatedMaterials[info.id] = pack.current;
+          learningObjectives[info.id] = pack.legacy
+              ? jsonDecode(pack.current)['objective'] ?? ''
+              : material.objective ?? '';
+        }
       }
+      if (unseen.isNotEmpty) await _installBundledPacks(unseen);
+      allCatalog.addAll(courseLessons);
     }
-    await setSetting('installed', 'true');
+    if (await setting('installed') != 'true') {
+      await setSetting('installed', 'true');
+    }
   }
+
+  Future<void> _installBundledPacks(
+    Map<String, String> packs,
+  ) => db.transaction(() async {
+    // Recheck inside the transaction so concurrent setup cannot restore a
+    // pack that was marked as seen and then deliberately removed.
+    final seen = await settingsWithPrefix(_packSeenPrefix);
+    final legacyInstalled = await setting('installed') != null;
+    final copies = <LessonPacksCompanion>[];
+    final markers = <SettingsCompanion>[];
+    for (final entry in packs.entries) {
+      final marker = '$_packSeenPrefix${entry.key}';
+      if (seen.containsKey(marker)) continue;
+      if (!(legacyInstalled && _legacyLessonId.hasMatch(entry.key))) {
+        copies.add(
+          LessonPacksCompanion.insert(id: entry.key, payload: entry.value),
+        );
+      }
+      markers.add(SettingsCompanion.insert(key: marker, value: 'true'));
+    }
+    await db.batch((batch) {
+      batch.insertAll(db.lessonPacks, copies, mode: InsertMode.insertOrIgnore);
+      batch.insertAll(db.settings, markers, mode: InsertMode.insertOrIgnore);
+    });
+  });
 
   Future<void> installRaw(String id, String raw) => db
       .into(db.lessonPacks)

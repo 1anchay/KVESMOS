@@ -21,6 +21,32 @@ void main() {
     );
   });
   test(
+    'a failed course install leaves its packs and markers retryable',
+    () async {
+      var broken = true;
+      final r = LearningRepository(
+        AppDatabase(NativeDatabase.memory()),
+        loadAsset: (path) async => broken && path.endsWith('/es-a1-60.json')
+            ? '{'
+            : File(path).readAsString(),
+      );
+      addTearDown(r.db.close);
+
+      await expectLater(r.initialize(), throwsFormatException);
+      final installed = await r.installed();
+      expect(installed, hasLength(100));
+      expect(installed, contains('a1-01'));
+      expect(await r.settingsWithPrefix('kvesmos.pack.seen.v1:es-'), isEmpty);
+      await r.uninstall('a1-01');
+
+      broken = false;
+      await r.initialize();
+      expect(await r.installed(), hasLength(299));
+      expect(await r.installed(), isNot(contains('a1-01')));
+      expect(await r.installed(), contains('es-a1-60'));
+    },
+  );
+  test(
     'failed answer persists without advancing; correct commits XP and position',
     () async {
       final r = memoryRepository();

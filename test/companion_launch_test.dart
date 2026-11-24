@@ -9,6 +9,43 @@ import 'widget_test.dart' show flushDb;
 
 void main() {
   setUpAll(setupSqlite);
+  testWidgets('saved widget onboarding still resumes and opens the lesson', (
+    tester,
+  ) async {
+    final repository = memoryRepository();
+    final app = AppController(repository);
+    await tester.runAsync(() async {
+      await repository.initialize();
+      await repository.chooseCourseStart('a1-01');
+      await repository.setSetting(
+        'kvesmos.onboarding.route.v012',
+        '/companion/widget',
+      );
+      await app.initialize();
+    });
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [appProvider.overrideWith((_) => app)],
+        child: const OrbitApp(),
+      ),
+    );
+    await flushDb(tester);
+    expect(find.text('Орби на главном экране'), findsOneWidget);
+    final later = find.widgetWithText(TextButton, 'Не сейчас');
+    await tester.scrollUntilVisible(later, 200);
+    await tester.tap(later);
+    await flushDb(tester);
+    expect(app.onboarded, isTrue);
+    expect(app.companionInvitation, isFalse);
+    expect(app.progress.xp, 0);
+    expect(
+      tester.widget<LessonScreen>(find.byType(LessonScreen)).lessonId,
+      'a1-01',
+    );
+    await tester.pumpWidget(const SizedBox.shrink());
+    await tester.runAsync(repository.db.close);
+  });
+
   for (final onboarded in [true, false]) {
     testWidgets(
       'companion cold/warm launch preserves course, onboarded=$onboarded',

@@ -43,19 +43,21 @@ void main() {
       await tester.tap(next);
       await flushDb(tester);
     }
-    final start = find.widgetWithText(FilledButton, 'Продолжить');
+    await tester.tap(find.byTooltip('Назад'));
+    await flushDb(tester);
+    expect(find.text('Начать с нуля'), findsOneWidget);
+    await tester.tap(find.text('Начать с нуля'));
+    await flushDb(tester);
+    final start = find.widgetWithText(FilledButton, 'К уроку');
     await tester.scrollUntilVisible(start, 250);
     await tester.pumpAndSettle();
     await tester.tap(start);
     await flushDb(tester);
-    for (var decision = 0; decision < 2; decision++) {
-      final later = find.widgetWithText(TextButton, 'Не сейчас');
-      await tester.scrollUntilVisible(later, 250);
-      await tester.tap(later);
-      await flushDb(tester);
-    }
+    expect(app.onboarded, isTrue);
+    expect(app.companionInvitation, isTrue);
     expect(app.companion.preferences.enabled, isFalse);
     await advanceTeaching(tester);
+    expect(find.text('Выберите ответ'), findsOneWidget);
     expect(
       find.text(
         'Орби встречает тебя на космической станции. Что ему ответить?',
@@ -87,6 +89,33 @@ void main() {
     await flushDb(tester);
     final resumed = (await tester.runAsync(() => r.startLesson('a1-01')))!;
     expect(resumed.session.position, 1);
+    expect(find.text(resumed.lesson.exercises[1].prompt), findsOneWidget);
+    await tester.tap(find.byTooltip('Закрыть и сохранить'));
+    await tester.pumpAndSettle();
+    await tester.runAsync(() async {
+      await r.uninstall(resumed.lesson.id);
+      await app.refresh();
+    });
+    await flushDb(tester);
+    await tester.tap(find.widgetWithText(FilledButton, 'Восстановить урок'));
+    await tester.pumpAndSettle();
+    final catalogTitle = r.catalog
+        .firstWhere((info) => info.id == resumed.lesson.id)
+        .title;
+    expect(find.text(catalogTitle), findsWidgets);
+    await tester.tap(
+      find.widgetWithText(FilledButton, 'Восстановить и открыть'),
+    );
+    for (
+      var retry = 0;
+      retry < 25 &&
+          find.text(resumed.lesson.exercises[1].prompt).evaluate().isEmpty;
+      retry++
+    ) {
+      await flushDb(tester);
+    }
+    expect(app.installed, contains(resumed.lesson.id));
+    expect(app.progress.xp, 10);
     expect(find.text(resumed.lesson.exercises[1].prompt), findsOneWidget);
     await tester.tap(find.byTooltip('Закрыть и сохранить'));
     await tester.pumpAndSettle();

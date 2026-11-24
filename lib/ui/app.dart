@@ -230,7 +230,11 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
               builder: (_, _) => const DeviceLearningCheck(),
             ),
             GoRoute(path: '/settings', builder: (_, _) => const SettingsPage()),
-            GoRoute(path: '/offline', builder: (_, _) => const OfflinePage()),
+            GoRoute(
+              path: '/offline',
+              builder: (_, state) =>
+                  OfflinePage(lessonId: state.uri.queryParameters['lesson']),
+            ),
           ],
         ),
       ],

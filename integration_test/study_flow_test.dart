@@ -162,6 +162,17 @@ void main() {
             await settle();
           }
           await tap(find.text('Проверить'));
+          if (number == 1 &&
+              exercise.type == ExerciseType.order &&
+              index == 2) {
+            expect(
+              tester
+                  .widgetList<InputChip>(find.byType(InputChip))
+                  .every((chip) => chip.onDeleted == null),
+              isTrue,
+            );
+            await capture('07-checked-word-order');
+          }
           await tap(find.text('Дальше'));
           totalCorrect++;
           final checkpoint = find.byKey(const Key('checkpoint-continue'));

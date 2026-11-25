@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'cutout_actor.dart';
 import '../services/learning_audio.dart';
 
 /// The bridge reflects completed learning. It has no separate reward ledger.
@@ -17,18 +16,31 @@ class CommandBridge extends StatelessWidget {
     this.greeting = false,
   });
 
-  Widget _actor(String id, double size, ActorAction action) =>
-      ValueListenableBuilder<SpeechPlayback?>(
-        valueListenable: audio.playback,
-        builder: (_, speech, _) => CutoutActor(
-          character: id,
-          size: size,
-          animate: animate,
-          action: speech?.playing == true && speech?.character == id
-              ? ActorAction.talking
-              : action,
+  Widget _actor(
+    String id,
+    double size,
+  ) => ValueListenableBuilder<SpeechPlayback?>(
+    valueListenable: audio.playback,
+    builder: (context, speech, _) {
+      final speaking = speech?.playing == true && speech?.character == id;
+      final asset = id == 'miko'
+          ? 'crew_motion/miko_bridge.webp'
+          : (greeting && animate ? 'orbi_wink_thumbsup.png' : 'orbi_happy.png');
+      final motion = animate && !MediaQuery.disableAnimationsOf(context);
+      return AnimatedSlide(
+        duration: motion ? const Duration(milliseconds: 180) : Duration.zero,
+        offset: motion && speaking ? const Offset(0, -.025) : Offset.zero,
+        child: Image.asset(
+          'assets/kvesmos/$asset',
+          width: size,
+          height: size * 1.18,
+          fit: BoxFit.contain,
+          alignment: Alignment.bottomCenter,
+          semanticLabel: id == 'miko' ? 'Навигатор Мико' : 'Орби приветствует',
         ),
       );
+    },
+  );
 
   @override
   Widget build(BuildContext context) => ClipRRect(
@@ -73,15 +85,7 @@ class CommandBridge extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            right: 22,
-            bottom: 0,
-            child: _actor(
-              'orbi',
-              76,
-              greeting ? ActorAction.greeting : ActorAction.idle,
-            ),
-          ),
+          Positioned(right: 22, bottom: 0, child: _actor('orbi', 76)),
           Positioned(
             left: 14,
             bottom: 8,
@@ -93,15 +97,7 @@ class CommandBridge extends StatelessWidget {
                 child: InkWell(
                   onTap: () => context.go('/training'),
                   child: ExcludeSemantics(
-                    child: IgnorePointer(
-                      child: _actor(
-                        'miko',
-                        70,
-                        completed > 0
-                            ? ActorAction.interaction
-                            : ActorAction.idle,
-                      ),
-                    ),
+                    child: IgnorePointer(child: _actor('miko', 82)),
                   ),
                 ),
               ),

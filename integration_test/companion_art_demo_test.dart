@@ -3,13 +3,14 @@ import 'dart:ui' show FrameTiming;
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:orbitwords/ui/cutout_actor.dart';
+import 'package:orbitwords/ui/character_animation_catalog.dart';
+import 'package:orbitwords/ui/character_moment.dart';
 import 'package:orbitwords/ui/design.dart';
 
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   binding.framePolicy = LiveTestWidgetsFlutterBindingFramePolicy.fullyLive;
-  testWidgets('joint animation preview on Android', (tester) async {
+  testWidgets('approved companion poses on Android', (tester) async {
     final timings = <FrameTiming>[];
     void collect(List<FrameTiming> frames) => timings.addAll(frames);
     binding.addTimingsCallback(collect);
@@ -24,8 +25,13 @@ void main() {
     }
 
     await marker('VIDEO_START:en');
-    for (final id in CutoutActor.supported) {
-      for (final action in ActorAction.values) {
+    for (final id in ['orbi', ...CharacterAnimationCatalog.cast]) {
+      final slug = id.replaceAll('_', '-');
+      for (final action in [
+        CharacterState.idle,
+        CharacterState.correct,
+        CharacterState.support,
+      ]) {
         await tester.pumpWidget(
           MaterialApp(
             debugShowCheckedModeBanner: false,
@@ -37,10 +43,10 @@ void main() {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text('$id · ${action.name}'),
-                    CutoutActor(
+                    CharacterMoment(
                       key: ValueKey((id, action)),
-                      character: id,
-                      action: action,
+                      characterId: id,
+                      state: action,
                       size: 260,
                     ),
                   ],
@@ -53,7 +59,7 @@ void main() {
         await Future<void>.delayed(const Duration(milliseconds: 1000));
         await tester.pump();
         expect(tester.takeException(), isNull);
-        await marker('CAPTURE:cutout-$id-${action.name}');
+        await marker('CAPTURE:companion-$slug-${action.name}');
         await Future<void>.delayed(const Duration(milliseconds: 1500));
       }
     }

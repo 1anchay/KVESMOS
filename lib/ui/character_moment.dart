@@ -2,7 +2,6 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import '../services/learning_audio.dart';
 import 'character_animation_catalog.dart';
-import 'cutout_actor.dart';
 
 /// States are independent of the renderer: licensed frame sets can replace the
 /// current pose/gesture renderer without changing lesson or playback logic.
@@ -17,50 +16,6 @@ enum CharacterState {
   celebration,
   surprise,
   goodbye,
-}
-
-/// Learning surfaces use the new layered art where available. Explicit frame
-/// previews and unprepared cast members retain the existing renderer.
-class LearningCharacter extends StatelessWidget {
-  final String characterId;
-  final CharacterState state;
-  final double size;
-  final bool animate;
-  const LearningCharacter({
-    super.key,
-    required this.characterId,
-    this.state = CharacterState.idle,
-    this.size = 76,
-    this.animate = true,
-  });
-  @override
-  Widget build(BuildContext context) {
-    if (!CutoutActor.supported.contains(characterId)) {
-      return CharacterMoment(
-        characterId: characterId,
-        state: state,
-        size: size,
-        animate: animate,
-      );
-    }
-    return CutoutActor(
-      character: characterId,
-      size: size,
-      animate: animate,
-      action: switch (state) {
-        CharacterState.idle => ActorAction.idle,
-        CharacterState.greeting => ActorAction.greeting,
-        CharacterState.talking => ActorAction.talking,
-        CharacterState.listening => ActorAction.listening,
-        CharacterState.thinking => ActorAction.thinking,
-        CharacterState.correct => ActorAction.happy,
-        CharacterState.support => ActorAction.support,
-        CharacterState.celebration => ActorAction.celebration,
-        CharacterState.surprise => ActorAction.surprise,
-        CharacterState.goodbye => ActorAction.goodbye,
-      },
-    );
-  }
 }
 
 class SpeakingCharacter extends StatelessWidget {
@@ -78,7 +33,7 @@ class SpeakingCharacter extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ValueListenableBuilder<SpeechPlayback?>(
     valueListenable: audio.playback,
-    builder: (context, playback, _) => LearningCharacter(
+    builder: (context, playback, _) => CharacterMoment(
       characterId: character,
       size: size,
       animate: audio.preferences.reactions,
@@ -125,8 +80,7 @@ class CharacterAnimationProfile {
   };
 }
 
-/// Finite pose transitions, gestures and Orbi's procedural eyelids. This is not
-/// skeletal animation or lip sync: the hand poses come from supplied artwork.
+/// Event-driven pose transitions using the supplied character illustrations.
 class CharacterMoment extends StatefulWidget {
   final String characterId;
   final bool? correct;
@@ -163,7 +117,6 @@ class _CharacterMomentState extends State<CharacterMoment>
   late final controller = AnimationController(vsync: this);
   bool reduce = false;
   CharacterState? interaction;
-  double gaze = 0;
   CharacterState get activeState => interaction ?? widget.effectiveState;
   List<String> _castFrames = const [];
   void play() {
@@ -305,7 +258,11 @@ class _CharacterMomentState extends State<CharacterMoment>
     final pose = switch (state) {
       CharacterState.correct || CharacterState.goodbye => 'wink_thumbsup',
       CharacterState.celebration => 'happy',
-      _ => 'thinking',
+      CharacterState.thinking ||
+      CharacterState.listening ||
+      CharacterState.support => 'thinking',
+      CharacterState.surprise => 'surprised',
+      _ => 'happy',
     };
     final symbol = switch (state) {
       CharacterState.correct ||
@@ -326,12 +283,6 @@ class _CharacterMomentState extends State<CharacterMoment>
       button: true,
       hint: 'Коснись, чтобы поздороваться',
       child: GestureDetector(
-        onTapDown: (details) {
-          gaze = ((details.localPosition.dx / widget.size) * 2 - 1).clamp(
-            -1.0,
-            1.0,
-          );
-        },
         onTap: () {
           setState(
             () => interaction = interaction == CharacterState.greeting
@@ -381,9 +332,6 @@ class _CharacterMomentState extends State<CharacterMoment>
                       frames.length - 1,
                     )]
                   : 'assets/kvesmos/${widget.characterId == 'orbi' ? 'orbi_$pose' : widget.characterId}.png';
-              final blink = moving
-                  ? (1 - ((t - .48) / .05).abs()).clamp(0.0, 1.0)
-                  : 0.0;
               return Stack(
                 clipBehavior: Clip.none,
                 children: [
@@ -415,22 +363,6 @@ class _CharacterMomentState extends State<CharacterMoment>
                                 ),
                               ),
                             ),
-                            if (widget.characterId == 'orbi' &&
-                                pose == 'thinking' &&
-                                frames == null)
-                              Positioned.fill(
-                                child: CustomPaint(
-                                  painter: _OrbiFace(
-                                    blink,
-                                    moving
-                                        ? math.sin(t * math.pi * 2) * .6 +
-                                              gaze * envelope
-                                        : 0,
-                                    state,
-                                    moving ? t : 1,
-                                  ),
-                                ),
-                              ),
                           ],
                         ),
                       ),
@@ -494,108 +426,6 @@ class _CharacterMomentState extends State<CharacterMoment>
       ),
     );
   }
-}
-
-class _OrbiFace extends CustomPainter {
-  final double amount, gaze, t;
-  final CharacterState state;
-  _OrbiFace(this.amount, this.gaze, this.state, this.t);
-  @override
-  void paint(Canvas canvas, Size size) {
-    // Coordinates refer only to the supplied 443x406 thinking pose. The other
-    // portraits have no isolated eyes; never place these lids on unknown art.
-    final scale = math.min(size.width / 443, size.height / 406);
-    canvas.translate(
-      (size.width - 443 * scale) / 2,
-      (size.height - 406 * scale) / 2,
-    );
-    canvas.scale(scale);
-    for (final eye in [const Offset(194, 270), const Offset(315, 219)]) {
-      canvas.save();
-      canvas.translate(eye.dx, eye.dy);
-      canvas.rotate(-.28);
-      canvas.drawOval(
-        const Rect.fromLTWH(-40, -47, 80, 94),
-        Paint()..color = const Color(0xFF010719),
-      );
-      final open = (1 - amount).clamp(.04, 1.0);
-      canvas.save();
-      canvas.scale(1, open);
-      final happy =
-          state == CharacterState.greeting || state == CharacterState.support;
-      if (happy) {
-        canvas.drawArc(
-          const Rect.fromLTWH(-28, -12, 56, 36),
-          math.pi + .15,
-          math.pi - .3,
-          false,
-          Paint()
-            ..color = const Color(0xFF4AE7FF)
-            ..style = PaintingStyle.stroke
-            ..strokeWidth = 9
-            ..strokeCap = StrokeCap.round,
-        );
-      } else {
-        canvas.drawOval(
-          const Rect.fromLTWH(-31, -40, 62, 80),
-          Paint()
-            ..shader = const LinearGradient(
-              colors: [Color(0xFF78F4FF), Color(0xFF00C7FF)],
-            ).createShader(const Rect.fromLTWH(-31, -40, 62, 80)),
-        );
-        canvas.drawOval(
-          Rect.fromCenter(
-            center: Offset(gaze * 10 + 9, -10),
-            width: 26,
-            height: state == CharacterState.surprise ? 30 : 42,
-          ),
-          Paint()..color = const Color(0xFF001633),
-        );
-        canvas.drawCircle(
-          Offset(gaze * 10 + 14, -22),
-          5,
-          Paint()..color = Colors.white.withValues(alpha: .8),
-        );
-      }
-      canvas.restore();
-      canvas.restore();
-    }
-    // The mouth occupies the unobstructed screen area above the original hand.
-    canvas.drawOval(
-      const Rect.fromLTWH(254, 263, 34, 23),
-      Paint()..color = const Color(0xFF010719),
-    );
-    final mouth = Paint()
-      ..color = const Color(0xFF4AE7FF)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 3.5
-      ..strokeCap = StrokeCap.round;
-    if (state == CharacterState.talking) {
-      canvas.drawOval(
-        Rect.fromCenter(
-          center: const Offset(270, 275),
-          width: 14,
-          height: 4 + math.sin(t * 36).abs() * 10,
-        ),
-        mouth,
-      );
-    } else {
-      canvas.drawArc(
-        const Rect.fromLTWH(259, 264, 22, 15),
-        state == CharacterState.thinking ? math.pi : 0,
-        math.pi,
-        false,
-        mouth,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(_OrbiFace old) =>
-      amount != old.amount ||
-      gaze != old.gaze ||
-      state != old.state ||
-      t != old.t;
 }
 
 class _CelebrationParticles extends CustomPainter {

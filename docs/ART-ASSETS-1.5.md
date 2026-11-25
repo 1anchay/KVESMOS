@@ -1,6 +1,12 @@
 # Art and animation assets · 1.5 work in progress
 
-## Integrated project assets
+## Current character artwork
+
+The lesson, command bridge, reward reveal and gallery display the approved KVESMOS illustrations. The production widget is CharacterMoment. Seven full figures come from docs/design-handoff/01_approved/characters/*_sheet.png. Run python tool/export_crew_illustrations.py to rebuild their lossless transparent WebP files. Orbi and Pixie use their existing project drawings. Event poses for the crew use the existing illustrated expression set. Speech cues follow LearningAudio.playback. No joint atlas is bundled.
+
+## Prototype history
+
+The sections below document earlier assets and measurements. The joint-renderer prototypes were retired after visual review. Their gallery captures do not represent the current app.
 
 - assets/kvesmos/scenes/painted_bridge.webp — original generated hand-painted starship interior, 315788 bytes at first export. Built-in ImageGen, source exec-adeb2c5a-d4d7-4f50-ac43-fb75ac5bfda5.png.
 - assets/kvesmos/rigs/miko.webp — eight-part atlas based on the approved Miko reference. Built-in ImageGen, source exec-d5d8e225-f197-4118-b7e0-86befc0e23dc.png.

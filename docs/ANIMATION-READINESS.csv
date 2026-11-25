@@ -1,127 +1,127 @@
 character,action,source,rights,implementation,verification
-orbi,idle,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,blink,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,breathing,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,greeting,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,walk,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,talking,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,listening,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,thinking,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,happy,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,support,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,surprise,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,celebration,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,goodbye,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-orbi,interaction,assets/kvesmos/rigs/orbi.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,idle,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,blink,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,breathing,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,greeting,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,walk,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,talking,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,listening,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,thinking,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,happy,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,support,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,surprise,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,celebration,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,goodbye,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-miko,interaction,assets/kvesmos/rigs/miko.webp,generated derivative of approved reference,joint prototype,Android gallery passed; video recorded; art acceptance open
-pixie,idle,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,blink,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,breathing,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,greeting,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,walk,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,talking,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,listening,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,thinking,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,happy,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,support,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,surprise,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,celebration,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,goodbye,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-pixie,interaction,assets/kvesmos/rigs/pixie.webp,generated derivative of approved reference,joint prototype; dedicated anatomy,Android gallery passed; video recorded; art acceptance open
-aster,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-aster,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-reyvo,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-zig_quartz,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-vespa,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-nox,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,idle,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,blink,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,breathing,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,greeting,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,walk,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,talking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,listening,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,thinking,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,happy,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,support,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,surprise,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,celebration,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,goodbye,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
-fox_scholar,interaction,approved character artwork,project supplied,requires dedicated animation,not verified as a rig
+orbi,idle,assets/kvesmos/orbi_*.png,project supplied,resting illustration,Android gallery scenario; physical device review pending
+orbi,blink,,project supplied,dedicated motion pending,open
+orbi,breathing,,project supplied,dedicated motion pending,open
+orbi,greeting,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+orbi,walk,,project supplied,dedicated motion pending,open
+orbi,talking,assets/kvesmos/orbi_*.png,project supplied,playback-triggered speech pose,physical device review pending
+orbi,listening,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+orbi,thinking,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+orbi,happy,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+orbi,support,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+orbi,surprise,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+orbi,celebration,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+orbi,goodbye,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+orbi,interaction,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+miko,idle,assets/kvesmos/crew_motion/miko_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+miko,blink,,project supplied,dedicated motion pending,open
+miko,breathing,,project supplied,dedicated motion pending,open
+miko,greeting,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
+miko,walk,,project supplied,dedicated motion pending,open
+miko,talking,assets/kvesmos/crew_motion/miko_*.webp,project supplied,playback-triggered speech pose,physical device review pending
+miko,listening,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
+miko,thinking,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
+miko,happy,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+miko,support,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+miko,surprise,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
+miko,celebration,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
+miko,goodbye,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
+miko,interaction,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
+pixie,idle,assets/kvesmos/pixie.png,project supplied,resting illustration,Android gallery scenario; physical device review pending
+pixie,blink,,project supplied,dedicated motion pending,open
+pixie,breathing,,project supplied,dedicated motion pending,open
+pixie,greeting,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
+pixie,walk,,project supplied,dedicated motion pending,open
+pixie,talking,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,playback-triggered speech pose,physical device review pending
+pixie,listening,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
+pixie,thinking,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
+pixie,happy,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+pixie,support,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+pixie,surprise,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
+pixie,celebration,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
+pixie,goodbye,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
+pixie,interaction,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
+aster,idle,assets/kvesmos/crew_motion/aster_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+aster,blink,,project supplied,dedicated motion pending,open
+aster,breathing,,project supplied,dedicated motion pending,open
+aster,greeting,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
+aster,walk,,project supplied,dedicated motion pending,open
+aster,talking,assets/kvesmos/crew_motion/aster_*.webp,project supplied,playback-triggered speech pose,physical device review pending
+aster,listening,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
+aster,thinking,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
+aster,happy,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+aster,support,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+aster,surprise,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
+aster,celebration,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
+aster,goodbye,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
+aster,interaction,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
+reyvo,idle,assets/kvesmos/crew_motion/reyvo_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+reyvo,blink,,project supplied,dedicated motion pending,open
+reyvo,breathing,,project supplied,dedicated motion pending,open
+reyvo,greeting,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
+reyvo,walk,,project supplied,dedicated motion pending,open
+reyvo,talking,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,playback-triggered speech pose,physical device review pending
+reyvo,listening,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
+reyvo,thinking,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
+reyvo,happy,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+reyvo,support,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+reyvo,surprise,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
+reyvo,celebration,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
+reyvo,goodbye,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
+reyvo,interaction,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
+zig_quartz,idle,assets/kvesmos/crew_motion/zig_quartz_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+zig_quartz,blink,,project supplied,dedicated motion pending,open
+zig_quartz,breathing,,project supplied,dedicated motion pending,open
+zig_quartz,greeting,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
+zig_quartz,walk,,project supplied,dedicated motion pending,open
+zig_quartz,talking,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,playback-triggered speech pose,physical device review pending
+zig_quartz,listening,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
+zig_quartz,thinking,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
+zig_quartz,happy,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+zig_quartz,support,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+zig_quartz,surprise,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
+zig_quartz,celebration,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
+zig_quartz,goodbye,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
+zig_quartz,interaction,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
+vespa,idle,assets/kvesmos/crew_motion/vespa_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+vespa,blink,,project supplied,dedicated motion pending,open
+vespa,breathing,,project supplied,dedicated motion pending,open
+vespa,greeting,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
+vespa,walk,,project supplied,dedicated motion pending,open
+vespa,talking,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,playback-triggered speech pose,physical device review pending
+vespa,listening,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
+vespa,thinking,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
+vespa,happy,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+vespa,support,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+vespa,surprise,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
+vespa,celebration,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
+vespa,goodbye,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
+vespa,interaction,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
+nox,idle,assets/kvesmos/crew_motion/nox_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+nox,blink,,project supplied,dedicated motion pending,open
+nox,breathing,,project supplied,dedicated motion pending,open
+nox,greeting,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
+nox,walk,,project supplied,dedicated motion pending,open
+nox,talking,assets/kvesmos/crew_motion/nox_*.webp,project supplied,playback-triggered speech pose,physical device review pending
+nox,listening,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
+nox,thinking,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
+nox,happy,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+nox,support,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+nox,surprise,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
+nox,celebration,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
+nox,goodbye,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
+nox,interaction,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
+fox_scholar,idle,assets/kvesmos/crew_motion/fox_scholar_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+fox_scholar,blink,,project supplied,dedicated motion pending,open
+fox_scholar,breathing,,project supplied,dedicated motion pending,open
+fox_scholar,greeting,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,physical device review pending
+fox_scholar,walk,,project supplied,dedicated motion pending,open
+fox_scholar,talking,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,playback-triggered speech pose,physical device review pending
+fox_scholar,listening,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,physical device review pending
+fox_scholar,thinking,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,physical device review pending
+fox_scholar,happy,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+fox_scholar,support,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
+fox_scholar,surprise,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,physical device review pending
+fox_scholar,celebration,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,physical device review pending
+fox_scholar,goodbye,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,physical device review pending
+fox_scholar,interaction,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,physical device review pending

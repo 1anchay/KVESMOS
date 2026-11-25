@@ -230,24 +230,45 @@ class _CharacterMomentState extends State<CharacterMoment>
                     : t < .28
                     ? 0
                     : _castFrames.length - 1;
+                final asset = _castFrames[index];
+                final illustration = Image.asset(
+                  asset,
+                  fit: BoxFit.contain,
+                  width: widget.size + 12,
+                  height: widget.size + 12,
+                  excludeFromSemantics: true,
+                  errorBuilder: (_, _, _) => Image.asset(
+                    CharacterAnimationCatalog.neutral(widget.characterId),
+                    excludeFromSemantics: true,
+                  ),
+                );
+                final isExpression =
+                    widget.characterId != 'pixie' &&
+                    widget.frames[activeState] == null &&
+                    activeState != CharacterState.idle;
+                final colors = Theme.of(context).colorScheme;
                 return AnimatedSwitcher(
                   duration: reduce || !widget.animate
                       ? Duration.zero
                       : const Duration(milliseconds: 135),
-                  child: Image.asset(
-                    _castFrames[index],
-                    key: ValueKey(_castFrames[index]),
-                    fit: BoxFit.contain,
-                    width: widget.size + 12,
-                    height: widget.size + 12,
-                    excludeFromSemantics: true,
-                    errorBuilder: (_, _, _) => Image.asset(
-                      CharacterAnimationCatalog.neutral(widget.characterId),
-                      width: widget.size,
-                      height: widget.size,
-                      excludeFromSemantics: true,
-                    ),
-                  ),
+                  child: isExpression
+                      ? Container(
+                          key: ValueKey(asset),
+                          width: widget.size,
+                          height: widget.size,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: colors.primaryContainer,
+                          ),
+                          // Expression cells have transparent atlas margins.
+                          // Leave enough room for pointed ears, eyes and chin.
+                          child: Transform.scale(
+                            scale: 1.63,
+                            child: illustration,
+                          ),
+                        )
+                      : KeyedSubtree(key: ValueKey(asset), child: illustration),
                 );
               },
             ),

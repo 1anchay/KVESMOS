@@ -4,6 +4,12 @@
 
 The lesson, command bridge, reward reveal and gallery display the approved KVESMOS illustrations. The production widget is CharacterMoment. Seven full figures come from docs/design-handoff/01_approved/characters/*_sheet.png. Run python tool/export_crew_illustrations.py to rebuild their lossless transparent WebP files. Orbi and Pixie use their existing project drawings. Event poses for the crew use the existing illustrated expression set. Speech cues follow LearningAudio.playback. No joint atlas is bundled.
 
+## Animated crew loops
+
+Run `python tool/bake_crew_idle.py` with Pillow to regenerate the nine offline idle clips. The exporter inverse-maps a mesh onto the supplied drawings, with separate influence regions and timings for each character. The output uses premultiplied alpha during deformation to keep silhouettes clean. Miko uses a 40-frame cycle, the remaining cast uses 32 frames each. The editable source is the control data in the exporter and the original project artwork.
+
+The transparent window and console layer has 36 frames. Rebuild it with `python tool/bake_bridge_lights.py`. The sky mask follows the central window of painted_bridge.webp. The renderer skips both types of motion when reduced motion or disabled reactions is selected.
+
 ## Prototype history
 
 The sections below document earlier assets and measurements. The joint-renderer prototypes were retired after visual review. Their gallery captures do not represent the current app.

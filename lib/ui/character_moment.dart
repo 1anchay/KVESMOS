@@ -127,6 +127,14 @@ class _CharacterMomentState extends State<CharacterMoment>
             widget.characterId,
             activeState.name,
           );
+      if (activeState == CharacterState.idle &&
+          !reduce &&
+          widget.animate &&
+          widget.frames[activeState] == null) {
+        final id = widget.characterId;
+        final pose = id == 'miko' ? 'bridge_idle' : 'idle';
+        _castFrames = [CharacterAnimationCatalog.artwork(id, pose)];
+      }
       for (final asset in _castFrames) {
         precacheImage(
           AssetImage(asset),
@@ -352,6 +360,11 @@ class _CharacterMomentState extends State<CharacterMoment>
                       0,
                       frames.length - 1,
                     )]
+                  : widget.characterId == 'orbi' &&
+                        state == CharacterState.idle &&
+                        !reduce &&
+                        widget.animate
+                  ? CharacterAnimationCatalog.artwork('orbi', 'idle')
                   : 'assets/kvesmos/${widget.characterId == 'orbi' ? 'orbi_$pose' : widget.characterId}.png';
               return Stack(
                 clipBehavior: Clip.none,

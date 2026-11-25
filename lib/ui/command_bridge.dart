@@ -23,10 +23,12 @@ class CommandBridge extends StatelessWidget {
     valueListenable: audio.playback,
     builder: (context, speech, _) {
       final speaking = speech?.playing == true && speech?.character == id;
-      final asset = id == 'miko'
-          ? 'crew_motion/miko_bridge.webp'
-          : (greeting && animate ? 'orbi_wink_thumbsup.png' : 'orbi_happy.png');
       final motion = animate && !MediaQuery.disableAnimationsOf(context);
+      final asset = id == 'miko'
+          ? (motion
+                ? 'crew_motion/miko_bridge_idle.webp'
+                : 'crew_motion/miko_bridge.webp')
+          : (greeting && animate ? 'orbi_wink_thumbsup.png' : 'orbi_happy.png');
       return AnimatedSlide(
         duration: motion ? const Duration(milliseconds: 180) : Duration.zero,
         offset: motion && speaking ? const Offset(0, -.025) : Offset.zero,
@@ -56,6 +58,14 @@ class CommandBridge extends StatelessWidget {
             excludeFromSemantics: true,
             cacheWidth: 1024,
           ),
+          if (animate && !MediaQuery.disableAnimationsOf(context))
+            IgnorePointer(
+              child: Image.asset(
+                'assets/kvesmos/scenes/bridge_lights.webp',
+                fit: BoxFit.cover,
+                excludeFromSemantics: true,
+              ),
+            ),
           const DecoratedBox(
             decoration: BoxDecoration(
               gradient: LinearGradient(

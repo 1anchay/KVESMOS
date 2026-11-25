@@ -1,5 +1,5 @@
 character,action,source,rights,implementation,verification
-orbi,idle,assets/kvesmos/orbi_*.png,project supplied,resting illustration,Android gallery scenario; physical device review pending
+orbi,idle,assets/kvesmos/crew_motion/orbi_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
 orbi,blink,,project supplied,dedicated motion pending,open
 orbi,breathing,,project supplied,dedicated motion pending,open
 orbi,greeting,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
@@ -13,7 +13,7 @@ orbi,surprise,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transi
 orbi,celebration,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
 orbi,goodbye,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
 orbi,interaction,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
-miko,idle,assets/kvesmos/crew_motion/miko_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+miko,idle,assets/kvesmos/crew_motion/miko_bridge_idle.webp,project supplied,frame animation,40 distinct frames; Android scenario in companion_art_demo_test
 miko,blink,,project supplied,dedicated motion pending,open
 miko,breathing,,project supplied,dedicated motion pending,open
 miko,greeting,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
@@ -27,7 +27,7 @@ miko,surprise,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrate
 miko,celebration,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
 miko,goodbye,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
 miko,interaction,assets/kvesmos/crew_motion/miko_*.webp,project supplied,illustrated pose transition,physical device review pending
-pixie,idle,assets/kvesmos/pixie.png,project supplied,resting illustration,Android gallery scenario; physical device review pending
+pixie,idle,assets/kvesmos/crew_motion/pixie_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
 pixie,blink,,project supplied,dedicated motion pending,open
 pixie,breathing,,project supplied,dedicated motion pending,open
 pixie,greeting,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
@@ -41,7 +41,7 @@ pixie,surprise,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustra
 pixie,celebration,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
 pixie,goodbye,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
 pixie,interaction,assets/kvesmos/crew_motion/pixie_*.webp,project supplied,illustrated pose transition,physical device review pending
-aster,idle,assets/kvesmos/crew_motion/aster_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+aster,idle,assets/kvesmos/crew_motion/aster_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
 aster,blink,,project supplied,dedicated motion pending,open
 aster,breathing,,project supplied,dedicated motion pending,open
 aster,greeting,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
@@ -55,7 +55,7 @@ aster,surprise,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustra
 aster,celebration,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
 aster,goodbye,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
 aster,interaction,assets/kvesmos/crew_motion/aster_*.webp,project supplied,illustrated pose transition,physical device review pending
-reyvo,idle,assets/kvesmos/crew_motion/reyvo_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+reyvo,idle,assets/kvesmos/crew_motion/reyvo_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
 reyvo,blink,,project supplied,dedicated motion pending,open
 reyvo,breathing,,project supplied,dedicated motion pending,open
 reyvo,greeting,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
@@ -69,7 +69,7 @@ reyvo,surprise,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustra
 reyvo,celebration,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
 reyvo,goodbye,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
 reyvo,interaction,assets/kvesmos/crew_motion/reyvo_*.webp,project supplied,illustrated pose transition,physical device review pending
-zig_quartz,idle,assets/kvesmos/crew_motion/zig_quartz_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+zig_quartz,idle,assets/kvesmos/crew_motion/zig_quartz_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
 zig_quartz,blink,,project supplied,dedicated motion pending,open
 zig_quartz,breathing,,project supplied,dedicated motion pending,open
 zig_quartz,greeting,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
@@ -83,7 +83,7 @@ zig_quartz,surprise,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplie
 zig_quartz,celebration,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
 zig_quartz,goodbye,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
 zig_quartz,interaction,assets/kvesmos/crew_motion/zig_quartz_*.webp,project supplied,illustrated pose transition,physical device review pending
-vespa,idle,assets/kvesmos/crew_motion/vespa_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+vespa,idle,assets/kvesmos/crew_motion/vespa_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
 vespa,blink,,project supplied,dedicated motion pending,open
 vespa,breathing,,project supplied,dedicated motion pending,open
 vespa,greeting,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
@@ -97,7 +97,7 @@ vespa,surprise,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustra
 vespa,celebration,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
 vespa,goodbye,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
 vespa,interaction,assets/kvesmos/crew_motion/vespa_*.webp,project supplied,illustrated pose transition,physical device review pending
-nox,idle,assets/kvesmos/crew_motion/nox_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+nox,idle,assets/kvesmos/crew_motion/nox_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
 nox,blink,,project supplied,dedicated motion pending,open
 nox,breathing,,project supplied,dedicated motion pending,open
 nox,greeting,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
@@ -111,7 +111,7 @@ nox,surprise,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated 
 nox,celebration,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
 nox,goodbye,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
 nox,interaction,assets/kvesmos/crew_motion/nox_*.webp,project supplied,illustrated pose transition,physical device review pending
-fox_scholar,idle,assets/kvesmos/crew_motion/fox_scholar_bridge.webp,project supplied,resting illustration,Android gallery scenario; physical device review pending
+fox_scholar,idle,assets/kvesmos/crew_motion/fox_scholar_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
 fox_scholar,blink,,project supplied,dedicated motion pending,open
 fox_scholar,breathing,,project supplied,dedicated motion pending,open
 fox_scholar,greeting,assets/kvesmos/crew_motion/fox_scholar_*.webp,project supplied,illustrated pose transition,physical device review pending

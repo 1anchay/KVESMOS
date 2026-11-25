@@ -24,7 +24,6 @@ void main() {
       expect(result.exitCode, 0);
     }
 
-    await marker('VIDEO_START:en');
     for (final id in ['orbi', ...CharacterAnimationCatalog.cast]) {
       final slug = id.replaceAll('_', '-');
       for (final action in [
@@ -56,14 +55,19 @@ void main() {
           ),
         );
         await tester.pump();
+        if (action == CharacterState.idle) {
+          await marker('VIDEO_START:$id');
+          await Future<void>.delayed(const Duration(seconds: 6));
+        }
         await Future<void>.delayed(const Duration(milliseconds: 1000));
         await tester.pump();
         expect(tester.takeException(), isNull);
         await marker('CAPTURE:companion-$slug-${action.name}');
         await Future<void>.delayed(const Duration(milliseconds: 1500));
       }
+      await marker('VIDEO_DONE:$id');
+      await Future<void>.delayed(const Duration(seconds: 1));
     }
-    await marker('VIDEO_DONE:en');
     if (timings.length > 10) {
       final frames = timings.skip(10).toList();
       final build =

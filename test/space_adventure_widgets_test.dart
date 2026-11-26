@@ -128,13 +128,19 @@ void main() {
           }
 
           Future<void> capture(String name) async {
-            await tester.runAsync(() async {
-              for (final image in tester.widgetList<Image>(
-                find.byType(Image),
-              )) {
-                await precacheImage(image.image, boundary.currentContext!);
-              }
-            });
+            // Let the mounted image streams decode while the test binding
+            // advances. Never hold a lazy element iterator across an await.
+            final images = find.byType(RawImage);
+            bool decoded() => tester
+                .widgetList<RawImage>(images)
+                .every((image) => image.image != null);
+            for (var attempt = 0; !decoded() && attempt < 200; attempt++) {
+              await tester.runAsync(
+                () => Future<void>.delayed(const Duration(milliseconds: 10)),
+              );
+              await tester.pump(const Duration(milliseconds: 16));
+            }
+            expect(decoded(), isTrue, reason: 'Images did not decode: $name');
             await tester.pumpAndSettle();
             expect(tester.takeException(), isNull, reason: name);
             await tester.runAsync(

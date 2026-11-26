@@ -21,6 +21,7 @@ import 'unit_guide.dart';
 import 'practice_hub.dart';
 import 'placement_page.dart';
 import 'picture_recall.dart';
+import 'beacon_chapter.dart';
 import 'conversation_page.dart';
 import 'progress_transfer_page.dart';
 import 'listening_page.dart';
@@ -136,11 +137,13 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           path: '/goal',
           builder: (_, _) => const OnboardingPage(step: 3),
         ),
+        GoRoute(path: '/beacon', builder: (_, _) => const BeaconChapter()),
         GoRoute(
           path: '/lesson/:id',
           builder: (_, state) => LessonScreen(
             key: ValueKey(state.uri.toString()),
             lessonId: state.pathParameters['id']!,
+            chapter: state.uri.queryParameters['chapter'] == 'beacon',
             demo: state.uri.queryParameters['demo'] == '1',
           ),
         ),

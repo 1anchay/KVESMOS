@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/database.dart';
+import '../data/beacon_repository.dart';
 import '../domain/course.dart';
 import '../domain/mistake_feedback.dart';
 import '../domain/intro_activity.dart';
@@ -47,7 +48,13 @@ const exerciseNames = {
 class LessonScreen extends ConsumerStatefulWidget {
   final String lessonId;
   final bool demo;
-  const LessonScreen({super.key, required this.lessonId, this.demo = false});
+  final bool chapter;
+  const LessonScreen({
+    super.key,
+    required this.lessonId,
+    this.demo = false,
+    this.chapter = false,
+  });
   @override
   ConsumerState<LessonScreen> createState() => _LessonScreenState();
 }
@@ -102,6 +109,9 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         demo: widget.demo,
       );
       final saved = material.session;
+      if (widget.chapter) {
+        await BeaconRepository(app.repository).bind(widget.lessonId, saved.id);
+      }
       rehearsal =
           await app.repository.setting(
             'kvesmos.session.rehearsal.v1:${saved.id}',
@@ -204,6 +214,11 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
           .read(appProvider)
           .repository
           .restartUpdated(widget.lessonId, session!.id);
+      if (mounted && widget.chapter) {
+        await BeaconRepository(
+          ref.read(appProvider).repository,
+        ).bind(widget.lessonId, material.session.id);
+      }
       if (!mounted) return;
       lesson = material.lesson;
       session = material.session;
@@ -1131,6 +1146,7 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
   Widget _completion(BuildContext context) {
     final app = ref.watch(appProvider);
     return FlightCompletion(
+      chapter: widget.chapter,
       app: app,
       lesson: lesson!,
       summary: lessonResult ?? ProgressSnapshot(),

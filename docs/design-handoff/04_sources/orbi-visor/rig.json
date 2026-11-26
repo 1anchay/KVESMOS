@@ -1,0 +1,15 @@
+{
+  "width": 260,
+  "poses": {
+    "happy": {"eyes":[[82,116,129,157],[145,92,189,127]],"mouth":[127,127,157,154],"hand":[215,130]},
+    "wink_thumbsup": {"eyes":[[68,128,117,182],[137,111,186,152]],"mouth":null,"hand":[209,167]},
+    "thinking": {"eyes":[[86,126,140,189],[159,94,211,158]],"mouth":null,"hand":[167,194]},
+    "surprised": {"eyes":[[74,107,124,162],[145,96,195,155]],"mouth":[127,142,145,165],"hand":[168,176]}
+  },
+  "clips": {
+    "hover":["happy",48,75],"flight":["happy",24,65],"talk":["happy",32,65],
+    "greet":["wink_thumbsup",28,65],"correct":["wink_thumbsup",28,60],
+    "support":["thinking",36,75],"surprise":["surprised",24,60]
+  }
+}
+

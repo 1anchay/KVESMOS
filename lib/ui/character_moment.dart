@@ -293,6 +293,14 @@ class _CharacterMomentState extends State<CharacterMoment>
       CharacterState.surprise => 'surprised',
       _ => 'happy',
     };
+    final visorClip = switch (state) {
+      CharacterState.idle => 'hover',
+      CharacterState.talking => 'talk',
+      CharacterState.greeting || CharacterState.goodbye => 'greet',
+      CharacterState.correct || CharacterState.celebration => 'correct',
+      CharacterState.surprise => 'surprise',
+      _ => 'support',
+    };
     final symbol = switch (state) {
       CharacterState.correct ||
       CharacterState.celebration => Icons.auto_awesome_rounded,
@@ -360,11 +368,11 @@ class _CharacterMomentState extends State<CharacterMoment>
                       0,
                       frames.length - 1,
                     )]
-                  : widget.characterId == 'orbi' &&
-                        state == CharacterState.idle &&
-                        !reduce &&
-                        widget.animate
-                  ? CharacterAnimationCatalog.artwork('orbi', 'idle')
+                  : widget.characterId == 'orbi' && !reduce && widget.animate
+                  ? CharacterAnimationCatalog.artwork(
+                      'orbi',
+                      'visor_$visorClip',
+                    )
                   : 'assets/kvesmos/${widget.characterId == 'orbi' ? 'orbi_$pose' : widget.characterId}.png';
               return Stack(
                 clipBehavior: Clip.none,

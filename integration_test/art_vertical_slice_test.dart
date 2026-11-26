@@ -112,9 +112,24 @@ void main() {
       await tap(find.byTooltip('Открыть карту галактики'));
       expect(find.text('Твой маршрут'), findsOneWidget);
       await capture('art-galaxy');
+      await tap(find.text('Звёздная карта'));
+      expect(find.byType(InteractiveViewer), findsOneWidget);
+      await tester.drag(find.byType(InteractiveViewer), const Offset(-145, 12));
+      await tester.pumpAndSettle();
+      await capture('star-chart');
+      await tap(find.byTooltip('К выбранной планете'));
+      await tap(find.text('Открыть область'));
+      expect(find.text('Твой маршрут'), findsOneWidget);
       router.go('/');
       await settle();
-      await tap(find.byKey(const Key('today-start')));
+      expect(find.byKey(const Key('today-start')), findsOneWidget);
+      await tester.tapAt(tester.getCenter(find.text('МОСТИК ›')));
+      await settle();
+      await tap(find.text('В обсерваторию'));
+      await capture('beacon-observatory');
+      await tap(find.text('Лететь к маяку'));
+      await capture('beacon-shore');
+      await tap(find.text('Начать передачу'));
       await capture('art-introduction');
       var totalCorrect = 0;
       for (var number = 1; number <= 1; number++) {
@@ -211,7 +226,10 @@ void main() {
       }
       expect(app.progress.completed, {'a1-01'});
       final earnedXp = app.progress.xp;
-      await tap(find.text('Открыть находки'));
+      await tap(find.text('Вернуться к маяку'));
+      await tap(find.text('Вернуться на корабль'));
+      await capture('beacon-return');
+      await tap(find.text('К моим находкам'));
       await capture('art-rewards');
       await tap(find.text('Открыть сундук').first);
       await tap(find.text('Открыть').last);

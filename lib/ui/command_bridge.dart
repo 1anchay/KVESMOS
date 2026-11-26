@@ -79,19 +79,28 @@ class CommandBridge extends StatelessWidget {
               ),
             ),
           ),
+          Positioned.fill(
+            child: Semantics(
+              button: true,
+              label: 'Первый сигнал · войти на мостик',
+              child: InkWell(onTap: () => context.go('/beacon')),
+            ),
+          ),
           Positioned(
             left: 100,
             right: 100,
             top: 12,
-            child: Text(
-              'МОСТИК',
-              textAlign: TextAlign.center,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                color: Colors.white,
-                letterSpacing: 1.5,
-                fontWeight: FontWeight.bold,
+            child: IgnorePointer(
+              child: Text(
+                'МОСТИК ›',
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                  color: Colors.white,
+                  letterSpacing: 1.5,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),

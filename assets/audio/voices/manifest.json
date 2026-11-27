@@ -13098,6 +13098,39 @@
       "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
       "asset": "assets/audio/voices/clips/mission-4593caa66eabe0043fe0.m4a",
       "slowAsset": "assets/audio/voices/clips/mission-4593caa66eabe0043fe0-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "I have a battery.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-3fbc2a2bd7afee82565b.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-3fbc2a2bd7afee82565b-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "It is ready.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-cbbecfb481add24afe0a.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-cbbecfb481add24afe0a-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "I need a battery.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-93ab886afa9d0f63da78.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-93ab886afa9d0f63da78-slow.m4a"
     }
   ]
 }

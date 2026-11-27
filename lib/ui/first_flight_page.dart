@@ -6,11 +6,15 @@ import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/first_flight_repository.dart';
 import '../data/knowledge_repository.dart';
+import '../data/story_repository.dart';
 import '../domain/first_flight.dart';
+import '../domain/flight_story.dart';
 import '../domain/knowledge.dart';
+import '../domain/story_dialogue.dart';
 import 'character_moment.dart';
 import 'first_flight_art.dart';
 import 'knowledge_widgets.dart';
+import 'story_dialogue_sheet.dart';
 
 class RebootHome extends ConsumerStatefulWidget {
   const RebootHome({super.key});
@@ -156,6 +160,8 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
   late final AppController app;
   late final FirstFlightRepository repository;
   late final LanguageContext language;
+  late final StoryRepository stories;
+  StorySave? storySave;
   FirstFlight? flight;
   Offset pilot = const Offset(.50, .77);
   FlightItem? selected;
@@ -174,12 +180,14 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
     app = ref.read(appProvider);
     repository = FirstFlightRepository(app.repository);
     language = LanguageContext(KnowledgeRepository(app.repository), app.audio);
+    stories = StoryRepository(app.repository);
     unawaited(load());
   }
 
   Future<void> load() async {
     try {
       final next = await repository.read();
+      final savedStory = await stories.read();
       await language.repository.restoreEncounters(
         next.learned.map((w) => KnowledgeCatalog.flight[w]!.skill),
         'first-flight:legacy',
@@ -188,6 +196,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
       if (mounted) {
         setState(() {
           flight = next;
+          storySave = savedStory;
           loadError = false;
         });
       }
@@ -742,6 +751,12 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
             message ??
                 (!f.knowsRoom(f.room) ? _arrivalFor(f.room) : f.objective),
           ),
+          if (f.room != FlightRoom.airlock)
+            for (final story in FlightStory.scenes.where(
+              (s) =>
+                  s.cue.reached(f) && storySave?.runs[s.id]?.finished != true,
+            ))
+              storyLink(story),
           if (f.room == FlightRoom.bridge &&
               f.knowsRoom(f.room) &&
               !f.reserveRequested)
@@ -827,6 +842,33 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
       ),
     ),
   );
+
+  Widget storyLink(StoryScene scene) {
+    final run = storySave?.runs[scene.id];
+    final label = run == null
+        ? scene.title
+        : run.finished
+        ? 'Запись разговора'
+        : 'Продолжить разговор · ${scene.title}';
+    return TextButton.icon(
+      key: Key('flight-story-${scene.id}'),
+      onPressed: busy || word != null
+          ? null
+          : () async {
+              await showStoryDialogue(context, scene, stories, language);
+              if (!mounted) return;
+              try {
+                final save = await stories.read();
+                if (mounted) setState(() => storySave = save);
+              } catch (_) {
+                if (mounted) feedback('Не удалось прочитать журнал связи.');
+              }
+            },
+      style: _transparent,
+      icon: const Icon(Icons.radio_outlined),
+      label: Text(label),
+    );
+  }
 
   Widget itemChip(FlightItem item) {
     final active = selected == item;
@@ -1144,6 +1186,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         'Награда: сундук исследователя. Он ждёт в разделе «Сундуки».',
         help: true,
       ),
+      storyLink(FlightStory.debrief),
       const SizedBox(height: 14),
       FilledButton(
         key: const Key('flight-home'),

@@ -1,4 +1,4 @@
-"""Render offline English narration for Lost Signal or First Flight.
+"""Render offline English narration for the flight and its radio conversations.
 
 Uses the existing rights-cleared Kokoro authoring model. The model and engine
 remain authoring dependencies and are not bundled in the application.
@@ -29,16 +29,22 @@ FIRST_FLIGHT = [
     "Door", "Key", "Battery", "Cable", "Light", "Button",
     "I need a battery.", "Press the button.",
 ]
+LIVING_DIALOGUES = [
+    ("miko", "am_michael", "I have a battery."),
+    ("pixie", "af_heart", "It is ready."),
+    ("pixie", "af_heart", "I need a battery."),
+]
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--model-dir", type=Path, required=True)
 parser.add_argument("--rebuild", action="store_true")
-parser.add_argument("--episode", choices=("lost-signal", "first-flight"), default="lost-signal")
+parser.add_argument("--episode", choices=("lost-signal", "first-flight", "living-dialogues"), default="lost-signal")
 args = parser.parse_args()
 first_flight = args.episode == "first-flight"
-character = "orbi" if first_flight else "miko"
-voice = "am_puck" if first_flight else "am_michael"
-texts = FIRST_FLIGHT if first_flight else LOST_SIGNAL
+clips = LIVING_DIALOGUES if args.episode == "living-dialogues" else [
+    ("orbi", "am_puck", text) if first_flight else ("miko", "am_michael", text)
+    for text in (FIRST_FLIGHT if first_flight else LOST_SIGNAL)
+]
 
 engine = Kokoro(
     str(args.model_dir / "kokoro-v1.0.onnx"),
@@ -48,7 +54,7 @@ manifest_path = ROOT / "assets/audio/voices/manifest.json"
 manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 entries = manifest["recordings"]
 checks = []
-for text in texts:
+for character, voice, text in clips:
     ident = hashlib.sha256(f"{args.episode}|{character}|en-US|{text}".encode()).hexdigest()[:20]
     entry = {
         "character": character,
@@ -129,7 +135,7 @@ manifest_path.write_text(
     json.dumps(
         {
             "engine": importlib.metadata.version("kokoro-onnx"),
-            "voice": voice,
+            "voice": voice if len({row[1] for row in clips}) == 1 else sorted({row[1] for row in clips}),
             "files": checks,
         },
         ensure_ascii=False,

@@ -1,3 +1,5 @@
+import 'package:uuid/uuid.dart';
+
 import '../domain/knowledge.dart';
 import '../domain/progress.dart';
 import 'repository.dart';
@@ -72,19 +74,21 @@ class KnowledgeRepository {
     required bool correct,
     bool assisted = false,
     KnowledgeError? error,
+    String? recordKey,
   }) => _append(skill, 'check', {
     'context': context,
     'check': check.name,
     'correct': correct,
     'assisted': assisted,
     if (error != null) 'error': error.name,
-  });
+  }, recordKey: recordKey);
 
   Future<void> _append(
     KnowledgeSkill skill,
     String observation,
-    Map<String, Object> fields,
-  ) {
+    Map<String, Object> fields, {
+    String? recordKey,
+  }) {
     final event = learning.event('knowledge', {
       'courseId': course,
       'targetLanguage': 'en',
@@ -95,7 +99,20 @@ class KnowledgeRepository {
     if (!valid(event)) {
       throw ArgumentError('Некорректное наблюдение: ${skill.id}');
     }
-    return learning.append(event);
+    return learning.append(
+      recordKey == null
+          ? event
+          : LearningEvent(
+              id: const Uuid().v5(
+                '6ba7b811-9dad-11d1-80b4-00c04fd430c8',
+                'kvesmos:$course:${skill.id}:$recordKey',
+              ),
+              kind: event.kind,
+              occurredAt: event.occurredAt,
+              day: event.day,
+              data: event.data,
+            ),
+    );
   }
 
   static final _context = RegExp(r'^[a-z0-9][a-z0-9:.-]{0,95}$');

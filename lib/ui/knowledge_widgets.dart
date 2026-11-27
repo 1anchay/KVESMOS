@@ -62,12 +62,14 @@ class AdaptiveTerm extends StatelessWidget {
     required this.language,
     required this.entry,
     this.translation,
+    this.labelOverride,
     this.style,
     this.compact = false,
   });
   final LanguageContext language;
   final LexiconEntry entry;
   final String? translation;
+  final String? labelOverride;
   final TextStyle? style;
   final bool compact;
 
@@ -76,7 +78,9 @@ class AdaptiveTerm extends StatelessWidget {
     listenable: language,
     builder: (context, _) {
       final state = language.snapshot.of(entry.skill);
-      final label = state.label(entry, language.mode, translation: translation);
+      final label =
+          labelOverride ??
+          state.label(entry, language.mode, translation: translation);
       return Semantics(
         button: true,
         label: '$label, открыть перевод',

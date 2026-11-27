@@ -134,6 +134,18 @@ abstract final class KnowledgeCatalog {
 
   static const foundations = <KnowledgeSkill>[
     KnowledgeSkill(
+      'en:grammar:i-need',
+      KnowledgeKind.grammar,
+      'I need + предмет',
+      requires: ['en:grammar:word-order', 'en:grammar:articles'],
+    ),
+    KnowledgeSkill(
+      'en:grammar:i-have',
+      KnowledgeKind.grammar,
+      'I have + предмет',
+      requires: ['en:grammar:word-order', 'en:grammar:articles'],
+    ),
+    KnowledgeSkill(
       'en:grammar:pronouns',
       KnowledgeKind.grammar,
       'Личные местоимения',
@@ -219,13 +231,45 @@ abstract final class KnowledgeCatalog {
     KnowledgeSkill('en:ability:speaking', KnowledgeKind.ability, 'Устная речь'),
   ];
 
+  static const radio = <LexiconEntry>[
+    LexiconEntry(
+      KnowledgeSkill(
+        'en:phrase:have-battery',
+        KnowledgeKind.phrase,
+        'Батарея у меня',
+        requires: ['en:word:battery:power'],
+      ),
+      'I have a battery.',
+      'У меня есть батарея.',
+      '/aɪ hæv ə ˈbætəri/',
+      'I have a battery for the receiver.',
+      'У меня есть батарея для приёмника.',
+      voice: 'miko',
+    ),
+    LexiconEntry(
+      KnowledgeSkill(
+        'en:phrase:is-ready',
+        KnowledgeKind.phrase,
+        'Готовность прибора',
+      ),
+      'It is ready.',
+      'Он готов.',
+      '/ɪt ɪz ˈɹɛdi/',
+      'The receiver is ready.',
+      'Приёмник готов.',
+      voice: 'pixie',
+    ),
+  ];
+
   static final skills = Map<String, KnowledgeSkill>.unmodifiable({
     for (final entry in flight.values) entry.skill.id: entry.skill,
+    for (final entry in radio) entry.skill.id: entry.skill,
     for (final skill in foundations) skill.id: skill,
   });
 
   static final lexicon = Map<String, LexiconEntry>.unmodifiable({
     for (final entry in flight.values) entry.skill.id: entry,
+    for (final entry in radio) entry.skill.id: entry,
   });
 
   static void validate(Map<String, KnowledgeSkill> graph) {
@@ -471,7 +515,7 @@ class KnowledgeSnapshot {
     return seen;
   }
 
-  /// Filled in by the dialogue package with evidence for the construction itself.
+  /// English-only lines require evidence for the construction itself.
   bool canUseEnglishSentence(Iterable<KnowledgeSkill> skills) {
     final required = skills.toList();
     return required.any((s) => s.kind == KnowledgeKind.grammar) &&

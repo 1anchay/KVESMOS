@@ -22,6 +22,7 @@ import 'knowledge_repository.dart';
 import 'repository.dart';
 import 'smart_placement_repository.dart';
 import 'rewards_repository.dart';
+import 'story_repository.dart';
 
 const progressTransferMaxBytes = 32 * 1024 * 1024;
 
@@ -84,6 +85,7 @@ class ProgressTransfer {
     'kvesmos.missions.since.v1',
     _inventory,
     FirstFlightRepository.key,
+    StoryRepository.storageKey,
   };
   static const _prefixes = [
     BeaconState.prefix,
@@ -450,6 +452,10 @@ class ProgressTransfer {
     _require(_allowed(key) && _id.hasMatch(key) && value.length <= 200000);
     final parts = key.split(':');
     final suffix = parts.length > 1 ? parts[1] : '';
+    if (key == StoryRepository.storageKey) {
+      StorySave.decode(value);
+      return;
+    }
     if (key.startsWith(KnowledgeRepository.modePrefix)) {
       _require(
         suffix == StudyCourse.english.id &&
@@ -938,7 +944,10 @@ class ProgressTransfer {
       final suffix = e.key.split(':').elementAtOrNull(1);
       final sessionMetadata =
           suffix != null && file.sessions.containsKey(suffix);
-      if (e.key == FirstFlightRepository.key && old != null) {
+      if (e.key == StoryRepository.storageKey && old != null) {
+        final merged = StorySave.decode(old)..merge(StorySave.decode(e.value));
+        await learning.setSetting(e.key, merged.encode());
+      } else if (e.key == FirstFlightRepository.key && old != null) {
         final current = FirstFlight.fromJson(jsonDecode(old));
         final incoming = FirstFlight.fromJson(jsonDecode(e.value));
         int progress(FirstFlight f) => f.milestones.length + f.learned.length;

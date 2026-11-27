@@ -132,6 +132,13 @@ class _RebootHomeState extends ConsumerState<RebootHome> {
                         ),
                         child: const Text('Уроки и практика'),
                       ),
+                      if (flight?.complete == true && app.course.id == 'ru-en')
+                        OutlinedButton(
+                          key: const Key('reboot-nereya'),
+                          style: palette.outline,
+                          onPressed: () => context.push('/nereya'),
+                          child: const Text('Экспедиция на Нерею'),
+                        ),
                       TextButton(
                         onPressed: () => context.push('/settings'),
                         style: palette.link,
@@ -1204,6 +1211,14 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         help: true,
       ),
       storyLink(FlightStory.debrief),
+      if (app.course.id == 'ru-en')
+        OutlinedButton.icon(
+          key: const Key('flight-nereya'),
+          style: palette.outline,
+          onPressed: () => context.push('/nereya'),
+          icon: const Icon(Icons.water_outlined),
+          label: const Text('Пикси зовёт на Нерею'),
+        ),
       const SizedBox(height: 14),
       FilledButton(
         key: const Key('flight-home'),

@@ -1,13 +1,18 @@
 import 'dart:convert';
 
 import '../domain/flight_story.dart';
+import '../domain/fishing_story.dart';
 import '../domain/knowledge.dart';
 import '../domain/story_dialogue.dart';
 import 'first_flight_repository.dart';
+import 'fishing_repository.dart';
 import 'knowledge_repository.dart';
 import 'repository.dart';
 
 enum StoryMove { next, choice, token, help, submit, example }
+
+const _scenes = [...FlightStory.scenes, ...FishingStory.scenes];
+final _sceneById = {for (final scene in _scenes) scene.id: scene};
 
 class StoryRun {
   StoryRun(this.path);
@@ -97,7 +102,7 @@ class StorySave {
 
   Iterable<StoryChoice> get decisions sync* {
     for (final entry in runs.entries) {
-      final scene = FlightStory.byId[entry.key]!;
+      final scene = _sceneById[entry.key]!;
       for (final decision in entry.value.choices.entries) {
         final node = scene.nodes[decision.key] as StoryDecision;
         yield node.choices.firstWhere((c) => c.id == decision.value);
@@ -113,7 +118,7 @@ class StorySave {
     if (raw == null) return save;
     final data = Map<String, dynamic>.from(jsonDecode(raw) as Map);
     for (final e in data.entries) {
-      final scene = FlightStory.byId[e.key];
+      final scene = _sceneById[e.key];
       if (scene == null) throw const FormatException('Неизвестная история');
       save.runs[e.key] = StoryRun.decode(
         scene,
@@ -121,7 +126,7 @@ class StorySave {
       );
     }
     for (final entry in save.runs.entries) {
-      if (!save._supportsPath(FlightStory.byId[entry.key]!, entry.value)) {
+      if (!save._supportsPath(_sceneById[entry.key]!, entry.value)) {
         throw const FormatException('Не выполнено условие сюжетной ветки');
       }
     }
@@ -151,7 +156,7 @@ class StorySave {
 
   /// Keep the profile's own decision if imports contain different branches.
   void merge(StorySave source) {
-    for (final scene in FlightStory.scenes) {
+    for (final scene in _scenes) {
       final local = runs[scene.id];
       final incoming = source.runs[scene.id];
       if (incoming == null || !_supportsPath(scene, incoming)) continue;
@@ -201,7 +206,7 @@ class StoryRepository {
     final save = await read();
     final existing = save.runs[scene.id];
     if (existing != null) return (save: save, run: existing, verdict: null);
-    if (!scene.cue.reached(await FirstFlightRepository(learning).read())) {
+    if (!await _reached(scene)) {
       throw StateError('Сигнал пока недоступен.');
     }
     final run = save.runs[scene.id] = StoryRun([scene.start]);
@@ -209,6 +214,17 @@ class StoryRepository {
     await learning.setSetting(storageKey, save.encode());
     return (save: save, run: run, verdict: null);
   });
+
+  Future<bool> _reached(StoryScene scene) async {
+    final flight = await FirstFlightRepository(learning).read();
+    if (scene.cue != StoryCue.afterFishing) return scene.cue.reached(flight);
+    if (!flight.complete) return false;
+    final fishing = await FishingRepository(learning).read();
+    final caught = scene.id == FishingStory.report.id;
+    return fishing.reports.keys.any(
+      (trip) => fishing.forTrip(trip).isNotEmpty == caught,
+    );
+  }
 
   Future<StoryView> move(
     StoryScene scene,

@@ -16,8 +16,9 @@ Future<void> showStoryDialogue(
   BuildContext context,
   StoryScene scene,
   StoryRepository repository,
-  LanguageContext language,
-) => showModalBottomSheet<void>(
+  LanguageContext language, {
+  String? contextLine,
+}) => showModalBottomSheet<void>(
   context: context,
   isScrollControlled: true,
   useSafeArea: true,
@@ -26,6 +27,7 @@ Future<void> showStoryDialogue(
     scene: scene,
     repository: repository,
     language: language,
+    contextLine: contextLine,
   ),
 );
 
@@ -35,10 +37,12 @@ class StoryDialogueSheet extends StatefulWidget {
     required this.scene,
     required this.repository,
     required this.language,
+    this.contextLine,
   });
   final StoryScene scene;
   final StoryRepository repository;
   final LanguageContext language;
+  final String? contextLine;
   @override
   State<StoryDialogueSheet> createState() => _StorySheetState();
 }
@@ -399,7 +403,10 @@ class _StorySheetState extends State<StoryDialogueSheet> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      node.line,
+                      widget.contextLine != null &&
+                              (run.cursor == widget.scene.start || run.finished)
+                          ? '${widget.contextLine}\n\n${node.line}'
+                          : node.line,
                       key: ValueKey('story-line-${run.cursor}'),
                       style: TextStyle(
                         color: c.text,

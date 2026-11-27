@@ -1,0 +1,244 @@
+{
+  "engine": "0.6.1",
+  "voice": "af_heart",
+  "files": [
+    {
+      "asset": "assets/audio/voices/clips/mission-da44f77a1c1796b13c5a.m4a",
+      "sha256": "08b703bcaa0142268406f87cb9ae5ebf29a711d6d4ede587f2dff15b18d9bedf",
+      "bytes": 9757,
+      "text": "Fish",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-da44f77a1c1796b13c5a-slow.m4a",
+      "sha256": "3d1a8bbe87be56153b3c78b64ef2653ab8f743e4ceb0ec1642f845ea57b9cd5d",
+      "bytes": 13063,
+      "text": "Fish",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-e2e57dfda68a3d761ac4.m4a",
+      "sha256": "44f8ca47ef73f746f64b239175af071f3b6c66a9f4a7544d017da2a8f9386dbd",
+      "bytes": 10223,
+      "text": "Water",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-e2e57dfda68a3d761ac4-slow.m4a",
+      "sha256": "54110afbda2d85f078e8cdb44d95402440bd5ca53ffc56c31efab37f5cb6e8d9",
+      "bytes": 13795,
+      "text": "Water",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-df5d5809c4f593f7ca3d.m4a",
+      "sha256": "ba48088f47904f2ef7a7c4507cc9e00951344d0354ca67a75008d9d41337387a",
+      "bytes": 9357,
+      "text": "Rod",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-df5d5809c4f593f7ca3d-slow.m4a",
+      "sha256": "1b0a09002092a0bdfe332ce079b56d3d0e2fac6eb49768f9147ddcbcaae4129f",
+      "bytes": 12424,
+      "text": "Rod",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-316f6eb08c7eda6a8cbc.m4a",
+      "sha256": "f60ddceaade63e9e8d33108427f1e57135991b2290a2f7ad78ad1621f0b3ce4f",
+      "bytes": 8425,
+      "text": "Hook",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-316f6eb08c7eda6a8cbc-slow.m4a",
+      "sha256": "9dc5b611a030292e5fcc18852a8f32d1d29d5f08c7f1bf6023f6d9b3ed44f253",
+      "bytes": 11351,
+      "text": "Hook",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-8cbfa7f229e8a4892182.m4a",
+      "sha256": "eed8e3ec707fa7e0592f333a73d8e147be3b3363b47df9cc79a232d410513d20",
+      "bytes": 9804,
+      "text": "Bait",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-8cbfa7f229e8a4892182-slow.m4a",
+      "sha256": "16fa46f06a1108ee2f3b3ab0be4504cf65f7c2e70a10188c1afc0155e82bcef0",
+      "bytes": 13111,
+      "text": "Bait",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-71e3dca2c310a84b6511.m4a",
+      "sha256": "919765a53438caeea4817edf649c6dd1402104aee367306be0e650897f0a9871",
+      "bytes": 10672,
+      "text": "Line",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-71e3dca2c310a84b6511-slow.m4a",
+      "sha256": "50515bab64a0680a8e861f788d2d9f6a3f1e4859f3a255ccdf029d788a314295",
+      "bytes": 13975,
+      "text": "Line",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-133844b39a1df229b65e.m4a",
+      "sha256": "dfb2dcacaded7f1d16089c3b3bd56e99a47256075ffdf556ed02558dea50120b",
+      "bytes": 9527,
+      "text": "Catch",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-133844b39a1df229b65e-slow.m4a",
+      "sha256": "42201882b211e90bf670e60bfbd3b800e944a1ac56126abb067b27c6ef7892d6",
+      "bytes": 12340,
+      "text": "Catch",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-73c00933ba01a11219e9.m4a",
+      "sha256": "5817dd33d1c28d75f23e3e8d968e1f19f535e31f555637f16850394aae03e437",
+      "bytes": 9332,
+      "text": "Wait",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-73c00933ba01a11219e9-slow.m4a",
+      "sha256": "a17d37fd72f9472c49b0259b8103dec4570985927d1b5bdda56d906a4c179f5d",
+      "bytes": 13186,
+      "text": "Wait",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-870c83ea2ed5bfe359a7.m4a",
+      "sha256": "9f29bc51d4f71862a31fdca543fdeee5b756a5621be028116dfd1c0eb1c45a88",
+      "bytes": 9101,
+      "text": "Pull",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-870c83ea2ed5bfe359a7-slow.m4a",
+      "sha256": "498d691dff72365ca6013ef5954b9c37e5246ab7d710bb566fcddd624150e05e",
+      "bytes": 12669,
+      "text": "Pull",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-17409dedc49ca5489b66.m4a",
+      "sha256": "8d3f08d01bb3c35eacd41f3fd460028e1ca9374aff33122d25784494ca475f5a",
+      "bytes": 10427,
+      "text": "Small",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-17409dedc49ca5489b66-slow.m4a",
+      "sha256": "48984558c8062147af0ef3a7c0a94e5332a005ab4cc0b281a9b7f495296c1c2c",
+      "bytes": 13929,
+      "text": "Small",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-07aded6bc2d06b6e905c.m4a",
+      "sha256": "5dac5bf43032ddc3d7e9e48151f46ae95552cb73da35241cdf8bd965e18b5dfa",
+      "bytes": 8677,
+      "text": "Big",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-07aded6bc2d06b6e905c-slow.m4a",
+      "sha256": "a83b89145077d64babb638adb48517e9fe7501cda80eacf151ecb0bb9eec74d6",
+      "bytes": 11679,
+      "text": "Big",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-f04b1046e7bb15f26ae8.m4a",
+      "sha256": "bae07150c274cef98d53ada041295c32bd731bfafaf8fa6d0ab5e81d22c97567",
+      "bytes": 9104,
+      "text": "River",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-f04b1046e7bb15f26ae8-slow.m4a",
+      "sha256": "7bc9c97285bac657db4d248900ba33dbb22e3a90ac3cf52e0c08f9571d2e639d",
+      "bytes": 11817,
+      "text": "River",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-4c143f970dd215cae0c5.m4a",
+      "sha256": "0592109e131fe408026c5f01326edd5ce5b9f6d344b8d5b27b4e81df1abf7510",
+      "bytes": 9274,
+      "text": "Lake",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-4c143f970dd215cae0c5-slow.m4a",
+      "sha256": "471eed2df197b474b5b66ce07335a93ea6c2b4653ac00bf3f029e1a573ba2baf",
+      "bytes": 12708,
+      "text": "Lake",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-7c841b4a0d89de4e9af9.m4a",
+      "sha256": "209801b15a421ba55495b4956436cf3581b91ae6ea0e6a332e22dcd1a63e5867",
+      "bytes": 14269,
+      "text": "I need a rod.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-7c841b4a0d89de4e9af9-slow.m4a",
+      "sha256": "aeb085e693c678c80a8c4eb6deea89ff644099d6145832468780ab62aa5ac912",
+      "bytes": 18484,
+      "text": "I need a rod.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-a24ea9ceb5a321477524.m4a",
+      "sha256": "a05909c77ae787b590d7d4fe7b1f4b9f6b5570f4d88d1a3e88a67ac3cfb26f7e",
+      "bytes": 13418,
+      "text": "I have a hook.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-a24ea9ceb5a321477524-slow.m4a",
+      "sha256": "8ad6886e4a9ef2190a743d33ab3b2fe9cf7fcfea0a9937e0e0e9b851e738c840",
+      "bytes": 16796,
+      "text": "I have a hook.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-3485664d1be8f05328cd.m4a",
+      "sha256": "2b0e5a8b7d2abf59abefcd9a3a9c25938da6b463b1dc882ef4316e3184065575",
+      "bytes": 13528,
+      "text": "I have a fish.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-3485664d1be8f05328cd-slow.m4a",
+      "sha256": "177d345ddd806da85c067184ddeb8dae92e0dfc10db283ec658c0d5393133c53",
+      "bytes": 17588,
+      "text": "I have a fish.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-4aeddf94afb0f6b6e4c0.m4a",
+      "sha256": "e65a59e978c0ddcff4f9d65af879cd5040215df529c810daeb8488ee0a264ed4",
+      "bytes": 13835,
+      "text": "This is a fish.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-4aeddf94afb0f6b6e4c0-slow.m4a",
+      "sha256": "15fa8e8f48d411d5465aba9903208adb8c09c073472bab9bb4a6a8ed92f81825",
+      "bytes": 19165,
+      "text": "This is a fish.",
+      "humanReviewed": false
+    }
+  ]
+}

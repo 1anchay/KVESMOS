@@ -139,7 +139,6 @@ enum StoryCue {
   foundBattery,
   restoredPower,
   launchDebrief,
-  // A future activity can supply these cues without changing the dialogue runtime.
   beforeFishing,
   afterFishing;
 
@@ -149,7 +148,8 @@ enum StoryCue {
       flight.inventory.contains(FlightItem.battery) || flight.charged,
     restoredPower => flight.powered,
     launchDebrief => flight.complete,
-    beforeFishing || afterFishing => false,
+    beforeFishing => flight.complete,
+    afterFishing => false,
   };
 }
 

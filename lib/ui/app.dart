@@ -30,6 +30,7 @@ import 'listening_page.dart';
 import 'smart_practice_page.dart';
 import 'lost_signal_mission.dart';
 import 'first_flight_page.dart';
+import 'fishing_page.dart';
 import '../data/practice_repository.dart';
 import '../services/learning_audio.dart';
 
@@ -55,7 +56,8 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
     unawaited(
       controller.audio.setScene(switch (path) {
         '/' => AudioScene.menu,
-        '/first-flight' => AudioScene.ship,
+        '/first-flight' || '/nereya' => AudioScene.ship,
+        '/fishing' => AudioScene.water,
         '/adventures' ||
         '/adventure/:id' ||
         '/mission/lost-signal' ||
@@ -106,6 +108,24 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
         GoRoute(
           path: '/first-flight',
           builder: (_, _) => const FirstFlightPage(),
+        ),
+        GoRoute(
+          path: '/nereya',
+          redirect: (_, _) => app.course.id == 'ru-en' ? null : '/first-flight',
+          builder: (_, _) => const FishingDeparturePage(),
+        ),
+        GoRoute(
+          path: '/fishing',
+          redirect: (_, _) => app.course.id == 'ru-en' ? null : '/first-flight',
+          pageBuilder: (context, state) => CustomTransitionPage<void>(
+            key: state.pageKey,
+            transitionDuration: MediaQuery.disableAnimationsOf(context)
+                ? Duration.zero
+                : const Duration(milliseconds: 640),
+            child: const FishingPage(),
+            transitionsBuilder: (_, animation, _, child) =>
+                FadeTransition(opacity: animation, child: child),
+          ),
         ),
         GoRoute(
           path: '/smart-practice',

@@ -18,6 +18,7 @@ import 'beacon_repository.dart';
 import 'conversation_repository.dart';
 import 'listening_repository.dart';
 import 'first_flight_repository.dart';
+import 'fishing_repository.dart';
 import 'knowledge_repository.dart';
 import 'repository.dart';
 import 'smart_placement_repository.dart';
@@ -86,6 +87,7 @@ class ProgressTransfer {
     _inventory,
     FirstFlightRepository.key,
     StoryRepository.storageKey,
+    FishingRepository.key,
   };
   static const _prefixes = [
     BeaconState.prefix,
@@ -449,11 +451,19 @@ class ProgressTransfer {
     Map<String, String> settings,
     Map<String, Lesson> materials,
   ) {
-    _require(_allowed(key) && _id.hasMatch(key) && value.length <= 200000);
+    _require(
+      _allowed(key) &&
+          _id.hasMatch(key) &&
+          (key == FishingRepository.key || value.length <= 200000),
+    );
     final parts = key.split(':');
     final suffix = parts.length > 1 ? parts[1] : '';
     if (key == StoryRepository.storageKey) {
       StorySave.decode(value);
+      return;
+    }
+    if (key == FishingRepository.key) {
+      FishingSave.decode(value);
       return;
     }
     if (key.startsWith(KnowledgeRepository.modePrefix)) {
@@ -946,6 +956,10 @@ class ProgressTransfer {
           suffix != null && file.sessions.containsKey(suffix);
       if (e.key == StoryRepository.storageKey && old != null) {
         final merged = StorySave.decode(old)..merge(StorySave.decode(e.value));
+        await learning.setSetting(e.key, merged.encode());
+      } else if (e.key == FishingRepository.key && old != null) {
+        final merged = FishingSave.decode(old)
+          ..merge(FishingSave.decode(e.value));
         await learning.setSetting(e.key, merged.encode());
       } else if (e.key == FirstFlightRepository.key && old != null) {
         final current = FirstFlight.fromJson(jsonDecode(old));

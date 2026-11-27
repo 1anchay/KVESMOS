@@ -34,14 +34,21 @@ LIVING_DIALOGUES = [
     ("pixie", "af_heart", "It is ready."),
     ("pixie", "af_heart", "I need a battery."),
 ]
+FISHING = [
+    ("pixie", "af_heart", text) for text in (
+        "Fish", "Water", "Rod", "Hook", "Bait", "Line", "Catch", "Wait",
+        "Pull", "Small", "Big", "River", "Lake", "I need a rod.",
+        "I have a hook.", "I have a fish.", "This is a fish.",
+    )
+]
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--model-dir", type=Path, required=True)
 parser.add_argument("--rebuild", action="store_true")
-parser.add_argument("--episode", choices=("lost-signal", "first-flight", "living-dialogues"), default="lost-signal")
+parser.add_argument("--episode", choices=("lost-signal", "first-flight", "living-dialogues", "fishing"), default="lost-signal")
 args = parser.parse_args()
 first_flight = args.episode == "first-flight"
-clips = LIVING_DIALOGUES if args.episode == "living-dialogues" else [
+clips = {"living-dialogues": LIVING_DIALOGUES, "fishing": FISHING}.get(args.episode) or [
     ("orbi", "am_puck", text) if first_flight else ("miko", "am_michael", text)
     for text in (FIRST_FLIGHT if first_flight else LOST_SIGNAL)
 ]

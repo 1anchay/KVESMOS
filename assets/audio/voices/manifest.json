@@ -13131,6 +13131,193 @@
       "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
       "asset": "assets/audio/voices/clips/mission-93ab886afa9d0f63da78.m4a",
       "slowAsset": "assets/audio/voices/clips/mission-93ab886afa9d0f63da78-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Fish",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-da44f77a1c1796b13c5a.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-da44f77a1c1796b13c5a-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Water",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-e2e57dfda68a3d761ac4.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-e2e57dfda68a3d761ac4-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Rod",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-df5d5809c4f593f7ca3d.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-df5d5809c4f593f7ca3d-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Hook",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-316f6eb08c7eda6a8cbc.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-316f6eb08c7eda6a8cbc-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Bait",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-8cbfa7f229e8a4892182.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-8cbfa7f229e8a4892182-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Line",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-71e3dca2c310a84b6511.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-71e3dca2c310a84b6511-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Catch",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-133844b39a1df229b65e.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-133844b39a1df229b65e-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Wait",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-73c00933ba01a11219e9.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-73c00933ba01a11219e9-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Pull",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-870c83ea2ed5bfe359a7.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-870c83ea2ed5bfe359a7-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Small",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-17409dedc49ca5489b66.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-17409dedc49ca5489b66-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Big",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-07aded6bc2d06b6e905c.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-07aded6bc2d06b6e905c-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "River",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-f04b1046e7bb15f26ae8.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-f04b1046e7bb15f26ae8-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "Lake",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-4c143f970dd215cae0c5.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-4c143f970dd215cae0c5-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "I need a rod.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-7c841b4a0d89de4e9af9.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-7c841b4a0d89de4e9af9-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "I have a hook.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-a24ea9ceb5a321477524.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-a24ea9ceb5a321477524-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "I have a fish.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-3485664d1be8f05328cd.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-3485664d1be8f05328cd-slow.m4a"
+    },
+    {
+      "character": "pixie",
+      "locale": "en-US",
+      "text": "This is a fish.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / af_heart",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-4aeddf94afb0f6b6e4c0.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-4aeddf94afb0f6b6e4c0-slow.m4a"
     }
   ]
 }

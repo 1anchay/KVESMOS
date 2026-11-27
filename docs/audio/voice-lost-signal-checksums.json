@@ -1,0 +1,104 @@
+{
+  "engine": "0.6.1",
+  "voice": "am_michael",
+  "files": [
+    {
+      "asset": "assets/audio/voices/clips/mission-c646a39e8561c08af8bc.m4a",
+      "sha256": "5c7e9ea526234b6fc734765989077d46a17439b8b160be77b2c4f12eab31bb08",
+      "bytes": 38951,
+      "text": "We lost contact with Station Echo. Let’s go.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-c646a39e8561c08af8bc-slow.m4a",
+      "sha256": "8a2a86bfec5911ad6e8e56c01ebe970d667e46351a04fb8d0b33d3bacb3ca2c1",
+      "bytes": 53161,
+      "text": "We lost contact with Station Echo. Let’s go.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-6d7a571508ddc2ca50cd.m4a",
+      "sha256": "f4efda29efc8d16dfa97ed103a1cfa30b8e47f851de739ffa803becdb4648b10",
+      "bytes": 17581,
+      "text": "Find the blue door.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-6d7a571508ddc2ca50cd-slow.m4a",
+      "sha256": "dd6231d6e1bebf5f88483be8676764a5f7b23e30405f3fc053d970b10f85586c",
+      "bytes": 22668,
+      "text": "Find the blue door.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-751211ded7289da53d02.m4a",
+      "sha256": "0181060517869f664ebd5210e5d8dfe543be0cb74ac7254b5b91b4821c4efa15",
+      "bytes": 25821,
+      "text": "Find the red key and the battery.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-751211ded7289da53d02-slow.m4a",
+      "sha256": "aebd90ae33a92144ac0b73b6cf296ff447209e0adcd68525860cd9ebf3c32044",
+      "bytes": 33349,
+      "text": "Find the red key and the battery.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-91a21216d1020a2faddc.m4a",
+      "sha256": "4282913d35a085d180176efa31b91cd3a91691c6442e9dc8ef155cdf6d936178",
+      "bytes": 19551,
+      "text": "Do you have the battery?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-91a21216d1020a2faddc-slow.m4a",
+      "sha256": "7619f6834107e102f9eea1f5798823fc5a04d642c60dc1a4ae7f373a235e5b4e",
+      "bytes": 25113,
+      "text": "Do you have the battery?",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-a971c06ff8d2443276ea.m4a",
+      "sha256": "4d8c812369c4969692d938d4b1cc9763af92035d6ee81087b38734ddf9ca36be",
+      "bytes": 26469,
+      "text": "Put the battery in the power unit.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-a971c06ff8d2443276ea-slow.m4a",
+      "sha256": "53043153659c3d8ff93b950ed436c3884507bf54d35e657fb65bc717c82ec254",
+      "bytes": 34409,
+      "text": "Put the battery in the power unit.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-e7cfd472b3dbb71a7aa0.m4a",
+      "sha256": "dc82f9ece9a0ac18d53f7d6d6b871ecb7267147abec8871bee186369f3d22c2f",
+      "bytes": 18436,
+      "text": "Press the green button.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-e7cfd472b3dbb71a7aa0-slow.m4a",
+      "sha256": "2c75df2a1cdc8c40b46d3fe7ccd59fdb22924a83f203693e9cfc2633b807378f",
+      "bytes": 23950,
+      "text": "Press the green button.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-d28c9e391457e48ccf8a.m4a",
+      "sha256": "0f6e4e9ab71b2abeb979c7903ca5e289e39e4e6095624ab204d56d2cd2ee4cb8",
+      "bytes": 29944,
+      "text": "Power is back. Signal restored!",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-d28c9e391457e48ccf8a-slow.m4a",
+      "sha256": "cb0001f214a01a9e874afb1b06e6e08d3bb977f8a484842b3723d3ed8c89abdf",
+      "bytes": 38931,
+      "text": "Power is back. Signal restored!",
+      "humanReviewed": false
+    }
+  ]
+}

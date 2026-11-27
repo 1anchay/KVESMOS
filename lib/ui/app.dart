@@ -26,6 +26,7 @@ import 'conversation_page.dart';
 import 'progress_transfer_page.dart';
 import 'listening_page.dart';
 import 'smart_practice_page.dart';
+import 'lost_signal_mission.dart';
 import '../data/practice_repository.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
@@ -123,6 +124,10 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
             key: ValueKey(state.pathParameters['id']),
             id: state.pathParameters['id']!,
           ),
+        ),
+        GoRoute(
+          path: '/mission/lost-signal',
+          builder: (_, _) => const LostSignalMissionPage(),
         ),
         GoRoute(
           path: '/welcome',

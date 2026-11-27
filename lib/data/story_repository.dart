@@ -166,7 +166,8 @@ class StorySave {
             (c) => incoming.choices[c.key] == c.value,
           );
       if (!samePath || local.finished) continue;
-      if (incoming.cursor == local.cursor && incoming.variant != local.variant) {
+      if (incoming.cursor == local.cursor &&
+          incoming.variant != local.variant) {
         continue;
       }
       if (incoming.path.length > local.path.length ||

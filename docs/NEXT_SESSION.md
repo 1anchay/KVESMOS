@@ -1,5 +1,15 @@
 # KVESMOS 1.5 · рисованная команда
 
+## Premium Learning UI · светлая тема и конструктор
+
+Ветка `codex/kvesmos-gameplay-reboot`, [Draft PR №38](https://github.com/1anchay/KVESMOS/pull/38). Проверка `dart format --output=none --set-exit-if-changed lib test` использует Flutter 3.47.7 и Dart 3.13.5, как в Quality. В `story_repository.dart` исправлено только форматирование.
+
+`StoryDialogueSheet` разделяет прогресс, реплику, прокручиваемое задание и закреплённую проверку. `StoryWordBoard` сохраняет позиции и идентификаторы плиток, включая одинаковые слова. Коснись слова в ответе, чтобы вернуть его в банк. В заданиях с вариантами выбор подсвечивается и подставляется в пропуск, а учебное событие создаётся после подтверждения. Панель результата показывает фразу либо конкретное исправление с правилом. Правильный ответ сохраняет переход сразу, кнопка «Продолжить» закрывает результат без повторной записи.
+
+`FlightPalette` подключена через `ThemeExtension` к существующему `ThemeMode`. Корабельная графика сохраняет свою палитру, учебный интерфейс, подписи и словарь меняются вместе с темой. Переключатель доступен на главном экране и в диалоге, а настройка сохраняется штатным `AppController`. В референсах использованы [примеры структуры упражнений Duolingo](https://blog.duolingo.com/covering-all-the-bases-duolingos-approach-to-writing-skills/) и требования W3C к [текстовому](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) и [нетекстовому контрасту](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html).
+
+Матрица `test/premium_learning_ui_test.dart` покрывает пять форматов, обе темы, 320/360/390/430 dp и 100/150/200% текста. Android-запись запускается через `integration_test/living_dialogues_test.dart` с `--dart-define=PREMIUM_CAPTURE=true` и `tool/capture_first_flight.py` с маркерами `PREMIUM_START`/`PREMIUM_END`. Видео, Android-снимки до и после и отдельный QA APK находятся в `build/releases/KVESMOS-premium-ui/`.
+
 ## Living Dialogues · связь со станцией
 
 Ветка `codex/kvesmos-gameplay-reboot` опубликована в [Draft PR №38](https://github.com/1anchay/KVESMOS/pull/38). База PR — `codex/kvesmos-v15-galactic-adventure`. На корабле радио открывает четыре части истории: подготовку ремонта с Орби, находку с Мико, проверку оборудования с Пикси и разговор по итогам запуска. Разговор можно закрыть посреди сборки фразы и продолжить с теми же словами в черновике.

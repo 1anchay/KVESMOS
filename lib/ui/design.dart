@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'character_moment.dart';
 import 'galaxy_components.dart';
 import 'flight_components.dart';
+import 'flight_ui.dart';
 
 const space = Color(0xFF0F172A),
     cosmicBlue = Color(0xFF1D4ED8),
@@ -24,6 +25,7 @@ ThemeData orbitTheme(Brightness brightness) {
         surface: dark ? FlightTokens.night : FlightTokens.paper,
       );
   return ThemeData(
+    extensions: [dark ? FlightPalette.dark : FlightPalette.light],
     fontFamily: 'OrbitSans',
     fontFamilyFallback: const ['KvesmosHanzi'],
     useMaterial3: true,

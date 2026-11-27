@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../data/knowledge_repository.dart';
 import '../domain/knowledge.dart';
 import '../services/learning_audio.dart';
+import 'flight_ui.dart';
 
 /// A screen can keep this context alive while a journal or translation is open.
 class LanguageContext extends ChangeNotifier {
@@ -92,7 +93,9 @@ class AdaptiveTerm extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             onTap: () => showTerm(context, language, entry),
             child: ExcludeSemantics(
-              child: Padding(
+              child: Container(
+                constraints: BoxConstraints(minHeight: compact ? 0 : 48),
+                alignment: compact ? null : Alignment.centerLeft,
                 padding: EdgeInsets.symmetric(
                   horizontal: compact ? 2 : 8,
                   vertical: compact ? 3 : 8,
@@ -109,10 +112,17 @@ class AdaptiveTerm extends StatelessWidget {
                           ).scale(1).clamp(1, 1.15),
                         )
                       : null,
-                  style: (style ?? DefaultTextStyle.of(context).style).copyWith(
-                    decoration: TextDecoration.underline,
-                    decorationStyle: TextDecorationStyle.dotted,
-                  ),
+                  style:
+                      (style ??
+                              TextStyle(
+                                color: FlightPalette.of(context).accent,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 16,
+                              ))
+                          .copyWith(
+                            decoration: TextDecoration.underline,
+                            decorationStyle: TextDecorationStyle.dotted,
+                          ),
                 ),
               ),
             ),
@@ -146,10 +156,43 @@ Future<void> showImmersionSettings(
 Future<void> _open(BuildContext context, Widget child) =>
     showModalBottomSheet<void>(
       context: context,
-      showDragHandle: true,
+      backgroundColor: Colors.transparent,
       isScrollControlled: true,
       useSafeArea: true,
-      builder: (_) => child,
+      builder: (context) {
+        final theme = Theme.of(context);
+        final c = FlightPalette.of(context);
+        return Theme(
+          data: theme.copyWith(
+            colorScheme: theme.colorScheme.copyWith(
+              primary: c.accent,
+              onPrimary: c.onAccent,
+              surface: c.surface,
+              onSurface: c.text,
+              onSurfaceVariant: c.secondary,
+              outline: c.control,
+              secondaryContainer: c.selected,
+              onSecondaryContainer: c.text,
+            ),
+            inputDecorationTheme: InputDecorationTheme(
+              filled: true,
+              fillColor: c.inset,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(14),
+                borderSide: BorderSide(color: c.control),
+              ),
+            ),
+          ),
+          child: Material(
+            color: c.surface,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
+            ),
+            clipBehavior: Clip.antiAlias,
+            child: child,
+          ),
+        );
+      },
     );
 
 class _TermPanel extends StatefulWidget {
@@ -567,9 +610,27 @@ class _Panel extends StatelessWidget {
         ),
         child: ListView(
           shrinkWrap: true,
-          padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
+          padding: const EdgeInsets.fromLTRB(20, 10, 20, 24),
           children: [
-            Text(title, style: Theme.of(context).textTheme.headlineSmall),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      color: FlightPalette.of(context).text,
+                      fontSize: 23,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+                IconButton(
+                  tooltip: 'Закрыть',
+                  onPressed: () => Navigator.pop(context),
+                  icon: const Icon(Icons.close),
+                ),
+              ],
+            ),
             const SizedBox(height: 10),
             ...children,
           ],

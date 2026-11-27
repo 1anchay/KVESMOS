@@ -2,6 +2,7 @@
 
 import argparse
 from pathlib import Path
+import re
 import subprocess
 
 import imageio_ffmpeg
@@ -35,6 +36,11 @@ def main():
             if not recording and message == args.start_tag:
                 subprocess.run(adb + ['emu', 'screenrecord', 'start', '--time-limit', '720', '--fps', '24', str(staging)], check=True)
                 recording = True
+            if recording and message.startswith('SNAP:'):
+                name = message.removeprefix('SNAP:')
+                if re.fullmatch(r'[a-z0-9-]+', name):
+                    png = subprocess.check_output(adb + ['exec-out', 'screencap', '-p'])
+                    (args.out / f'{name}.png').write_bytes(png)
             if recording and message == args.end_tag:
                 subprocess.run(adb + ['emu', 'screenrecord', 'stop'], check=True)
                 recording = False

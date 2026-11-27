@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import '../domain/first_flight.dart';
+import 'flight_ui.dart';
 
 const flightInk = Color(0xff101c31);
 const flightPanel = Color(0xff192b43);
@@ -283,30 +284,37 @@ class FlightProp extends StatelessWidget {
     this.color = flightMint,
     this.size = 46,
     this.turn = 0,
+    this.themed = false,
   });
   final IconData icon;
   final Color color;
   final double size;
   final int turn;
+  final bool themed;
   @override
   Widget build(BuildContext context) => Container(
     width: size,
     height: size,
     decoration: BoxDecoration(
-      gradient: const LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: [Color(0xff385867), flightInk],
-      ),
+      color: themed ? FlightPalette.of(context).inset : null,
+      gradient: themed
+          ? null
+          : const LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xff385867), flightInk],
+            ),
       borderRadius: BorderRadius.circular(size * .24),
       border: Border.all(color: color.withValues(alpha: .72)),
-      boxShadow: const [
-        BoxShadow(
-          color: Color(0xdd0b1829),
-          offset: Offset(0, 3),
-          blurRadius: 3,
-        ),
-      ],
+      boxShadow: themed
+          ? const []
+          : const [
+              BoxShadow(
+                color: Color(0xdd0b1829),
+                offset: Offset(0, 3),
+                blurRadius: 3,
+              ),
+            ],
     ),
     child: Center(
       child: RotatedBox(

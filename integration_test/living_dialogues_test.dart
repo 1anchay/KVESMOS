@@ -18,7 +18,8 @@ import 'package:orbitwords/domain/story_dialogue.dart';
 import 'package:orbitwords/services/learning_audio.dart';
 import 'package:orbitwords/ui/app.dart';
 
-const capture = bool.fromEnvironment('STORY_CAPTURE');
+const premiumCapture = bool.fromEnvironment('PREMIUM_CAPTURE');
+const capture = bool.fromEnvironment('STORY_CAPTURE') || premiumCapture;
 const comparisonOnly = bool.fromEnvironment('STORY_COMPARISON_ONLY');
 
 class Player {
@@ -82,6 +83,15 @@ class Player {
       await tap('story-token-$index', .72);
     }
     await tap('story-submit', 2.1);
+    expect(find.byKey(const Key('story-correct')), findsOneWidget);
+    await tap('story-continue', 1.2);
+  }
+
+  Future<void> choose(int index, [double seconds = 1.2]) async {
+    await tap('story-option-$index', .7);
+    await tap('story-submit', seconds);
+    expect(find.byKey(const Key('story-correct')), findsOneWidget);
+    await tap('story-continue', .9);
   }
 
   Future<void> journey({
@@ -96,13 +106,39 @@ class Player {
     await tap('flight-hatch');
     await tap('flight-hatch', 1.8);
 
+    if (guided && premiumCapture) {
+      onCamera = true;
+      await mark('PREMIUM_START');
+      await pause(2);
+    }
     await tap('flight-story-repair', 3.2);
+    if (guided && premiumCapture) await mark('SNAP:after-dialogue-light');
     await tap('story-next', 3.1);
     if (guided) await tap('story-help', 2.8);
-    await tap('story-option-1', 2.7);
+    await choose(1, 2.7);
     if (guided) {
       await tap('story-token-2', .8);
       await tap('story-token-4', .8);
+      if (premiumCapture) {
+        final draft = (await StoryRepository(
+          app.repository,
+        ).read()).runs['repair']!.draft.toList();
+        await mark('SNAP:after-order-light');
+        await tap('story-theme', 1.4);
+        await tap('flight-theme-dark', 2);
+        expect(
+          Theme.of(
+            tester.element(find.byKey(const Key('story-shell'))),
+          ).brightness,
+          Brightness.dark,
+        );
+        expect(
+          (await StoryRepository(app.repository).read()).runs['repair']!.draft,
+          draft,
+        );
+        expect(find.byKey(const Key('story-draft-token-2')), findsOneWidget);
+        await mark('SNAP:after-order-dark');
+      }
       await tap('story-close');
       await tap('flight-story-repair', 1.8);
       expect(find.byKey(const Key('story-draft-token-2')), findsOneWidget);
@@ -110,9 +146,21 @@ class Player {
     } else {
       await order([2, 4, 3, 0]);
     }
-    await tap('story-option-1', 2.5);
+    if (guided && premiumCapture) {
+      await tap('story-option-0', 2);
+      await mark('SNAP:after-gap-dark');
+      await tap('story-submit', 3);
+      expect(find.byKey(const Key('story-error')), findsOneWidget);
+      await mark('SNAP:after-feedback-dark');
+      await tap('story-continue', 1.5);
+    }
+    await choose(1, 2.5);
     await tap('story-choice-team', 3.5);
     await tap('story-next');
+    if (guided && premiumCapture) {
+      await mark('PREMIUM_END');
+      onCamera = false;
+    }
     nextDay();
 
     await orbi(FlightRoom.workshop);
@@ -120,7 +168,7 @@ class Player {
     await tap('flight-story-battery', 3.3);
     await tap('story-next', 2.4);
     if (guided) await tap('story-help', 2.1);
-    await tap('story-option-1', 2.2);
+    await choose(1, 2.2);
     if (guided) await tap('story-help', 2.1);
     await order([1, 4, 3, 0]);
     await tap('story-audio', 2);
@@ -141,10 +189,12 @@ class Player {
     if (guided) {
       await tap('flight-story-power', 3);
       await tap('story-next', 3);
-      await tap('story-option-1', 3);
-      await tap('story-option-0', 3.4);
+      await choose(1, 3);
+      await tap('story-option-0', 1);
+      await tap('story-submit', 3.4);
       expect(find.byKey(const Key('story-error')), findsOneWidget);
-      await tap('story-option-2', 3);
+      await tap('story-continue');
+      await choose(2, 3);
       await order([2, 1, 0]);
       await tap('story-audio', 2);
       expect(app.audio.lastSource, SpeechSource.recording);
@@ -184,9 +234,13 @@ void main() {
       final learning = LearningRepository(AppDatabase(NativeDatabase.memory()));
       final app = AppController(learning);
       await app.initialize();
-      final player = Player(tester, onCamera: !comparisonOnly);
+      if (premiumCapture) await app.savePreferences(newTheme: ThemeMode.light);
+      final player = Player(
+        tester,
+        onCamera: !comparisonOnly && !premiumCapture,
+      );
       await player.mount(app);
-      if (!comparisonOnly) {
+      if (!comparisonOnly && !premiumCapture) {
         await player.mark('STORY_FULL_START');
         await player.pause(2);
       }
@@ -202,12 +256,12 @@ void main() {
       }
       await player.debrief('answer');
       await player.tap('story-help', 2.4);
-      await player.tap('story-option-1', 2);
+      await player.choose(1, 2);
       await player.tap('story-choice-send-log', 3.6);
       await player.tap('story-audio', 2);
       expect(app.audio.lastSource, SpeechSource.recording);
       await player.tap('story-next');
-      await player.mark('STORY_FULL_END');
+      if (!premiumCapture) await player.mark('STORY_FULL_END');
       final reopened = await StoryRepository(learning).read();
       expect(reopened.trust(StorySpeaker.miko), 1);
       expect(reopened.trust(StorySpeaker.pixie), 1);
@@ -265,7 +319,7 @@ void main() {
     await player.tap('reboot-start');
     await player.debrief('phrase');
     await player.pause(4);
-    await player.tap('story-option-1');
+    await player.choose(1);
     await player.tap('story-choice-send-basic');
     expect(
       find.descendant(

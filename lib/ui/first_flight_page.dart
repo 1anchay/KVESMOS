@@ -13,6 +13,7 @@ import '../domain/knowledge.dart';
 import '../domain/story_dialogue.dart';
 import 'character_moment.dart';
 import 'first_flight_art.dart';
+import 'flight_ui.dart';
 import 'knowledge_widgets.dart';
 import 'story_dialogue_sheet.dart';
 
@@ -27,8 +28,9 @@ class _RebootHomeState extends ConsumerState<RebootHome> {
   @override
   Widget build(BuildContext context) {
     final app = ref.watch(appProvider);
+    final palette = FlightPalette.of(context);
     return Scaffold(
-      backgroundColor: flightInk,
+      backgroundColor: palette.background,
       body: SafeArea(
         child: FutureBuilder(
           future: FirstFlightRepository(app.repository).read(),
@@ -43,13 +45,20 @@ class _RebootHomeState extends ConsumerState<RebootHome> {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const Text(
-                        'KVESMOS',
-                        style: TextStyle(
-                          color: flightMint,
-                          fontWeight: FontWeight.w800,
-                          letterSpacing: 3,
-                        ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'KVESMOS',
+                              style: TextStyle(
+                                color: palette.accent,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 3,
+                              ),
+                            ),
+                          ),
+                          const FlightThemePicker(key: Key('reboot-theme')),
+                        ],
                       ),
                       const SizedBox(height: 12),
                       SizedBox(
@@ -73,24 +82,27 @@ class _RebootHomeState extends ConsumerState<RebootHome> {
                         ),
                       ),
                       const SizedBox(height: 24),
-                      const Text(
+                      Text(
                         'Первый полёт',
                         style: TextStyle(
-                          color: flightText,
+                          color: palette.text,
                           fontWeight: FontWeight.w900,
                           fontSize: 38,
                           height: 1.05,
                         ),
                       ),
                       const SizedBox(height: 12),
-                      const Text(
+                      Text(
                         'Сигнал бедствия привёл тебя к кораблю без питания. Поднимись на борт и выясни, кто зовёт на помощь.',
-                        style: TextStyle(color: flightText, fontSize: 17),
+                        style: TextStyle(
+                          color: palette.secondary,
+                          fontSize: 17,
+                        ),
                       ),
                       const SizedBox(height: 20),
                       FilledButton.icon(
                         key: const Key('reboot-start'),
-                        style: _filled,
+                        style: palette.filled,
                         onPressed: flight == null
                             ? null
                             : () async {
@@ -112,7 +124,7 @@ class _RebootHomeState extends ConsumerState<RebootHome> {
                       ),
                       OutlinedButton(
                         key: const Key('reboot-study'),
-                        style: _outlined,
+                        style: palette.outline,
                         onPressed: () => context.go(
                           app.onboarded ? '/study' : app.onboardingRoute,
                         ),
@@ -120,7 +132,7 @@ class _RebootHomeState extends ConsumerState<RebootHome> {
                       ),
                       TextButton(
                         onPressed: () => context.push('/settings'),
-                        style: _transparent,
+                        style: palette.link,
                         child: const Text('Настройки'),
                       ),
                     ],
@@ -135,21 +147,6 @@ class _RebootHomeState extends ConsumerState<RebootHome> {
   }
 }
 
-final _filled = FilledButton.styleFrom(
-  backgroundColor: flightMint,
-  foregroundColor: flightInk,
-  minimumSize: const Size(0, 48),
-);
-final _outlined = OutlinedButton.styleFrom(
-  foregroundColor: flightText,
-  side: const BorderSide(color: Color(0xff708c9d)),
-  minimumSize: const Size(0, 48),
-);
-final _transparent = TextButton.styleFrom(
-  foregroundColor: flightMint,
-  minimumSize: const Size(0, 44),
-);
-
 class FirstFlightPage extends ConsumerStatefulWidget {
   const FirstFlightPage({super.key});
   @override
@@ -157,6 +154,7 @@ class FirstFlightPage extends ConsumerStatefulWidget {
 }
 
 class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
+  FlightPalette get palette => FlightPalette.of(context);
   late final AppController app;
   late final FirstFlightRepository repository;
   late final LanguageContext language;
@@ -674,10 +672,10 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
   Widget build(BuildContext context) {
     final f = flight;
     return Scaffold(
-      backgroundColor: flightInk,
+      backgroundColor: palette.background,
       appBar: AppBar(
-        backgroundColor: flightInk,
-        foregroundColor: flightText,
+        backgroundColor: palette.background,
+        foregroundColor: palette.text,
         leading: IconButton(
           tooltip: 'На главный экран',
           icon: const Icon(Icons.arrow_back),
@@ -709,11 +707,11 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
             ? Center(
                 child: loadError
                     ? TextButton(
-                        style: _transparent,
+                        style: palette.link,
                         onPressed: load,
                         child: const Text('Не удалось загрузить. Повторить'),
                       )
-                    : const CircularProgressIndicator(color: flightMint),
+                    : CircularProgressIndicator(color: palette.accent),
               )
             : Align(
                 alignment: f.complete ? Alignment.center : Alignment.topCenter,
@@ -735,8 +733,8 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
           padding: const EdgeInsets.fromLTRB(4, 0, 4, 10),
           child: Text(
             f.objective,
-            style: const TextStyle(
-              color: flightText,
+            style: TextStyle(
+              color: palette.text,
               fontSize: 19,
               fontWeight: FontWeight.w800,
             ),
@@ -765,7 +763,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
               children: [
                 TextButton.icon(
                   key: const Key('flight-request'),
-                  style: _transparent,
+                  style: palette.link,
                   onPressed: busy
                       ? null
                       : () async {
@@ -787,7 +785,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
                 AdaptiveTerm(
                   language: language,
                   entry: KnowledgeCatalog.flight[FlightWord.need]!,
-                  style: const TextStyle(color: flightMint),
+                  style: TextStyle(color: palette.accent),
                 ),
               ],
             ),
@@ -795,7 +793,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
             AdaptiveTerm(
               language: language,
               entry: KnowledgeCatalog.flight[FlightWord.press]!,
-              style: const TextStyle(color: flightMint),
+              style: TextStyle(color: palette.accent),
             ),
         ],
         if (hintOn)
@@ -804,16 +802,16 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
             child: info(_help(f), help: true),
           ),
         const SizedBox(height: 10),
-        const Text(
+        Text(
           'Рюкзак',
-          style: TextStyle(color: flightText, fontWeight: FontWeight.w800),
+          style: TextStyle(color: palette.text, fontWeight: FontWeight.w800),
         ),
         if (f.inventory.isEmpty)
-          const Padding(
-            padding: EdgeInsets.only(top: 4),
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
             child: Text(
               'Пока пуст',
-              style: TextStyle(color: Color(0xffafc3cc)),
+              style: TextStyle(color: palette.secondary),
             ),
           )
         else
@@ -829,14 +827,14 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
   Widget info(String value, {bool help = false}) => Container(
     padding: const EdgeInsets.all(12),
     decoration: BoxDecoration(
-      color: flightPanel,
-      border: help ? Border.all(color: flightAmber) : null,
+      color: help ? palette.warningSurface : palette.surface,
+      border: Border.all(color: help ? palette.warning : palette.line),
       borderRadius: BorderRadius.circular(14),
     ),
     child: Text(
       value,
       style: TextStyle(
-        color: help ? flightAmber : flightText,
+        color: help ? palette.warning : palette.text,
         fontSize: 15,
         height: 1.3,
       ),
@@ -864,7 +862,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
                 if (mounted) feedback('Не удалось прочитать журнал связи.');
               }
             },
-      style: _transparent,
+      style: palette.link,
       icon: const Icon(Icons.radio_outlined),
       label: Text(label),
     );
@@ -879,9 +877,9 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
     };
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: active ? flightMint : flightPanel,
+        color: active ? palette.selected : palette.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xff708c9d)),
+        border: Border.all(color: active ? palette.accent : palette.control),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -890,7 +888,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
             key: Key('flight-item-${item.name}'),
             tooltip: active ? 'Снять выбор' : 'Выбрать: ${item.title}',
             isSelected: active,
-            color: active ? flightInk : flightMint,
+            color: palette.accent,
             icon: Icon(_itemIcon(item)),
             selectedIcon: const Icon(Icons.check),
             onPressed: busy || word != null
@@ -910,7 +908,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
               language: language,
               entry: KnowledgeCatalog.flight[term]!,
               translation: item.title,
-              style: TextStyle(color: active ? flightInk : flightText),
+              style: TextStyle(color: palette.text),
             ),
           ),
         ],
@@ -943,8 +941,8 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         word != null && word == spot.demo ||
         _toolTarget(f, selected) == spot.id ||
         spot.id == 'orbi' && !f.knowsRoom(f.room) && word == null;
-    const labelStyle = TextStyle(
-      color: flightText,
+    final labelStyle = TextStyle(
+      color: palette.text,
       fontSize: 10.5,
       height: 1.05,
       fontWeight: FontWeight.w700,
@@ -989,7 +987,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         ),
         DecoratedBox(
           decoration: BoxDecoration(
-            color: flightInk,
+            color: palette.background,
             borderRadius: BorderRadius.circular(4),
           ),
           child: prepared
@@ -1087,9 +1085,9 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
 
   Widget lesson(FlightWord t) => DecoratedBox(
     decoration: BoxDecoration(
-      color: flightPanel,
+      color: palette.surface,
       borderRadius: BorderRadius.circular(14),
-      border: Border.all(color: flightMint.withValues(alpha: .5)),
+      border: Border.all(color: palette.control),
     ),
     child: Padding(
       padding: const EdgeInsets.all(12),
@@ -1098,7 +1096,12 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         children: [
           Row(
             children: [
-              FlightProp(_wordIcon(t), size: 48, color: flightAmber),
+              FlightProp(
+                _wordIcon(t),
+                size: 48,
+                color: palette.accent,
+                themed: true,
+              ),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
@@ -1106,15 +1109,15 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
                   children: [
                     Text(
                       t.translation,
-                      style: const TextStyle(
-                        color: flightMint,
+                      style: TextStyle(
+                        color: palette.accent,
                         fontSize: 20,
                         fontWeight: FontWeight.w800,
                       ),
                     ),
                     Text(
                       t.english,
-                      style: const TextStyle(color: flightText, fontSize: 15),
+                      style: TextStyle(color: palette.text, fontSize: 15),
                     ),
                   ],
                 ),
@@ -1123,19 +1126,16 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
                 key: const Key('flight-pronounce'),
                 tooltip: 'Послушать произношение',
                 onPressed: () => pronounce(t),
-                icon: const Icon(Icons.volume_up, color: flightMint),
+                icon: Icon(Icons.volume_up, color: palette.accent),
               ),
             ],
           ),
           const SizedBox(height: 6),
-          Text(
-            t.context,
-            style: const TextStyle(color: flightText, height: 1.3),
-          ),
+          Text(t.context, style: TextStyle(color: palette.text, height: 1.3)),
           const SizedBox(height: 6),
           TextButton(
             key: const Key('flight-understood'),
-            style: _transparent,
+            style: palette.link,
             onPressed: busy ? null : () => acknowledge(t),
             child: const Text('Понятно'),
           ),
@@ -1166,20 +1166,20 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         ),
       ),
       const SizedBox(height: 18),
-      const Text(
+      Text(
         'Корабль готов к полёту',
-        key: Key('flight-complete'),
+        key: const Key('flight-complete'),
         style: TextStyle(
-          color: flightText,
+          color: palette.text,
           fontSize: 31,
           height: 1.08,
           fontWeight: FontWeight.w900,
         ),
       ),
       const SizedBox(height: 10),
-      const Text(
+      Text(
         'Двигатели ответили. Орби прокладывает курс к станции, а за стеклом появляются огни взлётной дорожки. Ты вернул кораблю питание и запустил навигацию.',
-        style: TextStyle(color: flightText, fontSize: 17),
+        style: TextStyle(color: palette.text, fontSize: 17),
       ),
       const SizedBox(height: 14),
       info(
@@ -1190,12 +1190,12 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
       const SizedBox(height: 14),
       FilledButton(
         key: const Key('flight-home'),
-        style: _filled,
+        style: palette.filled,
         onPressed: goHome,
         child: const Text('На главный экран'),
       ),
       TextButton(
-        style: _transparent,
+        style: palette.link,
         onPressed: () => context.push('/rewards'),
         child: const Text('Открыть сундуки'),
       ),

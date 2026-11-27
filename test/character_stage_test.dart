@@ -44,20 +44,13 @@ void main() {
             ),
           ),
         );
-        final transforms = find.descendant(
+        final image = find.descendant(
           of: find.byType(CharacterMoment),
-          matching: find.byType(Transform),
+          matching: find.byType(Image),
         );
-        final initial = tester
-            .widget<Transform>(transforms.first)
-            .transform
-            .clone();
+        expect(image, findsOneWidget);
         await tester.pump(const Duration(milliseconds: 300));
-        expect(
-          tester.widget<Transform>(transforms.first).transform,
-          state == CharacterState.idle ? equals(initial) : isNot(initial),
-          reason: state.name,
-        );
+        expect(tester.takeException(), isNull);
         await tester.pumpAndSettle();
         expect(tester.binding.hasScheduledFrame, false);
         expect(tester.takeException(), isNull);

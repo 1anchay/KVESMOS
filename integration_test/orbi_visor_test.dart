@@ -19,12 +19,20 @@ void main() {
           r.locale.startsWith('en') &&
           r.text.length > 12,
     );
-    Future<void> show(CharacterState state) async {
+    Future<void> show(
+      CharacterState state, {
+      ThemeMode theme = ThemeMode.dark,
+    }) async {
       await tester.pumpWidget(
         MaterialApp(
           debugShowCheckedModeBanner: false,
+          themeMode: theme,
+          theme: ThemeData.light(),
+          darkTheme: ThemeData.dark(),
           home: Scaffold(
-            backgroundColor: const Color(0xff12232d),
+            backgroundColor: theme == ThemeMode.dark
+                ? const Color(0xff12232d)
+                : const Color(0xfff7f5f0),
             body: Center(
               child: SpeakingCharacter(
                 audio: audio,
@@ -52,7 +60,7 @@ void main() {
 
     await show(CharacterState.idle);
     await mark('VIDEO_START:orbi');
-    await Future<void>.delayed(const Duration(seconds: 4));
+    await Future<void>.delayed(const Duration(seconds: 6));
     expect(
       await audio.speak(
         clip.text,
@@ -74,14 +82,17 @@ void main() {
       await Future<void>.delayed(const Duration(milliseconds: 100));
     }
     expect(audio.playback.value, isNull);
-    for (final state in [
+    final reactions = [
       CharacterState.greeting,
       CharacterState.correct,
       CharacterState.support,
       CharacterState.surprise,
-    ]) {
-      await show(state);
-      await Future<void>.delayed(const Duration(milliseconds: 1500));
+      CharacterState.celebration,
+      CharacterState.goodbye,
+    ];
+    for (final (index, state) in reactions.indexed) {
+      await show(state, theme: index < 3 ? ThemeMode.dark : ThemeMode.light);
+      await Future<void>.delayed(const Duration(milliseconds: 3700));
     }
     await audio.stop();
     await mark('VIDEO_DONE:orbi');

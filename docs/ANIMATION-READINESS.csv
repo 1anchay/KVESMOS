@@ -1,18 +1,18 @@
 character,action,source,rights,implementation,verification
-orbi,idle,assets/kvesmos/crew_motion/orbi_idle.webp,project supplied,frame animation,32 distinct frames; Android scenario in companion_art_demo_test
-orbi,blink,,project supplied,dedicated motion pending,open
-orbi,breathing,,project supplied,dedicated motion pending,open
-orbi,greeting,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+orbi,idle,assets/kvesmos/crew_motion/orbi_visor_hover.webp,project supplied,96-frame layered visor rig; independent eyes mouth hands feet and body,Android KVESMOS11_QA; light and dark backgrounds; 2026-11-27
+orbi,blink,assets/kvesmos/crew_motion/orbi_visor_hover.webp,project supplied,autonomous double blink in repeating 7.2-second hover,Android video and widget coverage; 2026-11-27
+orbi,breathing,assets/kvesmos/crew_motion/orbi_visor_hover.webp,project supplied,hover with local body settling and delayed extremities,Android video; 2026-11-27
+orbi,greeting,assets/kvesmos/crew_motion/orbi_visor_greet.webp,project supplied,40-frame takeoff and mitten gesture,Android video; returns to hover
 orbi,walk,,project supplied,dedicated motion pending,open
-orbi,talking,assets/kvesmos/orbi_*.png,project supplied,playback-triggered speech pose,physical device review pending
-orbi,listening,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
-orbi,thinking,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
-orbi,happy,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
-orbi,support,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,Android gallery scenario; physical device review pending
-orbi,surprise,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
-orbi,celebration,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
-orbi,goodbye,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
-orbi,interaction,assets/kvesmos/orbi_*.png,project supplied,illustrated pose transition,physical device review pending
+orbi,talking,assets/kvesmos/crew_motion/orbi_visor_talk.webp,project supplied,48-frame independent mouth eye and hand loop held by SpeechPlayback,Android native playback test; stops with audio
+orbi,listening,assets/kvesmos/crew_motion/orbi_visor_support.webp,project supplied,lowered gaze and calm mitten gesture,widget coverage; returns to hover
+orbi,thinking,assets/kvesmos/crew_motion/orbi_visor_support.webp,project supplied,lowered gaze and calm mitten gesture,widget coverage; returns to hover
+orbi,happy,assets/kvesmos/crew_motion/orbi_visor_correct.webp,project supplied,independent wink and raised mitten,Android video; returns to hover
+orbi,support,assets/kvesmos/crew_motion/orbi_visor_support.webp,project supplied,calm gaze mouth and hand reaction,Android lesson error state and video
+orbi,surprise,assets/kvesmos/crew_motion/orbi_visor_surprise.webp,project supplied,independent widened eyes mouth and recoil,Android video; returns to hover
+orbi,celebration,assets/kvesmos/crew_motion/orbi_visor_celebrate.webp,project supplied,56-frame lift with opposing hand and trailing feet,mission completion integration and Android video
+orbi,goodbye,assets/kvesmos/crew_motion/orbi_visor_land.webp,project supplied,40-frame landing and settling,Android video; returns to hover
+orbi,interaction,tool/bake_orbi_visor.py + docs/design-handoff/04_sources/orbi-visor/rig.json,project supplied,reproducible layered raster rig with premultiplied-alpha filtering,widget lifecycle reduced-motion and TickerMode coverage
 miko,idle,assets/kvesmos/crew_motion/miko_bridge_idle.webp,project supplied,frame animation,40 distinct frames; Android scenario in companion_art_demo_test
 miko,blink,,project supplied,dedicated motion pending,open
 miko,breathing,,project supplied,dedicated motion pending,open

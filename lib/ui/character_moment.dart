@@ -113,13 +113,49 @@ class CharacterMoment extends StatefulWidget {
 }
 
 class _CharacterMomentState extends State<CharacterMoment>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   late final controller = AnimationController(vsync: this);
   bool reduce = false;
   CharacterState? interaction;
-  CharacterState get activeState => interaction ?? widget.effectiveState;
+  bool reactionDone = false;
+  bool foreground = true;
+  bool get livingOrbi => widget.characterId == 'orbi' && widget.frames.isEmpty;
+  CharacterState get activeState => livingOrbi && reactionDone
+      ? CharacterState.idle
+      : interaction ?? widget.effectiveState;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    controller.addStatusListener((status) {
+      if (livingOrbi &&
+          status == AnimationStatus.completed &&
+          activeState != CharacterState.talking &&
+          !reduce &&
+          widget.animate) {
+        setState(() => reactionDone = true);
+      }
+    });
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    setState(() => foreground = state == AppLifecycleState.resumed);
+    if (!foreground) {
+      controller.stop();
+    } else if (!reactionDone &&
+        activeState != CharacterState.talking &&
+        activeState != CharacterState.idle &&
+        !reduce &&
+        widget.animate) {
+      controller.forward();
+    }
+  }
+
   List<String> _castFrames = const [];
   void play() {
+    reactionDone = false;
     if (CharacterAnimationCatalog.cast.contains(widget.characterId)) {
       _castFrames =
           widget.frames[activeState] ??
@@ -153,9 +189,22 @@ class _CharacterMomentState extends State<CharacterMoment>
                   CharacterAnimationProfile.forId(widget.characterId).tempo)
               .round(),
     );
-    if (reduce || !widget.animate || activeState == CharacterState.idle) {
+    if (livingOrbi) {
+      controller.duration = Duration(
+        milliseconds: switch (activeState) {
+          CharacterState.correct => 1920,
+          CharacterState.surprise => 1680,
+          CharacterState.celebration => 3360,
+          _ => 2400,
+        },
+      );
+    }
+    if (reduce ||
+        !widget.animate ||
+        activeState == CharacterState.idle ||
+        (livingOrbi && activeState == CharacterState.talking)) {
       controller.stop();
-      controller.value = 1;
+      if (!livingOrbi) controller.value = 1;
     } else {
       controller.forward(from: 0);
     }
@@ -166,6 +215,7 @@ class _CharacterMomentState extends State<CharacterMoment>
     super.didChangeDependencies();
     reduce = MediaQuery.disableAnimationsOf(context);
     play();
+    if (!TickerMode.valuesOf(context).enabled || !foreground) controller.stop();
   }
 
   @override
@@ -195,6 +245,7 @@ class _CharacterMomentState extends State<CharacterMoment>
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     controller.dispose();
     super.dispose();
   }
@@ -217,6 +268,47 @@ class _CharacterMomentState extends State<CharacterMoment>
       CharacterState.surprise => 'удивляется',
       CharacterState.goodbye => 'прощается',
     };
+    if (livingOrbi) {
+      final moving =
+          foreground &&
+          !reduce &&
+          widget.animate &&
+          TickerMode.valuesOf(context).enabled;
+      final clip = switch (state) {
+        CharacterState.talking => 'talk',
+        CharacterState.greeting => 'greet',
+        CharacterState.goodbye => 'land',
+        CharacterState.correct => 'correct',
+        CharacterState.celebration => 'celebrate',
+        CharacterState.surprise => 'surprise',
+        CharacterState.support ||
+        CharacterState.thinking ||
+        CharacterState.listening => 'support',
+        _ => 'hover',
+      };
+      return Semantics(
+        label: '$name $label',
+        image: true,
+        button: true,
+        onTap: _react,
+        child: GestureDetector(
+          excludeFromSemantics: true,
+          onTap: _react,
+          child: SizedBox(
+            width: widget.size + 20,
+            height: widget.size + 22,
+            child: Image.asset(
+              moving
+                  ? CharacterAnimationCatalog.artwork('orbi', 'visor_$clip')
+                  : 'assets/kvesmos/crew_motion/orbi_visor_rest.png',
+              key: ValueKey('orbi-${moving ? clip : "rest"}'),
+              fit: BoxFit.contain,
+              excludeFromSemantics: true,
+            ),
+          ),
+        ),
+      );
+    }
     if (_castFrames.isNotEmpty) {
       return Semantics(
         label: '$name $label',

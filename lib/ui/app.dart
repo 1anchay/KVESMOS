@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'device_learning_check.dart';
 import 'unit_mastery.dart';
 import 'animation_gallery.dart';
@@ -29,6 +31,7 @@ import 'smart_practice_page.dart';
 import 'lost_signal_mission.dart';
 import 'first_flight_page.dart';
 import '../data/practice_repository.dart';
+import '../services/learning_audio.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
   const OrbitApp({super.key, this.gameplayReboot = false});
@@ -41,6 +44,29 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
   late final GoRouter router;
   late final AppController controller;
   bool handlingLaunch = false;
+  void syncSoundscape() {
+    final route = router.routerDelegate.currentConfiguration.lastOrNull?.route;
+    final path = route is GoRoute ? route.path : null;
+    if (path == '/settings' ||
+        path == '/device-learning-check' ||
+        path == '/chest/:id') {
+      return;
+    }
+    unawaited(
+      controller.audio.setScene(switch (path) {
+        '/' => AudioScene.menu,
+        '/first-flight' => AudioScene.ship,
+        '/adventures' ||
+        '/adventure/:id' ||
+        '/mission/lost-signal' ||
+        '/expeditions' ||
+        '/galaxy' ||
+        '/beacon' => AudioScene.exploration,
+        _ => AudioScene.silent,
+      }),
+    );
+  }
+
   Future<void> openCompanion() async {
     if (!mounted) return;
     final app = controller;
@@ -278,13 +304,24 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
     );
     app.companion.launchCourse.addListener(openCompanion);
     app.addListener(openCompanion);
-    WidgetsBinding.instance.addPostFrameCallback((_) => openCompanion());
+    if (widget.gameplayReboot) {
+      router.routerDelegate.addListener(syncSoundscape);
+    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      if (widget.gameplayReboot) syncSoundscape();
+      unawaited(openCompanion());
+    });
   }
 
   @override
   void dispose() {
     controller.companion.launchCourse.removeListener(openCompanion);
     controller.removeListener(openCompanion);
+    if (widget.gameplayReboot) {
+      router.routerDelegate.removeListener(syncSoundscape);
+      unawaited(controller.audio.setScene(AudioScene.silent));
+    }
     router.dispose();
     super.dispose();
   }

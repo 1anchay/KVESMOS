@@ -11,46 +11,73 @@ typedef ReadAudioSetting = Future<String?> Function(String);
 typedef WriteAudioSetting = Future<void> Function(String, String);
 
 class AudioPreferences {
-  final bool speech, effects, reactions;
-  final double speechVolume, effectsVolume;
+  final bool speech, effects, reactions, music, ambience, muted;
+  final double speechVolume, effectsVolume, musicVolume, ambienceVolume;
   const AudioPreferences({
     this.speech = true,
     this.effects = true,
     this.reactions = true,
+    this.music = true,
+    this.ambience = true,
+    this.muted = false,
     this.speechVolume = .85,
-    this.effectsVolume = .55,
+    this.effectsVolume = .45,
+    this.musicVolume = .30,
+    this.ambienceVolume = .40,
   });
   AudioPreferences copyWith({
     bool? speech,
     bool? effects,
     bool? reactions,
+    bool? music,
+    bool? ambience,
+    bool? muted,
     double? speechVolume,
     double? effectsVolume,
+    double? musicVolume,
+    double? ambienceVolume,
   }) => AudioPreferences(
     speech: speech ?? this.speech,
     effects: effects ?? this.effects,
     reactions: reactions ?? this.reactions,
+    music: music ?? this.music,
+    ambience: ambience ?? this.ambience,
+    muted: muted ?? this.muted,
     speechVolume: speechVolume ?? this.speechVolume,
     effectsVolume: effectsVolume ?? this.effectsVolume,
+    musicVolume: musicVolume ?? this.musicVolume,
+    ambienceVolume: ambienceVolume ?? this.ambienceVolume,
   );
   String encode() => jsonEncode({
     'speech': speech,
     'effects': effects,
     'reactions': reactions,
+    'music': music,
+    'ambience': ambience,
+    'muted': muted,
     'speechVolume': speechVolume,
     'effectsVolume': effectsVolume,
+    'musicVolume': musicVolume,
+    'ambienceVolume': ambienceVolume,
   });
   factory AudioPreferences.decode(String? raw) {
     try {
       final j = jsonDecode(raw ?? '{}') as Map;
       double volume(String key, double fallback) =>
-          j[key] is num ? (j[key] as num).toDouble().clamp(0, 1) : fallback;
+          j[key] is num && (j[key] as num).isFinite
+          ? (j[key] as num).toDouble().clamp(0, 1)
+          : fallback;
       return AudioPreferences(
         speech: j['speech'] != false,
         effects: j['effects'] != false,
         reactions: j['reactions'] != false,
+        music: j['music'] != false,
+        ambience: j['ambience'] != false,
+        muted: j['muted'] == true,
         speechVolume: volume('speechVolume', .85),
-        effectsVolume: volume('effectsVolume', .55),
+        effectsVolume: volume('effectsVolume', raw == null ? .45 : .55),
+        musicVolume: volume('musicVolume', .30),
+        ambienceVolume: volume('ambienceVolume', .40),
       );
     } catch (_) {
       return const AudioPreferences();
@@ -129,6 +156,7 @@ class SystemTtsBackend
   @override
   final ValueNotifier<String?> failure = ValueNotifier<String?>(null);
   bool _active = false;
+  bool get active => _active;
   VoidCallback? onCompleted;
   SystemTtsBackend() {
     void release() {
@@ -359,7 +387,26 @@ enum SoundEffect {
   chest,
   rare,
   tap,
+  token,
+  returnToken,
+  confirm,
+  radio,
+  door,
+  power,
+  trust,
+  location,
+  cast,
+  line,
+  bite,
+  tension,
+  reel,
+  splash,
+  catchFish,
+  escapeFish,
+  recordFish,
 }
+
+enum AudioScene { silent, menu, ship, exploration, water }
 
 class SoundEffectsService {
   static const channel = MethodChannel('dev.orbitwords/learning_audio');
@@ -449,6 +496,18 @@ class LearningAudio {
   String studyLocale = 'en-US';
   int _generation = 0;
   int? _completedGeneration;
+  AudioScene _scene = AudioScene.silent;
+  bool _foreground = true, _speechStarting = false;
+  (String, double, double, bool, bool)? _lastMix;
+  bool get _speechPriority {
+    final backend = voices.backend;
+    return _speechStarting ||
+        playback.value?.playing == true ||
+        lastSource == SpeechSource.system &&
+            backend is SystemTtsBackend &&
+            backend.active;
+  }
+
   LearningAudio(
     this.read,
     this.write, {
@@ -459,6 +518,7 @@ class LearningAudio {
   }) : effects = effects ?? SoundEffectsService(),
        recordedPlayer = recordedPlayer ?? NativeRecordedSpeech() {
     voices = CharacterVoiceService(read, write, backend: backend);
+    playback.addListener(() => unawaited(_syncMix()));
     final events = voices.backend;
     if (events is SystemTtsBackend) {
       events.onCompleted = () {
@@ -518,12 +578,51 @@ class LearningAudio {
       }
     });
     await effects.prepare();
+    await _syncMix();
+  }
+
+  Future<void> setScene(AudioScene scene) async {
+    _scene = scene;
+    await _syncMix();
+  }
+
+  Future<void> setForeground(bool active) async {
+    _foreground = active;
+    await _syncMix();
+    if (!active) await stop();
+  }
+
+  Future<void> _syncMix() async {
+    final p = preferences;
+    final music = p.music && !p.muted ? p.musicVolume : 0.0;
+    final ambience = p.ambience && !p.muted ? p.ambienceVolume : 0.0;
+    final next = (_scene.name, music, ambience, _foreground, _speechPriority);
+    if (_lastMix == next) return;
+    _lastMix = next;
+    try {
+      await SoundEffectsService.channel.invokeMethod<void>('soundscape', {
+        'scene': next.$1,
+        'music': next.$2,
+        'ambience': next.$3,
+        'foreground': next.$4,
+        'duck': next.$5,
+      });
+    } catch (_) {
+      // The existing speech and text modes are available without native loops.
+    }
   }
 
   Future<void> save(AudioPreferences value) async {
+    final previous = preferences;
     await write(preferencesKey, value.encode());
     preferences = value;
-    await stop();
+    if (value.muted ||
+        previous.speech && (!value.speech || value.speechVolume == 0)) {
+      await stop();
+    } else if (!value.effects) {
+      await effects.stop();
+    }
+    await _syncMix();
   }
 
   Future<bool> speak(
@@ -532,21 +631,53 @@ class LearningAudio {
     String? locale,
     bool slow = false,
   }) async {
-    locale ??= studyLocale;
+    final ticket = ++_generation;
+    _speechStarting = preferences.speech && !preferences.muted && _foreground;
+    unawaited(_syncMix());
+    try {
+      final started = await _speak(
+        ticket,
+        text,
+        character,
+        locale ?? studyLocale,
+        slow,
+      );
+      if (!started && ticket == _generation) {
+        await voices.stop();
+        if (ticket == _generation) await recordedPlayer.stop();
+      }
+      return started;
+    } finally {
+      if (ticket == _generation) {
+        _speechStarting = false;
+        await _syncMix();
+      }
+    }
+  }
+
+  Future<bool> _speak(
+    int ticket,
+    String text,
+    String character,
+    String locale,
+    bool slow,
+  ) async {
     lastProblem = null;
     lastSource = null;
     lastCharacter = character;
     lastText = text;
     _speakingCharacter = null;
     _recordingRequest = null;
-    final ticket = ++_generation;
     playback.value = null;
     await voices.stop();
     await recordedPlayer.stop();
     await effects.stop();
     if (ticket != _generation) return false;
-    if (!preferences.speech || preferences.speechVolume == 0) {
-      lastProblem = !preferences.speech
+    if (!preferences.speech ||
+        preferences.muted ||
+        !_foreground ||
+        preferences.speechVolume == 0) {
+      lastProblem = !preferences.speech || preferences.muted || !_foreground
           ? 'Озвучка выключена в настройках KVESMOS.'
           : 'Громкость речи в KVESMOS равна нулю.';
       return false;
@@ -665,19 +796,11 @@ class LearningAudio {
   }
 
   Future<bool> play(SoundEffect effect) async {
-    if (!preferences.effects || preferences.effectsVolume == 0) return false;
-    // Choosing an answer should not cut off the example being listened to.
-    // Verdicts/transitions still stop speech before playing their feedback.
-    if (effect == SoundEffect.tap && playback.value != null) return false;
-    final ticket = ++_generation;
-    _speakingCharacter = null;
-    _recordingRequest = null;
-    playback.value = null;
-    await voices.stop();
-    await recordedPlayer.stop();
-    if (ticket != _generation ||
-        !preferences.effects ||
-        preferences.effectsVolume == 0) {
+    if (!preferences.effects ||
+        preferences.muted ||
+        !_foreground ||
+        preferences.effectsVolume == 0 ||
+        _speechPriority) {
       return false;
     }
     return effects.play(effect, preferences.effectsVolume);
@@ -685,12 +808,14 @@ class LearningAudio {
 
   Future<void> stop() async {
     _generation++;
+    _speechStarting = false;
     _speakingCharacter = null;
     _recordingRequest = null;
     playback.value = null;
     await voices.stop();
     await recordedPlayer.stop();
     await effects.stop();
+    await _syncMix();
   }
 
   Future<bool> pauseOrResume() async {

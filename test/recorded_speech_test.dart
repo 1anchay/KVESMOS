@@ -262,17 +262,17 @@ void main() {
     expect(audio.lastProblem, contains('Можно прочитать фразу'));
     expect(audio.playback.value, isNull);
   });
-  test('selection stays quiet during speech; verdict cancels it', () async {
+  test('selection and verdict stay quiet until speech completes', () async {
     expect(await audio.speak('Hello!'), true);
     final request = player.requests.single, stops = player.stops;
     expect(await audio.play(SoundEffect.tap), false);
+    expect(await audio.play(SoundEffect.correct), false);
     expect(player.stops, stops);
     expect(audio.playback.value?.playing, true);
-    expect(await audio.play(SoundEffect.correct), true);
-    expect(player.stops, greaterThan(stops));
-    expect(audio.playback.value, isNull);
     await event('recordingFinished', request);
     expect(audio.playback.value, isNull);
+    expect(await audio.play(SoundEffect.correct), true);
+    expect(player.stops, stops);
   });
   test(
     'catalog rejects remote paths, duplicates and missing rights approval',

@@ -7,6 +7,7 @@ import '../data/story_repository.dart';
 import '../domain/course.dart' show normalizeAnswer;
 import '../domain/knowledge.dart';
 import '../domain/story_dialogue.dart';
+import '../services/learning_audio.dart';
 import 'character_moment.dart';
 import 'flight_ui.dart';
 import 'knowledge_widgets.dart';
@@ -67,6 +68,7 @@ class _StorySheetState extends State<StoryDialogueSheet> {
       final opened = await widget.repository.open(widget.scene);
       await widget.language.refresh();
       if (mounted) {
+        unawaited(widget.language.audio.play(SoundEffect.radio));
         setState(() {
           view = opened;
           error = null;
@@ -125,6 +127,28 @@ class _StorySheetState extends State<StoryDialogueSheet> {
         }
       });
       if (moved || verdict != null) rewind();
+      if (updated.run.revision != current.run.revision) {
+        final effect = switch (action) {
+          StoryMove.token =>
+            current.run.draft.contains(input)
+                ? SoundEffect.returnToken
+                : SoundEffect.token,
+          StoryMove.choice =>
+            node is StoryDecision &&
+                    node.choices.any((c) => c.id == input && c.trust != null)
+                ? SoundEffect.trust
+                : SoundEffect.confirm,
+          StoryMove.submit => switch (verdict) {
+            StoryVerdict.accepted => SoundEffect.correct,
+            StoryVerdict.incorrect => SoundEffect.incorrect,
+            _ => SoundEffect.confirm,
+          },
+          StoryMove.next =>
+            updated.run.finished ? SoundEffect.complete : SoundEffect.confirm,
+          StoryMove.example || StoryMove.help => SoundEffect.tap,
+        };
+        unawaited(widget.language.audio.play(effect));
+      }
       if (updated.run.finished && ModalRoute.of(context)?.isCurrent == true) {
         Navigator.pop(context);
       }
@@ -453,7 +477,10 @@ class _StorySheetState extends State<StoryDialogueSheet> {
               selected: selection == i,
               onTap: busy
                   ? null
-                  : () => setState(() => selection = selection == i ? null : i),
+                  : () {
+                      unawaited(widget.language.audio.play(SoundEffect.tap));
+                      setState(() => selection = selection == i ? null : i);
+                    },
             ),
           ),
       if (showRules) ...[const SizedBox(height: 12), rulePanel(node, c)],

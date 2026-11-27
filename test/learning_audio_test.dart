@@ -186,7 +186,7 @@ void main() {
     },
   );
   test(
-    'audio preferences persist independently; sound requests stop speech and throttle bursts',
+    'audio channels persist independently and effect bursts are throttled',
     () async {
       final calls = <MethodCall>[];
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
@@ -204,7 +204,7 @@ void main() {
       expect(await audio.speak(unrecorded), true);
       final stops = backend.stops;
       expect(await audio.play(SoundEffect.correct), true);
-      expect(backend.stops, greaterThan(stops));
+      expect(backend.stops, stops);
       expect(await audio.play(SoundEffect.incorrect), false);
       expect(calls.where((c) => c.method == 'play'), hasLength(1));
       await audio.save(
@@ -214,6 +214,8 @@ void main() {
           reactions: false,
           speechVolume: .3,
           effectsVolume: .2,
+          music: false,
+          ambienceVolume: .6,
         ),
       );
       final reopened = LearningAudio(read, write, backend: backend);
@@ -272,7 +274,7 @@ void main() {
     },
   );
   test(
-    'eleven original earcons are sub-second PCM files and preferences tolerate bad input',
+    'earcons are short PCM files and preferences preserve legacy values',
     () {
       for (final effect in SoundEffect.values) {
         final bytes = File(
@@ -286,6 +288,15 @@ void main() {
         expect(bytes.length, greaterThan(1000));
       }
       expect(AudioPreferences.decode('broken').speech, true);
+      expect(AudioPreferences.decode(null).effectsVolume, .45);
+      final legacy = AudioPreferences.decode(
+        '{"speechVolume":0.7,"effectsVolume":0.25,"speech":false}',
+      );
+      expect(legacy.speech, false);
+      expect(legacy.speechVolume, .7);
+      expect(legacy.effectsVolume, .25);
+      expect(legacy.musicVolume, .3);
+      expect(legacy.ambienceVolume, .4);
       expect(
         AudioPreferences.decode(
           '{"speechVolume":8,"effectsVolume":-1}',

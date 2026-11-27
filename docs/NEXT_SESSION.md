@@ -1,5 +1,15 @@
 # KVESMOS 1.5 · рисованная команда
 
+## Sound Experience · музыка, окружение и приоритет речи
+
+Рабочая ветка `codex/kvesmos-gameplay-reboot`, [Draft PR №38](https://github.com/1anchay/KVESMOS/pull/38). Оба Quality для базы `64604b6` завершились успешно.
+
+`LearningAudio` сохраняет четыре независимых канала, общее отключение и сброс в прежнем ключе SQLite. Старые уровни речи и эффектов читаются из тех же полей. Android плавно переключает музыку между игровыми маршрутами, снижает музыку и окружение во время речи и подавляет конкурирующие эффекты. Открытие диалога и настройки поверх маршрута сохраняют позицию музыки. Микрофон, фон приложения, потеря аудиофокуса и отключение наушников обрабатываются на стороне Android. [Каталог и воспроизведение сборки ресурсов](audio/GAME_AUDIO_ASSETS.md).
+
+Android-сценарий `integration_test/sound_experience_test.dart` проходит из меню на корабль и через радиодиалоги. Запись `KVESMOS-Sound-Experience.mp4` (1:21) содержит аудио из эмулятора. Для повторной записи используйте `--dart-define=SOUND_CAPTURE=true` и `tool/capture_first_flight.py` с маркерами `SOUND_START` и `SOUND_END`, `--audio-gain-db 28`. Видео и подписанный `KVESMOS-Sound-Experience-QA.apk` находятся в `build/releases/KVESMOS-sound-experience/`. Для проверки микрофона и отключения наушников нужен физический Android.
+
+Следующий пакет — Galactic Fishing. Тема `AudioScene.water`, атмосфера берега и эффекты рыбалки готовы. Остаются игровой цикл, локация и виды рыб, сохранение улова, снастей и коллекции, подключение `StoryCue.beforeFishing` и `StoryCue.afterFishing` к фактическим результатам, отдельные Android-проверки и видео прохождения.
+
 ## Premium Learning UI · светлая тема и конструктор
 
 Ветка `codex/kvesmos-gameplay-reboot`, [Draft PR №38](https://github.com/1anchay/KVESMOS/pull/38). Проверка `dart format --output=none --set-exit-if-changed lib test` использует Flutter 3.47.7 и Dart 3.13.5, как в Quality. В `story_repository.dart` исправлено только форматирование.

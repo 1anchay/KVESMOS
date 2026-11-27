@@ -11,6 +11,7 @@ import '../domain/first_flight.dart';
 import '../domain/flight_story.dart';
 import '../domain/knowledge.dart';
 import '../domain/story_dialogue.dart';
+import '../services/learning_audio.dart';
 import 'character_moment.dart';
 import 'first_flight_art.dart';
 import 'flight_ui.dart';
@@ -106,6 +107,7 @@ class _RebootHomeState extends ConsumerState<RebootHome> {
                         onPressed: flight == null
                             ? null
                             : () async {
+                                unawaited(app.audio.play(SoundEffect.confirm));
                                 await context.push('/first-flight');
                                 if (mounted) setState(() {});
                               },
@@ -285,6 +287,22 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         }
       });
       if (next.revision == before.revision) return;
+      if (result.message == null) {
+        final effect = switch (action) {
+          FlightAction.teach ||
+          FlightAction.requestReserve => SoundEffect.confirm,
+          FlightAction.take => SoundEffect.pickup,
+          FlightAction.travel => SoundEffect.location,
+          FlightAction.unlock => SoundEffect.door,
+          FlightAction.fitBattery ||
+          FlightAction.fitCable ||
+          FlightAction.breaker ||
+          FlightAction.fitReserve => SoundEffect.power,
+          FlightAction.turnA || FlightAction.turnB => SoundEffect.interact,
+          FlightAction.launch => SoundEffect.complete,
+        };
+        unawaited(app.audio.play(effect));
+      }
       if (action == FlightAction.fitReserve) pronounce(FlightWord.press);
       if (action == FlightAction.launch) await app.refresh();
     } catch (_) {
@@ -315,7 +333,6 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
           word = null;
           message = _help(flight!);
         });
-        unawaited(app.audio.stop());
       }
     } finally {
       if (mounted) setState(() => busy = false);

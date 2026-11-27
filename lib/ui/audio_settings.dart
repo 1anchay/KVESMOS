@@ -14,7 +14,7 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
   bool busy = false;
   String locale = 'en-US';
   String? message;
-  double? speechDraft, effectsDraft;
+  final drafts = <String, double>{};
   Future<void> act(Future<void> Function() work) async {
     setState(() {
       busy = true;
@@ -33,6 +33,46 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
     }
   }
 
+  Widget channel(
+    String title,
+    String volumeLabel,
+    bool enabled,
+    double volume,
+    Future<void> Function(bool) toggle,
+    Future<void> Function(double) setVolume,
+  ) {
+    final percent = '${((drafts[title] ?? volume) * 100).round()}%';
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SwitchListTile(
+          contentPadding: EdgeInsets.zero,
+          title: Text(title),
+          value: enabled,
+          onChanged: busy ? null : (value) => act(() => toggle(value)),
+        ),
+        Text('$volumeLabel · $percent'),
+        Slider(
+          value: drafts[title] ?? volume,
+          divisions: 20,
+          label: percent,
+          semanticFormatterCallback: (value) =>
+              '$volumeLabel ${(value * 100).round()}%',
+          onChanged: busy
+              ? null
+              : (value) => setState(() => drafts[title] = value),
+          onChangeEnd: (value) => act(() async {
+            try {
+              await setVolume(value);
+            } finally {
+              drafts.remove(title);
+            }
+          }),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final app = ref.watch(appProvider), audio = app.audio;
@@ -41,53 +81,60 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const SectionTitle('Звук и голоса'),
+        SwitchListTile(
+          contentPadding: EdgeInsets.zero,
+          title: const Text('Без звука'),
+          subtitle: const Text('Временно отключает все каналы'),
+          value: p.muted,
+          onChanged: busy
+              ? null
+              : (value) => act(() => app.saveAudio(p.copyWith(muted: value))),
+        ),
+        channel(
+          'Музыка',
+          'Громкость музыки',
+          p.music,
+          p.musicVolume,
+          (v) => app.saveAudio(p.copyWith(music: v)),
+          (v) => app.saveAudio(p.copyWith(musicVolume: v)),
+        ),
+        channel(
+          'Звуки окружения',
+          'Громкость окружения',
+          p.ambience,
+          p.ambienceVolume,
+          (v) => app.saveAudio(p.copyWith(ambience: v)),
+          (v) => app.saveAudio(p.copyWith(ambienceVolume: v)),
+        ),
+        channel(
+          'Озвучка',
+          'Громкость речи',
+          p.speech,
+          p.speechVolume,
+          (v) => app.saveAudio(p.copyWith(speech: v)),
+          (v) => app.saveAudio(p.copyWith(speechVolume: v)),
+        ),
+        channel(
+          'Звуковые эффекты',
+          'Громкость эффектов',
+          p.effects,
+          p.effectsVolume,
+          (v) => app.saveAudio(p.copyWith(effects: v)),
+          (v) => app.saveAudio(p.copyWith(effectsVolume: v)),
+        ),
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: TextButton(
+            onPressed: busy
+                ? null
+                : () => act(() => app.saveAudio(const AudioPreferences())),
+            child: const Text('Сбросить настройки звука'),
+          ),
+        ),
         Text(
           audio.recordings.recordings.isEmpty
               ? 'Студийные записи персонажей пока не добавлены. Доступна резервная озвучка голосами устройства.'
               : 'Офлайн: ${audio.recordings.recordings.length} реплик на разных языках, ${audio.recordings.recordings.map((r) => r.performer).toSet().length} синтезированных голоса. Обычные и медленные версии. Это синтез, не запись актёров. Для остальных фраз — системный голос.',
-        ),
-        SwitchListTile(
-          contentPadding: EdgeInsets.zero,
-          title: const Text('Озвучка'),
-          subtitle: const Text('Учебные фразы и реплики по нажатию'),
-          value: p.speech,
-          onChanged: busy
-              ? null
-              : (v) => act(() => app.saveAudio(p.copyWith(speech: v))),
-        ),
-        Text(
-          'Громкость речи · ${((speechDraft ?? p.speechVolume) * 100).round()}%',
-        ),
-        Slider(
-          value: speechDraft ?? p.speechVolume,
-          divisions: 10,
-          label: '${(p.speechVolume * 100).round()}%',
-          onChanged: busy ? null : (v) => setState(() => speechDraft = v),
-          onChangeEnd: (v) => act(() async {
-            await app.saveAudio(p.copyWith(speechVolume: v));
-            speechDraft = null;
-          }),
-        ),
-        SwitchListTile(
-          contentPadding: EdgeInsets.zero,
-          title: const Text('Звуковые эффекты'),
-          value: p.effects,
-          onChanged: busy
-              ? null
-              : (v) => act(() => app.saveAudio(p.copyWith(effects: v))),
-        ),
-        Text(
-          'Громкость эффектов · ${((effectsDraft ?? p.effectsVolume) * 100).round()}%',
-        ),
-        Slider(
-          value: effectsDraft ?? p.effectsVolume,
-          divisions: 10,
-          label: '${(p.effectsVolume * 100).round()}%',
-          onChanged: busy ? null : (v) => setState(() => effectsDraft = v),
-          onChangeEnd: (v) => act(() async {
-            await app.saveAudio(p.copyWith(effectsVolume: v));
-            effectsDraft = null;
-          }),
         ),
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
@@ -121,7 +168,7 @@ class _AudioSettingsState extends ConsumerState<AudioSettings> {
             ),
             TextButton(
               onPressed: audio.stop,
-              child: const Text('Остановить звук'),
+              child: const Text('Остановить речь и эффекты'),
             ),
           ],
         ),

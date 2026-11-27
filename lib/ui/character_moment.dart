@@ -80,8 +80,7 @@ class CharacterAnimationProfile {
   };
 }
 
-/// Finite pose transitions, gestures and Orbi's procedural eyelids. This is not
-/// skeletal animation or lip sync: the hand poses come from supplied artwork.
+/// Event-driven pose transitions using the supplied character illustrations.
 class CharacterMoment extends StatefulWidget {
   final String characterId;
   final bool? correct;
@@ -114,14 +113,49 @@ class CharacterMoment extends StatefulWidget {
 }
 
 class _CharacterMomentState extends State<CharacterMoment>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   late final controller = AnimationController(vsync: this);
   bool reduce = false;
   CharacterState? interaction;
-  double gaze = 0;
-  CharacterState get activeState => interaction ?? widget.effectiveState;
+  bool reactionDone = false;
+  bool foreground = true;
+  bool get livingOrbi => widget.characterId == 'orbi' && widget.frames.isEmpty;
+  CharacterState get activeState => livingOrbi && reactionDone
+      ? CharacterState.idle
+      : interaction ?? widget.effectiveState;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    controller.addStatusListener((status) {
+      if (livingOrbi &&
+          status == AnimationStatus.completed &&
+          activeState != CharacterState.talking &&
+          !reduce &&
+          widget.animate) {
+        setState(() => reactionDone = true);
+      }
+    });
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    setState(() => foreground = state == AppLifecycleState.resumed);
+    if (!foreground) {
+      controller.stop();
+    } else if (!reactionDone &&
+        activeState != CharacterState.talking &&
+        activeState != CharacterState.idle &&
+        !reduce &&
+        widget.animate) {
+      controller.forward();
+    }
+  }
+
   List<String> _castFrames = const [];
   void play() {
+    reactionDone = false;
     if (CharacterAnimationCatalog.cast.contains(widget.characterId)) {
       _castFrames =
           widget.frames[activeState] ??
@@ -129,6 +163,14 @@ class _CharacterMomentState extends State<CharacterMoment>
             widget.characterId,
             activeState.name,
           );
+      if (activeState == CharacterState.idle &&
+          !reduce &&
+          widget.animate &&
+          widget.frames[activeState] == null) {
+        final id = widget.characterId;
+        final pose = id == 'miko' ? 'bridge_idle' : 'idle';
+        _castFrames = [CharacterAnimationCatalog.artwork(id, pose)];
+      }
       for (final asset in _castFrames) {
         precacheImage(
           AssetImage(asset),
@@ -147,9 +189,22 @@ class _CharacterMomentState extends State<CharacterMoment>
                   CharacterAnimationProfile.forId(widget.characterId).tempo)
               .round(),
     );
-    if (reduce || !widget.animate || activeState == CharacterState.idle) {
+    if (livingOrbi) {
+      controller.duration = Duration(
+        milliseconds: switch (activeState) {
+          CharacterState.correct => 1920,
+          CharacterState.surprise => 1680,
+          CharacterState.celebration => 3360,
+          _ => 2400,
+        },
+      );
+    }
+    if (reduce ||
+        !widget.animate ||
+        activeState == CharacterState.idle ||
+        (livingOrbi && activeState == CharacterState.talking)) {
       controller.stop();
-      controller.value = 1;
+      if (!livingOrbi) controller.value = 1;
     } else {
       controller.forward(from: 0);
     }
@@ -160,6 +215,7 @@ class _CharacterMomentState extends State<CharacterMoment>
     super.didChangeDependencies();
     reduce = MediaQuery.disableAnimationsOf(context);
     play();
+    if (!TickerMode.valuesOf(context).enabled || !foreground) controller.stop();
   }
 
   @override
@@ -189,6 +245,7 @@ class _CharacterMomentState extends State<CharacterMoment>
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     controller.dispose();
     super.dispose();
   }
@@ -211,6 +268,47 @@ class _CharacterMomentState extends State<CharacterMoment>
       CharacterState.surprise => 'удивляется',
       CharacterState.goodbye => 'прощается',
     };
+    if (livingOrbi) {
+      final moving =
+          foreground &&
+          !reduce &&
+          widget.animate &&
+          TickerMode.valuesOf(context).enabled;
+      final clip = switch (state) {
+        CharacterState.talking => 'talk',
+        CharacterState.greeting => 'greet',
+        CharacterState.goodbye => 'land',
+        CharacterState.correct => 'correct',
+        CharacterState.celebration => 'celebrate',
+        CharacterState.surprise => 'surprise',
+        CharacterState.support ||
+        CharacterState.thinking ||
+        CharacterState.listening => 'support',
+        _ => 'hover',
+      };
+      return Semantics(
+        label: '$name $label',
+        image: true,
+        button: true,
+        onTap: _react,
+        child: GestureDetector(
+          excludeFromSemantics: true,
+          onTap: _react,
+          child: SizedBox(
+            width: widget.size + 20,
+            height: widget.size + 22,
+            child: Image.asset(
+              moving
+                  ? CharacterAnimationCatalog.artwork('orbi', 'visor_$clip')
+                  : 'assets/kvesmos/crew_motion/orbi_visor_rest.png',
+              key: ValueKey('orbi-${moving ? clip : "rest"}'),
+              fit: BoxFit.contain,
+              excludeFromSemantics: true,
+            ),
+          ),
+        ),
+      );
+    }
     if (_castFrames.isNotEmpty) {
       return Semantics(
         label: '$name $label',
@@ -232,24 +330,45 @@ class _CharacterMomentState extends State<CharacterMoment>
                     : t < .28
                     ? 0
                     : _castFrames.length - 1;
+                final asset = _castFrames[index];
+                final illustration = Image.asset(
+                  asset,
+                  fit: BoxFit.contain,
+                  width: widget.size + 12,
+                  height: widget.size + 12,
+                  excludeFromSemantics: true,
+                  errorBuilder: (_, _, _) => Image.asset(
+                    CharacterAnimationCatalog.neutral(widget.characterId),
+                    excludeFromSemantics: true,
+                  ),
+                );
+                final isExpression =
+                    widget.characterId != 'pixie' &&
+                    widget.frames[activeState] == null &&
+                    activeState != CharacterState.idle;
+                final colors = Theme.of(context).colorScheme;
                 return AnimatedSwitcher(
                   duration: reduce || !widget.animate
                       ? Duration.zero
                       : const Duration(milliseconds: 135),
-                  child: Image.asset(
-                    _castFrames[index],
-                    key: ValueKey(_castFrames[index]),
-                    fit: BoxFit.contain,
-                    width: widget.size + 12,
-                    height: widget.size + 12,
-                    excludeFromSemantics: true,
-                    errorBuilder: (_, _, _) => Image.asset(
-                      CharacterAnimationCatalog.neutral(widget.characterId),
-                      width: widget.size,
-                      height: widget.size,
-                      excludeFromSemantics: true,
-                    ),
-                  ),
+                  child: isExpression
+                      ? Container(
+                          key: ValueKey(asset),
+                          width: widget.size,
+                          height: widget.size,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: colors.primaryContainer,
+                          ),
+                          // Expression cells have transparent atlas margins.
+                          // Leave enough room for pointed ears, eyes and chin.
+                          child: Transform.scale(
+                            scale: 1.63,
+                            child: illustration,
+                          ),
+                        )
+                      : KeyedSubtree(key: ValueKey(asset), child: illustration),
                 );
               },
             ),
@@ -260,7 +379,19 @@ class _CharacterMomentState extends State<CharacterMoment>
     final pose = switch (state) {
       CharacterState.correct || CharacterState.goodbye => 'wink_thumbsup',
       CharacterState.celebration => 'happy',
-      _ => 'thinking',
+      CharacterState.thinking ||
+      CharacterState.listening ||
+      CharacterState.support => 'thinking',
+      CharacterState.surprise => 'surprised',
+      _ => 'happy',
+    };
+    final visorClip = switch (state) {
+      CharacterState.idle => 'hover',
+      CharacterState.talking => 'talk',
+      CharacterState.greeting || CharacterState.goodbye => 'greet',
+      CharacterState.correct || CharacterState.celebration => 'correct',
+      CharacterState.surprise => 'surprise',
+      _ => 'support',
     };
     final symbol = switch (state) {
       CharacterState.correct ||
@@ -281,12 +412,6 @@ class _CharacterMomentState extends State<CharacterMoment>
       button: true,
       hint: 'Коснись, чтобы поздороваться',
       child: GestureDetector(
-        onTapDown: (details) {
-          gaze = ((details.localPosition.dx / widget.size) * 2 - 1).clamp(
-            -1.0,
-            1.0,
-          );
-        },
         onTap: () {
           setState(
             () => interaction = interaction == CharacterState.greeting
@@ -335,10 +460,12 @@ class _CharacterMomentState extends State<CharacterMoment>
                       0,
                       frames.length - 1,
                     )]
+                  : widget.characterId == 'orbi' && !reduce && widget.animate
+                  ? CharacterAnimationCatalog.artwork(
+                      'orbi',
+                      'visor_$visorClip',
+                    )
                   : 'assets/kvesmos/${widget.characterId == 'orbi' ? 'orbi_$pose' : widget.characterId}.png';
-              final blink = moving
-                  ? (1 - ((t - .48) / .05).abs()).clamp(0.0, 1.0)
-                  : 0.0;
               return Stack(
                 clipBehavior: Clip.none,
                 children: [
@@ -370,22 +497,6 @@ class _CharacterMomentState extends State<CharacterMoment>
                                 ),
                               ),
                             ),
-                            if (widget.characterId == 'orbi' &&
-                                pose == 'thinking' &&
-                                frames == null)
-                              Positioned.fill(
-                                child: CustomPaint(
-                                  painter: _OrbiFace(
-                                    blink,
-                                    moving
-                                        ? math.sin(t * math.pi * 2) * .6 +
-                                              gaze * envelope
-                                        : 0,
-                                    state,
-                                    moving ? t : 1,
-                                  ),
-                                ),
-                              ),
                           ],
                         ),
                       ),
@@ -449,108 +560,6 @@ class _CharacterMomentState extends State<CharacterMoment>
       ),
     );
   }
-}
-
-class _OrbiFace extends CustomPainter {
-  final double amount, gaze, t;
-  final CharacterState state;
-  _OrbiFace(this.amount, this.gaze, this.state, this.t);
-  @override
-  void paint(Canvas canvas, Size size) {
-    // Coordinates refer only to the supplied 443x406 thinking pose. The other
-    // portraits have no isolated eyes; never place these lids on unknown art.
-    final scale = math.min(size.width / 443, size.height / 406);
-    canvas.translate(
-      (size.width - 443 * scale) / 2,
-      (size.height - 406 * scale) / 2,
-    );
-    canvas.scale(scale);
-    for (final eye in [const Offset(194, 270), const Offset(315, 219)]) {
-      canvas.save();
-      canvas.translate(eye.dx, eye.dy);
-      canvas.rotate(-.28);
-      canvas.drawOval(
-        const Rect.fromLTWH(-40, -47, 80, 94),
-        Paint()..color = const Color(0xFF010719),
-      );
-      final open = (1 - amount).clamp(.04, 1.0);
-      canvas.save();
-      canvas.scale(1, open);
-      final happy =
-          state == CharacterState.greeting || state == CharacterState.support;
-      if (happy) {
-        canvas.drawArc(
-          const Rect.fromLTWH(-28, -12, 56, 36),
-          math.pi + .15,
-          math.pi - .3,
-          false,
-          Paint()
-            ..color = const Color(0xFF4AE7FF)
-            ..style = PaintingStyle.stroke
-            ..strokeWidth = 9
-            ..strokeCap = StrokeCap.round,
-        );
-      } else {
-        canvas.drawOval(
-          const Rect.fromLTWH(-31, -40, 62, 80),
-          Paint()
-            ..shader = const LinearGradient(
-              colors: [Color(0xFF78F4FF), Color(0xFF00C7FF)],
-            ).createShader(const Rect.fromLTWH(-31, -40, 62, 80)),
-        );
-        canvas.drawOval(
-          Rect.fromCenter(
-            center: Offset(gaze * 10 + 9, -10),
-            width: 26,
-            height: state == CharacterState.surprise ? 30 : 42,
-          ),
-          Paint()..color = const Color(0xFF001633),
-        );
-        canvas.drawCircle(
-          Offset(gaze * 10 + 14, -22),
-          5,
-          Paint()..color = Colors.white.withValues(alpha: .8),
-        );
-      }
-      canvas.restore();
-      canvas.restore();
-    }
-    // The mouth occupies the unobstructed screen area above the original hand.
-    canvas.drawOval(
-      const Rect.fromLTWH(254, 263, 34, 23),
-      Paint()..color = const Color(0xFF010719),
-    );
-    final mouth = Paint()
-      ..color = const Color(0xFF4AE7FF)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 3.5
-      ..strokeCap = StrokeCap.round;
-    if (state == CharacterState.talking) {
-      canvas.drawOval(
-        Rect.fromCenter(
-          center: const Offset(270, 275),
-          width: 14,
-          height: 4 + math.sin(t * 36).abs() * 10,
-        ),
-        mouth,
-      );
-    } else {
-      canvas.drawArc(
-        const Rect.fromLTWH(259, 264, 22, 15),
-        state == CharacterState.thinking ? math.pi : 0,
-        math.pi,
-        false,
-        mouth,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(_OrbiFace old) =>
-      amount != old.amount ||
-      gaze != old.gaze ||
-      state != old.state ||
-      t != old.t;
 }
 
 class _CelebrationParticles extends CustomPainter {

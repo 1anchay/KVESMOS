@@ -12933,6 +12933,83 @@
       "redistributionApproved": true,
       "licenseAsset": "assets/audio/voices/licenses/PIPER-V013-NOTICE.txt",
       "asset": "assets/audio/voices/clips/smart-dccde3130b17ee00.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "We lost contact with Station Echo. Let’s go.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-c646a39e8561c08af8bc.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-c646a39e8561c08af8bc-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "Find the blue door.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-6d7a571508ddc2ca50cd.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-6d7a571508ddc2ca50cd-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "Find the red key and the battery.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-751211ded7289da53d02.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-751211ded7289da53d02-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "Do you have the battery?",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-91a21216d1020a2faddc.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-91a21216d1020a2faddc-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "Put the battery in the power unit.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-a971c06ff8d2443276ea.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-a971c06ff8d2443276ea-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "Press the green button.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-e7cfd472b3dbb71a7aa0.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-e7cfd472b3dbb71a7aa0-slow.m4a"
+    },
+    {
+      "character": "miko",
+      "locale": "en-US",
+      "text": "Power is back. Signal restored!",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_michael",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-d28c9e391457e48ccf8a.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-d28c9e391457e48ccf8a-slow.m4a"
     }
   ]
 }

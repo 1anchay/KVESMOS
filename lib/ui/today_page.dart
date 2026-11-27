@@ -10,9 +10,9 @@ import '../domain/today.dart';
 import '../domain/journey.dart';
 import '../domain/progress.dart';
 import '../services/learning_audio.dart';
-import 'character_moment.dart';
 import 'flight_components.dart';
 import 'design.dart';
+import 'command_bridge.dart';
 
 String nextLessonRoute(AppController app) {
   final next = app.courseStart.next ?? app.repository.catalog.first;
@@ -89,17 +89,6 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     final objective = app.repository.learningObjectives[next?.id];
     final type = Theme.of(context).textTheme;
     final largeText = MediaQuery.textScalerOf(context).scale(16) > 22;
-    final companion = CharacterMoment(
-      key: ValueKey((day, greet, today.mood)),
-      characterId: 'orbi',
-      size: largeText ? 56 : 88,
-      animate: greet && app.audio.preferences.reactions,
-      state: today.mood == TodayMood.complete
-          ? CharacterState.celebration
-          : today.mood == TodayMood.returning
-          ? CharacterState.support
-          : CharacterState.greeting,
-    );
     final greeting = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -113,7 +102,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
           style: type.headlineSmall?.copyWith(fontWeight: FontWeight.w800),
         ),
         const SizedBox(height: 5),
-        Text(today.message, style: type.bodyMedium),
+        if (largeText) Text(today.message, style: type.bodyMedium),
       ],
     );
     final goalLabel = Text(
@@ -128,16 +117,14 @@ class _TodayPageState extends ConsumerState<TodayPage> {
       style: type.titleMedium,
     );
     return pageBody([
-      if (largeText) ...[
-        Align(alignment: Alignment.centerLeft, child: companion),
-        greeting,
-      ] else
-        Row(
-          children: [
-            Expanded(child: greeting),
-            companion,
-          ],
-        ),
+      CommandBridge(
+        audio: app.audio,
+        greeting: greet,
+        completed: app.progress.completed.length,
+        animate: app.audio.preferences.reactions,
+      ),
+      const SizedBox(height: 12),
+      greeting,
       const SizedBox(height: 16),
       FlightPanel(
         accent: true,

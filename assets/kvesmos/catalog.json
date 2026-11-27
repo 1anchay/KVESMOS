@@ -168,7 +168,7 @@
       "name_ru": "Звёздный исследователь",
       "slot": "avatar",
       "rarity": "common",
-      "asset_path": "assets/kvesmos/miko.png",
+      "asset_path": "assets/kvesmos/crew_motion/miko_neutral.webp",
       "asset_status": "approved_derivative",
       "usable_with_characters": "profile"
     },
@@ -177,7 +177,7 @@
       "name_ru": "Кристальный гений",
       "slot": "avatar",
       "rarity": "rare",
-      "asset_path": "assets/kvesmos/zig_quartz.png",
+      "asset_path": "assets/kvesmos/crew_motion/zig_quartz_neutral.webp",
       "asset_status": "approved_derivative",
       "usable_with_characters": "profile"
     },
@@ -186,7 +186,7 @@
       "name_ru": "Космический гонщик",
       "slot": "avatar",
       "rarity": "epic",
-      "asset_path": "assets/kvesmos/reyvo.png",
+      "asset_path": "assets/kvesmos/crew_motion/reyvo_neutral.webp",
       "asset_status": "approved_derivative",
       "usable_with_characters": "profile"
     },
@@ -195,7 +195,7 @@
       "name_ru": "Хранитель туманностей",
       "slot": "avatar",
       "rarity": "legendary",
-      "asset_path": "assets/kvesmos/nox.png",
+      "asset_path": "assets/kvesmos/crew_motion/nox_neutral.webp",
       "asset_status": "approved_derivative",
       "usable_with_characters": "profile"
     },
@@ -204,8 +204,8 @@
       "name_ru": "Орбита новичка",
       "slot": "frame",
       "rarity": "common",
-      "asset_path": "assets/kvesmos/frame_common.png",
-      "asset_status": "concept_crop",
+      "asset_path": "assets/kvesmos/cosmetics/beginner-orbit.webp",
+      "asset_status": "generated_derivative_review_pending",
       "usable_with_characters": "profile"
     },
     {

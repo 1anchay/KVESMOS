@@ -19,7 +19,7 @@ abstract final class CharacterAnimationCatalog {
   static List<String> frames(String id, String state) {
     if (!cast.contains(id)) return [neutral(id)];
     if (state == 'idle') {
-      return [id == 'pixie' ? neutral(id) : artwork(id, 'neutral')];
+      return [id == 'pixie' ? neutral(id) : artwork(id, 'bridge')];
     }
     if (id == 'pixie') {
       return switch (state) {

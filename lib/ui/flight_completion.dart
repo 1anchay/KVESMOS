@@ -11,7 +11,6 @@ import '../domain/learning_unit.dart';
 import '../data/conversation_repository.dart';
 import 'mastery_stamp.dart';
 import 'journey_planet.dart';
-import 'adventure_map.dart';
 import 'character_moment.dart';
 import 'flight_components.dart';
 import 'today_page.dart';
@@ -25,7 +24,9 @@ class FlightCompletion extends StatelessWidget {
   final bool celebrate;
   final int newChests, bestCombo;
   final List<String> achievements;
+  final bool chapter;
   const FlightCompletion({
+    this.chapter = false,
     super.key,
     required this.app,
     required this.lesson,
@@ -83,9 +84,9 @@ class FlightCompletion extends StatelessWidget {
               ],
               FilledButton.icon(
                 key: const Key('completion-next'),
-                onPressed: () => context.go(next.route),
+                onPressed: () => context.go(chapter ? '/beacon' : next.route),
                 icon: Icon(next.icon),
-                label: Text(next.label),
+                label: Text(chapter ? 'Вернуться к маяку' : next.label),
               ),
             ],
           ),
@@ -256,12 +257,7 @@ class FlightCompletion extends StatelessWidget {
                     SizedBox(
                       width: 92,
                       height: 92,
-                      child: CustomPaint(
-                        painter: JourneyPlanetPainter(
-                          region.index,
-                          regionColors[region.index % regionColors.length],
-                        ),
-                      ),
+                      child: JourneyPlanet(region.index),
                     ),
                     Text(
                       '${region.title}: исследовано!',

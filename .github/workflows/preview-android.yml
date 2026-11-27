@@ -20,6 +20,7 @@ on:
       - feature/kvesmos-v1.4-quality-polish
       - feature/kvesmos-v1.4.1-core-learning-fixes
       - feature/kvesmos-v1.4.2-character-polish
+      - codex/kvesmos-v15-galactic-adventure
   workflow_dispatch:
 
 jobs:

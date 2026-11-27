@@ -78,7 +78,53 @@ class OptionalAdventuresPage extends StatelessWidget {
   Widget build(BuildContext context) => pageBody([
     Text('Приключения', style: Theme.of(context).textTheme.headlineLarge),
     const Text(
-      'Три необязательные истории. Обычные уроки доступны независимо от игр. Можно вернуться к сохранённой сцене в любой момент.',
+      'Игровые миссии и короткие истории. Мир меняется от твоих действий, а английский помогает выполнить задачу.',
+    ),
+    const SizedBox(height: 12),
+    Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        image: const DecorationImage(
+          image: AssetImage('assets/kvesmos/scenes/observatory.webp'),
+          fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(Color(0xaa07131e), BlendMode.srcOver),
+        ),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: const Color(0xff78d8ce)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'MISSION 01 · GAMEPLAY PROTOTYPE',
+            style: TextStyle(
+              color: Color(0xff78d8ce),
+              fontSize: 11,
+              letterSpacing: 1.4,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const Text(
+            'Lost Signal',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 27,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const Text(
+            'Исследуй Station Echo, найди предметы и восстанови питание. 5–10 минут · работает офлайн.',
+            style: TextStyle(color: Colors.white),
+          ),
+          const SizedBox(height: 12),
+          FilledButton.icon(
+            key: const Key('mission-lost-signal'),
+            onPressed: () => context.go('/mission/lost-signal'),
+            icon: const Icon(Icons.satellite_alt_rounded),
+            label: const Text('Start mission'),
+          ),
+        ],
+      ),
     ),
     const SizedBox(height: 12),
     const AdventureVisibilitySetting(),

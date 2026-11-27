@@ -11,6 +11,7 @@ import '../domain/progress.dart';
 import '../domain/rewards.dart';
 import '../domain/space_adventures.dart';
 import 'database.dart';
+import 'beacon_repository.dart';
 import 'conversation_repository.dart';
 import 'listening_repository.dart';
 import 'repository.dart';
@@ -79,6 +80,7 @@ class ProgressTransfer {
     _inventory,
   };
   static const _prefixes = [
+    BeaconState.prefix,
     _material,
     _retired,
     'kvesmos.session.rehearsal.v1:',
@@ -441,6 +443,18 @@ class ProgressTransfer {
     }
     if (key.startsWith('kvesmos.alive.seen.v1:')) {
       _require(value == 'true');
+      return;
+    }
+    if (key.startsWith(BeaconState.prefix)) {
+      final state = BeaconState.decode(value);
+      _require(
+        parts.length == 2 &&
+            _courses.contains(suffix) &&
+            catalog.containsKey(state.target) &&
+            StudyCourse.forContent(state.target).id == suffix &&
+            (state.session == null ||
+                sessions[state.session]?.lessonId == state.target),
+      );
       return;
     }
     switch (parts.first) {
@@ -848,6 +862,18 @@ class ProgressTransfer {
           suffix != null && file.sessions.containsKey(suffix);
       if (e.key.startsWith(_retired) && e.value == 'true') {
         if (old != 'true') await learning.setSetting(e.key, e.value);
+      } else if (e.key.startsWith(BeaconState.prefix) && old != null) {
+        final current = BeaconState.decode(old);
+        final incoming = BeaconState.decode(e.value);
+        final advancesChapter = incoming.stage > current.stage;
+        final restoresMissingBinding =
+            incoming.stage == current.stage &&
+            incoming.target == current.target &&
+            current.session == null &&
+            incoming.session != null;
+        if (advancesChapter || restoresMissingBinding) {
+          await learning.setSetting(e.key, e.value);
+        }
       } else if (e.key.startsWith('kvesmos.adventure.v1:') && old != null) {
         final current = AdventureState.decode(old);
         final incoming = AdventureState.decode(e.value);

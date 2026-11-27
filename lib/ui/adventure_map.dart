@@ -8,6 +8,7 @@ import 'lesson_preview.dart';
 import 'design.dart';
 import 'flight_components.dart';
 import 'journey_planet.dart';
+import 'star_chart.dart';
 import '../domain/space_adventures.dart';
 import 'space_adventure_node.dart';
 
@@ -77,18 +78,10 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                 showCheckmark: false,
                 tooltip: r.title,
                 label: Text('${r.index + 1}'),
-                avatar: Icon(
-                  r.complete(app.progress.completed, catalog)
-                      ? Icons.check
-                      : r.index >
-                            JourneyRegion.forOrder(
-                              current?.order ?? catalog.last.order,
-                              language: app.course.language,
-                              catalog: app.repository.catalog,
-                            ).index
-                      ? Icons.lock_outline
-                      : Icons.public,
-                  size: 18,
+                avatar: SizedBox(
+                  width: 36,
+                  height: 36,
+                  child: JourneyPlanet(r.index),
                 ),
                 onSelected: (_) => setState(() => selected = r.index),
               ),
@@ -139,14 +132,25 @@ class _AdventureMapState extends ConsumerState<AdventureMap> {
                   child: SizedBox(
                     width: 66,
                     height: 66,
-                    child: CustomPaint(
-                      painter: JourneyPlanetPainter(region.index, color),
-                    ),
+                    child: JourneyPlanet(region.index),
                   ),
                 ),
               ],
             ],
           ),
+        ),
+        TextButton.icon(
+          icon: const Icon(Icons.public),
+          label: const Text('Звёздная карта'),
+          onPressed: () async {
+            final target = await Navigator.of(context).push<int>(
+              MaterialPageRoute(
+                builder: (_) =>
+                    StarChart(regions: regions, start: region.index),
+              ),
+            );
+            if (mounted && target != null) setState(() => selected = target);
+          },
         ),
         for (final lesson in lessons) ...[
           SizedBox(

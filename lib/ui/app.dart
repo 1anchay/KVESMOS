@@ -1,5 +1,6 @@
 import 'device_learning_check.dart';
 import 'unit_mastery.dart';
+import 'animation_gallery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -20,10 +21,12 @@ import 'unit_guide.dart';
 import 'practice_hub.dart';
 import 'placement_page.dart';
 import 'picture_recall.dart';
+import 'beacon_chapter.dart';
 import 'conversation_page.dart';
 import 'progress_transfer_page.dart';
 import 'listening_page.dart';
 import 'smart_practice_page.dart';
+import 'lost_signal_mission.dart';
 import '../data/practice_repository.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
@@ -123,6 +126,10 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           ),
         ),
         GoRoute(
+          path: '/mission/lost-signal',
+          builder: (_, _) => const LostSignalMissionPage(),
+        ),
+        GoRoute(
           path: '/welcome',
           builder: (_, _) => const OnboardingPage(step: 0),
         ),
@@ -135,11 +142,13 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           path: '/goal',
           builder: (_, _) => const OnboardingPage(step: 3),
         ),
+        GoRoute(path: '/beacon', builder: (_, _) => const BeaconChapter()),
         GoRoute(
           path: '/lesson/:id',
           builder: (_, state) => LessonScreen(
             key: ValueKey(state.uri.toString()),
             lessonId: state.pathParameters['id']!,
+            chapter: state.uri.queryParameters['chapter'] == 'beacon',
             demo: state.uri.queryParameters['demo'] == '1',
           ),
         ),
@@ -171,6 +180,10 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
               builder: (_, _) => const InventoryPage(),
             ),
             GoRoute(path: '/crew', builder: (_, _) => const CrewPage()),
+            GoRoute(
+              path: '/animation-gallery',
+              builder: (_, _) => const AnimationGallery(),
+            ),
             GoRoute(path: '/', builder: (_, _) => const HomePage()),
             GoRoute(path: '/units', builder: (_, _) => const UnitGuidePage()),
             GoRoute(path: '/map', builder: (_, _) => const UnitGuidePage()),

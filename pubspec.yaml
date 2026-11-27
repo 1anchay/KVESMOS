@@ -52,6 +52,8 @@ flutter:
     - assets/courses/
     - assets/kvesmos/
     - assets/kvesmos/crew_motion/
+    - assets/kvesmos/scenes/
+    - assets/kvesmos/cosmetics/
     - assets/audio/effects/
     - assets/audio/voices/
     - assets/audio/voices/clips/

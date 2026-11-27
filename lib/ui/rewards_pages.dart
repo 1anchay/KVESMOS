@@ -1,4 +1,5 @@
 import 'character_moment.dart';
+import 'package:flutter/foundation.dart';
 export 'profile_look.dart';
 export 'chest_scene.dart';
 export 'wardrobe.dart';
@@ -108,6 +109,11 @@ class CrewPage extends ConsumerWidget {
         'Команда KVESMOS',
         subtitle: 'У каждого своя история. Вместе открываем галактику знаний.',
       ),
+      if (kDebugMode)
+        TextButton(
+          onPressed: () => context.go('/animation-gallery'),
+          child: const Text('Animation Gallery · QA'),
+        ),
       for (final c in ref.watch(appProvider).rewards.catalog.characters)
         Padding(
           padding: const EdgeInsets.only(bottom: 14),

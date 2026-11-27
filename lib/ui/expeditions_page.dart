@@ -6,7 +6,6 @@ import '../domain/journey.dart';
 import 'design.dart';
 import 'flight_components.dart';
 import 'journey_planet.dart';
-import 'adventure_map.dart';
 
 class ExpeditionsPage extends ConsumerStatefulWidget {
   const ExpeditionsPage({super.key});
@@ -71,12 +70,7 @@ class _ExpeditionsPageState extends ConsumerState<ExpeditionsPage> {
                 SizedBox(
                   width: 56,
                   height: 56,
-                  child: CustomPaint(
-                    painter: JourneyPlanetPainter(
-                      region.index,
-                      regionColors[region.index % regionColors.length],
-                    ),
-                  ),
+                  child: JourneyPlanet(region.index),
                 ),
               if (MediaQuery.textScalerOf(context).scale(14) <= 20)
                 const SizedBox(width: 12),

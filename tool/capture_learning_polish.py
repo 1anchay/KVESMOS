@@ -37,7 +37,8 @@ try:
                                             '--time-limit', '180', '/sdcard/kvesmos11.mp4'])
         elif message.startswith('VIDEO_DONE:') and video is not None:
             language = message.split(':', 1)[1]
-            assert language in {'en', 'zh'}
+            assert language in {'en', 'zh', 'orbi', 'miko', 'zig_quartz', 'pixie',
+                                'aster', 'reyvo', 'vespa', 'nox', 'fox_scholar'}
             pid = subprocess.run(adb + ['shell', 'pidof', 'screenrecord'], capture_output=True).stdout.decode().strip()
             if pid.isdigit():
                 device('shell', 'kill', '-2', pid)

@@ -13010,6 +13010,94 @@
       "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
       "asset": "assets/audio/voices/clips/mission-d28c9e391457e48ccf8a.m4a",
       "slowAsset": "assets/audio/voices/clips/mission-d28c9e391457e48ccf8a-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Door",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-f966067e238d3f382b55.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-f966067e238d3f382b55-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Key",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-a420b2ea6d5a5018a29f.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-a420b2ea6d5a5018a29f-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Battery",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-f91612379b84b3a7e263.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-f91612379b84b3a7e263-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Cable",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-8ecdcaedae2329b9e477.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-8ecdcaedae2329b9e477-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Light",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-163df67f6167df7f3b46.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-163df67f6167df7f3b46-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Button",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-77b4f1442f3fe48f6fe3.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-77b4f1442f3fe48f6fe3-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "I need a battery.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-132b8fdb8083695543e6.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-132b8fdb8083695543e6-slow.m4a"
+    },
+    {
+      "character": "orbi",
+      "locale": "en-US",
+      "text": "Press the button.",
+      "source": "synthetic",
+      "performer": "Kokoro v1.0 / am_puck",
+      "redistributionApproved": true,
+      "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
+      "asset": "assets/audio/voices/clips/mission-4593caa66eabe0043fe0.m4a",
+      "slowAsset": "assets/audio/voices/clips/mission-4593caa66eabe0043fe0-slow.m4a"
     }
   ]
 }

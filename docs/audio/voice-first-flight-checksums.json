@@ -1,0 +1,118 @@
+{
+  "engine": "0.6.1",
+  "voice": "am_puck",
+  "files": [
+    {
+      "asset": "assets/audio/voices/clips/mission-f966067e238d3f382b55.m4a",
+      "sha256": "0256f165d3a3d99a7cd8546933a87b85d22ad662cb15f0ebe3ed1a5f2f6ca838",
+      "bytes": 7309,
+      "text": "Door",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-f966067e238d3f382b55-slow.m4a",
+      "sha256": "f76e1561f04485fa5f9299ed5c22cca16ecb6b83560f6399584961f150350515",
+      "bytes": 9028,
+      "text": "Door",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-a420b2ea6d5a5018a29f.m4a",
+      "sha256": "6f85d2f3a0bdefd178da09f5c9e8a7455d3e490d27b86e9fb6939dccf05cfede",
+      "bytes": 6638,
+      "text": "Key",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-a420b2ea6d5a5018a29f-slow.m4a",
+      "sha256": "679ef5fa548b55d56cffbbaf272e255921ef1f0ab80857202800ae7aea82da57",
+      "bytes": 8406,
+      "text": "Key",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-f91612379b84b3a7e263.m4a",
+      "sha256": "7da7a3ab08629165d752fcbbe99c889790a3a0af8d47860cc3f44af313d3c35a",
+      "bytes": 9331,
+      "text": "Battery",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-f91612379b84b3a7e263-slow.m4a",
+      "sha256": "88ed6428f19459ce1bcf924196965e045fece71b7564751573229a95a59f76d9",
+      "bytes": 12087,
+      "text": "Battery",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-8ecdcaedae2329b9e477.m4a",
+      "sha256": "670808ff4ba791642dca888e1daa3f5a95b90474cf24edc5d47cbdcb199a8a11",
+      "bytes": 8639,
+      "text": "Cable",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-8ecdcaedae2329b9e477-slow.m4a",
+      "sha256": "539f246596e8cfd23d85c9a30971209b49d0ddce205c97c30ed3aaa2c03c0c92",
+      "bytes": 11725,
+      "text": "Cable",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-163df67f6167df7f3b46.m4a",
+      "sha256": "e620513cd748ac89d856b7052bc77e17773e00cafb404daeff9dce65abd15874",
+      "bytes": 7525,
+      "text": "Light",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-163df67f6167df7f3b46-slow.m4a",
+      "sha256": "38e7cf67cd46a51947a19b46ee5bf537e162fdddea9f1375f596a928e50a81ff",
+      "bytes": 9724,
+      "text": "Light",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-77b4f1442f3fe48f6fe3.m4a",
+      "sha256": "15d2b2bfdcfee5c5bc398c04535e8fcd9e742f90001f4b28beef0e6587d3bab5",
+      "bytes": 7931,
+      "text": "Button",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-77b4f1442f3fe48f6fe3-slow.m4a",
+      "sha256": "dd4a71370771d90fe24f0a34536171cddf64e25487cf91368244371bc302156b",
+      "bytes": 10738,
+      "text": "Button",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-132b8fdb8083695543e6.m4a",
+      "sha256": "3261ff51f109b84459d25a20678e212972f565a2adc14cd1e3f8748d726b4bc0",
+      "bytes": 13502,
+      "text": "I need a battery.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-132b8fdb8083695543e6-slow.m4a",
+      "sha256": "57aaa8c80bead71d16162bcf2e769c721bdfb301b3147915f8871c64d40fe477",
+      "bytes": 17290,
+      "text": "I need a battery.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-4593caa66eabe0043fe0.m4a",
+      "sha256": "2b2c985d91482e0cf9b98405814c2d1eb785fba14bc49c8caeea59d86b3bde75",
+      "bytes": 12430,
+      "text": "Press the button.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-4593caa66eabe0043fe0-slow.m4a",
+      "sha256": "04f6dfd2f98640c1a39bc0ad92ab327f80ca1821ff20fe542427d3b5dd6ae6a6",
+      "bytes": 16743,
+      "text": "Press the button.",
+      "humanReviewed": false
+    }
+  ]
+}

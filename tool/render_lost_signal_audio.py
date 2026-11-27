@@ -1,4 +1,4 @@
-"""Render the small offline English voice pack for Mission 01.
+"""Render offline English narration for Lost Signal or First Flight.
 
 Uses the existing rights-cleared Kokoro authoring model. The model and engine
 remain authoring dependencies and are not bundled in the application.
@@ -16,7 +16,7 @@ import soundfile as sf
 from kokoro_onnx import Kokoro
 
 ROOT = Path(__file__).resolve().parents[1]
-TEXTS = [
+LOST_SIGNAL = [
     "We lost contact with Station Echo. Let’s go.",
     "Find the blue door.",
     "Find the red key and the battery.",
@@ -25,11 +25,20 @@ TEXTS = [
     "Press the green button.",
     "Power is back. Signal restored!",
 ]
+FIRST_FLIGHT = [
+    "Door", "Key", "Battery", "Cable", "Light", "Button",
+    "I need a battery.", "Press the button.",
+]
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--model-dir", type=Path, required=True)
 parser.add_argument("--rebuild", action="store_true")
+parser.add_argument("--episode", choices=("lost-signal", "first-flight"), default="lost-signal")
 args = parser.parse_args()
+first_flight = args.episode == "first-flight"
+character = "orbi" if first_flight else "miko"
+voice = "am_puck" if first_flight else "am_michael"
+texts = FIRST_FLIGHT if first_flight else LOST_SIGNAL
 
 engine = Kokoro(
     str(args.model_dir / "kokoro-v1.0.onnx"),
@@ -39,14 +48,14 @@ manifest_path = ROOT / "assets/audio/voices/manifest.json"
 manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 entries = manifest["recordings"]
 checks = []
-for text in TEXTS:
-    ident = hashlib.sha256(("lost-signal|miko|en-US|" + text).encode()).hexdigest()[:20]
+for text in texts:
+    ident = hashlib.sha256(f"{args.episode}|{character}|en-US|{text}".encode()).hexdigest()[:20]
     entry = {
-        "character": "miko",
+        "character": character,
         "locale": "en-US",
         "text": text,
         "source": "synthetic",
-        "performer": "Kokoro v1.0 / am_michael",
+        "performer": f"Kokoro v1.0 / {voice}",
         "redistributionApproved": True,
         "licenseAsset": "assets/audio/voices/licenses/KOKORO-NOTICE.txt",
     }
@@ -56,7 +65,7 @@ for text in TEXTS:
         if args.rebuild or not path.exists():
             samples, rate = engine.create(
                 text,
-                voice="am_michael",
+                voice=voice,
                 speed=.72 if slow else .94,
                 lang="en-us",
             )
@@ -65,7 +74,7 @@ for text in TEXTS:
             peak = float(np.max(np.abs(samples)))
             if peak > .9:
                 samples *= .9 / peak
-            wav = args.model_dir / "lost-signal-current.wav"
+            wav = args.model_dir / f"{args.episode}-current.wav"
             sf.write(wav, samples, rate, subtype="PCM_16")
             subprocess.run(
                 [
@@ -104,7 +113,7 @@ for text in TEXTS:
         value
         for value in entries
         if not (
-            value["character"] == "miko"
+            value["character"] == character
             and value["locale"] == "en-US"
             and value["text"] == text
         )
@@ -116,11 +125,11 @@ manifest_path.write_text(
     json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
     encoding="utf-8",
 )
-(ROOT / "docs/audio/voice-lost-signal-checksums.json").write_text(
+(ROOT / f"docs/audio/voice-{args.episode}-checksums.json").write_text(
     json.dumps(
         {
             "engine": importlib.metadata.version("kokoro-onnx"),
-            "voice": "am_michael",
+            "voice": voice,
             "files": checks,
         },
         ensure_ascii=False,

@@ -79,6 +79,14 @@ void main() {
     );
     await tester.pumpAndSettle();
     await tester.runAsync(() => capturePreview(boundary, 'kvesmos-040-audio'));
+    await tester.tap(find.text('Музыка'));
+    await flushDb(tester);
+    expect(app.audio.preferences.music, false);
+    await tester.scrollUntilVisible(find.text('Звуки окружения'), 150);
+    await tester.tap(find.text('Звуки окружения'));
+    await flushDb(tester);
+    expect(app.audio.preferences.ambience, false);
+    await tester.scrollUntilVisible(find.text('Озвучка'), 150);
     await tester.tap(find.text('Озвучка'));
     await flushDb(tester);
     expect(app.audio.preferences.speech, false);
@@ -98,6 +106,8 @@ void main() {
     expect(AudioPreferences.decode(raw).speech, false);
     expect(AudioPreferences.decode(raw).effects, false);
     expect(AudioPreferences.decode(raw).reactions, false);
+    expect(AudioPreferences.decode(raw).music, false);
+    expect(AudioPreferences.decode(raw).ambience, false);
     await tester.scrollUntilVisible(
       find.text('Проверить голоса устройства'),
       200,
@@ -114,6 +124,54 @@ void main() {
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
     expect(app.progress.xp, 0);
+    await tester.pumpWidget(const SizedBox.shrink());
+    await tester.runAsync(r.db.close);
+  });
+  testWidgets('dark audio settings preserve levels when muted and reset them', (
+    tester,
+  ) async {
+    final r = memoryRepository();
+    final app = AppController(r);
+    await tester.runAsync(() async {
+      await app.initialize();
+      await app.saveAudio(
+        const AudioPreferences(musicVolume: .65, ambience: false),
+      );
+    });
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [appProvider.overrideWith((_) => app)],
+        child: MaterialApp(
+          theme: orbitTheme(Brightness.dark),
+          home: Scaffold(body: ListView(children: const [AudioSettings()])),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    final mute = find.text('Без звука');
+    expect(Theme.of(tester.element(mute)).brightness, Brightness.dark);
+    await tester.tap(mute);
+    await flushDb(tester);
+    expect(app.audio.preferences.muted, true);
+    expect(app.audio.preferences.musicVolume, .65);
+    expect(app.audio.preferences.ambience, false);
+    final reset = find.widgetWithText(TextButton, 'Сбросить настройки звука');
+    await tester.scrollUntilVisible(reset, 180);
+    await tester.ensureVisible(reset);
+    await tester.pumpAndSettle();
+    expect(reset.hitTestable(), findsOneWidget);
+    for (
+      var i = 0;
+      i < 4 && tester.widget<TextButton>(reset).onPressed == null;
+      i++
+    ) {
+      await flushDb(tester);
+    }
+    expect(tester.widget<TextButton>(reset).onPressed, isNotNull);
+    // Put the gesture in the real async zone used by the SQLite worker.
+    await tester.runAsync(() => tester.tap(reset));
+    await flushDb(tester);
+    expect(app.audio.preferences.encode(), const AudioPreferences().encode());
     await tester.pumpWidget(const SizedBox.shrink());
     await tester.runAsync(r.db.close);
   });

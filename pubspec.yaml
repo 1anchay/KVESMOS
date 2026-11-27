@@ -53,8 +53,10 @@ flutter:
     - assets/kvesmos/
     - assets/kvesmos/crew_motion/
     - assets/kvesmos/scenes/
+    - assets/kvesmos/fishing/
     - assets/kvesmos/cosmetics/
     - assets/audio/effects/
+    - assets/audio/game/
     - assets/audio/voices/
     - assets/audio/voices/clips/
     - assets/audio/voices/licenses/

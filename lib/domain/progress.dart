@@ -56,6 +56,25 @@ class WordProgress {
   }
 }
 
+/// One verdict per UTC day for both lesson reviews and in-world evidence.
+class ReviewHistory {
+  final _days = <String, (bool, DateTime)>{};
+
+  void add(bool passed, DateTime time) {
+    final at = time.toUtc();
+    final key = dayKey(at);
+    final previous = _days[key];
+    _days[key] = ((previous?.$1 ?? true) && passed, at);
+  }
+
+  void apply(WordProgress progress) {
+    for (final key in _days.keys.toList()..sort()) {
+      final grade = _days[key]!;
+      progress.schedule(grade.$1, grade.$2);
+    }
+  }
+}
+
 class ProgressSnapshot {
   int xp = 0, correct = 0, errors = 0;
   final Set<String> completed = {};
@@ -94,7 +113,7 @@ class ProgressSnapshot {
       });
     final credited = <String>{};
     final completedRuns = <String>{};
-    final wordDays = <String, Map<String, (bool, DateTime)>>{};
+    final wordDays = <String, ReviewHistory>{};
     for (final event in unique) {
       final d = event.data;
       var gained = 0;
@@ -118,10 +137,7 @@ class ProgressSnapshot {
           } else {
             state.errors++;
           }
-          final days = wordDays.putIfAbsent(word, () => {});
-          final key = dayKey(at);
-          final previous = days[key];
-          days[key] = ((previous?.$1 ?? true) && passed, at);
+          wordDays.putIfAbsent(word, ReviewHistory.new).add(passed, at);
         }
       } else if (event.kind == 'complete' &&
           d['rehearsal'] != true &&
@@ -140,11 +156,7 @@ class ProgressSnapshot {
       }
     }
     for (final entry in wordDays.entries) {
-      final sorted = entry.value.keys.toList()..sort();
-      for (final key in sorted) {
-        final grade = entry.value[key]!;
-        result.words[entry.key]!.schedule(grade.$1, grade.$2);
-      }
+      entry.value.apply(result.words[entry.key]!);
     }
     return result;
   }

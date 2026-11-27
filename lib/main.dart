@@ -38,7 +38,7 @@ Future<void> main() async {
     runApp(
       ProviderScope(
         overrides: [appProvider.overrideWith((ref) => app)],
-        child: const OrbitApp(),
+        child: const OrbitApp(gameplayReboot: true),
       ),
     );
   } catch (_) {

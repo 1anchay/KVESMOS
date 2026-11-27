@@ -1,0 +1,51 @@
+{
+  "engine": "0.6.1",
+  "voice": [
+    "af_heart",
+    "am_michael"
+  ],
+  "files": [
+    {
+      "asset": "assets/audio/voices/clips/mission-3fbc2a2bd7afee82565b.m4a",
+      "sha256": "eab25ecbb5a18f6d0c7a221393a7416e5eaeebbacf42597f1f28531ce41e74a2",
+      "bytes": 17398,
+      "text": "I have a battery.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-3fbc2a2bd7afee82565b-slow.m4a",
+      "sha256": "5db51cba59593bbceae74218c794842cb742b80a62f860e910f2ae6e8cc6b6fb",
+      "bytes": 21435,
+      "text": "I have a battery.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-cbbecfb481add24afe0a.m4a",
+      "sha256": "b07a062191b510015b37769369821295b8a511eb5dbdfce8b94e266e46be99e5",
+      "bytes": 12635,
+      "text": "It is ready.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-cbbecfb481add24afe0a-slow.m4a",
+      "sha256": "2c946e5e3e6a89d803b51cdb85b355f0014d4154e519334ad0932027a1442048",
+      "bytes": 16940,
+      "text": "It is ready.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-93ab886afa9d0f63da78.m4a",
+      "sha256": "7ca9a2c2b7f53e9f39dc9a84a21d68c4fb885627ac3bef95fa3e86b528edf8b7",
+      "bytes": 14409,
+      "text": "I need a battery.",
+      "humanReviewed": false
+    },
+    {
+      "asset": "assets/audio/voices/clips/mission-93ab886afa9d0f63da78-slow.m4a",
+      "sha256": "be83416e9e1df393a1581b34bb887657912937796a951fa6e6143c5798bb7cc1",
+      "bytes": 19081,
+      "text": "I need a battery.",
+      "humanReviewed": false
+    }
+  ]
+}

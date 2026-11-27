@@ -579,6 +579,9 @@ class LearningRepository {
   Future<List<LearningEvent>> pending() async =>
       (await (db.select(db.events)..where((t) => t.synced.equals(false))).get())
           .map((e) => LearningEvent.fromJson(jsonDecode(e.payload)))
+          // Knowledge observations travel in local backups. The deployed
+          // cloud schema accepts only course answers and completions.
+          .where((e) => e.kind != 'knowledge')
           .toList();
   Future<void> acknowledge(List<String> ids) async {
     if (ids.isEmpty) {

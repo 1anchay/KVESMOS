@@ -384,7 +384,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state != AppLifecycleState.resumed) unawaited(audio.stop());
+    unawaited(audio.setForeground(state == AppLifecycleState.resumed));
     if (state == AppLifecycleState.resumed) {
       audio.voices.scanned = false;
       unawaited(refresh());
@@ -396,6 +396,7 @@ class AppController extends ChangeNotifier with WidgetsBindingObserver {
   @override
   void dispose() {
     _disposed = true;
+    unawaited(audio.setScene(AudioScene.silent));
     unawaited(audio.stop());
     _retry?.cancel();
     _calendarTimer?.cancel();

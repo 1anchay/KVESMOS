@@ -133,7 +133,7 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('the character moment changes Orbi artwork without loops', (
+  testWidgets('the lesson reaction plays the Orbi rig and returns to hover', (
     tester,
   ) async {
     bool? correct;
@@ -149,9 +149,20 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('orbi-hover')), findsOneWidget);
     update(() => correct = true);
+    await tester.pump();
+    final reaction = find.byKey(const ValueKey('orbi-correct'));
+    expect(reaction, findsOneWidget);
+    expect(
+      (tester.widget<Image>(reaction).image as AssetImage).assetName,
+      'assets/kvesmos/crew_motion/orbi_visor_correct.webp',
+    );
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(reaction, findsOneWidget);
     await tester.pumpAndSettle();
-    expect(find.byIcon(Icons.auto_awesome_rounded), findsOneWidget);
+    expect(reaction, findsNothing);
+    expect(find.byKey(const ValueKey('orbi-hover')), findsOneWidget);
     expect(tester.binding.hasScheduledFrame, false);
     expect(tester.takeException(), isNull);
   });

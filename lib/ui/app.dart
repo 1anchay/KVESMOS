@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'device_learning_check.dart';
 import 'unit_mastery.dart';
 import 'animation_gallery.dart';
@@ -27,10 +29,14 @@ import 'progress_transfer_page.dart';
 import 'listening_page.dart';
 import 'smart_practice_page.dart';
 import 'lost_signal_mission.dart';
+import 'first_flight_page.dart';
+import 'fishing_page.dart';
 import '../data/practice_repository.dart';
+import '../services/learning_audio.dart';
 
 class OrbitApp extends ConsumerStatefulWidget {
-  const OrbitApp({super.key});
+  const OrbitApp({super.key, this.gameplayReboot = false});
+  final bool gameplayReboot;
   @override
   ConsumerState<OrbitApp> createState() => _OrbitAppState();
 }
@@ -39,6 +45,30 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
   late final GoRouter router;
   late final AppController controller;
   bool handlingLaunch = false;
+  void syncSoundscape() {
+    final route = router.routerDelegate.currentConfiguration.lastOrNull?.route;
+    final path = route is GoRoute ? route.path : null;
+    if (path == '/settings' ||
+        path == '/device-learning-check' ||
+        path == '/chest/:id') {
+      return;
+    }
+    unawaited(
+      controller.audio.setScene(switch (path) {
+        '/' => AudioScene.menu,
+        '/first-flight' || '/nereya' => AudioScene.ship,
+        '/fishing' => AudioScene.water,
+        '/adventures' ||
+        '/adventure/:id' ||
+        '/mission/lost-signal' ||
+        '/expeditions' ||
+        '/galaxy' ||
+        '/beacon' => AudioScene.exploration,
+        _ => AudioScene.silent,
+      }),
+    );
+  }
+
   Future<void> openCompanion() async {
     if (!mounted) return;
     final app = controller;
@@ -69,8 +99,34 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
                     state.uri.path.startsWith('/adventure/'))
           ? '/map'
           : null,
-      initialLocation: app.onboarded ? '/' : app.onboardingRoute,
+      initialLocation: widget.gameplayReboot || app.onboarded
+          ? '/'
+          : app.onboardingRoute,
       routes: [
+        if (widget.gameplayReboot)
+          GoRoute(path: '/', builder: (_, _) => const RebootHome()),
+        GoRoute(
+          path: '/first-flight',
+          builder: (_, _) => const FirstFlightPage(),
+        ),
+        GoRoute(
+          path: '/nereya',
+          redirect: (_, _) => app.course.id == 'ru-en' ? null : '/first-flight',
+          builder: (_, _) => const FishingDeparturePage(),
+        ),
+        GoRoute(
+          path: '/fishing',
+          redirect: (_, _) => app.course.id == 'ru-en' ? null : '/first-flight',
+          pageBuilder: (context, state) => CustomTransitionPage<void>(
+            key: state.pageKey,
+            transitionDuration: MediaQuery.disableAnimationsOf(context)
+                ? Duration.zero
+                : const Duration(milliseconds: 640),
+            child: const FishingPage(),
+            transitionsBuilder: (_, animation, _, child) =>
+                FadeTransition(opacity: animation, child: child),
+          ),
+        ),
         GoRoute(
           path: '/smart-practice',
           builder: (_, _) => SmartPracticePage(key: ValueKey(app.course.id)),
@@ -167,8 +223,11 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
           },
         ),
         ShellRoute(
-          builder: (context, state, child) =>
-              OrbitShell(location: state.uri.path, child: child),
+          builder: (context, state, child) => OrbitShell(
+            location: state.uri.path,
+            studyHome: widget.gameplayReboot ? '/study' : '/',
+            child: child,
+          ),
           routes: [
             GoRoute(
               path: '/adventures',
@@ -184,7 +243,10 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
               path: '/animation-gallery',
               builder: (_, _) => const AnimationGallery(),
             ),
-            GoRoute(path: '/', builder: (_, _) => const HomePage()),
+            GoRoute(
+              path: widget.gameplayReboot ? '/study' : '/',
+              builder: (_, _) => const HomePage(),
+            ),
             GoRoute(path: '/units', builder: (_, _) => const UnitGuidePage()),
             GoRoute(path: '/map', builder: (_, _) => const UnitGuidePage()),
             GoRoute(
@@ -262,13 +324,24 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
     );
     app.companion.launchCourse.addListener(openCompanion);
     app.addListener(openCompanion);
-    WidgetsBinding.instance.addPostFrameCallback((_) => openCompanion());
+    if (widget.gameplayReboot) {
+      router.routerDelegate.addListener(syncSoundscape);
+    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      if (widget.gameplayReboot) syncSoundscape();
+      unawaited(openCompanion());
+    });
   }
 
   @override
   void dispose() {
     controller.companion.launchCourse.removeListener(openCompanion);
     controller.removeListener(openCompanion);
+    if (widget.gameplayReboot) {
+      router.routerDelegate.removeListener(syncSoundscape);
+      unawaited(controller.audio.setScene(AudioScene.silent));
+    }
     router.dispose();
     super.dispose();
   }
@@ -289,11 +362,17 @@ class _OrbitAppState extends ConsumerState<OrbitApp> {
 
 class OrbitShell extends StatelessWidget {
   final String location;
+  final String studyHome;
   final Widget child;
-  const OrbitShell({super.key, required this.location, required this.child});
+  const OrbitShell({
+    super.key,
+    required this.location,
+    this.studyHome = '/',
+    required this.child,
+  });
   @override
   Widget build(BuildContext context) {
-    final index = ['/', '/map', '/units', '/galaxy'].contains(location)
+    final index = [studyHome, '/map', '/units', '/galaxy'].contains(location)
         ? 0
         : ['/words', '/review', '/practice', '/training'].contains(location) ||
               location.startsWith('/practice/')
@@ -321,6 +400,12 @@ class OrbitShell extends StatelessWidget {
           ],
         ),
         actions: [
+          if (studyHome != '/')
+            IconButton(
+              tooltip: 'К приключению',
+              onPressed: () => context.go('/'),
+              icon: const Icon(Icons.rocket_launch_outlined),
+            ),
           const CourseSwitch(),
           IconButton(
             tooltip: 'Офлайн-уроки',
@@ -346,8 +431,9 @@ class OrbitShell extends StatelessWidget {
       bottomNavigationBar: NavigationBar(
         selectedIndex: index,
         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-        onDestinationSelected: (i) =>
-            context.go(['/', '/training', '/rewards', '/stats', '/profile'][i]),
+        onDestinationSelected: (i) => context.go(
+          [studyHome, '/training', '/rewards', '/stats', '/profile'][i],
+        ),
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.travel_explore),

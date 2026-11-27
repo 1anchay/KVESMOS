@@ -16,7 +16,9 @@ import android.speech.SpeechRecognizer
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodChannel
 
-internal class LearningSpeech(private val activity: Activity, messenger: BinaryMessenger) {
+internal class LearningSpeech(
+    private val activity: Activity, messenger: BinaryMessenger, private val onMic: (Boolean) -> Unit
+) {
     private val channel = MethodChannel(messenger, "dev.orbitwords/learning_device")
     private val handler = Handler(Looper.getMainLooper())
     private var recognizer: SpeechRecognizer? = null
@@ -102,6 +104,7 @@ internal class LearningSpeech(private val activity: Activity, messenger: BinaryM
         recognizer = engine
         token = id
         try {
+            onMic(true)
             engine.setRecognitionListener(object : RecognitionListener {
                 override fun onReadyForSpeech(params: Bundle?) = emit(id, "listening")
                 override fun onBeginningOfSpeech() = emit(id, "speaking")
@@ -139,11 +142,13 @@ internal class LearningSpeech(private val activity: Activity, messenger: BinaryM
     }
 
     private fun clear() {
+        val wasRecording = token != null
         token = null
         handler.removeCallbacks(deadline)
         val previous = recognizer
         recognizer = null
         previous?.destroy()
+        if (wasRecording) onMic(false)
     }
 
     fun interrupt() { token?.let { finish(it, "interrupted") } }

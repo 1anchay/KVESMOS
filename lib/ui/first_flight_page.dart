@@ -5,9 +5,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../core/controller.dart';
 import '../data/first_flight_repository.dart';
+import '../data/knowledge_repository.dart';
 import '../domain/first_flight.dart';
+import '../domain/knowledge.dart';
 import 'character_moment.dart';
 import 'first_flight_art.dart';
+import 'knowledge_widgets.dart';
 
 class RebootHome extends ConsumerStatefulWidget {
   const RebootHome({super.key});
@@ -152,11 +155,12 @@ class FirstFlightPage extends ConsumerStatefulWidget {
 class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
   late final AppController app;
   late final FirstFlightRepository repository;
+  late final LanguageContext language;
   FirstFlight? flight;
   Offset pilot = const Offset(.50, .77);
   FlightItem? selected;
   FlightWord? word;
-  bool busy = false, loadError = false, journal = false, hintOn = false;
+  bool busy = false, loadError = false, hintOn = false;
   bool running = true;
   String? message;
   CharacterState orbi = CharacterState.idle;
@@ -169,12 +173,18 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
     super.initState();
     app = ref.read(appProvider);
     repository = FirstFlightRepository(app.repository);
+    language = LanguageContext(KnowledgeRepository(app.repository), app.audio);
     unawaited(load());
   }
 
   Future<void> load() async {
     try {
       final next = await repository.read();
+      await language.repository.restoreEncounters(
+        next.learned.map((w) => KnowledgeCatalog.flight[w]!.skill),
+        'first-flight:legacy',
+      );
+      await language.refresh();
       if (mounted) {
         setState(() {
           flight = next;
@@ -189,6 +199,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
   @override
   void dispose() {
     running = false;
+    language.dispose();
     unawaited(app.audio.stop());
     super.dispose();
   }
@@ -203,13 +214,15 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
   void pronounce(FlightWord target) =>
       unawaited(app.audio.speak(target.english, locale: 'en-US'));
 
-  void brief(FlightWord next, {bool reviewing = false}) {
+  void brief(FlightWord next) {
     setState(() {
       word = next;
-      journal = reviewing;
       message = null;
     });
     pronounce(next);
+    final entry = KnowledgeCatalog.flight[next]!;
+    language.noteTranslation(entry);
+    unawaited(language.encounter(entry, 'first-flight:${flight!.room.name}'));
   }
 
   void speakToOrbi(FirstFlight f) {
@@ -279,15 +292,12 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
 
   Future<void> acknowledge(FlightWord target) async {
     if (busy) return;
-    if (journal) {
-      setState(() => word = null);
-      unawaited(app.audio.stop());
-      return;
-    }
     setState(() => busy = true);
     try {
       await action(FlightAction.teach, target);
       if (!mounted || !flight!.learned.contains(target)) return;
+      await language.refresh();
+      if (!mounted) return;
       final next = FlightWord.deck(
         flight!.room,
       ).where((item) => !flight!.learned.contains(item)).firstOrNull;
@@ -329,21 +339,21 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         f.unlocked
             ? 'Коснись открытой двери. Она ведёт в мастерскую.'
             : f.inventory.contains(FlightItem.key)
-            ? 'Коснись ключа в рюкзаке, а затем двери.'
+            ? 'Нажми значок ключа в рюкзаке. Подсветка покажет, куда его приложить. Подпись открывает перевод.'
             : 'Открой аварийный ящик и возьми ключ.',
       FlightRoom.workshop =>
         f.powered
             ? 'Коснись трапа, чтобы подняться в рубку.'
             : !f.charged || !f.wired
             ? 'Осмотри контейнер и катушку. Выбирай детали в рюкзаке и применяй к гнезду и разъёмам.'
-            : 'Поверни левую стрелку вправо, правую вверх. Затем включи питание.',
+            : 'Свечение показывает, докуда дошло питание. Поверни стрелки вдоль дорожки: левую вправо, правую вверх. Затем включи рубильник.',
       FlightRoom.bridge =>
         f.navigable
             ? 'Нажми на кнопку рядом с горящим светом.'
             : !f.reserveRequested
             ? 'Поговори с Орби и нажми «Попросить батарею».'
             : !f.lockerOpen
-            ? 'Выбери ключ в рюкзаке и открой шкафчик.'
+            ? 'В рюкзаке всё ещё тот ключ, которым ты открыл дверь. Выбери его значок и приложи к шкафчику.'
             : f.inventory.contains(FlightItem.reserve)
             ? 'Выбери маленькую батарею в рюкзаке и коснись гнезда пульта.'
             : 'Возьми маленькую батарею из открытого шкафчика.',
@@ -666,11 +676,13 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
         ),
         title: Text(f?.room.title ?? 'Первый полёт'),
         actions: [
-          if (f != null && f.learned.isNotEmpty && !f.complete)
+          if (f != null)
             IconButton(
               key: const Key('flight-journal'),
-              tooltip: 'Слова',
-              onPressed: () => showJournal(f),
+              tooltip: 'Бортовой словарь',
+              onPressed: busy
+                  ? null
+                  : () => showKnowledgeJournal(context, language),
               icon: const Icon(Icons.menu_book_outlined),
             ),
           if (f != null && !f.complete)
@@ -733,26 +745,42 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
           if (f.room == FlightRoom.bridge &&
               f.knowsRoom(f.room) &&
               !f.reserveRequested)
-            TextButton.icon(
-              key: const Key('flight-request'),
-              style: _transparent,
-              onPressed: busy
-                  ? null
-                  : () async {
-                      setState(() => busy = true);
-                      try {
-                        pronounce(FlightWord.need);
-                        await action(
-                          FlightAction.requestReserve,
-                          null,
-                          'Орби: «Запасная батарея в шкафчике. Его откроет тот же ключ, что и дверь в мастерскую».',
-                        );
-                      } finally {
-                        if (mounted) setState(() => busy = false);
-                      }
-                    },
-              icon: const Icon(Icons.chat_bubble_outline),
-              label: const Text('Попросить батарею · I need a battery.'),
+            Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              children: [
+                TextButton.icon(
+                  key: const Key('flight-request'),
+                  style: _transparent,
+                  onPressed: busy
+                      ? null
+                      : () async {
+                          setState(() => busy = true);
+                          try {
+                            pronounce(FlightWord.need);
+                            await action(
+                              FlightAction.requestReserve,
+                              null,
+                              'Орби: «Запасная батарея в шкафчике. Его откроет тот же ключ, что и дверь в мастерскую».',
+                            );
+                          } finally {
+                            if (mounted) setState(() => busy = false);
+                          }
+                        },
+                  icon: const Icon(Icons.chat_bubble_outline),
+                  label: const Text('Попросить батарею'),
+                ),
+                AdaptiveTerm(
+                  language: language,
+                  entry: KnowledgeCatalog.flight[FlightWord.need]!,
+                  style: const TextStyle(color: flightMint),
+                ),
+              ],
+            ),
+          if (f.room == FlightRoom.bridge && f.navigable)
+            AdaptiveTerm(
+              language: language,
+              entry: KnowledgeCatalog.flight[FlightWord.press]!,
+              style: const TextStyle(color: flightMint),
             ),
         ],
         if (hintOn)
@@ -777,7 +805,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
           Wrap(
             spacing: 8,
             runSpacing: 6,
-            children: [for (final item in f.inventory) itemChip(item, f)],
+            children: [for (final item in f.inventory) itemChip(item)],
           ),
       ],
     ),
@@ -800,32 +828,160 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
     ),
   );
 
-  Widget itemChip(FlightItem item, FirstFlight f) => ChoiceChip(
-    key: Key('flight-item-${item.name}'),
-    visualDensity: VisualDensity.standard,
-    selected: selected == item,
-    avatar: Icon(
-      _itemIcon(item),
-      color: selected == item ? flightInk : flightMint,
-      size: 19,
-    ),
-    label: Text(item.title),
-    backgroundColor: flightPanel,
-    disabledColor: selected == item ? flightMint : flightPanel,
-    selectedColor: flightMint,
-    labelStyle: TextStyle(color: selected == item ? flightInk : flightText),
-    showCheckmark: false,
-    onSelected: busy || word != null
-        ? null
-        : (on) {
-            setState(() {
-              selected = on ? item : null;
-              message = on
-                  ? '${item.title} · ${item.english}. Теперь коснись места, где нужна эта деталь.'
-                  : null;
-            });
-          },
-  );
+  Widget itemChip(FlightItem item) {
+    final active = selected == item;
+    final term = switch (item) {
+      FlightItem.key => FlightWord.key,
+      FlightItem.battery || FlightItem.reserve => FlightWord.battery,
+      FlightItem.cable => FlightWord.cable,
+    };
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: active ? flightMint : flightPanel,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xff708c9d)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          IconButton(
+            key: Key('flight-item-${item.name}'),
+            tooltip: active ? 'Снять выбор' : 'Выбрать: ${item.title}',
+            isSelected: active,
+            color: active ? flightInk : flightMint,
+            icon: Icon(_itemIcon(item)),
+            selectedIcon: const Icon(Icons.check),
+            onPressed: busy || word != null
+                ? null
+                : () => setState(() {
+                    selected = active ? null : item;
+                    message = active
+                        ? null
+                        : _toolTarget(flight!, item) == null
+                        ? 'Предмет выбран. В этом отсеке он пока не нужен.'
+                        : 'Предмет выбран. Коснись подсвеченного места, чтобы применить его.';
+                  }),
+          ),
+          Flexible(
+            child: AdaptiveTerm(
+              key: Key('flight-inventory-term-${item.name}'),
+              language: language,
+              entry: KnowledgeCatalog.flight[term]!,
+              translation: item.title,
+              style: TextStyle(color: active ? flightInk : flightText),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  String? _toolTarget(FirstFlight f, FlightItem? item) =>
+      switch ((f.room, item)) {
+        (FlightRoom.airlock, FlightItem.key) when !f.unlocked => 'hatch',
+        (FlightRoom.workshop, FlightItem.battery) => 'charger',
+        (FlightRoom.workshop, FlightItem.cable) => 'sockets',
+        (FlightRoom.bridge, FlightItem.key)
+            when f.reserveRequested && !f.lockerOpen =>
+          'locker',
+        (FlightRoom.bridge, FlightItem.reserve) => 'nav-socket',
+        _ => null,
+      };
+
+  Widget sceneObject(FirstFlight f, _Spot spot) {
+    final term = switch (spot.id) {
+      'hatch' when !f.unlocked => FlightWord.door,
+      'battery' => FlightWord.battery,
+      'cable' => FlightWord.cable,
+      'launch' => FlightWord.button,
+      _ => null,
+    };
+    final prepared = term != null && f.learned.contains(term);
+    final highlighted =
+        word != null && word == spot.demo ||
+        _toolTarget(f, selected) == spot.id ||
+        spot.id == 'orbi' && !f.knowsRoom(f.room) && word == null;
+    const labelStyle = TextStyle(
+      color: flightText,
+      fontSize: 10.5,
+      height: 1.05,
+      fontWeight: FontWeight.w700,
+    );
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Semantics(
+          button: true,
+          label: spot.label,
+          onTap: () => approach(spot),
+          child: GestureDetector(
+            excludeFromSemantics: true,
+            key: Key('flight-${spot.id}'),
+            behavior: HitTestBehavior.opaque,
+            onTap: () => approach(spot),
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                boxShadow: highlighted
+                    ? const [
+                        BoxShadow(
+                          color: flightAmber,
+                          blurRadius: 12,
+                          spreadRadius: 2,
+                        ),
+                      ]
+                    : const [],
+              ),
+              child: spot.id == 'orbi'
+                  ? IgnorePointer(
+                      child: SpeakingCharacter(
+                        audio: app.audio,
+                        character: 'orbi',
+                        state: orbi,
+                        size: 67,
+                      ),
+                    )
+                  : FlightProp(spot.icon, turn: spot.turn, color: spot.color),
+            ),
+          ),
+        ),
+        DecoratedBox(
+          decoration: BoxDecoration(
+            color: flightInk,
+            borderRadius: BorderRadius.circular(4),
+          ),
+          child: prepared
+              ? AdaptiveTerm(
+                  key: Key('flight-term-${spot.id}'),
+                  language: language,
+                  entry: KnowledgeCatalog.flight[term]!,
+                  compact: true,
+                  style: labelStyle,
+                )
+              : ExcludeSemantics(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 3,
+                      vertical: 2,
+                    ),
+                    child: Text(
+                      spot.label,
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      textScaler: TextScaler.linear(
+                        MediaQuery.textScalerOf(
+                          context,
+                        ).scale(1).clamp(1.0, 1.18),
+                      ),
+                      style: labelStyle,
+                    ),
+                  ),
+                ),
+        ),
+      ],
+    );
+  }
 
   Widget scene(FirstFlight f) => LayoutBuilder(
     builder: (context, c) {
@@ -879,80 +1035,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
                 ),
                 top: h * spot.at.dy - (spot.id == 'orbi' ? 36 : 25),
                 width: 76,
-                child: Semantics(
-                  button: true,
-                  label: spot.label,
-                  onTap: () => approach(spot),
-                  child: GestureDetector(
-                    excludeFromSemantics: true,
-                    key: Key('flight-${spot.id}'),
-                    behavior: HitTestBehavior.opaque,
-                    onTap: () => approach(spot),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (spot.id == 'orbi')
-                          IgnorePointer(
-                            child: SpeakingCharacter(
-                              audio: app.audio,
-                              character: 'orbi',
-                              state: orbi,
-                              size: 67,
-                            ),
-                          )
-                        else
-                          DecoratedBox(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(14),
-                              boxShadow: word != null && word == spot.demo
-                                  ? const [
-                                      BoxShadow(
-                                        color: flightAmber,
-                                        blurRadius: 15,
-                                        spreadRadius: 3,
-                                      ),
-                                    ]
-                                  : const [],
-                            ),
-                            child: FlightProp(
-                              spot.icon,
-                              turn: spot.turn,
-                              color: spot.color,
-                            ),
-                          ),
-                        ExcludeSemantics(
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 3,
-                              vertical: 2,
-                            ),
-                            decoration: BoxDecoration(
-                              color: flightInk,
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            child: Text(
-                              spot.label,
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              textScaler: TextScaler.linear(
-                                MediaQuery.textScalerOf(
-                                  context,
-                                ).scale(1).clamp(1.0, 1.18),
-                              ),
-                              style: const TextStyle(
-                                color: flightText,
-                                fontSize: 10.5,
-                                height: 1.05,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                child: sceneObject(f, spot),
               ),
           ],
         ),
@@ -980,7 +1063,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      t.english,
+                      t.translation,
                       style: const TextStyle(
                         color: flightMint,
                         fontSize: 20,
@@ -988,7 +1071,7 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
                       ),
                     ),
                     Text(
-                      t.translation,
+                      t.english,
                       style: const TextStyle(color: flightText, fontSize: 15),
                     ),
                   ],
@@ -1012,35 +1095,12 @@ class _FirstFlightPageState extends ConsumerState<FirstFlightPage> {
             key: const Key('flight-understood'),
             style: _transparent,
             onPressed: busy ? null : () => acknowledge(t),
-            child: Text(journal ? 'Закрыть' : 'Понятно'),
+            child: const Text('Понятно'),
           ),
         ],
       ),
     ),
   );
-
-  Future<void> showJournal(FirstFlight f) async {
-    if (busy) return;
-    final chosen = await showModalBottomSheet<FlightWord>(
-      context: context,
-      builder: (context) => SafeArea(
-        child: ListView(
-          shrinkWrap: true,
-          children: [
-            const ListTile(title: Text('Уже знакомые слова и фразы')),
-            for (final w in f.learned)
-              ListTile(
-                leading: Icon(_wordIcon(w)),
-                title: Text(w.english),
-                subtitle: Text(w.translation),
-                onTap: () => Navigator.pop(context, w),
-              ),
-          ],
-        ),
-      ),
-    );
-    if (mounted && chosen != null) brief(chosen, reviewing: true);
-  }
 
   Widget ending() => ListView(
     padding: const EdgeInsets.all(22),

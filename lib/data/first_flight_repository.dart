@@ -1,7 +1,9 @@
 import 'dart:convert';
 
 import '../domain/first_flight.dart';
+import '../domain/knowledge.dart';
 import '../domain/rewards.dart';
+import 'knowledge_repository.dart';
 import 'repository.dart';
 import 'rewards_repository.dart';
 
@@ -28,6 +30,12 @@ class FirstFlightRepository {
     if (f.revision != revision || f.complete) return (flight: f, message: null);
     final message = _apply(f, action, value);
     if (message != null) return (flight: f, message: message);
+    if (action == FlightAction.teach) {
+      await KnowledgeRepository(learning).encounter(
+        KnowledgeCatalog.flight[value as FlightWord]!.skill,
+        'first-flight:${f.room.name}',
+      );
+    }
     if (f.complete) {
       final inventory = Inventory.decode(
         await learning.setting(RewardsRepository.storageKey),

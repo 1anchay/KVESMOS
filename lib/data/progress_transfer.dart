@@ -6,6 +6,9 @@ import 'package:drift/drift.dart';
 import '../domain/course.dart';
 import '../domain/intro_activity.dart';
 import '../domain/languages.dart';
+import '../domain/first_flight.dart';
+import '../domain/knowledge.dart';
+import '../domain/lost_signal.dart';
 import '../domain/missions.dart';
 import '../domain/progress.dart';
 import '../domain/rewards.dart';
@@ -14,6 +17,8 @@ import 'database.dart';
 import 'beacon_repository.dart';
 import 'conversation_repository.dart';
 import 'listening_repository.dart';
+import 'first_flight_repository.dart';
+import 'knowledge_repository.dart';
 import 'repository.dart';
 import 'smart_placement_repository.dart';
 import 'rewards_repository.dart';
@@ -78,6 +83,7 @@ class ProgressTransfer {
     'kvesmos.expeditions.since.v1',
     'kvesmos.missions.since.v1',
     _inventory,
+    FirstFlightRepository.key,
   };
   static const _prefixes = [
     BeaconState.prefix,
@@ -99,6 +105,7 @@ class ProgressTransfer {
     'kvesmos.conversation.v1:',
     'kvesmos.listening.v1:',
     'kvesmos.smart.v1:',
+    KnowledgeRepository.modePrefix,
   ];
   static bool _allowed(String key) =>
       _plain.contains(key) ||
@@ -289,12 +296,33 @@ class ProgressTransfer {
     final adventure = data['adventure'];
     final lesson = data['lesson'];
     final wordIds = List<String>.from(data['words'] ?? const []);
+    if (event.kind == 'knowledge') {
+      _require(
+        _uuid.hasMatch(event.id) &&
+            _validDay(event.day) &&
+            DateTime.tryParse(event.occurredAt) != null &&
+            KnowledgeRepository.valid(event),
+      );
+      return event;
+    }
+    const lostSignalExercises = {'blue-door', 'have-battery', 'green-button'};
+    final lostSignal =
+        adventure == LostSignalMission.id &&
+        event.courseId == StudyCourse.english.id;
+    final stableLostSignal =
+        lostSignal &&
+        (event.kind == 'adventure_complete' &&
+                event.id == 'mission:v1:lost_signal:complete' ||
+            event.kind == 'answer' &&
+                lostSignalExercises.contains(exercise) &&
+                data['correct'] == true &&
+                event.id == 'mission:v1:lost_signal:$exercise:correct');
     final stableAdventureId =
         adventure is String &&
         (event.id == 'adventure:v1:$adventure:complete' ||
             event.id == 'adventure:v1:$adventure:$exercise:correct');
     _require(
-      (_uuid.hasMatch(event.id) || stableAdventureId) &&
+      (_uuid.hasMatch(event.id) || stableAdventureId || stableLostSignal) &&
           _validDay(event.day) &&
           DateTime.tryParse(event.occurredAt) != null &&
           _courses.contains(event.courseId),
@@ -348,12 +376,15 @@ class ProgressTransfer {
     if (adventure != null) {
       _require(
         event.courseId == StudyCourse.english.id &&
-            SpaceAdventure.all.any(
-              (a) =>
-                  a.id == adventure &&
-                  (event.kind == 'adventure_complete' ||
-                      a.steps.any((s) => s.id == exercise)),
-            ),
+            (lostSignal &&
+                    (event.kind == 'adventure_complete' ||
+                        lostSignalExercises.contains(exercise)) ||
+                SpaceAdventure.all.any(
+                  (a) =>
+                      a.id == adventure &&
+                      (event.kind == 'adventure_complete' ||
+                          a.steps.any((s) => s.id == exercise)),
+                )),
       );
     }
     switch (event.kind) {
@@ -376,7 +407,9 @@ class ProgressTransfer {
         );
       case 'adventure_complete':
         _require(
-          adventure is String && event.id == 'adventure:v1:$adventure:complete',
+          stableLostSignal ||
+              adventure is String &&
+                  event.id == 'adventure:v1:$adventure:complete',
         );
       default:
         throw const FormatException('Неизвестный тип учебного события.');
@@ -417,6 +450,46 @@ class ProgressTransfer {
     _require(_allowed(key) && _id.hasMatch(key) && value.length <= 200000);
     final parts = key.split(':');
     final suffix = parts.length > 1 ? parts[1] : '';
+    if (key.startsWith(KnowledgeRepository.modePrefix)) {
+      _require(
+        suffix == StudyCourse.english.id &&
+            parts.length == 2 &&
+            ImmersionMode.values.any((m) => m.name == value),
+      );
+      return;
+    }
+    if (key == FirstFlightRepository.key) {
+      final state = _object(jsonDecode(value));
+      bool names(String key, Set<String> allowed) {
+        final items = state[key];
+        return items is List &&
+            items.length <= allowed.length &&
+            items.every(allowed.contains);
+      }
+
+      _require(
+        state['revision'] is int &&
+            (state['revision'] as int) >= 0 &&
+            FlightRoom.values.any((r) => r.name == state['room']) &&
+            names('learned', FlightWord.values.map((w) => w.name).toSet()) &&
+            names('inventory', FlightItem.values.map((i) => i.name).toSet()) &&
+            names('milestones', const {
+              'unlocked',
+              'charged',
+              'wired',
+              'powered',
+              'requested',
+              'locker',
+              'navigable',
+              'complete',
+            }) &&
+            [
+              state['a'],
+              state['b'],
+            ].every((value) => value is int && value >= 0 && value < 4),
+      );
+      return;
+    }
     if (key.startsWith(_material) ||
         key.startsWith(_retired) ||
         key.startsWith('kvesmos.session.rehearsal.v1:') ||
@@ -704,6 +777,11 @@ class ProgressTransfer {
     _require(inv.grants.length == grants.length);
     for (final grant in inv.grants.values) {
       final known =
+          grant.kind == 'explorer' &&
+              {
+                FirstFlight.reward,
+                LostSignalMission.rewardId,
+              }.contains(grant.id) ||
           rewards.milestones.any(
             (m) => m['id'] == grant.id && m['chest_id'] == grant.kind,
           ) ||
@@ -860,7 +938,16 @@ class ProgressTransfer {
       final suffix = e.key.split(':').elementAtOrNull(1);
       final sessionMetadata =
           suffix != null && file.sessions.containsKey(suffix);
-      if (e.key.startsWith(_retired) && e.value == 'true') {
+      if (e.key == FirstFlightRepository.key && old != null) {
+        final current = FirstFlight.fromJson(jsonDecode(old));
+        final incoming = FirstFlight.fromJson(jsonDecode(e.value));
+        int progress(FirstFlight f) => f.milestones.length + f.learned.length;
+        if (progress(incoming) > progress(current) ||
+            progress(incoming) == progress(current) &&
+                incoming.revision > current.revision) {
+          await learning.setSetting(e.key, e.value);
+        }
+      } else if (e.key.startsWith(_retired) && e.value == 'true') {
         if (old != 'true') await learning.setSetting(e.key, e.value);
       } else if (e.key.startsWith(BeaconState.prefix) && old != null) {
         final current = BeaconState.decode(old);
